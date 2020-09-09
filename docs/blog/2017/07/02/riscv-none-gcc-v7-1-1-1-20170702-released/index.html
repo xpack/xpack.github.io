@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content="releasesriscvriscv-none-embed-gcc,  ">
+<title>GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released | The xPack Project</title>
+<link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?201907181733">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://xpack.github.io/css/customstyles.css?201907181733">
+<link rel="stylesheet" href="https://xpack.github.io/css/boxshadowproperties.css?201907181733">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="https://xpack.github.io/css/theme-blue.css?201907181733">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://xpack.github.io/js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="https://xpack.github.io/js/toc.js"></script>
+<script src="https://xpack.github.io/js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="https://xpack.github.io/images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="xpack.github.io" href="https://xpack.github.io/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks" style="">
+        <div style="display: inline-block; float: left; margin-top: 8px; margin-left: auto; margin-right: 10px;"><img src="/images/company_logo.png" alt="logo" width="32px" height="32px"/></div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="/">&nbsp;<span class="projectTitle"> The xPack Project</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <li class="active"><a href="/news">News</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="/xpm/">xpm</a></li>
+                        
+                        
+                        
+                        <li><a href="/xpbuild/">xpbuild</a></li>
+                        
+                        
+                        
+                        <li><a href="/xpninja/">xpninja</a></li>
+                        
+                        
+                        
+                        <li><a href="/xpmake/">xpmake</a></li>
+                        
+                        
+                        
+                        <li><a href="/xpcdl/">xpcdl</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack" target="_blank" rel="noopener">xPack Core Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://gitter.im/xpack/" target="_blank" rel="noopener">The xPack Chatroom</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '/search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3 sticky" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle"> </li>
+  
+  
+  
+  <li>
+      <a title="Getting Started" href="#">Getting Started</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Intro" href="/intro/">Intro</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Install prerequisites" href="/install/">Install prerequisites</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="About" href="/about/">About</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Core Tools" href="#">Core Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="xpm" href="/xpm/">xpm</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpbuild" href="/xpbuild/">xpbuild</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpninja" href="/xpninja/">xpninja</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpmake" href="/xpmake/">xpmake</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpcdl" href="/xpcdl/">xpcdl</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="3rd Party Tools" href="#">3rd Party Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="arm-none-eabi-gcc" href="/arm-none-eabi-gcc/">arm-none-eabi-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="riscv-none-embed-gcc" href="/riscv-none-embed-gcc/">riscv-none-embed-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="openocd" href="/openocd/">openocd</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="qemu-arm" href="/qemu-arm/">qemu-arm</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="windows-build-tools" href="/windows-build-tools/">windows-build-tools</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="News" href="#">News</a>
+      <ul>
+          
+          
+          
+          <li><a title="Latest News" href="/news/">Latest News</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Archive" href="/news/archive/">Archive</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tags" href="/tags/">Tags</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Support" href="#">Support</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/support/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a class="extern" title="The xPack Forums" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Developer Info" href="#">Developer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/develop/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="JavaScript Style Guide" href="/develop/js-style-guide/">JavaScript Style Guide</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Links" href="/develop/links/">Links</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Maintainer Info" href="#">Maintainer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/maintain/">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="License" href="#">License</a>
+      <ul>
+          
+          
+          
+          <li><a class="extern" title="MIT" href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">MIT</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Home" href="#">Home</a>
+      <ul>
+          
+          
+          
+          <li><a title="The xPack Project" href="/">The xPack Project</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a class="extern" title="GNU MCU Eclipse" href="https://gnu-mcu-eclipse.github.io" target="_blank" rel="noopener">GNU MCU Eclipse</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released</h1>
+        <p class="post-meta"><time datetime="2017-07-02T22:38:00+03:00" itemprop="datePublished">Jul 2, 2017</time> <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">/ Liviu Ionescu</span></span> /
+            
+            
+            
+            <a href="/tags/releases/">releases</a>, 
+            
+            
+            
+            <a href="/tags/riscv/">riscv</a>, 
+            
+            
+            
+            <a href="/tags/riscv-none-embed-gcc/">riscv-none-embed-gcc</a>
+            
+            
+            
+
+        </p>
+
+
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+
+        
+
+        <p>Version v7.1.1-1-20170702-0625 is the first <strong>GNU MCU Eclipse RISC-V Embedded GCC</strong> release. It includes binaries for Windows, macOS and GNU/Linux.</p>
+
+<p><a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/tag/v7.1.1-1-20170702-0625">Binary files »</a></p>
+
+<h2 id="compliance">Compliance</h2>
+
+<p>This release closely follows the official <a href="https://github.com/riscv/riscv-gcc">RISC-V distribution</a> maintained by <a href="https://www.sifive.com">SiFive</a>.</p>
+
+<p>The current version is based on project <a href="https://github.com/riscv/riscv-gnu-toolchain">riscv/riscv-gnu-toolchain</a>, tag v20170612 (commit <a href="https://github.com/riscv/riscv-gnu-toolchain/tree/f5fae1c27b2365da773816ddcd92f533867f28ec">f5fae1c</a>) from June 12th, which depends on the following:</p>
+
+<ul>
+  <li>the <a href="https://github.com/riscv/riscv-gcc">riscv/riscv-gcc</a> project, commit <a href="https://github.com/riscv/riscv-gcc/commit/16210e6270e200cd4892a90ecef608906be3a130">16210e6</a> from from May 15th, 2017</li>
+  <li>the <a href="https://github.com/riscv/riscv-binutils-gdb">riscv/riscv-binutils-gdb</a> project, commit <a href="https://github.com/riscv/riscv-binutils-gdb/commit/3f21b5c9675db61ef5462442b6a068d4a3da8aaf">3f21b5c</a> from May 5th, 2017</li>
+  <li>the <a href="https://github.com/riscv/riscv-newlib">riscv/riscv-newlib</a> project, commit <a href="https://github.com/riscv/riscv-newlib/commit/ccd8a0a4ffbbc00400892334eaf64a1616302b35">ccd8a0a</a> from May 2nd, 2017</li>
+</ul>
+
+<p>The supported architectures (<code class="highlighter-rouge">-march=</code>) are:</p>
+
+<ul>
+  <li>rv32i[m][a][f[d]][c]</li>
+  <li>rv32g[c]</li>
+  <li>rv64i[m][a][f[d]][c]</li>
+  <li>rv64g[c]</li>
+</ul>
+
+<p>The supported ABIs (<code class="highlighter-rouge">-mabi=</code>) are:</p>
+
+<ul>
+  <li>ilp32 (32-bit, soft-float)</li>
+  <li>ilp32f (32-bit with single-precision in registers and double in memory, niche use only)</li>
+  <li>ilp32d (32-bit, hard-float)</li>
+  <li>lp64 (64-bit long and pointers, soft-float)</li>
+  <li>lp64f (64-bit long and pointers, with single-precision in registers and double in memory, niche use only)</li>
+  <li>lp64d (64-bit long and pointers, hard-float).</li>
+</ul>
+
+<p>The supported libraries are:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>march=rv32i/mabi=ilp32
+march=rv32im/mabi=ilp32
+march=rv32iac/mabi=ilp32
+march=rv32imac/mabi=ilp32
+march=rv32imafc/mabi=ilp32f
+march=rv64imac/mabi=lp64
+march=rv64imafdc/mabi=lp64d
+</code></pre></div></div>
+
+<p>Plese note that not all possible combinations of architecture and ABI have libraries.</p>
+
+<h2 id="changes">Changes</h2>
+
+<p>Compared to the original RISC-V version, there are no functional changes; the <strong>same architecture and API options</strong> are supported, and the <strong>same combinations of libraries</strong> (derived from newlib) are provided.</p>
+
+<h2 id="newlib-nano">newlib-nano</h2>
+
+<p>The only notable addition is support for <strong>newlib-nano</strong>, using the <code class="highlighter-rouge">--specs=nano.specs</code> option. For better results, this option must be added to both compile and link time (the next release of the GNU MCU Eclipse plug-ins will add support for this).</p>
+
+<p>If no syscalls are needed, <code class="highlighter-rouge">--specs=nosys.specs</code> can be used at link time to provide empty implementations for the POSIX system calls.</p>
+
+<p>The <em>nano</em> versions of the libraries are compiled with <code class="highlighter-rouge">-Os -mcmodel=medlow</code>, while the regular versions are compiled with <code class="highlighter-rouge">-O2 -mcmodel=medany</code>.</p>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>Another addition compared to the SiFive distribution is the presence of the documentation, including the PDF manuals for all tools.</p>
+
+<h2 id="binaries">Binaries</h2>
+
+<p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided. For Windows and macOS, separate installable and plain archives are provided. For Windows and GNU/Linux, both 32/64-bit binaries are provided.</p>
+
+<p>Instructions on how to install them are available in the <a href="/riscv-none-embed-gcc/install/">How to install the RISC-V toolchain?</a> page.</p>
+
+<p>For better control and repetability, the build scripts use Docker containers; all files required during builds are available as a separate <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build">gnu-mcu-eclipse/riscv-none-gcc-build</a> project.</p>
+
+<h2 id="known-problems">Known problems</h2>
+
+<p>[2017-09-14 update] Soon after this release was used in real projects, it was discovered that the general configuration of the toolchain was intended more to applications that include a kernel-like environment, and less to bare-metal environments. The main problems are:</p>
+
+<ul>
+  <li>the <code class="highlighter-rouge">newlib</code> configuration does not use the <code class="highlighter-rouge">underscore</code> syscall function, but the direct names (like <code class="highlighter-rouge">write()</code> instead of <code class="highlighter-rouge">_write()</code>), calls that are always forwarded to <code class="highlighter-rouge">libgloss</code></li>
+  <li>the compiler configuration always links <code class="highlighter-rouge">libgloss</code> to the application; <code class="highlighter-rouge">libgloss</code> implements all system calls via traps to a unix like kernel.</li>
+</ul>
+
+<p>Both problems were fixed in the <a href="/blog/2017/09/13/riscv-none-gcc-v7-1-1-2-20170912-released/">v7.1.1-2-20170912</a> release.</p>
+
+<h2 id="checksums">Checksums</h2>
+
+<p>The SHA-256 hashes for the files are:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">a723d8c6870d1808882ea2eaa630a8c60c5cb6bd25dc238091d2f9738298c44a ?
+gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian32.tgz
+
+1d36d44221cde15572673019f76727883ce543a7d76d2e10f07ae1a901c07bbb ?
+gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian64.tgz
+
+75e71fd37c3749cd892e020a4562c0c10535719e4bb573371d957fb8f16f790e ?
+gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-osx.pkg
+
+7940417bc4fbd537b38866914b20375f89417ac0ba90399a2d2c510d0c802497 ?
+gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-osx.tgz
+
+b082bedc09af08ca56e218dba87e8e69b3d100042bdbbe3821fd2ef72f33e9f0 ?
+gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-win32-setup.exe
+
+7fbecec74060be8b4075bed6d2b0f201421614f53dd134ce7ffdd18df79dfce9 ?
+gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-win32.zip
+
+ ba8fd7b53e2cad2092f39c105c3d4a734546c89f807df8e804dd6db40c23f7fc ?
+gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-win64-setup.exe
+
+30a37efe5c5bfaf9def8d06249ff471c8d81d37e01d33caf4fff928c8cfe7670 ?
+gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-win64.zip
+</span></code></pre></div></div>
+
+    </div>
+
+
+
+</article>
+
+    
+    <a target="_blank" rel="noopener" href="https://github.com/xpack/xpack.github.io/blob/master/_posts/releases/riscv-none-embed-gcc/2017-07-02-riscv-none-gcc-v7-1-1-1-20170702-released.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
+
+    
+
+
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'xpack'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2020 Liviu Ionescu. All rights reserved. <br />
+<span>Page last updated:</span> Aug 16, 2020<br/> Site last generated: Sep 9, 2020 <br />
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-16767008-13','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+</html>

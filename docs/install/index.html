@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" npmxpackinstall">
+<title>How to install the xPack tools | The xPack Project</title>
+<link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?201907181733">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://xpack.github.io/css/customstyles.css?201907181733">
+<link rel="stylesheet" href="https://xpack.github.io/css/boxshadowproperties.css?201907181733">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="https://xpack.github.io/css/theme-blue.css?201907181733">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://xpack.github.io/js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="https://xpack.github.io/js/toc.js"></script>
+<script src="https://xpack.github.io/js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="https://xpack.github.io/images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="xpack.github.io" href="https://xpack.github.io/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks" style="">
+        <div style="display: inline-block; float: left; margin-top: 8px; margin-left: auto; margin-right: 10px;"><img src="/images/company_logo.png" alt="logo" width="32px" height="32px"/></div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="/">&nbsp;<span class="projectTitle"> The xPack Project</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <li class="active"><a href="/news">News</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="/xpm/">xpm</a></li>
+                        
+                        
+                        
+                        <li><a href="/xpbuild/">xpbuild</a></li>
+                        
+                        
+                        
+                        <li><a href="/xpninja/">xpninja</a></li>
+                        
+                        
+                        
+                        <li><a href="/xpmake/">xpmake</a></li>
+                        
+                        
+                        
+                        <li><a href="/xpcdl/">xpcdl</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack" target="_blank" rel="noopener">xPack Core Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://gitter.im/xpack/" target="_blank" rel="noopener">The xPack Chatroom</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '/search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="How to install the xPack tools">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3 sticky" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle"> </li>
+  
+  
+  
+  <li>
+      <a title="Getting Started" href="#">Getting Started</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Intro" href="/intro/">Intro</a></li>
+          
+          
+          
+          
+          
+          
+          <li class="active"><a title="Install prerequisites" href="/install/">Install prerequisites</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="About" href="/about/">About</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Core Tools" href="#">Core Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="xpm" href="/xpm/">xpm</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpbuild" href="/xpbuild/">xpbuild</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpninja" href="/xpninja/">xpninja</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpmake" href="/xpmake/">xpmake</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpcdl" href="/xpcdl/">xpcdl</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="3rd Party Tools" href="#">3rd Party Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="arm-none-eabi-gcc" href="/arm-none-eabi-gcc/">arm-none-eabi-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="riscv-none-embed-gcc" href="/riscv-none-embed-gcc/">riscv-none-embed-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="openocd" href="/openocd/">openocd</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="qemu-arm" href="/qemu-arm/">qemu-arm</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="windows-build-tools" href="/windows-build-tools/">windows-build-tools</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="News" href="#">News</a>
+      <ul>
+          
+          
+          
+          <li><a title="Latest News" href="/news/">Latest News</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Archive" href="/news/archive/">Archive</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tags" href="/tags/">Tags</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Support" href="#">Support</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/support/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a class="extern" title="The xPack Forums" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Developer Info" href="#">Developer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/develop/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="JavaScript Style Guide" href="/develop/js-style-guide/">JavaScript Style Guide</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Links" href="/develop/links/">Links</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Maintainer Info" href="#">Maintainer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/maintain/">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="License" href="#">License</a>
+      <ul>
+          
+          
+          
+          <li><a class="extern" title="MIT" href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">MIT</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Home" href="#">Home</a>
+      <ul>
+          
+          
+          
+          <li><a title="The xPack Project" href="/">The xPack Project</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a class="extern" title="GNU MCU Eclipse" href="https://gnu-mcu-eclipse.github.io" target="_blank" rel="noopener">GNU MCU Eclipse</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">How to install the xPack tools</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+
+
+   <h2 id="overview">Overview</h2>
+
+<p>All Core Tools are <a href="https://nodejs.org">Node.js</a> CLI application
+available from the
+<a href="https://www.npmjs.com">npmjs.com</a> public repository and are installed
+via <strong>npm</strong> which uses Node.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>A recent <a href="https://nodejs.org">Node.js</a> (&gt;=<strong>10.x</strong>), since the ECMAScript 6 class
+syntax is used, and some dependencies may also require new features.</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> node <span class="nt">--version</span>
+<span class="go">v12.14.0
+</span></code></pre></div></div>
+
+<p>If this is your first encounter with <strong>npm</strong>, you need to install the
+<a href="https://nodejs.org">Node.js</a> JavaScript run-time. The process is
+straightforward and does not pollute the system locations significantly;
+there are two Node versions, <strong>LTS</strong> (<strong>Long Term Service</strong>) and
+<strong>Current</strong>; generally it is safer to use LTS, especially on Windows.</p>
+
+<p><img src="/assets/images/2019/nodejs-org.png" alt="The Node Download page" /></p>
+
+<p>The general procedure is to download the package suitable for your
+platform and install it as usual.
+The result is a binary program named <code class="highlighter-rouge">node</code> (that can be used to execute
+JavaScript code from the terminal), and a link named <code class="highlighter-rouge">npm</code>, pointing to
+the <code class="highlighter-rouge">npm-cli.js</code> script, which is part of the Node module that implements
+the npm functionality (on Windows instead of soft links,
+<code class="highlighter-rouge">.cmd</code> stubs are used).</p>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> The usual method is to install Node with
+administrative rights;
+however, the prefered method is to install it
+in a custom location in the home folder, using a version
+manager or by directly unpacking the archive distributions.
+Regardless how and where it is installed, the <code class="highlighter-rouge">node</code>
+executable must be in the curent path.</div>
+
+<ul id="profileTabs_1" class="nav nav-tabs">
+    <li class="active"><a href="#windows_1" data-toggle="tab">Windows</a></li>
+    <li><a href="#macos_1" data-toggle="tab">macOS</a></li>
+    <li><a href="#linux_1" data-toggle="tab">GNU/Linux</a></li>
+</ul>
+<div class="tab-content">
+	<div role="tabpanel" class="tab-pane active" id="windows_1">
+		
+<h2 id="manual-install">Manual install</h2>
+
+<h3 id="node-install"><code class="highlighter-rouge">node</code> install</h3>
+
+<p>Download the <strong>Windows Installer (.msi)</strong> from the Node.js
+<a href="https://nodejs.org/en/download/">download</a> page and install it as usual,
+with administrative rights.</p>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> If you are using a 64-bit machine, download the <code class="highlighter-rouge">node-v*-x64.msi</code> file.</div>
+
+<p>The result is a folder like <code class="highlighter-rouge">C:\Program Files\nodejs</code>, added to the
+system path since it includes the <code class="highlighter-rouge">node.exe</code> binary.</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;where node.exe
+C:\Program Files\nodejs\node.exe
+C:\&gt;node --version
+v12.14.0
+</code></pre></div></div>
+
+<h2 id="npm-update"><code class="highlighter-rouge">npm</code> update</h2>
+
+<p>A version of <strong>npm</strong>, usually a bit older, comes packed with Node.</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;where npm.cmd
+C:\Program Files\nodejs\npm.cmd
+C:\&gt;npm --version
+6.4.1
+</code></pre></div></div>
+
+<p>It is recommended to update it to the latest version:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;npm install --global npm@latest
+C:\Users\ilg\AppData\Roaming\npm\npm -&gt; C:\Users\ilg\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+C:\Users\ilg\AppData\Roaming\npm\npx -&gt; C:\Users\ilg\AppData\Roaming\npm\node_modules\npm\bin\npx-cli.js
++ npm@6.14.7
+added 435 packages <span class="k">from </span>816 contributors <span class="k">in </span>72.64s
+</code></pre></div></div>
+
+<p>Surprisingly, checking the version usually shows the old version:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;where npm.cmd
+C:\Program Files\nodejs\npm.cmd
+C:\&gt;npm --version
+6.4.1
+</code></pre></div></div>
+
+<p>This is because on Windows, by default, global node packages are
+installed in the
+user home folder, in <code class="highlighter-rouge">%APPDATA%\npm</code>
+(like <code class="highlighter-rouge">C:\Users\ilg\AppData\Roaming\npm</code>);
+and this path <strong>is not</strong> in the default environment.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;echo %Path%
+</code></pre></div></div>
+
+<p>It must be added manually in front of the current path:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;set Path=%APPDATA%\npm;%Path%
+</code></pre></div></div>
+
+<p>To make this setting persistent, also issue the foolloing:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;setx Path "%APPDATA%\npm;%Path%"
+</code></pre></div></div>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Please note the syntax differences, no equal
+sign and double quotes, specific to <code class="highlighter-rouge">setx</code> but harmful to <code class="highlighter-rouge">set</code>.</div>
+
+<p>After this, the new version of the program should be visible:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;npm --version
+6.14.7
+</code></pre></div></div>
+
+<h2 id="git">Git</h2>
+
+<p>Although not mandatory for using the xPack tools alone, on Windows
+it is recommended to
+also install the <a href="https://git-scm.com/download/win">Git for Windows</a> package.</p>
+
+<p>The xPack Core Tools can run either in the Windows <code class="highlighter-rouge">cmd.exe</code> terminal,
+or in the Git shell terminal.</p>
+
+
+	</div>
+	<div role="tabpanel" class="tab-pane" id="macos_1">
+		
+<h2 id="nvm-install-node-version-manager"><code class="highlighter-rouge">nvm</code> install (node version manager)</h2>
+
+<p>Node.js can be installed manually, but for a greater flexibility, on POSIX
+platforms
+it is possible to automate this process by using nvm,
+which not only simplifies the install procedure, but also allows advanced
+users to install multiple versions of Node.js in parallel.
+For details, see the
+<a href="https://docs.npmjs.com/getting-started/installing-node#using-a-version-manager-to-install-nodejs-and-npm">Using a Version Manager to install Node.js and npm</a>
+page.</p>
+
+<p>In short, <a href="https://github.com/nvm-sh/nvm">nvm</a> changes the install
+location to <code class="highlighter-rouge">~/.nvm</code> and allows to install multiple instances of node
+in the <code class="highlighter-rouge">~/.nvm/versions/node</code> folder.</p>
+
+<p>If you have a previous version of npm installed with a local prefix,
+remove it:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>rm <span class="nt">-rf</span> /usr/local/lib/node-modules /usr/local/bin/node /usr/local/bin/npm /usr/local/bin/npm
+<span class="gp">$</span> rm <span class="nt">-rf</span> ~/Library/npm ~/opt/npm
+<span class="gp">$</span> npm config delete prefix
+</code></pre></div></div>
+
+<p>Also remove <code class="highlighter-rouge">${HOME}/Library/npm/bin</code> or <code class="highlighter-rouge">${HOME}/opt/npm/bin</code> from the PATH.</p>
+
+<p>When everything is clean, run the install script:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> curl <span class="nt">-o-</span> https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+</code></pre></div></div>
+
+<p>This will install the version manager in <code class="highlighter-rouge">~/.nvm</code>, and add a few lines to
+the shell profile, for example to <code class="highlighter-rouge">.bash_profile</code> on older versions.</p>
+
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Please note that macOS Catalina no
+longer uses bash, and the current npm install script does not
+support zsh yet, so the two lines must be manually added to `.zprofile.</div>
+
+<p>To install the latest node, after updating the shell profile, open a new
+terminal (to make use of the new environment variables) and issue the
+following:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> nvm install <span class="nt">--lts</span> node
+<span class="go">Downloading and installing node v12.14.0...
+Downloading https://nodejs.org/dist/v12.13.0/node-v12.13.0-darwin-x64.tar.gz...
+</span><span class="gp">#</span><span class="c">####################################################################### 100.0%</span>
+<span class="go">Computing checksum with shasum -a 256
+Checksums matched!
+</span><span class="gp">Creating default alias: default -&gt;</span> lts/<span class="k">*</span> <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span>
+<span class="go">
+</span><span class="gp">$</span> nvm <span class="nb">ls</span>
+<span class="gp">-&gt;</span>     v12.13.0
+<span class="go">         system
+</span><span class="gp">default -&gt;</span> lts/<span class="k">*</span> <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span>
+<span class="gp">node -&gt;</span> stable <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">stable -&gt;</span> 12.13 <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">iojs -&gt;</span> N/A <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">unstable -&gt;</span> N/A <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">lts/* -&gt;</span> lts/erbium <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span>
+<span class="gp">lts/argon -&gt;</span> v4.9.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/boron -&gt;</span> v6.17.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/carbon -&gt;</span> v8.16.2 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/dubnium -&gt;</span> v10.17.0 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/erbium -&gt;</span> v12.13.0
+<span class="go">
+</span><span class="gp">$</span> nvm use node
+<span class="go">Now using node v12.13.0 (npm v6.12.1)
+
+</span><span class="gp">$</span> node <span class="nt">--version</span>
+<span class="go">v12.13.0
+
+</span><span class="gp">$</span> nvm install-latest-npm
+<span class="go">Attempting to upgrade to the latest working version of npm...
+</span><span class="gp">* Installing latest `npm`;</span> <span class="k">if </span>this does not work on your node version, please report a bug!
+<span class="gp">/Users/ilg/.nvm/versions/node/v12.13.0/bin/npm -&gt;</span> /Users/ilg/.nvm/versions/node/v12.13.0/lib/node_modules/npm/bin/npm-cli.js
+<span class="gp">/Users/ilg/.nvm/versions/node/v12.13.0/bin/npx -&gt;</span> /Users/ilg/.nvm/versions/node/v12.13.0/lib/node_modules/npm/bin/npx-cli.js
+<span class="go">+ npm@6.13.0
+added 2 packages from 2 contributors, removed 2 packages and updated 15 packages in 3.293s
+* npm upgraded to: v6.13.0
+
+</span><span class="gp">$</span> which npm
+<span class="go">/Users/ilg/.nvm/versions/node/v12.13.0/bin/npm
+</span></code></pre></div></div>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Please note that this will install the latest
+<strong>LTS</strong> version; to install the very latest <strong>Current</strong> version, remove
+the <code class="highlighter-rouge">--lts</code> option.</div>
+
+<p>To explicitly install a previous version and to switch to it:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> nvm install 10
+<span class="go">Downloading and installing node v10.17.0...
+Downloading https://nodejs.org/dist/v10.17.0/node-v10.17.0-darwin-x64.tar.gz...
+</span><span class="gp">#</span><span class="c">####################################################################### 100.0%</span>
+<span class="go">Computing checksum with shasum -a 256
+Checksums matched!
+Now using node v10.17.0 (npm v6.11.3)
+
+</span><span class="gp">$</span> nvm <span class="nb">ls</span>
+<span class="go">nvm ls
+</span><span class="gp">-&gt;</span>     v10.17.0
+<span class="go">       v12.13.0
+         system
+</span><span class="gp">default -&gt;</span> lts/<span class="k">*</span> <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span>
+<span class="gp">node -&gt;</span> stable <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">stable -&gt;</span> 12.13 <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">iojs -&gt;</span> N/A <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">unstable -&gt;</span> N/A <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">lts/* -&gt;</span> lts/erbium <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span>
+<span class="gp">lts/argon -&gt;</span> v4.9.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/boron -&gt;</span> v6.17.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/carbon -&gt;</span> v8.16.2 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/dubnium -&gt;</span> v10.17.0
+<span class="gp">lts/erbium -&gt;</span> v12.13.0
+<span class="go">
+</span><span class="gp">$</span> nvm use 10
+<span class="go">Now using node v10.17.0 (npm v6.11.3)
+
+</span><span class="gp">$</span> node <span class="nt">--version</span>
+<span class="go">v10.17.0
+
+</span><span class="gp">$</span> nvm install-latest-npm
+<span class="go">Attempting to upgrade to the latest working version of npm...
+</span><span class="gp">* Installing latest `npm`;</span> <span class="k">if </span>this does not work on your node version, please report a bug!
+<span class="gp">/Users/ilg/.nvm/versions/node/v10.17.0/bin/npm -&gt;</span> /Users/ilg/.nvm/versions/node/v10.17.0/lib/node_modules/npm/bin/npm-cli.js
+<span class="gp">/Users/ilg/.nvm/versions/node/v10.17.0/bin/npx -&gt;</span> /Users/ilg/.nvm/versions/node/v10.17.0/lib/node_modules/npm/bin/npx-cli.js
+<span class="go">+ npm@6.13.0
+added 3 packages from 2 contributors, removed 3 packages and updated 20 packages in 3.081s
+* npm upgraded to: v6.13.0
+
+</span><span class="gp">$</span> which npm
+<span class="go">/Users/ilg/.nvm/versions/node/v10.17.0/bin/npm
+</span></code></pre></div></div>
+
+<p>At any time, to switch between any of the installed versions,
+use <code class="highlighter-rouge">nvm use &lt;version&gt;</code>.</p>
+
+
+	</div>
+	<div role="tabpanel" class="tab-pane" id="linux_1">
+		
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The official Node.js distribution no
+longer provides Intel 32-bit images. The version manager is still able
+to install node, by compiling it from sources, but the process takes
+quite a while.</div>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Arm binaries are supported, currently
+in both 32/64-bit variants.</div>
+
+<h2 id="nvm-install-node-version-manager"><code class="highlighter-rouge">nvm</code> install (node version manager)</h2>
+
+<p>Node.js can be installed manually, but for a greater flexibility, on POSIX
+platforms
+it is possible to automate this process by using nvm,
+which not only simplifies the install procedure, but also allows advanced
+users to install multiple versions of Node.js in parallel.
+For details, see the
+<a href="https://docs.npmjs.com/getting-started/installing-node#using-a-version-manager-to-install-nodejs-and-npm">Using a Version Manager to install Node.js and npm</a>
+page.</p>
+
+<p>In short, <a href="https://github.com/nvm-sh/nvm">nvm</a> changes the install
+location to <code class="highlighter-rouge">C:\Users\&lt;user&gt;\AppData\Roaming\npm</code> and allows to install
+multiple instances of node
+in the <code class="highlighter-rouge">~/.nvm/versions/node</code> folder.</p>
+
+<p>If you have a previous version of npm installed with a local prefix,
+remove it:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>rm <span class="nt">-rf</span> /usr/local/lib/nodejs
+<span class="gp">$</span> rm <span class="nt">-rf</span> ~/opt/npm
+<span class="gp">$</span> npm config delete prefix
+</code></pre></div></div>
+
+<p>Also remove <code class="highlighter-rouge">${HOME}/opt/npm/bin</code> from the PATH.</p>
+
+<p>When everything is clean, run the install script:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> curl <span class="nt">-o-</span> https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+</code></pre></div></div>
+
+<p>This will install the version manager in <code class="highlighter-rouge">~/.nvm</code>, and add a few lines to
+the shell profile, for example to <code class="highlighter-rouge">.bash_profile</code> on most
+distributions.</p>
+
+<p>To install the latest node, after updating the shell profile, open a new
+terminal (to make use of the new environment variables) and issue the
+following:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> nvm install <span class="nt">--lts</span> node
+<span class="go">Downloading and installing node v12.13.0...
+Downloading https://nodejs.org/dist/v12.13.0/node-v12.13.0-linux-x64.tar.xz...
+</span><span class="gp">#</span><span class="c">###################################################################################################################### 100.0%</span>
+<span class="go">Computing checksum with sha256sum
+Checksums matched!
+</span><span class="gp">Creating default alias: default -&gt;</span> lts/<span class="k">*</span> <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span>
+<span class="go">
+</span><span class="gp">$</span> nvm <span class="nb">ls</span>
+<span class="gp">-&gt;</span>     v12.13.0
+<span class="go">         system
+</span><span class="gp">default -&gt;</span> lts/<span class="k">*</span> <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span>
+<span class="gp">node -&gt;</span> stable <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">stable -&gt;</span> 12.13 <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">iojs -&gt;</span> N/A <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">unstable -&gt;</span> N/A <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">lts/* -&gt;</span> lts/erbium <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span>
+<span class="gp">lts/argon -&gt;</span> v4.9.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/boron -&gt;</span> v6.17.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/carbon -&gt;</span> v8.16.2 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/dubnium -&gt;</span> v10.17.0 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/erbium -&gt;</span> v12.13.0
+<span class="go">
+</span><span class="gp">$</span> nvm use node
+<span class="go">Now using node v12.13.0 (npm v6.12.0)
+
+</span><span class="gp">$</span> node <span class="nt">--version</span>
+<span class="go">v12.13.0
+
+</span><span class="gp">$</span> nvm install-latest-npm
+<span class="go">Attempting to upgrade to the latest working version of npm...
+</span><span class="gp">* Installing latest `npm`;</span> <span class="k">if </span>this does not work on your node version, please report a bug!
+<span class="gp">/home/ilg/.nvm/versions/node/v12.13.0/bin/npm -&gt;</span> /home/ilg/.nvm/versions/node/v12.13.0/lib/node_modules/npm/bin/npm-cli.js
+<span class="gp">/home/ilg/.nvm/versions/node/v12.13.0/bin/npx -&gt;</span> /home/ilg/.nvm/versions/node/v12.13.0/lib/node_modules/npm/bin/npx-cli.js
+<span class="go">+ npm@6.13.0
+added 2 packages from 2 contributors, removed 2 packages and updated 15 packages in 8.68s
+* npm upgraded to: v6.13.0
+
+</span><span class="gp">$</span> which npm
+<span class="go">/home/ilg/.nvm/versions/node/v12.13.0/bin/npm
+</span></code></pre></div></div>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Please note that this will install the latest
+<strong>LTS</strong> version; to install the very latest <strong>Current</strong> version, remove
+the <code class="highlighter-rouge">--lts</code> option.</div>
+
+<p>To explicitly install a previous version and to switch to it:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> nvm install 10
+<span class="go">Downloading https://nodejs.org/dist/v10.17.0/node-v10.17.0-linux-x64.tar.xz...
+</span><span class="gp">#</span><span class="c">###################################################################################################################### 100.0%</span>
+<span class="go">Computing checksum with sha256sum
+Checksums matched!
+Now using node v10.17.0 (npm v6.11.3)
+
+</span><span class="gp">$</span> nvm <span class="nb">ls</span>
+<span class="gp">-&gt;</span>     v10.17.0
+<span class="go">       v12.13.0
+         system
+</span><span class="gp">default -&gt;</span> lts/<span class="k">*</span> <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span>
+<span class="gp">node -&gt;</span> stable <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">stable -&gt;</span> 12.13 <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">iojs -&gt;</span> N/A <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">unstable -&gt;</span> N/A <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">lts/* -&gt;</span> lts/erbium <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span>
+<span class="gp">lts/argon -&gt;</span> v4.9.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/boron -&gt;</span> v6.17.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/carbon -&gt;</span> v8.16.2 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/dubnium -&gt;</span> v10.17.0
+<span class="gp">lts/erbium -&gt;</span> v12.13.0
+<span class="go">
+</span><span class="gp">$</span> nvm use 10
+<span class="go">Now using node v10.17.0 (npm v6.11.3)
+
+</span><span class="gp">$</span> node <span class="nt">--version</span>
+<span class="go">v10.17.0
+
+</span><span class="gp">$</span> nvm install-latest-npm
+<span class="go">Attempting to upgrade to the latest working version of npm...
+</span><span class="gp">* Installing latest `npm`;</span> <span class="k">if </span>this does not work on your node version, please report a bug!
+<span class="gp">/Users/ilg/.nvm/versions/node/v10.17.0/bin/npm -&gt;</span> /Users/ilg/.nvm/versions/node/v10.17.0/lib/node_modules/npm/bin/npm-cli.js
+<span class="gp">/Users/ilg/.nvm/versions/node/v10.17.0/bin/npx -&gt;</span> /Users/ilg/.nvm/versions/node/v10.17.0/lib/node_modules/npm/bin/npx-cli.js
+<span class="go">+ npm@6.13.0
+added 3 packages from 2 contributors, removed 3 packages and updated 20 packages in 3.081s
+* npm upgraded to: v6.13.0
+
+</span><span class="gp">$</span> which npm
+<span class="go">/Users/ilg/.nvm/versions/node/v10.17.0/bin/npm
+</span></code></pre></div></div>
+
+<p>At any time, to switch between any of the installed versions,
+use <code class="highlighter-rouge">nvm use &lt;version&gt;</code>.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> These commands were tested with <code class="highlighter-rouge">bash</code> on
+Ubuntu 18 LTS and Manjaro 18; for other shells they may need small
+adjustments.</div>
+
+
+	</div>
+</div>
+
+<h2 id="install-xpm">Install xpm</h2>
+
+<p>The next step is to install the
+<a href="/xpm/install/">xPack Package Manager</a>.</p>
+
+<h2 id="miscellaneous">Miscellaneous</h2>
+
+<p>The official page explaining how to install <strong>npm</strong> in a custom folder is
+<a href="https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally">Resolving EACCES permissions errors when installing packages globally</a>.</p>
+
+<p>For less common platforms, it is also posible to install from unofficial
+builds, or to build it from sources; for more details see the
+<a href="https://nodejs.org/en/download/">downloads</a> page.</p>
+
+
+        
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'xpack'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2020 Liviu Ionescu. All rights reserved. <br />
+<span>Page last updated:</span> Aug 13, 2020<br/> Site last generated: Sep 9, 2020 <br />
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-16767008-13','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+</html>

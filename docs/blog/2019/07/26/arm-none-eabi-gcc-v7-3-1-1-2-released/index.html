@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Version 7.3.1-1.2 is a repack of the GNU MCU Eclipse Arm Embedded GCC v7.3.1-1.1 using the new build scripts.">
+<meta name="keywords" content="releasesarmarm-none-eabi-gccgccbinaries,  ">
+<title>xPack GNU Arm Embedded GCC v7.3.1-1.2 released | The xPack Project</title>
+<link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?201907181733">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://xpack.github.io/css/customstyles.css?201907181733">
+<link rel="stylesheet" href="https://xpack.github.io/css/boxshadowproperties.css?201907181733">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="https://xpack.github.io/css/theme-blue.css?201907181733">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://xpack.github.io/js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="https://xpack.github.io/js/toc.js"></script>
+<script src="https://xpack.github.io/js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="https://xpack.github.io/images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="xpack.github.io" href="https://xpack.github.io/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks" style="">
+        <div style="display: inline-block; float: left; margin-top: 8px; margin-left: auto; margin-right: 10px;"><img src="/images/company_logo.png" alt="logo" width="32px" height="32px"/></div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="/">&nbsp;<span class="projectTitle"> The xPack Project</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <li class="active"><a href="/news">News</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="/xpm/">xpm</a></li>
+                        
+                        
+                        
+                        <li><a href="/xpbuild/">xpbuild</a></li>
+                        
+                        
+                        
+                        <li><a href="/xpninja/">xpninja</a></li>
+                        
+                        
+                        
+                        <li><a href="/xpmake/">xpmake</a></li>
+                        
+                        
+                        
+                        <li><a href="/xpcdl/">xpcdl</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack" target="_blank" rel="noopener">xPack Core Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://gitter.im/xpack/" target="_blank" rel="noopener">The xPack Chatroom</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '/search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="xPack GNU Arm Embedded GCC v7.3.1-1.2 released">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3 sticky" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle"> </li>
+  
+  
+  
+  <li>
+      <a title="Getting Started" href="#">Getting Started</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Intro" href="/intro/">Intro</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Install prerequisites" href="/install/">Install prerequisites</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="About" href="/about/">About</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Core Tools" href="#">Core Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="xpm" href="/xpm/">xpm</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpbuild" href="/xpbuild/">xpbuild</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpninja" href="/xpninja/">xpninja</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpmake" href="/xpmake/">xpmake</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpcdl" href="/xpcdl/">xpcdl</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="3rd Party Tools" href="#">3rd Party Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="arm-none-eabi-gcc" href="/arm-none-eabi-gcc/">arm-none-eabi-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="riscv-none-embed-gcc" href="/riscv-none-embed-gcc/">riscv-none-embed-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="openocd" href="/openocd/">openocd</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="qemu-arm" href="/qemu-arm/">qemu-arm</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="windows-build-tools" href="/windows-build-tools/">windows-build-tools</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="News" href="#">News</a>
+      <ul>
+          
+          
+          
+          <li><a title="Latest News" href="/news/">Latest News</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Archive" href="/news/archive/">Archive</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tags" href="/tags/">Tags</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Support" href="#">Support</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/support/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a class="extern" title="The xPack Forums" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Developer Info" href="#">Developer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/develop/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="JavaScript Style Guide" href="/develop/js-style-guide/">JavaScript Style Guide</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Links" href="/develop/links/">Links</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Maintainer Info" href="#">Maintainer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/maintain/">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="License" href="#">License</a>
+      <ul>
+          
+          
+          
+          <li><a class="extern" title="MIT" href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">MIT</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Home" href="#">Home</a>
+      <ul>
+          
+          
+          
+          <li><a title="The xPack Project" href="/">The xPack Project</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a class="extern" title="GNU MCU Eclipse" href="https://gnu-mcu-eclipse.github.io" target="_blank" rel="noopener">GNU MCU Eclipse</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">xPack GNU Arm Embedded GCC v7.3.1-1.2 released</h1>
+        <p class="post-meta"><time datetime="2019-07-26T12:09:00+03:00" itemprop="datePublished">Jul 26, 2019</time> <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">/ Liviu Ionescu</span></span> /
+            
+            
+            
+            <a href="/tags/releases/">releases</a>, 
+            
+            
+            
+            <a href="/tags/arm/">arm</a>, 
+            
+            
+            
+            <a href="/tags/arm-none-eabi-gcc/">arm-none-eabi-gcc</a>, 
+            
+            
+            
+            <a href="/tags/gcc/">gcc</a>, 
+            
+            
+            
+            <a href="/tags/binaries/">binaries</a>
+            
+            
+            
+
+        </p>
+
+
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+
+        
+        <div class="summary">Version 7.3.1-1.2 is a repack of the GNU MCU Eclipse Arm Embedded GCC v7.3.1-1.1 using the new build scripts.
+</div>
+        
+
+        <h2 id="download">Download</h2>
+
+<p>The binary files are available from <a href="https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/v7.3.1-1.2/">GitHub Releases</a>.</p>
+
+<h2 id="install">Install</h2>
+
+<p>The full details of installing the <strong>xPack GNU Arm Embedded GCC</strong> on various platforms
+are presented in the separate
+<a href="/arm-none-eabi-gcc/install/">Install</a> page.</p>
+
+<h3 id="easy-install">Easy install</h3>
+
+<p>The easiest way to install GNU Arm Embedded GCC is with
+<a href="/xpm/"><code class="highlighter-rouge">xpm</code></a>
+by using the <strong>binary xPack</strong>, available as
+<a href="https://www.npmjs.com/package/@xpack-dev-tools/arm-none-eabi-gcc"><code class="highlighter-rouge">@xpack-dev-tools/arm-none-eabi-gcc</code></a>
+from the <a href="https://www.npmjs.com"><code class="highlighter-rouge">npmjs.com</code></a> registry.</p>
+
+<p>To install the latest version available, use:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> xpm install <span class="nt">--global</span> @xpack-dev-tools/arm-none-eabi-gcc@latest
+</code></pre></div></div>
+
+<p>To install this specific version, use:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> xpm install <span class="nt">--global</span> @xpack-dev-tools/arm-none-eabi-gcc@7.3.1-1.2.2
+</code></pre></div></div>
+
+<h2 id="compliance">Compliance</h2>
+
+<p>This release follows the official
+<a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm">GNU Arm Embedded Toolchain</a>
+<strong>7-2018-q2-update</strong> release from June 27, 2018 and it is based on the
+<code class="highlighter-rouge">gcc-arm-none-eabi-7-2018-q2-update-src.tar.bz2</code> source invariant.</p>
+
+<p>For more details see the original Arm release text files:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">distro-info/arm-readme.txt</code></li>
+  <li><code class="highlighter-rouge">distro-info/arm-release.txt</code></li>
+</ul>
+
+<h2 id="supported-libraries">Supported libraries</h2>
+
+<p>The supported libraries are:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> arm-none-eabi-gcc <span class="nt">-print-multi-lib</span>
+<span class="gp">.;</span>
+<span class="gp">thumb;</span>@mthumb
+<span class="gp">hard;</span>@mfloat-abi<span class="o">=</span>hard
+<span class="gp">thumb/v6-m;</span>@mthumb@march<span class="o">=</span>armv6s-m
+<span class="gp">thumb/v7-m;</span>@mthumb@march<span class="o">=</span>armv7-m
+<span class="gp">thumb/v7e-m;</span>@mthumb@march<span class="o">=</span>armv7e-m
+<span class="gp">thumb/v7-ar;</span>@mthumb@march<span class="o">=</span>armv7
+<span class="gp">thumb/v8-m.base;</span>@mthumb@march<span class="o">=</span>armv8-m.base
+<span class="gp">thumb/v8-m.main;</span>@mthumb@march<span class="o">=</span>armv8-m.main
+<span class="gp">thumb/v7e-m/fpv4-sp/softfp;</span>@mthumb@march<span class="o">=</span>armv7e-m@mfpu<span class="o">=</span>fpv4-sp-d16@mfloat-abi<span class="o">=</span>softfp
+<span class="gp">thumb/v7e-m/fpv4-sp/hard;</span>@mthumb@march<span class="o">=</span>armv7e-m@mfpu<span class="o">=</span>fpv4-sp-d16@mfloat-abi<span class="o">=</span>hard
+<span class="gp">thumb/v7e-m/fpv5/softfp;</span>@mthumb@march<span class="o">=</span>armv7e-m@mfpu<span class="o">=</span>fpv5-d16@mfloat-abi<span class="o">=</span>softfp
+<span class="gp">thumb/v7e-m/fpv5/hard;</span>@mthumb@march<span class="o">=</span>armv7e-m@mfpu<span class="o">=</span>fpv5-d16@mfloat-abi<span class="o">=</span>hard
+<span class="gp">thumb/v7-ar/fpv3/softfp;</span>@mthumb@march<span class="o">=</span>armv7@mfpu<span class="o">=</span>vfpv3-d16@mfloat-abi<span class="o">=</span>softfp
+<span class="gp">thumb/v7-ar/fpv3/hard;</span>@mthumb@march<span class="o">=</span>armv7@mfpu<span class="o">=</span>vfpv3-d16@mfloat-abi<span class="o">=</span>hard
+<span class="gp">thumb/v8-m.main/fpv5-sp/softfp;</span>@mthumb@march<span class="o">=</span>armv8-m.main@mfpu<span class="o">=</span>fpv5-sp-d16@mfloat-abi<span class="o">=</span>softfp
+<span class="gp">thumb/v8-m.main/fpv5-sp/hard;</span>@mthumb@march<span class="o">=</span>armv8-m.main@mfpu<span class="o">=</span>fpv5-sp-d16@mfloat-abi<span class="o">=</span>hard
+<span class="gp">thumb/v8-m.main/fpv5/softfp;</span>@mthumb@march<span class="o">=</span>armv8-m.main@mfpu<span class="o">=</span>fpv5-d16@mfloat-abi<span class="o">=</span>softfp
+<span class="gp">thumb/v8-m.main/fpv5/hard;</span>@mthumb@march<span class="o">=</span>armv8-m.main@mfpu<span class="o">=</span>fpv5-d16@mfloat-abi<span class="o">=</span>hard
+</code></pre></div></div>
+
+<h2 id="changes">Changes</h2>
+
+<p>There should be no functional changes.</p>
+
+<h3 id="libbdf-plugins"><code class="highlighter-rouge">lib/bdf-plugins</code></h3>
+
+<p>To improve LTO support, the <code class="highlighter-rouge">lib/bdf-plugins</code> folder was added, with
+a link to the <code class="highlighter-rouge">liblto_plugin.so</code> library (a file copy on Windows).</p>
+
+<p>This allows the use of traditional program names, like <code class="highlighter-rouge">arm-none-eabi-ar</code>
+instead of the new <code class="highlighter-rouge">arm-none-eabi-gcc-ar</code>, without getting errors like:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>arm-none-eabi-ar -r  "libarm-static-lib.a"  ./lib.o
+arm-none-eabi-ar: creating libarm-static-lib.a
+arm-none-eabi-ar: ./lib.o: plugin needed to handle lto object &lt;---
+</code></pre></div></div>
+
+<p>The issue was reported to Arm as bug <a href="https://bugs.launchpad.net/gcc-arm-embedded/+bug/1838049">1838049</a>.</p>
+
+<h2 id="known-problems">Known problems</h2>
+
+<ul>
+  <li>due to some changes in newlib 2.9.1, the definition of the <code class="highlighter-rouge">_EXFUN</code> macro
+changed and the semihosting projects created with old GNU MCU Eclipse
+fail to build with a compile error in
+<code class="highlighter-rouge">system/src/newlib/_syscalls.c</code>. The problem was in the project template
+<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/317">#317</a>, and
+was fixed in GNU MCU Eclipse plug-ins v4.4.2 (2018-08-27).</li>
+  <li><a href="https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/issues/1">[#1]</a>
+Due to an omission in the build scripts, the content of the <code class="highlighter-rouge">libgcov</code>
+library is mostly empty; the problem was fixed starting with v8.3.1-1.2.</li>
+</ul>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>The original PDF documentation is available in the <code class="highlighter-rouge">share/doc</code> folder.</p>
+
+<h2 id="supported-platforms">Supported platforms</h2>
+
+<p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided.</p>
+
+<p>The binaries were built using
+<a href="https://github.com/xpack/xpack-build-box">xPack Build Box (XBB)</a>, a set
+of build environments based on slightly older distributions, that should be
+compatible with most recent systems.</p>
+
+<ul>
+  <li>GNU/Linux: all binaries were built with GCC 7.4, running in a CentOS 6
+Docker container</li>
+  <li>Windows: all binaries were built with mingw-w64 GCC 7.4, running in a
+CentOS 6 Docker container</li>
+  <li>macOS: most binaries were built with GCC 7.4, running in a separate
+folder on macOS 10.10.5; GDB cannot be compiled with GCC, so Apple
+clang was used.</li>
+</ul>
+
+<h2 id="tests">Tests</h2>
+
+<p>The binaries were testes on Windows 10 Pro 32/64-bit, Ubuntu 18 LTS 64-bit,
+Xubuntu 18 LTS 32-bit and macOS 10.13.</p>
+
+<p>The tests consist in building and debugging some
+<a href="https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/tree/xpack/tests/eclipse">simple Eclipse projects</a>
+available in the project.</p>
+
+<p>Since the source code used for GCC is identical to the one used by Arm, the
+long and complex tests performed by Arm to validate their release were not
+executed again.</p>
+
+<h2 id="checksums">Checksums</h2>
+
+<p>The SHA-256 hashes for the files are:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>b852c2f8aa48a0d5ea6d7c5afea8ee825c1df7f7cf7492825519223b0bb7a9f2
+xpack-arm-none-eabi-gcc-7.3.1-1.2-darwin-x64.tgz
+
+eda39f5866598881a63e07eff622c3b442f3cc4b166f8ebda29ffb30a08280c9
+xpack-arm-none-eabi-gcc-7.3.1-1.2-linux-x32.tgz
+
+c5c76a218f9b847c51d354c0f994de0cac5e7568a3b58e0ca04ce3d36f4eab0e
+xpack-arm-none-eabi-gcc-7.3.1-1.2-linux-x64.tgz
+
+d6d5613f032060ccfaa43757a1f56a01308c5b879630b9d21742adbd8ae40d57
+xpack-arm-none-eabi-gcc-7.3.1-1.2-win32-x32.zip
+
+b5501d197ba19724783e42a454c260f9a73ab9a759279aea72bf353dd5301afc
+xpack-arm-none-eabi-gcc-7.3.1-1.2-win32-x64.zip
+</code></pre></div></div>
+
+<h2 id="download-analytics">Download analytics</h2>
+
+<ul>
+  <li>GitHub <a href="https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/">xpack-dev-tools/arm-none-eabi-gcc-xpack</a>
+    <ul>
+      <li>this release <a href="https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/v7.3.1-1.2/"><img src="https://img.shields.io/github/downloads/xpack-dev-tools/arm-none-eabi-gcc-xpack/v7.3.1-1.2/total.svg" alt="Github All Releases" /></a></li>
+      <li>all releases <a href="https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/"><img src="https://img.shields.io/github/downloads/xpack-dev-tools/arm-none-eabi-gcc-xpack/total.svg" alt="Github All Releases" /></a></li>
+      <li>GNU MCU Eclipse all releases <a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases/"><img src="https://img.shields.io/github/downloads/gnu-mcu-eclipse/arm-none-eabi-gcc/total.svg" alt="Github All Releases" /></a></li>
+      <li><a href="https://www.somsubhra.com/github-release-stats/?username=xpack-dev-tools&amp;repository=arm-none-eabi-gcc-xpack">individual file counters</a> (grouped per release)</li>
+    </ul>
+  </li>
+  <li>npmjs.com <a href="https://www.npmjs.com/package/@xpack-dev-tools/arm-none-eabi-gcc">@xpack-dev-tools/arm-none-eabi-gcc</a>
+    <ul>
+      <li>all releases <a href="https://www.npmjs.com/package/@xpack-dev-tools/arm-none-eabi-gcc/"><img src="https://img.shields.io/npm/dt/@xpack-dev-tools/arm-none-eabi-gcc.svg" alt="npm" /></a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Credit to <a href="https://shields.io">Shields IO</a> for the badges and to
+<a href="https://github.com/Somsubhra/github-release-stats">Somsubhra/github-release-stats</a>
+for the individual file counters.</p>
+
+    </div>
+
+
+
+</article>
+
+    
+    <a target="_blank" rel="noopener" href="https://github.com/xpack/xpack.github.io/blob/master/_posts/releases/arm-none-eabi-gcc/2019-07-26-arm-none-eabi-gcc-v7-3-1-1-2-released.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
+
+    
+
+
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'xpack'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2020 Liviu Ionescu. All rights reserved. <br />
+<span>Page last updated:</span> Aug 16, 2020<br/> Site last generated: Sep 9, 2020 <br />
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-16767008-13','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+</html>

@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content="releasesqemuemulatorarmcortex-meclipsegdbsemihosting,  ">
+<title>GNU ARM Eclipse QEMU v2.2.92-20150404*-dev released | The xPack Project</title>
+<link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?201907181733">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://xpack.github.io/css/customstyles.css?201907181733">
+<link rel="stylesheet" href="https://xpack.github.io/css/boxshadowproperties.css?201907181733">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="https://xpack.github.io/css/theme-blue.css?201907181733">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://xpack.github.io/js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="https://xpack.github.io/js/toc.js"></script>
+<script src="https://xpack.github.io/js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="https://xpack.github.io/images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="xpack.github.io" href="https://xpack.github.io/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks" style="">
+        <div style="display: inline-block; float: left; margin-top: 8px; margin-left: auto; margin-right: 10px;"><img src="/images/company_logo.png" alt="logo" width="32px" height="32px"/></div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="/">&nbsp;<span class="projectTitle"> The xPack Project</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <li class="active"><a href="/news">News</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="/xpm/">xpm</a></li>
+                        
+                        
+                        
+                        <li><a href="/xpbuild/">xpbuild</a></li>
+                        
+                        
+                        
+                        <li><a href="/xpninja/">xpninja</a></li>
+                        
+                        
+                        
+                        <li><a href="/xpmake/">xpmake</a></li>
+                        
+                        
+                        
+                        <li><a href="/xpcdl/">xpcdl</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack" target="_blank" rel="noopener">xPack Core Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://gitter.im/xpack/" target="_blank" rel="noopener">The xPack Chatroom</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '/search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="GNU ARM Eclipse QEMU v2.2.92-20150404*-dev released">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3 sticky" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle"> </li>
+  
+  
+  
+  <li>
+      <a title="Getting Started" href="#">Getting Started</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Intro" href="/intro/">Intro</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Install prerequisites" href="/install/">Install prerequisites</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="About" href="/about/">About</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Core Tools" href="#">Core Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="xpm" href="/xpm/">xpm</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpbuild" href="/xpbuild/">xpbuild</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpninja" href="/xpninja/">xpninja</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpmake" href="/xpmake/">xpmake</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpcdl" href="/xpcdl/">xpcdl</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="3rd Party Tools" href="#">3rd Party Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="arm-none-eabi-gcc" href="/arm-none-eabi-gcc/">arm-none-eabi-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="riscv-none-embed-gcc" href="/riscv-none-embed-gcc/">riscv-none-embed-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="openocd" href="/openocd/">openocd</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="qemu-arm" href="/qemu-arm/">qemu-arm</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="windows-build-tools" href="/windows-build-tools/">windows-build-tools</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="News" href="#">News</a>
+      <ul>
+          
+          
+          
+          <li><a title="Latest News" href="/news/">Latest News</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Archive" href="/news/archive/">Archive</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tags" href="/tags/">Tags</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Support" href="#">Support</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/support/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a class="extern" title="The xPack Forums" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Developer Info" href="#">Developer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/develop/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="JavaScript Style Guide" href="/develop/js-style-guide/">JavaScript Style Guide</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Links" href="/develop/links/">Links</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Maintainer Info" href="#">Maintainer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/maintain/">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="License" href="#">License</a>
+      <ul>
+          
+          
+          
+          <li><a class="extern" title="MIT" href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">MIT</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Home" href="#">Home</a>
+      <ul>
+          
+          
+          
+          <li><a title="The xPack Project" href="/">The xPack Project</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a class="extern" title="GNU MCU Eclipse" href="https://gnu-mcu-eclipse.github.io" target="_blank" rel="noopener">GNU MCU Eclipse</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">GNU ARM Eclipse QEMU v2.2.92-20150404*-dev released</h1>
+        <p class="post-meta"><time datetime="2015-04-05T02:09:00+03:00" itemprop="datePublished">Apr 5, 2015</time> <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">/ Liviu Ionescu</span></span> /
+            
+            
+            
+            <a href="/tags/releases/">releases</a>, 
+            
+            
+            
+            <a href="/tags/qemu/">qemu</a>, 
+            
+            
+            
+            <a href="/tags/emulator/">emulator</a>, 
+            
+            
+            
+            <a href="/tags/arm/">arm</a>, 
+            
+            
+            
+            <a href="/tags/cortex-m/">cortex-m</a>, 
+            
+            
+            
+            <a href="/tags/eclipse/">eclipse</a>, 
+            
+            
+            
+            <a href="/tags/gdb/">gdb</a>, 
+            
+            
+            
+            <a href="/tags/semihosting/">semihosting</a>
+            
+            
+            
+
+        </p>
+
+
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+
+        
+
+        <p>This is the initial release of the <a href="/qemu-arm/">GNU ARM Eclipse QEMU</a>. It is mainly a technology preview (most of the supported boards are present, but functionality is limited and only projects created with the generic Cortex-M3 template are supported).</p>
+
+<p><a href="https://github.com/gnu-mcu-eclipse/qemu/releases/gae-2.2.92-20150404">Binary files »</a></p>
+
+<h2 id="supported-boards">Supported boards</h2>
+
+<p>The boards initially added to <strong>GNU ARM Eclipse QEMU</strong> are:</p>
+
+<ul>
+  <li>EK-TM4C123GXL – TI Tiva C Series TM4C123GXL LaunchPad Evaluation Kit (Experimental)</li>
+  <li>FRDM-K20D50M – Freescale Freedom Development Platform for Kinetis K20 USB MCUs (Experimental)</li>
+  <li>FRDM-K22F – Freescale Freedom Development Platform for Kinetis K22 MCUs (Experimental)</li>
+  <li>FRDM-K64F – Freescale Freedom Development Platform for Kinetis K6[34] and K24 MCUs (Experimental)</li>
+  <li>FRDM-KL25Z – Freescale Freedom Development Platform for Kinetis KL[12][45] MCUs (Experimental)</li>
+  <li>FRDM-KL26Z – Freescale Freedom Development Platform for Kinetis KL[12]6 MCUs (Experimental)</li>
+  <li>FRDM-KL43Z – Freescale Freedom Development Platform for Kinetis KL[34]3, KL[12]7 MCUs (Experimental)</li>
+  <li>FRDM-KL46Z – Freescale Freedom Development Platform for Kinetis KL[34]x MCUs (Experimental)</li>
+  <li>LPCXpresso-LPC1769 – Embedded Artists LPCXpresso LPC1769 Development Board (Experimental)</li>
+  <li>Maple – LeafLab Arduino-style STM32 microcontroller board (Experimental)</li>
+  <li>NUCLEO-F103RB – ST Nucleo Development Board for STM32 F1 series (Experimental)</li>
+  <li>NUCLEO-F334R8 – ST Nucleo Development Board for STM32 F3 series (Experimental)</li>
+  <li>NUCLEO-F411RE – ST Nucleo Development Board for STM32 F4 series (Experimental)</li>
+  <li>NUCLEO-L152RE – ST Nucleo Development Board with STM32L152RET6 (Experimental)</li>
+  <li>Netduino2 – Netduino Development Board with STM32F2 (Experimental)</li>
+  <li>NetduinoGo – Netduino GoBus Development Board with STM32F4 (Experimental)</li>
+  <li>NetduinoPlus2 – Netduino Development Board with STM32F4 (Experimental)</li>
+  <li>OLIMEXINO-STM32 – Olimex Maple (Arduino-like) Development Board (Experimental)</li>
+  <li>SAM3-H256 – Olimex Header Board for ATSAM3S4BA (Experimental)</li>
+  <li>STM32-E407 – Olimex Development Board for STM32F407ZGT6 (Experimental)</li>
+  <li>STM32-H103 – Olimex Header Board for STM32F103RBT6 (Experimental)</li>
+  <li>STM32-P103 – Olimex Prototype Board for STM32F103RBT6 (Experimental)</li>
+  <li>STM32-P107 – Olimex Prototype Board for STM32F107VCT6 (Experimental)</li>
+  <li>STM32F0-Discovery – ST Discovery kit for STM32F051 line (Experimental)</li>
+  <li>STM32F3-Discovery – ST Discovery kit for STM32F303 line (Experimental)</li>
+  <li>STM32F4-Discovery – ST Discovery kit for STM32F407/417 lines (Experimental)</li>
+  <li>STM32F429I-Discovery – ST Discovery kit for STM32F429/439 lines (Experimental)</li>
+  <li>STM32VL-Discovery – ST Discovery kit for STM32F100 Value Line (Experimental)</li>
+  <li>TWR-K60F120M – Freescale Kinetis K60 120 MHz Tower System Module (Experimental)</li>
+  <li>XMC 2Go – Infineon XMC 2Go Kit with XMC1100 (Experimental)</li>
+  <li>XMC1100 Boot Kit – Infineon CPU Card XMC1100 Boot Kit Entry Series (Experimental)</li>
+  <li>XMC1200 Boot Kit – Infineon CPU Card XMC1200 Boot Kit Feature Series (Experimental)</li>
+  <li>XMC1300 Boot Kit – Infineon CPU Card XMC1300 Boot Kit Control Series (Experimental)</li>
+  <li>XMC4200 Enterprise Kit – Infineon CPU Board XMC4200 Actuator (Experimental)</li>
+  <li>XMC4400 Enterprise Kit – Infineon CPU Board XMC4400 General Purpose (Experimental)</li>
+  <li>XMC4500 Enterprise Kit – Infineon CPU Board XMC4500 General Purpose (Experimental)</li>
+  <li>XMC4500 Relax Kit – Infineon CPU Board XMC4500 Relax Kit (Experimental)</li>
+  <li>XMC4500 Relax Lite Kit – Infineon CPU Board XMC4500 Relax Lite Kit (Experimental)</li>
+</ul>
+
+<p>As clearly marked, support for these boards is <strong>experimental.</strong> The boards generally include the right ARM core ID and should reflect the real memory banks, but since currently QEMU supports only Cortex-M3 cores, the boards behave like Cortex-M3 cores, so the emulation is not yet very accurate.</p>
+
+<h2 id="changes-from-qemu-2292">Changes from QEMU 2.2.92</h2>
+
+<ul>
+  <li><strong>-verbose</strong> added, with multiple levels to increase verbosity; the first level of verbosity is always enabled by the plug-in, to get the feedback required when starting the server backend for the debugging session;</li>
+  <li><strong>-semihosting-cmdline</strong> added, to define the semihosting command line, required when running unit tests;</li>
+  <li>build script for macOS, Debian 32-bit/64-bit and Windows 32-bit/64-bit (using MinGW-w64) added; the required libraries are build locally</li>
+</ul>
+
+<h2 id="eclipse-plug-in">Eclipse plug-in</h2>
+
+<p>The <strong>GNU ARM Eclipse QEMU</strong> is by design intended to be integrated with the <strong>GNU ARM Eclipse plug-ins</strong>. QEMU behaves like a GDB server, allowing to load the application into processor memory and debug as any real board. (Note: the Eclipse plug-in will be available shortly).</p>
+
+<h2 id="known-problems">Known problems</h2>
+
+<p><del>The 64-bit version for Windows has some run-time problems and does not execute properly;</del> it was deleted from the released files section; until a solution will be available, the 32-bit version of QEMU can be used on Windows 64-bit; <strong>fixed in release 2.3.50-201508051820-dev</strong>.</p>
+
+<h2 id="download">Download</h2>
+
+<p>The new QEMU can be downloaded from the <a href="https://github.com/gnu-mcu-eclipse/qemu/releases/tag/gae-2.2.92-20150404">GitHub Releases</a> page.</p>
+
+    </div>
+
+
+
+</article>
+
+    
+    <a target="_blank" rel="noopener" href="https://github.com/xpack/xpack.github.io/blob/master/_posts/releases/qemu-arm/2015-04-04-qemu-v2-2-92-20150404-released.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
+
+    
+
+
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'xpack'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2020 Liviu Ionescu. All rights reserved. <br />
+<span>Page last updated:</span> Aug 16, 2020<br/> Site last generated: Sep 9, 2020 <br />
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-16767008-13','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+</html>

@@ -1,0 +1,1664 @@
+[
+
+
+
+
+
+
+{
+"title": "About",
+"tags": "",
+"keywords": "",
+"url": "/about/",
+"summary": "<p>Perfekt ist nicht gut genug.</p>"
+}
+,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+"title": "FAQ",
+"tags": "",
+"keywords": "",
+"url": "/xpbuild/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack GNU Arm Embedded GCC Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/arm-none-eabi-gcc/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack OpenOCD Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/openocd/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack QEMU Arm Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/qemu-arm/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "FAQ",
+"tags": "",
+"keywords": "",
+"url": "/xpm/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack GNU RISC-V Embedded GCC Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/riscv-none-embed-gcc/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack Windows Build Tools Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/windows-build-tools/faq/",
+"summary": ""
+}
+,
+
+
+
+
+
+{
+"title": "xpm folders",
+"tags": "",
+"keywords": "",
+"url": "/xpm/folders/",
+"summary": ""
+}
+,
+
+
+
+
+
+
+
+
+
+
+
+{
+"title": "How to create a new xPack Git repository",
+"tags": "",
+"keywords": "",
+"url": "/develop/how-to-new-git/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to release the project web",
+"tags": "",
+"keywords": "",
+"url": "/maintain/how-to-release-web/",
+"summary": ""
+}
+,
+
+
+
+
+
+{
+"title": "The xPack Basic Project Builder",
+"tags": "",
+"keywords": "",
+"url": "/xpbuild/",
+"summary": "<p>A tool to build day to day projects without having to manually write make files, with an emphasis on C/C++ and embedded applications, inspired by Eclipse CDT managed builder (work in progress).</p>"
+}
+,
+
+
+
+{
+"title": "xPack Developer info",
+"tags": "",
+"keywords": "",
+"url": "/develop/",
+"summary": "<p>Resources for xPack developers.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack GNU Arm Embedded GCC",
+"tags": "",
+"keywords": "arm-none-eabi-gccarmgccembedded",
+"url": "/arm-none-eabi-gcc/",
+"summary": "<p>A binary distribution of GNU Arm Embedded GCC.</p>"
+}
+,
+
+
+
+
+
+
+
+{
+"title": "The xPack Build Runner",
+"tags": "",
+"keywords": "make",
+"url": "/xpninja/",
+"summary": "<p>A light and fast tool to build generic projects, inspired by Ninja Build but with the configuration files in JSON (in design phase).</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Project",
+"tags": "",
+"keywords": "packages, code sharing, reusing, libraries, applications, c/c++, embedded",
+"url": "/",
+"summary": "<p>Tools to manage, configure and build complex, package based, multi-target projects.</p>"
+}
+,
+
+
+
+
+
+{
+"title": "The xPack Package Manager",
+"tags": "",
+"keywords": "xPackpackagemanager",
+"url": "/xpm/",
+"summary": "<p>A tool to manage dependencies for generic multi-version source and binary packages, inspired by npm.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Build Generator",
+"tags": "",
+"keywords": "make",
+"url": "/xpmake/",
+"summary": "<p>An advanced tool to build complex projects, inspired by CMake, but with the configuration files in JSON and actions in JavaScript (in design phase).</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Build Configurator",
+"tags": "",
+"keywords": "make",
+"url": "/xpcdl/",
+"summary": "<p>A tool to manage project configurations, inspired by eCos CDL, but with the configuration files in JSON (in design phase).</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Build Box",
+"tags": "",
+"keywords": "",
+"url": "/xbb/",
+"summary": "<p>An elaborated environment for building binary xPacks.</p>"
+}
+,
+
+
+
+
+
+{
+"title": "The xPack Windows Build Tools",
+"tags": "",
+"keywords": "windows-build-tools",
+"url": "/windows-build-tools/",
+"summary": "<p>A Windows binary distribution of GNU Make, to be used with Eclipse Embedded CDT.</p>"
+}
+,
+
+
+
+{
+"title": "Maintainer info",
+"tags": "",
+"keywords": "",
+"url": "/maintain/",
+"summary": "<p>Resources for the xPack projects maintainers.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack OpenOCD",
+"tags": "",
+"keywords": "openocd",
+"url": "/openocd/",
+"summary": "<p>A binary distribution of OpenOCD.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack QEMU Arm",
+"tags": "",
+"keywords": "qemuarmcortex-mgraphic",
+"url": "/qemu-arm/",
+"summary": "<p>A binary distribution of QEMU Arm.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack GNU RISC-V Embedded GCC",
+"tags": "",
+"keywords": "riscv-none-embed-gccriscvgccembedded",
+"url": "/riscv-none-embed-gcc/",
+"summary": "<p>A binary distribution of GNU RISC-V Embedded GCC.</p>"
+}
+,
+
+
+
+{
+"title": "xpm init",
+"tags": "",
+"keywords": "",
+"url": "/xpm/cli/init/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "xpbuild init",
+"tags": "",
+"keywords": "",
+"url": "/xpbuild/cli/init/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to install the xPack GNU Arm Embedded GCC binaries",
+"tags": "",
+"keywords": "",
+"url": "/arm-none-eabi-gcc/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "How to install the xPack Windows Build Tools binaries",
+"tags": "",
+"keywords": "",
+"url": "/windows-build-tools/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "How to install the xPack tools",
+"tags": "",
+"keywords": "npmxpackinstall",
+"url": "/install/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to install xpbuild",
+"tags": "",
+"keywords": "xpbuildxpackinstall",
+"url": "/xpbuild/install/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to install xpm",
+"tags": "",
+"keywords": "xpmnpmxpackinstall",
+"url": "/xpm/install/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to install the xPack OpenOCD binaries",
+"tags": "",
+"keywords": "",
+"url": "/openocd/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "How to install the xPack QEMU Arm binaries",
+"tags": "",
+"keywords": "",
+"url": "/qemu-arm/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "xpm install",
+"tags": "",
+"keywords": "",
+"url": "/xpm/cli/install/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to install the xPack GNU RISC-V Embedded GCC binaries",
+"tags": "",
+"keywords": "",
+"url": "/riscv-none-embed-gcc/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "xPack 101",
+"tags": "",
+"keywords": "",
+"url": "/intro/",
+"summary": "<p>A npm module with an extra xpack property.</p>"
+}
+,
+
+
+
+{
+"title": "JavaScript Style Guide",
+"tags": "",
+"keywords": "",
+"url": "/develop/js-style-guide/",
+"summary": "<p>For consistency, use the Standard JS validation tools.</p>"
+}
+,
+
+
+
+
+
+{
+"title": "Links",
+"tags": "",
+"keywords": "",
+"url": "/develop/links/",
+"summary": ""
+}
+,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+"title": "The xPack QEMU Arm command line options",
+"tags": "",
+"keywords": "",
+"url": "/qemu-arm/options/",
+"summary": "<p>The QEMU Arm command line options allow to start standalone graphical or non-graphical emulation sessions, or to run as a GBD server in connection to a GDB client.</p>"
+}
+,
+
+
+
+{
+"title": "xpbuild - common options",
+"tags": "",
+"keywords": "",
+"url": "/xpbuild/cli/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "xpm files",
+"tags": "",
+"keywords": "",
+"url": "/xpm/files/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "xpm - common options",
+"tags": "",
+"keywords": "",
+"url": "/xpm/cli/",
+"summary": ""
+}
+,
+
+
+
+
+
+
+
+{
+"title": "How to get support",
+"tags": "",
+"keywords": "",
+"url": "/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "package.json",
+"tags": "",
+"keywords": "",
+"url": "/xpm/files/package.json/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Prerequisites for building xPack binaries",
+"tags": "",
+"keywords": "",
+"url": "/xbb/prerequisites/",
+"summary": ""
+}
+,
+
+
+
+
+
+{
+"title": "GDB with Python support",
+"tags": "",
+"keywords": "",
+"url": "/arm-none-eabi-gcc/python/",
+"summary": "<p>Support for Python 2 and 3 is available in GDB.</p>"
+}
+,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+"title": "xpm run-script",
+"tags": "",
+"keywords": "",
+"url": "/xpm/cli/run-script/",
+"summary": ""
+}
+,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+"title": "How to get help for xPack QEMU Arm",
+"tags": "",
+"keywords": "",
+"url": "/qemu-arm/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xpbuild",
+"tags": "",
+"keywords": "",
+"url": "/xpbuild/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xpm",
+"tags": "",
+"keywords": "",
+"url": "/xpm/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack OpenOCD?",
+"tags": "",
+"keywords": "",
+"url": "/openocd/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack GNU RISC-V Embedded GCC?",
+"tags": "",
+"keywords": "",
+"url": "/riscv-none-embed-gcc/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack GNU Arm Embedded GCC?",
+"tags": "",
+"keywords": "",
+"url": "/arm-none-eabi-gcc/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack Windows Build Tools",
+"tags": "",
+"keywords": "",
+"url": "/windows-build-tools/support/",
+"summary": ""
+}
+,
+
+
+
+
+
+{
+"title": "Page Title",
+"tags": "",
+"keywords": "",
+"url": "/test/",
+"summary": ""
+}
+,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+"title": "The xpbuild.json files",
+"tags": "",
+"keywords": "",
+"url": "/xpbuild/files/xpbuild-json/",
+"summary": ""
+}
+,
+
+
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "/assets/css/style.css",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "/xpm/files/folders/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "/redirects.json",
+"summary": ""
+}
+,
+
+
+
+
+
+{
+"title": "xPack GNU Arm Embedded GCC v9.3.1-1.2 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
+"keywords": "",
+"url": "/blog/2020/07/27/arm-none-eabi-gcc-v9-3-1-1-2-released/",
+"summary": "<p>Version 9.3.1-1.2 is a maintenance release of <strong>xPack GNU Arm Embedded GCC</strong>, intended to <strong>fix C++ exceptions</strong> support for non-nano libraries, and to use <strong>DT_RPATH</strong> to make the binaries immune to custom LD_LIBRARY_PATH.</p>"
+}
+,
+
+
+{
+"title": "xPack Windows Build Tools v2.12.2 released",
+"tags": "releaseswindows-build-toolsbuildmakermmkdirbusybox",
+"keywords": "",
+"url": "/blog/2020/07/14/windows-build-tools-v2-12-2-released/",
+"summary": "<p>Version 2.12.2 is a maintenance release; it repacks the same tools from the previous release, but built with the new XBB v3.2 tools.</p>"
+}
+,
+
+
+{
+"title": "xPack GNU RISC-V Embedded GCC v8.3.0-1.2 released",
+"tags": "releasesriscvriscv-none-embed-gcc",
+"keywords": "",
+"url": "/blog/2020/07/04/riscv-none-embed-gcc-v8-3-0-1-2-released/",
+"summary": "<p>Version 8.3.0-1.2 is a maintenance release of the <strong>xPack GNU RISC-V Embedded GCC</strong>, that packs the SiFive release from August 2019, and <strong>adds support for running on Arm platforms</strong>, like <strong>Raspberry Pi</strong>.</p>"
+}
+,
+
+
+{
+"title": "xPack GNU Arm Embedded GCC v9.3.1-1.1 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinaries",
+"keywords": "",
+"url": "/blog/2020/07/03/arm-none-eabi-gcc-v9-3-1-1-1-released/",
+"summary": "<p>Version 9.3.1-1.1 is a new release of <strong>xPack GNU Arm Embedded GCC</strong>, following Arm release from June 01, 2020 (version <strong>9-2020-q2-update</strong>). This is also the first release that <strong>adds support for running on Arm platforms</strong>, like <strong>Raspberry Pi</strong>.</p>"
+}
+,
+
+
+{
+"title": "xPack QEMU Arm v2.8.0-9 released",
+"tags": "releasesqemuemulatorarmcortex-m",
+"keywords": "",
+"url": "/blog/2020/07/01/qemu-arm-v2-8-0-9-released/",
+"summary": "<p>Version 2.8.0-9 is a maintenance release; it <strong>adds support for running on Arm platforms</strong>, like <strong>Raspberry Pi</strong>.</p>"
+}
+,
+
+
+{
+"title": "xPack OpenOCD v0.10.0-14 released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2020/06/24/openocd-v0-10-0-14-released/",
+"summary": "<p>Version 0.10.0-14 is a maintenance release; it updates to the latest upstream master and adds support for running on Arm platforms, like Raspberry Pi.</p>"
+}
+,
+
+
+{
+"title": "xPack GNU Arm Embedded GCC v9.2.1-1.1 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinaries",
+"keywords": "",
+"url": "/blog/2019/12/06/arm-none-eabi-gcc-v9-2-1-1-1-released/",
+"summary": "<p>Version 9.2.1-1.1 is a new release of <strong>xPack GNU Arm Embedded GCC</strong>, following Arm release from November 06, 2019 (version <strong>9-2019-q4-major</strong>).</p>"
+}
+,
+
+
+{
+"title": "xPack GNU Arm Embedded GCC v8.3.1-1.4 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinaries",
+"keywords": "",
+"url": "/blog/2019/12/06/arm-none-eabi-gcc-v8-3-1-1-4-released/",
+"summary": "<p>Version 8.3.1-1.4 is a maintenance release of xPack GNU Arm Embedded GCC repacking the files from the previous 8.3.1-1.3 release in archives with a simpler structure and more standard names.</p>"
+}
+,
+
+
+{
+"title": "xPack QEMU Arm v2.8.0-8 released",
+"tags": "releasesqemuemulatorarmcortex-m",
+"keywords": "",
+"url": "/blog/2019/11/05/qemu-arm-v2-8-0-8-released/",
+"summary": "<p>Version 2.8.0-8 is a maintenance release, to fix a bug affecting STM32F1 GPIOs.</p>"
+}
+,
+
+
+{
+"title": "xPack GNU Arm Embedded GCC v8.3.1-1.3 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinaries",
+"keywords": "",
+"url": "/blog/2019/11/02/arm-none-eabi-gcc-v8-3-1-1-3-released/",
+"summary": "<p>Version 8.3.1-1.3 is  a maintenance release of xPack GNU Arm Embedded GCC to partly fix the build for GDB with Python support.</p>"
+}
+,
+
+
+{
+"title": "xPack GNU RISC-V Embedded GCC v8.3.0-1.1 released",
+"tags": "releasesriscvriscv-none-embed-gcc",
+"keywords": "",
+"url": "/blog/2019/11/01/riscv-none-embed-gcc-v8-3-0-1-1-released/",
+"summary": "<p>Version 8.3.0-1.1 is a new release of the <strong>xPack GNU RISC-V Embedded GCC</strong>, following SiFive release from August 2019.</p>"
+}
+,
+
+
+{
+"title": "xPack GNU Arm Embedded GCC v8.3.1-1.2 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinaries",
+"keywords": "",
+"url": "/blog/2019/10/11/arm-none-eabi-gcc-v8-3-1-1-2-released/",
+"summary": "<p>Version 8.3.1-1.2 is  a maintenance release of xPack GNU Arm Embedded GCC to fix the <strong>libgcov</strong> build bug.</p>"
+}
+,
+
+
+{
+"title": "xPack GNU RISC-V Embedded GCC v8.2.0-3.1 released",
+"tags": "releasesriscvriscv-none-embed-gcc",
+"keywords": "",
+"url": "/blog/2019/07/31/riscv-none-embed-gcc-v8-2-0-3-1-released/",
+"summary": "<p>Version 8.2.0-3.1 is a new release of the <strong>xPack GNU RISC-V Embedded GCC</strong>, following SiFive release from May 2019.</p>"
+}
+,
+
+
+{
+"title": "xPack GNU Arm Embedded GCC v8.3.1-1.1 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinaries",
+"keywords": "",
+"url": "/blog/2019/07/29/arm-none-eabi-gcc-v8-3-1-1-1-released/",
+"summary": "<p>Version 8.3.1-1.1 is a new release of <strong>xPack GNU Arm Embedded GCC</strong>, following Arm release from July 10, 2019 (version <strong>8-2019-q3-update</strong>).</p>"
+}
+,
+
+
+{
+"title": "xPack GNU Arm Embedded GCC v7.3.1-1.2 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinaries",
+"keywords": "",
+"url": "/blog/2019/07/26/arm-none-eabi-gcc-v7-3-1-1-2-released/",
+"summary": "<p>Version 7.3.1-1.2 is a repack of the GNU MCU Eclipse Arm Embedded GCC v7.3.1-1.1 using the new build scripts.</p>"
+}
+,
+
+
+{
+"title": "xPack QEMU Arm v2.8.0-7 released",
+"tags": "releasesqemuemulatorarmcortex-m",
+"keywords": "",
+"url": "/blog/2019/07/22/qemu-arm-v2-8-0-7-released/",
+"summary": "<p>Version 2.8.0-7 is a maintenance release, to fix a bug affecting Windows.</p>"
+}
+,
+
+
+{
+"title": "The xPack project web has a new look!",
+"tags": "newsweb",
+"keywords": "",
+"url": "/blog/2019/07/18/new-web-look/",
+"summary": ""
+}
+,
+
+
+{
+"title": "xPack OpenOCD v0.10.0-13 released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2019/07/17/openocd-v0-10-0-13-released/",
+"summary": "<p>Version 0.10.0-13 is a maintenance release; it updates to the latest upstream master.</p>"
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.7 20190524 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinarieslto",
+"keywords": "",
+"url": "/blog/2019/05/24/arm-none-eabi-gcc-v8-2-1-1-7-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse RISC-V Embedded GCC v8.2.0-2.2 20190521 released",
+"tags": "releasesriscvriscv-none-embed-gcc",
+"keywords": "",
+"url": "/blog/2019/05/21/riscv-none-gcc-v8-2-0-2-2-20190521-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse QEMU v2.8.0-6 20190517 released",
+"tags": "releasesqemuemulatorarmcortex-m",
+"keywords": "",
+"url": "/blog/2019/05/17/qemu-v2-8-0-6-20190517-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.6 20190510 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinarieslto",
+"keywords": "",
+"url": "/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.5 20190426 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinarieslto",
+"keywords": "",
+"url": "/blog/2019/04/26/arm-none-eabi-gcc-v8-2-1-1-5-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse RISC-V Embedded GCC v8.2.0-2.1 20190425 released",
+"tags": "releasesriscvriscv-none-embed-gcc",
+"keywords": "",
+"url": "/blog/2019/04/25/riscv-none-gcc-v8-2-0-2-1-20190425-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse QEMU v2.8.0-5 20190424 released",
+"tags": "releasesqemuemulatorarmcortex-m",
+"keywords": "",
+"url": "/blog/2019/04/24/qemu-v2-8-0-5-20190424-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse OpenOCD v0.10.0-12 20190422 released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2019/04/22/openocd-v0-10-0-12-20190422-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse Windows Build Tools v2.12 20190422 released",
+"tags": "releaseswindows-build-toolswindowsbuildmakermmkdirbusybox",
+"keywords": "",
+"url": "/blog/2019/04/22/windows-build-tools-v2-12-20190422-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.4 20190214 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinarieslto",
+"keywords": "",
+"url": "/blog/2019/02/14/arm-none-eabi-gcc-v8-2-1-1-4-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse QEMU v2.8.0-4-20190211 released",
+"tags": "releasesqemuemulatorarmcortex-m",
+"keywords": "",
+"url": "/blog/2019/02/11/qemu-v2-8-0-4-20190211-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.3 20190202 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinarieslto",
+"keywords": "",
+"url": "/blog/2019/02/02/arm-none-eabi-gcc-v8-2-1-1-3-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.2 20190119 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinaries",
+"keywords": "",
+"url": "/blog/2019/01/19/arm-none-eabi-gcc-v8-2-1-1-2-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse OpenOCD v0.10.0-11-20190118 released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2019/01/18/openocd-v0-10-0-11-20190118-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.1 20190102 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinaries",
+"keywords": "",
+"url": "/blog/2019/01/03/arm-none-eabi-gcc-v8-2-1-1-1-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse OpenOCD v0.10.0-10-20181020 released",
+"tags": "releasesopenocdsemihosting",
+"keywords": "",
+"url": "/blog/2018/10/20/openocd-v0-10-0-10-20181020-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse RISC-V Embedded GCC v8.1.0-2-20181019 released",
+"tags": "releasesriscvriscv-none-embed-gcc",
+"keywords": "",
+"url": "/blog/2018/10/19/riscv-none-gcc-v8-1-0-2-20181019-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse OpenOCD v0.10.0-9-20181016 released",
+"tags": "releasesopenocdsemihosting",
+"keywords": "",
+"url": "/blog/2018/10/16/openocd-v0-10-0-9-20181016-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse ARM Embedded GCC v7.3.1-1.1 20180724 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinaries",
+"keywords": "",
+"url": "/blog/2018/07/24/arm-none-eabi-gcc-v7-3-1-1-1-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-4-20180606 released",
+"tags": "releasesriscvriscv-none-embed-gcc",
+"keywords": "",
+"url": "/blog/2018/06/07/riscv-none-gcc-v7-2-0-4-20180606-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse QEMU v2.8.0-3-20180523 released",
+"tags": "releasesqemuemulatorarmcortex-m",
+"keywords": "",
+"url": "/blog/2018/05/23/qemu-v2-8-0-3-20180523-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse OpenOCD v0.10.0-8-20180512 released",
+"tags": "releasesopenocdsemihosting",
+"keywords": "",
+"url": "/blog/2018/05/13/openocd-v0-10-0-8-20180512-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-3-20180506 released",
+"tags": "releasesriscvriscv-none-embed-gcc",
+"keywords": "",
+"url": "/blog/2018/05/06/riscv-none-gcc-v7-2-0-3-20180506-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse Windows Build Tools v2.11-20180428 released",
+"tags": "releaseswindows-build-toolswindowsbuildmakermmkdirbusybox",
+"keywords": "",
+"url": "/blog/2018/04/28/windows-build-tools-v2-11-20180428-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse ARM Embedded GCC v7.2.1-1.1 20180401 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinaries",
+"keywords": "",
+"url": "/blog/2018/04/01/arm-none-eabi-gcc-v7-2-1-1-1-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse ARM Embedded GCC v6.3.1-1.1 20180331 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinaries",
+"keywords": "",
+"url": "/blog/2018/03/31/arm-none-eabi-gcc-v6-3-1-1-1-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse OpenOCD v0.10.0-7-20180123 released",
+"tags": "releasesopenocdsemihosting",
+"keywords": "",
+"url": "/blog/2018/01/23/openocd-v0-10-0-7-20180123-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-2-20180111 released",
+"tags": "releasesriscvriscv-none-embed-gcc",
+"keywords": "",
+"url": "/blog/2018/01/13/riscv-none-gcc-v7-2-0-2-20180111-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse OpenOCD v0.10.0-6-20180112 released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2018/01/12/openocd-v0-10-0-6-20180112-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse Windows Build Tools v2.10-20180103 released",
+"tags": "releaseswindows-build-toolswindowsbuildmakermmkdirbusybox",
+"keywords": "",
+"url": "/blog/2018/01/03/windows-build-tools-v2-10-20180103-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse OpenOCD v0.10.0-5-20171110 released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2017/11/10/openocd-v0-10-0-5-20171110-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-1-20171109 released",
+"tags": "releasesriscvriscv-none-embed-gcc",
+"keywords": "",
+"url": "/blog/2017/11/09/riscv-none-gcc-v7-2-0-1-20171109-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse OpenOCD v0.10.0-4-20171004* released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2017/10/04/openocd-v0-10-0-4-20171004-dev-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-2-20170912-* released",
+"tags": "releasesriscvriscv-none-embed-gcc",
+"keywords": "",
+"url": "/blog/2017/09/13/riscv-none-gcc-v7-1-1-2-20170912-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse OpenOCD v0.10.0-3-20170826* released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2017/08/26/openocd-v0-10-0-3-20170826-dev-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released",
+"tags": "releasesriscvriscv-none-embed-gcc",
+"keywords": "",
+"url": "/blog/2017/07/02/riscv-none-gcc-v7-1-1-1-20170702-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU MCU Eclipse Windows Build Tools v2.9-20170629 released",
+"tags": "releaseswindows-build-toolswindowssetupbuildmakemakedirrmbusybox",
+"keywords": "",
+"url": "/blog/2017/06/29/windows-build-tools-v2-9-20170629-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse OpenOCD v0.10.0-20170418* released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2017/04/19/openocd-v0-10-0-20170418-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse OpenOCD v0.10.0-20170124* released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2017/01/24/openocd-v0-10-0-20170124-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse QEMU v2.8.0-20161227* released",
+"tags": "releasesqemuemulatorarmcortex-mgraphicbuttonled",
+"keywords": "",
+"url": "/blog/2016/12/27/qemu-v2-8-0-20161227-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse QEMU v2.7.0-20161128* released",
+"tags": "releasesqemuemulatorarmcortex-mgraphicbuttonled",
+"keywords": "",
+"url": "/blog/2016/11/28/qemu-v2-7-0-20161128-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse Windows Build Tools v2.8-20161122* released",
+"tags": "releaseswindows-build-toolswindowssetupbuildmakemakedirrmbusybox",
+"keywords": "",
+"url": "/blog/2016/11/22/windows-build-tools-v2-8-20161122-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse QEMU v2.7.0-20161029* released",
+"tags": "releasesqemuemulatorarmcortex-m",
+"keywords": "",
+"url": "/blog/2016/10/29/qemu-v2-7-0-20161029-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse OpenOCD v0.10.0-20161028*-dev released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2016/10/28/openocd-v0-10-0-20161028-dev-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse Windows Build Tools v2.7-20161028* released",
+"tags": "releaseswindows-build-toolswindowssetupbuildmakermbusybox",
+"keywords": "",
+"url": "/blog/2016/10/28/windows-build-tools-v2.7-20161028-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse QEMU v2.6.0-20160728* released",
+"tags": "releasesqemuemulatorarmcortex-mbasepridhcsrbkpt",
+"keywords": "",
+"url": "/blog/2016/07/28/qemu-v2-6-0-20160728-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse OpenOCD v0.10.0-20160110*-dev released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2016/01/11/openocd-v0.10.0-201601101000-dev-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse QEMU v2.4.50-20151029*-dev released",
+"tags": "releasesqemuemulatorarmcortex-m",
+"keywords": "",
+"url": "/blog/2015/10/29/qemu-v2-4-50-20151029-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse OpenOCD v0.10.0-20151028*-dev released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2015/10/28/openocd-v0.10.0-20151028-dev-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse QEMU v2.3.50-20150816*-dev released",
+"tags": "releasesqemuemulatorarmcortex-mrpath",
+"keywords": "",
+"url": "/blog/2015/08/16/qemu-v2-3-50-20150816-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse QEMU v2.3.50-20150805*-dev released",
+"tags": "releasesqemuemulatorarmcortex-m64-bitsigsetjmp",
+"keywords": "",
+"url": "/blog/2015/08/05/qemu-v2-3-50-20150805-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse QEMU v2.3.50-20150804*-dev released",
+"tags": "releasesqemuemulatorarmcortex-m411renucleo",
+"keywords": "",
+"url": "/blog/2015/08/05/qemu-v2-3-50-20150804-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse QEMU v2.3.50-20150801*-dev released",
+"tags": "releasesqemuemulatorarmcortex-mgpioledstmsystick",
+"keywords": "",
+"url": "/blog/2015/08/02/qemu-v2-3-50-20150801-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse Windows Build Tools v2.6-20150715* released",
+"tags": "releaseswindows-build-toolswindowssetupbuildmakermbusybox",
+"keywords": "",
+"url": "/blog/2015/07/15/windows-build-tools-v2.6-20150715-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse OpenOCD v0.9.0-20150519* released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2015/05/19/openocd-v0.9.0-20150519-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse QEMU v2.2.92-20150404*-dev released",
+"tags": "releasesqemuemulatorarmcortex-meclipsegdbsemihosting",
+"keywords": "",
+"url": "/blog/2015/04/05/qemu-v2-2-92-20150404-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse Windows Build Tools v2.4-20150324* released",
+"tags": "releaseswindows-build-toolswindowssetupbuildmakermbusybox",
+"keywords": "",
+"url": "/blog/2015/03/24/windows-build-tools-v2.4-20150324-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse OpenOCD v0.9.0-20150324*-dev released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2015/03/24/openocd-v0.9.0-20150324-dev-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse OpenOCD v0.8.0-20150324* released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2015/03/24/openocd-v0.8.0-20150324-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse Windows Build Tools v2.4-20150321* released",
+"tags": "releaseswindows-build-toolswindowssetupbuildmakermbusybox",
+"keywords": "",
+"url": "/blog/2015/03/21/windows-build-tools-v2.4-20150321-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse OpenOCD v0.9.0-20150320*-dev released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2015/03/20/openocd-v0.9.0-20150320-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse OpenOCD v0.8.0-20150320* released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2015/03/20/openocd-v0.8.0-20150320-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse OpenOCD v0.8.0-20150131* released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2015/01/31/openocd-v0.8.0-20150131-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse Windows Build Tools v2.3-20150124* released",
+"tags": "releaseswindows-build-toolswindowssetupbuildmakerm",
+"keywords": "",
+"url": "/blog/2015/01/24/windows-build-tools-v2.3-20150124-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse Windows Build Tools v2.2-20150123* released",
+"tags": "releaseswindows-build-toolswindowssetupbuildmakerm",
+"keywords": "",
+"url": "/blog/2015/01/23/windows-build-tools-v2.2-20150123-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse Windows Build Tools v2.1-20150122* released",
+"tags": "releaseswindows-build-toolswindowssetupbuildmakerm",
+"keywords": "",
+"url": "/blog/2015/01/21/windows-build-tools-v2.1-20150121-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse OpenOCD v0.8.0-20150119* released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2015/01/19/openocd-v0.8.0-20150119-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "Build Tools repacked as Setup",
+"tags": "releaseswindows-build-toolswindowssetupbuildmakerm",
+"keywords": "",
+"url": "/blog/2014/12/02/windows-build-tools-v2.0-20141202-released/",
+"summary": ""
+}
+
+
+
+]

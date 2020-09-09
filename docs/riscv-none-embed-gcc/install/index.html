@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The recommended method is via xpm.">
+<meta name="keywords" content=" ">
+<title>How to install the xPack GNU RISC-V Embedded GCC binaries | The xPack Project</title>
+<link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?201907181733">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://xpack.github.io/css/customstyles.css?201907181733">
+<link rel="stylesheet" href="https://xpack.github.io/css/boxshadowproperties.css?201907181733">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="https://xpack.github.io/css/theme-blue.css?201907181733">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://xpack.github.io/js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="https://xpack.github.io/js/toc.js"></script>
+<script src="https://xpack.github.io/js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="https://xpack.github.io/images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="xpack.github.io" href="https://xpack.github.io/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks" style="">
+        <div style="display: inline-block; float: left; margin-top: 8px; margin-left: auto; margin-right: 10px;"><img src="/images/company_logo.png" alt="logo" width="32px" height="32px"/></div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="/">&nbsp;<span class="projectTitle"> The xPack Project</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <li class="active"><a href="/news">News</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="/xpm/">xpm</a></li>
+                        
+                        
+                        
+                        <li><a href="/xpbuild/">xpbuild</a></li>
+                        
+                        
+                        
+                        <li><a href="/xpninja/">xpninja</a></li>
+                        
+                        
+                        
+                        <li><a href="/xpmake/">xpmake</a></li>
+                        
+                        
+                        
+                        <li><a href="/xpcdl/">xpcdl</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack" target="_blank" rel="noopener">xPack Core Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://gitter.im/xpack/" target="_blank" rel="noopener">The xPack Chatroom</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '/search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="How to install the xPack GNU RISC-V Embedded GCC binaries">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3 sticky" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle">GNU RISC-V Embedded GCC </li>
+  
+  
+  
+  <li>
+      <a title="Getting Started" href="#">Getting Started</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/riscv-none-embed-gcc/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li class="active"><a title="Install" href="/riscv-none-embed-gcc/install/">Install</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Support" href="/riscv-none-embed-gcc/support/">Support</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="FAQ" href="/riscv-none-embed-gcc/faq/">FAQ</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Releases" href="/riscv-none-embed-gcc/releases/">Releases</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Back Home" href="#">Back Home</a>
+      <ul>
+          
+          
+          
+          <li><a title="The xPack Project" href="/">The xPack Project</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a class="extern" title="GNU MCU Eclipse" href="https://gnu-mcu-eclipse.github.io" target="_blank" rel="noopener">GNU MCU Eclipse</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">How to install the xPack GNU RISC-V Embedded GCC binaries</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">The recommended method is via xpm.
+</div>
+   
+
+    
+
+
+   <h2 id="overview">Overview</h2>
+
+<p>The <strong>xPack GNU RISC-V Embedded GCC</strong> can be installed automatically, via xpm (the
+recommended method), or manually, by downloading and unpacking one of the
+portable archives.</p>
+
+<h2 id="easy-install">Easy install</h2>
+
+<p>The easiest way to install GNU RISC-V Embedded GCC is by using the
+<strong>binary xPack</strong>, available as
+<a href="https://www.npmjs.com/package/@xpack-dev-tools/riscv-none-embed-gcc"><code class="highlighter-rouge">@xpack-dev-tools/riscv-none-embed-gcc</code></a>
+from the <a href="https://www.npmjs.com"><code class="highlighter-rouge">npmjs.com</code></a> registry.</p>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<p>The only requirement is a recent
+<code class="highlighter-rouge">xpm</code>, which is a portable
+<a href="https://nodejs.org">Node.js</a> command line application. To install it,
+follow the instructions from the
+<a href="/xpm/install/">xpm install</a> page.</p>
+
+<h3 id="install">Install</h3>
+
+<p>With xpm available, installing
+the latest version of the package is quite easy:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> xpm install <span class="nt">--global</span> @xpack-dev-tools/riscv-none-embed-gcc@latest
+</code></pre></div></div>
+
+<p>This command will always install the latest available version,
+in the central xPacks repository, which is a platform dependent folder
+(check the output of the <code class="highlighter-rouge">xpm</code> command or the actual folder used on
+your platform).</p>
+
+<p>The archive content is unpacked in a folder named <code class="highlighter-rouge">.content</code>. On some platforms
+this might be hidden for normal browsing, and require
+separate options (like <code class="highlighter-rouge">ls -A</code>) or, in file browsers, to enable
+configurations like <strong>Show Hidden Files</strong>.</p>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> 
+The install location can be configured using the
+<code class="highlighter-rouge">XPACKS_REPO_FOLDER</code> environment variable; for more details please check the
+<a href="/xpm/folders/">xpm folders</a> page.
+</div>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> The archive content is unpacked in a folder
+named <code class="highlighter-rouge">.content</code>. On some platforms
+this might be hidden for normal browsing, and require
+separate options (like <code class="highlighter-rouge">ls -A</code>) or, in file browsers, to enable
+settings like <strong>Show Hidden Files</strong>.</div>
+
+<p>xPacks aware tools, like the <strong>Eclipse Embedded CDT plug-ins</strong> automatically
+identify binaries installed with
+xpm and provide a convenient method to manage paths.</p>
+
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important:</b> Automatic
+path discovery for the packages from the new <code class="highlighter-rouge">@xpack-dev-tools</code> scope was
+added to <strong>GNU MCU Eclipse plug-ins</strong> with v4.6.1-201909231407; update
+older versions or configure the path manually.</div>
+
+<h3 id="uninstall">Uninstall</h3>
+
+<p>To remove the installed xPack, the command is similar:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> xpm uninstall <span class="nt">--global</span> @xpack-dev-tools/riscv-none-embed-gcc
+</code></pre></div></div>
+
+<p>(Note: not yet implemented. As a temporary workaround, simply remove the
+<code class="highlighter-rouge">xPacks/@xpack-dev-tools/riscv-none-embed-gcc</code> folder, or one of the versioned
+subfolders.)</p>
+
+<h2 id="manual-install">Manual install</h2>
+
+<p>For all platforms, the <strong>xPack GNU RISC-V Embedded GCC</strong> binaries are
+released as portable
+archives that can be installed in any location.</p>
+
+<p>The archives can be downloaded from the
+<a href="https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/releases/">GitHub Releases</a> page.</p>
+
+<ul id="profileTabs_1" class="nav nav-tabs">
+    <li class="active"><a href="#windows_1" data-toggle="tab">Windows</a></li>
+    <li><a href="#macos_1" data-toggle="tab">macOS</a></li>
+    <li><a href="#linux_1" data-toggle="tab">GNU/Linux</a></li>
+</ul>
+<div class="tab-content">
+	<div role="tabpanel" class="tab-pane active" id="windows_1">
+		
+<h3 id="download">Download</h3>
+
+<p>The Windows versions of <strong>xPack GNU RISC-V Embedded GCC</strong> are packed as ZIP files.
+Download the latest version named like:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">xpack-riscv-none-embed-gcc-8.2.1-3.1-win32-x64.zip</code></li>
+  <li><code class="highlighter-rouge">xpack-riscv-none-embed-gcc-8.2.1-3.1-win32-x32.zip</code></li>
+</ul>
+
+<p>Select the <code class="highlighter-rouge">-x64</code> file for 64-bit Windows machines and the <code class="highlighter-rouge">-x32</code> file
+for 32-bit Windows machines.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> In case you wonder where the suffix comes
+from, it is exactly the Node.js <code class="highlighter-rouge">process.platform</code> and <code class="highlighter-rouge">process.arch</code>.
+The <code class="highlighter-rouge">win32</code> part is confusing, but we have to leave with it.</div>
+
+<h3 id="unpack">Unpack</h3>
+
+<p>Unpack the archive and copy it into the
+<code class="highlighter-rouge">%userprofile%\AppData\Roaming\xPacks\riscv-none-embed-gcc</code>
+(for example <code class="highlighter-rouge">C:\Users\ilg\AppData\Roaming\xPacks\riscv-none-embed-gcc</code>) folder;
+according to Microsoft, <code class="highlighter-rouge">AppData\Roaming</code> is the recommended location for
+installing user specific packages.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For manual installs, the recommended
+install location is slightly different from the xpm install folders,
+which use the scope (like <code class="highlighter-rouge">@xpack-dev-tools</code>) to group different tools,
+and <code class="highlighter-rouge">.content</code> to store the unpacked archive.</div>
+
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important:</b> Although perfectly possible to
+install GNU RISC-V Embedded GCC in any folder, it is highly recommended
+to use this path, since by default the Eclipse Embedded CDT debug plug-ins search
+for the executable in this location.</div>
+
+<p>To check if GCC starts, use the following command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Users\ilg&gt;C:\Users\ilg\AppData\Roaming\xPacks\xpack-riscv-none-embed-gcc-8.2.1-3.1\bin\riscv-none-embed-gcc.exe" --version
+riscv-none-embed-gcc (xPack GNU RISC-V Embedded GCC, 64-bit) 8.2.0
+</code></pre></div></div>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> Since Windows does not provide the GNU make
+binaries, it is recommended to also install the <strong>Windows Build Tools</strong>.</div>
+
+
+	</div>
+	<div role="tabpanel" class="tab-pane" id="macos_1">
+		
+<h3 id="download">Download</h3>
+
+<p>The macOS version of <strong>xPack GNU RISC-V Embedded GCC</strong> is packed as a TGZ archive.
+Download the latest version named like:</p>
+
+<p>- <code class="highlighter-rouge">xpack-riscv-none-embed-gcc-8.2.1-3.1-darwin-x64.tgz</code></p>
+
+<h3 id="unpack">Unpack</h3>
+
+<p>To install GNU RISC-V Embedded GCC, unpack the archive and copy it to
+<code class="highlighter-rouge">/${HOME}/opt/xPacks/riscv-none-embed-gcc/&lt;version&gt;</code>:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> mkdir <span class="nt">-p</span> ~/opt
+<span class="gp">$</span> <span class="nb">cd</span> ~/opt
+<span class="go">
+</span><span class="gp">$</span> <span class="nb">tar </span>xvf ~/Downloads/xpack-riscv-none-embed-gcc-8.2.1-3.1-darwin-x64.tgz
+<span class="gp">$</span> chmod <span class="nt">-R</span> <span class="nt">-w</span> xPacks/riscv-none-embed-gcc/8.2.1-3.1
+</code></pre></div></div>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For manual installs, the recommended
+install location is different from the xpm install folders.</div>
+
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important:</b> Although perfectly possible to
+install GNU RISC-V Embedded GCC in any folder, it is highly recommended
+to use this path, since by default the Eclipse Embedded CDT debug plug-ins search
+for the executable in this location.</div>
+
+<p>The result is a structure like:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> tree <span class="nt">-L</span> 2 /Users/ilg/opt/xPacks/riscv-none-embed-gcc/8.2.1-3.1
+<span class="go">/Users/ilg/opt/xPacks/riscv-none-embed-gcc/8.2.1-3.1
+├── README.md
+├── bin
+│   ├── libexpat.1.6.7.dylib
+</span><span class="gp">│   ├── libexpat.1.dylib -&gt;</span> libexpat.1.6.7.dylib
+<span class="go">│   ├── libgcc_s.1.dylib
+│   ├── libgmp.10.dylib
+│   ├── libiconv.2.dylib
+│   ├── liblzma.5.dylib
+│   ├── libmpfr.4.dylib
+│   ├── libz.1.2.8.dylib
+</span><span class="gp">│   ├── libz.1.dylib -&gt;</span> libz.1.2.8.dylib
+<span class="go">│   ├── riscv-none-embed-addr2line
+│   ├── riscv-none-embed-ar
+│   ├── riscv-none-embed-as
+│   ├── riscv-none-embed-c++
+│   ├── riscv-none-embed-c++filt
+│   ├── riscv-none-embed-cpp
+│   ├── riscv-none-embed-elfedit
+│   ├── riscv-none-embed-g++
+│   ├── riscv-none-embed-gcc
+│   ├── riscv-none-embed-gcc-8.2.0
+│   ├── riscv-none-embed-gcc-ar
+│   ├── riscv-none-embed-gcc-nm
+│   ├── riscv-none-embed-gcc-ranlib
+│   ├── riscv-none-embed-gcov
+│   ├── riscv-none-embed-gcov-dump
+│   ├── riscv-none-embed-gcov-tool
+│   ├── riscv-none-embed-gdb
+│   ├── riscv-none-embed-gdb-add-index
+│   ├── riscv-none-embed-gdb-add-index-py
+│   ├── riscv-none-embed-gdb-py
+│   ├── riscv-none-embed-gprof
+│   ├── riscv-none-embed-ld
+│   ├── riscv-none-embed-ld.bfd
+│   ├── riscv-none-embed-nm
+│   ├── riscv-none-embed-objcopy
+│   ├── riscv-none-embed-objdump
+│   ├── riscv-none-embed-ranlib
+│   ├── riscv-none-embed-readelf
+│   ├── riscv-none-embed-size
+│   ├── riscv-none-embed-strings
+│   └── riscv-none-embed-strip
+├── distro-info
+│   ├── CHANGELOG.md
+│   ├── licenses
+│   ├── patches
+│   └── scripts
+├── include
+│   └── gdb
+├── lib
+│   ├── bfd-plugins
+│   ├── gcc
+│   ├── libcc1.0.so
+</span><span class="gp">│   └── libcc1.so -&gt;</span> libcc1.0.so
+<span class="go">├── libexec
+│   └── gcc
+├── riscv-none-embed
+│   ├── bin
+│   ├── include
+│   ├── lib
+│   └── share
+└── share
+    ├── doc
+    └── gcc-riscv-none-embed
+
+20 directories, 44 files
+</span></code></pre></div></div>
+
+<p>To check if GCC starts, use:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> ~/opt/xPacks/riscv-none-embed-gcc/8.2.1-3.1/bin/riscv-none-embed-gcc <span class="nt">--version</span>
+<span class="go">riscv-none-embed-gcc (xPack GNU RISC-V Embedded GCC, 64-bit) 8.2.0
+</span></code></pre></div></div>
+
+
+	</div>
+	<div role="tabpanel" class="tab-pane" id="linux_1">
+		
+<h3 id="download">Download</h3>
+
+<p>The GNU/Linux versions of <strong>xPack GNU RISC-V Embedded GCC</strong> are packed as
+TGZ archives. Download the latest version named like:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">xpack-riscv-none-embed-gcc-8.2.1-3.1-linux-x64.tgz</code></li>
+  <li><code class="highlighter-rouge">xpack-riscv-none-embed-gcc-8.2.1-3.1-linux-x32.tgz</code></li>
+</ul>
+
+<p>As the name implies, these are GNU/Linux <code class="highlighter-rouge">tar.gz</code> archives; they were build on
+CentOS, but can be executed on most recent GNU/Linux distributions.
+Select the <code class="highlighter-rouge">-x64</code> file for 64-bit machines and the <code class="highlighter-rouge">-x32</code> file for 32-bit
+machines.</p>
+
+<h3 id="unpack">Unpack</h3>
+
+<p>To install GNU RISC-V Embedded GCC, unpack the archive and copy it to
+<code class="highlighter-rouge">/${HOME}/opt/xPacks/riscv-none-embed-gcc/&lt;version&gt;</code>:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> mkdir <span class="nt">-p</span> ~/opt
+<span class="gp">$</span> <span class="nb">cd</span> ~/opt
+<span class="go">
+</span><span class="gp">$</span> <span class="nb">tar </span>xvf ~/Downloads/xpack-riscv-none-embed-gcc-8.2.1-3.1-linux-x64.tgz
+<span class="gp">$</span> chmod <span class="nt">-R</span> <span class="nt">-w</span> xPacks/riscv-none-embed-gcc/8.2.1-3.1
+</code></pre></div></div>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For manual installs, the recommended
+install location is slightly different from the xpm install folders,
+which use the scope (like <code class="highlighter-rouge">@xpack-dev-tools</code>) to group different tools,
+and <code class="highlighter-rouge">.content</code> to store the unpacked archive.</div>
+
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important:</b> Although perfectly possible to
+install GNU RISC-V Embedded GCC in any folder, it is highly recommended
+to use this path, since by default the Eclipse Embedded CDT debug plug-ins search
+for the executable in this location.</div>
+
+<p>The result is a structure like:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> tree <span class="nt">-L</span> 2 /home/ilg/opt/xPacks/riscv-none-embed-gcc/8.2.1-3.1/
+<span class="go">/home/ilg/opt/xPacks/riscv-none-embed-gcc/8.2.1-3.1/
+├── bin
+</span><span class="gp">│   ├── libexpat.so.1 -&gt;</span> libexpat.so.1.6.7
+<span class="go">│   ├── libexpat.so.1.6.7
+</span><span class="gp">│   ├── libfl.so.2 -&gt;</span> libfl.so.2.0.0
+<span class="go">│   ├── libfl.so.2.0.0
+</span><span class="gp">│   ├── libgmp.so.10 -&gt;</span> libgmp.so.10.3.2
+<span class="go">│   ├── libgmp.so.10.3.2
+</span><span class="gp">│   ├── libiconv.so.2 -&gt;</span> libiconv.so.2.6.0
+<span class="go">│   ├── libiconv.so.2.6.0
+</span><span class="gp">│   ├── liblzma.so.5 -&gt;</span> liblzma.so.5.2.3
+<span class="go">│   ├── liblzma.so.5.2.3
+</span><span class="gp">│   ├── libmpfr.so.4 -&gt;</span> libmpfr.so.4.1.6
+<span class="go">│   ├── libmpfr.so.4.1.6
+│   ├── libpython2.7.so.1.0
+</span><span class="gp">│   ├── libz.so.1 -&gt;</span> libz.so.1.2.8
+<span class="go">│   ├── libz.so.1.2.8
+│   ├── riscv-none-embed-addr2line
+│   ├── riscv-none-embed-ar
+│   ├── riscv-none-embed-as
+│   ├── riscv-none-embed-c++
+│   ├── riscv-none-embed-c++filt
+│   ├── riscv-none-embed-cpp
+│   ├── riscv-none-embed-elfedit
+│   ├── riscv-none-embed-g++
+│   ├── riscv-none-embed-gcc
+│   ├── riscv-none-embed-gcc-8.2.0
+│   ├── riscv-none-embed-gcc-ar
+│   ├── riscv-none-embed-gcc-nm
+│   ├── riscv-none-embed-gcc-ranlib
+│   ├── riscv-none-embed-gcov
+│   ├── riscv-none-embed-gcov-dump
+│   ├── riscv-none-embed-gcov-tool
+│   ├── riscv-none-embed-gdb
+│   ├── riscv-none-embed-gdb-add-index
+│   ├── riscv-none-embed-gdb-add-index-py
+│   ├── riscv-none-embed-gdb-py
+│   ├── riscv-none-embed-gprof
+│   ├── riscv-none-embed-ld
+│   ├── riscv-none-embed-ld.bfd
+│   ├── riscv-none-embed-nm
+│   ├── riscv-none-embed-objcopy
+│   ├── riscv-none-embed-objdump
+│   ├── riscv-none-embed-ranlib
+│   ├── riscv-none-embed-readelf
+│   ├── riscv-none-embed-size
+│   ├── riscv-none-embed-strings
+│   └── riscv-none-embed-strip
+├── distro-info
+│   ├── CHANGELOG.md
+│   ├── licenses
+│   ├── patches
+│   └── scripts
+├── include
+│   └── gdb
+├── lib
+│   ├── bfd-plugins
+│   └── gcc
+├── lib64
+</span><span class="gp">│   ├── libcc1.so -&gt;</span> libcc1.so.0.0.0
+<span class="gp">│   ├── libcc1.so.0 -&gt;</span> libcc1.so.0.0.0
+<span class="go">│   ├── libcc1.so.0.0.0
+│   ├── libgcc_s.so.1
+</span><span class="gp">│   ├── libstdc++.so.6 -&gt;</span> libstdc++.so.6.0.24
+<span class="go">│   └── libstdc++.so.6.0.24
+├── libexec
+│   └── gcc
+├── README.md
+├── riscv-none-embed
+│   ├── bin
+│   ├── include
+│   ├── lib
+│   └── share
+└── share
+    ├── doc
+    └── gcc-riscv-none-embed
+
+21 directories, 54 files
+</span></code></pre></div></div>
+
+<p>To check if GCC starts and is recent, use:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> ~/opt/xPacks/riscv-none-embed-gcc/8.2.1-3.1/bin/riscv-none-embed-gcc <span class="nt">--version</span>
+<span class="go">riscv-none-embed-gcc (xPack GNU RISC-V Embedded GCC, 64-bit) 8.2.0
+</span></code></pre></div></div>
+
+
+	</div>
+</div>
+
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> <strong>DO NOT</strong> add the toolchain path to
+the user or system path!</div>
+
+
+        
+    <a target="_blank" rel="noopener" href="https://github.com/xpack/xpack.github.io/blob/master/pages/dev-tools/riscv-none-embed-gcc/install.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
+
+    
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'xpack'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2020 Liviu Ionescu. All rights reserved. <br />
+<span>Page last updated:</span> Aug 13, 2020<br/> Site last generated: Sep 9, 2020 <br />
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-16767008-13','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+</html>
