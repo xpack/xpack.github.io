@@ -26,7 +26,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-10-09T11:14:00+00:00" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","@type":"BlogPosting","headline":"How to install the xPack tools","dateModified":"2020-09-09T12:24:25+00:00","datePublished":"2017-10-09T11:14:00+00:00","url":"https://xpack.github.io/install/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","@type":"BlogPosting","headline":"How to install the xPack tools","dateModified":"2020-09-10T15:25:01+00:00","datePublished":"2017-10-09T11:14:00+00:00","url":"https://xpack.github.io/install/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -597,38 +597,38 @@ with administrative rights.</p>
 <p>The result is a folder like <code class="language-plaintext highlighter-rouge">C:\Program Files\nodejs</code>, added to the
 system path since it includes the <code class="language-plaintext highlighter-rouge">node.exe</code> binary.</p>
 
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">C:\</span><span class="err">&gt;</span><span class="nx">where</span><span class="w"> </span><span class="nx">node.exe</span><span class="w">
-</span><span class="nf">C:\Program</span><span class="w"> </span><span class="nx">Files\nodejs\node.exe</span><span class="w">
-</span><span class="nf">C:\</span><span class="err">&gt;</span><span class="nx">node</span><span class="w"> </span><span class="nt">--version</span><span class="w">
-</span><span class="nf">v12.14.0</span><span class="w">
-</span></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;where node.exe
+C:\Program Files\nodejs\node.exe
+C:\&gt;node --version
+v12.14.0
+</code></pre></div></div>
 
 <h2 id="npm-update"><code class="language-plaintext highlighter-rouge">npm</code> update</h2>
 
 <p>A version of <strong>npm</strong>, usually a bit older, comes packed with Node.</p>
 
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">C:\</span><span class="err">&gt;</span><span class="nx">where</span><span class="w"> </span><span class="nx">npm.cmd</span><span class="w">
-</span><span class="nf">C:\Program</span><span class="w"> </span><span class="nx">Files\nodejs\npm.cmd</span><span class="w">
-</span><span class="nf">C:\</span><span class="err">&gt;</span><span class="nx">npm</span><span class="w"> </span><span class="nt">--version</span><span class="w">
-</span><span class="mf">6.4.1</span><span class="w">
-</span></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;where npm.cmd
+C:\Program Files\nodejs\npm.cmd
+C:\&gt;npm --version
+6.4.1
+</code></pre></div></div>
 
 <p>It is recommended to update it to the latest version:</p>
 
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">C:\</span><span class="err">&gt;</span><span class="nx">npm</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nt">--global</span><span class="w"> </span><span class="nx">npm</span><span class="err">@</span><span class="nx">latest</span><span class="w">
-</span><span class="nf">C:\Users\ilg\AppData\Roaming\npm\npm</span><span class="w"> </span><span class="nf">-</span><span class="err">&gt;</span><span class="w"> </span><span class="nx">C:\Users\ilg\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js</span><span class="w">
-</span><span class="nf">C:\Users\ilg\AppData\Roaming\npm\npx</span><span class="w"> </span><span class="nf">-</span><span class="err">&gt;</span><span class="w"> </span><span class="nx">C:\Users\ilg\AppData\Roaming\npm\node_modules\npm\bin\npx-cli.js</span><span class="w">
-</span><span class="o">+</span><span class="w"> </span><span class="nf">npm</span><span class="err">@</span><span class="nx">6.14.7</span><span class="w">
-</span><span class="nf">added</span><span class="w"> </span><span class="nx">435</span><span class="w"> </span><span class="nx">packages</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">816</span><span class="w"> </span><span class="nx">contributors</span><span class="w"> </span><span class="nx">in</span><span class="w"> </span><span class="nx">72.64s</span><span class="w">
-</span></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;npm install --global npm@latest
+C:\Users\ilg\AppData\Roaming\npm\npm -&gt; C:\Users\ilg\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+C:\Users\ilg\AppData\Roaming\npm\npx -&gt; C:\Users\ilg\AppData\Roaming\npm\node_modules\npm\bin\npx-cli.js
++ npm@6.14.7
+added 435 packages from 816 contributors in 72.64s
+</code></pre></div></div>
 
 <p>Surprisingly, checking the version usually shows the old version:</p>
 
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">C:\</span><span class="err">&gt;</span><span class="nx">where</span><span class="w"> </span><span class="nx">npm.cmd</span><span class="w">
-</span><span class="nf">C:\Program</span><span class="w"> </span><span class="nx">Files\nodejs\npm.cmd</span><span class="w">
-</span><span class="nf">C:\</span><span class="err">&gt;</span><span class="nx">npm</span><span class="w"> </span><span class="nt">--version</span><span class="w">
-</span><span class="mf">6.4.1</span><span class="w">
-</span></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;where npm.cmd
+C:\Program Files\nodejs\npm.cmd
+C:\&gt;npm --version
+6.4.1
+</code></pre></div></div>
 
 <p>This is because on Windows, by default, global node packages are
 installed in the
@@ -1016,7 +1016,7 @@ builds, or to build it from sources; for more details see the
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2020 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Sep 9, 2020<br/> Site last generated: Sep 10, 2020 <br />
+<span>Page last updated:</span> Sep 10, 2020<br/> Site last generated: Sep 10, 2020 <br />
                 </div>
             </div>
 </footer>
