@@ -9,8 +9,29 @@
 <title>How to create a new xPack Git repository | The xPack Project</title>
 <link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
 
+
+<link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
+<link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>How to create a new xPack Git repository</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="How to create a new xPack Git repository" />
+<meta name="author" content="Liviu Ionescu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<meta property="og:description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<link rel="canonical" href="https://xpack.github.io/develop/how-to-new-git/" />
+<meta property="og:url" content="https://xpack.github.io/develop/how-to-new-git/" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-07-09T14:48:00+00:00" />
+<script type="application/ld+json">
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","@type":"BlogPosting","headline":"How to create a new xPack Git repository","dateModified":"2020-09-09T12:24:25+00:00","datePublished":"2019-07-09T14:48:00+00:00","url":"https://xpack.github.io/develop/how-to-new-git/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/how-to-new-git/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+
 <link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?201907181733">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -32,7 +53,25 @@
 <script src="https://xpack.github.io/js/toc.js"></script>
 <script src="https://xpack.github.io/js/customscripts.js"></script>
 
-<link rel="shortcut icon" href="https://xpack.github.io/images/favicon.ico">
+<!-- Use absolute URLs, to cover preview cases too -->
+<link rel="shortcut icon" href="https://xpack.github.io/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="https://xpack.github.io/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://xpack.github.io/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://xpack.github.io/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://xpack.github.io/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://xpack.github.io/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://xpack.github.io/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://xpack.github.io/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://xpack.github.io/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://xpack.github.io/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://xpack.github.io/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://xpack.github.io/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://xpack.github.io/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://xpack.github.io/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://xpack.github.io/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://xpack.github.io/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,8 +79,6 @@
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-<link rel="alternate" type="application/rss+xml" title="xpack.github.io" href="https://xpack.github.io/feed.xml">
 
     <script>
         $(document).ready(function() {
@@ -133,23 +170,11 @@
                     <ul class="dropdown-menu">
                         
                         
-                        <li><a href="/xpm/">xpm</a></li>
+                        <li><a class="extern" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
                         
                         
                         
-                        <li><a href="/xpbuild/">xpbuild</a></li>
-                        
-                        
-                        
-                        <li><a href="/xpninja/">xpninja</a></li>
-                        
-                        
-                        
-                        <li><a href="/xpmake/">xpmake</a></li>
-                        
-                        
-                        
-                        <li><a href="/xpcdl/">xpcdl</a></li>
+                        <li><a class="extern" href="http://micro-os-plus.github.io" target="_blank" rel="noopener">µOS++ IIIe</a></li>
                         
                         
                     </ul>
@@ -169,6 +194,14 @@
                         
                         
                         <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/eclipse-embed-cdt/" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/micro-os-plus/" target="_blank" rel="noopener">µOS++ IIIe</a></li>
                         
                         
                     </ul>
@@ -473,29 +506,6 @@
    </li>
      
       
-  
-  <li>
-      <a title="Home" href="#">Home</a>
-      <ul>
-          
-          
-          
-          <li><a title="The xPack Project" href="/">The xPack Project</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a class="extern" title="GNU MCU Eclipse" href="https://gnu-mcu-eclipse.github.io" target="_blank" rel="noopener">GNU MCU Eclipse</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
       
       <!-- if you aren't using the accordion, uncomment this block:
          <p class="external">
@@ -568,7 +578,7 @@ software projects, each using its specific structure, and migrating them to
 xPacks may add some maintenance burden to keep them in sync with the
 originals.</p>
 
-<h2 id="the-xpack-branch-and-three-way-merging">The <code class="highlighter-rouge">xpack</code> branch and three-way merging</h2>
+<h2 id="the-xpack-branch-and-three-way-merging">The <code class="language-plaintext highlighter-rouge">xpack</code> branch and three-way merging</h2>
 
 <p>One way to reduce the maintenance burden is to use the
 <a href="https://en.wikipedia.org/wiki/Merge_(version_control)#Three-way_merge">three-way merge</a>
@@ -578,20 +588,20 @@ feature of Git and a separate branch to accommodate the xPack specific changes.<
 keep its original structure, with its original branches, regardless
 their names.</p>
 
-<p>The only requirement is to create a new branch (preferably named <code class="highlighter-rouge">xpack</code>)
-and to keep the changes on it; thus the main branch (probably <code class="highlighter-rouge">master</code>) can
+<p>The only requirement is to create a new branch (preferably named <code class="language-plaintext highlighter-rouge">xpack</code>)
+and to keep the changes on it; thus the main branch (probably <code class="language-plaintext highlighter-rouge">master</code>) can
 easily track the upstream repository, while the xPack specific changes
-continue to be developed using the <code class="highlighter-rouge">xpack</code> branch; from time to time the
-main branch can be merged into the <code class="highlighter-rouge">xpack</code> branch and things kept in sync.</p>
+continue to be developed using the <code class="language-plaintext highlighter-rouge">xpack</code> branch; from time to time the
+main branch can be merged into the <code class="language-plaintext highlighter-rouge">xpack</code> branch and things kept in sync.</p>
 
 <h2 id="creating-xpacks-with-original-content">Creating xPacks with original content</h2>
 
 <p>For consistency reasons, it is recommended for the new xPacks, even if
-they do not include 3rd party content, to use the <code class="highlighter-rouge">xpack</code> branch instead
-of the <code class="highlighter-rouge">master</code> branch.</p>
+they do not include 3rd party content, to use the <code class="language-plaintext highlighter-rouge">xpack</code> branch instead
+of the <code class="language-plaintext highlighter-rouge">master</code> branch.</p>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The xPack tools do not require and
-do not enforce the use of a branch named <code class="highlighter-rouge">xpack</code>, this is only
+do not enforce the use of a branch named <code class="language-plaintext highlighter-rouge">xpack</code>, this is only
 a recommendation.</div>
 
 <p>The following steps apply to GitHub. Adjust them for other Git hosting sites.</p>
@@ -615,7 +625,7 @@ an xPack, it is recommended to suffix the project name with ‘-xpack’.</div>
   <li>click the green <strong>New</strong> button to create a new repository
     <ul>
       <li>enter <strong>Repository name</strong>; use all lowercase and hyphens to
-separate words (not underscores!); preferably suffix the name with <code class="highlighter-rouge">-xpack</code></li>
+separate words (not underscores!); preferably suffix the name with <code class="language-plaintext highlighter-rouge">-xpack</code></li>
       <li>enter <strong>Description</strong> (like <em>An xPack with …</em> or <em>A binary xPack with …</em>; no ending dot)</li>
       <li>select <strong>Public</strong></li>
       <li>enable <strong>Initialize this repository with a README</strong></li>
@@ -641,23 +651,23 @@ choice for xPacks, but any other license of your choice is also ok</li>
 small <strong>Clone to HTTPS</strong> window</li>
   <li>click the <strong>Copy</strong> icon, or explicitly copy the URL</li>
   <li>in a terminal window, in a place of our choice, create a folder
-to store all xPacks (for example it can be named <code class="highlighter-rouge">xpacks</code>):
-    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> mkdir <span class="nt">-p</span> xpacks
-<span class="gp">$</span> <span class="nb">cd </span>xpacks
-<span class="gp">$</span> git clone https://github.com/&lt;user&gt;/&lt;project&gt;.git &lt;project&gt;.git
+to store all xPacks (for example it can be named <code class="language-plaintext highlighter-rouge">xpacks</code>):
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">mkdir</span> <span class="nt">-p</span> xpacks
+<span class="gp">$</span><span class="w"> </span><span class="nb">cd </span>xpacks
+<span class="gp">$</span><span class="w"> </span>git clone https://github.com/&lt;user&gt;/&lt;project&gt;.git &lt;project&gt;.git
 </code></pre></div>    </div>
   </li>
 </ul>
 
-<h3 id="edit-the-gitignore-file">Edit the <code class="highlighter-rouge">.gitignore</code> file</h3>
+<h3 id="edit-the-gitignore-file">Edit the <code class="language-plaintext highlighter-rouge">.gitignore</code> file</h3>
 
 <p>With Visual Studio Code:</p>
 
 <ul>
-  <li>add the following to <code class="highlighter-rouge">.gitignore</code>:</li>
+  <li>add the following to <code class="language-plaintext highlighter-rouge">.gitignore</code>:</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># xpm
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># xpm
 xpacks/
 
 # Windows
@@ -674,7 +684,7 @@ Thumbs.db
   <li>for Eclipse C/C++ projects you can include:</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Eclipse
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Eclipse
 .settings/
 Debug/
 Release/
@@ -685,21 +695,21 @@ build/
 <p>With VSC, Sourcetree or Git:</p>
 
 <ul>
-  <li>stage the <code class="highlighter-rouge">.gitignore</code> file</li>
+  <li>stage the <code class="language-plaintext highlighter-rouge">.gitignore</code> file</li>
   <li>commit with the following message: <strong>.gitignore: add xpm specifics</strong></li>
 </ul>
 
-<h3 id="checkedit-the-license-file">Check/edit the <code class="highlighter-rouge">LICENSE</code> file</h3>
+<h3 id="checkedit-the-license-file">Check/edit the <code class="language-plaintext highlighter-rouge">LICENSE</code> file</h3>
 
-<p>The automatically generated <code class="highlighter-rouge">LICENSE</code> file already includes the
+<p>The automatically generated <code class="language-plaintext highlighter-rouge">LICENSE</code> file already includes the
 user name as the copyright owner. When the project is owned by
 an organisation, the name refers to the organisation. Probably
 this is not exactly what you need, and you might prefer to have
 your name in the copyright notice.</p>
 
-<p>Check and possibly adjust to match your <code class="highlighter-rouge">LICENSE</code> requirements.</p>
+<p>Check and possibly adjust to match your <code class="language-plaintext highlighter-rouge">LICENSE</code> requirements.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MIT License
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MIT License
 
 Copyright (c) 2019 Liviu Ionescu
 
@@ -710,21 +720,21 @@ Permission is hereby granted, free of charge, to any person obtaining a copy
 <p>With VSC, Sourcetree or Git:</p>
 
 <ul>
-  <li>stage the <code class="highlighter-rouge">LICENSE</code> file</li>
+  <li>stage the <code class="language-plaintext highlighter-rouge">LICENSE</code> file</li>
   <li>commit with the following message: <strong>LICENSE: update copyright owner</strong></li>
 </ul>
 
-<h3 id="edit-the-master-readmemd-file">Edit the master <code class="highlighter-rouge">README.md</code> file</h3>
+<h3 id="edit-the-master-readmemd-file">Edit the master <code class="language-plaintext highlighter-rouge">README.md</code> file</h3>
 
 <p>As mentioned in the introduction,
 although for original xPacks there are no constraints on how to
 organise the branches, for consistency with xPacks that use 3rd
-party content, it is recommended to use an <code class="highlighter-rouge">xpack</code> branch.</p>
+party content, it is recommended to use an <code class="language-plaintext highlighter-rouge">xpack</code> branch.</p>
 
 <p>In this case, to warn users about this configuration, edit
-the <code class="highlighter-rouge">README.md</code> file and replace its entire content with:</p>
+the <code class="language-plaintext highlighter-rouge">README.md</code> file and replace its entire content with:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This project does not use the `master` branch, please
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This project does not use the `master` branch, please
 switch to the `xpack` branch to get the project files.
 
 </code></pre></div></div>
@@ -732,11 +742,11 @@ switch to the `xpack` branch to get the project files.
 <p>With VSC, Sourcetree or Git:</p>
 
 <ul>
-  <li>stage the <code class="highlighter-rouge">README.md</code> file</li>
+  <li>stage the <code class="language-plaintext highlighter-rouge">README.md</code> file</li>
   <li>commit with the following message: <strong>README: ‘no master’ notice</strong></li>
 </ul>
 
-<h3 id="create-the-xpack-branch">Create the <code class="highlighter-rouge">xpack</code> branch</h3>
+<h3 id="create-the-xpack-branch">Create the <code class="language-plaintext highlighter-rouge">xpack</code> branch</h3>
 
 <p>With VSC, Sourcetree or Git.</p>
 
@@ -752,9 +762,9 @@ switch to the `xpack` branch to get the project files.
 
 <p>Sourcetree:</p>
 <ul>
-  <li>select the <code class="highlighter-rouge">master</code> branch</li>
+  <li>select the <code class="language-plaintext highlighter-rouge">master</code> branch</li>
   <li>click the <strong>Branch</strong> button</li>
-  <li>in the <strong>Name Branch</strong> field, enter <code class="highlighter-rouge">xpack</code></li>
+  <li>in the <strong>Name Branch</strong> field, enter <code class="language-plaintext highlighter-rouge">xpack</code></li>
   <li>click the <strong>Create Branch</strong> button</li>
 </ul>
 
@@ -765,7 +775,7 @@ switch to the `xpack` branch to get the project files.
 <p>(Sourcetree)</p>
 <ul>
   <li>click the <strong>Push</strong> button</li>
-  <li>select the <code class="highlighter-rouge">master</code> and <code class="highlighter-rouge">xpack</code> local branches</li>
+  <li>select the <code class="language-plaintext highlighter-rouge">master</code> and <code class="language-plaintext highlighter-rouge">xpack</code> local branches</li>
   <li>click the <strong>OK</strong> button</li>
 </ul>
 
@@ -775,20 +785,20 @@ the <strong>View Remote</strong> button):</p>
 <ul>
   <li>select the <strong>Settings</strong> tab</li>
   <li>select the <strong>Branches</strong> grouping</li>
-  <li>change the <strong>Default branch</strong> to <code class="highlighter-rouge">xpack</code></li>
+  <li>change the <strong>Default branch</strong> to <code class="language-plaintext highlighter-rouge">xpack</code></li>
   <li>click the <strong>Update</strong> button</li>
   <li>click the <strong>I understand, update the default branch</strong> confirmation window</li>
 </ul>
 
-<h3 id="create-the-npmxpm-packagejson">Create the npm/xpm <code class="highlighter-rouge">package.json</code></h3>
+<h3 id="create-the-npmxpm-packagejson">Create the npm/xpm <code class="language-plaintext highlighter-rouge">package.json</code></h3>
 
-<p>Select the <code class="highlighter-rouge">xpack</code> branch.</p>
+<p>Select the <code class="language-plaintext highlighter-rouge">xpack</code> branch.</p>
 
-<p>Use <code class="highlighter-rouge">xpm init</code> and later edit the <code class="highlighter-rouge">package.json</code>.</p>
+<p>Use <code class="language-plaintext highlighter-rouge">xpm init</code> and later edit the <code class="language-plaintext highlighter-rouge">package.json</code>.</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">cd</span> &lt;project&gt;.git
-<span class="gp">$</span> xpm init
-<span class="gp">$</span> <span class="nb">cat </span>package.json
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> &lt;project&gt;.git
+<span class="gp">$</span><span class="w"> </span>xpm init
+<span class="gp">$</span><span class="w"> </span><span class="nb">cat </span>package.json
 <span class="go">{
   "name": "xxx",
   "version": "0.0.1",
@@ -819,16 +829,16 @@ the <strong>View Remote</strong> button):</p>
   "devDependencies": {},
   "xpack": {}
 }
-</span><span class="gp">$</span>
-</code></pre></div></div>
+</span><span class="gp">$</span><span class="w">
+</span></code></pre></div></div>
 
-<p>Open <code class="highlighter-rouge">package.json</code> with Visual Studio Code:</p>
+<p>Open <code class="language-plaintext highlighter-rouge">package.json</code> with Visual Studio Code:</p>
 
 <ul>
   <li>as <strong>name</strong> enter the scope (your npm account name or one of
-your npm organisations) and the project name, without <code class="highlighter-rouge">-xpack.git</code>
-(like <code class="highlighter-rouge">@micro-os-plus/diag-trace</code>, <code class="highlighter-rouge">@xpack-dev-tools/ninja-build</code>)</li>
-  <li>as <strong>version</strong>, enter <code class="highlighter-rouge">0.0.1</code> if the project is in early development,
+your npm organisations) and the project name, without <code class="language-plaintext highlighter-rouge">-xpack.git</code>
+(like <code class="language-plaintext highlighter-rouge">@micro-os-plus/diag-trace</code>, <code class="language-plaintext highlighter-rouge">@xpack-dev-tools/ninja-build</code>)</li>
+  <li>as <strong>version</strong>, enter <code class="language-plaintext highlighter-rouge">0.0.1</code> if the project is in early development,
 or accept 1.0.0 for the first stable release; generally use the
 <a href="http://semver.org">semver</a> conventions</li>
   <li>as <strong>description</strong>, use the same string as the GitHub project description</li>
@@ -836,28 +846,28 @@ or accept 1.0.0 for the first stable release; generally use the
   <li>as <strong>url</strong> and <strong>homepage</strong>, use the actual project Git URL</li>
   <li>as <strong>author</strong>, enter full data, like
     <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-</span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Liviu Ionescu"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ilg@livius.net"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/ilg-ul"</span><span class="w">
+</span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Liviu Ionescu"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ilg@livius.net"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/ilg-ul"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>    </div>
   </li>
   <li>as <strong>license</strong>, enter the <a href="https://spdx.org/licenses/">SPDX</a> license
-identifier (like <code class="highlighter-rouge">MIT</code>); if the license is not a standard one, provide
-the text in a <code class="highlighter-rouge">LICENSE</code> file and update the JSON to read:
-    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w"> </span><span class="s2">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEE LICENSE IN &lt;filename&gt;"</span><span class="w"> </span><span class="p">}</span><span class="w">
+identifier (like <code class="language-plaintext highlighter-rouge">MIT</code>); if the license is not a standard one, provide
+the text in a <code class="language-plaintext highlighter-rouge">LICENSE</code> file and update the JSON to read:
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w"> </span><span class="nl">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEE LICENSE IN &lt;filename&gt;"</span><span class="w"> </span><span class="p">}</span><span class="w">
 </span></code></pre></div>    </div>
   </li>
   <li>if the package is inspired by other existing code, enter the author
 as the first contributor, for example:
     <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-</span><span class="s2">"contributors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span><span class="nl">"contributors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEGGER Microcontroller GmbH &amp; Co. KG"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"support@segger.com"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.segger.com/"</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEGGER Microcontroller GmbH &amp; Co. KG"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"support@segger.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.segger.com/"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -870,11 +880,11 @@ as the first contributor, for example:
 <p>With VSC, Sourcetree or Git:</p>
 
 <ul>
-  <li>stage the <code class="highlighter-rouge">package.json</code></li>
+  <li>stage the <code class="language-plaintext highlighter-rouge">package.json</code></li>
   <li>commit with the following message: <strong>package.json: v0.0.1</strong></li>
 </ul>
 
-<h3 id="edit-the-readmemd-file-with-actual-content">Edit the <code class="highlighter-rouge">README.md</code> file with actual content</h3>
+<h3 id="edit-the-readmemd-file-with-actual-content">Edit the <code class="language-plaintext highlighter-rouge">README.md</code> file with actual content</h3>
 
 <p>With the editor of your choice:</p>
 
@@ -883,9 +893,9 @@ as the first contributor, for example:
   <li>as headers, you can start with H1, the npmjs server now shows it</li>
   <li>after the main title, copy the project description</li>
   <li>explain how to install the xPack
-(like <code class="highlighter-rouge">xpm install --global @scope/name</code>)</li>
+(like <code class="language-plaintext highlighter-rouge">xpm install --global @scope/name</code>)</li>
   <li>in the License section, use something like
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The original content is released under the
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The original content is released under the
 [MIT License](https://opensource.org/licenses/MIT), with all rights
 reserved to [Liviu Ionescu](https://github.com/ilg-ul).
 </code></pre></div>    </div>
@@ -895,7 +905,7 @@ reserved to [Liviu Ionescu](https://github.com/ilg-ul).
 <p>With Sourcetree or Git:</p>
 
 <ul>
-  <li>stage the <code class="highlighter-rouge">README.md</code> file</li>
+  <li>stage the <code class="language-plaintext highlighter-rouge">README.md</code> file</li>
   <li>commit with the following message: <strong>README: preliminary content</strong></li>
 </ul>
 
@@ -904,7 +914,7 @@ reserved to [Liviu Ionescu](https://github.com/ilg-ul).
 <p>With Sourcetree or Git:</p>
 
 <ul>
-  <li>click the <strong>Push</strong> button (to push the <code class="highlighter-rouge">xpack</code> branch to the server)</li>
+  <li>click the <strong>Push</strong> button (to push the <code class="language-plaintext highlighter-rouge">xpack</code> branch to the server)</li>
 </ul>
 
 <h3 id="add-more-content">Add more content</h3>
@@ -925,51 +935,51 @@ reserved to [Liviu Ionescu](https://github.com/ilg-ul).
 <h3 id="publish-the-branch">Publish the branch</h3>
 
 <ul>
-  <li>with Sourcetree or Git, click <strong>Push</strong> and select <code class="highlighter-rouge">xpack</code></li>
+  <li>with Sourcetree or Git, click <strong>Push</strong> and select <code class="language-plaintext highlighter-rouge">xpack</code></li>
 </ul>
 
-<h3 id="create-the-xpack-develop-branch">Create the <code class="highlighter-rouge">xpack-develop</code> branch</h3>
+<h3 id="create-the-xpack-develop-branch">Create the <code class="language-plaintext highlighter-rouge">xpack-develop</code> branch</h3>
 
 <p>With Sourcetree or Git:</p>
 
 <ul>
-  <li>select the <code class="highlighter-rouge">xpack</code> branch</li>
-  <li>create the <code class="highlighter-rouge">xpack-develop</code> branch</li>
+  <li>select the <code class="language-plaintext highlighter-rouge">xpack</code> branch</li>
+  <li>create the <code class="language-plaintext highlighter-rouge">xpack-develop</code> branch</li>
 </ul>
 
-<p>Generally work in the <code class="highlighter-rouge">xpack-develop</code> branch and only when ready merge it
-to <code class="highlighter-rouge">master</code>.</p>
+<p>Generally work in the <code class="language-plaintext highlighter-rouge">xpack-develop</code> branch and only when ready merge it
+to <code class="language-plaintext highlighter-rouge">master</code>.</p>
 
 <h3 id="publish-the-initial-version-to-the-npmjs-public-registry">Publish the initial version to the npmjs public registry</h3>
 
 <ul>
-  <li>check the latest commits <code class="highlighter-rouge">npm run git-log</code></li>
-  <li>update <code class="highlighter-rouge">CHANGELOG.md</code>; commit with a message like
+  <li>check the latest commits <code class="language-plaintext highlighter-rouge">npm run git-log</code></li>
+  <li>update <code class="language-plaintext highlighter-rouge">CHANGELOG.md</code>; commit with a message like
 <em>CHANGELOG: prepare npm v1.10.0-1.1</em></li>
-  <li><code class="highlighter-rouge">npm version v1.10.0-1.1</code>; the first 4 numbers are the same as the
+  <li><code class="language-plaintext highlighter-rouge">npm version v1.10.0-1.1</code>; the first 4 numbers are the same as the
 GitHub release; the fifth number is the npm specific version</li>
-  <li><code class="highlighter-rouge">npm pack</code> and check the content of the archive, which should list
-only the <code class="highlighter-rouge">package.json</code>, the <code class="highlighter-rouge">README.md</code>, <code class="highlighter-rouge">LICENSE</code> and <code class="highlighter-rouge">CHANGELOG.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">npm pack</code> and check the content of the archive, which should list
+only the <code class="language-plaintext highlighter-rouge">package.json</code>, the <code class="language-plaintext highlighter-rouge">README.md</code>, <code class="language-plaintext highlighter-rouge">LICENSE</code> and <code class="language-plaintext highlighter-rouge">CHANGELOG.md</code></li>
   <li>push all changes to GitHub</li>
-  <li><code class="highlighter-rouge">npm publish --access public --tag next</code></li>
+  <li><code class="language-plaintext highlighter-rouge">npm publish --access public --tag next</code></li>
 </ul>
 
-<p>When the release is considered stable, promote it as <code class="highlighter-rouge">latest</code>. For example:</p>
+<p>When the release is considered stable, promote it as <code class="language-plaintext highlighter-rouge">latest</code>. For example:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">npm dist-tag ls @xpack-dev-tools/ninja-build</code></li>
-  <li><code class="highlighter-rouge">npm dist-tag add @xpack-dev-tools/ninja-build@1.10.0-1.1 latest</code></li>
-  <li><code class="highlighter-rouge">npm dist-tag ls @xpack-dev-tools/ninja-build</code></li>
+  <li><code class="language-plaintext highlighter-rouge">npm dist-tag ls @xpack-dev-tools/ninja-build</code></li>
+  <li><code class="language-plaintext highlighter-rouge">npm dist-tag add @xpack-dev-tools/ninja-build@1.10.0-1.1 latest</code></li>
+  <li><code class="language-plaintext highlighter-rouge">npm dist-tag ls @xpack-dev-tools/ninja-build</code></li>
 </ul>
 
 <h3 id="bump-version">Bump version</h3>
 
 <p>In general, depending on the <em>disruption</em> degree, chose one of the following:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">cd</span> &lt;project&gt;.git
-<span class="gp">$</span> npm version patch
-<span class="gp">$</span> npm version minor
-<span class="gp">$</span> npm version major
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> &lt;project&gt;.git
+<span class="gp">$</span><span class="w"> </span>npm version patch
+<span class="gp">$</span><span class="w"> </span>npm version minor
+<span class="gp">$</span><span class="w"> </span>npm version major
 </code></pre></div></div>
 
 <p>With Sourcetree or Git:</p>
@@ -997,7 +1007,7 @@ only the <code class="highlighter-rouge">package.json</code>, the <code class="h
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2020 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Aug 23, 2020<br/> Site last generated: Sep 9, 2020 <br />
+<span>Page last updated:</span> Sep 9, 2020<br/> Site last generated: Sep 10, 2020 <br />
                 </div>
             </div>
 </footer>
@@ -1017,7 +1027,16 @@ only the <code class="highlighter-rouge">package.json</code>, the <code class="h
 
 
 
-<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-16767008-13','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-16767008-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-16767008-13');
+</script>
 
 
 </html>

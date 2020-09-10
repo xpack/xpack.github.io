@@ -9,8 +9,29 @@
 <title>The xPack QEMU Arm command line options | The xPack Project</title>
 <link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
 
+
+<link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
+<link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>The xPack QEMU Arm command line options</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="The xPack QEMU Arm command line options" />
+<meta name="author" content="Liviu Ionescu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<meta property="og:description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<link rel="canonical" href="https://xpack.github.io/qemu-arm/options/" />
+<meta property="og:url" content="https://xpack.github.io/qemu-arm/options/" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-11-10T16:27:00+00:00" />
+<script type="application/ld+json">
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","@type":"BlogPosting","headline":"The xPack QEMU Arm command line options","dateModified":"2020-09-09T12:24:25+00:00","datePublished":"2015-11-10T16:27:00+00:00","url":"https://xpack.github.io/qemu-arm/options/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/qemu-arm/options/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+
 <link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?201907181733">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -32,7 +53,25 @@
 <script src="https://xpack.github.io/js/toc.js"></script>
 <script src="https://xpack.github.io/js/customscripts.js"></script>
 
-<link rel="shortcut icon" href="https://xpack.github.io/images/favicon.ico">
+<!-- Use absolute URLs, to cover preview cases too -->
+<link rel="shortcut icon" href="https://xpack.github.io/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="https://xpack.github.io/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://xpack.github.io/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://xpack.github.io/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://xpack.github.io/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://xpack.github.io/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://xpack.github.io/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://xpack.github.io/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://xpack.github.io/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://xpack.github.io/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://xpack.github.io/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://xpack.github.io/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://xpack.github.io/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://xpack.github.io/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://xpack.github.io/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://xpack.github.io/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,8 +79,6 @@
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-<link rel="alternate" type="application/rss+xml" title="xpack.github.io" href="https://xpack.github.io/feed.xml">
 
     <script>
         $(document).ready(function() {
@@ -133,23 +170,11 @@
                     <ul class="dropdown-menu">
                         
                         
-                        <li><a href="/xpm/">xpm</a></li>
+                        <li><a class="extern" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
                         
                         
                         
-                        <li><a href="/xpbuild/">xpbuild</a></li>
-                        
-                        
-                        
-                        <li><a href="/xpninja/">xpninja</a></li>
-                        
-                        
-                        
-                        <li><a href="/xpmake/">xpmake</a></li>
-                        
-                        
-                        
-                        <li><a href="/xpcdl/">xpcdl</a></li>
+                        <li><a class="extern" href="http://micro-os-plus.github.io" target="_blank" rel="noopener">µOS++ IIIe</a></li>
                         
                         
                     </ul>
@@ -169,6 +194,14 @@
                         
                         
                         <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/eclipse-embed-cdt/" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/micro-os-plus/" target="_blank" rel="noopener">µOS++ IIIe</a></li>
                         
                         
                     </ul>
@@ -277,29 +310,6 @@
    </li>
      
       
-  
-  <li>
-      <a title="Back Home" href="#">Back Home</a>
-      <ul>
-          
-          
-          
-          <li><a title="The xPack Project" href="/">The xPack Project</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a class="extern" title="GNU MCU Eclipse" href="https://gnu-mcu-eclipse.github.io" target="_blank" rel="noopener">GNU MCU Eclipse</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
       
       <!-- if you aren't using the accordion, uncomment this block:
          <p class="external">
@@ -360,7 +370,7 @@ $('#toc').on('click', 'a', function() {
 
 <p>The command line used by the QEMU Eclipse plug-in to start a debug session looks like this:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> qemu-system-gnuarmeclipse <span class="nt">--verbose</span> <span class="nt">--verbose</span> <span class="nt">--board</span> STM32F4-Discovery <span class="se">\</span>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>qemu-system-gnuarmeclipse <span class="nt">--verbose</span> <span class="nt">--verbose</span> <span class="nt">--board</span> STM32F4-Discovery <span class="se">\</span>
 <span class="nt">--mcu</span> STM32F407VG <span class="nt">--gdb</span> tcp::1234 <span class="nt">-d</span> unimp,guest_errors <span class="se">\</span>
 <span class="nt">--semihosting-config</span> <span class="nb">enable</span><span class="o">=</span>on,target<span class="o">=</span>native <span class="se">\</span>
 <span class="nt">--semihosting-cmdline</span> blinky
@@ -368,7 +378,7 @@ $('#toc').on('click', 'a', function() {
 
 <p>A typical emulation session started outside Eclipse looks like this:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> qemu-system-gnuarmeclipse <span class="nt">--verbose</span> <span class="nt">--verbose</span> <span class="nt">--board</span> STM32F4-Discovery <span class="se">\</span>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>qemu-system-gnuarmeclipse <span class="nt">--verbose</span> <span class="nt">--verbose</span> <span class="nt">--board</span> STM32F4-Discovery <span class="se">\</span>
 <span class="nt">--mcu</span> STM32F407VG <span class="nt">-d</span> unimp,guest_errors <span class="se">\</span>
 <span class="nt">--nographic</span> <span class="nt">--image</span> test.elf <span class="se">\</span>
 <span class="nt">--semihosting-config</span> <span class="nb">enable</span><span class="o">=</span>on,target<span class="o">=</span>native <span class="se">\</span>
@@ -377,7 +387,7 @@ $('#toc').on('click', 'a', function() {
 
 <h2 id="command-line-options">Command line options</h2>
 
-<p>QEMU has lots, lots of options. The official QEMU documentation (available in the distribution <code class="highlighter-rouge">doc</code> folder) is the authoritative source for information about them.</p>
+<p>QEMU has lots, lots of options. The official QEMU documentation (available in the distribution <code class="language-plaintext highlighter-rouge">doc</code> folder) is the authoritative source for information about them.</p>
 
 <p>Unfortunately most of these options were designed for the larger versions of QEMU, intended to emulate Linux systems, and are of little use for Cortex-M emulation.</p>
 
@@ -385,68 +395,68 @@ $('#toc').on('click', 'a', function() {
 
 <p>The common ones are presented below.</p>
 
-<h3 id="board"><code class="highlighter-rouge">board</code></h3>
+<h3 id="board"><code class="language-plaintext highlighter-rouge">board</code></h3>
 
 <p>A string that defines the name of the board to be emulated:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--board STM32F4-Discovery
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--board STM32F4-Discovery
 </code></pre></div></div>
 
-<p>To get a list of supported boards, use <code class="highlighter-rouge">?</code> or <code class="highlighter-rouge">help</code>:</p>
+<p>To get a list of supported boards, use <code class="language-plaintext highlighter-rouge">?</code> or <code class="language-plaintext highlighter-rouge">help</code>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--board ?
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--board ?
 </code></pre></div></div>
 
-<h3 id="mcu"><code class="highlighter-rouge">mcu</code></h3>
+<h3 id="mcu"><code class="language-plaintext highlighter-rouge">mcu</code></h3>
 
 <p>Each board has a MCU type, hardcoded in the board definitions.</p>
 
 <p>However it is possible to pretend the board has a different MCU, by explicitly specifying a MCU name:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--mcu STM32F407VG
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--mcu STM32F407VG
 </code></pre></div></div>
 
-<p>To get a list of supported MCUs, use <code class="highlighter-rouge">?</code> or <code class="highlighter-rouge">help</code>:</p>
+<p>To get a list of supported MCUs, use <code class="language-plaintext highlighter-rouge">?</code> or <code class="language-plaintext highlighter-rouge">help</code>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--mcu ?
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--mcu ?
 </code></pre></div></div>
 
-<h3 id="image"><code class="highlighter-rouge">image</code></h3>
+<h3 id="image"><code class="language-plaintext highlighter-rouge">image</code></h3>
 
 <p>The emulator currently does not preserve a persistent state of the flash memory between runs; instead, it starts with an empty flash and preloads it with the content available in an ELF file.</p>
 
 <p>For debug sessions, this can be done via the GDB protocol. For standalone sessions, QEMU needs to know the name of the ELF file:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--image blinky.elf
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--image blinky.elf
 </code></pre></div></div>
 
-<h3 id="gdb"><code class="highlighter-rouge">gdb</code></h3>
+<h3 id="gdb"><code class="language-plaintext highlighter-rouge">gdb</code></h3>
 
 <p>When used with a debugger, QEMU must implement the GDB server protocol, for the GDB client to be able to connect to it.</p>
 
-<p>The default QEMU port is <code class="highlighter-rouge">1234</code>; the option to start QEMU in server mode and listen on the TCP port 1234 is:</p>
+<p>The default QEMU port is <code class="language-plaintext highlighter-rouge">1234</code>; the option to start QEMU in server mode and listen on the TCP port 1234 is:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--gdb tcp::1234
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--gdb tcp::1234
 </code></pre></div></div>
 
 <p>When in GDB server mode, it is no longer required to specify the ELF image, since it will be loaded by the GDB client, as in any usual debug session, which rewrites the MCU flash memory.</p>
 
-<h3 id="nographic"><code class="highlighter-rouge">nographic</code></h3>
+<h3 id="nographic"><code class="language-plaintext highlighter-rouge">nographic</code></h3>
 
 <p>By default, the xPack QEMU Arm will try to start in graphical mode, by displaying an image of the emulated board and one or more animated LEDs.</p>
 
 <p>For running unit tests this is generally not needed, and QEMU can be started with graphics support disabled:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--nographic
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--nographic
 </code></pre></div></div>
 
-<h3 id="verbose"><code class="highlighter-rouge">verbose</code></h3>
+<h3 id="verbose"><code class="language-plaintext highlighter-rouge">verbose</code></h3>
 
-<p>By default, <code class="highlighter-rouge">qemu</code> is very quiet, it barely complains for errors.</p>
+<p>By default, <code class="language-plaintext highlighter-rouge">qemu</code> is very quiet, it barely complains for errors.</p>
 
-<p>To make it minimally social, add one <code class="highlighter-rouge">--verbose</code>, and it’ll tell what is going on:</p>
+<p>To make it minimally social, add one <code class="language-plaintext highlighter-rouge">--verbose</code>, and it’ll tell what is going on:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xPack 64-bit QEMU emulator version 2.8.0-9 (v2.8.0-7-3-ge221f2b601-dirty)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xPack 64-bit QEMU emulator version 2.8.0-9 (v2.8.0-7-3-ge221f2b601-dirty)
 Board: 'STM32F4-Discovery' (ST Discovery kit for STM32F407/417 lines).
 Device: 'STM32F407VG' (Cortex-M4 r0p0, MPU), Flash: 1024 kB, RAM: 128 kB.
 Command line: 'blinky' (6 bytes).
@@ -461,7 +471,7 @@ Cortex-M4 r0p0 core reset.
 ...
 </code></pre></div></div>
 
-<p>Adding one more <code class="highlighter-rouge">--verbose</code>  will make QEMU extra verbose and it’ll display details about the board hardware configuration and the memory sections loaded by GDB:</p>
+<p>Adding one more <code class="language-plaintext highlighter-rouge">--verbose</code>  will make QEMU extra verbose and it’ll display details about the board hardware configuration and the memory sections loaded by GDB:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">xPack 64-bit QEMU emulator version 2.8.0-9 (v2.8.0-7-3-ge221f2b601-dirty)
 Board: 'STM32F4-Discovery' (ST Discovery kit for STM32F407/417 lines).
@@ -493,25 +503,25 @@ Cortex-M4 r0p0 core reset.
 </span><span class="c">...
 </span></code></pre></div></div>
 
-<h3 id="d"><code class="highlighter-rouge">d</code></h3>
+<h3 id="d"><code class="language-plaintext highlighter-rouge">d</code></h3>
 
 <p>By default QEMU is not only quite, but also secretive, even when it detects problems during emulation, it does not report them.</p>
 
-<p>To make QEMU inform the user about these problems, the <code class="highlighter-rouge">-d</code> options can be used to enable some debug options.</p>
+<p>To make QEMU inform the user about these problems, the <code class="language-plaintext highlighter-rouge">-d</code> options can be used to enable some debug options.</p>
 
 <p>There are many such options available, but the ones the plug-in uses are:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-d unimp,guest_errors
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-d unimp,guest_errors
 </code></pre></div></div>
 
-<h3 id="semihosting-config"><code class="highlighter-rouge">semihosting-config</code></h3>
+<h3 id="semihosting-config"><code class="language-plaintext highlighter-rouge">semihosting-config</code></h3>
 
 <p>QEMU fully implements the ARM semihosting protocol. To enable it, use the following complicated option:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--semihosting-config enable=on,target=native
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--semihosting-config enable=on,target=native
 </code></pre></div></div>
 
-<h3 id="semihosting-cmdline"><code class="highlighter-rouge">semihosting-cmdline</code></h3>
+<h3 id="semihosting-cmdline"><code class="language-plaintext highlighter-rouge">semihosting-cmdline</code></h3>
 
 <p>To fully use semihosting, it should also be possible to pass command line options to the emulated application.</p>
 
@@ -519,20 +529,20 @@ Cortex-M4 r0p0 core reset.
 
 <p>This option <strong>must be the last one</strong>, and all following options will be passed to the application:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--semihosting-cmdline test 1 2 3
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--semihosting-cmdline test 1 2 3
 </code></pre></div></div>
 
 <p>The first option will be passed as argv[0], so it generally should reflect the application name. The following options will be passed as argv[1] … argv[n-1], without special processing.</p>
 
 <h3 id="exit-code">exit() code</h3>
 
-<p>When started in semihosting mode, if the application’s <code class="highlighter-rouge">main()</code> routine returns 0 and the application is a fully semihosted one, QEMU will also return 0 to its parent process. This is particularly useful when running unit tests, since 0 means the test was successful. Unfortunately the semihosting specs do not allow to pass the full exit code, so for all other returned values, QEMU will return 1, which can be used as an indication of a failed test.</p>
+<p>When started in semihosting mode, if the application’s <code class="language-plaintext highlighter-rouge">main()</code> routine returns 0 and the application is a fully semihosted one, QEMU will also return 0 to its parent process. This is particularly useful when running unit tests, since 0 means the test was successful. Unfortunately the semihosting specs do not allow to pass the full exit code, so for all other returned values, QEMU will return 1, which can be used as an indication of a failed test.</p>
 
 <p>This is not really a big limitation, since unit tests can be configured to write an XML file with the detailed test results, so the binary exit code is enough to represent the pass/fail, and Continuous Integration systems will generally process the XML file for details.</p>
 
 <h2 id="fully-semihosted-applications">Fully semihosted applications</h2>
 
-<p>When using QEMU for running unit tests, and expecting the exit code to reflect the test result, it is mandatory for the application to be compiled and linked as a <strong>fully semihosted application</strong>, in other words all system calls to be implemented using the semihosting interface. For the projects created by the Eclipse Embedded CDT wizards, this is achieved by defining <code class="highlighter-rouge">OS_USE_SEMIHOSTING</code>; outside Eclipse Embedded CDT it depends on the libraries used, for example newlib can be configured for semihosting by adding <code class="highlighter-rouge">--specs=rdimon.specs</code> to the linker options.</p>
+<p>When using QEMU for running unit tests, and expecting the exit code to reflect the test result, it is mandatory for the application to be compiled and linked as a <strong>fully semihosted application</strong>, in other words all system calls to be implemented using the semihosting interface. For the projects created by the Eclipse Embedded CDT wizards, this is achieved by defining <code class="language-plaintext highlighter-rouge">OS_USE_SEMIHOSTING</code>; outside Eclipse Embedded CDT it depends on the libraries used, for example newlib can be configured for semihosting by adding <code class="language-plaintext highlighter-rouge">--specs=rdimon.specs</code> to the linker options.</p>
 
 
         
@@ -547,16 +557,24 @@ Cortex-M4 r0p0 core reset.
 
     
 
+    <hr/>
+    If you have comments on the content of the page that you consider useful
+    for other readers, please enter them here.
+    For question and general support, please use the
+    <a href="https://www.tapatalk.com/groups/xpack/">Project Forums</a>.
+
     <div id="disqus_thread"></div>
     <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'xpack'; // required: replace example with your forum shortname
+        var disqus_config = function () {
+            this.page.url = '';  // Your page's canonical URL variable
+            this.page.identifier = '/qemu-arm/options/'; // Your page's unique identifier variable
+        };
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://embed-cdt.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
@@ -572,7 +590,7 @@ Cortex-M4 r0p0 core reset.
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2020 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Aug 13, 2020<br/> Site last generated: Sep 9, 2020 <br />
+<span>Page last updated:</span> Sep 9, 2020<br/> Site last generated: Sep 10, 2020 <br />
                 </div>
             </div>
 </footer>
@@ -592,7 +610,16 @@ Cortex-M4 r0p0 core reset.
 
 
 
-<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-16767008-13','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-16767008-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-16767008-13');
+</script>
 
 
 </html>

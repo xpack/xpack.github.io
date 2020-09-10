@@ -9,8 +9,29 @@
 <title>Prerequisites for building xPack binaries | The xPack Project</title>
 <link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
 
+
+<link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
+<link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Prerequisites for building xPack binaries</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Prerequisites for building xPack binaries" />
+<meta name="author" content="Liviu Ionescu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<meta property="og:description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<link rel="canonical" href="https://xpack.github.io/xbb/prerequisites/" />
+<meta property="og:url" content="https://xpack.github.io/xbb/prerequisites/" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-07-06T17:55:00+00:00" />
+<script type="application/ld+json">
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","@type":"BlogPosting","headline":"Prerequisites for building xPack binaries","dateModified":"2020-09-09T12:24:25+00:00","datePublished":"2017-07-06T17:55:00+00:00","url":"https://xpack.github.io/xbb/prerequisites/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/prerequisites/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+
 <link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?201907181733">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -32,7 +53,25 @@
 <script src="https://xpack.github.io/js/toc.js"></script>
 <script src="https://xpack.github.io/js/customscripts.js"></script>
 
-<link rel="shortcut icon" href="https://xpack.github.io/images/favicon.ico">
+<!-- Use absolute URLs, to cover preview cases too -->
+<link rel="shortcut icon" href="https://xpack.github.io/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="https://xpack.github.io/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://xpack.github.io/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://xpack.github.io/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://xpack.github.io/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://xpack.github.io/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://xpack.github.io/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://xpack.github.io/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://xpack.github.io/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://xpack.github.io/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://xpack.github.io/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://xpack.github.io/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://xpack.github.io/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://xpack.github.io/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://xpack.github.io/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://xpack.github.io/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,8 +79,6 @@
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-<link rel="alternate" type="application/rss+xml" title="xpack.github.io" href="https://xpack.github.io/feed.xml">
 
     <script>
         $(document).ready(function() {
@@ -133,23 +170,11 @@
                     <ul class="dropdown-menu">
                         
                         
-                        <li><a href="/xpm/">xpm</a></li>
+                        <li><a class="extern" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
                         
                         
                         
-                        <li><a href="/xpbuild/">xpbuild</a></li>
-                        
-                        
-                        
-                        <li><a href="/xpninja/">xpninja</a></li>
-                        
-                        
-                        
-                        <li><a href="/xpmake/">xpmake</a></li>
-                        
-                        
-                        
-                        <li><a href="/xpcdl/">xpcdl</a></li>
+                        <li><a class="extern" href="http://micro-os-plus.github.io" target="_blank" rel="noopener">µOS++ IIIe</a></li>
                         
                         
                     </ul>
@@ -169,6 +194,14 @@
                         
                         
                         <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/eclipse-embed-cdt/" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/micro-os-plus/" target="_blank" rel="noopener">µOS++ IIIe</a></li>
                         
                         
                     </ul>
@@ -473,29 +506,6 @@
    </li>
      
       
-  
-  <li>
-      <a title="Home" href="#">Home</a>
-      <ul>
-          
-          
-          
-          <li><a title="The xPack Project" href="/">The xPack Project</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a class="extern" title="GNU MCU Eclipse" href="https://gnu-mcu-eclipse.github.io" target="_blank" rel="noopener">GNU MCU Eclipse</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
       
       <!-- if you aren't using the accordion, uncomment this block:
          <p class="external">
@@ -598,35 +608,35 @@ apart from Docker, the host machine has no other special requirements.</p>
 
 <p>For example, the steps to install Docker on a modern 64-bit Ubuntu system are basically:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>apt-get update
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>apt-get update
 <span class="go">
-</span><span class="gp">$</span> <span class="nb">sudo </span>apt-get install apt-transport-https ca-certificates  curl software-properties-common
+</span><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>apt-transport-https ca-certificates  curl software-properties-common
 <span class="go">
-</span><span class="gp">$</span> curl <span class="nt">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg | <span class="nb">sudo </span>apt-key add -
+</span><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg | <span class="nb">sudo </span>apt-key add -
 <span class="go">
-</span><span class="gp">$</span> <span class="nv">version_name</span><span class="o">=</span><span class="k">$(</span>lsb_release <span class="nt">-cs</span><span class="k">)</span>
-<span class="gp">$</span> <span class="nb">sudo </span>add-apt-repository  <span class="s2">"deb [arch=amd64] https://download.docker.com/linux/ubuntu  </span><span class="k">${</span><span class="nv">version_name</span><span class="k">}</span><span class="s2"> stable"</span>
+</span><span class="gp">$</span><span class="w"> </span><span class="nv">version_name</span><span class="o">=</span><span class="si">$(</span>lsb_release <span class="nt">-cs</span><span class="si">)</span>
+<span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>add-apt-repository  <span class="s2">"deb [arch=amd64] https://download.docker.com/linux/ubuntu  </span><span class="k">${</span><span class="nv">version_name</span><span class="k">}</span><span class="s2"> stable"</span>
 <span class="go">
-</span><span class="gp">$</span> <span class="nb">sudo </span>apt-get update
-<span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nt">-y</span> install docker-ce
+</span><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>apt-get update
+<span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>apt-get <span class="nt">-y</span> <span class="nb">install </span>docker-ce
 </code></pre></div></div>
 
 <div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Please note that the above lines get the
-current version name via <code class="highlighter-rouge">lsb_release</code> and assumes that a folder with that
+current version name via <code class="language-plaintext highlighter-rouge">lsb_release</code> and assumes that a folder with that
 name is available at https://download.docker.com/linux/ubuntu/dists/.
 This is true for most versions, except the very latest one, which might not
 yet be made available by the Docker team. In this case set the
-<code class="highlighter-rouge">version_name</code> manually to the previous version.
+<code class="language-plaintext highlighter-rouge">version_name</code> manually to the previous version.
 You can also do this by
-manually editting the <code class="highlighter-rouge">/etc/apt/sources.list</code> file.
+manually editting the <code class="language-plaintext highlighter-rouge">/etc/apt/sources.list</code> file.
 At the time
 of writing this, the version for Ubuntu 19.10 <strong>eoan</strong> is not available
 and you must use <strong>disco</strong>.</div>
 
 <p>To check if the install is functional, run the <em>Hello World</em> image,
-for the moment as <code class="highlighter-rouge">sudo</code>:</p>
+for the moment as <code class="language-plaintext highlighter-rouge">sudo</code>:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>docker run hello-world
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>docker run hello-world
 <span class="go">Unable to find image 'hello-world:latest' locally
 latest: Pulling from library/hello-world
 b04784fba78d: Pull complete
@@ -640,17 +650,17 @@ Hello from Docker!
 <h4 id="configure-docker-to-run-as-a-regular-user">Configure Docker to run as a regular user</h4>
 
 <p>To allow Docker to run as a regular user, you need to be a member of
-the <code class="highlighter-rouge">docker</code> group.</p>
+the <code class="language-plaintext highlighter-rouge">docker</code> group.</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>groupadd docker
-<span class="gp">$</span> <span class="nb">sudo </span>gpasswd <span class="nt">-a</span> <span class="k">${</span><span class="nv">USER</span><span class="k">}</span> docker
-<span class="gp">$</span> <span class="nb">sudo </span>service docker restart
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>groupadd docker
+<span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>gpasswd <span class="nt">-a</span> <span class="k">${</span><span class="nv">USER</span><span class="k">}</span> docker
+<span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>service docker restart
 </code></pre></div></div>
 
 <p>The above script are for Ubuntu and the Debian family. For other
 distributions, the last line may differ, for example for Arch Linux use:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> systemctl restart docker
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>systemctl restart docker
 </code></pre></div></div>
 
 <p>To make these changes effective, preferably <strong>reboot</strong> the machine.</p>
@@ -658,7 +668,7 @@ distributions, the last line may differ, for example for Arch Linux use:</p>
 <p>To check if the configuration change is functional, run the same
 <em>Hello World</em> image without sudo:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> docker run hello-world
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>docker run hello-world
 <span class="go">
 Hello from Docker!
 </span><span class="c">...
@@ -689,9 +699,9 @@ although this might require enrolling to the developer program
 
 <p>The recommended way is to first install Xcode, then the Command Line Tools.</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> xcode-select <span class="nt">-p</span>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xcode-select <span class="nt">-p</span>
 <span class="go">/Applications/Xcode.app/Contents/Developer
-</span><span class="gp">$</span> gcc <span class="nt">--version</span>
+</span><span class="gp">$</span><span class="w"> </span>gcc <span class="nt">--version</span>
 <span class="go">Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/c++/4.2.1
 Apple LLVM version 9.0.0 (clang-900.0.39.2)
 Target: x86_64-apple-darwin17.4.0
@@ -702,10 +712,10 @@ InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault
 <p>It is also possible to install the Command Line Tools separately
 via a command line:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> xcode-select <span class="nt">--install</span>
-<span class="gp">$</span> xcode-select <span class="nt">-p</span>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xcode-select <span class="nt">--install</span>
+<span class="gp">$</span><span class="w"> </span>xcode-select <span class="nt">-p</span>
 <span class="go">/Library/Developer/CommandLineTools
-</span><span class="gp">$</span> gcc <span class="nt">--version</span>
+</span><span class="gp">$</span><span class="w"> </span>gcc <span class="nt">--version</span>
 <span class="go">Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
 Apple LLVM version 8.1.0 (clang-802.0.42)
 Target: x86_64-apple-darwin16.7.0
@@ -739,7 +749,7 @@ the Dockerfiles available from
 The images are relatively large, around 3-4 GB.</p>
 
 <p>It is possible to separately load the Docker images, using the
-script <code class="highlighter-rouge">preload-images</code> command of each script.</p>
+script <code class="language-plaintext highlighter-rouge">preload-images</code> command of each script.</p>
 
 <p>More details in each script documentation page.</p>
 
@@ -762,7 +772,7 @@ script <code class="highlighter-rouge">preload-images</code> command of each scr
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2020 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Aug 31, 2020<br/> Site last generated: Sep 9, 2020 <br />
+<span>Page last updated:</span> Sep 9, 2020<br/> Site last generated: Sep 10, 2020 <br />
                 </div>
             </div>
 </footer>
@@ -782,7 +792,16 @@ script <code class="highlighter-rouge">preload-images</code> command of each scr
 
 
 
-<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-16767008-13','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-16767008-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-16767008-13');
+</script>
 
 
 </html>

@@ -47,10 +47,21 @@
 
 
 {
-"title": "FAQ",
+"title": "The xPack GNU RISC-V Embedded GCC Frequently Asked Questions",
 "tags": "",
 "keywords": "",
-"url": "/xpbuild/faq/",
+"url": "/riscv-none-embed-gcc/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack Windows Build Tools Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/windows-build-tools/faq/",
 "summary": ""
 }
 ,
@@ -69,17 +80,6 @@
 
 
 {
-"title": "The xPack OpenOCD Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/openocd/faq/",
-"summary": ""
-}
-,
-
-
-
-{
 "title": "The xPack QEMU Arm Frequently Asked Questions",
 "tags": "",
 "keywords": "",
@@ -91,32 +91,32 @@
 
 
 {
+"title": "The xPack OpenOCD Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/openocd/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "FAQ",
+"tags": "",
+"keywords": "",
+"url": "/xpbuild/faq/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "FAQ",
 "tags": "",
 "keywords": "",
 "url": "/xpm/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The xPack GNU RISC-V Embedded GCC Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/riscv-none-embed-gcc/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The xPack Windows Build Tools Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/windows-build-tools/faq/",
 "summary": ""
 }
 ,
@@ -168,23 +168,25 @@
 
 
 
+
+
 {
-"title": "The xPack Basic Project Builder",
+"title": "The xPack GNU RISC-V Embedded GCC",
 "tags": "",
-"keywords": "",
-"url": "/xpbuild/",
-"summary": "<p>A tool to build day to day projects without having to manually write make files, with an emphasis on C/C++ and embedded applications, inspired by Eclipse CDT managed builder (work in progress).</p>"
+"keywords": "riscv-none-embed-gccriscvgccembedded",
+"url": "/riscv-none-embed-gcc/",
+"summary": "<p>A binary distribution of GNU RISC-V Embedded GCC.</p>"
 }
 ,
 
 
 
 {
-"title": "xPack Developer info",
+"title": "The xPack Windows Build Tools",
 "tags": "",
-"keywords": "",
-"url": "/develop/",
-"summary": "<p>Resources for xPack developers.</p>"
+"keywords": "windows-build-tools",
+"url": "/windows-build-tools/",
+"summary": "<p>A Windows binary distribution of GNU Make, to be used with Eclipse Embedded CDT.</p>"
 }
 ,
 
@@ -201,7 +203,25 @@
 
 
 
+{
+"title": "The xPack QEMU Arm",
+"tags": "",
+"keywords": "qemuarmcortex-mgraphic",
+"url": "/qemu-arm/",
+"summary": "<p>A binary distribution of QEMU Arm.</p>"
+}
+,
 
+
+
+{
+"title": "The xPack OpenOCD",
+"tags": "",
+"keywords": "openocd",
+"url": "/openocd/",
+"summary": "<p>A binary distribution of OpenOCD.</p>"
+}
+,
 
 
 
@@ -216,27 +236,7 @@
 
 
 
-{
-"title": "The xPack Project",
-"tags": "",
-"keywords": "packages, code sharing, reusing, libraries, applications, c/c++, embedded",
-"url": "/",
-"summary": "<p>Tools to manage, configure and build complex, package based, multi-target projects.</p>"
-}
-,
 
-
-
-
-
-{
-"title": "The xPack Package Manager",
-"tags": "",
-"keywords": "xPackpackagemanager",
-"url": "/xpm/",
-"summary": "<p>A tool to manage dependencies for generic multi-version source and binary packages, inspired by npm.</p>"
-}
-,
 
 
 
@@ -262,25 +262,25 @@
 
 
 
+
+
 {
-"title": "The xPack Build Box",
+"title": "The xPack Basic Project Builder",
 "tags": "",
 "keywords": "",
-"url": "/xbb/",
-"summary": "<p>An elaborated environment for building binary xPacks.</p>"
+"url": "/xpbuild/",
+"summary": "<p>A tool to build day to day projects without having to manually write make files, with an emphasis on C/C++ and embedded applications, inspired by Eclipse CDT managed builder (work in progress).</p>"
 }
 ,
 
 
 
-
-
 {
-"title": "The xPack Windows Build Tools",
+"title": "The xPack Package Manager",
 "tags": "",
-"keywords": "windows-build-tools",
-"url": "/windows-build-tools/",
-"summary": "<p>A Windows binary distribution of GNU Make, to be used with Eclipse Embedded CDT.</p>"
+"keywords": "xPackpackagemanager",
+"url": "/xpm/",
+"summary": "<p>A tool to manage dependencies for generic multi-version source and binary packages, inspired by npm.</p>"
 }
 ,
 
@@ -298,44 +298,33 @@
 
 
 {
-"title": "The xPack OpenOCD",
-"tags": "",
-"keywords": "openocd",
-"url": "/openocd/",
-"summary": "<p>A binary distribution of OpenOCD.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack QEMU Arm",
-"tags": "",
-"keywords": "qemuarmcortex-mgraphic",
-"url": "/qemu-arm/",
-"summary": "<p>A binary distribution of QEMU Arm.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack GNU RISC-V Embedded GCC",
-"tags": "",
-"keywords": "riscv-none-embed-gccriscvgccembedded",
-"url": "/riscv-none-embed-gcc/",
-"summary": "<p>A binary distribution of GNU RISC-V Embedded GCC.</p>"
-}
-,
-
-
-
-{
-"title": "xpm init",
+"title": "xPack Developer info",
 "tags": "",
 "keywords": "",
-"url": "/xpm/cli/init/",
-"summary": ""
+"url": "/develop/",
+"summary": "<p>Resources for xPack developers.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Build Box",
+"tags": "",
+"keywords": "",
+"url": "/xbb/",
+"summary": "<p>An elaborated environment for building binary xPacks.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Project",
+"tags": "",
+"keywords": "packages, code sharing, reusing, libraries, applications, c/c++, embedded",
+"url": "/",
+"summary": "<p>Tools to manage, configure and build complex, package based, multi-target projects.</p>"
 }
 ,
 
@@ -353,10 +342,21 @@
 
 
 {
-"title": "How to install the xPack GNU Arm Embedded GCC binaries",
+"title": "xpm init",
 "tags": "",
 "keywords": "",
-"url": "/arm-none-eabi-gcc/install/",
+"url": "/xpm/cli/init/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to install the xPack GNU RISC-V Embedded GCC binaries",
+"tags": "",
+"keywords": "",
+"url": "/riscv-none-embed-gcc/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -375,43 +375,10 @@
 
 
 {
-"title": "How to install the xPack tools",
-"tags": "",
-"keywords": "npmxpackinstall",
-"url": "/install/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to install xpbuild",
-"tags": "",
-"keywords": "xpbuildxpackinstall",
-"url": "/xpbuild/install/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to install xpm",
-"tags": "",
-"keywords": "xpmnpmxpackinstall",
-"url": "/xpm/install/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to install the xPack OpenOCD binaries",
+"title": "How to install the xPack GNU Arm Embedded GCC binaries",
 "tags": "",
 "keywords": "",
-"url": "/openocd/install/",
+"url": "/arm-none-eabi-gcc/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -430,6 +397,28 @@
 
 
 {
+"title": "How to install the xPack OpenOCD binaries",
+"tags": "",
+"keywords": "",
+"url": "/openocd/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "How to install xpbuild",
+"tags": "",
+"keywords": "xpbuildxpackinstall",
+"url": "/xpbuild/install/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "xpm install",
 "tags": "",
 "keywords": "",
@@ -441,11 +430,22 @@
 
 
 {
-"title": "How to install the xPack GNU RISC-V Embedded GCC binaries",
+"title": "How to install xpm",
 "tags": "",
-"keywords": "",
-"url": "/riscv-none-embed-gcc/install/",
-"summary": "<p>The recommended method is via xpm.</p>"
+"keywords": "xpmnpmxpackinstall",
+"url": "/xpm/install/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to install the xPack tools",
+"tags": "",
+"keywords": "npmxpackinstall",
+"url": "/install/",
+"summary": ""
 }
 ,
 
@@ -516,21 +516,25 @@
 
 
 {
-"title": "xpbuild - common options",
+"title": "How to get support",
 "tags": "",
 "keywords": "",
-"url": "/xpbuild/cli/",
+"url": "/support/",
 "summary": ""
 }
 ,
 
 
 
+
+
+
+
 {
-"title": "xpm files",
+"title": "xpbuild - common options",
 "tags": "",
 "keywords": "",
-"url": "/xpm/files/",
+"url": "/xpbuild/cli/",
 "summary": ""
 }
 ,
@@ -548,15 +552,11 @@
 
 
 
-
-
-
-
 {
-"title": "How to get support",
+"title": "xpm files",
 "tags": "",
 "keywords": "",
-"url": "/support/",
+"url": "/xpm/files/",
 "summary": ""
 }
 ,
@@ -644,10 +644,54 @@
 
 
 {
+"title": "How to get help for xPack GNU RISC-V Embedded GCC?",
+"tags": "",
+"keywords": "",
+"url": "/riscv-none-embed-gcc/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack Windows Build Tools",
+"tags": "",
+"keywords": "",
+"url": "/windows-build-tools/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack GNU Arm Embedded GCC?",
+"tags": "",
+"keywords": "",
+"url": "/arm-none-eabi-gcc/support/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "How to get help for xPack QEMU Arm",
 "tags": "",
 "keywords": "",
 "url": "/qemu-arm/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack OpenOCD?",
+"tags": "",
+"keywords": "",
+"url": "/openocd/support/",
 "summary": ""
 }
 ,
@@ -670,50 +714,6 @@
 "tags": "",
 "keywords": "",
 "url": "/xpm/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack OpenOCD?",
-"tags": "",
-"keywords": "",
-"url": "/openocd/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack GNU RISC-V Embedded GCC?",
-"tags": "",
-"keywords": "",
-"url": "/riscv-none-embed-gcc/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack GNU Arm Embedded GCC?",
-"tags": "",
-"keywords": "",
-"url": "/arm-none-eabi-gcc/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack Windows Build Tools",
-"tags": "",
-"keywords": "",
-"url": "/windows-build-tools/support/",
 "summary": ""
 }
 ,
@@ -770,29 +770,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/assets/css/style.css",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "",
-"tags": "",
-"keywords": "",
 "url": "/xpm/files/folders/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "",
-"tags": "",
-"keywords": "",
-"url": "/redirects.json",
 "summary": ""
 }
 ,
@@ -1495,7 +1473,7 @@
 "title": "GNU ARM Eclipse QEMU v2.3.50-20150804*-dev released",
 "tags": "releasesqemuemulatorarmcortex-m411renucleo",
 "keywords": "",
-"url": "/blog/2015/08/05/qemu-v2-3-50-20150804-released/",
+"url": "/blog/2015/08/04/qemu-v2-3-50-20150804-released/",
 "summary": ""
 }
 ,
@@ -1535,7 +1513,7 @@
 "title": "GNU ARM Eclipse QEMU v2.2.92-20150404*-dev released",
 "tags": "releasesqemuemulatorarmcortex-meclipsegdbsemihosting",
 "keywords": "",
-"url": "/blog/2015/04/05/qemu-v2-2-92-20150404-released/",
+"url": "/blog/2015/04/04/qemu-v2-2-92-20150404-released/",
 "summary": ""
 }
 ,

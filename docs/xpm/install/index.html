@@ -9,8 +9,29 @@
 <title>How to install xpm | The xPack Project</title>
 <link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
 
+
+<link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
+<link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>How to install xpm</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="How to install xpm" />
+<meta name="author" content="Liviu Ionescu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<meta property="og:description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<link rel="canonical" href="https://xpack.github.io/xpm/install/" />
+<meta property="og:url" content="https://xpack.github.io/xpm/install/" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-10-09T11:14:00+00:00" />
+<script type="application/ld+json">
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","@type":"BlogPosting","headline":"How to install xpm","dateModified":"2020-09-09T12:24:25+00:00","datePublished":"2017-10-09T11:14:00+00:00","url":"https://xpack.github.io/xpm/install/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/install/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+
 <link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?201907181733">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -32,7 +53,25 @@
 <script src="https://xpack.github.io/js/toc.js"></script>
 <script src="https://xpack.github.io/js/customscripts.js"></script>
 
-<link rel="shortcut icon" href="https://xpack.github.io/images/favicon.ico">
+<!-- Use absolute URLs, to cover preview cases too -->
+<link rel="shortcut icon" href="https://xpack.github.io/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="https://xpack.github.io/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://xpack.github.io/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://xpack.github.io/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://xpack.github.io/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://xpack.github.io/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://xpack.github.io/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://xpack.github.io/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://xpack.github.io/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://xpack.github.io/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://xpack.github.io/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://xpack.github.io/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://xpack.github.io/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://xpack.github.io/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://xpack.github.io/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://xpack.github.io/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,8 +79,6 @@
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-<link rel="alternate" type="application/rss+xml" title="xpack.github.io" href="https://xpack.github.io/feed.xml">
 
     <script>
         $(document).ready(function() {
@@ -133,23 +170,11 @@
                     <ul class="dropdown-menu">
                         
                         
-                        <li class="dropdownActive"><a href="/xpm/">xpm</a></li>
+                        <li><a class="extern" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
                         
                         
                         
-                        <li><a href="/xpbuild/">xpbuild</a></li>
-                        
-                        
-                        
-                        <li><a href="/xpninja/">xpninja</a></li>
-                        
-                        
-                        
-                        <li><a href="/xpmake/">xpmake</a></li>
-                        
-                        
-                        
-                        <li><a href="/xpcdl/">xpcdl</a></li>
+                        <li><a class="extern" href="http://micro-os-plus.github.io" target="_blank" rel="noopener">µOS++ IIIe</a></li>
                         
                         
                     </ul>
@@ -169,6 +194,14 @@
                         
                         
                         <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/eclipse-embed-cdt/" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/micro-os-plus/" target="_blank" rel="noopener">µOS++ IIIe</a></li>
                         
                         
                     </ul>
@@ -316,29 +349,6 @@
    </li>
      
       
-  
-  <li>
-      <a title="Home" href="#">Home</a>
-      <ul>
-          
-          
-          
-          <li><a title="The xPack Project" href="/">The xPack Project</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a class="extern" title="GNU MCU Eclipse" href="https://gnu-mcu-eclipse.github.io" target="_blank" rel="noopener">GNU MCU Eclipse</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
       
       <!-- if you aren't using the accordion, uncomment this block:
          <p class="external">
@@ -373,7 +383,7 @@
 
 <p><strong>xpm</strong> is a <a href="https://nodejs.org">Node.js</a> CLI application available as the
 npm package <a href="https://www.npmjs.com/package/xpm">xpm</a> from the
-<a href="https://www.npmjs.com"><code class="highlighter-rouge">npmjs.com</code></a> public repository.</p>
+<a href="https://www.npmjs.com"><code class="language-plaintext highlighter-rouge">npmjs.com</code></a> public repository.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
@@ -386,7 +396,7 @@ class syntax is used and some dependencies also requie new features</li>
 <p>For details, please read (carefully!) the
 <a href="/install/">prerequisites</a> page.</p>
 
-<h2 id="xpm-install"><code class="highlighter-rouge">xpm</code> install</h2>
+<h2 id="xpm-install"><code class="language-plaintext highlighter-rouge">xpm</code> install</h2>
 
 <ul id="profileTabs_1" class="nav nav-tabs">
     <li class="active"><a href="#windows_1" data-toggle="tab">Windows</a></li>
@@ -397,48 +407,48 @@ class syntax is used and some dependencies also requie new features</li>
 	<div role="tabpanel" class="tab-pane active" id="windows_1">
 		
 <p>On Windows, by default, global Node.js packages are installed in the
-user home folder, in <code class="highlighter-rouge">%APPDATA%\npm</code>
-(like <code class="highlighter-rouge">C:\Users\ilg\AppData\Roaming\npm</code>), and managing packages
+user home folder, in <code class="language-plaintext highlighter-rouge">%APPDATA%\npm</code>
+(like <code class="language-plaintext highlighter-rouge">C:\Users\ilg\AppData\Roaming\npm</code>), and managing packages
 does not require administrative rights.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;npm install --global xpm@latest
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;npm install --global xpm@latest
 C:\Users\ilg\AppData\Roaming\npm\xpm -&gt; C:\Users\ilg\AppData\Roaming\npm\node_modules\xpm\bin\xpm.js
 + xpm@0.5.0
 added 260 packages from 147 contributors in 36.304s
 </code></pre></div></div>
 
-<p>The result is a pair of files in the <code class="highlighter-rouge">%APPDATA%\npm</code> folder:</p>
+<p>The result is a pair of files in the <code class="language-plaintext highlighter-rouge">%APPDATA%\npm</code> folder:</p>
 
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;dir <span class="s2">"%APPDATA%"</span>\npm\xpm<span class="k">*</span>
- Volume <span class="k">in </span>drive C has no label.
- Volume Serial Number is 28CE-1C06
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">C:\</span><span class="err">&gt;</span><span class="nx">dir</span><span class="w"> </span><span class="s2">"%APPDATA%"</span><span class="nx">\npm\xpm</span><span class="o">*</span><span class="w">
+ </span><span class="nf">Volume</span><span class="w"> </span><span class="nx">in</span><span class="w"> </span><span class="nx">drive</span><span class="w"> </span><span class="nx">C</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">no</span><span class="w"> </span><span class="nx">label.</span><span class="w">
+ </span><span class="nf">Volume</span><span class="w"> </span><span class="nx">Serial</span><span class="w"> </span><span class="nx">Number</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">28CE-1C06</span><span class="w">
 
- Directory of C:\Users\ilg\AppData\Roaming\npm
+ </span><span class="nf">Directory</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">C:\Users\ilg\AppData\Roaming\npm</span><span class="w">
 
-18/04/2018  10:40               319 xpm
-18/04/2018  10:40               196 xpm.cmd
-               2 File<span class="o">(</span>s<span class="o">)</span>            515 bytes
-               0 <span class="nb">Dir</span><span class="o">(</span>s<span class="o">)</span>  51,207,155,712 bytes free
-</code></pre></div></div>
+</span><span class="mi">18</span><span class="nf">/04/2018</span><span class="w">  </span><span class="nx">10:40</span><span class="w">               </span><span class="nx">319</span><span class="w"> </span><span class="nx">xpm</span><span class="w">
+</span><span class="mi">18</span><span class="nf">/04/2018</span><span class="w">  </span><span class="nx">10:40</span><span class="w">               </span><span class="nx">196</span><span class="w"> </span><span class="nx">xpm.cmd</span><span class="w">
+               </span><span class="mi">2</span><span class="w"> </span><span class="nf">File</span><span class="p">(</span><span class="nf">s</span><span class="p">)</span><span class="w">            </span><span class="mi">515</span><span class="w"> </span><span class="nf">bytes</span><span class="w">
+               </span><span class="nx">0</span><span class="w"> </span><span class="nx">Dir</span><span class="p">(</span><span class="nf">s</span><span class="p">)</span><span class="w">  </span><span class="mi">51</span><span class="p">,</span><span class="mi">207</span><span class="p">,</span><span class="mi">155</span><span class="p">,</span><span class="mi">712</span><span class="w"> </span><span class="nf">bytes</span><span class="w"> </span><span class="nx">free</span><span class="w">
+</span></code></pre></div></div>
 
 <p>If you followed the instructions in the
 <a href="/install/">prerequisites</a> page, you should
 already have this path configured and the program should start normally:</p>
 
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;xpm --version
-0.5.0
-</code></pre></div></div>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">C:\</span><span class="err">&gt;</span><span class="nx">xpm</span><span class="w"> </span><span class="nt">--version</span><span class="w">
+</span><span class="mf">0.5.0</span><span class="w">
+</span></code></pre></div></div>
 
 <h3 id="aggressive-antivirus-programs--xpm">Aggressive antivirus programs &amp; xpm</h3>
 
-<p>On Windows, binary xPacks are <code class="highlighter-rouge">.zip</code> archives containing <code class="highlighter-rouge">.exe</code> files;
+<p>On Windows, binary xPacks are <code class="language-plaintext highlighter-rouge">.zip</code> archives containing <code class="language-plaintext highlighter-rouge">.exe</code> files;
 some aggressive antivirus programs may quarantine those files, or
 even modify the content of the archives, affecting the checksum and
 thus preventing the packages to be installed.</p>
 
 <p>Errors may look like:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Downloading https://github.com/gnu-mcu-eclipse/qemu/releases/download/v2.8.0-4-20190211/gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-win64.zip...
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Downloading https://github.com/gnu-mcu-eclipse/qemu/releases/download/v2.8.0-4-20190211/gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-win64.zip...
 { Error: sha256-p3CgzXJt4zi5g0kxQXlOpss3Xu5Yy+Zv8HXWXkUdg6g= integrity checksum failed when using sha256: wanted sha256-p3CgzXJt4zi5g0kxQXlOpss3Xu5Yy+Zv8HXWXkUdg6g= but got sha512-k1s9UW6Zb20llIuopUwbf3D38OP1F+Nkgf3wGWwsXPwoQfhuiR89+VF3Rrf7YF20fN3tG4/3jZSC3apiHbQ6NA== sha256-ABnfxLMtY8E5KqJkrtIlPB4ML7CSFvjizCabv7i7SbU=. (9 bytes)
 ...
 Extracting 'gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-win64.zip'...
@@ -447,7 +457,7 @@ error: Cannot read property 'path' of null
 
 <p>The solution is to configure the antivirus program to be less aggressive,
 at least for files in the
-<code class="highlighter-rouge">AppData\Roaming\xPacks</code> and <code class="highlighter-rouge">AppData\Local\Caches\xPacks</code> folders.</p>
+<code class="language-plaintext highlighter-rouge">AppData\Roaming\xPacks</code> and <code class="language-plaintext highlighter-rouge">AppData\Local\Caches\xPacks</code> folders.</p>
 
 <p>If this is not possible, temporarily disable the antivirus program.</p>
 
@@ -456,21 +466,21 @@ at least for files in the
 	<div role="tabpanel" class="tab-pane" id="macos_1">
 		
 <p>On macOS, by default, global Node.js packages are installed in
-<code class="highlighter-rouge">/usr/local</code>, and managing them requires administrative rights,
+<code class="language-plaintext highlighter-rouge">/usr/local</code>, and managing them requires administrative rights,
 but if you followed the instructions in the
 <a href="/install/">prerequisites</a> page, you should
 already have configured npm to use a location in the home folder.</p>
 
 <p>With the environment properly set, the command to install xpm is:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> npm install <span class="nt">--global</span> xpm@latest
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>npm <span class="nb">install</span> <span class="nt">--global</span> xpm@latest
 </code></pre></div></div>
 
 <p>To test if xpm starts:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> which xpm
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>which xpm
 <span class="go">/Users/ilg/Library/npm/bin/xpm
-</span><span class="gp">$</span> xpm <span class="nt">--version</span>
+</span><span class="gp">$</span><span class="w"> </span>xpm <span class="nt">--version</span>
 <span class="go">0.5.0
 </span></code></pre></div></div>
 
@@ -482,21 +492,21 @@ already have configured npm to use a location in the home folder.</p>
 added in the 0.6.2 release of xpm.</div>
 
 <p>On GNU/Linux, by default, global Node.js packages are installed in
-<code class="highlighter-rouge">/usr/local</code>, and managing them requires administrative rights,
+<code class="language-plaintext highlighter-rouge">/usr/local</code>, and managing them requires administrative rights,
 but if you followed the instructions in the
 <a href="/install/">prerequisites</a> page, you should
 already have configured npm to use a location in the home folder.</p>
 
 <p>With the environment properly set, the command to install xpm is:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> npm install <span class="nt">--global</span> xpm@latest
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>npm <span class="nb">install</span> <span class="nt">--global</span> xpm@latest
 </code></pre></div></div>
 
 <p>To test if xpm starts:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> which xpm
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>which xpm
 <span class="go">/home/ilg/opt/npm/bin/xpm
-</span><span class="gp">$</span> xpm <span class="nt">--version</span>
+</span><span class="gp">$</span><span class="w"> </span>xpm <span class="nt">--version</span>
 <span class="go">0.5.0
 </span></code></pre></div></div>
 
@@ -506,7 +516,7 @@ already have configured npm to use a location in the home folder.</p>
 insisting on using the one provided by the distribution usually results in
 errors like this:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ xpm -v
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ xpm -v
 /home/ilg/opt/npm/lib/node_modules/xpm/node_modules/@ilg/cli-start-options/lib/cli-application.js:150
   static async start () {
                ^^^^^
@@ -524,11 +534,11 @@ SyntaxError: Unexpected identifier
 </code></pre></div></div>
 
 <p>This problem is caused by the old Node.js, unable to understand the
-<code class="highlighter-rouge">async</code> keyword.</p>
+<code class="language-plaintext highlighter-rouge">async</code> keyword.</p>
 
 <p>Follow the instructions in the
 <a href="/install/">prerequisites</a> page and update your
-<code class="highlighter-rouge">node</code> &amp; <code class="highlighter-rouge">npm</code> programs.</p>
+<code class="language-plaintext highlighter-rouge">node</code> &amp; <code class="language-plaintext highlighter-rouge">npm</code> programs.</p>
 
 
 	</div>
@@ -538,7 +548,7 @@ SyntaxError: Unexpected identifier
 
 <p>To remove xpm, the command is:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> npm uninstall <span class="nt">--global</span> xpm
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>npm uninstall <span class="nt">--global</span> xpm
 </code></pre></div></div>
 
 <h2 id="miscellaneous">Miscellaneous</h2>
@@ -546,12 +556,12 @@ SyntaxError: Unexpected identifier
 <p>The official page explaining how to install npm in a custom
 folder is <a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions#option-two-change-npms-default-directory">How to Prevent Permissions Errors</a>.</p>
 
-<h2 id="npx"><code class="highlighter-rouge">npx</code></h2>
+<h2 id="npx"><code class="language-plaintext highlighter-rouge">npx</code></h2>
 
 <p>If, for any reason, you decide not to install xpm, you can still
-benefit from it by using the <code class="highlighter-rouge">npx</code> comand, as a trampoline to start xpm:</p>
+benefit from it by using the <code class="language-plaintext highlighter-rouge">npx</code> comand, as a trampoline to start xpm:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> npx xpm <span class="nt">--version</span>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>npx xpm <span class="nt">--version</span>
 <span class="go">0.4.3
 </span></code></pre></div></div>
 
@@ -582,28 +592,28 @@ in the user home.</p>
 <h3 id="macos-specifics">macOS specifics</h3>
 
 <p>The default location used to install the global packages repository is
-in <code class="highlighter-rouge">~/Library</code>, a folder that, due to an unfortunate Apple decision,
+in <code class="language-plaintext highlighter-rouge">~/Library</code>, a folder that, due to an unfortunate Apple decision,
 is hidden for regular browsing in Finder.</p>
 
 <p>To make it back visible, use:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> /usr/bin/chflags nohidden ~/Library
-<span class="gp">$</span> xattr <span class="nt">-d</span> com.apple.FinderInfo ~/Library
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>/usr/bin/chflags nohidden ~/Library
+<span class="gp">$</span><span class="w"> </span>xattr <span class="nt">-d</span> com.apple.FinderInfo ~/Library
 </code></pre></div></div>
 
 <p>A more general solution is to make all hidden files:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> defaults write com.apple.Finder AppleShowAllFiles <span class="nb">true</span>
-<span class="gp">$</span> killall Finder
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>defaults write com.apple.Finder AppleShowAllFiles <span class="nb">true</span>
+<span class="gp">$</span><span class="w"> </span>killall Finder
 </code></pre></div></div>
 
 <p>Another anoying behaviour of the file browser is to hide names starting
-with <code class="highlighter-rouge">.</code> (dot), which is a real pity since the binary packages are
-extracted in a folder named <code class="highlighter-rouge">.content</code>.</p>
+with <code class="language-plaintext highlighter-rouge">.</code> (dot), which is a real pity since the binary packages are
+extracted in a folder named <code class="language-plaintext highlighter-rouge">.content</code>.</p>
 
 <p>Fortunately there is a workaround for this too:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmd+shift+'.'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmd+shift+'.'
 </code></pre></div></div>
 
 <p>This keyboard shortcut works like a toggle, using it once makes files
@@ -614,34 +624,34 @@ using it again reverts to hiding them.</p>
 
 <p>To get an initial glimpse on the program, ask for help:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> xpm <span class="nt">--help</span>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nt">--help</span>
 <span class="go">
 The xPack package manager command line tool
-</span><span class="gp">Usage: xpm &lt;command&gt;</span> <span class="o">[</span>&lt;subcommand&gt;...] <span class="o">[</span>&lt;options&gt; ...] <span class="o">[</span>&lt;args&gt;...]
+</span><span class="gp">Usage: xpm &lt;command&gt;</span><span class="w"> </span><span class="o">[</span>&lt;subcommand&gt;...] <span class="o">[</span>&lt;options&gt; ...] <span class="o">[</span>&lt;args&gt;...]
 <span class="go">
-</span><span class="gp">where &lt;command&gt;</span> is one of:
+</span><span class="gp">where &lt;command&gt;</span><span class="w"> </span>is one of:
 <span class="go">  build, init, install, run-script
 
 Common options:
-</span><span class="gp">  --loglevel &lt;level&gt;</span>     Set log level <span class="o">(</span>silent|warn|info|verbose|debug|trace<span class="o">)</span>
+</span><span class="gp">  --loglevel &lt;level&gt;</span><span class="w">     </span>Set log level <span class="o">(</span>silent|warn|info|verbose|debug|trace<span class="o">)</span>
 <span class="go">  -s|--silent            Disable all messages (--loglevel silent)
   -q|--quiet             Mostly quiet, warnings and errors (--loglevel warn)
   --informative          Informative (--loglevel info)
   -v|--verbose           Verbose (--loglevel verbose)
   -d|--debug             Debug messages (--loglevel debug)
   -dd|--trace            Trace messages (--loglevel trace, -d -d)
-</span><span class="gp">  -C &lt;folder&gt;</span>            Set current folder
+</span><span class="gp">  -C &lt;folder&gt;</span><span class="w">            </span>Set current folder
 <span class="go">
 xpm -h|--help            Quick help
-</span><span class="gp">xpm &lt;command&gt;</span> <span class="nt">-h</span>|--help  Quick <span class="nb">help </span>on <span class="nb">command</span>
+</span><span class="gp">xpm &lt;command&gt;</span><span class="w"> </span><span class="nt">-h</span>|--help  Quick <span class="nb">help </span>on <span class="nb">command</span>
 <span class="go">xpm --version            Show version
 xpm -i|--interactive     Enter interactive mode
 
 npm xpm@0.2.10 '/Users/ilg/My Files/MacBookPro Projects/xPack/npm-modules/xpm-js.git'
-</span><span class="gp">Home page: &lt;https://github.com/xpack/xpm-js&gt;</span>
-<span class="gp">Bug reports: &lt;https://github.com/xpack/xpm-js/issues&gt;</span>
-<span class="gp">$</span>
-</code></pre></div></div>
+</span><span class="gp">Home page: &lt;https://github.com/xpack/xpm-js&gt;</span><span class="w">
+</span><span class="gp">Bug reports: &lt;https://github.com/xpack/xpm-js/issues&gt;</span><span class="w">
+</span><span class="gp">$</span><span class="w">
+</span></code></pre></div></div>
 
 
         
@@ -656,16 +666,24 @@ npm xpm@0.2.10 '/Users/ilg/My Files/MacBookPro Projects/xPack/npm-modules/xpm-js
 
     
 
+    <hr/>
+    If you have comments on the content of the page that you consider useful
+    for other readers, please enter them here.
+    For question and general support, please use the
+    <a href="https://www.tapatalk.com/groups/xpack/">Project Forums</a>.
+
     <div id="disqus_thread"></div>
     <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'xpack'; // required: replace example with your forum shortname
+        var disqus_config = function () {
+            this.page.url = '';  // Your page's canonical URL variable
+            this.page.identifier = '/xpm/install/'; // Your page's unique identifier variable
+        };
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://embed-cdt.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
@@ -681,7 +699,7 @@ npm xpm@0.2.10 '/Users/ilg/My Files/MacBookPro Projects/xPack/npm-modules/xpm-js
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2020 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Aug 13, 2020<br/> Site last generated: Sep 9, 2020 <br />
+<span>Page last updated:</span> Sep 9, 2020<br/> Site last generated: Sep 10, 2020 <br />
                 </div>
             </div>
 </footer>
@@ -701,7 +719,16 @@ npm xpm@0.2.10 '/Users/ilg/My Files/MacBookPro Projects/xPack/npm-modules/xpm-js
 
 
 
-<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-16767008-13','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-16767008-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-16767008-13');
+</script>
 
 
 </html>

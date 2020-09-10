@@ -9,8 +9,29 @@
 <title>package.json | The xPack Project</title>
 <link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
 
+
+<link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
+<link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>package.json</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="package.json" />
+<meta name="author" content="Liviu Ionescu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<meta property="og:description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<link rel="canonical" href="https://xpack.github.io/xpm/files/package.json/" />
+<meta property="og:url" content="https://xpack.github.io/xpm/files/package.json/" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-07-01T21:36:00+00:00" />
+<script type="application/ld+json">
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","@type":"BlogPosting","headline":"package.json","dateModified":"2020-09-09T12:24:25+00:00","datePublished":"2019-07-01T21:36:00+00:00","url":"https://xpack.github.io/xpm/files/package.json/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/files/package.json/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+
 <link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?201907181733">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -32,7 +53,25 @@
 <script src="https://xpack.github.io/js/toc.js"></script>
 <script src="https://xpack.github.io/js/customscripts.js"></script>
 
-<link rel="shortcut icon" href="https://xpack.github.io/images/favicon.ico">
+<!-- Use absolute URLs, to cover preview cases too -->
+<link rel="shortcut icon" href="https://xpack.github.io/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="https://xpack.github.io/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://xpack.github.io/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://xpack.github.io/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://xpack.github.io/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://xpack.github.io/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://xpack.github.io/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://xpack.github.io/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://xpack.github.io/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://xpack.github.io/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://xpack.github.io/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://xpack.github.io/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://xpack.github.io/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://xpack.github.io/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://xpack.github.io/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://xpack.github.io/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,8 +79,6 @@
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-<link rel="alternate" type="application/rss+xml" title="xpack.github.io" href="https://xpack.github.io/feed.xml">
 
     <script>
         $(document).ready(function() {
@@ -133,23 +170,11 @@
                     <ul class="dropdown-menu">
                         
                         
-                        <li class="dropdownActive"><a href="/xpm/">xpm</a></li>
+                        <li><a class="extern" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
                         
                         
                         
-                        <li><a href="/xpbuild/">xpbuild</a></li>
-                        
-                        
-                        
-                        <li><a href="/xpninja/">xpninja</a></li>
-                        
-                        
-                        
-                        <li><a href="/xpmake/">xpmake</a></li>
-                        
-                        
-                        
-                        <li><a href="/xpcdl/">xpcdl</a></li>
+                        <li><a class="extern" href="http://micro-os-plus.github.io" target="_blank" rel="noopener">µOS++ IIIe</a></li>
                         
                         
                     </ul>
@@ -169,6 +194,14 @@
                         
                         
                         <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/eclipse-embed-cdt/" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/micro-os-plus/" target="_blank" rel="noopener">µOS++ IIIe</a></li>
                         
                         
                     </ul>
@@ -316,29 +349,6 @@
    </li>
      
       
-  
-  <li>
-      <a title="Home" href="#">Home</a>
-      <ul>
-          
-          
-          
-          <li><a title="The xPack Project" href="/">The xPack Project</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a class="extern" title="GNU MCU Eclipse" href="https://gnu-mcu-eclipse.github.io" target="_blank" rel="noopener">GNU MCU Eclipse</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
       
       <!-- if you aren't using the accordion, uncomment this block:
          <p class="external">
@@ -392,33 +402,33 @@ $('#toc').on('click', 'a', function() {
     
 
 
-   <p>The <a href="https://docs.npmjs.com/files/package.json"><code class="highlighter-rouge">package.json</code></a> file is
+   <p>The <a href="https://docs.npmjs.com/files/package.json"><code class="language-plaintext highlighter-rouge">package.json</code></a> file is
 basically the same as for npm, with some
 extensions.</p>
 
-<h2 id="the-mandatory-xpackproperty">The mandatory <code class="highlighter-rouge">xpack</code> property</h2>
+<h2 id="the-mandatory-xpackproperty">The mandatory <code class="language-plaintext highlighter-rouge">xpack</code> property</h2>
 
-<p>To identify a npm package as an xPack, it must have an <code class="highlighter-rouge">xpack</code>
+<p>To identify a npm package as an xPack, it must have an <code class="language-plaintext highlighter-rouge">xpack</code>
 property, even empty:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-awesome-project"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"xpack"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-awesome-project"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"xpack"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Although not mandatory, it is also recommended to add an <code class="highlighter-rouge">xpack</code> keyword,
+<p>Although not mandatory, it is also recommended to add an <code class="language-plaintext highlighter-rouge">xpack</code> keyword,
 to help find the xPacks in the public repository.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-awesome-project"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"keywords"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-awesome-project"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"keywords"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="s2">"xpack"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"..."</span><span class="w">
   </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"xpack"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+  </span><span class="nl">"xpack"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
@@ -427,51 +437,51 @@ to help find the xPacks in the public repository.</p>
 <p>Binary xPacks do not include the binaries, they include only URLs where
 to download the binaries from, and checksums to validate the downloads.</p>
 
-<p>These information are stored in the <code class="highlighter-rouge">xpack</code> property of <code class="highlighter-rouge">package.json</code>.</p>
+<p>These information are stored in the <code class="language-plaintext highlighter-rouge">xpack</code> property of <code class="language-plaintext highlighter-rouge">package.json</code>.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@xpack-dev-tool/openocd"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.10.0-12.1"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A binary xPack with OpenOCD"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"xpack"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"binaries"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./.content"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"baseUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/xpack-dev-tools/openocd-xpack/releases/download/v0.10.0-14"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"skip"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"platforms"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"darwin-x64"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"sha256"</span><span class="p">:</span><span class="w"> </span><span class="s2">"30917a5c6f60fcd7df82b41dcec8ab7d86f0cea3caeaf98b965b901c10a60b39"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"fileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xpack-openocd-0.10.0-14-darwin-x64.tar.gz"</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@xpack-dev-tool/openocd"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.10.0-12.1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A binary xPack with OpenOCD"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"xpack"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"binaries"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"destination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./.content"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"baseUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/xpack-dev-tools/openocd-xpack/releases/download/v0.10.0-14"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"skip"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"platforms"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"darwin-x64"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"sha256"</span><span class="p">:</span><span class="w"> </span><span class="s2">"30917a5c6f60fcd7df82b41dcec8ab7d86f0cea3caeaf98b965b901c10a60b39"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"fileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xpack-openocd-0.10.0-14-darwin-x64.tar.gz"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"linux-arm64"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"sha256"</span><span class="p">:</span><span class="w"> </span><span class="s2">"97a188ca8ba32498c80b1ca3c8831cbbaf01c6f935fb5bcb66144f1fbd432106"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"fileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xpack-openocd-0.10.0-14-linux-arm64.tar.gz"</span><span class="w">
+        </span><span class="nl">"linux-arm64"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"sha256"</span><span class="p">:</span><span class="w"> </span><span class="s2">"97a188ca8ba32498c80b1ca3c8831cbbaf01c6f935fb5bcb66144f1fbd432106"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"fileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xpack-openocd-0.10.0-14-linux-arm64.tar.gz"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"linux-arm"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"sha256"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8a8025cfb07dbf203d9434179e84b748f8381213df6d53272e5c580fbe113896"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"fileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xpack-openocd-0.10.0-14-linux-arm.tar.gz"</span><span class="w">
+        </span><span class="nl">"linux-arm"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"sha256"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8a8025cfb07dbf203d9434179e84b748f8381213df6d53272e5c580fbe113896"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"fileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xpack-openocd-0.10.0-14-linux-arm.tar.gz"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"linux-x32"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"sha256"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bd4a7e88d86d216b738a096ffa8bfe5ec4035ad17801d5595e45779363ff5974"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"fileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xpack-openocd-0.10.0-14-linux-x32.tar.gz"</span><span class="w">
+        </span><span class="nl">"linux-x32"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"sha256"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bd4a7e88d86d216b738a096ffa8bfe5ec4035ad17801d5595e45779363ff5974"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"fileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xpack-openocd-0.10.0-14-linux-x32.tar.gz"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"linux-x64"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"sha256"</span><span class="p">:</span><span class="w"> </span><span class="s2">"185c070f9729cf38dca08686c2905561c07a63c563e5bc7a70e045f2a1865c11"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"fileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xpack-openocd-0.10.0-14-linux-x64.tar.gz"</span><span class="w">
+        </span><span class="nl">"linux-x64"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"sha256"</span><span class="p">:</span><span class="w"> </span><span class="s2">"185c070f9729cf38dca08686c2905561c07a63c563e5bc7a70e045f2a1865c11"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"fileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xpack-openocd-0.10.0-14-linux-x64.tar.gz"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"win32-x32"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"sha256"</span><span class="p">:</span><span class="w"> </span><span class="s2">"633e46b2f4d2d38c683df2414b9f464d7250c336d010c84010bbaff9d3d29c7c"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"fileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xpack-openocd-0.10.0-14-win32-x32.zip"</span><span class="w">
+        </span><span class="nl">"win32-x32"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"sha256"</span><span class="p">:</span><span class="w"> </span><span class="s2">"633e46b2f4d2d38c683df2414b9f464d7250c336d010c84010bbaff9d3d29c7c"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"fileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xpack-openocd-0.10.0-14-win32-x32.zip"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"win32-x64"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"sha256"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1fb26bbcfd65dbabe747ce3c8467a1f1cece7253bde4a95de13c2267d422ed8b"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"fileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xpack-openocd-0.10.0-14-win32-x64.zip"</span><span class="w">
+        </span><span class="nl">"win32-x64"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"sha256"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1fb26bbcfd65dbabe747ce3c8467a1f1cece7253bde4a95de13c2267d422ed8b"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"fileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xpack-openocd-0.10.0-14-win32-x64.zip"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"bin"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"openocd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./.content/bin/openocd"</span><span class="w">
+    </span><span class="nl">"bin"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"openocd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./.content/bin/openocd"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -480,38 +490,38 @@ to download the binaries from, and checksums to validate the downloads.</p>
 <p>The supported platforms are:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">linux-arm</code> - Arm GNU/Linux 32-bit (since 0.6.0)</li>
-  <li><code class="highlighter-rouge">linux-arm64</code> - Arm GNU/Linux 64-bit (since 0.6.0)</li>
-  <li><code class="highlighter-rouge">linux-x86</code> (deprecated)</li>
-  <li><code class="highlighter-rouge">linux-x32</code> - Intel GNU/Linux 32-bit (since 0.6.0)</li>
-  <li><code class="highlighter-rouge">linux-x64</code> - Intel GNU/Linux 64-bit</li>
-  <li><code class="highlighter-rouge">darwin-x64</code> - macOS 64-bit</li>
-  <li><code class="highlighter-rouge">win32-x86</code> (deprecated)</li>
-  <li><code class="highlighter-rouge">win32-x86</code> - Windows 32-bit (since 0.6.0)</li>
-  <li><code class="highlighter-rouge">win32-x64</code> - Windows 64-bit</li>
+  <li><code class="language-plaintext highlighter-rouge">linux-arm</code> - Arm GNU/Linux 32-bit (since 0.6.0)</li>
+  <li><code class="language-plaintext highlighter-rouge">linux-arm64</code> - Arm GNU/Linux 64-bit (since 0.6.0)</li>
+  <li><code class="language-plaintext highlighter-rouge">linux-x86</code> (deprecated)</li>
+  <li><code class="language-plaintext highlighter-rouge">linux-x32</code> - Intel GNU/Linux 32-bit (since 0.6.0)</li>
+  <li><code class="language-plaintext highlighter-rouge">linux-x64</code> - Intel GNU/Linux 64-bit</li>
+  <li><code class="language-plaintext highlighter-rouge">darwin-x64</code> - macOS 64-bit</li>
+  <li><code class="language-plaintext highlighter-rouge">win32-x86</code> (deprecated)</li>
+  <li><code class="language-plaintext highlighter-rouge">win32-x86</code> - Windows 32-bit (since 0.6.0)</li>
+  <li><code class="language-plaintext highlighter-rouge">win32-x64</code> - Windows 64-bit</li>
 </ul>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The names are exactly the Node.js
-<code class="highlighter-rouge">process.platform</code> and <code class="highlighter-rouge">process.arch</code>.</div>
+<code class="language-plaintext highlighter-rouge">process.platform</code> and <code class="language-plaintext highlighter-rouge">process.arch</code>.</div>
 
-<p>The files are downloaded from <code class="highlighter-rouge">&lt;baseUrl&gt;/&lt;fileName&gt;</code>. The common
+<p>The files are downloaded from <code class="language-plaintext highlighter-rouge">&lt;baseUrl&gt;/&lt;fileName&gt;</code>. The common
 use case is to have all files in the same folder, and in this case it is
-enough to define <code class="highlighter-rouge">baseUrl</code> once, but it is also possible to define it
+enough to define <code class="language-plaintext highlighter-rouge">baseUrl</code> once, but it is also possible to define it
 for each platform, allowing to download files from different folders/servers.</p>
 
-<p>The archives are unpacked in the <code class="highlighter-rouge">destination</code> folder, defined as relative
-to the package root folder (usually <code class="highlighter-rouge">./.content</code>).</p>
+<p>The archives are unpacked in the <code class="language-plaintext highlighter-rouge">destination</code> folder, defined as relative
+to the package root folder (usually <code class="language-plaintext highlighter-rouge">./.content</code>).</p>
 
-<p>To shorten the paths, a number of the initial levels are skipped (<code class="highlighter-rouge">skip</code>).</p>
+<p>To shorten the paths, a number of the initial levels are skipped (<code class="language-plaintext highlighter-rouge">skip</code>).</p>
 
 <p>When installing packages as dependencies of an xPack,
 after the archive is unpacked, links to each binaries defined
-in the <code class="highlighter-rouge">bin</code> section are created in the <code class="highlighter-rouge">xpacks/.bin</code> folder.
-On Windows, where soft links to files are problematic, <code class="highlighter-rouge">.cmd</code>
+in the <code class="language-plaintext highlighter-rouge">bin</code> section are created in the <code class="language-plaintext highlighter-rouge">xpacks/.bin</code> folder.
+On Windows, where soft links to files are problematic, <code class="language-plaintext highlighter-rouge">.cmd</code>
 stubs are created.</p>
 
-<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important:</b> To accommodate for the <code class="highlighter-rouge">.cmd</code> stubs,
-programs launching the executables should do this via a <code class="highlighter-rouge">cmd.exe</code> shell.</div>
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important:</b> To accommodate for the <code class="language-plaintext highlighter-rouge">.cmd</code> stubs,
+programs launching the executables should do this via a <code class="language-plaintext highlighter-rouge">cmd.exe</code> shell.</div>
 
 
 
@@ -536,7 +546,7 @@ programs launching the executables should do this via a <code class="highlighter
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2020 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Aug 13, 2020<br/> Site last generated: Sep 9, 2020 <br />
+<span>Page last updated:</span> Sep 9, 2020<br/> Site last generated: Sep 10, 2020 <br />
                 </div>
             </div>
 </footer>
@@ -556,7 +566,16 @@ programs launching the executables should do this via a <code class="highlighter
 
 
 
-<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-16767008-13','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-16767008-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-16767008-13');
+</script>
 
 
 </html>
