@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://xpack.github.io/blog/2020/09/28/ninja-build-v1-10-0-1-released/</loc>
-    <lastmod>2020-09-28T15:59:15+00:00</lastmod>
+    <lastmod>2020-09-28T16:29:57+00:00</lastmod>
   </url>
   
   
@@ -893,7 +893,7 @@
   
   <url>
     <loc>https://xpack.github.io/ninja-build/install/</loc>
-    <lastmod>2020-09-28T15:57:33+00:00</lastmod>
+    <lastmod>2020-09-28T16:29:15+00:00</lastmod>
   </url>
   
   
@@ -907,7 +907,7 @@
   
   <url>
     <loc>https://xpack.github.io/meson-build/install/</loc>
-    <lastmod>2020-09-28T15:57:33+00:00</lastmod>
+    <lastmod>2020-09-28T16:29:15+00:00</lastmod>
   </url>
   
   
@@ -1054,6 +1054,8 @@
     <loc>https://xpack.github.io/arm-none-eabi-gcc/python/</loc>
     <lastmod>2020-09-09T12:24:25+00:00</lastmod>
   </url>
+  
+  
   
   
   
