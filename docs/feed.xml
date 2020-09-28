@@ -5,9 +5,31 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 28 Sep 2020 16:45:06 +0000</pubDate>
-        <lastBuildDate>Mon, 28 Sep 2020 16:45:06 +0000</lastBuildDate>
+        <pubDate>Mon, 28 Sep 2020 20:47:30 +0000</pubDate>
+        <lastBuildDate>Mon, 28 Sep 2020 20:47:30 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>xPack Ninja Build v1.10.1-1 released</title>
+            <description>&lt;p&gt;This is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the &lt;strong&gt;Ninja&lt;/strong&gt; build system.&lt;/p&gt;</description>
+            <pubDate>Mon, 28 Sep 2020 20:19:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2020/09/28/ninja-build-v1-10-1-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2020/09/28/ninja-build-v1-10-1-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>ninja-build</category>
+            
+            <category>ninja</category>
+            
+            <category>build</category>
+            
+            <category>speed</category>
+            
+            <category>small</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Ninja Build v1.10.0-1 released</title>
@@ -185,26 +207,6 @@
             <category>gcc</category>
             
             <category>binaries</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack QEMU Arm v2.8.0-8 released</title>
-            <description>&lt;h2 id=&quot;download&quot;&gt;Download&lt;/h2&gt;</description>
-            <pubDate>Tue, 05 Nov 2019 00:09:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2019/11/05/qemu-arm-v2-8-0-8-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2019/11/05/qemu-arm-v2-8-0-8-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>qemu</category>
-            
-            <category>emulator</category>
-            
-            <category>arm</category>
-            
-            <category>cortex-m</category>
             
             
         </item>
