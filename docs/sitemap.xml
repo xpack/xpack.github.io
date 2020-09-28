@@ -3,43 +3,50 @@
   
   
   <url>
+    <loc>https://xpack.github.io/blog/2020/09/28/ninja-build-v1-10-0-1-released/</loc>
+    <lastmod>2020-09-28T15:59:15+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
     <loc>https://xpack.github.io/blog/2020/07/27/arm-none-eabi-gcc-v9-3-1-1-2-released/</loc>
-    <lastmod>2020-09-09T12:24:25+00:00</lastmod>
+    <lastmod>2020-09-28T15:56:52+00:00</lastmod>
   </url>
   
   
   
   <url>
     <loc>https://xpack.github.io/blog/2020/07/14/windows-build-tools-v2-12-2-released/</loc>
-    <lastmod>2020-09-19T19:53:30+00:00</lastmod>
+    <lastmod>2020-09-28T15:56:52+00:00</lastmod>
   </url>
   
   
   
   <url>
     <loc>https://xpack.github.io/blog/2020/07/04/riscv-none-embed-gcc-v8-3-0-1-2-released/</loc>
-    <lastmod>2020-09-09T12:24:25+00:00</lastmod>
+    <lastmod>2020-09-28T15:56:52+00:00</lastmod>
   </url>
   
   
   
   <url>
     <loc>https://xpack.github.io/blog/2020/07/03/arm-none-eabi-gcc-v9-3-1-1-1-released/</loc>
-    <lastmod>2020-09-09T12:24:25+00:00</lastmod>
+    <lastmod>2020-09-28T15:56:52+00:00</lastmod>
   </url>
   
   
   
   <url>
     <loc>https://xpack.github.io/blog/2020/07/01/qemu-arm-v2-8-0-9-released/</loc>
-    <lastmod>2020-09-09T12:24:25+00:00</lastmod>
+    <lastmod>2020-09-28T15:56:52+00:00</lastmod>
   </url>
   
   
   
   <url>
     <loc>https://xpack.github.io/blog/2020/06/24/openocd-v0-10-0-14-released/</loc>
-    <lastmod>2020-09-09T12:24:25+00:00</lastmod>
+    <lastmod>2020-09-28T15:56:52+00:00</lastmod>
   </url>
   
   
@@ -662,6 +669,13 @@
   
   
   <url>
+    <loc>https://xpack.github.io/ninja-build/faq/</loc>
+    <lastmod>2020-09-28T15:57:33+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
     <loc>https://xpack.github.io/arm-none-eabi-gcc/faq/</loc>
     <lastmod>2020-09-09T12:24:25+00:00</lastmod>
   </url>
@@ -746,6 +760,13 @@
   
   
   <url>
+    <loc>https://xpack.github.io/ninja-build/</loc>
+    <lastmod>2020-09-28T15:57:33+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
     <loc>https://xpack.github.io/arm-none-eabi-gcc/</loc>
     <lastmod>2020-09-09T12:24:25+00:00</lastmod>
   </url>
@@ -753,15 +774,22 @@
   
   
   <url>
+    <loc>https://xpack.github.io/meson-build/</loc>
+    <lastmod>2020-09-28T15:57:33+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
     <loc>https://xpack.github.io/qemu-arm/</loc>
-    <lastmod>2020-09-09T12:24:25+00:00</lastmod>
+    <lastmod>2020-09-28T15:55:20+00:00</lastmod>
   </url>
   
   
   
   <url>
     <loc>https://xpack.github.io/openocd/</loc>
-    <lastmod>2020-09-09T12:24:25+00:00</lastmod>
+    <lastmod>2020-09-28T15:55:20+00:00</lastmod>
   </url>
   
   
@@ -830,7 +858,7 @@
   
   <url>
     <loc>https://xpack.github.io/</loc>
-    <lastmod>2020-09-09T12:24:25+00:00</lastmod>
+    <lastmod>2020-09-28T15:58:54+00:00</lastmod>
   </url>
   
   
@@ -851,7 +879,7 @@
   
   <url>
     <loc>https://xpack.github.io/riscv-none-embed-gcc/install/</loc>
-    <lastmod>2020-09-09T12:24:25+00:00</lastmod>
+    <lastmod>2020-09-28T15:51:16+00:00</lastmod>
   </url>
   
   
@@ -864,6 +892,13 @@
   
   
   <url>
+    <loc>https://xpack.github.io/ninja-build/install/</loc>
+    <lastmod>2020-09-28T15:57:33+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
     <loc>https://xpack.github.io/arm-none-eabi-gcc/install/</loc>
     <lastmod>2020-09-09T12:24:25+00:00</lastmod>
   </url>
@@ -871,15 +906,22 @@
   
   
   <url>
+    <loc>https://xpack.github.io/meson-build/install/</loc>
+    <lastmod>2020-09-28T15:57:33+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
     <loc>https://xpack.github.io/qemu-arm/install/</loc>
-    <lastmod>2020-09-09T12:24:25+00:00</lastmod>
+    <lastmod>2020-09-28T15:51:16+00:00</lastmod>
   </url>
   
   
   
   <url>
     <loc>https://xpack.github.io/openocd/install/</loc>
-    <lastmod>2020-09-09T12:24:25+00:00</lastmod>
+    <lastmod>2020-09-28T15:51:16+00:00</lastmod>
   </url>
   
   
@@ -1037,6 +1079,8 @@
   
   
   
+  
+  
   <url>
     <loc>https://xpack.github.io/xpm/cli/run-script/</loc>
     <lastmod>2020-09-09T12:24:25+00:00</lastmod>
@@ -1066,6 +1110,13 @@
   <url>
     <loc>https://xpack.github.io/windows-build-tools/support/</loc>
     <lastmod>2020-09-09T12:24:25+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/ninja-build/support/</loc>
+    <lastmod>2020-09-28T15:57:33+00:00</lastmod>
   </url>
   
   

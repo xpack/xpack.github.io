@@ -69,6 +69,17 @@
 
 
 {
+"title": "The xPack Ninja Build Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/ninja-build/faq/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "The xPack GNU Arm Embedded GCC Frequently Asked Questions",
 "tags": "",
 "keywords": "",
@@ -193,11 +204,33 @@
 
 
 {
+"title": "The xPack Ninja Build",
+"tags": "",
+"keywords": "ninja-build",
+"url": "/ninja-build/",
+"summary": "<p>A binary distribution of Ninja Build.</p>"
+}
+,
+
+
+
+{
 "title": "The xPack GNU Arm Embedded GCC",
 "tags": "",
 "keywords": "arm-none-eabi-gccarmgccembedded",
 "url": "/arm-none-eabi-gcc/",
 "summary": "<p>A binary distribution of GNU Arm Embedded GCC.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Meson Build",
+"tags": "",
+"keywords": "meson-build",
+"url": "/meson-build/",
+"summary": "<p>A binary distribution of Meson Build.</p>"
 }
 ,
 
@@ -375,10 +408,32 @@
 
 
 {
+"title": "How to install the xPack Ninja Build binaries",
+"tags": "",
+"keywords": "",
+"url": "/ninja-build/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
 "title": "How to install the xPack GNU Arm Embedded GCC binaries",
 "tags": "",
 "keywords": "",
 "url": "/arm-none-eabi-gcc/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "How to install the xPack Meson Build binaries",
+"tags": "",
+"keywords": "",
+"url": "/meson-build/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -620,6 +675,8 @@
 
 
 
+
+
 {
 "title": "xpm run-script",
 "tags": "",
@@ -659,6 +716,17 @@
 "tags": "",
 "keywords": "",
 "url": "/windows-build-tools/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack Ninja Build",
+"tags": "",
+"keywords": "",
+"url": "/ninja-build/support/",
 "summary": ""
 }
 ,
@@ -777,6 +845,16 @@
 
 
 
+
+
+{
+"title": "xPack Ninja Build v1.10.0-1 released",
+"tags": "releasesninja-buildninjabuildspeedsmall",
+"keywords": "",
+"url": "/blog/2020/09/28/ninja-build-v1-10-0-1-released/",
+"summary": "<p>Version 1.10.0-1 is the first release of the <strong>xPack Ninja Build</strong> package.</p>"
+}
+,
 
 
 {
