@@ -91,6 +91,17 @@
 
 
 {
+"title": "The xPack CMake Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/cmake/faq/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "The xPack QEMU Arm Frequently Asked Questions",
 "tags": "",
 "keywords": "",
@@ -220,6 +231,17 @@
 "keywords": "arm-none-eabi-gccarmgccembedded",
 "url": "/arm-none-eabi-gcc/",
 "summary": "<p>A binary distribution of GNU Arm Embedded GCC.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack CMake",
+"tags": "",
+"keywords": "cmake",
+"url": "/cmake/",
+"summary": "<p>A binary distribution of CMake.</p>"
 }
 ,
 
@@ -423,6 +445,17 @@
 "tags": "",
 "keywords": "",
 "url": "/arm-none-eabi-gcc/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "How to install the xPack CMake binaries",
+"tags": "",
+"keywords": "",
+"url": "/cmake/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -679,6 +712,8 @@
 
 
 
+
+
 {
 "title": "xpm run-script",
 "tags": "",
@@ -740,6 +775,17 @@
 "tags": "",
 "keywords": "",
 "url": "/arm-none-eabi-gcc/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack CMake",
+"tags": "",
+"keywords": "",
+"url": "/cmake/support/",
 "summary": ""
 }
 ,
@@ -847,6 +893,16 @@
 
 
 
+
+
+{
+"title": "xPack CMake v3.18.3-1 released",
+"tags": "releasescmakebuild",
+"keywords": "",
+"url": "/blog/2020/09/29/cmake-v3-18-3-1-released/",
+"summary": "<p>Version 3.18.3-1 is the first release of the <strong>xPack CMake</strong> package.</p>"
+}
+,
 
 
 {

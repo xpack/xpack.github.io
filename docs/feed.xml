@@ -5,9 +5,25 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 28 Sep 2020 20:47:30 +0000</pubDate>
-        <lastBuildDate>Mon, 28 Sep 2020 20:47:30 +0000</lastBuildDate>
+        <pubDate>Tue, 29 Sep 2020 11:33:39 +0000</pubDate>
+        <lastBuildDate>Tue, 29 Sep 2020 11:33:39 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>xPack CMake v3.18.3-1 released</title>
+            <description>&lt;p&gt;This is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the &lt;strong&gt;CMake&lt;/strong&gt; build system.&lt;/p&gt;</description>
+            <pubDate>Tue, 29 Sep 2020 11:20:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2020/09/29/cmake-v3-18-3-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2020/09/29/cmake-v3-18-3-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>cmake</category>
+            
+            <category>build</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Ninja Build v1.10.1-1 released</title>
@@ -177,26 +193,6 @@
             <pubDate>Fri, 06 Dec 2019 14:07:00 +0000</pubDate>
             <link>https://xpack.github.io/blog/2019/12/06/arm-none-eabi-gcc-v9-2-1-1-1-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2019/12/06/arm-none-eabi-gcc-v9-2-1-1-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>arm</category>
-            
-            <category>arm-none-eabi-gcc</category>
-            
-            <category>gcc</category>
-            
-            <category>binaries</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack GNU Arm Embedded GCC v8.3.1-1.4 released</title>
-            <description>&lt;h2 id=&quot;download&quot;&gt;Download&lt;/h2&gt;</description>
-            <pubDate>Fri, 06 Dec 2019 13:53:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2019/12/06/arm-none-eabi-gcc-v8-3-1-1-4-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2019/12/06/arm-none-eabi-gcc-v8-3-1-1-4-released/</guid>
             
             <category>releases</category>
             
