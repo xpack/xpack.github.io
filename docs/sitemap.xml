@@ -3,6 +3,13 @@
   
   
   <url>
+    <loc>https://xpack.github.io/blog/2020/09/30/meson-build-v0-55-3-1-released/</loc>
+    <lastmod>2020-09-30T10:41:22+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
     <loc>https://xpack.github.io/blog/2020/09/29/cmake-v3-18-3-1-released/</loc>
     <lastmod>2020-09-29T11:30:07+00:00</lastmod>
   </url>
@@ -704,6 +711,13 @@
   
   
   <url>
+    <loc>https://xpack.github.io/meson-build/faq/</loc>
+    <lastmod>2020-09-30T10:41:03+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
     <loc>https://xpack.github.io/qemu-arm/faq/</loc>
     <lastmod>2020-09-09T12:24:25+00:00</lastmod>
   </url>
@@ -886,7 +900,7 @@
   
   <url>
     <loc>https://xpack.github.io/</loc>
-    <lastmod>2020-09-29T11:29:37+00:00</lastmod>
+    <lastmod>2020-09-30T10:41:03+00:00</lastmod>
   </url>
   
   
@@ -1170,6 +1184,13 @@
   <url>
     <loc>https://xpack.github.io/cmake/support/</loc>
     <lastmod>2020-09-29T11:29:37+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/meson-build/support/</loc>
+    <lastmod>2020-09-30T10:41:03+00:00</lastmod>
   </url>
   
   

@@ -5,9 +5,31 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 29 Sep 2020 11:33:39 +0000</pubDate>
-        <lastBuildDate>Tue, 29 Sep 2020 11:33:39 +0000</lastBuildDate>
+        <pubDate>Wed, 30 Sep 2020 10:44:09 +0000</pubDate>
+        <lastBuildDate>Wed, 30 Sep 2020 10:44:09 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>xPack Meson Build v0.55.3-1 released</title>
+            <description>&lt;p&gt;This is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the &lt;strong&gt;Meson&lt;/strong&gt; build system.&lt;/p&gt;</description>
+            <pubDate>Wed, 30 Sep 2020 08:55:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2020/09/30/meson-build-v0-55-3-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2020/09/30/meson-build-v0-55-3-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>meson-build</category>
+            
+            <category>meson</category>
+            
+            <category>build</category>
+            
+            <category>python</category>
+            
+            <category>ninja</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack CMake v3.18.3-1 released</title>
@@ -183,26 +205,6 @@
             <category>releases</category>
             
             <category>openocd</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack GNU Arm Embedded GCC v9.2.1-1.1 released</title>
-            <description>&lt;h2 id=&quot;download&quot;&gt;Download&lt;/h2&gt;</description>
-            <pubDate>Fri, 06 Dec 2019 14:07:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2019/12/06/arm-none-eabi-gcc-v9-2-1-1-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2019/12/06/arm-none-eabi-gcc-v9-2-1-1-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>arm</category>
-            
-            <category>arm-none-eabi-gcc</category>
-            
-            <category>gcc</category>
-            
-            <category>binaries</category>
             
             
         </item>
