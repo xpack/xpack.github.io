@@ -26,7 +26,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-09-27T08:09:00+00:00" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","@type":"BlogPosting","headline":"How to install the xPack Meson Build binaries","dateModified":"2020-09-29T11:17:58+00:00","datePublished":"2020-09-27T08:09:00+00:00","url":"https://xpack.github.io/meson-build/install/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/meson-build/install/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","@type":"BlogPosting","headline":"How to install the xPack Meson Build binaries","dateModified":"2020-09-30T11:56:56+00:00","datePublished":"2020-09-27T08:09:00+00:00","url":"https://xpack.github.io/meson-build/install/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/meson-build/install/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -468,13 +468,13 @@ Download the latest version named like:</p>
 <h3 id="unpack">Unpack</h3>
 
 <p>To install Meson, unpack the archive and copy it to
-<code class="language-plaintext highlighter-rouge">/${HOME}/opt/xPacks/meson-build/&lt;version&gt;</code>:</p>
+<code class="language-plaintext highlighter-rouge">/${HOME}/opt/xPacks/meson-build/xpack-meson-build-0.55.3-1</code>:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">mkdir</span> <span class="nt">-p</span> ~/opt
 <span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> ~/opt
 <span class="go">
 </span><span class="gp">$</span><span class="w"> </span><span class="nb">tar </span>xvf ~/Downloads/xpack-meson-build-0.55.3-1-darwin-x64.tgz
-<span class="gp">$</span><span class="w"> </span><span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xPacks/meson-build/0.55.3-1
+<span class="gp">$</span><span class="w"> </span><span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xPacks/meson-build/xpack-meson-build-0.55.3-1
 </code></pre></div></div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For manual installs, the recommended
@@ -482,15 +482,28 @@ install location is different from the xpm install folders.</div>
 
 <p>The result is a structure like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 /Users/ilg/Library/xPacks/meson-build/0.55.3-1
-<span class="go">/Users/ilg/Library/xPacks/meson-build/0.55.3-1
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 /Users/ilg/Library/xPacks/meson-build/xpack-meson-build-0.55.3-1
+<span class="go">/Users/ilg/Library/xPacks/meson-build/xpack-meson-build-0.55.3-1/
+├── README.md
+├── bin
+│   ├── libcrypt.2.dylib
+│   ├── libgcc_s.1.dylib
+│   ├── libpython3.8.dylib
+│   └── meson
+├── distro-info
+│   ├── CHANGELOG.md
+│   ├── licenses
+│   ├── patches
+│   └── scripts
+└── lib
+    └── python3.8
 
-TODO
+7 directories, 6 files
 </span></code></pre></div></div>
 
 <p>To check if Meson starts, use:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/meson-build/0.55.3-1/bin/meson <span class="nt">--version</span>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/meson-build/xpack-meson-build-0.55.3-1/bin/meson <span class="nt">--version</span>
 <span class="go">0.5.3
 </span></code></pre></div></div>
 
@@ -515,14 +528,14 @@ machines.</p>
 
 <h3 id="unpack">Unpack</h3>
 
-<p>To install Meson, unpack the archive and copy it to
-<code class="language-plaintext highlighter-rouge">/${HOME}/opt/xPacks/meson-build/&lt;version&gt;</code>:</p>
+<p>To install Meson, unpack the archive and move it to
+<code class="language-plaintext highlighter-rouge">/${HOME}/opt/xPacks/meson-build/xpack-meson-build-0.55.3-1</code>:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">mkdir</span> <span class="nt">-p</span> ~/opt
 <span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> ~/opt
 <span class="go">
 </span><span class="gp">$</span><span class="w"> </span><span class="nb">tar </span>xvf ~/Downloads/xpack-meson-build-0.55.3-1-linux-x64.tgz
-<span class="gp">$</span><span class="w"> </span><span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xPacks/meson-build/0.55.3-1
+<span class="gp">$</span><span class="w"> </span><span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xPacks/meson-build/xpack-meson-build-0.55.3-1
 </code></pre></div></div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For manual installs, the recommended
@@ -530,14 +543,25 @@ install location is slightly different from the xpm install folders,
 which use the scope (like <code class="language-plaintext highlighter-rouge">@xpack-dev-tools</code>) to group different tools,
 and <code class="language-plaintext highlighter-rouge">.content</code> to store the unpacked archive.</div>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 <span class="s1">'/home/ilg/opt/xPacks/meson-build/0.55.3-1'</span>
-<span class="go">
-TODO
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 <span class="s1">'/home/ilg/opt/xPacks/meson-build/xpack-meson-build-0.55.3-1'</span>
+<span class="go">/home/ilg/opt/xPacks/meson-build/xpack-meson-build-0.55.3-1/
+├── bin
+│   └── meson
+├── distro-info
+│   ├── CHANGELOG.md
+│   ├── licenses
+│   ├── patches
+│   └── scripts
+├── lib
+│   └── python3.8
+└── README.md
+
+7 directories, 3 files
 </span></code></pre></div></div>
 
 <p>To check if Meson starts and is recent, use:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/meson-build/0.55.3-1/bin/meson <span class="nt">--version</span>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/meson-build/xpack-meson-build-0.55.3-1/bin/meson <span class="nt">--version</span>
 <span class="go">0.55.3
 </span></code></pre></div></div>
 
@@ -596,7 +620,7 @@ TODO
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2020 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Sep 29, 2020<br/> Site last generated: Sep 30, 2020 <br />
+<span>Page last updated:</span> Sep 30, 2020<br/> Site last generated: Sep 30, 2020 <br />
                 </div>
             </div>
 </footer>

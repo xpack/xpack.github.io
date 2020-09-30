@@ -26,7 +26,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2015-09-04T14:03:00+00:00" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","@type":"BlogPosting","headline":"How to install the xPack QEMU Arm binaries","dateModified":"2020-09-29T11:17:58+00:00","datePublished":"2015-09-04T14:03:00+00:00","url":"https://xpack.github.io/qemu-arm/install/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/qemu-arm/install/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","@type":"BlogPosting","headline":"How to install the xPack QEMU Arm binaries","dateModified":"2020-09-30T11:56:56+00:00","datePublished":"2015-09-04T14:03:00+00:00","url":"https://xpack.github.io/qemu-arm/install/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/qemu-arm/install/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -485,14 +485,14 @@ Download the latest version named like:</p>
 
 <h3 id="unpack">Unpack</h3>
 
-<p>To install QEMU, unpack the archive and copy it to
-<code class="language-plaintext highlighter-rouge">/${HOME}/opt/xPacks/qemu-arm/&lt;version&gt;</code>:</p>
+<p>To install QEMU, unpack the archive and move it to
+<code class="language-plaintext highlighter-rouge">/${HOME}/opt/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7</code>:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">mkdir</span> <span class="nt">-p</span> ~/opt
 <span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> ~/opt
 <span class="go">
 </span><span class="gp">$</span><span class="w"> </span><span class="nb">tar </span>xvf ~/Downloads/xpack-qemu-arm-2.8.0-7-darwin-x64.tgz
-<span class="gp">$</span><span class="w"> </span><span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xPacks/qemu-arm/2.8.0-7
+<span class="gp">$</span><span class="w"> </span><span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7
 </code></pre></div></div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For manual installs, the recommended
@@ -505,8 +505,8 @@ for the executable in this location.</div>
 
 <p>The result is a structure like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 /Users/ilg/Library/xPacks/qemu-arm/2.8.0-7
-<span class="go">/Users/ilg/Library/xPacks/qemu-arm/2.8.0-7
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 /Users/ilg/Library/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7
+<span class="go">/Users/ilg/Library/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7/
 ├── README.md
 ├── bin
 │   ├── libSDL2-2.0.0.dylib
@@ -535,7 +535,7 @@ for the executable in this location.</div>
 
 <p>To check if QEMU starts, use:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/qemu-arm/2.8.0-7/bin/qemu-system-gnuarmeclipse <span class="nt">--version</span>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7/bin/qemu-system-gnuarmeclipse <span class="nt">--version</span>
 <span class="go">xPack 64-bit QEMU emulator version 2.8.0-7 (v2.8.0-4-20190211-47-g109b69f49a-dirty)
 Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
 </span></code></pre></div></div>
@@ -561,14 +561,14 @@ machines.</p>
 
 <h3 id="unpack">Unpack</h3>
 
-<p>To install QEMU, unpack the archive and copy it to
-<code class="language-plaintext highlighter-rouge">/${HOME}/opt/xPacks/qemu-arm/&lt;version&gt;</code>:</p>
+<p>To install QEMU, unpack the archive and move it to
+<code class="language-plaintext highlighter-rouge">/${HOME}/opt/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7</code>:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">mkdir</span> <span class="nt">-p</span> ~/opt
 <span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> ~/opt
 <span class="go">
 </span><span class="gp">$</span><span class="w"> </span><span class="nb">tar </span>xvf ~/Downloads/xpack-qemu-arm-2.8.0-7-linux-x64.tgz
-<span class="gp">$</span><span class="w"> </span><span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xPacks/qemu-arm/2.8.0-7
+<span class="gp">$</span><span class="w"> </span><span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7
 </code></pre></div></div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For manual installs, the recommended
@@ -583,8 +583,8 @@ for the executable in this location.</div>
 
 <p>The result is a structure like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 <span class="s1">'/home/ilg/opt/xPacks/qemu-arm/2.8.0-7'</span>
-<span class="go">/home/ilg/opt/xPacks/qemu-arm/2.8.0-7
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 <span class="s1">'/home/ilg/opt/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7'</span>
+<span class="go">/home/ilg/opt/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7/
 ├── bin
 </span><span class="gp">│   ├── libglib-2.0.so.0 -&gt;</span><span class="w"> </span>libglib-2.0.so.0.5600.4
 <span class="go">│   ├── libglib-2.0.so.0.5600.4
@@ -621,7 +621,7 @@ for the executable in this location.</div>
 
 <p>To check if QEMU starts and is recent, use:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/qemu-arm/2.8.0-7/bin/qemu-system-gnuarmeclipse <span class="nt">--version</span>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7/bin/qemu-system-gnuarmeclipse <span class="nt">--version</span>
 <span class="go">xPack 64-bit QEMU emulator version 2.8.0-7 (v2.8.0-4-20190211-47-g109b69f49a-dirty)
 Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
 </span></code></pre></div></div>
@@ -683,7 +683,7 @@ drivers required.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2020 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Sep 29, 2020<br/> Site last generated: Sep 30, 2020 <br />
+<span>Page last updated:</span> Sep 30, 2020<br/> Site last generated: Sep 30, 2020 <br />
                 </div>
             </div>
 </footer>

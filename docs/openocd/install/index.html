@@ -26,7 +26,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2015-09-09T16:43:00+00:00" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","@type":"BlogPosting","headline":"How to install the xPack OpenOCD binaries","dateModified":"2020-09-29T11:17:58+00:00","datePublished":"2015-09-09T16:43:00+00:00","url":"https://xpack.github.io/openocd/install/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/openocd/install/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","@type":"BlogPosting","headline":"How to install the xPack OpenOCD binaries","dateModified":"2020-09-30T11:56:56+00:00","datePublished":"2015-09-09T16:43:00+00:00","url":"https://xpack.github.io/openocd/install/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/openocd/install/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -444,7 +444,7 @@ The <code class="language-plaintext highlighter-rouge">win32</code> part is conf
 
 <h3 id="unpack">Unpack</h3>
 
-<p>Unpack the archive and copy it into the 
+<p>Unpack the archive and copy it into the
 <code class="language-plaintext highlighter-rouge">%userprofile%\AppData\Roaming\xPacks\openocd</code>
 (for example <code class="language-plaintext highlighter-rouge">C:\Users\ilg\AppData\Roaming\xPacks\openocd</code>) folder;
 according to Microsoft, <code class="language-plaintext highlighter-rouge">AppData\Roaming</code> is the recommended location for
@@ -543,7 +543,7 @@ Download the latest version named like:</p>
 <span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> ~/opt
 <span class="go">
 </span><span class="gp">$</span><span class="w"> </span><span class="nb">tar </span>xvf ~/Downloads/xpack-openocd-0.10.0-13-darwin-x64.tgz
-<span class="gp">$</span><span class="w"> </span><span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xPacks/openocd/0.10.0-13
+<span class="gp">$</span><span class="w"> </span><span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xPacks/openocd/xpack-openocd-0.10.0-13
 </code></pre></div></div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For manual installs, the recommended
@@ -556,8 +556,8 @@ for the executable in this location.</div>
 
 <p>The result is a structure like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 /Users/ilg/Library/xPacks/openocd/0.10.0-13
-<span class="go">/Users/ilg/Library/xPacks/openocd/0.10.0-13
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 /Users/ilg/Library/xPacks/openocd/xpack-openocd-0.10.0-13
+<span class="go">/Users/ilg/Library/xPacks/openocd/xpack-openocd-0.10.0-13
 ├── OpenULINK
 │   └── ulink_firmware.hex
 ├── README.md
@@ -599,7 +599,7 @@ for the executable in this location.</div>
 
 <p>To check if OpenOCD starts, use:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/openocd/0.10.0-13/bin/openocd <span class="nt">--version</span>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/openocd/xpack-openocd-0.10.0-13/bin/openocd <span class="nt">--version</span>
 <span class="go">xPack OpenOCD, 64-bit Open On-Chip Debugger 0.10.0+dev (2019-07-17-15:21)
 </span></code></pre></div></div>
 
@@ -623,14 +623,14 @@ machines.</p>
 
 <h3 id="unpack">Unpack</h3>
 
-<p>To install OpenOCD, unpack the archive and copy it to
-<code class="language-plaintext highlighter-rouge">/${HOME}/opt/xPacks/openocd/&lt;version&gt;</code>:</p>
+<p>To install OpenOCD, unpack the archive and move it to
+<code class="language-plaintext highlighter-rouge">/${HOME}/opt/xPacks/openocd/xpack-openocd-0.10.0-13</code>:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">mkdir</span> <span class="nt">-p</span> ~/opt
 <span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> ~/opt
 <span class="go">
 </span><span class="gp">$</span><span class="w"> </span><span class="nb">tar </span>xvf ~/Downloads/xpack-openocd-0.10.0-13-linux-x64.tgz
-<span class="gp">$</span><span class="w"> </span><span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xPacks/openocd/0.10.0-13
+<span class="gp">$</span><span class="w"> </span><span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xPacks/openocd/xpack-openocd-0.10.0-13
 </code></pre></div></div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For manual installs, the recommended
@@ -643,8 +643,8 @@ install OpenOCD in any folder, it is highly recommended to use this
 path, since by default the Eclipse Embedded CDT debug plug-ins search
 for the executable in this location.</div>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 <span class="s1">'/home/ilg/opt/xPacks/openocd/0.10.0-13'</span>
-<span class="go">/home/ilg/opt/xPacks/openocd/0.10.0-13
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 <span class="s1">'/home/ilg/opt/xPacks/openocd/xpack-openocd-0.10.0-13'</span>
+<span class="go">/home/ilg/opt/xPacks/openocd/xpack-openocd-0.10.0-13/
 ├── bin
 </span><span class="gp">│   ├── libftdi1.so.2 -&gt;</span><span class="w"> </span>libftdi1.so.2.4.0
 <span class="go">│   ├── libftdi1.so.2.4.0
@@ -692,7 +692,7 @@ for the executable in this location.</div>
 
 <p>To check if OpenOCD starts and is recent, use:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/openocd/0.10.0-13/bin/openocd <span class="nt">--version</span>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/openocd/xpack-openocd-0.10.0-13/bin/openocd <span class="nt">--version</span>
 <span class="go">xPack OpenOCD, 64-bit Open On-Chip Debugger 0.10.0+dev (2019-07-17-15:21)
 </span></code></pre></div></div>
 
@@ -704,7 +704,7 @@ subsystem. OpenOCD provides an UDEV rules file defining all the
 supported IDs; to install it, just copy the file to <code class="language-plaintext highlighter-rouge">/etc/udev/rules.d</code>
 and eventually notify the daemon:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo cp</span> ~/opt/xPacks/openocd/0.10.0-13/contrib/60-openocd.rules /etc/udev/rules.d/
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo cp</span> ~/opt/xPacks/openocd/xpack-openocd-0.10.0-13/contrib/60-openocd.rules /etc/udev/rules.d/
 <span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>udevadm control <span class="nt">--reload-rules</span>
 </code></pre></div></div>
 
@@ -749,7 +749,7 @@ to set both the interface and the processor. For example, on
 macOS, to test a connection via ST/LINK v2 to the STM32F4DISCOVERY board,
 you can use the sample below:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/openocd/0.11.0-13/bin/openocd <span class="nt">-f</span> board/stm32f4discovery.cfg
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/openocd/xpack-openocd-0.10.0-13/bin/openocd <span class="nt">-f</span> board/stm32f4discovery.cfg
 <span class="go">xPack OpenOCD, 64-bit Open On-Chip Debugger 0.10.0+dev (2019-07-17-15:21)
 Licensed under GNU GPL v2
 For bug reports, read
@@ -816,7 +816,7 @@ Info : Listening on port 3333 for gdb connections
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2020 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Sep 29, 2020<br/> Site last generated: Sep 30, 2020 <br />
+<span>Page last updated:</span> Sep 30, 2020<br/> Site last generated: Sep 30, 2020 <br />
                 </div>
             </div>
 </footer>
