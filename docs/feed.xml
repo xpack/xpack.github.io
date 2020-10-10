@@ -5,9 +5,31 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Wed, 30 Sep 2020 11:59:53 +0000</pubDate>
-        <lastBuildDate>Wed, 30 Sep 2020 11:59:53 +0000</lastBuildDate>
+        <pubDate>Sat, 10 Oct 2020 23:29:38 +0000</pubDate>
+        <lastBuildDate>Sat, 10 Oct 2020 23:29:38 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>xPack GNU RISC-V Embedded GCC v8.3.0-2.1 released</title>
+            <description>&lt;p&gt;This is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://github.com/sifive/freedom-tools/releases&quot;&gt;SiFive RISC-V GCC&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Sat, 10 Oct 2020 10:07:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2020/10/10/riscv-none-embed-gcc-v8-3-0-2-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2020/10/10/riscv-none-embed-gcc-v8-3-0-2-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>riscv</category>
+            
+            <category>riscv-none-embed-gcc</category>
+            
+            <category>gcc</category>
+            
+            <category>binaries</category>
+            
+            <category>c++</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Meson Build v0.55.3-1 released</title>
@@ -191,20 +213,6 @@
             <category>arm</category>
             
             <category>cortex-m</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack OpenOCD v0.10.0-14 released</title>
-            <description>&lt;p&gt;This is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of &lt;strong&gt;OpenOCD&lt;/strong&gt; (formerly partof the GNU MCU Eclipse project).&lt;/p&gt;</description>
-            <pubDate>Wed, 24 Jun 2020 10:05:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2020/06/24/openocd-v0-10-0-14-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2020/06/24/openocd-v0-10-0-14-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>openocd</category>
             
             
         </item>

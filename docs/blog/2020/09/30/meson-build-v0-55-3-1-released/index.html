@@ -26,7 +26,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-09-30T08:55:00+00:00" />
 <script type="application/ld+json">
-{"description":"This is the xPack distribution of the Meson build system.","@type":"BlogPosting","headline":"xPack Meson Build v0.55.3-1 released","dateModified":"2020-09-30T10:41:22+00:00","datePublished":"2020-09-30T08:55:00+00:00","url":"https://xpack.github.io/blog/2020/09/30/meson-build-v0-55-3-1-released/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2020/09/30/meson-build-v0-55-3-1-released/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"This is the xPack distribution of the Meson build system.","@type":"BlogPosting","headline":"xPack Meson Build v0.55.3-1 released","dateModified":"2020-10-10T23:26:18+00:00","datePublished":"2020-09-30T08:55:00+00:00","url":"https://xpack.github.io/blog/2020/09/30/meson-build-v0-55-3-1-released/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2020/09/30/meson-build-v0-55-3-1-released/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -583,7 +583,7 @@
 
         <p>This is the <strong>xPack</strong> distribution of the <strong>Meson</strong> build system.</p>
 
-<p>There are separate binaries that run on <strong>Windows</strong> (Intel 32/64-bit),
+<p>There are separate binaries for <strong>Windows</strong> (Intel 32/64-bit),
 <strong>macOS</strong> (Intel 64-bit) and <strong>GNU/Linux</strong> (Intel 32/64-bit, Arm 32/64-bit).</p>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The main target for the Arm binaries
@@ -633,7 +633,7 @@ from Sep 11th, 2020.</li>
 
 <h2 id="embedded-python">Embedded Python</h2>
 
-<p>To simplify dependency management, this release includes an embedded Python
+<p>To simplify dependency management, this release embeddeds a Python
 3.8.5 instance.</p>
 
 <p>The <code class="language-plaintext highlighter-rouge">meson</code> executable is a standard ELF/EXE which includes the Python
@@ -644,7 +644,7 @@ invokes the Meson main:</p>
   <span class="n">PyRun_SimpleString</span><span class="p">(</span><span class="s">"sys.exit(mesonmain.main())</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
 </code></pre></div></div>
 
-<p>The Python library is located in the standard python location:</p>
+<p>The Python library is located in the standard location:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">lib/python3.8</code></li>
@@ -672,6 +672,31 @@ available only as <code class="language-plaintext highlighter-rouge">.pyc</code>
   <li>none</li>
 </ul>
 
+<h2 id="shared-libraries">Shared libraries</h2>
+
+<p>On all platforms the packages are standalone, and expect only the standard
+runtime to be present on the host.</p>
+
+<p>All dependencies that are build as shared libraries are copied locally in the
+same folder as the executable.</p>
+
+<h3 id="dt_rpath-and-ld_library_path"><code class="language-plaintext highlighter-rouge">DT_RPATH</code> and <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code></h3>
+
+<p>On GNU/Linux the binaries are adjusted to use a relative path:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>readelf <span class="nt">-d</span> library.so | <span class="nb">grep </span>runpath
+<span class="gp"> 0x000000000000001d (RPATH)            Library rpath: [$</span>ORIGIN]
+</code></pre></div></div>
+
+<p>In the GNU ld.so search strategy, the <code class="language-plaintext highlighter-rouge">DT_RPATH</code> has
+the highest priority, higher than <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code>, so if this later one
+is set in the environment, it should not interfere with the xPack binaries.</p>
+
+<h3 id="executable_path"><code class="language-plaintext highlighter-rouge">@executable_path</code></h3>
+
+<p>Similarly, on macOS, the dynamic libraries are adjusted with <code class="language-plaintext highlighter-rouge">otool</code> to use a
+relative path.</p>
+
 <h2 id="documentation">Documentation</h2>
 
 <p>The original documentation is available from:</p>
@@ -684,7 +709,7 @@ available only as <code class="language-plaintext highlighter-rouge">.pyc</code>
 
 <p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided.</p>
 
-<p>The binaries were built using
+<p>The binaries were built using the
 <a href="https://github.com/xpack/xpack-build-box">xPack Build Box (XBB)</a>, a set
 of build environments based on slightly older distributions, that should be
 compatible with most recent systems.</p>
@@ -693,7 +718,7 @@ compatible with most recent systems.</p>
   <li>Intel GNU/Linux: all binaries were built with GCC 9.3, running in an
 Ubuntu 12 Docker container</li>
   <li>Arm GNU/Linux: all binaries were built with GCC 9.3, running in an
-Ubuntu 16 Docker container</li>
+Ubuntu 16 Docker container (added in mid-2020)</li>
   <li>Windows: all binaries were built with mingw-w64 GCC 9.3, running in an
 Ubuntu 12 Docker container</li>
   <li>macOS: all binaries were built with GCC 9.3, running in a separate
@@ -713,13 +738,13 @@ folder on macOS 10.10.5.</li>
 
 <h2 id="travis-tests">Travis tests</h2>
 
-<p>The first set of tests were performed automatically on Travis, by running
+<p>The first set of tests were performed on Travis, by running
 a simple script to check if the binaries start on a wide range of
 platforms and distributions:</p>
 
 <ul>
-  <li><a href="https://travis-ci.org/github/xpack-dev-tools/meson-build-xpack/builds/731542310">Test xPack Meson Build on stable platforms</a></li>
-  <li><a href="https://travis-ci.org/github/xpack-dev-tools/meson-build-xpack/builds/731551368">Test xPack Meson Build on latest platforms</a></li>
+  <li><a href="https://travis-ci.org/github/xpack-dev-tools/meson-build-xpack/builds/731542310">test xPack Meson Build on stable platforms</a></li>
+  <li><a href="https://travis-ci.org/github/xpack-dev-tools/meson-build-xpack/builds/731551368">test xPack Meson Build on latest platforms</a></li>
 </ul>
 
 <h2 id="tests">Tests</h2>
@@ -819,7 +844,7 @@ for the individual file counters.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2020 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Sep 30, 2020<br/> Site last generated: Sep 30, 2020 <br />
+<span>Page last updated:</span> Oct 10, 2020<br/> Site last generated: Oct 10, 2020 <br />
                 </div>
             </div>
 </footer>
