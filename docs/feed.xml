@@ -5,9 +5,23 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 13 Oct 2020 11:15:28 +0000</pubDate>
-        <lastBuildDate>Tue, 13 Oct 2020 11:15:28 +0000</lastBuildDate>
+        <pubDate>Tue, 13 Oct 2020 20:20:58 +0000</pubDate>
+        <lastBuildDate>Tue, 13 Oct 2020 20:20:58 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>xPack OpenOCD v0.10.0-15 released</title>
+            <description>&lt;p&gt;This is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of &lt;strong&gt;OpenOCD&lt;/strong&gt; (formerly partof the GNU MCU Eclipse project).&lt;/p&gt;</description>
+            <pubDate>Tue, 13 Oct 2020 18:33:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2020/10/13/openocd-v0-10-0-15-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2020/10/13/openocd-v0-10-0-15-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>openocd</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack GNU RISC-V Embedded GCC v8.3.0-2.2 released</title>
@@ -101,7 +115,7 @@
         
         <item>
             <title>xPack CMake v3.18.3-1 released</title>
-            <description>&lt;p&gt;This is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the &lt;strong&gt;CMake&lt;/strong&gt; build system.&lt;/p&gt;</description>
+            <description>&lt;p&gt;This is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://cmake.org&quot;&gt;CMake&lt;/a&gt; build system.&lt;/p&gt;</description>
             <pubDate>Tue, 29 Sep 2020 11:20:00 +0000</pubDate>
             <link>https://xpack.github.io/blog/2020/09/29/cmake-v3-18-3-1-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2020/09/29/cmake-v3-18-3-1-released/</guid>
@@ -203,22 +217,6 @@
             <category>mkdir</category>
             
             <category>busybox</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack GNU RISC-V Embedded GCC v8.3.0-1.2 released</title>
-            <description>&lt;p&gt;This is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://github.com/sifive/freedom-tools/releases&quot;&gt;SiFive RISC-V GCC&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Sat, 04 Jul 2020 10:07:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2020/07/04/riscv-none-embed-gcc-v8-3-0-1-2-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2020/07/04/riscv-none-embed-gcc-v8-3-0-1-2-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>riscv</category>
-            
-            <category>riscv-none-embed-gcc</category>
             
             
         </item>
