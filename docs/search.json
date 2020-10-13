@@ -922,7 +922,7 @@
 "tags": "releasesopenocd",
 "keywords": "",
 "url": "/blog/2020/10/13/openocd-v0-10-0-15-released/",
-"summary": "<p>Version 0.10.0-15 is a maintenance release; it updates to the latest upstream master and adds support for running on Arm platforms, like Raspberry Pi.</p>"
+"summary": "<p>Version 0.10.0-15 is a maintenance release; it updates to the latest upstream master.</p>"
 }
 ,
 
