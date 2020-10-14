@@ -3,6 +3,13 @@
   
   
   <url>
+    <loc>https://xpack.github.io/blog/2020/10/14/qemu-arm-v2-8-0-10-released/</loc>
+    <lastmod>2020-10-14T21:05:06+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
     <loc>https://xpack.github.io/blog/2020/10/13/openocd-v0-10-0-15-released/</loc>
     <lastmod>2020-10-13T21:06:07+00:00</lastmod>
   </url>
@@ -18,7 +25,7 @@
   
   <url>
     <loc>https://xpack.github.io/blog/2020/10/12/arm-none-eabi-gcc-v9-3-1-1-3-released/</loc>
-    <lastmod>2020-10-13T21:06:07+00:00</lastmod>
+    <lastmod>2020-10-14T20:07:49+00:00</lastmod>
   </url>
   
   
@@ -852,7 +859,7 @@
   
   <url>
     <loc>https://xpack.github.io/qemu-arm/</loc>
-    <lastmod>2020-10-01T13:16:11+00:00</lastmod>
+    <lastmod>2020-10-14T20:13:59+00:00</lastmod>
   </url>
   
   

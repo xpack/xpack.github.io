@@ -918,6 +918,16 @@
 
 
 {
+"title": "xPack QEMU Arm v2.8.0-10 released",
+"tags": "releasesqemuemulatorarmcortex-m",
+"keywords": "",
+"url": "/blog/2020/10/14/qemu-arm-v2-8-0-10-released/",
+"summary": "<p>Version 2.8.0-10 is a maintenance release; it fixes one bug and updates to the new, more robust, build scripts.</p>"
+}
+,
+
+
+{
 "title": "xPack OpenOCD v0.10.0-15 released",
 "tags": "releasesopenocd",
 "keywords": "",
@@ -942,7 +952,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
 "keywords": "",
 "url": "/blog/2020/10/12/arm-none-eabi-gcc-v9-3-1-1-3-released/",
-"summary": "<p>Version 9.3.1-1.3 is a maintenance release of <strong>xPack GNU Arm Embedded GCC</strong>, created with the updated, more robust, new build scripts.</p>"
+"summary": "<p>Version 9.3.1-1.3 is a maintenance release of <strong>xPack GNU Arm Embedded GCC</strong>, created with the new, more robust, build scripts.</p>"
 }
 ,
 

@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="keywords" content=" ">
-<title>rpath | The xPack Project</title>
+<meta name="description" content="Version 2.8.0-10 is a maintenance release; it fixes one bug and updates to the new, more robust, build scripts.">
+<meta name="keywords" content="releasesqemuemulatorarmcortex-m,  ">
+<title>xPack QEMU Arm v2.8.0-10 released | The xPack Project</title>
 <link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
 
 
@@ -14,19 +14,19 @@
 <link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
 
 <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>rpath</title>
+<title>xPack QEMU Arm v2.8.0-10 released</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="rpath" />
+<meta property="og:title" content="xPack QEMU Arm v2.8.0-10 released" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
-<meta property="og:description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
-<link rel="canonical" href="https://xpack.github.io/tags/rpath/" />
-<meta property="og:url" content="https://xpack.github.io/tags/rpath/" />
+<meta name="description" content="The xPack QEMU Arm is the xPack distribution of the QEMU, with several extensions for Arm Cortex-M devices." />
+<meta property="og:description" content="The xPack QEMU Arm is the xPack distribution of the QEMU, with several extensions for Arm Cortex-M devices." />
+<link rel="canonical" href="https://xpack.github.io/blog/2020/10/14/qemu-arm-v2-8-0-10-released/" />
+<meta property="og:url" content="https://xpack.github.io/blog/2020/10/14/qemu-arm-v2-8-0-10-released/" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-08-16T08:53:54+00:00" />
+<meta property="article:published_time" content="2020-10-14T18:47:00+00:00" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","@type":"BlogPosting","headline":"rpath","dateModified":"2020-09-09T12:24:25+00:00","datePublished":"2020-08-16T08:53:54+00:00","url":"https://xpack.github.io/tags/rpath/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/tags/rpath/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"The xPack QEMU Arm is the xPack distribution of the QEMU, with several extensions for Arm Cortex-M devices.","@type":"BlogPosting","headline":"xPack QEMU Arm v2.8.0-10 released","dateModified":"2020-10-14T21:05:06+00:00","datePublished":"2020-10-14T18:47:00+00:00","url":"https://xpack.github.io/blog/2020/10/14/qemu-arm-v2-8-0-10-released/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2020/10/14/qemu-arm-v2-8-0-10-released/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -237,7 +237,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: '/search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="rpath">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="xPack QEMU Arm v2.8.0-10 released">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -544,1445 +544,357 @@
 
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
-            <div class="post-header">
-   <h1 class="post-title-main">rpath</h1>
+            <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">xPack QEMU Arm v2.8.0-10 released</h1>
+        <p class="post-meta"><time datetime="2020-10-14T18:47:00+00:00" itemprop="datePublished">Oct 14, 2020</time> <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">/ Liviu Ionescu</span></span> /
+            
+            
+            
+            <a href="/tags/releases/">releases</a>, 
+            
+            
+            
+            <a href="/tags/qemu/">qemu</a>, 
+            
+            
+            
+            <a href="/tags/emulator/">emulator</a>, 
+            
+            
+            
+            <a href="/tags/arm/">arm</a>, 
+            
+            
+            
+            <a href="/tags/cortex-m/">cortex-m</a>
+            
+            
+            
+
+        </p>
+
+
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+
+        
+        <div class="summary">Version 2.8.0-10 is a maintenance release; it fixes one bug and updates to the new, more robust, build scripts.
 </div>
-
-
-
-<div class="post-content">
-
-   
-
-    
-    
-<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
-<script>
-$( document ).ready(function() {
-  // Handler for .ready() called.
-
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
-
-/* this offset helps account for the space taken up by the floating toolbar. */
-$('#toc').on('click', 'a', function() {
-  var target = $(this.getAttribute('href'))
-    , scroll_target = target.offset().top
-
-  $(window).scrollTop(scroll_target - 10);
-  return false
-})
-
-});
-</script>
-
-<div id="toc"></div>
-
-    
-
-
-   <p>The following pages and posts are tagged with <button type="button" style="cursor: default" class="btn btn-default navbar-btn">rpath</button></p>
-<table><thead><tr><th>Title</th><th>Type</th><th>Excerpt</th></tr></thead>
-    <tbody>
-    
-  
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
 
-        <tr><td><a href="/blog/2015/08/16/qemu-v2-3-50-20150816-released/">GNU ARM Eclipse QEMU v2.3.50-20150816*-dev released</a></td>
-            <td><span class="label label-primary">Post</span></td>
-            <td> Version 2.3.50-201508161112 is a maintenance partial release, fixing the GNU/Linux distribution. Binary files » Addressed issues  the build script for the GNU/Linux distribution did not generate the correct was rpath for the executable and shared libraries, as per support-request:#160; fixed.  Download The new GNU/Linux... </td>
-        </tr>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        <p><a href="https://xpack.github.io/qemu-arm/">The xPack QEMU Arm</a>
+is the <strong>xPack</strong> distribution of the
+<a href="http://www.qemu.org">QEMU</a>, with several extensions for Arm Cortex-M
+devices.</p>
 
-   </tbody>
-</table>
+<p>There are separate binaries for <strong>Windows</strong> (Intel 32/64-bit),
+<strong>macOS</strong> (Intel 64-bit) and <strong>GNU/Linux</strong> (Intel 32/64-bit, Arm 32/64-bit).</p>
 
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The main target for the Arm binaries
+are the <strong>Raspberry Pi</strong> class devices.</div>
 
+<h2 id="download">Download</h2>
 
-        
+<p>The binary files are available from <a href="https://github.com/xpack-dev-tools/qemu-arm-xpack/releases/tag/v2.8.0-10/">GitHub Releases</a>.</p>
 
+<h2 id="install">Install</h2>
 
-    <div class="tags">
-        
+<p>The full details of installing the <strong>xPack QEMU Arm</strong> on various platforms
+are presented in the separate
+<a href="/qemu-arm/install/">Install</a> page.</p>
+
+<h3 id="easy-install">Easy install</h3>
+
+<p>The easiest way to install QEMU Arm is with
+<a href="/xpm/"><code class="language-plaintext highlighter-rouge">xpm</code></a>
+by using the <strong>binary xPack</strong>, available as
+<a href="https://www.npmjs.com/package/@xpack-dev-tools/qemu-arm"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/qemu-arm</code></a>
+from the <a href="https://www.npmjs.com"><code class="language-plaintext highlighter-rouge">npmjs.com</code></a> registry.</p>
+
+<p>To install the latest version available, use:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/qemu-arm@latest
+</code></pre></div></div>
+
+<p>To install this specific version, use:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/qemu-arm@2.8.0-10.1
+</code></pre></div></div>
+
+<h2 id="compliance">Compliance</h2>
+
+<p>xPack QEMU Arm currently is based on the official <a href="http://www.qemu.org">QEMU</a>,
+with major changes.</p>
+
+<p>The current version is based on:</p>
+
+<ul>
+  <li>QEMU version 2.8.0, commit <a href="https://github.com/xpack-dev-tools/qemu/commit/0737f32daf35f3730ed2461ddfaaf034c2ec7ff0">0737f32</a> from Dec 20th, 2016.</li>
+</ul>
+
+<h2 id="changes">Changes</h2>
+
+<p>Compared to the master <code class="language-plaintext highlighter-rouge">qemu-system-arm</code>, the changes are major, all
+application class Arm
+devices were removed and replaced by several Cortex-M devices.</p>
+
+<p>The supported boards are:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">xPack 64-bit QEMU v2.8.0 (qemu-system-gnuarmeclipse).
+
+Supported boards:
+  Maple                LeafLab Arduino-style STM32 microcontroller board (r5)
+  NUCLEO-F103RB        ST Nucleo Development Board for STM32 F1 series
+  NUCLEO-F411RE        ST Nucleo Development Board for STM32 F4 series
+  NetduinoGo           Netduino GoBus Development Board with STM32F4
+  NetduinoPlus2        Netduino Development Board with STM32F4
+  OLIMEXINO-STM32      Olimex Maple (Arduino-like) Development Board
+  STM32-E407           Olimex Development Board for STM32F407ZGT6
+  STM32-H103           Olimex Header Board for STM32F103RBT6
+  STM32-P103           Olimex Prototype Board for STM32F103RBT6
+  STM32-P107           Olimex Prototype Board for STM32F107VCT6
+  STM32F0-Discovery    ST Discovery kit for STM32F051 lines
+  STM32F4-Discovery    ST Discovery kit for STM32F407/417 lines
+  STM32F429I-Discovery ST Discovery kit for STM32F429/439 lines
+</span><span class="gp">  generic              Generic Cortex-M board;</span><span class="w"> </span>use <span class="nt">-mcu</span> to define the device
+<span class="go">
+Supported MCUs:
+  STM32F051R8
+  STM32F103RB
+  STM32F107VC
+  STM32F405RG
+  STM32F407VG
+  STM32F407ZG
+  STM32F411RE
+  STM32F429ZI
+</span></code></pre></div></div>
+
+<p>Warning: support for hardware floating point on Cortex-M4 devices is not
+available yet.</p>
+
+<h2 id="bug-fixes">Bug fixes</h2>
+
+<ul>
+  <li>[<a href="https://github.com/xpack-dev-tools/qemu/pull/5">#5</a>] - the ETM and ITM
+fields get mixed up when parsing the SVD; fixed.</li>
+</ul>
+
+<h2 id="known-problems">Known problems</h2>
+
+<ul>
+  <li>Ctrl-C does not interrupt the execution if the <code class="language-plaintext highlighter-rouge">--nographic</code> option is used.</li>
+</ul>
+
+<h2 id="shared-libraries">Shared libraries</h2>
+
+<p>On all platforms the packages are standalone, and expect only the standard
+runtime to be present on the host.</p>
+
+<p>All dependencies that are build as shared libraries are copied locally in the
+same folder as the executable.</p>
+
+<h3 id="dt_rpath-and-ld_library_path"><code class="language-plaintext highlighter-rouge">DT_RPATH</code> and <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code></h3>
+
+<p>On GNU/Linux the binaries are adjusted to use a relative path:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>readelf <span class="nt">-d</span> library.so | <span class="nb">grep </span>rpath
+<span class="gp"> 0x000000000000001d (RPATH)            Library runpath: [$</span>ORIGIN]
+</code></pre></div></div>
+
+<p>In the GNU ld.so search strategy, the <code class="language-plaintext highlighter-rouge">DT_RPATH</code> has
+the highest priority, higher than <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code>, so if this later one
+is set in the environment, it should not interfere with the xPack binaries.</p>
+
+<p>Please note that previous versions, up to mid-2020, used <code class="language-plaintext highlighter-rouge">DT_RUNPATH</code>, which
+has a priority lower than <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code>, and does not tolerate setting
+it in the environment.</p>
+
+<h3 id="executable_path"><code class="language-plaintext highlighter-rouge">@executable_path</code></h3>
+
+<p>Similarly, on macOS, the dynamic libraries are adjusted with <code class="language-plaintext highlighter-rouge">otool</code> to use a
+relative path.</p>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>The original documentation is available in the <code class="language-plaintext highlighter-rouge">share/doc</code> folder.</p>
+
+<h2 id="supported-platforms">Supported platforms</h2>
+
+<p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided.</p>
+
+<p>The binaries were built using the
+<a href="https://github.com/xpack/xpack-build-box">xPack Build Box (XBB)</a>, a set
+of build environments based on slightly older distributions, that should be
+compatible with most recent systems.</p>
+
+<ul>
+  <li>Intel GNU/Linux: all binaries were built with GCC 9.3, running in an
+Ubuntu 12 Docker container</li>
+  <li>Arm GNU/Linux: all binaries were built with GCC 9.3, running in an
+Ubuntu 16 Docker container (added in mid-2020)</li>
+  <li>Windows: all binaries were built with mingw-w64 GCC 9.3, running in an
+Ubuntu 12 Docker container</li>
+  <li>macOS: all binaries were built with GCC 9.3, running in a separate
+folder on macOS 10.10.5.</li>
+</ul>
+
+<h2 id="build">Build</h2>
+
+<p>The scripts used to build this distribution are in:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">distro-info/scripts</code></li>
+</ul>
+
+<p>For the prerequisites and more details on the build procedure, please see the
+<a href="https://github.com/xpack-dev-tools/qemu-arm-xpack/blob/xpack/README-BUILD.md">How to build</a> page.</p>
+
+<h2 id="travis-tests">Travis tests</h2>
+
+<p>The first set of tests were performed on Travis, by running
+a simple script to check if the binaries start on a wide range of
+platforms and distributions:</p>
+
+<ul>
+  <li><a href="https://travis-ci.org/github/xpack-dev-tools/qemu-arm-xpack/builds/735831941">test xPack QEMU Arm on stable platforms</a></li>
+  <li><a href="https://travis-ci.org/github/xpack-dev-tools/qemu-arm-xpack/builds/703897230">test xPack QEMU Arm on latest platforms</a></li>
+</ul>
+
+<h2 id="tests">Tests</h2>
+
+<p>The binaries were testes on Windows 10 Pro 32/64-bit, Ubuntu 18 LTS 64-bit,
+Xubuntu 18 LTS 32-bit and macOS 10.14.</p>
+
+<p>The tests consist in running a simple blinky application
+on the graphically emulated STM32F4DISCOVERY board. The binaries were
+those generated by
+<a href="https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/tree/xpack/tests/eclipse">simple Eclipse projects</a>
+available in the <strong>xPack GNU Arm Embedded GCC</strong> project. Use the
+<code class="language-plaintext highlighter-rouge">arm-f4b-fs-debug-qemu</code> debug luncher available in the <code class="language-plaintext highlighter-rouge">arm-f4b-fs</code> project.</p>
+
+<p>On Arm platforms, where Eclipse is not yet available, the binaries were
+tested on Raspberry Pi OS 10 (buster) 32-bit by manually starting the
+blinky test on the emulated STM32F4DISCOVERY board.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/opt/xPacks/@xpack-dev-tools/qemu-arm/2.8.0-10.1/.content/bin/qemu-system-gnuarmeclipse --version
+
+mkdir -p ~/Downloads
+(cd ~/Downloads; curl -L --fail -o f407-disc-blink-tutorial.elf \
+https://github.com/xpack-dev-tools/qemu-eclipse-test-projects/raw/master/f407-disc-blink-tutorial/Debug/f407-disc-blink-tutorial.elf)
+
+~/opt/xPacks/@xpack-dev-tools/qemu-arm/2.8.0-10.1/.content/bin/qemu-system-gnuarmeclipse \
+--board STM32F4-Discovery \
+-d unimp,guest_errors \
+--nographic \
+--image ~/Downloads/f407-disc-blink-tutorial.elf \
+--semihosting-config enable=on,target=native \
+--semihosting-cmdline test 6
+
+DISPLAY=:1.0 ~/opt/xPacks/@xpack-dev-tools/qemu-arm/2.8.0-10.1/.content/bin/qemu-system-gnuarmeclipse \
+--board STM32F4-Discovery \
+-d unimp,guest_errors \
+--image ~/Downloads/f407-disc-blink-tutorial.elf \
+--semihosting-config enable=on,target=native \
+--semihosting-cmdline test 6
+
+</code></pre></div></div>
+
+<p>On Raspberry Pi OS 10 (buster) 64-bit the program was able to run in non
+graphic mode, but did not start in graphic mode due to a
+missing driver. To be further investigated.</p>
+
+<h2 id="checksums">Checksums</h2>
+
+<p>The SHA-256 hashes for the files are:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>159752281b4352e2cc0b4ec329162bdcec9af003f7db4e9a3f7e37e8a0d0faf3
+xpack-qemu-arm-2.8.0-10-darwin-x64.tar.gz
+
+63a83d93c96e224aa1df5ea8aec774e1b5932aa1167f6d2ec62dec7e3f0cd9ce
+xpack-qemu-arm-2.8.0-10-linux-arm64.tar.gz
+
+218f796c1ab8f246502faacf4759a830ca36fd918b45169612b587442aeabd33
+xpack-qemu-arm-2.8.0-10-linux-arm.tar.gz
+
+340099ec4076a55ff04964d2443f10af27a4cba98c8ad196c794e52d5072549e
+xpack-qemu-arm-2.8.0-10-linux-x32.tar.gz
+
+5d7d47519c1fbc35ded60ac98ac2c32519df09c8158c425d7da589e621863fcc
+xpack-qemu-arm-2.8.0-10-linux-x64.tar.gz
+
+1515fb8f8207e4e05943b6a7671ccd148bc123611d3efe4123347cd01775a9d7
+xpack-qemu-arm-2.8.0-10-win32-x32.zip
+
+02d1fc9287ba9d64d595b0ef6ded36858302c14ca80e80cc85386cf807b40f04
+xpack-qemu-arm-2.8.0-10-win32-x64.zip
+</code></pre></div></div>
+
+<h2 id="download-analytics">Download analytics</h2>
+
+<ul>
+  <li>GitHub <a href="https://github.com/xpack-dev-tools/qemu-arm-xpack/">xpack-dev-tools/qemu-arm-xpack</a>
+    <ul>
+      <li>this release <a href="https://github.com/xpack-dev-tools/qemu-arm-xpack/releases/v2.8.0-10/"><img src="https://img.shields.io/github/downloads/xpack-dev-tools/qemu-arm-xpack/v2.8.0-10/total.svg" alt="Github All Releases" /></a></li>
+      <li>all xPack releases <a href="https://github.com/xpack-dev-tools/qemu-arm-xpack/releases/"><img src="https://img.shields.io/github/downloads/xpack-dev-tools/qemu-arm-xpack/total.svg" alt="Github All Releases" /></a></li>
+      <li>all GNU MCU Eclipse releases <a href="https://github.com/gnu-mcu-eclipse/qemu/releases/"><img src="https://img.shields.io/github/downloads/gnu-mcu-eclipse/qemu/total.svg" alt="Github All Releases" /></a></li>
+      <li><a href="https://www.somsubhra.com/github-release-stats/?username=xpack-dev-tools&amp;repository=qemu-arm-xpack">individual file counters</a> (grouped per release)</li>
+    </ul>
+  </li>
+  <li>npmjs.com <a href="https://www.npmjs.com/package/@xpack-dev-tools/qemu-arm">@xpack-dev-tools/qemu-arm</a>
+    <ul>
+      <li>latest releases <a href="https://www.npmjs.com/package/@xpack-dev-tools/qemu-arm/"><img src="https://img.shields.io/npm/dw/@xpack-dev-tools/qemu-arm.svg" alt="npm" /></a></li>
+      <li>all @xpack-dev-tools releases <a href="https://www.npmjs.com/package/@xpack-dev-tools/qemu-arm/"><img src="https://img.shields.io/npm/dt/@xpack-dev-tools/qemu-arm.svg" alt="npm" /></a></li>
+      <li>all @gnu-mcu-eclipse releases <a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/qemu/"><img src="https://img.shields.io/npm/dt/@gnu-mcu-eclipse/qemu.svg" alt="npm" /></a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Credit to <a href="https://shields.io">Shields IO</a> for the badges and to
+<a href="https://github.com/Somsubhra/github-release-stats">Somsubhra/github-release-stats</a>
+for the individual file counters.</p>
+
     </div>
 
+
+
+</article>
+
+    
+    <a target="_blank" rel="noopener" href="https://github.com/xpack/xpack.github.io/blob/master/_posts/releases/qemu-arm/2020-10-14-qemu-arm-v2-8-0-10-released.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
+
     
 
 
-</div>
+
+
+    <hr/>
+    <p>Comments on the content of this page that might be useful
+    for other readers are welcomed here. For question and general
+    support, please use the
+    <a href="https://www.tapatalk.com/groups/xpack/">project forums</a>.
+    </p>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_config = function () {
+            this.page.url = '';  // Your page's canonical URL variable
+            this.page.identifier = '/blog/2020/10/14/qemu-arm-v2-8-0-10-released/'; // Your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://embed-cdt.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
 
 <hr class="shaded"/>
 
@@ -1990,7 +902,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2020 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Sep 9, 2020<br/> Site last generated: Oct 14, 2020 <br />
+<span>Page last updated:</span> Oct 14, 2020<br/> Site last generated: Oct 14, 2020 <br />
                 </div>
             </div>
 </footer>
