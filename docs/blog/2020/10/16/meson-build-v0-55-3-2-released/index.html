@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="keywords" content=" ">
-<title>c++ | The xPack Project</title>
+<meta name="description" content="Version 0.55.3-2 is a maintenance release of the xPack Meson Build package; it fixes two bugs and updates to the new, more robust, build scripts.">
+<meta name="keywords" content="releasesmeson-buildmesonbuildpythonninja,  ">
+<title>xPack Meson Build v0.55.3-2 released | The xPack Project</title>
 <link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
 
 
@@ -14,19 +14,19 @@
 <link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
 
 <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>c++</title>
+<title>xPack Meson Build v0.55.3-2 released</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="c++" />
+<meta property="og:title" content="xPack Meson Build v0.55.3-2 released" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
-<meta property="og:description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
-<link rel="canonical" href="https://xpack.github.io/tags/c++/" />
-<meta property="og:url" content="https://xpack.github.io/tags/c++/" />
+<meta name="description" content="The xPack Meson Build is the xPack distribution of the Meson build system." />
+<meta property="og:description" content="The xPack Meson Build is the xPack distribution of the Meson build system." />
+<link rel="canonical" href="https://xpack.github.io/blog/2020/10/16/meson-build-v0-55-3-2-released/" />
+<meta property="og:url" content="https://xpack.github.io/blog/2020/10/16/meson-build-v0-55-3-2-released/" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-09-09T10:33:59+00:00" />
+<meta property="article:published_time" content="2020-10-16T19:39:00+00:00" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","@type":"BlogPosting","headline":"c++","dateModified":"2020-09-09T12:24:25+00:00","datePublished":"2020-09-09T10:33:59+00:00","url":"https://xpack.github.io/tags/c++/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/tags/c++/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"The xPack Meson Build is the xPack distribution of the Meson build system.","@type":"BlogPosting","headline":"xPack Meson Build v0.55.3-2 released","dateModified":"2020-10-16T20:38:27+00:00","datePublished":"2020-10-16T19:39:00+00:00","url":"https://xpack.github.io/blog/2020/10/16/meson-build-v0-55-3-2-released/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2020/10/16/meson-build-v0-55-3-2-released/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -237,7 +237,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: '/search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="c++">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="xPack Meson Build v0.55.3-2 released">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -544,1477 +544,317 @@
 
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
-            <div class="post-header">
-   <h1 class="post-title-main">c++</h1>
+            <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">xPack Meson Build v0.55.3-2 released</h1>
+        <p class="post-meta"><time datetime="2020-10-16T19:39:00+00:00" itemprop="datePublished">Oct 16, 2020</time> <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">/ Liviu Ionescu</span></span> /
+            
+            
+            
+            <a href="/tags/releases/">releases</a>, 
+            
+            
+            
+            
+            
+            
+            
+            <a href="/tags/build/">build</a>, 
+            
+            
+            
+            
+            
+            
+            
+
+        </p>
+
+
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+
+        
+        <div class="summary">Version 0.55.3-2 is a maintenance release of the <strong>xPack Meson Build</strong> package; it fixes two bugs and updates to the new, more robust, build scripts.
 </div>
-
-
-
-<div class="post-content">
-
-   
-
-    
-    
-<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
-<script>
-$( document ).ready(function() {
-  // Handler for .ready() called.
-
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
-
-/* this offset helps account for the space taken up by the floating toolbar. */
-$('#toc').on('click', 'a', function() {
-  var target = $(this.getAttribute('href'))
-    , scroll_target = target.offset().top
-
-  $(window).scrollTop(scroll_target - 10);
-  return false
-})
-
-});
-</script>
-
-<div id="toc"></div>
-
-    
-
-
-   <p>The following pages and posts are tagged with <button type="button" style="cursor: default" class="btn btn-default navbar-btn">c++</button></p>
-<table><thead><tr><th>Title</th><th>Type</th><th>Excerpt</th></tr></thead>
-    <tbody>
-    
-  
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
 
-        <tr><td><a href="/blog/2020/10/13/riscv-none-embed-gcc-v8-3-0-2-2-released/">xPack GNU RISC-V Embedded GCC v8.3.0-2.2 released</a></td>
-            <td><span class="label label-primary">Post</span></td>
-            <td> Version 8.3.0-2.2 is a maintenance release of the xPack GNU RISC-V Embedded GCC, to fix a regression bug in binutils 2.32 affecting the parsing of LENGTH and... </td>
-        </tr>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        <p><a href="https://xpack.github.io/meson-build/">The xPack Meson Build</a>
+is the <strong>xPack</strong> distribution of the
+<a href="https://mesonbuild.com">Meson</a> build system.</p>
 
-        <tr><td><a href="/blog/2020/10/12/arm-none-eabi-gcc-v9-3-1-1-3-released/">xPack GNU Arm Embedded GCC v9.3.1-1.3 released</a></td>
-            <td><span class="label label-primary">Post</span></td>
-            <td> Version 9.3.1-1.3 is a maintenance release of xPack GNU Arm Embedded GCC, created with the new, more robust, build scripts. </td>
-        </tr>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+<p>There are separate binaries for <strong>Windows</strong> (Intel 32/64-bit),
+<strong>macOS</strong> (Intel 64-bit) and <strong>GNU/Linux</strong> (Intel 32/64-bit, Arm 32/64-bit).</p>
 
-        <tr><td><a href="/blog/2020/10/10/riscv-none-embed-gcc-v8-3-0-2-1-released/">xPack GNU RISC-V Embedded GCC v8.3.0-2.1 released</a></td>
-            <td><span class="label label-primary">Post</span></td>
-            <td> Version 8.3.0-2.1 is a new release of the xPack GNU RISC-V Embedded GCC, following SiFive release 2020.04.0 from August 2020; it also changes to use DT_RPATH... </td>
-        </tr>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The main target for the Arm binaries
+are the <strong>Raspberry Pi</strong> class devices.</div>
 
-        <tr><td><a href="/blog/2020/07/27/arm-none-eabi-gcc-v9-3-1-1-2-released/">xPack GNU Arm Embedded GCC v9.3.1-1.2 released</a></td>
-            <td><span class="label label-primary">Post</span></td>
-            <td> Version 9.3.1-1.2 is a maintenance release of xPack GNU Arm Embedded GCC, intended to fix C++ exceptions support for non-nano libraries, and to use DT_RPATH ... </td>
-        </tr>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+<h2 id="download">Download</h2>
 
-   </tbody>
-</table>
+<p>The binary files are available from <a href="https://github.com/xpack-dev-tools/meson-build-xpack/releases/tag/v0.55.3-2/">GitHub Releases</a>.</p>
 
+<h2 id="install">Install</h2>
 
+<p>The full details of installing the <strong>xPack Meson Build</strong> on various platforms
+are presented in the separate
+<a href="/meson-build/install/">Install</a> page.</p>
 
-        
+<h3 id="easy-install">Easy install</h3>
 
+<p>The easiest way to install Meson Build is with
+<a href="/xpm/"><code class="language-plaintext highlighter-rouge">xpm</code></a>
+by using the <strong>binary xPack</strong>, available as
+<a href="https://www.npmjs.com/package/@xpack-dev-tools/meson-build"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/meson-build</code></a>
+from the <a href="https://www.npmjs.com"><code class="language-plaintext highlighter-rouge">npmjs.com</code></a> registry.</p>
 
-    <div class="tags">
-        
+<p>To install the latest version available, use:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/meson-build@latest
+</code></pre></div></div>
+
+<p>To install this specific version, use:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/meson-build@0.55.3-2.1
+</code></pre></div></div>
+
+<h2 id="compliance">Compliance</h2>
+
+<p>The <strong>xPack Meson Build</strong> is based on the official
+<a href="https://mesonbuild.com">Meson</a> build system,
+without any changes.</p>
+
+<p>The current version is based on:</p>
+
+<ul>
+  <li>Meson release
+<a href="https://github.com/mesonbuild/meson/releases/tag/0.55.3">0.55.3</a>
+from Sep 11th, 2020.</li>
+</ul>
+
+<h2 id="bug-fixes">Bug fixes</h2>
+
+<ul>
+  <li>[<a href="https://github.com/xpack-dev-tools/meson-build-xpack/issues/1">#1</a>] - when
+installing meson as a project dependency, starting it fails on macOS, due
+to a bug preventing it to follow links; fixed;</li>
+  <li>[<a href="https://github.com/xpack-dev-tools/meson-build-xpack/issues/2">#2</a>] - when
+generating commands in ninja.build that refer to itself, on Linux &amp; macOS
+the path is not correct, it contains only a folder; fixed.</li>
+</ul>
+
+<h2 id="enhancements">Enhancements</h2>
+
+<ul>
+  <li>none</li>
+</ul>
+
+<h2 id="changes">Changes</h2>
+
+<p>Compared to the upstream version, there are no functional changes.</p>
+
+<h2 id="embedded-python">Embedded Python</h2>
+
+<p>To simplify dependency management, this release embeddeds a Python
+3.8.6 instance.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">meson</code> executable is a standard ELF/EXE which includes the Python
+run-time; the <code class="language-plaintext highlighter-rouge">main()</code> function prepares the Python environment and then
+invokes the Meson main:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">PyRun_SimpleString</span><span class="p">(</span><span class="s">"from mesonbuild import mesonmain</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+  <span class="n">PyRun_SimpleString</span><span class="p">(</span><span class="s">"sys.exit(mesonmain.main())</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>The Python library is located in the standard location:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">lib/python3.8</code></li>
+  <li><code class="language-plaintext highlighter-rouge">lib/python3.8/lib-dynload</code> (the platform dependent files)</li>
+</ul>
+
+<p>The Meson files are located in:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">lib/python3.8/mesonbuild</code></li>
+</ul>
+
+<p>To speed up execution, all Python files are compiled and are
+available only as <code class="language-plaintext highlighter-rouge">.pyc</code>.</p>
+
+<h2 id="known-problems">Known problems</h2>
+
+<ul>
+  <li>none</li>
+</ul>
+
+<h2 id="shared-libraries">Shared libraries</h2>
+
+<p>On all platforms the packages are standalone, and expect only the standard
+runtime to be present on the host.</p>
+
+<p>All dependencies that are build as shared libraries are copied locally in the
+same folder as the executable.</p>
+
+<h3 id="dt_rpath-and-ld_library_path"><code class="language-plaintext highlighter-rouge">DT_RPATH</code> and <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code></h3>
+
+<p>On GNU/Linux the binaries are adjusted to use a relative path:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>readelf <span class="nt">-d</span> library.so | <span class="nb">grep </span>runpath
+<span class="gp"> 0x000000000000001d (RPATH)            Library rpath: [$</span>ORIGIN]
+</code></pre></div></div>
+
+<p>In the GNU ld.so search strategy, the <code class="language-plaintext highlighter-rouge">DT_RPATH</code> has
+the highest priority, higher than <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code>, so if this later one
+is set in the environment, it should not interfere with the xPack binaries.</p>
+
+<h3 id="executable_path"><code class="language-plaintext highlighter-rouge">@executable_path</code></h3>
+
+<p>Similarly, on macOS, the dynamic libraries are adjusted with <code class="language-plaintext highlighter-rouge">otool</code> to use a
+relative path.</p>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>The original documentation is available from:</p>
+
+<ul>
+  <li><a href="https://mesonbuild.com/Manual.html">https://mesonbuild.com/Manual.html</a></li>
+</ul>
+
+<h2 id="supported-platforms">Supported platforms</h2>
+
+<p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided.</p>
+
+<p>The binaries were built using the
+<a href="https://github.com/xpack/xpack-build-box">xPack Build Box (XBB)</a>, a set
+of build environments based on slightly older distributions, that should be
+compatible with most recent systems.</p>
+
+<ul>
+  <li>Intel GNU/Linux: all binaries were built with GCC 9.3, running in an
+Ubuntu 12 Docker container</li>
+  <li>Arm GNU/Linux: all binaries were built with GCC 9.3, running in an
+Ubuntu 16 Docker container (added in mid-2020)</li>
+  <li>Windows: all binaries were built with mingw-w64 GCC 9.3, running in an
+Ubuntu 12 Docker container</li>
+  <li>macOS: all binaries were built with GCC 9.3, running in a separate
+folder on macOS 10.10.5.</li>
+</ul>
+
+<h2 id="build">Build</h2>
+
+<p>The scripts used to build this distribution are in:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">distro-info/scripts</code></li>
+</ul>
+
+<p>For the prerequisites and more details on the build procedure, please see the
+<a href="https://github.com/xpack-dev-tools/meson-build-xpack/blob/xpack/README-BUILD.md">How to build</a> page.</p>
+
+<h2 id="travis-tests">Travis tests</h2>
+
+<p>The first set of tests were performed on Travis, by running
+a simple script to check if the binaries start on a wide range of
+platforms and distributions:</p>
+
+<ul>
+  <li><a href="https://travis-ci.org/github/xpack-dev-tools/meson-build-xpack/builds/736462461">test xPack Meson Build on stable platforms</a></li>
+  <li><a href="https://travis-ci.org/github/xpack-dev-tools/meson-build-xpack/builds/736473428">test xPack Meson Build on latest platforms</a></li>
+</ul>
+
+<h2 id="tests">Tests</h2>
+
+<p>TBD</p>
+
+<h2 id="checksums">Checksums</h2>
+
+<p>The SHA-256 hashes for the files are:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>888a4c3bde5510c46c45c5d01fc27af761e41af90c3448ddd2f9ee8e6f1da7ea
+xpack-meson-build-0.55.3-2-darwin-x64.tar.gz
+
+8c2e55812507ed7dbff0b057eb9cc238ef41dbc27925db9ae2e67cb5a6eb9d8b
+xpack-meson-build-0.55.3-2-linux-arm64.tar.gz
+
+20c6d73fde010f5b11d7bb9c404880941d4273ffe1a821b11587097aa787288a
+xpack-meson-build-0.55.3-2-linux-arm.tar.gz
+
+278d8f45ca573ec528264700ef0333fb4454349c7b5d0194e2873d24bd633fff
+xpack-meson-build-0.55.3-2-linux-x32.tar.gz
+
+3d3d0cde9cff54f8aa5f92461bd44b06c56b8632589ea46cfdf0ebdc4d349ace
+xpack-meson-build-0.55.3-2-linux-x64.tar.gz
+
+2985a09f488869e994866010df26dfbf8678e313095593e0590682baf37c5c0d
+xpack-meson-build-0.55.3-2-win32-x32.zip
+
+de78bdb101d9270a534439209756fa844fedbc930a2e1062a5d16eb15f58502e
+xpack-meson-build-0.55.3-2-win32-x64.zip
+</code></pre></div></div>
+
+<h2 id="download-analytics">Download analytics</h2>
+
+<ul>
+  <li>GitHub <a href="https://github.com/xpack-dev-tools/meson-build-xpack/">xpack-dev-tools/meson-build-xpack</a>
+    <ul>
+      <li>this release <a href="https://github.com/xpack-dev-tools/meson-build-xpack/releases/v0.55.3-2/"><img src="https://img.shields.io/github/downloads/xpack-dev-tools/meson-build-xpack/v0.55.3-2/total.svg" alt="Github All Releases" /></a></li>
+      <li>all xPack releases <a href="https://github.com/xpack-dev-tools/meson-build-xpack/releases/"><img src="https://img.shields.io/github/downloads/xpack-dev-tools/meson-build-xpack/total.svg" alt="Github All Releases" /></a></li>
+      <li><a href="https://www.somsubhra.com/github-release-stats/?username=xpack-dev-tools&amp;repository=meson-build-xpack">individual file counters</a> (grouped per release)</li>
+    </ul>
+  </li>
+  <li>npmjs.com <a href="https://www.npmjs.com/package/@xpack-dev-tools/meson-build">@xpack-dev-tools/meson-build</a>
+    <ul>
+      <li>latest releases <a href="https://www.npmjs.com/package/@xpack-dev-tools/meson-build/"><img src="https://img.shields.io/npm/dw/@xpack-dev-tools/meson-build.svg" alt="npm" /></a></li>
+      <li>all @xpack-dev-tools releases <a href="https://www.npmjs.com/package/@xpack-dev-tools/meson-build/"><img src="https://img.shields.io/npm/dt/@xpack-dev-tools/meson-build.svg" alt="npm" /></a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Credit to <a href="https://shields.io">Shields IO</a> for the badges and to
+<a href="https://github.com/Somsubhra/github-release-stats">Somsubhra/github-release-stats</a>
+for the individual file counters.</p>
+
     </div>
 
+
+
+</article>
+
+    
+    <a target="_blank" rel="noopener" href="https://github.com/xpack/xpack.github.io/blob/master/_posts/releases/meson-build/2020-10-16-meson-build-v0-55-3-2-released.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
+
     
 
 
-</div>
+
+
+    <hr/>
+    <p>Comments on the content of this page that might be useful
+    for other readers are welcomed here. For question and general
+    support, please use the
+    <a href="https://www.tapatalk.com/groups/xpack/">project forums</a>.
+    </p>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_config = function () {
+            this.page.url = '';  // Your page's canonical URL variable
+            this.page.identifier = '/blog/2020/10/16/meson-build-v0-55-3-2-released/'; // Your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://embed-cdt.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
 
 <hr class="shaded"/>
 
@@ -2022,7 +862,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2020 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Sep 9, 2020<br/> Site last generated: Oct 16, 2020 <br />
+<span>Page last updated:</span> Oct 16, 2020<br/> Site last generated: Oct 16, 2020 <br />
                 </div>
             </div>
 </footer>

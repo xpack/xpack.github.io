@@ -918,6 +918,16 @@
 
 
 {
+"title": "xPack Meson Build v0.55.3-2 released",
+"tags": "releasesmeson-buildmesonbuildpythonninja",
+"keywords": "",
+"url": "/blog/2020/10/16/meson-build-v0-55-3-2-released/",
+"summary": "<p>Version 0.55.3-2 is a maintenance release of the <strong>xPack Meson Build</strong> package; it fixes two bugs and updates to the new, more robust, build scripts.</p>"
+}
+,
+
+
+{
 "title": "xPack QEMU Arm v2.8.0-10 released",
 "tags": "releasesqemuemulatorarmcortex-m",
 "keywords": "",

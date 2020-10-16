@@ -26,7 +26,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-09-30T08:55:00+00:00" />
 <script type="application/ld+json">
-{"description":"The xPack Meson Build is the xPack distribution of the Meson build system.","@type":"BlogPosting","headline":"xPack Meson Build v0.55.3-1 released","dateModified":"2020-10-13T21:06:07+00:00","datePublished":"2020-09-30T08:55:00+00:00","url":"https://xpack.github.io/blog/2020/09/30/meson-build-v0-55-3-1-released/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2020/09/30/meson-build-v0-55-3-1-released/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"The xPack Meson Build is the xPack distribution of the Meson build system.","@type":"BlogPosting","headline":"xPack Meson Build v0.55.3-1 released","dateModified":"2020-10-16T20:04:38+00:00","datePublished":"2020-09-30T08:55:00+00:00","url":"https://xpack.github.io/blog/2020/09/30/meson-build-v0-55-3-1-released/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2020/09/30/meson-build-v0-55-3-1-released/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -671,7 +671,12 @@ available only as <code class="language-plaintext highlighter-rouge">.pyc</code>
 <h2 id="known-problems">Known problems</h2>
 
 <ul>
-  <li>none</li>
+  <li><a href="https://github.com/xpack-dev-tools/meson-build-xpack/issues/1">#1</a> - when
+installing meson as a project dependency, starting it fails on macOS, due
+to a bug preventing it to follow links; fixed in 0.55.3-2;</li>
+  <li><a href="https://github.com/xpack-dev-tools/meson-build-xpack/issues/2">#2</a> - when
+generating commands in ninja.build that refer to itself, on Linux &amp; macOS
+the path is not correct, it contains only a folder; fixed in 0.55.3-2.</li>
 </ul>
 
 <h2 id="shared-libraries">Shared libraries</h2>
@@ -847,7 +852,7 @@ for the individual file counters.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2020 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Oct 13, 2020<br/> Site last generated: Oct 16, 2020 <br />
+<span>Page last updated:</span> Oct 16, 2020<br/> Site last generated: Oct 16, 2020 <br />
                 </div>
             </div>
 </footer>
