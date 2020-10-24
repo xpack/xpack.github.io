@@ -5,9 +5,33 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Fri, 16 Oct 2020 20:41:08 +0000</pubDate>
-        <lastBuildDate>Fri, 16 Oct 2020 20:41:08 +0000</lastBuildDate>
+        <pubDate>Sat, 24 Oct 2020 05:55:50 +0000</pubDate>
+        <lastBuildDate>Sat, 24 Oct 2020 05:55:50 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>xPack GNU Arm Embedded GCC v9.3.1-1.4 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/arm-none-eabi-gcc/&quot;&gt;The xPack GNU Arm Embedded GCC&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://developer.arm.com/open-source/gnu-toolchain/gnu-rm&quot;&gt;GNU Arm Embedded Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Fri, 23 Oct 2020 14:53:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2020/10/23/arm-none-eabi-gcc-v9-3-1-1-4-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2020/10/23/arm-none-eabi-gcc-v9-3-1-1-4-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>arm</category>
+            
+            <category>arm-none-eabi-gcc</category>
+            
+            <category>gcc</category>
+            
+            <category>binaries</category>
+            
+            <category>c++</category>
+            
+            <category>exceptions</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Meson Build v0.55.3-2 released</title>
@@ -89,7 +113,7 @@
         
         <item>
             <title>xPack GNU Arm Embedded GCC v9.3.1-1.3 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/arm-none-eabi-gcc/&quot;&gt;The xPack GNU Arm Embedded GCC&lt;/a&gt;is is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://developer.arm.com/open-source/gnu-toolchain/gnu-rm&quot;&gt;GNU Arm Embedded Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/arm-none-eabi-gcc/&quot;&gt;The xPack GNU Arm Embedded GCC&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://developer.arm.com/open-source/gnu-toolchain/gnu-rm&quot;&gt;GNU Arm Embedded Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
             <pubDate>Mon, 12 Oct 2020 06:52:00 +0000</pubDate>
             <link>https://xpack.github.io/blog/2020/10/12/arm-none-eabi-gcc-v9-3-1-1-3-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2020/10/12/arm-none-eabi-gcc-v9-3-1-1-3-released/</guid>
@@ -177,28 +201,6 @@
             <pubDate>Mon, 28 Sep 2020 20:19:00 +0000</pubDate>
             <link>https://xpack.github.io/blog/2020/09/28/ninja-build-v1-10-1-1-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2020/09/28/ninja-build-v1-10-1-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>ninja-build</category>
-            
-            <category>ninja</category>
-            
-            <category>build</category>
-            
-            <category>speed</category>
-            
-            <category>small</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack Ninja Build v1.10.0-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/ninja-build/&quot;&gt;The xPack Ninja Build&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://ninja-build.org&quot;&gt;Ninja&lt;/a&gt; build system.&lt;/p&gt;</description>
-            <pubDate>Mon, 28 Sep 2020 15:15:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2020/09/28/ninja-build-v1-10-0-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2020/09/28/ninja-build-v1-10-0-1-released/</guid>
             
             <category>releases</category>
             
