@@ -938,7 +938,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
 "keywords": "",
 "url": "/blog/2020/10/23/arm-none-eabi-gcc-v9-3-1-1-4-released/",
-"summary": "<p>Version 9.3.1-1.4 is a maintenance release of <strong>xPack GNU Arm Embedded GCC</strong>; it adds an embedded Python 3 instance, to make GDB with Python support run on any system.</p>"
+"summary": "<p>Version 9.3.1-1.4 is a maintenance release of <strong>xPack GNU Arm Embedded GCC</strong>; it adds an embedded Python 3 instance, to make <code class="language-plaintext highlighter-rouge">arm-none-eabi-gdb-py3</code> standalone and run on any system.</p>"
 }
 ,
 
