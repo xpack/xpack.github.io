@@ -5,9 +5,31 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 25 Oct 2020 06:31:56 +0000</pubDate>
-        <lastBuildDate>Sun, 25 Oct 2020 06:31:56 +0000</lastBuildDate>
+        <pubDate>Sun, 25 Oct 2020 08:43:47 +0000</pubDate>
+        <lastBuildDate>Sun, 25 Oct 2020 08:43:47 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>xPack GNU RISC-V Embedded GCC v8.3.0-2.3 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/riscv-none-embed-gcc/&quot;&gt;The xPack GNU RISC-V Embedded GCC&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://github.com/sifive/freedom-tools/releases&quot;&gt;SiFive RISC-V GCC&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Sun, 25 Oct 2020 06:59:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2020/10/25/riscv-none-embed-gcc-v8-3-0-2-3-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2020/10/25/riscv-none-embed-gcc-v8-3-0-2-3-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>riscv</category>
+            
+            <category>riscv-none-embed-gcc</category>
+            
+            <category>gcc</category>
+            
+            <category>binaries</category>
+            
+            <category>c++</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack GNU Arm Embedded GCC v9.3.1-1.4 released</title>
@@ -191,28 +213,6 @@
             <category>cmake</category>
             
             <category>build</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack Ninja Build v1.10.1-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/ninja-build/&quot;&gt;The xPack Ninja Build&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://ninja-build.org&quot;&gt;Ninja&lt;/a&gt; build system.&lt;/p&gt;</description>
-            <pubDate>Mon, 28 Sep 2020 20:19:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2020/09/28/ninja-build-v1-10-1-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2020/09/28/ninja-build-v1-10-1-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>ninja-build</category>
-            
-            <category>ninja</category>
-            
-            <category>build</category>
-            
-            <category>speed</category>
-            
-            <category>small</category>
             
             
         </item>

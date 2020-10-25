@@ -26,7 +26,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-10-13T07:04:00+00:00" />
 <script type="application/ld+json">
-{"description":"The xPack GNU RISC-V Embedded GCC is the xPack distribution of the SiFive RISC-V GCC.","@type":"BlogPosting","headline":"xPack GNU RISC-V Embedded GCC v8.3.0-2.2 released","dateModified":"2020-10-23T21:19:50+00:00","datePublished":"2020-10-13T07:04:00+00:00","url":"https://xpack.github.io/blog/2020/10/13/riscv-none-embed-gcc-v8-3-0-2-2-released/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2020/10/13/riscv-none-embed-gcc-v8-3-0-2-2-released/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"The xPack GNU RISC-V Embedded GCC is the xPack distribution of the SiFive RISC-V GCC.","@type":"BlogPosting","headline":"xPack GNU RISC-V Embedded GCC v8.3.0-2.2 released","dateModified":"2020-10-25T07:56:56+00:00","datePublished":"2020-10-13T07:04:00+00:00","url":"https://xpack.github.io/blog/2020/10/13/riscv-none-embed-gcc-v8-3-0-2-2-released/","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2020/10/13/riscv-none-embed-gcc-v8-3-0-2-2-released/"},"author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -743,9 +743,43 @@ be compiled with
 a separate binary, <code class="language-plaintext highlighter-rouge">riscv-none-embed-gdb-py3</code> with
 support for <strong>Python 3.7</strong>.</p>
 
-<p>Mode details on the prerequisites of running GDB with Python support are
-available from
-<a href="https://xpack.github.io/arm-none-eabi-gcc/python/">GDB with Python support</a>.</p>
+<p>It is mandatory to have <strong>exactly</strong> this version installed, otherwise
+GDB will not start properly.</p>
+
+<p>For this it is recommended to install the binaries provided by
+<a href="https://www.python.org/downloads/">Python</a>,
+not those available in the distribution, since they may be incomplete, for
+example those in Ubuntu/Debian, which split the Python system library into
+multiple packages.</p>
+
+<p>On GNU/Linux, the recommended way is to build is from sources, and
+install locally:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">python3_version</span><span class="o">=</span><span class="s2">"3.7.9"</span>
+<span class="nb">mkdir</span> <span class="nt">-p</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Downloads"</span>
+curl <span class="nt">-L</span> <span class="nt">--fail</span> <span class="nt">-o</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Downloads/Python-</span><span class="k">${</span><span class="nv">python3_version</span><span class="k">}</span><span class="s2">.tgz"</span> https://www.python.org/ftp/python/<span class="k">${</span><span class="nv">python3_version</span><span class="k">}</span>/Python-<span class="k">${</span><span class="nv">python3_version</span><span class="k">}</span>.tgz 
+<span class="nb">rm</span> <span class="nt">-rf</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Work/Python-</span><span class="k">${</span><span class="nv">python3_version</span><span class="k">}</span><span class="s2">"</span>
+<span class="nb">mkdir</span> <span class="nt">-p</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Work"</span>
+<span class="nb">cd</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Work"</span>
+<span class="nb">tar </span>xzf <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Downloads/Python-</span><span class="k">${</span><span class="nv">python3_version</span><span class="k">}</span><span class="s2">.tgz"</span> 
+<span class="nb">cd</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Work/Python-</span><span class="k">${</span><span class="nv">python3_version</span><span class="k">}</span><span class="s2">"</span>
+bash ./configure <span class="nt">--prefix</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/opt"</span>
+make
+make altinstall
+</code></pre></div></div>
+
+<p>To run GDB with this version of Python, use a script to set the proper
+environment, like:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/opt/bin"</span>
+<span class="nb">cat</span> <span class="o">&lt;&lt;</span><span class="sh">'</span><span class="no">__EOF__</span><span class="sh">' &gt; "</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="sh">/opt/bin/riscv-none-embed-gdb-py3.sh"
+#!/usr/bin/env bash
+PYTHONPATH="</span><span class="si">$(</span><span class="nv">$HOME</span>/opt/bin/python3.7 <span class="nt">-c</span> <span class="s1">'import os; import sys; print(os.pathsep.join(sys.path))'</span><span class="si">)</span><span class="sh">" </span><span class="se">\</span><span class="sh">
+PYTHONHOME="</span><span class="si">$(</span><span class="nv">$HOME</span>/opt/bin/python3.7 <span class="nt">-c</span> <span class="s1">'import sys; print(sys.prefix)'</span><span class="si">)</span><span class="sh">" </span><span class="se">\</span><span class="sh">
+riscv-none-embed-gdb-py3 "</span><span class="nv">$@</span><span class="sh">"
+</span><span class="no">__EOF__
+</span><span class="nb">chmod</span> +x <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/opt/bin/riscv-none-embed-gdb-py3.sh"</span>
+</code></pre></div></div>
 
 <p>Support for Python 2 was discontinued.</p>
 
@@ -772,7 +806,12 @@ and LENGTH and ORIGIN are now recognised as expected.</li>
 
 <ul>
   <li>the GDB binary with Python support was built with version 3.7,
-and require exactly this version in order to run properly;</li>
+and require exactly this version in order to run properly;
+fixed in 8.3.0-2.3 which includes the Python run-time;</li>
+  <li>GDB may issue the following warning, <em>riscv-none-embed-gdb: warning:
+Couldn’t determine a path for the index cache directory.</em>;
+it is a known problem, caused when trying to create the cache
+folder (<code class="language-plaintext highlighter-rouge">$HOME/.cache/gdb</code> or <code class="language-plaintext highlighter-rouge">$HOME/Library/Caches/gdb</code>);</li>
   <li>the archive size got too big for the Windows 32-bit node to handle, and
 <code class="language-plaintext highlighter-rouge">xpm install</code> fails with <em>RangeError: Array buffer allocation failed</em>.</li>
 </ul>
@@ -961,7 +1000,7 @@ for the individual file counters.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2020 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Oct 23, 2020<br/> Site last generated: Oct 25, 2020 <br />
+<span>Page last updated:</span> Oct 25, 2020<br/> Site last generated: Oct 25, 2020 <br />
                 </div>
             </div>
 </footer>
