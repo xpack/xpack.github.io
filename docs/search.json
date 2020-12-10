@@ -934,6 +934,16 @@
 
 
 {
+"title": "xPack CMake v3.18.5-1 released",
+"tags": "releasescmakebuild",
+"keywords": "",
+"url": "/blog/2020/12/10/cmake-v3-18-5-1-released/",
+"summary": "<p>Version 3.18.5-1 is a new release of the <strong>xPack CMake</strong> package, following the CMake release.</p>"
+}
+,
+
+
+{
 "title": "xPack GNU RISC-V Embedded GCC v8.3.0-2.3 released",
 "tags": "releasesriscvriscv-none-embed-gccgccbinariesc++",
 "keywords": "",

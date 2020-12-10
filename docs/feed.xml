@@ -5,9 +5,25 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 23 Nov 2020 14:49:09 +0000</pubDate>
-        <lastBuildDate>Mon, 23 Nov 2020 14:49:09 +0000</lastBuildDate>
+        <pubDate>Thu, 10 Dec 2020 23:29:54 +0000</pubDate>
+        <lastBuildDate>Thu, 10 Dec 2020 23:29:54 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>xPack CMake v3.18.5-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/cmake/&quot;&gt;The xPack CMake&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://cmake.org&quot;&gt;CMake&lt;/a&gt; build system.&lt;/p&gt;</description>
+            <pubDate>Thu, 10 Dec 2020 19:33:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2020/12/10/cmake-v3-18-5-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2020/12/10/cmake-v3-18-5-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>cmake</category>
+            
+            <category>build</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack GNU RISC-V Embedded GCC v8.3.0-2.3 released</title>
@@ -197,22 +213,6 @@
             <category>python</category>
             
             <category>ninja</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack CMake v3.18.3-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/cmake/&quot;&gt;The xPack CMake&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://cmake.org&quot;&gt;CMake&lt;/a&gt; build system.&lt;/p&gt;</description>
-            <pubDate>Tue, 29 Sep 2020 11:20:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2020/09/29/cmake-v3-18-3-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2020/09/29/cmake-v3-18-3-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>cmake</category>
-            
-            <category>build</category>
             
             
         </item>
