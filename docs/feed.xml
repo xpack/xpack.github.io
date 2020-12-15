@@ -5,9 +5,25 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sat, 12 Dec 2020 11:26:18 +0000</pubDate>
-        <lastBuildDate>Sat, 12 Dec 2020 11:26:18 +0000</lastBuildDate>
+        <pubDate>Tue, 15 Dec 2020 20:03:08 +0000</pubDate>
+        <lastBuildDate>Tue, 15 Dec 2020 20:03:08 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>xPack CMake v3.19.1-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/cmake/&quot;&gt;The xPack CMake&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://cmake.org&quot;&gt;CMake&lt;/a&gt; build system.&lt;/p&gt;</description>
+            <pubDate>Tue, 15 Dec 2020 17:08:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2020/12/15/cmake-v3-19-1-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2020/12/15/cmake-v3-19-1-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>cmake</category>
+            
+            <category>build</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack CMake v3.18.5-1 released</title>
@@ -191,28 +207,6 @@
             <category>binaries</category>
             
             <category>c++</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack Meson Build v0.55.3-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/meson-build/&quot;&gt;The xPack Meson Build&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://mesonbuild.com&quot;&gt;Meson&lt;/a&gt; build system.&lt;/p&gt;</description>
-            <pubDate>Wed, 30 Sep 2020 08:55:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2020/09/30/meson-build-v0-55-3-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2020/09/30/meson-build-v0-55-3-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>meson-build</category>
-            
-            <category>meson</category>
-            
-            <category>build</category>
-            
-            <category>python</category>
-            
-            <category>ninja</category>
             
             
         </item>

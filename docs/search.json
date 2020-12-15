@@ -934,6 +934,16 @@
 
 
 {
+"title": "xPack CMake v3.19.1-1 released",
+"tags": "releasescmakebuild",
+"keywords": "",
+"url": "/blog/2020/12/15/cmake-v3-19-1-1-released/",
+"summary": "<p>Version 3.19.1-1 is a new release of the <strong>xPack CMake</strong> package, following the CMake release.</p>"
+}
+,
+
+
+{
 "title": "xPack CMake v3.18.5-1 released",
 "tags": "releasescmakebuild",
 "keywords": "",
