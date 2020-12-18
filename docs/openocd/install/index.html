@@ -13,7 +13,7 @@
 <link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
 <link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
 
-<!-- Begin Jekyll SEO tag v2.6.1 -->
+<!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>How to install the xPack OpenOCD binaries</title>
 <meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="How to install the xPack OpenOCD binaries" />
@@ -25,8 +25,10 @@
 <meta property="og:url" content="https://xpack.github.io/openocd/install/" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2015-09-09T16:43:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="How to install the xPack OpenOCD binaries" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/openocd/install/"},"url":"https://xpack.github.io/openocd/install/","headline":"How to install the xPack OpenOCD binaries","dateModified":"2020-12-17T07:23:55+00:00","datePublished":"2015-09-09T16:43:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/openocd/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/openocd/install/","headline":"How to install the xPack OpenOCD binaries","dateModified":"2020-12-18T12:50:29+00:00","datePublished":"2015-09-09T16:43:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -345,10 +347,18 @@
 
    <h2 id="overview">Overview</h2>
 
-<p>The <strong>xPack OpenOCD</strong> can be installed automatically, via xpm (the
+<p>The <strong>xPack OpenOCD</strong> can be installed automatically, via <strong>xpm</strong> (the
 recommended method), or manually, by downloading and unpacking one of the
 portable archives.</p>
 
+<ul id="profileTabs_1" class="nav nav-tabs">
+    <li class="active"><a href="#windows_1" data-toggle="tab">Windows</a></li>
+    <li><a href="#macos_1" data-toggle="tab">macOS</a></li>
+    <li><a href="#linux_1" data-toggle="tab">GNU/Linux</a></li>
+</ul>
+<div class="tab-content">
+	<div role="tabpanel" class="tab-pane active" id="windows_1">
+		
 <h2 id="easy-install">Easy install</h2>
 
 <p>The easiest way to install OpenOCD is by using the <strong>binary xPack</strong>, available as
@@ -394,7 +404,7 @@ xpm and provide a convenient method to manage paths.</p>
 
 <div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important:</b> Automatic
 path discovery for the packages from the new <code class="language-plaintext highlighter-rouge">@xpack-dev-tools</code> scope was
-added to <strong>GNU MCU Eclipse plug-ins</strong> with v4.6.1-201909231407; update
+added to <strong>GNU MCU Eclipse plug-ins</strong> with v4.6.1 in 2019-09-23; update
 older versions or configure the path manually.</div>
 
 <h3 id="uninstall">Uninstall</h3>
@@ -404,9 +414,17 @@ older versions or configure the path manually.</div>
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm uninstall <span class="nt">--global</span> @xpack-dev-tools/openocd
 </code></pre></div></div>
 
-<p>(Note: not yet implemented. As a temporary workaround, simply remove the
-<code class="language-plaintext highlighter-rouge">xPacks/@xpack-dev-tools/openocd</code> folder, or one of the versioned
-subfolders.)</p>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Not yet implemented. As a temporary workaround,
+simply remove the <code class="language-plaintext highlighter-rouge">xPacks/@xpack-dev-tools/openocd</code> folder,
+or one of the versioned subfolders.</div>
+
+<h3 id="test">Test</h3>
+
+<p>To check if the xpm installed OpenOCD starts, use something like:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\@xpack-dev-tools\openocd\0.10.0-13.1\.content\bin\openocd.exe --version
+xPack OpenOCD, 64-bit Open On-Chip Debugger 0.10.0+dev (2019-07-17-15:21)
+</code></pre></div></div>
 
 <h2 id="manual-install">Manual install</h2>
 
@@ -417,14 +435,6 @@ archives that can be installed in any location.</p>
 GitHub <a href="https://github.com/xpack-dev-tools/openocd-xpack/releases/">releases</a>
 page.</p>
 
-<ul id="profileTabs_1" class="nav nav-tabs">
-    <li class="active"><a href="#windows_1" data-toggle="tab">Windows</a></li>
-    <li><a href="#macos_1" data-toggle="tab">macOS</a></li>
-    <li><a href="#linux_1" data-toggle="tab">GNU/Linux</a></li>
-</ul>
-<div class="tab-content">
-	<div role="tabpanel" class="tab-pane active" id="windows_1">
-		
 <h3 id="download">Download</h3>
 
 <p>The Windows versions of <strong>xPack OpenOCD</strong> are packed as ZIP files.
@@ -445,7 +455,7 @@ The <code class="language-plaintext highlighter-rouge">win32</code> part is conf
 <h3 id="unpack">Unpack</h3>
 
 <p>Unpack the archive and copy it into the
-<code class="language-plaintext highlighter-rouge">%userprofile%\AppData\Roaming\xPacks\openocd</code>
+<code class="language-plaintext highlighter-rouge">%USERPROFILE%\AppData\Roaming\xPacks\openocd</code>
 (for example <code class="language-plaintext highlighter-rouge">C:\Users\ilg\AppData\Roaming\xPacks\openocd</code>) folder;
 according to Microsoft, <code class="language-plaintext highlighter-rouge">AppData\Roaming</code> is the recommended location for
 installing user specific packages.</p>
@@ -464,9 +474,11 @@ for the executable in this location.</div>
 
 <p><img src="/assets/images/2019/windows-folders-openocd.png" alt="The OpenOCD folders structure" /></p>
 
-<p>To check if OpenOCD starts, use the following command:</p>
+<h3 id="test-1">Test</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Users\ilg&gt;C:\Users\ilg\AppData\Roaming\xPacks\openocd\xpack-openocd-0.10.0-13\bin\openocd.exe --version
+<p>To check if the manually installed OpenOCD starts, use something like:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\openocd\xpack-openocd-0.10.0-13\bin\openocd.exe --version
 xPack OpenOCD, 64-bit Open On-Chip Debugger 0.10.0+dev (2019-07-17-15:21)
 </code></pre></div></div>
 
@@ -525,6 +537,82 @@ safe side, try to always use original manufacturer drivers.</div>
 	</div>
 	<div role="tabpanel" class="tab-pane" id="macos_1">
 		
+<h2 id="easy-install">Easy install</h2>
+
+<p>The easiest way to install OpenOCD is by using the <strong>binary xPack</strong>, available as
+<a href="https://www.npmjs.com/package/@xpack-dev-tools/openocd"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/openocd</code></a>
+from the <a href="https://www.npmjs.com"><code class="language-plaintext highlighter-rouge">npmjs.com</code></a> registry.</p>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<p>The only requirement is a recent
+xpm, which is a portable
+<a href="https://nodejs.org">Node.js</a> command line application. To install it,
+follow the instructions from the
+<a href="/xpm/install/">xpm install</a> page.</p>
+
+<h3 id="install">Install</h3>
+
+<p>With xpm available, installing
+the latest version of the package is quite easy:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/openocd@latest
+</code></pre></div></div>
+
+<p>This command will always install the latest available version,
+in the central xPacks repository, which is a platform dependent folder
+(check the output of the <code class="language-plaintext highlighter-rouge">xpm</code> command for the actual folder used on
+your platform).</p>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> 
+The install location can be configured using the
+<code class="language-plaintext highlighter-rouge">XPACKS_REPO_FOLDER</code> environment variable; for more details please check the
+<a href="/xpm/folders/">xpm folders</a> page.
+</div>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> The archive content is unpacked in a folder
+named <code class="language-plaintext highlighter-rouge">.content</code>. On some platforms
+this might be hidden for normal browsing, and require
+separate options (like <code class="language-plaintext highlighter-rouge">ls -A</code>) or, in file browsers, to enable
+settings like <strong>Show Hidden Files</strong>.</div>
+
+<p>xPacks aware tools, like the <strong>Eclipse Embedded CDT plug-ins</strong> automatically
+identify binaries installed with
+xpm and provide a convenient method to manage paths.</p>
+
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important:</b> Automatic
+path discovery for the packages from the new <code class="language-plaintext highlighter-rouge">@xpack-dev-tools</code> scope was
+added to <strong>GNU MCU Eclipse plug-ins</strong> with v4.6.1 in 2019-09-23; update
+older versions or configure the path manually.</div>
+
+<h3 id="uninstall">Uninstall</h3>
+
+<p>To remove the installed xPack, the command is similar:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm uninstall <span class="nt">--global</span> @xpack-dev-tools/openocd
+</code></pre></div></div>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Not yet implemented. As a temporary workaround,
+simply remove the <code class="language-plaintext highlighter-rouge">xPacks/@xpack-dev-tools/openocd</code> folder,
+or one of the versioned subfolders.</div>
+
+<h3 id="test">Test</h3>
+
+<p>To check if the xpm installed OpenOCD starts, use something like:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/@xpack-dev-tools/openocd/0.10.0-13.1/.content/bin/openocd <span class="nt">--version</span>
+<span class="go">xPack OpenOCD, 64-bit Open On-Chip Debugger 0.10.0+dev (2019-07-17-15:21)
+</span></code></pre></div></div>
+
+<h2 id="manual-install">Manual install</h2>
+
+<p>For all platforms, the <strong>xPack OpenOCD</strong> binaries are released as portable
+archives that can be installed in any location.</p>
+
+<p>The archives can be downloaded from the
+GitHub <a href="https://github.com/xpack-dev-tools/openocd-xpack/releases/">releases</a>
+page.</p>
+
 <h3 id="download">Download</h3>
 
 <p>The macOS version of <strong>xPack OpenOCD</strong> is packed as a .tar.gz archive.
@@ -597,7 +685,9 @@ for the executable in this location.</div>
 20 directories, 15 files
 </span></code></pre></div></div>
 
-<p>To check if OpenOCD starts, use:</p>
+<h3 id="test-1">Test</h3>
+
+<p>To check if the manually installed OpenOCD starts, use something like:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/openocd/xpack-openocd-0.10.0-13/bin/openocd <span class="nt">--version</span>
 <span class="go">xPack OpenOCD, 64-bit Open On-Chip Debugger 0.10.0+dev (2019-07-17-15:21)
@@ -606,6 +696,82 @@ for the executable in this location.</div>
 	</div>
 	<div role="tabpanel" class="tab-pane" id="linux_1">
 		
+<h2 id="easy-install">Easy install</h2>
+
+<p>The easiest way to install OpenOCD is by using the <strong>binary xPack</strong>, available as
+<a href="https://www.npmjs.com/package/@xpack-dev-tools/openocd"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/openocd</code></a>
+from the <a href="https://www.npmjs.com"><code class="language-plaintext highlighter-rouge">npmjs.com</code></a> registry.</p>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<p>The only requirement is a recent
+xpm, which is a portable
+<a href="https://nodejs.org">Node.js</a> command line application. To install it,
+follow the instructions from the
+<a href="/xpm/install/">xpm install</a> page.</p>
+
+<h3 id="install">Install</h3>
+
+<p>With xpm available, installing
+the latest version of the package is quite easy:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/openocd@latest
+</code></pre></div></div>
+
+<p>This command will always install the latest available version,
+in the central xPacks repository, which is a platform dependent folder
+(check the output of the <code class="language-plaintext highlighter-rouge">xpm</code> command for the actual folder used on
+your platform).</p>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> 
+The install location can be configured using the
+<code class="language-plaintext highlighter-rouge">XPACKS_REPO_FOLDER</code> environment variable; for more details please check the
+<a href="/xpm/folders/">xpm folders</a> page.
+</div>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> The archive content is unpacked in a folder
+named <code class="language-plaintext highlighter-rouge">.content</code>. On some platforms
+this might be hidden for normal browsing, and require
+separate options (like <code class="language-plaintext highlighter-rouge">ls -A</code>) or, in file browsers, to enable
+settings like <strong>Show Hidden Files</strong>.</div>
+
+<p>xPacks aware tools, like the <strong>Eclipse Embedded CDT plug-ins</strong> automatically
+identify binaries installed with
+xpm and provide a convenient method to manage paths.</p>
+
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important:</b> Automatic
+path discovery for the packages from the new <code class="language-plaintext highlighter-rouge">@xpack-dev-tools</code> scope was
+added to <strong>GNU MCU Eclipse plug-ins</strong> with v4.6.1 in 2019-09-23; update
+older versions or configure the path manually.</div>
+
+<h3 id="uninstall">Uninstall</h3>
+
+<p>To remove the installed xPack, the command is similar:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm uninstall <span class="nt">--global</span> @xpack-dev-tools/openocd
+</code></pre></div></div>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Not yet implemented. As a temporary workaround,
+simply remove the <code class="language-plaintext highlighter-rouge">xPacks/@xpack-dev-tools/openocd</code> folder,
+or one of the versioned subfolders.</div>
+
+<h3 id="test">Test</h3>
+
+<p>To check if the xpm installed OpenOCD starts, use something like:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/@xpack-dev-tools/openocd/0.10.0-13.1/.content/bin/openocd <span class="nt">--version</span>
+<span class="go">xPack OpenOCD, 64-bit Open On-Chip Debugger 0.10.0+dev (2019-07-17-15:21)
+</span></code></pre></div></div>
+
+<h2 id="manual-install">Manual install</h2>
+
+<p>For all platforms, the <strong>xPack OpenOCD</strong> binaries are released as portable
+archives that can be installed in any location.</p>
+
+<p>The archives can be downloaded from the
+GitHub <a href="https://github.com/xpack-dev-tools/openocd-xpack/releases/">releases</a>
+page.</p>
+
 <h3 id="download">Download</h3>
 
 <p>The GNU/Linux versions of <strong>xPack OpenOCD</strong> are packed as plain archives.
@@ -690,7 +856,9 @@ for the executable in this location.</div>
 20 directories, 21 files
 </span></code></pre></div></div>
 
-<p>To check if OpenOCD starts and is recent, use:</p>
+<h3 id="test-1">Test</h3>
+
+<p>To check if the manually installed OpenOCD starts, use something like:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/openocd/xpack-openocd-0.10.0-13/bin/openocd <span class="nt">--version</span>
 <span class="go">xPack OpenOCD, 64-bit Open On-Chip Debugger 0.10.0+dev (2019-07-17-15:21)
@@ -736,20 +904,29 @@ for regular work you also need to grant your user permission to use the USB.</p>
 <p>If you still have problems, check your distribution documentation and
 when you have a functional solution post it on the project forum.</p>
 
+<h3 id="test-2">Test</h3>
+
+<p>To check if the manually installed OpenOCD starts, use something like:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/openocd/xpack-openocd-0.10.0-13/bin/openocd <span class="nt">--version</span>
+<span class="go">xPack OpenOCD, 64-bit Open On-Chip Debugger 0.10.0+dev (2019-07-17-15:21)
+</span></code></pre></div></div>
+
 
 	</div>
 </div>
 
 <h2 id="testing">Testing</h2>
 
-<p>To test if OpenOCD is able to connect to a specific board, it is generally
+<p>To test if the xpm installed OpenOCD is able to connect to a specific board,
+it is generally
 necessary to select the interface and the processor. As a shortcut, for
 some well known boards, there are ready made configuration files
 to set both the interface and the processor. For example, on
 macOS, to test a connection via ST/LINK v2 to the STM32F4DISCOVERY board,
 you can use the sample below:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/openocd/xpack-openocd-0.10.0-13/bin/openocd <span class="nt">-f</span> board/stm32f4discovery.cfg
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/@xpack-dev-tools/openocd/0.10.0-13.1/.content/bin/openocd <span class="nt">-f</span> board/stm32f4discovery.cfg
 <span class="go">xPack OpenOCD, 64-bit Open On-Chip Debugger 0.10.0+dev (2019-07-17-15:21)
 Licensed under GNU GPL v2
 For bug reports, read
@@ -816,7 +993,7 @@ Info : Listening on port 3333 for gdb connections
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2020 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Dec 17, 2020<br/> Site last generated: Dec 17, 2020 <br />
+<span>Page last updated:</span> Dec 18, 2020<br/> Site last generated: Dec 18, 2020 <br />
                 </div>
             </div>
 </footer>

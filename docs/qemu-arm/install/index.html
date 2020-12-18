@@ -13,7 +13,7 @@
 <link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
 <link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
 
-<!-- Begin Jekyll SEO tag v2.6.1 -->
+<!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>How to install the xPack QEMU Arm binaries</title>
 <meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="How to install the xPack QEMU Arm binaries" />
@@ -25,8 +25,10 @@
 <meta property="og:url" content="https://xpack.github.io/qemu-arm/install/" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2015-09-04T14:03:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="How to install the xPack QEMU Arm binaries" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/qemu-arm/install/"},"url":"https://xpack.github.io/qemu-arm/install/","headline":"How to install the xPack QEMU Arm binaries","dateModified":"2020-12-17T07:23:55+00:00","datePublished":"2015-09-04T14:03:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/qemu-arm/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/qemu-arm/install/","headline":"How to install the xPack QEMU Arm binaries","dateModified":"2020-12-18T12:50:29+00:00","datePublished":"2015-09-04T14:03:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -345,7 +347,7 @@
 
    <h2 id="overview">Overview</h2>
 
-<p>The <strong>xPack QEMU Arm</strong> can be installed automatically, via xpm (the
+<p>The <strong>xPack QEMU Arm</strong> can be installed automatically, via <strong>xpm</strong> (the
 recommended method), or manually, by downloading and unpacking one of the
 portable archives.</p>
 
@@ -394,7 +396,7 @@ xpm and provide a convenient method to manage paths.</p>
 
 <div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important:</b> Automatic
 path discovery for the packages from the new <code class="language-plaintext highlighter-rouge">@xpack-dev-tools</code> scope was
-added to <strong>GNU MCU Eclipse plug-ins</strong> with v4.6.1-201909231407; update
+added to <strong>GNU MCU Eclipse plug-ins</strong> with v4.6.1 in 2019-09-23; update
 older versions or configure the path manually.</div>
 
 <h3 id="uninstall">Uninstall</h3>
@@ -404,9 +406,9 @@ older versions or configure the path manually.</div>
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm uninstall <span class="nt">--global</span> @xpack-dev-tools/qemu-arm
 </code></pre></div></div>
 
-<p>(Note: not yet implemented. As a temporary workaround, simply remove the
-<code class="language-plaintext highlighter-rouge">xPacks/@xpack-dev-tools/qemu</code> folder, or one of the versioned
-subfolders.)</p>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Not yet implemented. As a temporary workaround,
+simply remove the <code class="language-plaintext highlighter-rouge">xPacks/@xpack-dev-tools/qemu</code> folder,
+or one of the versioned subfolders.</div>
 
 <h2 id="manual-install">Manual install</h2>
 
@@ -444,7 +446,7 @@ The <code class="language-plaintext highlighter-rouge">win32</code> part is conf
 <h3 id="unpack">Unpack</h3>
 
 <p>Unpack the archive and copy it into the
-<code class="language-plaintext highlighter-rouge">%userprofile%\AppData\Roaming\xPacks\qemu-arm</code>
+<code class="language-plaintext highlighter-rouge">%USERPROFILE%\AppData\Roaming\xPacks\qemu-arm</code>
 (for example <code class="language-plaintext highlighter-rouge">C:\Users\ilg\AppData\Roaming\xPacks\qemu-arm</code>) folder;
 according to Microsoft, <code class="language-plaintext highlighter-rouge">AppData\Roaming</code> is the recommended location for
 installing user specific packages.</p>
@@ -459,9 +461,11 @@ install QEMU in any folder, it is highly recommended to use this
 path, since by default the Eclipse Embedded CDT debug plug-ins search
 for the executable in this location.</div>
 
-<p>To check if QEMU starts, use the following command:</p>
+<h3 id="test">Test</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Users\ilg&gt;C:\Users\ilg\AppData\Roaming\xPacks\qemu-arm\xpack-qemu-arm-2.8.0-7\bin\qemu-system-gnuarmeclipse.exe" --version
+<p>To check if the manually installed QEMU starts, use something like:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\qemu-arm\xpack-qemu-arm-2.8.0-7\bin\qemu-system-gnuarmeclipse.exe" --version
 xPack 64-bit QEMU emulator version 2.8.0-7 (v2.8.0-7-20180523-6-gee07085299-dirty)
 Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
 </code></pre></div></div>
@@ -533,7 +537,9 @@ for the executable in this location.</div>
 8 directories, 14 files
 </span></code></pre></div></div>
 
-<p>To check if QEMU starts, use:</p>
+<h3 id="test">Test</h3>
+
+<p>To check if the manually installed QEMU starts, use something like:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7/bin/qemu-system-gnuarmeclipse <span class="nt">--version</span>
 <span class="go">xPack 64-bit QEMU emulator version 2.8.0-7 (v2.8.0-4-20190211-47-g109b69f49a-dirty)
@@ -619,7 +625,9 @@ for the executable in this location.</div>
 9 directories, 21 files
 </span></code></pre></div></div>
 
-<p>To check if QEMU starts and is recent, use:</p>
+<h3 id="test">Test</h3>
+
+<p>To check if the manually installed QEMU starts, use something like:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7/bin/qemu-system-gnuarmeclipse <span class="nt">--version</span>
 <span class="go">xPack 64-bit QEMU emulator version 2.8.0-7 (v2.8.0-4-20190211-47-g109b69f49a-dirty)
@@ -683,7 +691,7 @@ drivers required.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2020 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Dec 17, 2020<br/> Site last generated: Dec 17, 2020 <br />
+<span>Page last updated:</span> Dec 18, 2020<br/> Site last generated: Dec 18, 2020 <br />
                 </div>
             </div>
 </footer>
