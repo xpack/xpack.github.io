@@ -934,6 +934,26 @@
 
 
 {
+"title": "xPack Ninja Build v1.10.2-1 released",
+"tags": "releasesninja-buildninjabuildspeedsmall",
+"keywords": "",
+"url": "/blog/2020/12/19/ninja-build-v1-10-2-1-released/",
+"summary": "<p>Version 1.10.2-1 is a new release of the <strong>xPack Ninja Build</strong> package.</p>"
+}
+,
+
+
+{
+"title": "xPack GNU Arm Embedded GCC v10.2.1-1.1 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
+"keywords": "",
+"url": "/blog/2020/12/19/arm-none-eabi-gcc-v10-2-1-1-1-released/",
+"summary": "<p>Version 10.2.1-1.1 is a new release of <strong>xPack GNU Arm Embedded GCC</strong>, following Arm release from Dec 11, 2020 (version <strong>10-2020-q4-major</strong>).</p>"
+}
+,
+
+
+{
 "title": "xPack CMake v3.19.1-1 released",
 "tags": "releasescmakebuild",
 "keywords": "",
