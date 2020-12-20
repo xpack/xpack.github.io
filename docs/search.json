@@ -934,6 +934,16 @@
 
 
 {
+"title": "xPack QEMU Arm v2.8.0-11 released",
+"tags": "releasesqemuemulatorarmcortex-m",
+"keywords": "",
+"url": "/blog/2020/12/20/qemu-arm-v2-8-0-11-released/",
+"summary": "<p>Version 2.8.0-11 is a maintenance release; it fixes one bug and updates to the new, more robust, build scripts.</p>"
+}
+,
+
+
+{
 "title": "xPack Ninja Build v1.10.2-1 released",
 "tags": "releasesninja-buildninjabuildspeedsmall",
 "keywords": "",
