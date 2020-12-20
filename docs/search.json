@@ -938,7 +938,7 @@
 "tags": "releasesqemuemulatorarmcortex-m",
 "keywords": "",
 "url": "/blog/2020/12/20/qemu-arm-v2-8-0-11-released/",
-"summary": "<p>Version 2.8.0-11 is a maintenance release; it fixes one bug and updates to the new, more robust, build scripts.</p>"
+"summary": "<p>Version 2.8.0-11 is a maintenance release; it add support for STM32F407VGTx and STM32F429ZITx.</p>"
 }
 ,
 
