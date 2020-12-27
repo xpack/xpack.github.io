@@ -5,16 +5,16 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 27 Dec 2020 19:20:37 +0000</pubDate>
-        <lastBuildDate>Sun, 27 Dec 2020 19:20:37 +0000</lastBuildDate>
+        <pubDate>Sun, 27 Dec 2020 19:26:25 +0000</pubDate>
+        <lastBuildDate>Sun, 27 Dec 2020 19:26:25 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
         
         <item>
             <title>xPack Windows Build Tools v4.2.1-1 released</title>
             <description>&lt;p&gt;This is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of &lt;strong&gt;Windows Build Tools&lt;/strong&gt; (formerly partof the GNU MCU/ARM Eclipse project).&lt;/p&gt;</description>
             <pubDate>Sun, 27 Dec 2020 17:42:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2020/12/27/windows-build-tools-v4-2-1-1-released-copy/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2020/12/27/windows-build-tools-v4-2-1-1-released-copy/</guid>
+            <link>https://xpack.github.io/blog/2020/12/27/windows-build-tools-v4-2-1-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2020/12/27/windows-build-tools-v4-2-1-1-released/</guid>
             
             <category>releases</category>
             
