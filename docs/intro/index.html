@@ -28,19 +28,19 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack 101" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/intro/"},"@type":"BlogPosting","url":"https://xpack.github.io/intro/","headline":"xPack 101","dateModified":"2020-12-20T16:58:35+00:00","datePublished":"2019-06-26T05:57:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/intro/"},"@type":"BlogPosting","url":"https://xpack.github.io/intro/","headline":"xPack 101","dateModified":"2020-12-27T18:48:22+00:00","datePublished":"2019-06-26T05:57:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?201907181733">
+<link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?202012261617">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="https://xpack.github.io/css/customstyles.css?201907181733">
-<link rel="stylesheet" href="https://xpack.github.io/css/boxshadowproperties.css?201907181733">
+<link rel="stylesheet" href="https://xpack.github.io/css/customstyles.css?202012261617">
+<link rel="stylesheet" href="https://xpack.github.io/css/boxshadowproperties.css?202012261617">
 <!-- most color styles are extracted out to here -->
-<link rel="stylesheet" href="https://xpack.github.io/css/theme-blue.css?201907181733">
+<link rel="stylesheet" href="https://xpack.github.io/css/theme-blue.css?202012261617">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -159,13 +159,28 @@
                 
                 
                 
-                <li class="active"><a href="/news">News</a></li>
-                
-                
-                
                 <!-- entries with drop-downs appear here -->
                 <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
                 
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">News<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="/news/">Latest News</a></li>
+                        
+                        
+                        
+                        <li><a href="/news/archive/">Archive</a></li>
+                        
+                        
+                        
+                        <li><a href="/tags/">Tags</a></li>
+                        
+                        
+                    </ul>
+                </li>
                 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
@@ -282,7 +297,7 @@
           
           
           
-          <li class="active"><a title="Intro" href="/intro/">Intro</a></li>
+          <li class="active"><a title="Intro (xPack 101)" href="/intro/">Intro (xPack 101)</a></li>
           
           
           
@@ -290,13 +305,6 @@
           
           
           <li><a title="Install prerequisites" href="/install/">Install prerequisites</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="About" href="/about/">About</a></li>
           
           
           
@@ -416,36 +424,6 @@
       
   
   <li>
-      <a title="News" href="#">News</a>
-      <ul>
-          
-          
-          
-          <li><a title="Latest News" href="/news/">Latest News</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="Archive" href="/news/archive/">Archive</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="Tags" href="/tags/">Tags</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
-  
-  <li>
       <a title="Support" href="#">Support</a>
       <ul>
           
@@ -515,12 +493,19 @@
       
   
   <li>
-      <a title="License" href="#">License</a>
+      <a title="Project" href="#">Project</a>
       <ul>
           
           
           
-          <li><a class="extern" title="MIT" href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">MIT</a></li>
+          <li><a class="extern" title="License (MIT)" href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">License (MIT)</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="About" href="/about/">About</a></li>
           
           
           
@@ -612,7 +597,7 @@ a simple and uniform solution of
 installing different versions of the same package in different
 folders, and managing dependencies.</p>
 
-<h2 id="why-bothering-to-manage-versions-when-auto-configure-can-sort-out-the-differences">Why bothering to manage versions when auto-configure can sort out the differences?</h2>
+<h2 id="why-bother-to-manage-versions-when-auto-configure-can-sort-out-the-differences">Why bother to manage versions when auto-configure can sort out the differences?</h2>
 
 <p>The traditional way of dealing with different versions and variations between
 systems is to add a complex auto-configure mechanism that is able to detect
@@ -655,7 +640,7 @@ depend on other shared libraries or tools.</li>
 
 <p><strong>xPack</strong>, pronounced <em><strong>ɛks-pak</strong></em>, can be understood as <em>Universal Package</em>,
 or <em>Any Type Package</em>, and tries to suggest that, when compared to
-npm packages (which are basically about JavaScript), xPacks are more
+npm packages (which are basically JavaScript packages), xPacks are more
 general, and not linked/limited to a specific programming language.</p>
 
 <p>Initially the <em>x</em> came from <em>eXtended</em>, so <em>eXtended Packages</em> can
@@ -815,9 +800,9 @@ installing the module, npm will
 add a folder <code class="language-plaintext highlighter-rouge">node_modules/.bin</code> where a link to the <code class="language-plaintext highlighter-rouge">xpbuild</code> executable
 will be created (or a <code class="language-plaintext highlighter-rouge">xpbuild.cmd</code> stub on Windows).</p>
 
-<p>TODO: show the output of tree on the node_modules folder.</p>
+<p>TODO: show the output of the <code class="language-plaintext highlighter-rouge">tree</code> command on the <code class="language-plaintext highlighter-rouge">node_modules</code> folder.</p>
 
-<p>When running actions like <code class="language-plaintext highlighter-rouge">npm run build</code>, the <code class="language-plaintext highlighter-rouge">PATH</code> is automatically
+<p>When running actions like <code class="language-plaintext highlighter-rouge">xpm run build</code>, the <code class="language-plaintext highlighter-rouge">PATH</code> is automatically
 adjusted to <code class="language-plaintext highlighter-rouge">xpacks/.bin:node_modules/.bin:$PATH</code>, so the exact versions
 of the tools required in the dependencies list will be preferred over any
 existing tools with the same names that might be present in the <code class="language-plaintext highlighter-rouge">PATH</code>.</p>
@@ -1015,7 +1000,7 @@ for an xPack is as simple as this:</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2020 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Dec 20, 2020<br/> Site last generated: Dec 20, 2020 <br />
+<span>Page last updated:</span> Dec 27, 2020<br/> Site last generated: Dec 27, 2020 <br />
                 </div>
             </div>
 </footer>

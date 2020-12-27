@@ -5,9 +5,33 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 20 Dec 2020 16:59:47 +0000</pubDate>
-        <lastBuildDate>Sun, 20 Dec 2020 16:59:47 +0000</lastBuildDate>
+        <pubDate>Sun, 27 Dec 2020 19:20:37 +0000</pubDate>
+        <lastBuildDate>Sun, 27 Dec 2020 19:20:37 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>xPack Windows Build Tools v4.2.1-1 released</title>
+            <description>&lt;p&gt;This is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of &lt;strong&gt;Windows Build Tools&lt;/strong&gt; (formerly partof the GNU MCU/ARM Eclipse project).&lt;/p&gt;</description>
+            <pubDate>Sun, 27 Dec 2020 17:42:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2020/12/27/windows-build-tools-v4-2-1-1-released-copy/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2020/12/27/windows-build-tools-v4-2-1-1-released-copy/</guid>
+            
+            <category>releases</category>
+            
+            <category>windows-build-tools</category>
+            
+            <category>build</category>
+            
+            <category>make</category>
+            
+            <category>rm</category>
+            
+            <category>mkdir</category>
+            
+            <category>busybox</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack QEMU Arm v2.8.0-11 released</title>
@@ -191,20 +215,6 @@
             <category>arm</category>
             
             <category>cortex-m</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack OpenOCD v0.10.0-15 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/openocd/&quot;&gt;The xPack OpenOCD&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of&lt;a href=&quot;http://openocd.org&quot;&gt;OpenOCD&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Tue, 13 Oct 2020 18:33:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2020/10/13/openocd-v0-10-0-15-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2020/10/13/openocd-v0-10-0-15-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>openocd</category>
             
             
         </item>

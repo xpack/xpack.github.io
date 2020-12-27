@@ -147,8 +147,8 @@ table > thead > tr > th {
     vertical-align: bottom;
     border-bottom: 2px solid #ddd;
     text-transform: none;
-    background-color: #777;
-    color: white;
+    background-color: #EEE;
+    color: inherit;
     text-align: left;
 }
 table > caption + thead > tr:first-child > th,

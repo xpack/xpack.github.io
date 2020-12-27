@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>The build process (outdated) | The xPack Project</title>
+<link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
+
+
+<link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
+<link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>The build process (outdated)</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="The build process (outdated)" />
+<meta name="author" content="Liviu Ionescu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<meta property="og:description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<link rel="canonical" href="https://xpack.github.io/xcdl/guide/build-process/" />
+<meta property="og:url" content="https://xpack.github.io/xcdl/guide/build-process/" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-10-25T10:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The build process (outdated)" />
+<script type="application/ld+json">
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xcdl/guide/build-process/"},"@type":"BlogPosting","url":"https://xpack.github.io/xcdl/guide/build-process/","headline":"The build process (outdated)","dateModified":"2020-12-27T18:48:22+00:00","datePublished":"2015-10-25T10:00:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?202012261617">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://xpack.github.io/css/customstyles.css?202012261617">
+<link rel="stylesheet" href="https://xpack.github.io/css/boxshadowproperties.css?202012261617">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="https://xpack.github.io/css/theme-blue.css?202012261617">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://xpack.github.io/js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="https://xpack.github.io/js/toc.js"></script>
+<script src="https://xpack.github.io/js/customscripts.js"></script>
+
+<!-- Use absolute URLs, to cover preview cases too -->
+<link rel="shortcut icon" href="https://xpack.github.io/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="https://xpack.github.io/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://xpack.github.io/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://xpack.github.io/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://xpack.github.io/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://xpack.github.io/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://xpack.github.io/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://xpack.github.io/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://xpack.github.io/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://xpack.github.io/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://xpack.github.io/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://xpack.github.io/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://xpack.github.io/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://xpack.github.io/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://xpack.github.io/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://xpack.github.io/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks" style="">
+        <div style="display: inline-block; float: left; margin-top: 8px; margin-left: auto; margin-right: 10px;"><img src="/images/company_logo.png" alt="logo" width="32px" height="32px"/></div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="/">&nbsp;<span class="projectTitle"> The xPack Project</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">News<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="/news/">Latest News</a></li>
+                        
+                        
+                        
+                        <li><a href="/news/archive/">Archive</a></li>
+                        
+                        
+                        
+                        <li><a href="/tags/">Tags</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="http://micro-os-plus.github.io" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack" target="_blank" rel="noopener">xPack Core Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/eclipse-embed-cdt/" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/micro-os-plus/" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://gitter.im/xpack/" target="_blank" rel="noopener">The xPack Chatroom</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '/search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="The build process (outdated)">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3 sticky" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle">xcdl </li>
+  
+  
+  
+      
+  
+  <li>
+      <a title="Getting Started" href="#">Getting Started</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/xcdl/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Old home page" href="/xcdl/outdated/">Old home page</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">The build process (outdated)</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+   <p>Note: this page is still based on the Python version!</p>
+
+<p>Some XCDL properties describe the consequences of manipulating configuration options. There are two main types of consequences.</p>
+
+<ul>
+  <li>Typically enabling a configuration option results in one or more <code class="language-plaintext highlighter-rouge">#define</code>’s in a configuration header file, and properties that affect this include <code class="language-plaintext highlighter-rouge">&lt;generatedHeader&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;generatedDefinition&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;valueFormat&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;childrenGeneratedHeader&gt;</code> (<em>define</em>, <em>define_proc</em> and <em>no_define</em>).</li>
+  <li>Enabling a configuration option can also affect the build process, primarily determining which files are used in the built. Properties related to the build process include <code class="language-plaintext highlighter-rouge">&lt;sourceFile&gt;</code> and make.</li>
+</ul>
+
+<p>This chapter describes the whole build process, including details such as compiler flags and custom build steps.</p>
+
+<p>Part of the overall design of the XCDL component framework is that it can interact with at least two different build systems. The most obvious of these is <em>GNU make</em>: the component framework can generate one or more makefiles, and the user can then build the various packages simply by invoking <code class="language-plaintext highlighter-rouge">make</code>. The second build system supported is Eclipse CDT: it should be possible to incorporate part of the component framework into an Eclipse plug-in to generate CDT projects using XCDL components and to later mange them.</p>
+
+<p>However it should also be possible to use XCDL components in environments : the component framework can be queried about what is involved in building a given configuration, and this information can then be fed into the desired build system. Component writers should be aware of this possibility. Most packages will not be affected because the compile property can be used to provide all the required information, but care has to be taken when writing custom build steps.</p>
+
+<h2 id="build-tree-generation">Build tree generation</h2>
+
+<p>It is necessary to create an XCDL configuration before anything can be built. With some tools such as the graphical configuration tool this configuration will be created in memory, and it is not essential to produce an .xcdlconfig.xml file first (although it is still very desirable to generate such a configuration file at some point, to allow the configuration to be re-loaded later on). With other tools the file is generated first, for example using ecosconfig new, and then a build tree is generated using ecosconfig tree. The savefile contains all the information needed to recreate a configuration.</p>
+
+<p>An XCDL build actually involves three separate trees. The component repository acts as the source tree, and for application developers this should be considered a read-only resource. The build tree is where all intermediate files, especially object files, are created. In some instances there may also be an install tree where the result of the build end up. Following a successful build it is possible to take just the install tree and use it for developing an application: none of the files in the component repository or the build tree are needed for that. The build tree will be needed again only if the user changes the configuration. However the install tree does not contain copies of all of the documentation for the various packages, instead the documentation is kept only in the component repository.</p>
+
+<p>By default the build tree, the install tree, and the configuration file all reside in the same directory tree. This is not a requirement, both the install tree and the configuration can be anywhere in the file system.</p>
+
+<p>It is worth noting that the component framework does not separate the usual make and make install stages. A build always populates the install tree, and any make install step would be redundant.</p>
+
+<p>The install tree will always begin with two directories, include for the exported header files and lib for the main library libtarget.a and other files such as the linker script. In addition there will be a subdirectory include/pkgconf containing the configuration header files, which are generated or updated at the same time the build tree is created or updated. More details of header file generation are given below. Additional include subdirectories such as sys and cyg/kernel will be created during the first build, when each package’s exported header files are copied to the install tree. The install tree may also end up with additional subdirectories during a build, for example as a result of custom build steps.</p>
+
+<p>The component framework does not define the structure of the build tree, and this may vary between build systems. It can be assumed that each package in the configuration will have its own directory in the build tree, and that this directory will be used for storing the package’s object files and as the current directory for any build steps for that package. This avoids problems when custom build steps from different packages generate intermediate files which happen to have the same name.</p>
+
+<p>Some build systems may allow application developers to copy a source file from the component repository to the build tree and edit the copy. This allows users to experiment with small changes, for example to add a couple of lines of debugging to a package, without having to modify the master copy in the component repository which could be shared by several projects or several people. Functionality such as this is transparent to component writers, and it is the responsibility of the build system to make sure that the right thing happens.</p>
+
+<p>Note: There are some unresolved issues related to the build tree and install tree. Specifically, when up- dating an existing build or install tree, what should happen to unexpected files or directories? Suppose the user started with a configuration that included the math library, and the install tree contains header files include/math.h and include/sys/ieeefp.h. The user then removed the math library from the configura- tion and is updating the build tree. It is now desirable to remove these header files from the install tree, so that if any application code still attempts to use the math library this will fail at compile time rather than at link time. There will also be some object files in the existing libtarget.a library which are no longer appropriate, and there may be other files in the install tree as a result of custom build steps. The build tree will still contain a directory for the math library, which no longer serves any purpose. However, it is also possible that some of the files in the build tree or the install tree were placed there by the user, in which case removing them automatically would be a bad idea. At present the component framework does not keep track of exactly what should be present in the build and install trees, so it cannot readily determine which files or library members are obsolete and can safely be removed, and which ones are unexpected and need to be reported to the user. This will be addressed in a future release of the system.</p>
+
+<h2 id="configuration-header-file-generation">Configuration Header File Generation</h2>
+
+<p>Configuration options can affect a build in two main ways. First, enabling a configuration option or other CDL entity can result in various files being built and added to a library, thus providing functionality to the application code. However this mechanism can only operate at a rather coarse grain, at the level of entire source files. Hence the component framework also generates configuration header files containing mainly C preprocessor <code class="language-plaintext highlighter-rouge">#define</code> directives. Package source code can then <code class="language-plaintext highlighter-rouge">#include</code> the appropriate header files and use <code class="language-plaintext highlighter-rouge">#if</code>, <code class="language-plaintext highlighter-rouge">#ifdef</code> and <code class="language-plaintext highlighter-rouge">#ifndef</code> directives to adapt accordingly. In this way configuration options can be used to enable or disable entire functions within a source file or just a single line, whichever is appropriate.</p>
+
+<p>The configuration header files end up in the include/pkgconf subdirectory of the install tree. There will be one header file for the system as a whole, pkgconf/system.h, and there will be additional header files for each package, for example pkgconf/kernel.h. The header files are generated when creating or updating the build and install trees, which needs to happen after every change to the configuration.</p>
+
+<p>The component framework processes each package in the configuration one at a time. The exact order in which the packages are processed is not defined, so the order in which <code class="language-plaintext highlighter-rouge">#define</code>’s will end up in the global pkgconf/system.h header may vary. However for any given configuration the order should remain consistent until packages are added to or removed from the system. This avoids unnecessary changes to the global header file and hence unnecessary rebuilds of the packages and of application code because of header file dependency handling.</p>
+
+<p>Within a given package the various components, options and interfaces will be processed in the order in which they were defined in the corresponding CDL scripts. Typically the data in the configuration headers consists only of a sequence of <code class="language-plaintext highlighter-rouge">#define</code>’s so the order in which these are generated is irrelevant, but some properties such as define_proc can be used to add arbitrary data to a configuration header and hence there may be dependencies on the order. It should be noted that re-parenting an option below some other package has no effect on which header file will contain the corresponding <code class="language-plaintext highlighter-rouge">#define</code>: the preprocessor directives will always end up in the header file for the package that defines the option, or in the global configuration header.</p>
+
+<p>There are six properties which affect the process of generating header files: define_header, no_define, de- fine_format, define, if_define, and define_proc.</p>
+
+<p>The define_header property can only occur in the body of a cdl_package command and specifies the name of the header file which should contain the package’s configuration data, for example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;package name="somePackage"&gt;
+    define_header xyzzy.h
+&lt;/package&gt;
+</code></pre></div></div>
+
+<p>Given such a define_header property the component framework will use the file pkgconf/xyzzy.h for the package’s configuration data. If a package does not have a define_header property then a suitable file name is constructed from the package’s name. This involves:</p>
+
+<ol>
+  <li>All characters in the package name up to and including the first underscore are removed. For example CYGPKG_KERNEL is converted to KERNEL, and CYGPKG_HAL_ARM is converted to HAL_ARM.</li>
+  <li>Any upper case letters in the resulting string will be converted to lower case, yielding e.g. kernel and hal_arm.</li>
+  <li>A .h suffix is appended, yielding e.g. kernel.h and hal_arm.h.</li>
+</ol>
+
+<p>Because of the naming restrictions on configuration options, this should result in a valid filename. There is a small possibility of a file name class, for example CYGPKG_PLUGH and CYGPKG_plugh would both end up trying to use the same header file pkgconf/plugh.h, but the use of lower case letters for package names violates the naming conventions. It is not legal to use the define_header property to put the configuration data for several packages in a single header file. The resulting behaviour is undefined.</p>
+
+<p>Once the name of the package’s header file has been determined and the file has been opened, the various components, options and interfaces in the package will be processed starting with the package itself. The following steps are involved:</p>
+
+<p>TODO: add them</p>
+
+<h2 id="building-µos">Building µOS++</h2>
+
+<p>TBD</p>
+
+<h2 id="building-test-cases">Building Test Cases</h2>
+
+<p>TBD</p>
+
+<h2 id="credits">Credits</h2>
+
+<p>The initial content of this page was based on <em>Chapter 4. The Build Process</em> of <em>The eCos Component Writer’s Guide</em>, by Bart Veer and John Dallaway, published in 2001.</p>
+
+
+        
+    <a target="_blank" rel="noopener" href="https://github.com/xpack/xpack.github.io/blob/master/pages/core/xcdl/guide/build-process.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
+
+    
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2020 Liviu Ionescu. All rights reserved. <br />
+<span>Page last updated:</span> Dec 27, 2020<br/> Site last generated: Dec 27, 2020 <br />
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-16767008-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-16767008-13');
+</script>
+
+
+</html>

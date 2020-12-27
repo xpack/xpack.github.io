@@ -28,19 +28,19 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="The XCDL format" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xcdl/files/xcdl-json/"},"@type":"BlogPosting","url":"https://xpack.github.io/xcdl/files/xcdl-json/","headline":"The XCDL format","dateModified":"2020-12-20T16:58:35+00:00","datePublished":"2017-10-10T16:59:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xcdl/files/xcdl-json/"},"@type":"BlogPosting","url":"https://xpack.github.io/xcdl/files/xcdl-json/","headline":"The XCDL format","dateModified":"2020-12-27T18:48:22+00:00","datePublished":"2017-10-10T16:59:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?201907181733">
+<link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?202012261617">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="https://xpack.github.io/css/customstyles.css?201907181733">
-<link rel="stylesheet" href="https://xpack.github.io/css/boxshadowproperties.css?201907181733">
+<link rel="stylesheet" href="https://xpack.github.io/css/customstyles.css?202012261617">
+<link rel="stylesheet" href="https://xpack.github.io/css/boxshadowproperties.css?202012261617">
 <!-- most color styles are extracted out to here -->
-<link rel="stylesheet" href="https://xpack.github.io/css/theme-blue.css?201907181733">
+<link rel="stylesheet" href="https://xpack.github.io/css/theme-blue.css?202012261617">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -159,13 +159,28 @@
                 
                 
                 
-                <li class="active"><a href="/news">News</a></li>
-                
-                
-                
                 <!-- entries with drop-downs appear here -->
                 <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
                 
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">News<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="/news/">Latest News</a></li>
+                        
+                        
+                        
+                        <li><a href="/news/archive/">Archive</a></li>
+                        
+                        
+                        
+                        <li><a href="/tags/">Tags</a></li>
+                        
+                        
+                    </ul>
+                </li>
                 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
@@ -282,6 +297,13 @@
           
           
           
+          
+          
+          <li><a title="Old home page" href="/xcdl/outdated/">Old home page</a></li>
+          
+          
+          
+          
       </ul>
    </li>
      
@@ -343,6 +365,9 @@ $('#toc').on('click', 'a', function() {
 
 <p>The <strong>XCDL</strong> format describes metadata used to define various objects, from boards and devices, to software components.</p>
 
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Version 0.3.0 is currnetly <em>work in
+progress</em> and will be implemented in Eclipse and other tools when ready.</div>
+
 <h2 id="file-conventions">File conventions</h2>
 
 <h3 id="json-properties">JSON Properties</h3>
@@ -361,7 +386,8 @@ $('#toc').on('click', 'a', function() {
 
 <h2 id="file-names">File names</h2>
 
-<p>Specific files have names with a prefix, in singular or plural:</p>
+<p>By definition, XDL files are identified by the suffix <code class="language-plaintext highlighter-rouge">xcdl.json</code>, and
+can be prefixed by anything, preferably separated by a dash, like:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">devices-xcdl.json</code> or <code class="language-plaintext highlighter-rouge">device-xcdl.json</code></li>
@@ -389,9 +415,14 @@ $('#toc').on('click', 'a', function() {
       <td style="text-align: left">The version is used by the parser to identify different file formats.</td>
     </tr>
     <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">cpus</code></td>
+      <td style="text-align: left">object</td>
+      <td style="text-align: left">A parent for all CPU related definitions.</td>
+    </tr>
+    <tr>
       <td style="text-align: left"><code class="language-plaintext highlighter-rouge">mcus</code></td>
       <td style="text-align: left">object</td>
-      <td style="text-align: left">A parent for all MCU related definitions.</td>
+      <td style="text-align: left">A parent for all MCU related definitions (deprecated since 0.3 in favour of <code class="language-plaintext highlighter-rouge">cpus</code>).</td>
     </tr>
   </tbody>
 </table>
@@ -399,8 +430,8 @@ $('#toc').on('click', 'a', function() {
 <p>Example</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-    </span><span class="nl">"schemaVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1.0"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"mcus"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"schemaVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.3.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cpus"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nl">"families"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="nl">"fe"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                 </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
@@ -410,9 +441,30 @@ $('#toc').on('click', 'a', function() {
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h3 id="the-mcu-object">The <em>mcu</em> object</h3>
+<h3 id="the-cpu-object-since-03">The <em>cpu</em> object (since 0.3)</h3>
 
-<p>The MCU is the top-most object, and usually contains one MCU family.</p>
+<p>The CPU is the top-most object, and usually contains one CPU/MCU family.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">families</code></td>
+      <td style="text-align: left">collection</td>
+      <td style="text-align: left">A map of family objects. The keys are internal IDs used to refer to the family.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="the-mcu-object-deprecated-since-03">The <em>mcu</em> object (deprecated since 0.3)</h3>
+
+<p>The MCU is the top-most object, and usually contains one CPU/MCU family.</p>
 
 <table>
   <thead>
@@ -441,7 +493,10 @@ $('#toc').on('click', 'a', function() {
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">The <code class="language-plaintext highlighter-rouge">mcus</code> property of the root object.</td>
+      <td style="text-align: left">The <code class="language-plaintext highlighter-rouge">cpus</code> property of the root object.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">The <code class="language-plaintext highlighter-rouge">mcus</code> property of the root object (deprecated since 0.3).</td>
     </tr>
   </tbody>
 </table>
@@ -719,7 +774,13 @@ $('#toc').on('click', 'a', function() {
 
 <p>Versions are listed in reverse chronological order.</p>
 
-<h4 id="v020-2017-12-27">v0.2.0 (2017-12-27)</h4>
+<h3 id="v030-2020-12-26">v0.3.0 (2020-12-26)</h3>
+
+<ul>
+  <li>for greater generality, use <code class="language-plaintext highlighter-rouge">cpus</code> instead of <code class="language-plaintext highlighter-rouge">mcus</code>.</li>
+</ul>
+
+<h3 id="v020-2017-12-27">v0.2.0 (2017-12-27)</h3>
 
 <ul>
   <li>simplify <code class="language-plaintext highlighter-rouge">supplier</code>, keep only <code class="language-plaintext highlighter-rouge">id</code> and <code class="language-plaintext highlighter-rouge">displayName</code></li>
@@ -727,7 +788,7 @@ $('#toc').on('click', 'a', function() {
   <li>rename <code class="language-plaintext highlighter-rouge">macros</code> to <code class="language-plaintext highlighter-rouge">defines</code></li>
 </ul>
 
-<h4 id="v010-2017-12-08">v0.1.0 (2017-12-08)</h4>
+<h3 id="v010-2017-12-08">v0.1.0 (2017-12-08)</h3>
 
 <ul>
   <li>preliminary version, only some device related fields.</li>
@@ -755,7 +816,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2020 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Dec 20, 2020<br/> Site last generated: Dec 20, 2020 <br />
+<span>Page last updated:</span> Dec 27, 2020<br/> Site last generated: Dec 27, 2020 <br />
                 </div>
             </div>
 </footer>

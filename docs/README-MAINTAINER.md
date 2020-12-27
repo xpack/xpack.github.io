@@ -1,3 +1,5 @@
+[![Jekyll site CI](https://github.com/xpack/web-jekyll/workflows/Jekyll%20site%20CI/badge.svg)](https://github.com/xpack/web-jekyll/actions?query=workflow%3A%22Jekyll+site+CI%22)
+
 # Maintainer info
 
 This page documents how to maintain this site and update the web pages.
