@@ -5,9 +5,33 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 27 Dec 2020 19:26:25 +0000</pubDate>
-        <lastBuildDate>Sun, 27 Dec 2020 19:26:25 +0000</lastBuildDate>
+        <pubDate>Mon, 28 Dec 2020 14:06:21 +0000</pubDate>
+        <lastBuildDate>Mon, 28 Dec 2020 14:06:21 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>xPack Windows Build Tools v4.2.1-2 released</title>
+            <description>&lt;p&gt;This is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of &lt;strong&gt;Windows Build Tools&lt;/strong&gt; (formerly partof the GNU MCU/ARM Eclipse project).&lt;/p&gt;</description>
+            <pubDate>Mon, 28 Dec 2020 12:38:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2020/12/28/windows-build-tools-v4-2-1-2-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2020/12/28/windows-build-tools-v4-2-1-2-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>windows-build-tools</category>
+            
+            <category>build</category>
+            
+            <category>make</category>
+            
+            <category>rm</category>
+            
+            <category>mkdir</category>
+            
+            <category>busybox</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Windows Build Tools v4.2.1-1 released</title>
@@ -195,26 +219,6 @@
             <category>python</category>
             
             <category>ninja</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack QEMU Arm v2.8.0-10 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/qemu-arm/&quot;&gt;The xPack QEMU Arm&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;http://www.qemu.org&quot;&gt;QEMU&lt;/a&gt;, with several extensions for Arm Cortex-Mdevices.&lt;/p&gt;</description>
-            <pubDate>Wed, 14 Oct 2020 18:47:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2020/10/14/qemu-arm-v2-8-0-10-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2020/10/14/qemu-arm-v2-8-0-10-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>qemu</category>
-            
-            <category>emulator</category>
-            
-            <category>arm</category>
-            
-            <category>cortex-m</category>
             
             
         </item>

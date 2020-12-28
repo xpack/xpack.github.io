@@ -968,6 +968,16 @@
 
 
 {
+"title": "xPack Windows Build Tools v4.2.1-2 released",
+"tags": "releaseswindows-build-toolsbuildmakermmkdirbusybox",
+"keywords": "",
+"url": "/blog/2020/12/28/windows-build-tools-v4-2-1-2-released/",
+"summary": "<p>Version 4.2.1-2 is maintenance release; it adds the <code class="language-plaintext highlighter-rouge">cp.exe</code> binary.</p>"
+}
+,
+
+
+{
 "title": "xPack Windows Build Tools v4.2.1-1 released",
 "tags": "releaseswindows-build-toolsbuildmakermmkdirbusybox",
 "keywords": "",
