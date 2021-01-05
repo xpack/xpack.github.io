@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The metadata used by the build tools.">
+<meta name="keywords" content=" ">
+<title>The xPack Build Definitions | The xPack Project</title>
+<link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
+
+
+<link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
+<link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>The xPack Build Definitions</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="The xPack Build Definitions" />
+<meta name="author" content="Liviu Ionescu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<meta property="og:description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<link rel="canonical" href="https://xpack.github.io/metadata/build/" />
+<meta property="og:url" content="https://xpack.github.io/metadata/build/" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-10-09T13:46:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The xPack Build Definitions" />
+<script type="application/ld+json">
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/metadata/build/"},"@type":"BlogPosting","url":"https://xpack.github.io/metadata/build/","headline":"The xPack Build Definitions","dateModified":"2021-01-05T09:58:26+00:00","datePublished":"2017-10-09T13:46:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?202101021512">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://xpack.github.io/css/customstyles.css?202101021512">
+<link rel="stylesheet" href="https://xpack.github.io/css/boxshadowproperties.css?202101021512">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="https://xpack.github.io/css/theme-blue.css?202101021512">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://xpack.github.io/js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="https://xpack.github.io/js/toc.js"></script>
+<script src="https://xpack.github.io/js/customscripts.js"></script>
+
+<!-- Use absolute URLs, to cover preview cases too -->
+<link rel="shortcut icon" href="https://xpack.github.io/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="https://xpack.github.io/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://xpack.github.io/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://xpack.github.io/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://xpack.github.io/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://xpack.github.io/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://xpack.github.io/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://xpack.github.io/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://xpack.github.io/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://xpack.github.io/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://xpack.github.io/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://xpack.github.io/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://xpack.github.io/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://xpack.github.io/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://xpack.github.io/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://xpack.github.io/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks" style="">
+        <div style="display: inline-block; float: left; margin-top: 8px; margin-left: auto; margin-right: 10px;"><img src="/images/company_logo.png" alt="logo" width="32px" height="32px"/></div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="/">&nbsp;<span class="projectTitle"> The xPack Project</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">News<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="/news/">Latest News</a></li>
+                        
+                        
+                        
+                        <li><a href="/news/archive/">Archive</a></li>
+                        
+                        
+                        
+                        <li><a href="/tags/">Tags</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="http://micro-os-plus.github.io" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack" target="_blank" rel="noopener">xPack Core Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/eclipse-embed-cdt/" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/micro-os-plus/" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://gitter.im/xpack/" target="_blank" rel="noopener">The xPack Chatroom</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '/search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="The xPack Build Definitions">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3 sticky" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle"> </li>
+  
+  
+  
+  <li>
+      <a title="Getting Started" href="#">Getting Started</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Intro (xPack 101)" href="/intro/">Intro (xPack 101)</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Install prerequisites" href="/install/">Install prerequisites</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Core Tools" href="#">Core Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="xpm" href="/xpm/">xpm</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpbuild" href="/xpbuild/">xpbuild</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpninja" href="/xpninja/">xpninja</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpmake" href="/xpmake/">xpmake</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpcdl" href="/xpcdl/">xpcdl</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="3rd Party Tools" href="#">3rd Party Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="arm-none-eabi-gcc" href="/arm-none-eabi-gcc/">arm-none-eabi-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="riscv-none-embed-gcc" href="/riscv-none-embed-gcc/">riscv-none-embed-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="openocd" href="/openocd/">openocd</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="qemu-arm" href="/qemu-arm/">qemu-arm</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="windows-build-tools" href="/windows-build-tools/">windows-build-tools</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="ninja-build" href="/ninja-build/">ninja-build</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="cmake" href="/cmake/">cmake</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="meson-build" href="/meson-build/">meson-build</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Support" href="#">Support</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/support/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a class="extern" title="The xPack Forums" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Developer Info" href="#">Developer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/develop/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="JavaScript Style Guide" href="/develop/js-style-guide/">JavaScript Style Guide</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Links" href="/develop/links/">Links</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Maintainer Info" href="#">Maintainer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/maintain/">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Project" href="#">Project</a>
+      <ul>
+          
+          
+          
+          <li><a class="extern" title="License (MIT)" href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">License (MIT)</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="About" href="/about/">About</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">The xPack Build Definitions</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">The metadata used by the build tools.
+</div>
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+   <div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Preliminary specifications! Before the first stable release, they can change at any time, without notice.</div>
+
+<h2 id="overview">Overview</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">xbuild.json</code> files are intended to be consumed by
+the xPack build tools.</p>
+
+<p>The formal definitions are available in the JSON schema
+<a href="/schemas/xbuild-0.3.0.json">xbuild-0.3.0.json</a> file.</p>
+
+<p>As for other managed build systems, the result of the xPack build generator
+process is a set of command lines to be passed to the builder.</p>
+
+<p>To construct these command lines, the metadata files should
+provide:</p>
+
+<ul>
+  <li>a way to construct the list of source files that enter the build
+(explicit file names or recursive searches in folders)</li>
+  <li>for each source file, a method to select a tool to be used to process it</li>
+  <li>all the details required to fill in the command lines (compiler options,
+defined symbols, header folder/files, etc).</li>
+</ul>
+
+<p>A typical blinky project might look like:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"schemaVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.3.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"includeMetadata"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"xpacks/toolchains-metadata/toolchains-gcc-xbuild.json"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"STM32F4DISCOVERY Blinky project"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"blinky"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"target"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> 
+    </span><span class="nl">"platform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"stm32f4-discovery"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cpu"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"device"</span><span class="p">:</span><span class="w"> </span><span class="s2">"stm32f407vg"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"toolsCollections"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> 
+    </span><span class="s2">"xpack-arm-none-eabi-gcc"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c++"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"builder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ninja"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"buildConfigurations"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"debug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> 
+      </span><span class="nl">"addSourcePaths"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"src"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"removeSourcePaths"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"src/stm32f4-hal/stm32f4xx_ll_utils.c"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"src/stm32f4-hal/stm32f4xx_ll_usb.c"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"toolsSettings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"c-compiler"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"addOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"-mcpu=cortex-m4"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-mthumb"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-mfloat-abi=soft"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-g3"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-Wall"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-Wextra"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-O0"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-std=gnu11"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-fmessage-length=0"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-fsigned-char"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-ffunction-sections"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-fdata-sections"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DDEBUG"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DTRACE"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DUSE_FULL_ASSERT"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DOS_USE_TRACE_SEMIHOSTING_DEBUG"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DSTM32F407xx"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DPLATFORM_STM32F4_DISCOVERY"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DUSE_HAL_DRIVER"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DHSE_VALUE=8000000"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DOS_USE_SEMIHOSTING"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-I{{ project.absolutePath }}/include"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-I{{ project.absolutePath }}/system/include"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-I{{ project.absolutePath }}/system/include/cmsis"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-I{{ project.absolutePath }}system/include/stm32f4-hal"</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"cpp-compiler"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"addOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"-mcpu=cortex-m4"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-mthumb"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-mfloat-abi=soft"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-g3"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-Wall"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-Wextra"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-O0"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-std=gnu++11"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-fabi-version=0"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-fno-exceptions"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-fno-rtti"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-fno-use-cxa-atexit"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-fno-threadsafe-statics"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-fmessage-length=0"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-fsigned-char"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-ffunction-sections"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-fdata-sections"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DDEBUG"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DTRACE"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DUSE_FULL_ASSERT"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DOS_USE_TRACE_SEMIHOSTING_DEBUG"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DSTM32F407xx"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DPLATFORM_STM32F4_DISCOVERY"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DUSE_HAL_DRIVER"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DHSE_VALUE=8000000"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DOS_USE_SEMIHOSTING"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-I{{ project.absolutePath }}/include"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-I{{ project.absolutePath }}/system/include"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-I{{ project.absolutePath }}/system/include/cmsis"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-I{{ project.absolutePath }}system/include/stm32f4-hal"</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"cpp-linker"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"addOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"-mcpu=cortex-m4"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-mthumb"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-mfloat-abi=soft"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-g3"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-Wall"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-Wextra"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-O0"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-std=gnu11"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-fmessage-length=0"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-fsigned-char"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-ffunction-sections"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-fdata-sections"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-Wl,--gc-sections"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-T{{ project.absolutePath }}/linker-scripts/mem.ld"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-T{{ project.absolutePath }}/linker-scripts/sections.ld"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-nostartfiles"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-Wl,-Map,</span><span class="se">\"</span><span class="s2">{{ artefact.name }}.map</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"--specs=nano.specs"</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"release"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"addSourcePaths"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"src"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"removeSourcePaths"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"src/stm32f4-hal/stm32f4xx_ll_utils.c"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"src/stm32f4-hal/stm32f4xx_ll_usb.c"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"toolsSettings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"c-compiler"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"addOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"-mcpu=cortex-m4"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-mthumb"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-mfloat-abi=soft"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-g3"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-Wall"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-Wextra"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-Os"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-std=gnu11"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-fmessage-length=0"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-fsigned-char"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-ffunction-sections"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-fdata-sections"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DNDEBUG"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DSTM32F407xx"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DPLATFORM_STM32F4_DISCOVERY"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DUSE_HAL_DRIVER"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DHSE_VALUE=8000000"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DOS_USE_SEMIHOSTING"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-I{{ project.absolutePath }}/include"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-I{{ project.absolutePath }}/system/include"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-I{{ project.absolutePath }}/system/include/cmsis"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-I{{ project.absolutePath }}system/include/stm32f4-hal"</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"cpp-compiler"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"addOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"-mcpu=cortex-m4"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-mthumb"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-mfloat-abi=soft"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-g3"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-Wall"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-Wextra"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-Os"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-std=gnu++11"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-fabi-version=0"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-fno-exceptions"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-fno-rtti"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-fno-use-cxa-atexit"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-fno-threadsafe-statics"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-fmessage-length=0"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-fsigned-char"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-ffunction-sections"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-fdata-sections"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DNDEBUG"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DSTM32F407xx"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DPLATFORM_STM32F4_DISCOVERY"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DUSE_HAL_DRIVER"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DHSE_VALUE=8000000"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-DOS_USE_SEMIHOSTING"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-I{{ project.absolutePath }}/include"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-I{{ project.absolutePath }}/system/include"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-I{{ project.absolutePath }}/system/include/cmsis"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-I{{ project.absolutePath }}system/include/stm32f4-hal"</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"cpp-linker"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"addOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"-mcpu=cortex-m4"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-mthumb"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-mfloat-abi=soft"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-g3"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-Wall"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-Wextra"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-Os"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-std=gnu11"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-fmessage-length=0"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-fsigned-char"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-ffunction-sections"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-fdata-sections"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-Wl,--gc-sections"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-T{{ project.absolutePath }}/linker-scripts/mem.ld"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-T{{ project.absolutePath }}/linker-scripts/sections.ld"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-nostartfiles"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-Wl,-Map,</span><span class="se">\"</span><span class="s2">{{ artefact.name }}.map</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"--specs=nano.specs"</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="generalities">Generalities</h2>
+
+<h3 id="definitions">Definitions</h3>
+
+<ul>
+  <li><strong>build configuration</strong>: a complete group of definitions which will
+eventually result in an artefact; in a project, the build
+configuration names (including those used for tests), must be unique;
+for simple projects usualy there are only two top configurations,
+<code class="language-plaintext highlighter-rouge">debug</code>/<code class="language-plaintext highlighter-rouge">release</code>; for
+complex projects there can be more, for different targets or,
+in test cases, even for different toolchains;</li>
+  <li><strong>artefact</strong>: the result of a build; as of now, it
+can be an executable or a library;</li>
+  <li><strong>toolsCollections</strong>: collections of tools, usually toolchains;</li>
+  <li><strong>target platform</strong>: the platform that the artefact is supposed to
+run on; usually a board or a physical machine, but can also be
+a synthetic platform, like a POSIX process running on a GNU/Linux or
+macOS system;</li>
+</ul>
+
+<h3 id="contexts">Contexts</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">*xbuild.json</code> files can be located in multiple contexts:</p>
+
+<ul>
+  <li>package root folder</li>
+  <li>test root folder</li>
+  <li>sub-folders</li>
+</ul>
+
+<p>When xPack aware tools start, they read-in  the <code class="language-plaintext highlighter-rouge">xbuild.json</code> file
+located in the project root folder.</p>
+
+<p>If needed, these top files
+can include files from any sub-folders, local to the project or from
+dependencies.</p>
+
+<p>Inner files can include other files, at any depth.</p>
+
+<p>Multiple occurences of the same definitions trigger warnings and are
+ignored.</p>
+
+<p>Example:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"includeMetadata"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"sub-folder/.xbuild.json"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="definitions-hierarchies">Definitions hierarchies</h3>
+
+<p>For each build configuration, the build process
+constructs a tree with folder and files nodes,
+which follow the file system hierarchy.</p>
+
+<p>The file nodes are leaves in this tree, while folder nodes may
+have other children.</p>
+
+<p>Each new sub-level may contribute additional compiler options to the build,
+such that files located deeper in the hierarchy may be compiled with different
+options.</p>
+
+<h3 id="addremove">Add/remove</h3>
+
+<p>For each node of the hierarchy, the definitions are kept in
+ordered lists. The common behaviour when creating a new node is to
+copy the definitions from the parent and append the new definitions
+to the end of the list; thus the <code class="language-plaintext highlighter-rouge">addOptions</code> properties.</p>
+
+<p>If a definition from the parent is not needed, the child can
+instruct the builder to avoid copying it, by using the
+<code class="language-plaintext highlighter-rouge">removeOptions</code> properties.</p>
+
+<h2 id="folderfile-specific-metadata">Folder/file specific metadata</h2>
+
+<p>The definitions in the top <code class="language-plaintext highlighter-rouge">*xbuild.json</code> file apply to all files that enter
+the build.</p>
+
+<p>However it is possible to enter specific definitions for folders, and
+in this case they apply for all files in the folder, or for a specific file.</p>
+
+<p>Two kinds of data can be defined:</p>
+
+<ul>
+  <li>for source folders, a list of exclusions (folders and/or files)</li>
+  <li>for source folders/files, possible different compiler settings.</li>
+</ul>
+
+<p>The folder/file settings may be distributed
+in each folder, with file paths local to the folder.</p>
+
+<h3 id="project-andor-test-folders">Project and/or test folders</h3>
+
+<p>To identify a folder as an xPack build project, a full <code class="language-plaintext highlighter-rouge">xbuild.json</code> file,
+which includes the <code class="language-plaintext highlighter-rouge">build.name</code> property, is expected in the project root.</p>
+
+<p>Tests are a specific kind of executable projects, and are also identified
+by a full <code class="language-plaintext highlighter-rouge">xbuild.json</code> in each test folder.</p>
+
+<h2 id="objects">Objects</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">xbuild.json</code> file defines a hierarchy of objects with properties,
+with the JSON root on top.</p>
+
+<h3 id="the-root-object">The root object</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">schemaVersion</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The version in <a href="https://semver.org">semver</a> format, that identifies the expected structure of the JSON content (see <a href="/metadata/">index</a>).</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">license</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The license used to distribute the file (see <a href="/metadata/">index</a>).</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">copyright</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The copyright owner (see <a href="/metadata/">index</a>).</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">description</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A short sentence describing the content of the file. May be displayed by tools processing the file.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$comment</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A place to keep internal notices.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">name</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The build name. It is mandatory for projects and for tests.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">builder</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The default builder name.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">target</code></td>
+      <td style="text-align: left">object</td>
+      <td style="text-align: left">The target platform/device/etc.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">language</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The programming language (c/c++); overrides the top definition.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">artefact</code></td>
+      <td style="text-align: left">object</td>
+      <td style="text-align: left">The name and type of the artefact to be built.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">includeMetadata</code></td>
+      <td style="text-align: left">string[]</td>
+      <td style="text-align: left">An array of paths relative to the location of the file.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">buildConfigurations</code></td>
+      <td style="text-align: left">collection</td>
+      <td style="text-align: left">A map of build configurations.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="the-name-property">The <strong>name</strong> property</h4>
+
+<p>The build name is used to create other names, like artefact names.</p>
+
+<p>Example:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"blinky"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="the-builder-property">The <strong>builder</strong> property</h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">builder</code> property identifies the default builder used to create the
+artefact.</p>
+
+<p>It can be used only in project or test <code class="language-plaintext highlighter-rouge">*xbuild.json</code> files; using it in folder
+specific metadata files triggers an warning.</p>
+
+<p>Currently only <code class="language-plaintext highlighter-rouge">ninja</code>, <code class="language-plaintext highlighter-rouge">make</code> and <code class="language-plaintext highlighter-rouge">internal</code> are supported, with the
+internal builder not yet available.</p>
+
+<p>The default value is <code class="language-plaintext highlighter-rouge">internal</code>, which, for now, means that the builder must
+be explicitly defined, or passed on the command line.</p>
+
+<p>Example:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"builder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ninja"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="the-includemetadata-array">The <em>includeMetadata</em> array</h3>
+
+<p>To facilitate reuse of definitions, it is possible to collect them
+from multiple files.</p>
+
+<p>Included files may include other files, at any depth.</p>
+
+<p>The location of each file is remembered, such that relative paths used
+in each files can be correctly processed.</p>
+
+<p>Contributions to maps/arrays are appended at the end; inner files are
+processed before the current file.</p>
+
+<p>Example:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"includeMetadata"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"xpacks/toolchains-metadata/toolchains-gcc-xbuild.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"xpacks/toolchains-metadata/profiles-gcc-xbuild.json"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="the-target-object">The <em>target</em> object</h2>
+
+<p>The target definitions are not actively used during builds, but are useful
+for example when creating new debug launchers.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">The <strong>buildConfiguration</strong> object.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">platform</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The target platform id.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">cpu</code></td>
+      <td style="text-align: left">object</td>
+      <td style="text-align: left">The target CPU.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="the-cpu-object">The <em>cpu</em> object</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">The <strong>target</strong> object.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">family</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The target device family id.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">subFamily</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The target device sub-family id.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">device</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The target device sub-family id.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">variant</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The target device variant id.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="the-artefact-object">The <em>artefact</em> object</h2>
+
+<p>Alias: <code class="language-plaintext highlighter-rouge">artifact</code> (american spelling).</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">artefact</code> object defines the type and name of the output file.</p>
+
+<p>It can be used only in project or test <code class="language-plaintext highlighter-rouge">*xbuild.json</code> files; using it in folder
+specific metadata files triggers an warning.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">The <code class="language-plaintext highlighter-rouge">buildConfigurations</code> collection, a property of the root object.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">type</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The artefact type (application or library).</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">name</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The artefact name.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">outputPrefix</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The artefact name prefix.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">outputSuffix</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The artefact name suffix.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">extension</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The artefact extension.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The <code class="language-plaintext highlighter-rouge">type</code> property can be one of:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">executable</code> (default; default extension is <code class="language-plaintext highlighter-rouge">.exe</code> on Windows)</li>
+  <li><code class="language-plaintext highlighter-rouge">staticLib</code> (default extension is <code class="language-plaintext highlighter-rouge">.a</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">sharedLib</code> (default extension is <code class="language-plaintext highlighter-rouge">.so</code> for Linux)</li>
+</ul>
+
+<p>If not present, The <code class="language-plaintext highlighter-rouge">name</code> property defaults to ``.</p>
+
+<p>If not present, the default prefix/suffix properties are empty.</p>
+
+<p>The actual name used for the artefact is a concatenation of four fields:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"{{ artefact.outputPrefix }}{{ artefact.name }}{{ artefact.outputSuffix }}{{ artefact.extension }}"</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Example:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"buildConfiguration"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"debug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"artefact"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"executable"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{{ build.name }}"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"outputPrefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"outputSuffix"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="the-buildconfiguration-object">The <em>buildConfiguration</em> object</h2>
+
+<p><strong>Build configurations</strong> are objects used to collect all the definitions
+required to generate the builder files required to build the artefact from
+the source file.</p>
+
+<p>The definitions are mainly command line options to be passed to various tools.
+They can be in-lined or copied from multiple <em>groups</em> (to be added in a
+future release).</p>
+
+<p>The build starts by constructing an array of paths to source files,
+possibly by recursively searching files with specific extensions in the
+given source folders.</p>
+
+<p>Source files in inner folders may be configured with specific options,
+for example with extra <code class="language-plaintext highlighter-rouge">-Wno-xxx</code> options to disable some warnings.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">The root object.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">target</code></td>
+      <td style="text-align: left">object</td>
+      <td style="text-align: left">The target platform/device/etc.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">builder</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The default builder name; overrides the top definition.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">language</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The programming language (c/c++); overrides the top definition.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">artefact</code></td>
+      <td style="text-align: left">object</td>
+      <td style="text-align: left">The name and type of the artefact to be built; override the top definition.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">addSourcePaths</code></td>
+      <td style="text-align: left">string[]</td>
+      <td style="text-align: left">Array of paths to source files, or paths to folders with source files, to be added to the build.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">removeSourcePaths</code></td>
+      <td style="text-align: left">string[]</td>
+      <td style="text-align: left">Array of paths to be excluded from the build.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">toolsSettings</code></td>
+      <td style="text-align: left">collection</td>
+      <td style="text-align: left">Map of settings to be added for different tools.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">sourceFoldersSettings</code></td>
+      <td style="text-align: left">collection</td>
+      <td style="text-align: left">Map of settings to be added for a specific sub-folder.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">sourceFilesSettings</code></td>
+      <td style="text-align: left">collection</td>
+      <td style="text-align: left">Map of settings to be added for a specific file in a sub-folder.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="the-addsourcepaths-array">The <em>addSourcePaths</em> array</h2>
+
+<p>Type: array of strings.</p>
+
+<p>This array defines the paths to:</p>
+
+<ul>
+  <li>source files</li>
+  <li>folder containing source files</li>
+</ul>
+
+<p>All paths are relative to the current folder.</p>
+
+<p>For tests, which are located deeper in the file system hierarchy,
+a typical configuration is:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"addSourcePaths"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"../../src"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"."</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="the-removesourcepaths-array">The <em>removeSourcePaths</em> array</h2>
+
+<p>Type: array of strings.</p>
+
+<p>If a definition from the parent is definitely not needed, it can be removed:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"removeSourcePaths"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"lib"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>If the definitions to be removed do not exist, warnings are issued.</p>
+
+<p>For a given build, all source folders are searched for source files,
+possible exclusions from <code class="language-plaintext highlighter-rouge">sourceFolderSettings</code> are processed, and the
+remaining files enter the build.</p>
+
+<h2 id="the-toolssetting-object">The <em>toolsSetting</em> object</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">The <strong>buildConfigurations</strong> object.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">addOptions</code></td>
+      <td style="text-align: left">string[]</td>
+      <td style="text-align: left">Array of strings with the actual command line options.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">removeOptions</code></td>
+      <td style="text-align: left">string[]</td>
+      <td style="text-align: left">Array of strings with command line options to be removed.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="the-sourcefolderssetting-object">The <em>sourceFoldersSetting</em> object</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">The <strong>buildConfigurations</strong> object.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">toolsSettings</code></td>
+      <td style="text-align: left">collection</td>
+      <td style="text-align: left">Collection of tools.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="the-sourcefilessetting-object">The <em>sourceFilesSetting</em> object</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">The <strong>buildConfigurations</strong> object.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">addOptions</code></td>
+      <td style="text-align: left">string[]</td>
+      <td style="text-align: left">Array of strings with command line options to be added.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">removeOptions</code></td>
+      <td style="text-align: left">string[]</td>
+      <td style="text-align: left">Array of strings with command line options to be removed.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="the-toolscollection-object">The <em>toolsCollection</em> object</h2>
+
+<p>TODO</p>
+
+<h2 id="todo">TODO</h2>
+
+<ul>
+  <li>add a method to define group options and apply in multiple tools
+(like “$include: #/$groups/<name>")</name></li>
+  <li>allow multiple artefacts</li>
+  <li>rework artefacts to add an explicit mention of the tool</li>
+  <li>add pre/post actions</li>
+  <li>study the GUI integration</li>
+</ul>
+
+
+        
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2021 Liviu Ionescu. All rights reserved. <br />
+<span>Page last updated:</span> Jan 5, 2021<br/> Site last generated: Jan 5, 2021 <br />
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-16767008-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-16767008-13');
+</script>
+
+
+</html>

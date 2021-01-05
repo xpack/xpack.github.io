@@ -640,6 +640,14 @@ li.activeSeries {
     color: #444;
 }
 
+code {
+  padding: 0.2em 0.4em;
+  font-size: 87%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius:6px
+}
+
 div.alert code, h2 code {
     background-color: transparent !important;
 }
