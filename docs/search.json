@@ -1023,7 +1023,7 @@
 "tags": "releasesriscvriscv-none-embed-gccgccbinariesc++",
 "keywords": "",
 "url": "/blog/2021/01/05/riscv-none-embed-gcc-v10-1-0-1-1-released/",
-"summary": "<p>Version 10.1.0-1.1 is a new release of the <strong>xPack GNU RISC-V Embedded GCC</strong>; it follows the SiFive release 2020-08.0 .</p>"
+"summary": "<p>Version 10.1.0-1.1 is a new release of the <strong>xPack GNU RISC-V Embedded GCC</strong>; it follows the SiFive release 2020-08.0.</p>"
 }
 ,
 
