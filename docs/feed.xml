@@ -5,9 +5,25 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 05 Jan 2021 12:31:10 +0000</pubDate>
-        <lastBuildDate>Tue, 05 Jan 2021 12:31:10 +0000</lastBuildDate>
+        <pubDate>Wed, 06 Jan 2021 23:02:00 +0000</pubDate>
+        <lastBuildDate>Wed, 06 Jan 2021 23:02:00 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>xPack CMake v3.19.2-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/cmake/&quot;&gt;The xPack CMake&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://cmake.org&quot;&gt;CMake&lt;/a&gt; build system.&lt;/p&gt;</description>
+            <pubDate>Wed, 06 Jan 2021 17:08:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/01/06/cmake-v3-19-2-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/01/06/cmake-v3-19-2-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>cmake</category>
+            
+            <category>build</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack GNU RISC-V Embedded GCC v10.1.0-1.1 released</title>
@@ -195,30 +211,6 @@
             <category>binaries</category>
             
             <category>c++</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack GNU Arm Embedded GCC v9.3.1-1.4 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/arm-none-eabi-gcc/&quot;&gt;The xPack GNU Arm Embedded GCC&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://developer.arm.com/open-source/gnu-toolchain/gnu-rm&quot;&gt;GNU Arm Embedded Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Fri, 23 Oct 2020 14:53:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2020/10/23/arm-none-eabi-gcc-v9-3-1-1-4-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2020/10/23/arm-none-eabi-gcc-v9-3-1-1-4-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>arm</category>
-            
-            <category>arm-none-eabi-gcc</category>
-            
-            <category>gcc</category>
-            
-            <category>binaries</category>
-            
-            <category>c++</category>
-            
-            <category>exceptions</category>
             
             
         </item>

@@ -1019,6 +1019,16 @@
 
 
 {
+"title": "xPack CMake v3.19.2-1 released",
+"tags": "releasescmakebuild",
+"keywords": "",
+"url": "/blog/2021/01/06/cmake-v3-19-2-1-released/",
+"summary": "<p>Version 3.19.2-1 is a new release of the <strong>xPack CMake</strong> package, following the CMake release.</p>"
+}
+,
+
+
+{
 "title": "xPack GNU RISC-V Embedded GCC v10.1.0-1.1 released",
 "tags": "releasesriscvriscv-none-embed-gccgccbinariesc++",
 "keywords": "",
