@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="The xPack Build Definitions" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/metadata/build/"},"@type":"BlogPosting","url":"https://xpack.github.io/metadata/build/","headline":"The xPack Build Definitions","dateModified":"2021-01-06T22:53:45+00:00","datePublished":"2017-10-09T13:46:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/metadata/build/"},"@type":"BlogPosting","url":"https://xpack.github.io/metadata/build/","headline":"The xPack Build Definitions","dateModified":"2021-01-07T12:33:39+00:00","datePublished":"2017-10-09T13:46:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -649,7 +649,7 @@ defined symbols, header folder/files, etc).</li>
             </span><span class="s2">"-I{{ project.absolutePath }}/include"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-I{{ project.absolutePath }}/system/include"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-I{{ project.absolutePath }}/system/include/cmsis"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"-I{{ project.absolutePath }}system/include/stm32f4-hal"</span><span class="w">
+            </span><span class="s2">"-I{{ project.absolutePath }}/system/include/stm32f4-hal"</span><span class="w">
           </span><span class="p">]</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="nl">"cpp-compiler"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -683,7 +683,7 @@ defined symbols, header folder/files, etc).</li>
             </span><span class="s2">"-I{{ project.absolutePath }}/include"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-I{{ project.absolutePath }}/system/include"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-I{{ project.absolutePath }}/system/include/cmsis"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"-I{{ project.absolutePath }}system/include/stm32f4-hal"</span><span class="w">
+            </span><span class="s2">"-I{{ project.absolutePath }}/system/include/stm32f4-hal"</span><span class="w">
           </span><span class="p">]</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="nl">"cpp-linker"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -742,7 +742,7 @@ defined symbols, header folder/files, etc).</li>
             </span><span class="s2">"-I{{ project.absolutePath }}/include"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-I{{ project.absolutePath }}/system/include"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-I{{ project.absolutePath }}/system/include/cmsis"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"-I{{ project.absolutePath }}system/include/stm32f4-hal"</span><span class="w">
+            </span><span class="s2">"-I{{ project.absolutePath }}/system/include/stm32f4-hal"</span><span class="w">
           </span><span class="p">]</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="nl">"cpp-compiler"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -773,7 +773,7 @@ defined symbols, header folder/files, etc).</li>
             </span><span class="s2">"-I{{ project.absolutePath }}/include"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-I{{ project.absolutePath }}/system/include"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-I{{ project.absolutePath }}/system/include/cmsis"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"-I{{ project.absolutePath }}system/include/stm32f4-hal"</span><span class="w">
+            </span><span class="s2">"-I{{ project.absolutePath }}/system/include/stm32f4-hal"</span><span class="w">
           </span><span class="p">]</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="nl">"cpp-linker"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -940,7 +940,7 @@ with the JSON root on top.</p>
     <tr>
       <td style="text-align: left"><code class="language-plaintext highlighter-rouge">description</code></td>
       <td style="text-align: left">string</td>
-      <td style="text-align: left">A short sentence describing the content of the file. May be displayed by tools processing the file.</td>
+      <td style="text-align: left">A short sentence describing the project or the content of the file. May be displayed by GUI tools processing the file.</td>
     </tr>
     <tr>
       <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$comment</code></td>
@@ -1080,7 +1080,22 @@ for example when creating new debug launchers.</p>
   </tbody>
 </table>
 
+<p>Example:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"target"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> 
+    </span><span class="nl">"platform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"stm32f4-discovery"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cpu"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"device"</span><span class="p">:</span><span class="w"> </span><span class="s2">"stm32f407vg"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
 <h2 id="the-cpu-object">The <em>cpu</em> object</h2>
+
+<p>The <strong>cpu</strong> object defines the target CPU device name, and possibly
+other grouping names (like family, subFamily, variant).</p>
 
 <table>
   <thead>
@@ -1131,7 +1146,7 @@ for example when creating new debug launchers.</p>
 
 <p>Alias: <code class="language-plaintext highlighter-rouge">artifact</code> (american spelling).</p>
 
-<p>The <code class="language-plaintext highlighter-rouge">artefact</code> object defines the type and name of the output file.</p>
+<p>The <strong>artefact</strong> object defines the type and name of the output file.</p>
 
 <p>It can be used only in project or test <code class="language-plaintext highlighter-rouge">*xbuild.json</code> files; using it in folder
 specific metadata files triggers an warning.</p>
@@ -1139,12 +1154,15 @@ specific metadata files triggers an warning.</p>
 <table>
   <thead>
     <tr>
-      <th style="text-align: left">Parent</th>
+      <th style="text-align: left">Parents</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">The <code class="language-plaintext highlighter-rouge">buildConfigurations</code> collection, a property of the root object.</td>
+      <td style="text-align: left">The root object.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">The <strong>buildConfiguration</strong> object.</td>
     </tr>
   </tbody>
 </table>
@@ -1361,7 +1379,7 @@ remaining files enter the build.</p>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">The <strong>buildConfigurations</strong> object.</td>
+      <td style="text-align: left">The <strong>buildConfiguration</strong> object.</td>
     </tr>
   </tbody>
 </table>
@@ -1390,6 +1408,9 @@ remaining files enter the build.</p>
 
 <h2 id="the-sourcefolderssetting-object">The <em>sourceFoldersSetting</em> object</h2>
 
+<p>The <strong>sourceFoldersSetting</strong> object defines additional options
+specific to a folder.</p>
+
 <table>
   <thead>
     <tr>
@@ -1398,7 +1419,7 @@ remaining files enter the build.</p>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">The <strong>buildConfigurations</strong> object.</td>
+      <td style="text-align: left">The <strong>buildConfiguration</strong> object.</td>
     </tr>
   </tbody>
 </table>
@@ -1415,12 +1436,15 @@ remaining files enter the build.</p>
     <tr>
       <td style="text-align: left"><code class="language-plaintext highlighter-rouge">toolsSettings</code></td>
       <td style="text-align: left">collection</td>
-      <td style="text-align: left">Collection of tools.</td>
+      <td style="text-align: left">Collection of tools settings.</td>
     </tr>
   </tbody>
 </table>
 
 <h2 id="the-sourcefilessetting-object">The <em>sourceFilesSetting</em> object</h2>
+
+<p>The <strong>sourceFilesSetting</strong> object defines additional options
+specific to a file.</p>
 
 <table>
   <thead>
@@ -1459,6 +1483,131 @@ remaining files enter the build.</p>
 
 <h2 id="the-toolscollection-object">The <em>toolsCollection</em> object</h2>
 
+<p>The <strong>toolsCollection</strong> object defines a group of related tools,
+usually a toolchain.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">The root object.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">displayDescription</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A short sentence describing the tools collection. May be displayed by GUI tools processing the collection.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">commandPrefix</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">TODO</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">commandSuffix</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">TODO</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">displayDescriptionPrefix</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">TODO</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">isCross</code></td>
+      <td style="text-align: left">boolean</td>
+      <td style="text-align: left">TODO</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">objectExtension</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">TODO</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">makeObjectsVariable</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">TODO</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">tools</code></td>
+      <td style="text-align: left">collection</td>
+      <td style="text-align: left">Collection of tools.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>TODO</p>
+
+<h2 id="the-tool-object">The <em>tool</em> object</h2>
+
+<p>The <strong>tool</strong> object defines the characteristics of a tool from a tools
+collection.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">The <strong>toolsCollection</strong> object.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">displayDescription</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A short sentence describing the tool. May be displayed by GUI tools processing the tools.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">commandName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">TODO</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">inputFileExtensions</code></td>
+      <td style="text-align: left">string[]</td>
+      <td style="text-align: left">TODO (like <code class="language-plaintext highlighter-rouge">.c</code>, <code class="language-plaintext highlighter-rouge">.cpp</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">outputFileExtension</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">TODO (like <code class="language-plaintext highlighter-rouge">.o</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">…</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">TODO</td>
+    </tr>
+  </tbody>
+</table>
+
 <p>TODO</p>
 
 <h2 id="todo">TODO</h2>
@@ -1491,7 +1640,7 @@ remaining files enter the build.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jan 6, 2021<br/> Site last generated: Jan 6, 2021 <br />
+<span>Page last updated:</span> Jan 7, 2021<br/> Site last generated: Jan 7, 2021 <br />
                 </div>
             </div>
 </footer>
