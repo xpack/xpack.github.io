@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to create a new xPack Git repository" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/how-to-new-git/"},"@type":"BlogPosting","url":"https://xpack.github.io/develop/how-to-new-git/","headline":"How to create a new xPack Git repository","dateModified":"2021-01-07T12:33:39+00:00","datePublished":"2019-07-09T14:48:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/how-to-new-git/"},"@type":"BlogPosting","url":"https://xpack.github.io/develop/how-to-new-git/","headline":"How to create a new xPack Git repository","dateModified":"2021-01-09T11:10:53+00:00","datePublished":"2019-07-09T14:48:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -580,14 +580,31 @@ will be used for new projects,
 with original content, so, in principle, these projects can be created
 to have any structure.</p>
 
-<p>The reality is that there are a lot of existing
+<p>In reality there are a lot of existing 3rd party
 software projects, each using its specific structure, and migrating them to
 xPacks may add some maintenance burden to keep them in sync with the
 originals.</p>
 
+<p>If the 3rd party projects use a public Git, fork them, with its original
+<code class="language-plaintext highlighter-rouge">master</code> branch, and continue to track them in the future.</p>
+
+<h2 id="the-originals-branch">The <code class="language-plaintext highlighter-rouge">originals</code> branch</h2>
+
+<p>If the 3rd party projects do not use a
+public Git project, but are distributed only as release archives, to
+keep track of the changes it is recommended to
+recreate the Git with the original
+code on a separate branch, like <code class="language-plaintext highlighter-rouge">originals</code>.</p>
+
+<p>With each upstream release, while on the <code class="language-plaintext highlighter-rouge">originals</code> branch,
+fuly remove the content and extract the newly released archive.</p>
+
+<p>In case the archive contains binary files, or other large files considerd
+not essential for the xPack distribution, add them to <code class="language-plaintext highlighter-rouge">.gitignore</code>.</p>
+
 <h2 id="the-xpack-branch-and-three-way-merging">The <code class="language-plaintext highlighter-rouge">xpack</code> branch and three-way merging</h2>
 
-<p>One way to reduce the maintenance burden is to use the
+<p>One way to reduce the maintenance burden of source xPacks is to use the
 <a href="https://en.wikipedia.org/wiki/Merge_(version_control)#Three-way_merge">three-way merge</a>
 feature of Git and a separate branch to accommodate the xPack specific changes.</p>
 
@@ -601,7 +618,7 @@ easily track the upstream repository, while the xPack specific changes
 continue to be developed using the <code class="language-plaintext highlighter-rouge">xpack</code> branch; from time to time the
 main branch can be merged into the <code class="language-plaintext highlighter-rouge">xpack</code> branch and things kept in sync.</p>
 
-<h2 id="creating-xpacks-with-original-content">Creating xPacks with original content</h2>
+<h2 id="creating-xpacks">Creating xPacks</h2>
 
 <p>For consistency reasons, it is recommended for the new xPacks, even if
 they do not include 3rd party content, to use the <code class="language-plaintext highlighter-rouge">xpack</code> branch instead
@@ -611,29 +628,46 @@ of the <code class="language-plaintext highlighter-rouge">master</code> branch.<
 do not enforce the use of a branch named <code class="language-plaintext highlighter-rouge">xpack</code>, this is only
 a recommendation.</div>
 
+<h3 id="the-github-template-project">The GitHub Template project</h3>
+
+<p>The easiest way to create new projects is to use the existing
+<a href="https://github.com/xpack/github-template-xpack">GitHub Template</a> project.
+Instantiate it into your organisation and update the project details
+in <code class="language-plaintext highlighter-rouge">package.json</code> and the copyright owner.</p>
+
+<ul>
+  <li>click the <strong>Use this template</strong> button</li>
+  <li>select the owner or the organisation</li>
+  <li>enter the repository name, preferably suffixed with <code class="language-plaintext highlighter-rouge">-xpack</code></li>
+  <li>enter the description <code class="language-plaintext highlighter-rouge">A source/binary xPack with ...</code></li>
+  <li>select Public</li>
+  <li>enable <strong>Include all branches</strong> (very important!)</li>
+  <li>click <strong>Create repositories from template</strong></li>
+</ul>
+
+<h3 id="create-the-github-project-manually">Create the GitHub project manually</h3>
+
 <p>The following steps apply to GitHub. Adjust them for other Git hosting sites.</p>
 
 <p>The editor of choice is Visual Studio Code (VSC), but you can use
 any editor you like; just be sure that on Windows it does not mess the
 line terminators.</p>
 
-<h3 id="create-the-github-project">Create the GitHub project</h3>
-
 <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> To easily identify the project as
 an xPack, it is recommended to suffix the project name with ‘-xpack’.</div>
 
-<p>With a browser, at GitHub, select your account or one of your
-  organisations (like
-  <a href="https://github.com/xpacks">xPacks</a>,
-  <a href="https://github.com/xpack-dev-tools">xPacks Dev Tools</a>,
-  <a href="https://github.com/micro-os-plus">µOS++</a>).</p>
+<p>With a browser, at GitHub, select your account or organisation.
+(for the purposes of this project, here are some organisations that use xPacks:
+<a href="https://github.com/xpacks">xPacks</a>,
+<a href="https://github.com/xpack-dev-tools">xPacks Dev Tools</a>,
+<a href="https://github.com/micro-os-plus">µOS++</a>).</p>
 
 <ul>
   <li>click the green <strong>New</strong> button to create a new repository
     <ul>
       <li>enter <strong>Repository name</strong>; use all lowercase and hyphens to
 separate words (not underscores!); preferably suffix the name with <code class="language-plaintext highlighter-rouge">-xpack</code></li>
-      <li>enter <strong>Description</strong> (like <em>An xPack with …</em> or <em>A binary xPack with …</em>; no ending dot)</li>
+      <li>enter <strong>Description</strong> (like <em>A source xPack with …</em> or <em>A binary xPack with …</em>; no ending dot!)</li>
       <li>select <strong>Public</strong></li>
       <li>enable <strong>Initialize this repository with a README</strong></li>
       <li>select <strong>Add .gitignore: Node</strong></li>
@@ -703,7 +737,7 @@ build/
 
 <ul>
   <li>stage the <code class="language-plaintext highlighter-rouge">.gitignore</code> file</li>
-  <li>commit with the following message: <strong>.gitignore: add xpm specifics</strong></li>
+  <li>commit with the following message: <strong>.gitignore: add xPack specifics</strong></li>
 </ul>
 
 <h3 id="checkedit-the-license-file">Check/edit the <code class="language-plaintext highlighter-rouge">LICENSE</code> file</h3>
@@ -718,7 +752,7 @@ your name in the copyright notice.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MIT License
 
-Copyright (c) 2019 Liviu Ionescu
+Copyright (c) 2021 Liviu Ionescu
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 ...
@@ -753,6 +787,32 @@ switch to the `xpack` branch to get the project files.
   <li>commit with the following message: <strong>README: ‘no master’ notice</strong></li>
 </ul>
 
+<h3 id="create-the-originals-branch">Create the <code class="language-plaintext highlighter-rouge">originals</code> branch</h3>
+
+<p>If the xPack will be used for 3rd party content, create an <code class="language-plaintext highlighter-rouge">originals</code>
+branch:</p>
+
+<p>Sourcetree:</p>
+<ul>
+  <li>select the <code class="language-plaintext highlighter-rouge">master</code> branch</li>
+  <li>click the <strong>Branch</strong> button</li>
+  <li>in the <strong>Name Branch</strong> field, enter <code class="language-plaintext highlighter-rouge">originals</code></li>
+  <li>click the <strong>Create Branch</strong> button</li>
+</ul>
+
+<p>Edit the README file to read:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This branch is used to recreate the 3rd party project history
+from release archives.
+</code></pre></div></div>
+
+<p>With VSC, Sourcetree or Git:</p>
+
+<ul>
+  <li>stage the <code class="language-plaintext highlighter-rouge">README.md</code> file</li>
+  <li>commit with the following message: <strong>README: notice for 3rd party content</strong></li>
+</ul>
+
 <h3 id="create-the-xpack-branch">Create the <code class="language-plaintext highlighter-rouge">xpack</code> branch</h3>
 
 <p>With VSC, Sourcetree or Git.</p>
@@ -775,14 +835,14 @@ switch to the `xpack` branch to get the project files.
   <li>click the <strong>Create Branch</strong> button</li>
 </ul>
 
-<h3 id="publish-both-branches">Publish both branches</h3>
+<h3 id="publish-all-branches">Publish all branches</h3>
 
 <p>With VSC, Sourcetree or Git.</p>
 
 <p>(Sourcetree)</p>
 <ul>
   <li>click the <strong>Push</strong> button</li>
-  <li>select the <code class="language-plaintext highlighter-rouge">master</code> and <code class="language-plaintext highlighter-rouge">xpack</code> local branches</li>
+  <li>select all local branches (<code class="language-plaintext highlighter-rouge">master</code>, <code class="language-plaintext highlighter-rouge">xpack</code> and maybe the <code class="language-plaintext highlighter-rouge">originals</code>)</li>
   <li>click the <strong>OK</strong> button</li>
 </ul>
 
@@ -807,21 +867,21 @@ the <strong>View Remote</strong> button):</p>
 <span class="gp">$</span><span class="w"> </span>xpm init
 <span class="gp">$</span><span class="w"> </span><span class="nb">cat </span>package.json
 <span class="go">{
-  "name": "xxx",
-  "version": "0.0.1",
-</span><span class="gp">  "description": "An xPack with &lt;your-description-here&gt;</span><span class="s2">",
+</span><span class="gp">  "name": "@&lt;scope&gt;</span>/&lt;project-name&gt;<span class="s2">",
+</span><span class="go">  "version": "0.1.0",
+</span><span class="gp">  "description": "A source/binary xPack with &lt;your-description-here&gt;</span><span class="s2">",
 </span><span class="go">  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
   },
   "repository": {
     "type": "git",
-</span><span class="gp">    "url": "git+https://github.com/&lt;user-id&gt;</span>/xxx.git<span class="s2">"
+</span><span class="gp">    "url": "git+https://github.com/&lt;user-id&gt;</span>/&lt;project-name&gt;-xpack.git<span class="s2">"
 </span><span class="go">  },
   "bugs": {
-</span><span class="gp">    "url": "https://github.com/&lt;user-id&gt;</span>/xxx/issues<span class="s2">"
+</span><span class="gp">    "url": "https://github.com/&lt;user-id&gt;</span>/&lt;project-name&gt;-xpack/issues<span class="s2">"
 </span><span class="go">  },
-</span><span class="gp">  "homepage": "https://github.com/&lt;user-id&gt;</span>/xxx<span class="s2">",
+</span><span class="gp">  "homepage": "https://github.com/&lt;user-id&gt;</span>/&lt;project-name&gt;-xpack<span class="s2">",
 </span><span class="go">  "keywords": [
     "xpack"
   ],
@@ -845,7 +905,7 @@ the <strong>View Remote</strong> button):</p>
   <li>as <strong>name</strong> enter the scope (your npm account name or one of
 your npm organisations) and the project name, without <code class="language-plaintext highlighter-rouge">-xpack.git</code>
 (like <code class="language-plaintext highlighter-rouge">@micro-os-plus/diag-trace</code>, <code class="language-plaintext highlighter-rouge">@xpack-dev-tools/ninja-build</code>)</li>
-  <li>as <strong>version</strong>, enter <code class="language-plaintext highlighter-rouge">0.0.1</code> if the project is in early development,
+  <li>as <strong>version</strong>, enter <code class="language-plaintext highlighter-rouge">0.1.0</code> if the project is in early development,
 or accept 1.0.0 for the first stable release; generally use the
 <a href="http://semver.org">semver</a> conventions</li>
   <li>as <strong>description</strong>, use the same string as the GitHub project description</li>
@@ -856,7 +916,7 @@ or accept 1.0.0 for the first stable release; generally use the
 </span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
   </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Liviu Ionescu"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ilg@livius.net"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/ilg-ul"</span><span class="w">
+  </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/ilg-ul/"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>    </div>
@@ -888,7 +948,7 @@ as the first contributor, for example:
 
 <ul>
   <li>stage the <code class="language-plaintext highlighter-rouge">package.json</code></li>
-  <li>commit with the following message: <strong>package.json: v0.0.1</strong></li>
+  <li>commit with the following message: <strong>package.json: v0.1.0</strong></li>
 </ul>
 
 <h3 id="edit-the-readmemd-file-with-actual-content">Edit the <code class="language-plaintext highlighter-rouge">README.md</code> file with actual content</h3>
@@ -903,8 +963,8 @@ as the first contributor, for example:
 (like <code class="language-plaintext highlighter-rouge">xpm install --global @scope/name</code>)</li>
   <li>in the License section, use something like
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The original content is released under the
-[MIT License](https://opensource.org/licenses/MIT), with all rights
-reserved to [Liviu Ionescu](https://github.com/ilg-ul).
+[MIT License](https://opensource.org/licenses/MIT), with all rights reserved to
+[Liviu Ionescu](https://github.com/ilg-ul).
 </code></pre></div>    </div>
   </li>
 </ul>
@@ -912,7 +972,7 @@ reserved to [Liviu Ionescu](https://github.com/ilg-ul).
 <p>With Sourcetree or Git:</p>
 
 <ul>
-  <li>stage the <code class="language-plaintext highlighter-rouge">README.md</code> file</li>
+  <li>stage the <code class="language-plaintext highlighter-rouge">README*.md</code> files</li>
   <li>commit with the following message: <strong>README: preliminary content</strong></li>
 </ul>
 
@@ -939,12 +999,6 @@ reserved to [Liviu Ionescu](https://github.com/ilg-ul).
   <li>commit with the following message: <strong>add initial content</strong></li>
 </ul>
 
-<h3 id="publish-the-branch">Publish the branch</h3>
-
-<ul>
-  <li>with Sourcetree or Git, click <strong>Push</strong> and select <code class="language-plaintext highlighter-rouge">xpack</code></li>
-</ul>
-
 <h3 id="create-the-xpack-develop-branch">Create the <code class="language-plaintext highlighter-rouge">xpack-develop</code> branch</h3>
 
 <p>With Sourcetree or Git:</p>
@@ -956,6 +1010,13 @@ reserved to [Liviu Ionescu](https://github.com/ilg-ul).
 
 <p>Generally work in the <code class="language-plaintext highlighter-rouge">xpack-develop</code> branch and only when ready merge it
 to <code class="language-plaintext highlighter-rouge">master</code>.</p>
+
+<h3 id="publish-the-branches-to-github">Publish the branches to GitHub</h3>
+
+<ul>
+  <li>with Sourcetree or Git, click <strong>Push</strong> and select all
+(or at least <code class="language-plaintext highlighter-rouge">xpack</code> and <code class="language-plaintext highlighter-rouge">xpack-develop</code>)</li>
+</ul>
 
 <h3 id="publish-the-initial-version-to-the-npmjs-public-registry">Publish the initial version to the npmjs public registry</h3>
 
@@ -1014,7 +1075,7 @@ only the <code class="language-plaintext highlighter-rouge">package.json</code>,
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jan 7, 2021<br/> Site last generated: Jan 7, 2021 <br />
+<span>Page last updated:</span> Jan 9, 2021<br/> Site last generated: Jan 9, 2021 <br />
                 </div>
             </div>
 </footer>
