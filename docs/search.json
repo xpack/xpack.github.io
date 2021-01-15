@@ -96,10 +96,10 @@
 
 
 {
-"title": "The xPack QEMU Arm Frequently Asked Questions",
+"title": "The xPack GNU RISC-V Embedded GCC Frequently Asked Questions",
 "tags": "",
 "keywords": "",
-"url": "/qemu-arm/faq/",
+"url": "/riscv-none-embed-gcc/faq/",
 "summary": ""
 }
 ,
@@ -107,10 +107,10 @@
 
 
 {
-"title": "The xPack Windows Build Tools Frequently Asked Questions",
+"title": "The xPack GNU Arm Embedded GCC Frequently Asked Questions",
 "tags": "",
 "keywords": "",
-"url": "/windows-build-tools/faq/",
+"url": "/arm-none-eabi-gcc/faq/",
 "summary": ""
 }
 ,
@@ -129,10 +129,32 @@
 
 
 {
+"title": "The xPack Windows Build Tools Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/windows-build-tools/faq/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "The xPack CMake Frequently Asked Questions",
 "tags": "",
 "keywords": "",
 "url": "/cmake/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack QEMU Arm Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/qemu-arm/faq/",
 "summary": ""
 }
 ,
@@ -155,28 +177,6 @@
 "tags": "",
 "keywords": "",
 "url": "/ninja-build/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The xPack GNU RISC-V Embedded GCC Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/riscv-none-embed-gcc/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The xPack GNU Arm Embedded GCC Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/arm-none-eabi-gcc/faq/",
 "summary": ""
 }
 ,
@@ -253,22 +253,22 @@
 
 
 {
-"title": "The xPack QEMU Arm",
+"title": "The xPack GNU RISC-V Embedded GCC",
 "tags": "",
-"keywords": "qemuarmcortex-mgraphic",
-"url": "/qemu-arm/",
-"summary": "<p>A binary distribution of QEMU Arm.</p>"
+"keywords": "riscv-none-embed-gccriscvgccembedded",
+"url": "/riscv-none-embed-gcc/",
+"summary": "<p>A binary distribution of GNU RISC-V Embedded GCC.</p>"
 }
 ,
 
 
 
 {
-"title": "The xPack Windows Build Tools",
+"title": "The xPack GNU Arm Embedded GCC",
 "tags": "",
-"keywords": "windows-build-tools",
-"url": "/windows-build-tools/",
-"summary": "<p>A Windows binary distribution of GNU Make, to be used with Eclipse Embedded CDT.</p>"
+"keywords": "arm-none-eabi-gccarmgccembedded",
+"url": "/arm-none-eabi-gcc/",
+"summary": "<p>A binary distribution of GNU Arm Embedded GCC.</p>"
 }
 ,
 
@@ -286,11 +286,33 @@
 
 
 {
+"title": "The xPack Windows Build Tools",
+"tags": "",
+"keywords": "windows-build-tools",
+"url": "/windows-build-tools/",
+"summary": "<p>A Windows binary distribution of GNU Make, to be used with Eclipse Embedded CDT.</p>"
+}
+,
+
+
+
+{
 "title": "The xPack CMake",
 "tags": "",
 "keywords": "cmake",
 "url": "/cmake/",
 "summary": "<p>A binary distribution of CMake.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack QEMU Arm",
+"tags": "",
+"keywords": "qemuarmcortex-mgraphic",
+"url": "/qemu-arm/",
+"summary": "<p>A binary distribution of QEMU Arm.</p>"
 }
 ,
 
@@ -319,28 +341,6 @@
 
 
 {
-"title": "The xPack GNU RISC-V Embedded GCC",
-"tags": "",
-"keywords": "riscv-none-embed-gccriscvgccembedded",
-"url": "/riscv-none-embed-gcc/",
-"summary": "<p>A binary distribution of GNU RISC-V Embedded GCC.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack GNU Arm Embedded GCC",
-"tags": "",
-"keywords": "arm-none-eabi-gccarmgccembedded",
-"url": "/arm-none-eabi-gcc/",
-"summary": "<p>A binary distribution of GNU Arm Embedded GCC.</p>"
-}
-,
-
-
-
-{
 "title": "The xPack Basic Project Builder",
 "tags": "",
 "keywords": "",
@@ -352,13 +352,15 @@
 
 
 {
-"title": "The xPack Build Configurator",
+"title": "The xPack Build Runner",
 "tags": "",
 "keywords": "make",
-"url": "/xpcdl/",
-"summary": "<p>A tool to manage project configurations, inspired by eCos CDL, but with the configuration files in JSON (in design phase).</p>"
+"url": "/xpninja/",
+"summary": "<p>A light and fast tool to build generic projects, inspired by Ninja Build but with the configuration files in JSON (in design phase).</p>"
 }
 ,
+
+
 
 
 
@@ -376,15 +378,13 @@
 
 
 {
-"title": "The xPack Build Runner",
+"title": "The xPack Build Configurator",
 "tags": "",
 "keywords": "make",
-"url": "/xpninja/",
-"summary": "<p>A light and fast tool to build generic projects, inspired by Ninja Build but with the configuration files in JSON (in design phase).</p>"
+"url": "/xpcdl/",
+"summary": "<p>A tool to manage project configurations, inspired by eCos CDL, but with the configuration files in JSON (in design phase).</p>"
 }
 ,
-
-
 
 
 
@@ -400,6 +400,28 @@
 ,
 
 
+
+{
+"title": "Maintainer info",
+"tags": "",
+"keywords": "",
+"url": "/maintain/",
+"summary": "<p>Resources for the xPack projects maintainers.</p>"
+}
+,
+
+
+
+
+
+{
+"title": "The xPack Build Box",
+"tags": "",
+"keywords": "",
+"url": "/xbb/",
+"summary": "<p>An elaborated environment for building binary xPacks.</p>"
+}
+,
 
 
 
@@ -420,28 +442,6 @@
 "keywords": "",
 "url": "/metadata/",
 "summary": "<p>The metadata used by xPack tools.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack Build Box",
-"tags": "",
-"keywords": "",
-"url": "/xbb/",
-"summary": "<p>An elaborated environment for building binary xPacks.</p>"
-}
-,
-
-
-
-{
-"title": "Maintainer info",
-"tags": "",
-"keywords": "",
-"url": "/maintain/",
-"summary": "<p>Resources for the xPack projects maintainers.</p>"
 }
 ,
 
@@ -481,10 +481,10 @@
 
 
 {
-"title": "How to install the xPack QEMU Arm binaries",
+"title": "How to install the xPack GNU RISC-V Embedded GCC binaries",
 "tags": "",
 "keywords": "",
-"url": "/qemu-arm/install/",
+"url": "/riscv-none-embed-gcc/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -492,10 +492,10 @@
 
 
 {
-"title": "How to install the xPack Windows Build Tools binaries",
+"title": "How to install the xPack GNU Arm Embedded GCC binaries",
 "tags": "",
 "keywords": "",
-"url": "/windows-build-tools/install/",
+"url": "/arm-none-eabi-gcc/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -514,10 +514,32 @@
 
 
 {
+"title": "How to install the xPack Windows Build Tools binaries",
+"tags": "",
+"keywords": "",
+"url": "/windows-build-tools/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
 "title": "How to install the xPack CMake binaries",
 "tags": "",
 "keywords": "",
 "url": "/cmake/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "How to install the xPack QEMU Arm binaries",
+"tags": "",
+"keywords": "",
+"url": "/qemu-arm/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -540,28 +562,6 @@
 "tags": "",
 "keywords": "",
 "url": "/ninja-build/install/",
-"summary": "<p>The recommended method is via xpm.</p>"
-}
-,
-
-
-
-{
-"title": "How to install the xPack GNU RISC-V Embedded GCC binaries",
-"tags": "",
-"keywords": "",
-"url": "/riscv-none-embed-gcc/install/",
-"summary": "<p>The recommended method is via xpm.</p>"
-}
-,
-
-
-
-{
-"title": "How to install the xPack GNU Arm Embedded GCC binaries",
-"tags": "",
-"keywords": "",
-"url": "/arm-none-eabi-gcc/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -841,10 +841,10 @@
 
 
 {
-"title": "How to get help for xPack QEMU Arm",
+"title": "How to get help for xPack GNU RISC-V Embedded GCC?",
 "tags": "",
 "keywords": "",
-"url": "/qemu-arm/support/",
+"url": "/riscv-none-embed-gcc/support/",
 "summary": ""
 }
 ,
@@ -852,10 +852,10 @@
 
 
 {
-"title": "How to get help for xPack Windows Build Tools",
+"title": "How to get help for xPack GNU Arm Embedded GCC?",
 "tags": "",
 "keywords": "",
-"url": "/windows-build-tools/support/",
+"url": "/arm-none-eabi-gcc/support/",
 "summary": ""
 }
 ,
@@ -874,10 +874,32 @@
 
 
 {
+"title": "How to get help for xPack Windows Build Tools",
+"tags": "",
+"keywords": "",
+"url": "/windows-build-tools/support/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "How to get help for xPack CMake",
 "tags": "",
 "keywords": "",
 "url": "/cmake/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack QEMU Arm",
+"tags": "",
+"keywords": "",
+"url": "/qemu-arm/support/",
 "summary": ""
 }
 ,
@@ -900,28 +922,6 @@
 "tags": "",
 "keywords": "",
 "url": "/ninja-build/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack GNU RISC-V Embedded GCC?",
-"tags": "",
-"keywords": "",
-"url": "/riscv-none-embed-gcc/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack GNU Arm Embedded GCC?",
-"tags": "",
-"keywords": "",
-"url": "/arm-none-eabi-gcc/support/",
 "summary": ""
 }
 ,
