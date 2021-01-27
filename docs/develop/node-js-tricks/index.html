@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Node.js Tips &amp; ricks" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/node-js-tricks/"},"@type":"BlogPosting","url":"https://xpack.github.io/develop/node-js-tricks/","headline":"Node.js Tips &amp; ricks","dateModified":"2021-01-25T12:34:46+00:00","datePublished":"2017-10-08T23:47:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/node-js-tricks/"},"@type":"BlogPosting","url":"https://xpack.github.io/develop/node-js-tricks/","headline":"Node.js Tips &amp; ricks","dateModified":"2021-01-27T20:39:53+00:00","datePublished":"2017-10-08T23:47:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -583,11 +583,23 @@ $('#toc').on('click', 'a', function() {
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">util</span><span class="p">.</span><span class="nx">inspect</span><span class="p">(</span><span class="nx">something</span><span class="p">))</span>
 </code></pre></div></div>
 
+<h3 id="check-if-filefolder-exist">Check if file/folder exist</h3>
+
+<p>Use <code class="language-plaintext highlighter-rouge">stat()</code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    try {
+      await fsPromises.stat(aPath)
+      // It does.
+    } catch (err) {
+      // It does not.
+    }
+</code></pre></div></div>
+
 <h3 id="check-if-symbolic-link">Check if symbolic link</h3>
 
 <p>Use <code class="language-plaintext highlighter-rouge">lstat()</code>, since <code class="language-plaintext highlighter-rouge">stat()</code> follows the link.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">stats</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fsPromises</span><span class="p">.</span><span class="nx">lstat</span><span class="p">(</span><span class="nx">globalPackageLinkPath</span><span class="p">)</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">stats</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fsPromises</span><span class="p">.</span><span class="nx">lstat</span><span class="p">(</span><span class="nx">aPath</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="nx">stats</span><span class="p">.</span><span class="nx">isSymbolicLink</span><span class="p">())</span> <span class="p">{</span>
   <span class="c1">// ...</span>
@@ -689,7 +701,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jan 25, 2021<br/> Site last generated: Jan 25, 2021 <br />
+<span>Page last updated:</span> Jan 27, 2021<br/> Site last generated: Jan 27, 2021 <br />
                 </div>
             </div>
 </footer>
