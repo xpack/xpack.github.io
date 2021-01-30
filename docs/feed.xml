@@ -5,16 +5,16 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Wed, 27 Jan 2021 20:42:56 +0000</pubDate>
-        <lastBuildDate>Wed, 27 Jan 2021 20:42:56 +0000</lastBuildDate>
+        <pubDate>Sat, 30 Jan 2021 19:53:38 +0000</pubDate>
+        <lastBuildDate>Sat, 30 Jan 2021 19:53:38 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
         
         <item>
-            <title>xPack xpm v0.8.0 pre-release</title>
+            <title>xPack xpm v0.8.1 pre-release</title>
             <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; stands for &lt;strong&gt;x&lt;/strong&gt;Pack &lt;strong&gt;p&lt;/strong&gt;ackage &lt;strong&gt;m&lt;/strong&gt;anager and is a &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Wed, 27 Jan 2021 18:52:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2021/01/27/xpm-v0-8-0-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2021/01/27/xpm-v0-8-0-released/</guid>
+            <pubDate>Sat, 30 Jan 2021 19:49:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/01/30/xpm-v0-8-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/01/30/xpm-v0-8-1-released/</guid>
             
             <category>releases</category>
             

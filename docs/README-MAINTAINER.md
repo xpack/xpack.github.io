@@ -7,18 +7,20 @@ This page documents how to maintain this site and update the web pages.
 ## Prerequisites
 
 To be able to run the Jekyll build process, the `ruby` interpreter
-and the `gem` tool are required. In OS X 10.10.5, these tools are
-pre-installed, at least when the Developer Command Line tools are present.
+and the `gem` tool are required. In latest macOS these tools are
+pre-installed, at least when Xcode or the **Developer Command Line**
+tools are present.
 
 ### Install separate Homebrew
 
-If you are like me and like really separated things, install a separate
-Homebrew instance only for the jekyll builds.
+If you are like me and prefer really separated things, install a separate
+Homebrew instance, only for the jekyll builds.
 
 ```console
 $ mkdir -p "${HOME}/opt"
 $ git clone https://github.com/ilg-ul/opt-install-scripts \
     "${HOME}/opt/install-scripts.git"
+
 $ caffeinate bash
 $ exec bash "${HOME}/opt/install-scripts.git/install-homebrew-jekyll.sh"
 ```
@@ -161,22 +163,23 @@ required versions are properly installed.
 
 ## Links
 
-- [web](https://xpack.github.io/)
-- [preview](https://xpack.github.io/web-preview/)
-- [Travis](https://travis-ci.org/github/xpack/web-jekyll)
+- [Web](https://xpack.github.io/)
+- [Web preview](https://xpack.github.io/web-preview/)
+- [GitHub Actions](https://github.com/xpack/web-jekyll/actions)
+
+Other:
 
 - [Liquid](https://shopify.github.io/liquid/)
 - [Jekyll Doc Theme 6.0](https://idratherbewriting.com/documentation-theme-jekyll/)
 - [kramdown](https://kramdown.gettalong.org)
 - [Markdown Kramdown Tips & Tricks](https://about.gitlab.com/2016/07/19/markdown-kramdown-tips-and-tricks/)
 - [GitHub Pages](https://pages.github.com).
-- [list of plugins](https://pages.github.com/versions/)
-
+- [List of GP plugins](https://pages.github.com/versions/)
 
 ## Quick copy/paste
 
-```
-bundle exec jekyll serve --trace --safe --baseurl "/web-preview"`
+```sh
+bundle exec jekyll serve --trace --safe --baseurl "/web-preview"
 
 bundle exec jekyll serve --trace --safe
 

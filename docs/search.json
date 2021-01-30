@@ -1044,6 +1044,17 @@
 "title": "",
 "tags": "",
 "keywords": "",
+"url": "/blog/2021/01/27/xpm-v0-8-0-released/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
 "url": "/xpm/files/folders/",
 "summary": ""
 }
@@ -1065,11 +1076,11 @@
 
 
 {
-"title": "xPack xpm v0.8.0 pre-release",
+"title": "xPack xpm v0.8.1 pre-release",
 "tags": "releasesxpmpackagemanager",
 "keywords": "",
-"url": "/blog/2021/01/27/xpm-v0-8-0-released/",
-"summary": "<p>Version <strong>0.8.0</strong> is a new release of <strong>xpm</strong>; it allows to install xPacks from Git repositories and adds new commands (list, uninstall).</p>"
+"url": "/blog/2021/01/30/xpm-v0-8-1-released/",
+"summary": "<p>Version <strong>0.8.1</strong> is a new release of <strong>xpm</strong>; it allows to install xPacks from Git repositories and adds new commands (list, uninstall); it also changes the default repository location on Linux.</p>"
 }
 ,
 
