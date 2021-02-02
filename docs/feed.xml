@@ -5,8 +5,8 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 02 Feb 2021 21:35:47 +0000</pubDate>
-        <lastBuildDate>Tue, 02 Feb 2021 21:35:47 +0000</lastBuildDate>
+        <pubDate>Tue, 02 Feb 2021 21:39:17 +0000</pubDate>
+        <lastBuildDate>Tue, 02 Feb 2021 21:39:17 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
         
         <item>
@@ -30,7 +30,7 @@
         </item>
         
         <item>
-            <title>xPack xpm v0.8.1 release</title>
+            <title>xPack xpm v0.8.1 released</title>
             <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; stands for &lt;strong&gt;x&lt;/strong&gt;Pack &lt;strong&gt;p&lt;/strong&gt;ackage &lt;strong&gt;m&lt;/strong&gt;anager and is a &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt;.&lt;/p&gt;</description>
             <pubDate>Sat, 30 Jan 2021 19:49:00 +0000</pubDate>
             <link>https://xpack.github.io/blog/2021/01/30/xpm-v0-8-1-released/</link>
