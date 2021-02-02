@@ -5,9 +5,31 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 02 Feb 2021 21:39:17 +0000</pubDate>
-        <lastBuildDate>Tue, 02 Feb 2021 21:39:17 +0000</lastBuildDate>
+        <pubDate>Tue, 02 Feb 2021 22:25:34 +0000</pubDate>
+        <lastBuildDate>Tue, 02 Feb 2021 22:25:34 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>xPack Meson Build v0.56.2-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/meson-build/&quot;&gt;The xPack Meson Build&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://mesonbuild.com&quot;&gt;Meson&lt;/a&gt; build system.&lt;/p&gt;</description>
+            <pubDate>Tue, 02 Feb 2021 21:50:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/02/02/meson-build-v0-56-2-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/02/02/meson-build-v0-56-2-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>meson-build</category>
+            
+            <category>meson</category>
+            
+            <category>build</category>
+            
+            <category>python</category>
+            
+            <category>ninja</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack QEMU Arm v2.8.0-12 released</title>
@@ -195,22 +217,6 @@
             <category>c++</category>
             
             <category>exceptions</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack CMake v3.19.1-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/cmake/&quot;&gt;The xPack CMake&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://cmake.org&quot;&gt;CMake&lt;/a&gt; build system.&lt;/p&gt;</description>
-            <pubDate>Tue, 15 Dec 2020 17:08:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2020/12/15/cmake-v3-19-1-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2020/12/15/cmake-v3-19-1-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>cmake</category>
-            
-            <category>build</category>
             
             
         </item>

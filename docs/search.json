@@ -1076,6 +1076,16 @@
 
 
 {
+"title": "xPack Meson Build v0.56.2-1 released",
+"tags": "releasesmeson-buildmesonbuildpythonninja",
+"keywords": "",
+"url": "/blog/2021/02/02/meson-build-v0-56-2-1-released/",
+"summary": "<p>Version 0.56.2-1 is a new release of the <strong>xPack Meson Build</strong> package, following the Meson release.</p>"
+}
+,
+
+
+{
 "title": "xPack QEMU Arm v2.8.0-12 released",
 "tags": "releasesqemuemulatorarmcortex-m",
 "keywords": "",
