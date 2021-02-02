@@ -5,9 +5,29 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sat, 30 Jan 2021 19:53:38 +0000</pubDate>
-        <lastBuildDate>Sat, 30 Jan 2021 19:53:38 +0000</lastBuildDate>
+        <pubDate>Tue, 02 Feb 2021 16:44:16 +0000</pubDate>
+        <lastBuildDate>Tue, 02 Feb 2021 16:44:16 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>xPack QEMU Arm v2.8.0-12 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/qemu-arm/&quot;&gt;The xPack QEMU Arm&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;http://www.qemu.org&quot;&gt;QEMU&lt;/a&gt;, with several extensions for Arm Cortex-Mdevices.&lt;/p&gt;</description>
+            <pubDate>Tue, 02 Feb 2021 09:30:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/02/02/qemu-arm-v2-8-0-12-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/02/02/qemu-arm-v2-8-0-12-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>qemu</category>
+            
+            <category>emulator</category>
+            
+            <category>arm</category>
+            
+            <category>cortex-m</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack xpm v0.8.1 pre-release</title>
@@ -185,22 +205,6 @@
             <pubDate>Tue, 15 Dec 2020 17:08:00 +0000</pubDate>
             <link>https://xpack.github.io/blog/2020/12/15/cmake-v3-19-1-1-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2020/12/15/cmake-v3-19-1-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>cmake</category>
-            
-            <category>build</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack CMake v3.18.5-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/cmake/&quot;&gt;The xPack CMake&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://cmake.org&quot;&gt;CMake&lt;/a&gt; build system.&lt;/p&gt;</description>
-            <pubDate>Thu, 10 Dec 2020 19:33:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2020/12/10/cmake-v3-18-5-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2020/12/10/cmake-v3-18-5-1-released/</guid>
             
             <category>releases</category>
             
