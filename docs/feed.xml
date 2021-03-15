@@ -5,9 +5,23 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 15 Mar 2021 12:06:09 +0000</pubDate>
-        <lastBuildDate>Mon, 15 Mar 2021 12:06:09 +0000</lastBuildDate>
+        <pubDate>Mon, 15 Mar 2021 19:30:34 +0000</pubDate>
+        <lastBuildDate>Mon, 15 Mar 2021 19:30:34 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>xPack OpenOCD v0.11.0-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/openocd/&quot;&gt;The xPack OpenOCD&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of&lt;a href=&quot;http://openocd.org&quot;&gt;OpenOCD&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Mon, 15 Mar 2021 17:07:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/03/15/openocd-v0-11-0-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/03/15/openocd-v0-11-0-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>openocd</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Meson Build v0.56.2-1 released</title>
@@ -193,30 +207,6 @@
             <category>speed</category>
             
             <category>small</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack GNU Arm Embedded GCC v10.2.1-1.1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/arm-none-eabi-gcc/&quot;&gt;The xPack GNU Arm Embedded GCC&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://developer.arm.com/open-source/gnu-toolchain/gnu-rm&quot;&gt;GNU Arm Embedded Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Sat, 19 Dec 2020 09:11:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2020/12/19/arm-none-eabi-gcc-v10-2-1-1-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2020/12/19/arm-none-eabi-gcc-v10-2-1-1-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>arm</category>
-            
-            <category>arm-none-eabi-gcc</category>
-            
-            <category>gcc</category>
-            
-            <category>binaries</category>
-            
-            <category>c++</category>
-            
-            <category>exceptions</category>
             
             
         </item>
