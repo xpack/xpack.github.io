@@ -1080,7 +1080,7 @@
 "tags": "releasesopenocd",
 "keywords": "",
 "url": "/blog/2021/03/15/openocd-v0-11-0-1-released/",
-"summary": "<p>Version 0.11.0-1 is a maintenance release; it updates to the latest upstream master.</p>"
+"summary": "<p>Version 0.11.0-1 is a new major release; it updates to the latest upstream major release.</p>"
 }
 ,
 
