@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install xpm" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/xpm/install/","headline":"How to install xpm","dateModified":"2021-03-15T19:36:49+00:00","datePublished":"2017-10-09T11:14:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/xpm/install/","headline":"How to install xpm","dateModified":"2021-03-16T10:19:52+00:00","datePublished":"2017-10-09T11:14:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -455,6 +455,36 @@ already have this path configured and the program should start normally:</p>
 0.5.0
 </code></pre></div></div>
 
+<h3 id="power-shell-execution-policy">Power Shell execution policy</h3>
+
+<p>By default, Power Shell restricts scripts, and <strong>xpm</strong> is not allowed to run:</p>
+
+<div class="language-ps highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">PS</span> <span class="nf">C:\Users\ilg</span><span class="p">&gt;</span> <span class="nf">xpm</span> <span class="nf">--version</span>
+<span class="nf">xpm</span> <span class="nf">:</span> <span class="nf">File</span> <span class="nf">C:\Users\ilg\AppData\Roaming\npm\xpm.ps1</span> <span class="nf">cannot</span> <span class="nf">be</span> <span class="nf">loaded</span> <span class="nf">because</span> <span class="nf">running</span> <span class="nf">scripts</span> <span class="nf">is</span> <span class="nf">disabled</span> <span class="nf">on</span> <span class="nf">this</span>
+<span class="nf">system.</span> <span class="nf">For</span> <span class="nf">more</span> <span class="nf">information,</span> <span class="nf">see</span> <span class="nf">about_Execution_Policies</span> <span class="nf">at</span> <span class="nf">https:</span><span class="nv">/go.microsoft.com/fwlink/?LinkID=135170.</span>
+<span class="nf">At</span> <span class="nf">line:1</span> <span class="nf">char:1</span>
+<span class="nf">+</span> <span class="nf">xpm</span> <span class="nf">--version</span>
+<span class="nf">+</span> <span class="nf">~~~</span>
+    <span class="nf">+</span> <span class="nf">CategoryInfo</span>          <span class="nf">:</span> <span class="nf">SecurityError:</span> <span class="s">(:)</span> <span class="p">[]</span><span class="nf">,</span> <span class="nf">PSSecurityException</span>
+    <span class="nf">+</span> <span class="nf">FullyQualifiedErrorId</span> <span class="nf">:</span> <span class="nf">UnauthorizedAccess</span>
+<span class="nf">PS</span> <span class="nf">C:\Users\ilg</span><span class="p">&gt;</span>
+</code></pre></div></div>
+
+<p>In order to run <strong>xpm</strong> it is
+necessary to change the execution policy:</p>
+
+<div class="language-ps highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">PS</span> <span class="nf">C:\Users\ilg</span><span class="p">&gt;</span> <span class="nf">Set-ExecutionPolicy</span> <span class="nf">-ExecutionPolicy</span> <span class="nf">Unrestricted</span> <span class="nf">-Scope</span> <span class="nf">CurrentUser</span>
+
+<span class="nf">Execution</span> <span class="nf">Policy</span> <span class="nf">Change</span>
+<span class="nf">The</span> <span class="nf">execution</span> <span class="nf">policy</span> <span class="nf">helps</span> <span class="nf">protect</span> <span class="nf">you</span> <span class="nf">from</span> <span class="nf">scripts</span> <span class="nf">that</span> <span class="nf">you</span> <span class="nf">do</span> <span class="kr">not</span> <span class="nf">trust.</span> <span class="nf">Changing</span> <span class="nf">the</span> <span class="nf">execution</span> <span class="nf">policy</span> <span class="nf">might</span> <span class="nf">expose</span>
+<span class="nf">you</span> <span class="nf">to</span> <span class="nf">the</span> <span class="nf">security</span> <span class="nf">risks</span> <span class="nf">described</span> <span class="nf">in</span> <span class="nf">the</span> <span class="nf">about_Execution_Policies</span> <span class="nf">help</span> <span class="nf">topic</span> <span class="nf">at</span>
+<span class="nf">https:</span><span class="nv">/go.microsoft.com/fwlink/?LinkID=135170.</span> <span class="nf">Do</span> <span class="nf">you</span> <span class="nf">want</span> <span class="nf">to</span> <span class="nf">change</span> <span class="nf">the</span> <span class="nf">execution</span> <span class="nf">policy?</span>
+<span class="p">[</span><span class="nf">Y</span><span class="p">]</span> <span class="nf">Yes</span>  <span class="p">[</span><span class="nf">A</span><span class="p">]</span> <span class="nf">Yes</span> <span class="nf">to</span> <span class="nf">All</span>  <span class="p">[</span><span class="nf">N</span><span class="p">]</span> <span class="nf">No</span>  <span class="p">[</span><span class="nf">L</span><span class="p">]</span> <span class="nf">No</span> <span class="nf">to</span> <span class="nf">All</span>  <span class="p">[</span><span class="nf">S</span><span class="p">]</span> <span class="nf">Suspend</span>  <span class="p">[</span><span class="nf">?</span><span class="p">]</span> <span class="nf">Help</span> <span class="s">(default is "N")</span><span class="nf">:</span> <span class="nf">A</span>
+<span class="nf">PS</span> <span class="nf">C:\Users\ilg</span><span class="p">&gt;</span> <span class="nf">xpm</span> <span class="nf">--version</span>
+<span class="nf">0.8.1</span>
+<span class="nf">PS</span> <span class="nf">C:\Users\ilg</span><span class="p">&gt;</span>
+</code></pre></div></div>
+
 <h3 id="aggressive-antivirus-programs--xpm">Aggressive antivirus programs &amp; xpm</h3>
 
 <p>On Windows, binary xPacks are <code class="language-plaintext highlighter-rouge">.zip</code> archives containing <code class="language-plaintext highlighter-rouge">.exe</code> files;
@@ -464,12 +494,12 @@ thus preventing the packages to be installed.</p>
 
 <p>Errors may look like:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Downloading https://github.com/gnu-mcu-eclipse/qemu/releases/download/v2.8.0-4-20190211/gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-win64.zip...
+<pre><code class="language-cmd">Downloading https://github.com/gnu-mcu-eclipse/qemu/releases/download/v2.8.0-4-20190211/gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-win64.zip...
 { Error: sha256-p3CgzXJt4zi5g0kxQXlOpss3Xu5Yy+Zv8HXWXkUdg6g= integrity checksum failed when using sha256: wanted sha256-p3CgzXJt4zi5g0kxQXlOpss3Xu5Yy+Zv8HXWXkUdg6g= but got sha512-k1s9UW6Zb20llIuopUwbf3D38OP1F+Nkgf3wGWwsXPwoQfhuiR89+VF3Rrf7YF20fN3tG4/3jZSC3apiHbQ6NA== sha256-ABnfxLMtY8E5KqJkrtIlPB4ML7CSFvjizCabv7i7SbU=. (9 bytes)
 ...
 Extracting 'gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-win64.zip'...
 error: Cannot read property 'path' of null
-</code></pre></div></div>
+</code></pre>
 
 <p>The solution is to configure the antivirus program to be less aggressive,
 at least for files in the
@@ -671,7 +701,7 @@ npm xpm@0.2.10 '/Users/ilg/My Files/MacBookPro Projects/xPack/npm-modules/xpm-js
 
 
         
-    <a target="_blank" rel="noopener" href="https://github.com/xpack/xpack.github.io/blob/master/pages/core/xpm/install.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
+    <a target="_blank" rel="noopener" href="https://github.com/xpack/web-jekyll/blob/master/pages/core/xpm/install.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
 
     
 
@@ -716,7 +746,7 @@ npm xpm@0.2.10 '/Users/ilg/My Files/MacBookPro Projects/xPack/npm-modules/xpm-js
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Mar 15, 2021<br/> Site last generated: Mar 15, 2021 <br />
+<span>Page last updated:</span> Mar 16, 2021<br/> Site last generated: Mar 16, 2021 <br />
                 </div>
             </div>
 </footer>
