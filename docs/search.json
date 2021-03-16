@@ -1076,6 +1076,16 @@
 
 
 {
+"title": "xPack CMake v3.18.6-1 released",
+"tags": "releasescmakebuild",
+"keywords": "",
+"url": "/blog/2021/03/16/cmake-v3-18-6-1-released/",
+"summary": "<p>Version 3.18.6-1 is a new release of the <strong>xPack CMake</strong> package, following the CMake release.</p>"
+}
+,
+
+
+{
 "title": "xPack Ninja Build v1.10.2-2 released",
 "tags": "releasesninja-buildninjabuildspeedsmall",
 "keywords": "",

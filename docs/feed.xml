@@ -5,9 +5,25 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 16 Mar 2021 17:11:28 +0000</pubDate>
-        <lastBuildDate>Tue, 16 Mar 2021 17:11:28 +0000</lastBuildDate>
+        <pubDate>Tue, 16 Mar 2021 21:41:00 +0000</pubDate>
+        <lastBuildDate>Tue, 16 Mar 2021 21:41:00 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>xPack CMake v3.18.6-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/cmake/&quot;&gt;The xPack CMake&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://cmake.org&quot;&gt;CMake&lt;/a&gt; build system.&lt;/p&gt;</description>
+            <pubDate>Tue, 16 Mar 2021 21:30:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/03/16/cmake-v3-18-6-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/03/16/cmake-v3-18-6-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>cmake</category>
+            
+            <category>build</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Ninja Build v1.10.2-2 released</title>
@@ -187,26 +203,6 @@
             <category>mkdir</category>
             
             <category>busybox</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack QEMU Arm v2.8.0-11 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/qemu-arm/&quot;&gt;The xPack QEMU Arm&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;http://www.qemu.org&quot;&gt;QEMU&lt;/a&gt;, with several extensions for Arm Cortex-Mdevices.&lt;/p&gt;</description>
-            <pubDate>Sun, 20 Dec 2020 15:48:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2020/12/20/qemu-arm-v2-8-0-11-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2020/12/20/qemu-arm-v2-8-0-11-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>qemu</category>
-            
-            <category>emulator</category>
-            
-            <category>arm</category>
-            
-            <category>cortex-m</category>
             
             
         </item>
