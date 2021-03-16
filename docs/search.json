@@ -1076,6 +1076,16 @@
 
 
 {
+"title": "xPack Ninja Build v1.10.2-2 released",
+"tags": "releasesninja-buildninjabuildspeedsmall",
+"keywords": "",
+"url": "/blog/2021/03/16/ninja-build-v1-10-2-2-released/",
+"summary": "<p>Version 1.10.2-2 is a maintenance release of the <strong>xPack Ninja Build</strong> package, fixing the spawning of cmd.exe scripts on Windows</p>"
+}
+,
+
+
+{
 "title": "xPack OpenOCD v0.11.0-1 released",
 "tags": "releasesopenocd",
 "keywords": "",
