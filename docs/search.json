@@ -1076,6 +1076,16 @@
 
 
 {
+"title": "xPack CMake v3.19.2-2 released",
+"tags": "releasescmakebuild",
+"keywords": "",
+"url": "/blog/2021/03/16/cmake-v3-19-2-2-released/",
+"summary": "<p>Version 3.19.2-2 is a maintenance release of the <strong>xPack CMake</strong> package, fixing the spawning of cmd.exe scripts on Windows.</p>"
+}
+,
+
+
+{
 "title": "xPack CMake v3.18.6-1 released",
 "tags": "releasescmakebuild",
 "keywords": "",
@@ -1090,7 +1100,7 @@
 "tags": "releasesninja-buildninjabuildspeedsmall",
 "keywords": "",
 "url": "/blog/2021/03/16/ninja-build-v1-10-2-2-released/",
-"summary": "<p>Version 1.10.2-2 is a maintenance release of the <strong>xPack Ninja Build</strong> package, fixing the spawning of cmd.exe scripts on Windows</p>"
+"summary": "<p>Version 1.10.2-2 is a maintenance release of the <strong>xPack Ninja Build</strong> package, fixing the spawning of cmd.exe scripts on Windows.</p>"
 }
 ,
 

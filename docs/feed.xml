@@ -5,9 +5,25 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 16 Mar 2021 21:41:00 +0000</pubDate>
-        <lastBuildDate>Tue, 16 Mar 2021 21:41:00 +0000</lastBuildDate>
+        <pubDate>Wed, 17 Mar 2021 08:40:31 +0000</pubDate>
+        <lastBuildDate>Wed, 17 Mar 2021 08:40:31 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>xPack CMake v3.19.2-2 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/cmake/&quot;&gt;The xPack CMake&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://cmake.org&quot;&gt;CMake&lt;/a&gt; build system.&lt;/p&gt;</description>
+            <pubDate>Tue, 16 Mar 2021 21:30:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/03/16/cmake-v3-19-2-2-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/03/16/cmake-v3-19-2-2-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>cmake</category>
+            
+            <category>build</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack CMake v3.18.6-1 released</title>
@@ -165,30 +181,6 @@
             <pubDate>Mon, 28 Dec 2020 12:38:00 +0000</pubDate>
             <link>https://xpack.github.io/blog/2020/12/28/windows-build-tools-v4-2-1-2-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2020/12/28/windows-build-tools-v4-2-1-2-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>windows-build-tools</category>
-            
-            <category>build</category>
-            
-            <category>make</category>
-            
-            <category>rm</category>
-            
-            <category>mkdir</category>
-            
-            <category>busybox</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack Windows Build Tools v4.2.1-1 released</title>
-            <description>&lt;p&gt;This is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of &lt;strong&gt;Windows Build Tools&lt;/strong&gt; (formerly partof the GNU MCU/ARM Eclipse project).&lt;/p&gt;</description>
-            <pubDate>Sun, 27 Dec 2020 17:42:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2020/12/27/windows-build-tools-v4-2-1-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2020/12/27/windows-build-tools-v4-2-1-1-released/</guid>
             
             <category>releases</category>
             

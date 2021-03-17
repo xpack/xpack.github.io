@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="keywords" content=" ">
-<title>How to get help for xPack CMake | The xPack Project</title>
+<meta name="description" content="Version 3.19.2-2 is a maintenance release of the xPack CMake package, fixing the spawning of cmd.exe scripts on Windows.">
+<meta name="keywords" content="releasescmakebuild,  ">
+<title>xPack CMake v3.19.2-2 released | The xPack Project</title>
 <link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
 
 
@@ -14,21 +14,21 @@
 <link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
 
 <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>How to get help for xPack CMake</title>
+<title>xPack CMake v3.19.2-2 released</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="How to get help for xPack CMake" />
+<meta property="og:title" content="xPack CMake v3.19.2-2 released" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
-<meta property="og:description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
-<link rel="canonical" href="https://xpack.github.io/cmake/support/" />
-<meta property="og:url" content="https://xpack.github.io/cmake/support/" />
+<meta name="description" content="The xPack CMake is the xPack distribution of the CMake build system." />
+<meta property="og:description" content="The xPack CMake is the xPack distribution of the CMake build system." />
+<link rel="canonical" href="https://xpack.github.io/blog/2021/03/16/cmake-v3-19-2-2-released/" />
+<meta property="og:url" content="https://xpack.github.io/blog/2021/03/16/cmake-v3-19-2-2-released/" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-09-29T11:05:00+00:00" />
+<meta property="article:published_time" content="2021-03-16T21:30:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="How to get help for xPack CMake" />
+<meta property="twitter:title" content="xPack CMake v3.19.2-2 released" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/cmake/support/"},"@type":"BlogPosting","url":"https://xpack.github.io/cmake/support/","headline":"How to get help for xPack CMake","dateModified":"2021-03-17T08:03:31+00:00","datePublished":"2020-09-29T11:05:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"The xPack CMake is the xPack distribution of the CMake build system.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/03/16/cmake-v3-19-2-2-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2021/03/16/cmake-v3-19-2-2-released/","headline":"xPack CMake v3.19.2-2 released","dateModified":"2021-03-17T08:03:31+00:00","datePublished":"2021-03-16T21:30:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -253,7 +253,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: '/search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="How to get help for xPack CMake">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="xPack CMake v3.19.2-2 released">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -530,49 +530,145 @@
 
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
-            <div class="post-header">
-   <h1 class="post-title-main">How to get help for xPack CMake</h1>
+            <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">xPack CMake v3.19.2-2 released</h1>
+        <p class="post-meta"><time datetime="2021-03-16T21:30:00+00:00" itemprop="datePublished">Mar 16, 2021</time> <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">/ Liviu Ionescu</span></span> /
+            
+            
+            
+            <a href="/tags/releases/">releases</a>, 
+            
+            
+            
+            <a href="/tags/cmake/">cmake</a>, 
+            
+            
+            
+            <a href="/tags/build/">build</a>
+            
+            
+            
+
+        </p>
+
+
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+
+        
+        <div class="summary">Version 3.19.2-2 is a maintenance release of the <strong>xPack CMake</strong> package, fixing the spawning of cmd.exe scripts on Windows.
 </div>
+        
 
+        <p><a href="https://xpack.github.io/cmake/">The xPack CMake</a>
+is the <strong>xPack</strong> distribution of the
+<a href="https://cmake.org">CMake</a> build system.</p>
 
+<p>There are separate binaries for <strong>Windows</strong> (Intel 32/64-bit),
+<strong>macOS</strong> (Intel 64-bit) and <strong>GNU/Linux</strong> (Intel 32/64-bit, Arm 32/64-bit).</p>
 
-<div class="post-content">
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The main targets for the Arm binaries
+are the <strong>Raspberry Pi</strong> class devices.</div>
 
-   
+<h2 id="download">Download</h2>
 
-    
-    
-<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
-<script>
-$( document ).ready(function() {
-  // Handler for .ready() called.
+<p>The binary files are available from GitHub <a href="https://github.com/xpack-dev-tools/cmake-xpack/releases/tag/v3.19.2-2/">releases</a>.</p>
 
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3' });
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For consistency with the Node.js naming
+conventions, the names of the Intel 32-bit images are now suffixed with
+<code class="language-plaintext highlighter-rouge">-ia32</code>.</div>
 
-/* this offset helps account for the space taken up by the floating toolbar. */
-$('#toc').on('click', 'a', function() {
-  var target = $(this.getAttribute('href'))
-    , scroll_target = target.offset().top
+<h2 id="install">Install</h2>
 
-  $(window).scrollTop(scroll_target - 10);
-  return false
-})
+<p>The full details of installing the <strong>xPack CMake</strong> on various platforms
+are presented in the separate
+<a href="/cmake/install/">Install</a> page.</p>
 
-});
-</script>
+<h3 id="easy-install">Easy install</h3>
 
-<div id="toc"></div>
+<p>The easiest way to install CMake is with
+<a href="/xpm/"><code class="language-plaintext highlighter-rouge">xpm</code></a>
+by using the <strong>binary xPack</strong>, available as
+<a href="https://www.npmjs.com/package/@xpack-dev-tools/cmake"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/cmake</code></a>
+from the <a href="https://www.npmjs.com"><code class="language-plaintext highlighter-rouge">npmjs.com</code></a> registry.</p>
 
-    
+<p>To install the latest version available, use:</p>
 
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/cmake@latest
+</code></pre></div></div>
 
-   <h2 id="quicklinks">Quicklinks</h2>
+<p>To install this specific version, use:</p>
 
-<p>The quick answer is to use the
-<a href="https://www.tapatalk.com/groups/xpack/">xPack forums</a>; please select
-the correct forum.</p>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/cmake@3.19.2-2.1
+</code></pre></div></div>
 
-<h2 id="check-the-documentation">Check the documentation</h2>
+<h2 id="compliance">Compliance</h2>
+
+<p>The <strong>xPack CMake</strong> is based on the official
+<a href="https://cmake.org">CMake</a>,
+without any changes.</p>
+
+<p>The current version is based on:</p>
+
+<ul>
+  <li>CMake release
+<a href="https://github.com/Kitware/CMake/releases/tag/v3.19.2/">3.19.2</a>
+from Dec 16th, 2020.</li>
+</ul>
+
+<h2 id="changes">Changes</h2>
+
+<p>Compared to the upstream version, the Windows version also supports
+spawning scripts via <code class="language-plaintext highlighter-rouge">cmd.exe /c</code>. These scripts are used by <strong>npm</strong>/<strong>xpm</strong>
+to redirect invocations to the central packages repository.</p>
+
+<h2 id="bug-fixes">Bug fixes</h2>
+
+<ul>
+  <li>none</li>
+</ul>
+
+<h2 id="enhancements">Enhancements</h2>
+
+<ul>
+  <li>none</li>
+</ul>
+
+<h2 id="known-problems">Known problems</h2>
+
+<ul>
+  <li>none</li>
+</ul>
+
+<h2 id="shared-libraries">Shared libraries</h2>
+
+<p>On all platforms the packages are standalone, and expect only the standard
+runtime to be present on the host.</p>
+
+<p>All dependencies that are build as shared libraries are copied locally in the
+same folder as the executable.</p>
+
+<h3 id="dt_rpath-and-ld_library_path"><code class="language-plaintext highlighter-rouge">DT_RPATH</code> and <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code></h3>
+
+<p>On GNU/Linux the binaries are adjusted to use a relative path:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>readelf <span class="nt">-d</span> library.so | <span class="nb">grep </span>runpath
+<span class="gp"> 0x000000000000001d (RPATH)            Library rpath: [$</span>ORIGIN]
+</code></pre></div></div>
+
+<p>In the GNU ld.so search strategy, the <code class="language-plaintext highlighter-rouge">DT_RPATH</code> has
+the highest priority, higher than <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code>, so if this later one
+is set in the environment, it should not interfere with the xPack binaries.</p>
+
+<h3 id="executable_path"><code class="language-plaintext highlighter-rouge">@executable_path</code></h3>
+
+<p>Similarly, on macOS, the dynamic libraries are adjusted with <code class="language-plaintext highlighter-rouge">otool</code> to use a
+relative path.</p>
+
+<h2 id="documentation">Documentation</h2>
 
 <p>The current version specific CMake documentation is available in each packet:</p>
 
@@ -586,62 +682,113 @@ the correct forum.</p>
   <li><a href="https://cmake.org/documentation/">https://cmake.org/documentation/</a></li>
 </ul>
 
-<h2 id="check-the-faq">Check the FAQ</h2>
+<h2 id="supported-platforms">Supported platforms</h2>
 
-<p>Check the <a href="/cmake/faq/">FAQ</a>
-for similar problems.</p>
+<p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided.</p>
 
-<h2 id="check-the-xpack-forums">Check the xPack forums</h2>
+<p>The binaries were built using the
+<a href="https://github.com/xpack/xpack-build-box">xPack Build Box (XBB)</a>, a set
+of build environments based on slightly older distributions, that should be
+compatible with most recent systems.</p>
 
-<p>Check the <a href="https://www.tapatalk.com/groups/xpack/">xPack forums</a> for
-similar problems.</p>
+<ul>
+  <li>Intel GNU/Linux: all binaries were built with GCC 9.3, running in an
+Ubuntu 12 Docker container</li>
+  <li>Arm GNU/Linux: all binaries were built with GCC 9.3, running in an
+Ubuntu 16 Docker container (added in mid-2020)</li>
+  <li>Windows: all binaries were built with mingw-w64 GCC 9.3, running in an
+Ubuntu 12 Docker container</li>
+  <li>macOS: all binaries were built with GCC 9.3, running in a separate
+folder on macOS 10.10.5.</li>
+</ul>
 
-<h2 id="check-the-github-issues">Check the GitHub issues</h2>
+<h2 id="build">Build</h2>
 
-<p>Check the
-<a href="https://github.com/xpack-dev-tools/cmake-xpack/issues/">GitHub issues</a>
-tracker for similar problems.</p>
+<p>The scripts used to build this distribution are in:</p>
 
-<h2 id="ask-questions-in-the-forums">Ask questions in the forums</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">distro-info/scripts</code></li>
+</ul>
 
-<p>If you still could not find a solution, if you have interesting use
-cases, if you have custom configurations, and generally if you have
-any experience that you want to share with others, use the
-<a href="https://www.tapatalk.com/groups/xpack/">xPack forums</a>,
-and enter a <strong>New Topic</strong> in the CMake section.</p>
+<p>For the prerequisites and more details on the build procedure, please see the
+<a href="https://github.com/xpack-dev-tools/cmake-xpack/blob/xpack/README-BUILD.md">How to build</a> page.</p>
 
-<h2 id="register-a-new-support-ticket-only-if-necessary">Register a new support ticket only if necessary</h2>
+<h2 id="travis-tests">Travis tests</h2>
 
-<p>If you are convinced that you identified a bug related to the binary
-distribution, not CMake itself (if you have doubts, use the forum),
-or you have a pertinent suggestion how to enhance the <strong>xPack CMake</strong>
-distribution, register a <strong>New Issue</strong> in the the
-<a href="https://github.com/xpack-dev-tools/cmake-xpack/issues/">GitHub issues</a>
-tracker.</p>
+<p>The first set of tests were performed on Travis, by running
+a simple script to check if the binaries start on a wide range of
+platforms and distributions:</p>
 
-<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> <strong>DO NOT</strong> use the GitHub issues tracker
-for questions and support, <strong>use the forums</strong>.</div>
+<ul>
+  <li><a href="https://travis-ci.com/github/xpack-dev-tools/cmake-xpack/builds/220317746">test xPack CMake on stable platforms</a></li>
+  <li><a href="https://travis-ci.com/github/xpack-dev-tools/cmake-xpack/builds/220317753">test xPack CMake on latest platforms</a></li>
+</ul>
 
-<h2 id="use-of-private-e-mail">Use of private e-mail</h2>
+<h2 id="tests">Tests</h2>
 
-<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important:</b> Please, please, please: <strong>do not use
-private e-mail</strong> for support, <strong>use the xPack forums</strong>.</div>
+<p>TBD</p>
 
-<p>Sending private messages will be automatically replied with
-a link to this page.
-The reason for this rude behaviour is simply an attempt to efficiently use
-the time; since forum posts are archived, other people
-having similar problems might benefit from the answers.</p>
+<h2 id="checksums">Checksums</h2>
 
+<p>The SHA-256 hashes for the files are:</p>
 
-        
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">1327ee08eec7e09e79e5f7a5f5a29f3bfb8639987bb147887f52627d510943b4
+xpack-cmake-3.19.2-2-darwin-x64.tar.gz
 
+1fcb3c2733a955cca4ea45cc32fadabb4f74b02acbb2e6150d97d9aa00e4e307
+xpack-cmake-3.19.2-2-linux-arm64.tar.gz
 
-    <div class="tags">
-        
+12bb352b4222a4c93b7085159de46415bd09853ffdc5089113687e10a37fa48e
+xpack-cmake-3.19.2-2-linux-arm.tar.gz
+
+149cc2b100fd84ec556ee26ed7ec0810540f75eea0595eeae518721e449c896d
+xpack-cmake-3.19.2-2-linux-ia32.tar.gz
+
+056809b71f26ed1b9261a0a09d4d6348d2328d0af8be2e23ee00eb34fc012e23
+xpack-cmake-3.19.2-2-linux-x64.tar.gz
+
+e363cbb04577864ab69260ec7cc5af8ac08f38640d60a90d8419bacb2a2d6e70
+xpack-cmake-3.19.2-2-win32-ia32.zip
+
+27a6e0e40be3b4beb354f1d1901ad02e433442955eafef273755929287b94569
+xpack-cmake-3.19.2-2-win32-x64.zip
+</span></code></pre></div></div>
+
+<h2 id="download-analytics">Download analytics</h2>
+
+<ul>
+  <li>GitHub <a href="https://github.com/xpack-dev-tools/cmake-xpack/">xpack-dev-tools/cmake-xpack</a>
+    <ul>
+      <li>this release <a href="https://github.com/xpack-dev-tools/cmake-xpack/releases/v3.19.2-2/"><img src="https://img.shields.io/github/downloads/xpack-dev-tools/cmake-xpack/v3.19.2-2/total.svg" alt="Github All Releases" /></a></li>
+      <li>all xPack releases <a href="https://github.com/xpack-dev-tools/cmake-xpack/releases/"><img src="https://img.shields.io/github/downloads/xpack-dev-tools/cmake-xpack/total.svg" alt="Github All Releases" /></a></li>
+      <li><a href="https://somsubhra.github.io/github-release-stats/?username=xpack-dev-tools&amp;repository=cmake-xpack">individual file counters</a> (grouped per release)</li>
+    </ul>
+  </li>
+  <li>npmjs.com <a href="https://www.npmjs.com/package/@xpack-dev-tools/cmake">@xpack-dev-tools/cmake</a>
+    <ul>
+      <li>latest releases <a href="https://www.npmjs.com/package/@xpack-dev-tools/cmake/"><img src="https://img.shields.io/npm/dw/@xpack-dev-tools/cmake.svg" alt="npm" /></a></li>
+      <li>all @xpack-dev-tools releases <a href="https://www.npmjs.com/package/@xpack-dev-tools/cmake/"><img src="https://img.shields.io/npm/dt/@xpack-dev-tools/cmake.svg" alt="npm" /></a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Credit to <a href="https://shields.io">Shields IO</a> for the badges and to
+<a href="https://github.com/Somsubhra/github-release-stats">Somsubhra/github-release-stats</a>
+for the individual file counters.</p>
+
     </div>
 
+
+
+</article>
+
     
+    <a target="_blank" rel="noopener" href="https://github.com/xpack/web-jekyll/blob/master/_posts/releases/cmake/2021-03-17-cmake-v3-19-2-2-released.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
+
+    
+
+
+
 
     <hr/>
     <p>Comments on the content of this page that might be useful
@@ -654,7 +801,7 @@ having similar problems might benefit from the answers.</p>
     <script type="text/javascript">
         var disqus_config = function () {
             this.page.url = '';  // Your page's canonical URL variable
-            this.page.identifier = '/cmake/support/'; // Your page's unique identifier variable
+            this.page.identifier = '/blog/2021/03/16/cmake-v3-19-2-2-released/'; // Your page's unique identifier variable
         };
 
         (function() { // DON'T EDIT BELOW THIS LINE
@@ -668,8 +815,6 @@ having similar problems might benefit from the answers.</p>
 
 
 
-
-</div>
 
 <hr class="shaded"/>
 
