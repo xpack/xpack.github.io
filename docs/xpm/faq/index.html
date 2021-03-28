@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="FAQ" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/faq/"},"@type":"BlogPosting","url":"https://xpack.github.io/xpm/faq/","headline":"FAQ","dateModified":"2021-03-17T08:03:31+00:00","datePublished":"2019-06-28T08:03:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/faq/"},"@type":"BlogPosting","url":"https://xpack.github.io/xpm/faq/","headline":"FAQ","dateModified":"2021-03-28T20:22:39+00:00","datePublished":"2019-06-28T08:03:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -356,7 +356,28 @@
           
           
           
-          <li><a title="xpm run-script" href="/xpm/cli/run-script/">xpm run-script</a></li>
+          <li><a title="xpm link" href="/xpm/cli/link/">xpm link</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm list" href="/xpm/cli/list/">xpm list</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm run" href="/xpm/cli/run/">xpm run</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm uninstall" href="/xpm/cli/uninstall/">xpm uninstall</a></li>
           
           
           
@@ -401,10 +422,33 @@
   <div class="panel panel-default">
       <div class="panel-heading">
           <h4 class="panel-title">
-              <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-1"><code class="language-plaintext highlighter-rouge">static async start () ... SyntaxError: Unexpected identifier</code></a>
+              <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-50">Why xpm manages configurations, instead of limiting itself to manage
+dependencies/packages, as the name implies?</a>
           </h4>
       </div>
-      <div id="collapse-1" class="panel-collapse collapse noCrossRef">
+      <div id="collapse-50" class="panel-collapse collapse noCrossRef">
+          <div class="panel-body">
+              
+<p>In the most generic use case, configurations can have specific dependencies,
+for example different configurations can use different architecture
+toolchains, or, in test cases, different versions of the same
+toolchain.</p>
+
+<p>Thus, defining configurations in <code class="language-plaintext highlighter-rouge">package.json</code> is probably the
+best choice, otherwise both xpm and the build tools must handle
+multiple files with partly redundant content.</p>
+
+          </div>
+      </div>
+  </div>
+
+  <div class="panel panel-default">
+      <div class="panel-heading">
+          <h4 class="panel-title">
+              <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-40"><code class="language-plaintext highlighter-rouge">static async start () ... SyntaxError: Unexpected identifier</code></a>
+          </h4>
+      </div>
+      <div id="collapse-40" class="panel-collapse collapse noCrossRef">
           <div class="panel-body">
               
 <p>This problem occurs usually on GNU/Linux, and is caused by trying to use
@@ -440,10 +484,10 @@ described in the <a href="/install/">prerequisites</a> page.</p>
   <div class="panel panel-default">
       <div class="panel-heading">
           <h4 class="panel-title">
-              <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-2"><code class="language-plaintext highlighter-rouge">error: Cannot read property 'path' of null</code></a>
+              <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-30"><code class="language-plaintext highlighter-rouge">error: Cannot read property 'path' of null</code></a>
           </h4>
       </div>
-      <div id="collapse-2" class="panel-collapse collapse noCrossRef">
+      <div id="collapse-30" class="panel-collapse collapse noCrossRef">
           <div class="panel-body">
               
 <p>This problem is specific to Windows and is caused by aggressive antivirus programs.</p>
@@ -475,10 +519,10 @@ at least for files in the
   <div class="panel panel-default">
       <div class="panel-heading">
           <h4 class="panel-title">
-              <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-3">Cannot find the <code class="language-plaintext highlighter-rouge">Library</code> folder (on macOS)</a>
+              <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-20">Cannot find the <code class="language-plaintext highlighter-rouge">Library</code> folder (on macOS)</a>
           </h4>
       </div>
-      <div id="collapse-3" class="panel-collapse collapse noCrossRef">
+      <div id="collapse-20" class="panel-collapse collapse noCrossRef">
           <div class="panel-body">
               
 <p>Yes, due to an unfortunate Apple decision,
@@ -497,10 +541,10 @@ this folder is hidden for regular browsing in Finder.</p>
   <div class="panel panel-default">
       <div class="panel-heading">
           <h4 class="panel-title">
-              <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-4">Cannot find the <code class="language-plaintext highlighter-rouge">.content</code> folder (on macOS)</a>
+              <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-10">Cannot find the <code class="language-plaintext highlighter-rouge">.content</code> folder (on macOS)</a>
           </h4>
       </div>
-      <div id="collapse-4" class="panel-collapse collapse noCrossRef">
+      <div id="collapse-10" class="panel-collapse collapse noCrossRef">
           <div class="panel-body">
               
 <p>Yes, due to an unfortunate Apple decision,
@@ -568,7 +612,7 @@ using it again reverts to hiding them.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Mar 17, 2021<br/> Site last generated: Mar 17, 2021 <br />
+<span>Page last updated:</span> Mar 28, 2021<br/> Site last generated: Mar 28, 2021 <br />
                 </div>
             </div>
 </footer>

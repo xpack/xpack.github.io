@@ -34,6 +34,8 @@
 
 
 
+
+
 {
 "title": "The xPack Build Definitions",
 "tags": "",
@@ -42,8 +44,6 @@
 "summary": "<p>The metadata used by the build tools.</p>"
 }
 ,
-
-
 
 
 
@@ -75,7 +75,7 @@
 
 
 {
-"title": "The xPack Dvices Definitions",
+"title": "The xPack Devices Definitions",
 "tags": "",
 "keywords": "",
 "url": "/metadata/devices/",
@@ -118,39 +118,6 @@
 
 
 {
-"title": "The xPack QEMU Arm Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/qemu-arm/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The xPack OpenOCD Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/openocd/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The xPack GNU Arm Embedded GCC Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/arm-none-eabi-gcc/faq/",
-"summary": ""
-}
-,
-
-
-
-{
 "title": "The xPack CMake Frequently Asked Questions",
 "tags": "",
 "keywords": "",
@@ -162,10 +129,10 @@
 
 
 {
-"title": "The xPack Ninja Build Frequently Asked Questions",
+"title": "The xPack QEMU Arm Frequently Asked Questions",
 "tags": "",
 "keywords": "",
-"url": "/ninja-build/faq/",
+"url": "/qemu-arm/faq/",
 "summary": ""
 }
 ,
@@ -199,6 +166,39 @@
 "tags": "",
 "keywords": "",
 "url": "/windows-build-tools/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack Ninja Build Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/ninja-build/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack OpenOCD Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/openocd/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack GNU Arm Embedded GCC Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/arm-none-eabi-gcc/faq/",
 "summary": ""
 }
 ,
@@ -253,11 +253,11 @@
 
 
 {
-"title": "The xPack Build Runner",
+"title": "xPack Developer info",
 "tags": "",
-"keywords": "make",
-"url": "/xpninja/",
-"summary": "<p>A light and fast tool to build generic projects, inspired by Ninja Build but with the configuration files in JSON (in design phase).</p>"
+"keywords": "",
+"url": "/develop/",
+"summary": "<p>Resources for xPack developers.</p>"
 }
 ,
 
@@ -266,11 +266,11 @@
 
 
 {
-"title": "The xPack Package Manager",
+"title": "The xPack Build Box",
 "tags": "",
-"keywords": "xPackpackagemanager",
-"url": "/xpm/",
-"summary": "<p>A tool to manage dependencies for generic multi-version source and binary packages, inspired by npm.</p>"
+"keywords": "",
+"url": "/xbb/",
+"summary": "<p>An elaborated environment for building binary xPacks.</p>"
 }
 ,
 
@@ -288,15 +288,46 @@
 
 
 {
-"title": "The xPack Basic Project Builder",
+"title": "xpm files",
 "tags": "",
 "keywords": "",
-"url": "/xpbuild/",
-"summary": "<p>A tool to build day to day projects without having to manually write make files, with an emphasis on C/C++ and embedded applications, inspired by Eclipse CDT managed builder (work in progress).</p>"
+"url": "/xpm/files/",
+"summary": ""
 }
 ,
 
 
+
+{
+"title": "xpm - common options",
+"tags": "",
+"keywords": "",
+"url": "/xpm/cli/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack Package Manager",
+"tags": "",
+"keywords": "xPackpackagemanager",
+"url": "/xpm/",
+"summary": "<p>A tool to manage dependencies for generic multi-version source and binary packages, inspired by npm.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Build Runner",
+"tags": "",
+"keywords": "make",
+"url": "/xpninja/",
+"summary": "<p>A light and fast tool to build generic projects, inspired by Ninja Build but with the configuration files in JSON (in design phase).</p>"
+}
+,
 
 
 
@@ -313,14 +344,18 @@
 
 
 
+
+
 {
-"title": "The xPack Build Box",
+"title": "The xPack Basic Project Builder",
 "tags": "",
 "keywords": "",
-"url": "/xbb/",
-"summary": "<p>An elaborated environment for building binary xPacks.</p>"
+"url": "/xpbuild/",
+"summary": "<p>A tool to build day to day projects without having to manually write make files, with an emphasis on C/C++ and embedded applications, inspired by Eclipse CDT managed builder (work in progress).</p>"
 }
 ,
+
+
 
 
 
@@ -330,61 +365,6 @@
 "keywords": "",
 "url": "/maintain/",
 "summary": "<p>Resources for the xPack projects maintainers.</p>"
-}
-,
-
-
-
-{
-"title": "xPack Developer info",
-"tags": "",
-"keywords": "",
-"url": "/develop/",
-"summary": "<p>Resources for xPack developers.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack Metadata",
-"tags": "",
-"keywords": "",
-"url": "/metadata/",
-"summary": "<p>The metadata used by xPack tools.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack QEMU Arm",
-"tags": "",
-"keywords": "qemuarmcortex-mgraphic",
-"url": "/qemu-arm/",
-"summary": "<p>A binary distribution of QEMU Arm.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack OpenOCD",
-"tags": "",
-"keywords": "openocd",
-"url": "/openocd/",
-"summary": "<p>A binary distribution of OpenOCD.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack GNU Arm Embedded GCC",
-"tags": "",
-"keywords": "arm-none-eabi-gccarmgccembedded",
-"url": "/arm-none-eabi-gcc/",
-"summary": "<p>A binary distribution of GNU Arm Embedded GCC.</p>"
 }
 ,
 
@@ -402,11 +382,11 @@
 
 
 {
-"title": "The xPack Ninja Build",
+"title": "The xPack QEMU Arm",
 "tags": "",
-"keywords": "ninja-build",
-"url": "/ninja-build/",
-"summary": "<p>A binary distribution of Ninja Build.</p>"
+"keywords": "qemuarmcortex-mgraphic",
+"url": "/qemu-arm/",
+"summary": "<p>A binary distribution of QEMU Arm.</p>"
 }
 ,
 
@@ -444,6 +424,48 @@
 ,
 
 
+
+{
+"title": "The xPack Ninja Build",
+"tags": "",
+"keywords": "ninja-build",
+"url": "/ninja-build/",
+"summary": "<p>A binary distribution of Ninja Build.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack OpenOCD",
+"tags": "",
+"keywords": "openocd",
+"url": "/openocd/",
+"summary": "<p>A binary distribution of OpenOCD.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack GNU Arm Embedded GCC",
+"tags": "",
+"keywords": "arm-none-eabi-gccarmgccembedded",
+"url": "/arm-none-eabi-gcc/",
+"summary": "<p>A binary distribution of GNU Arm Embedded GCC.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Metadata",
+"tags": "",
+"keywords": "",
+"url": "/metadata/",
+"summary": "<p>The metadata used by xPack tools.</p>"
+}
+,
 
 
 
@@ -514,39 +536,6 @@
 
 
 {
-"title": "How to install the xPack QEMU Arm binaries",
-"tags": "",
-"keywords": "",
-"url": "/qemu-arm/install/",
-"summary": "<p>The recommended method is via xpm.</p>"
-}
-,
-
-
-
-{
-"title": "How to install the xPack OpenOCD binaries",
-"tags": "",
-"keywords": "",
-"url": "/openocd/install/",
-"summary": "<p>The recommended method is via xpm.</p>"
-}
-,
-
-
-
-{
-"title": "How to install the xPack GNU Arm Embedded GCC binaries",
-"tags": "",
-"keywords": "",
-"url": "/arm-none-eabi-gcc/install/",
-"summary": "<p>The recommended method is via xpm.</p>"
-}
-,
-
-
-
-{
 "title": "How to install the xPack CMake binaries",
 "tags": "",
 "keywords": "",
@@ -558,10 +547,10 @@
 
 
 {
-"title": "How to install the xPack Ninja Build binaries",
+"title": "How to install the xPack QEMU Arm binaries",
 "tags": "",
 "keywords": "",
-"url": "/ninja-build/install/",
+"url": "/qemu-arm/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -602,6 +591,39 @@
 
 
 {
+"title": "How to install the xPack Ninja Build binaries",
+"tags": "",
+"keywords": "",
+"url": "/ninja-build/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "How to install the xPack OpenOCD binaries",
+"tags": "",
+"keywords": "",
+"url": "/openocd/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "How to install the xPack GNU Arm Embedded GCC binaries",
+"tags": "",
+"keywords": "",
+"url": "/arm-none-eabi-gcc/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
 "title": "How to install the xPack tools",
 "tags": "",
 "keywords": "npmxpackinstall",
@@ -633,6 +655,17 @@
 ,
 
 
+
+
+
+{
+"title": "xpm link",
+"tags": "",
+"keywords": "",
+"url": "/xpm/cli/link/",
+"summary": ""
+}
+,
 
 
 
@@ -710,26 +743,6 @@
 
 
 
-{
-"title": "xpm files",
-"tags": "",
-"keywords": "",
-"url": "/xpm/files/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "xpm - common options",
-"tags": "",
-"keywords": "",
-"url": "/xpm/cli/",
-"summary": ""
-}
-,
-
 
 
 {
@@ -740,8 +753,6 @@
 "summary": ""
 }
 ,
-
-
 
 
 
@@ -781,6 +792,8 @@
 "summary": ""
 }
 ,
+
+
 
 
 
@@ -831,13 +844,11 @@
 
 
 
-
-
 {
-"title": "xpm run-script",
+"title": "xpm run",
 "tags": "",
 "keywords": "",
-"url": "/xpm/cli/run-script/",
+"url": "/xpm/cli/run/",
 "summary": ""
 }
 ,
@@ -887,39 +898,6 @@
 
 
 {
-"title": "How to get help for xPack QEMU Arm",
-"tags": "",
-"keywords": "",
-"url": "/qemu-arm/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack OpenOCD?",
-"tags": "",
-"keywords": "",
-"url": "/openocd/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack GNU Arm Embedded GCC?",
-"tags": "",
-"keywords": "",
-"url": "/arm-none-eabi-gcc/support/",
-"summary": ""
-}
-,
-
-
-
-{
 "title": "How to get help for xPack CMake",
 "tags": "",
 "keywords": "",
@@ -931,10 +909,10 @@
 
 
 {
-"title": "How to get help for xPack Ninja Build",
+"title": "How to get help for xPack QEMU Arm",
 "tags": "",
 "keywords": "",
-"url": "/ninja-build/support/",
+"url": "/qemu-arm/support/",
 "summary": ""
 }
 ,
@@ -968,6 +946,39 @@
 "tags": "",
 "keywords": "",
 "url": "/windows-build-tools/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack Ninja Build",
+"tags": "",
+"keywords": "",
+"url": "/ninja-build/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack OpenOCD?",
+"tags": "",
+"keywords": "",
+"url": "/openocd/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack GNU Arm Embedded GCC?",
+"tags": "",
+"keywords": "",
+"url": "/arm-none-eabi-gcc/support/",
 "summary": ""
 }
 ,
@@ -1066,6 +1077,17 @@
 "title": "",
 "tags": "",
 "keywords": "",
+"url": "/xpm/cli/run-script/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
 "url": "/xsvd/files/xsvd-json/",
 "summary": ""
 }
@@ -1073,6 +1095,26 @@
 
 
 
+
+
+{
+"title": "xPack xpm v0.9.1 released",
+"tags": "releasesxpmpackagemanager",
+"keywords": "",
+"url": "/blog/2021/03/28/xpm-v0-9-1-released/",
+"summary": "<p>Version <strong>0.9.1</strong> is a new release of <strong>xpm</strong>; it adds support for configurations and configuration specific dependencies.</p>"
+}
+,
+
+
+{
+"title": "xPack xpm v0.9.0 released",
+"tags": "releasesxpmpackagemanager",
+"keywords": "",
+"url": "/blog/2021/03/27/xpm-v0-9-0-released/",
+"summary": "<p>Version <strong>0.9.0</strong> is a new release of <strong>xpm</strong>; it adds support for configurations and configuration specific dependencies.</p>"
+}
+,
 
 
 {

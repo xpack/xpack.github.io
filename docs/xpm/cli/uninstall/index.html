@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xpm uninstall" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/cli/uninstall/"},"@type":"BlogPosting","url":"https://xpack.github.io/xpm/cli/uninstall/","headline":"xpm uninstall","dateModified":"2021-03-17T08:03:31+00:00","datePublished":"2021-01-27T20:22:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/cli/uninstall/"},"@type":"BlogPosting","url":"https://xpack.github.io/xpm/cli/uninstall/","headline":"xpm uninstall","dateModified":"2021-03-28T20:22:39+00:00","datePublished":"2021-01-27T20:22:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -356,7 +356,28 @@
           
           
           
-          <li><a title="xpm run-script" href="/xpm/cli/run-script/">xpm run-script</a></li>
+          <li><a title="xpm link" href="/xpm/cli/link/">xpm link</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm list" href="/xpm/cli/list/">xpm list</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm run" href="/xpm/cli/run/">xpm run</a></li>
+          
+          
+          
+          
+          
+          
+          <li class="active"><a title="xpm uninstall" href="/xpm/cli/uninstall/">xpm uninstall</a></li>
           
           
           
@@ -426,13 +447,19 @@ $('#toc').on('click', 'a', function() {
 <p>Aliases:</p>
 
 <ul>
+  <li><code class="language-plaintext highlighter-rouge">un</code></li>
   <li><code class="language-plaintext highlighter-rouge">uni</code></li>
+  <li><code class="language-plaintext highlighter-rouge">unin</code></li>
+  <li><code class="language-plaintext highlighter-rouge">unintsall</code></li>
+  <li><code class="language-plaintext highlighter-rouge">unlink</code></li>
+  <li><code class="language-plaintext highlighter-rouge">rm</code></li>
+  <li><code class="language-plaintext highlighter-rouge">r</code></li>
 </ul>
 
 <h2 id="description">Description</h2>
 
-<p>This command uninstalls one or more packages from the project available
-in the current folder or from the global repository.</p>
+<p>This command uninstalls/removes one or more packages from the project
+available in the current folder or from the global repository.</p>
 
 <p>Example:</p>
 
@@ -441,17 +468,62 @@ in the current folder or from the global repository.</p>
 
 <h2 id="options">Options</h2>
 
-<h3 id="install-globally--g--global">Install globally (<code class="language-plaintext highlighter-rouge">-g|--global</code>)</h3>
+<h3 id="help---help">Help (<code class="language-plaintext highlighter-rouge">--help</code>)</h3>
 
-<p>When invoked as global, this command removed packages from the global
-repository.</p>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm uninstall <span class="nt">--help</span>
+<span class="go">
+xPack manager - uninstall package(s)
+Usage: xpm uninstall [options...] [--global] [--system]
+</span><span class="gp">                     [--config &lt;config_name&gt;</span><span class="o">]</span> <span class="o">[</span><span class="nt">--dry-run</span><span class="o">]</span> <span class="o">[</span><span class="nt">--no-save</span><span class="o">]</span>
+<span class="gp">                     [[@&lt;scope&gt;</span>/]&lt;name&gt;[@&lt;version]...
+<span class="go">
+Uninstall options:
+  -g|--global                Uninstall the global package(s) (optional)
+  -sy|--system               Uninstall the system package(s) (not impl) (optional)
+</span><span class="gp">  -c|--config &lt;config_name&gt;</span><span class="w">  </span>Show the configuration specific dependencies <span class="o">(</span>optional<span class="o">)</span>
+<span class="go">  -n|--dry-run               Pretend to uninstall the package (optional)
+  --no-save                  Prevent saving to dependencies (optional)
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">TBD
+Common options:
+</span><span class="gp">  --loglevel &lt;level&gt;</span><span class="w">         </span>Set log level <span class="o">(</span>silent|warn|info|verbose|debug|trace<span class="o">)</span> 
+<span class="go">  -s|--silent                Disable all messages (--loglevel silent) 
+  -q|--quiet                 Mostly quiet, warnings and errors (--loglevel warn) 
+  --informative              Informative (--loglevel info) 
+  -v|--verbose               Verbose (--loglevel verbose) 
+  -d|--debug                 Debug messages (--loglevel debug) 
+  -dd|--trace                Trace messages (--loglevel trace, -d -d) 
+  --no-update-notifier       Skip check for a more recent version 
+</span><span class="gp">  -C &lt;folder&gt;</span><span class="w">                </span>Set current folder 
+<span class="go">
+xpm -h|--help                Quick help 
+xpm --version                Show version 
+xpm -i|--interactive         Enter interactive mode 
+
+npm xpm@0.9.0 '/Users/ilg/.nvm/versions/node/v14.16.0/lib/node_modules/xpm'
+</span><span class="gp">Home page: &lt;https://xpack.github.io/xpm/&gt;</span><span class="w">
+</span><span class="gp">Bug reports: &lt;https://github.com/xpack/xpm-js/issues/&gt;</span><span class="w">
 </span></code></pre></div></div>
+
+<h3 id="global-uninstall--g--global">Global uninstall (<code class="language-plaintext highlighter-rouge">-g|--global</code>)</h3>
+
+<p>Remove package(s) from the global repository.</p>
+
+<h3 id="system-install--sy--system">System install (<code class="language-plaintext highlighter-rouge">-sy|--system</code>)</h3>
+
+<p>Remove package(s) from the system repository.</p>
+
+<h3 id="configuration--c--config">Configuration (<code class="language-plaintext highlighter-rouge">-c|--config</code>)</h3>
+
+<p>Uninstall package(s) from an existing configuration build folder
+instead of the top project folder.</p>
 
 <h3 id="dry-run--n--dry-run">Dry-run (<code class="language-plaintext highlighter-rouge">-n|--dry-run</code>)</h3>
 
 <p>Do everything except to actually uninstall the package(s).</p>
+
+<h3 id="prevent-saving-to-dependencies---no-save">Prevent saving to dependencies (<code class="language-plaintext highlighter-rouge">--no-save</code>)</h3>
+
+<p>Prevent removing the dependencies and updating the <code class="language-plaintext highlighter-rouge">package.json</code> file.</p>
 
 
         
@@ -500,7 +572,7 @@ repository.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Mar 17, 2021<br/> Site last generated: Mar 17, 2021 <br />
+<span>Page last updated:</span> Mar 28, 2021<br/> Site last generated: Mar 28, 2021 <br />
                 </div>
             </div>
 </footer>

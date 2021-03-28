@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="package.json" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/files/package.json/"},"@type":"BlogPosting","url":"https://xpack.github.io/xpm/files/package.json/","headline":"package.json","dateModified":"2021-03-17T08:03:31+00:00","datePublished":"2019-07-01T21:36:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/files/package.json/"},"@type":"BlogPosting","url":"https://xpack.github.io/xpm/files/package.json/","headline":"package.json","dateModified":"2021-03-28T20:22:39+00:00","datePublished":"2019-07-01T21:36:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -356,7 +356,28 @@
           
           
           
-          <li><a title="xpm run-script" href="/xpm/cli/run-script/">xpm run-script</a></li>
+          <li><a title="xpm link" href="/xpm/cli/link/">xpm link</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm list" href="/xpm/cli/list/">xpm list</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm run" href="/xpm/cli/run/">xpm run</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm uninstall" href="/xpm/cli/uninstall/">xpm uninstall</a></li>
           
           
           
@@ -448,7 +469,7 @@ to help find the xPacks in the public repository.</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h2 id="the-binary-xpack-properties">The binary xPack properties</h2>
+<h2 id="the-binaries-property">The <code class="language-plaintext highlighter-rouge">binaries</code> property</h2>
 
 <p>Binary xPacks do not include the binaries, they include only URLs where
 to download the binaries from, and checksums to validate the downloads.</p>
@@ -509,11 +530,13 @@ to download the binaries from, and checksums to validate the downloads.</p>
   <li><code class="language-plaintext highlighter-rouge">linux-arm</code> - Arm GNU/Linux 32-bit (since 0.6.0)</li>
   <li><code class="language-plaintext highlighter-rouge">linux-arm64</code> - Arm GNU/Linux 64-bit (since 0.6.0)</li>
   <li><code class="language-plaintext highlighter-rouge">linux-x86</code> (deprecated)</li>
-  <li><code class="language-plaintext highlighter-rouge">linux-x32</code> - Intel GNU/Linux 32-bit (since 0.6.0)</li>
+  <li><code class="language-plaintext highlighter-rouge">linux-x32</code> (deprecated)</li>
+  <li><code class="language-plaintext highlighter-rouge">linux-ia32</code> - Intel GNU/Linux 32-bit (since 0.6.0)</li>
   <li><code class="language-plaintext highlighter-rouge">linux-x64</code> - Intel GNU/Linux 64-bit</li>
   <li><code class="language-plaintext highlighter-rouge">darwin-x64</code> - macOS 64-bit</li>
   <li><code class="language-plaintext highlighter-rouge">win32-x86</code> (deprecated)</li>
-  <li><code class="language-plaintext highlighter-rouge">win32-x86</code> - Windows 32-bit (since 0.6.0)</li>
+  <li><code class="language-plaintext highlighter-rouge">win32-x32</code> (deprecated)</li>
+  <li><code class="language-plaintext highlighter-rouge">win32-ia32</code> - Windows 32-bit (since 0.6.0)</li>
   <li><code class="language-plaintext highlighter-rouge">win32-x64</code> - Windows 64-bit</li>
 </ul>
 
@@ -539,6 +562,17 @@ stubs are created.</p>
 <div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important:</b> To accommodate for the <code class="language-plaintext highlighter-rouge">.cmd</code> stubs,
 programs launching the executables should do this via a <code class="language-plaintext highlighter-rouge">cmd.exe</code> shell.</div>
 
+<h2 id="the-properties-property">The <code class="language-plaintext highlighter-rouge">properties</code> property</h2>
+
+<p>TBD</p>
+
+<h2 id="the-actions-property">The <code class="language-plaintext highlighter-rouge">actions</code> property</h2>
+
+<p>TBD</p>
+
+<h2 id="the-configurations-property">The <code class="language-plaintext highlighter-rouge">configurations</code> property</h2>
+
+<p>TBD</p>
 
 
         
@@ -562,7 +596,7 @@ programs launching the executables should do this via a <code class="language-pl
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Mar 17, 2021<br/> Site last generated: Mar 17, 2021 <br />
+<span>Page last updated:</span> Mar 28, 2021<br/> Site last generated: Mar 28, 2021 <br />
                 </div>
             </div>
 </footer>

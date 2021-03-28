@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xpm init" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/cli/init/"},"@type":"BlogPosting","url":"https://xpack.github.io/xpm/cli/init/","headline":"xpm init","dateModified":"2021-03-17T08:03:31+00:00","datePublished":"2017-10-09T09:55:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/cli/init/"},"@type":"BlogPosting","url":"https://xpack.github.io/xpm/cli/init/","headline":"xpm init","dateModified":"2021-03-28T20:22:39+00:00","datePublished":"2017-10-09T09:55:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -356,7 +356,28 @@
           
           
           
-          <li><a title="xpm run-script" href="/xpm/cli/run-script/">xpm run-script</a></li>
+          <li><a title="xpm link" href="/xpm/cli/link/">xpm link</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm list" href="/xpm/cli/list/">xpm list</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm run" href="/xpm/cli/run/">xpm run</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm uninstall" href="/xpm/cli/uninstall/">xpm uninstall</a></li>
           
           
           
@@ -420,9 +441,15 @@ $('#toc').on('click', 'a', function() {
 
    <h2 id="synopsis">Synopsis</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm init [options...] [--template &lt;xpack&gt;] [--name &lt;string&gt;]
-                [--property &lt;string&gt;]*
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm init <span class="o">[</span>options...] <span class="o">[</span><span class="nt">--template</span> &lt;xpack&gt;] <span class="o">[</span><span class="nt">--name</span> &lt;string&gt;]
+                <span class="o">[</span><span class="nt">--property</span> &lt;string&gt;]<span class="k">*</span>
 </code></pre></div></div>
+
+<p>Aliases:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ini</code></li>
+</ul>
 
 <h2 id="description">Description</h2>
 
@@ -440,37 +467,37 @@ the template API is not yet final.</div>
 
 <h3 id="help---help">Help (<code class="language-plaintext highlighter-rouge">--help</code>)</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ xpm init --help
-
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm init <span class="nt">--help</span>
+<span class="go">
 xPack manager - create an xPack, empty or from a template
-Usage: xpm init [options...] [--template &lt;xpack&gt;] [--name &lt;string&gt;]
-                [--property &lt;string&gt;]*
-
+</span><span class="gp">Usage: xpm init [options...] [--template &lt;xpack&gt;</span><span class="o">]</span> <span class="o">[</span><span class="nt">--name</span> &lt;string&gt;]
+<span class="gp">                [--property &lt;string&gt;</span><span class="o">]</span><span class="k">*</span>
+<span class="go">
 Init options:
-  -t|--template &lt;xpack&gt;   The xPack implementing the template (optional)
-  -n|--name &lt;string&gt;      Project name (optional)
-  -p|--property &lt;string&gt;  Substitution variables (optional, multiple)
-
+</span><span class="gp">  -t|--template &lt;xpack&gt;</span><span class="w">   </span>The xPack implementing the template <span class="o">(</span>optional<span class="o">)</span>
+<span class="gp">  -n|--name &lt;string&gt;</span><span class="w">      </span>Project name <span class="o">(</span>optional<span class="o">)</span>
+<span class="gp">  -p|--property &lt;string&gt;</span><span class="w">  </span>Substitution variables <span class="o">(</span>optional, multiple<span class="o">)</span>
+<span class="go">
 Common options:
-  --loglevel &lt;level&gt;      Set log level (silent|warn|info|verbose|debug|trace)
-  -s|--silent             Disable all messages (--loglevel silent)
-  -q|--quiet              Mostly quiet, warnings and errors (--loglevel warn)
-  --informative           Informative (--loglevel info)
-  -v|--verbose            Verbose (--loglevel verbose)
-  -d|--debug              Debug messages (--loglevel debug)
-  -dd|--trace             Trace messages (--loglevel trace, -d -d)
-  --no-update-notifier    Skip check for a more recent version
-  -C &lt;folder&gt;             Set current folder
+</span><span class="gp">  --loglevel &lt;level&gt;</span><span class="w">      </span>Set log level <span class="o">(</span>silent|warn|info|verbose|debug|trace<span class="o">)</span> 
+<span class="go">  -s|--silent             Disable all messages (--loglevel silent) 
+  -q|--quiet              Mostly quiet, warnings and errors (--loglevel warn) 
+  --informative           Informative (--loglevel info) 
+  -v|--verbose            Verbose (--loglevel verbose) 
+  -d|--debug              Debug messages (--loglevel debug) 
+  -dd|--trace             Trace messages (--loglevel trace, -d -d) 
+  --no-update-notifier    Skip check for a more recent version 
+</span><span class="gp">  -C &lt;folder&gt;</span><span class="w">             </span>Set current folder 
+<span class="go">
+xpm -h|--help             Quick help 
+xpm --version             Show version 
+xpm -i|--interactive      Enter interactive mode 
 
-xpm -h|--help             Quick help
-xpm --version             Show version
-xpm -i|--interactive      Enter interactive mode
-
-npm xpm@0.5.0 '/Users/ilg/Library/npm/lib/node_modules/xpm'
-Home page: &lt;https://github.com/xpack/xpm-js&gt;
-Bug reports: &lt;https://github.com/xpack/xpm-js/issues&gt;
-$
-</code></pre></div></div>
+npm xpm@0.9.0 '/Users/ilg/.nvm/versions/node/v14.16.0/lib/node_modules/xpm'
+</span><span class="gp">Home page: &lt;https://xpack.github.io/xpm/&gt;</span><span class="w">
+</span><span class="gp">Bug reports: &lt;https://github.com/xpack/xpm-js/issues/&gt;</span><span class="w">
+</span><span class="gp">$</span><span class="w">
+</span></code></pre></div></div>
 
 <h3 id="template--t--template-xpack">Template (<code class="language-plaintext highlighter-rouge">-t|--template &lt;xpack&gt;</code>)</h3>
 
@@ -574,7 +601,6 @@ File 'src/sysclock.cpp' copied.
 </span></code></pre></div></div>
 
 
-
         
     <a target="_blank" rel="noopener" href="https://github.com/xpack/web-jekyll/blob/master/pages/core/xpm/cli/init.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
 
@@ -621,7 +647,7 @@ File 'src/sysclock.cpp' copied.
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Mar 17, 2021<br/> Site last generated: Mar 17, 2021 <br />
+<span>Page last updated:</span> Mar 28, 2021<br/> Site last generated: Mar 28, 2021 <br />
                 </div>
             </div>
 </footer>

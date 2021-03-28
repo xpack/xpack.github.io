@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xpm - common options" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/cli/"},"@type":"BlogPosting","url":"https://xpack.github.io/xpm/cli/","headline":"xpm - common options","dateModified":"2021-03-17T08:03:31+00:00","datePublished":"2017-10-09T09:50:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/cli/"},"@type":"BlogPosting","url":"https://xpack.github.io/xpm/cli/","headline":"xpm - common options","dateModified":"2021-03-28T20:22:39+00:00","datePublished":"2017-10-09T09:50:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -356,7 +356,28 @@
           
           
           
-          <li><a title="xpm run-script" href="/xpm/cli/run-script/">xpm run-script</a></li>
+          <li><a title="xpm link" href="/xpm/cli/link/">xpm link</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm list" href="/xpm/cli/list/">xpm list</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm run" href="/xpm/cli/run/">xpm run</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm uninstall" href="/xpm/cli/uninstall/">xpm uninstall</a></li>
           
           
           
@@ -425,8 +446,8 @@ $('#toc').on('click', 'a', function() {
 
 <h2 id="description">Description</h2>
 
-<p><code class="language-plaintext highlighter-rouge">xpm</code> is the package manager for xPacks. It puts xPacks in place so
-that builds can find them, and manages dependencies.</p>
+<p><code class="language-plaintext highlighter-rouge">xpm</code> is the xPacks dependency manager. It manages dependencies
+and puts xPacks in known places so that builds can find them.</p>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> <code class="language-plaintext highlighter-rouge">xpm</code> is an extension of
 <a href="https://docs.npmjs.com/cli/npm.html">npm</a> and
@@ -451,28 +472,27 @@ The xPack package manager command line tool
 Usage: xpm &lt;command&gt; [&lt;subcommand&gt;...] [&lt;options&gt; ...] [&lt;args&gt;...]
 
 where &lt;command&gt; is one of:
-  build, init, install, run-script
+  init, install, link, list, run, uninstall
 
 Common options:
-  --loglevel &lt;level&gt;     Set log level (silent|warn|info|verbose|debug|trace)
-  -s|--silent            Disable all messages (--loglevel silent)
-  -q|--quiet             Mostly quiet, warnings and errors (--loglevel warn)
-  --informative          Informative (--loglevel info)
-  -v|--verbose           Verbose (--loglevel verbose)
-  -d|--debug             Debug messages (--loglevel debug)
-  -dd|--trace            Trace messages (--loglevel trace, -d -d)
-  --no-update-notifier   Skip check for a more recent version
-  -C &lt;folder&gt;            Set current folder
+  --loglevel &lt;level&gt;     Set log level (silent|warn|info|verbose|debug|trace) 
+  -s|--silent            Disable all messages (--loglevel silent) 
+  -q|--quiet             Mostly quiet, warnings and errors (--loglevel warn) 
+  --informative          Informative (--loglevel info) 
+  -v|--verbose           Verbose (--loglevel verbose) 
+  -d|--debug             Debug messages (--loglevel debug) 
+  -dd|--trace            Trace messages (--loglevel trace, -d -d) 
+  --no-update-notifier   Skip check for a more recent version 
+  -C &lt;folder&gt;            Set current folder 
 
-xpm -h|--help            Quick help
-xpm &lt;command&gt; -h|--help  Quick help on command
-xpm --version            Show version
-xpm -i|--interactive     Enter interactive mode
+xpm -h|--help            Quick help 
+xpm &lt;command&gt; -h|--help  Quick help on command 
+xpm --version            Show version 
+xpm -i|--interactive     Enter interactive mode 
 
-npm xpm@0.5.0 '/Users/ilg/Library/npm/lib/node_modules/xpm'
-Home page: &lt;https://github.com/xpack/xpm-js&gt;
-Bug reports: &lt;https://github.com/xpack/xpm-js/issues&gt;
-$
+npm xpm@0.9.0 '/Users/ilg/.nvm/versions/node/v14.16.0/lib/node_modules/xpm'
+Home page: &lt;https://xpack.github.io/xpm/&gt;
+Bug reports: &lt;https://github.com/xpack/xpm-js/issues/&gt;
 </code></pre></div></div>
 
 <p>This works both at top level and with commands/subcommands.</p>
@@ -505,7 +525,7 @@ folder, but it can be changed to any folder using <code class="language-plaintex
 version, with <code class="language-plaintext highlighter-rouge">--version</code>:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nt">--version</span>
-<span class="go">0.5.0
+<span class="go">0.9.0
 </span></code></pre></div></div>
 
 <p>The result is written to the standard output stream, and consists of the
@@ -528,7 +548,7 @@ commands as needed.</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nt">-i</span>
 <span class="gp">xpm&gt;</span><span class="w"> </span>version
-<span class="go">0.5.0
+<span class="go">0.9.0
 </span><span class="gp">xpm&gt;</span><span class="w">
 </span><span class="c">...
 </span></code></pre></div></div>
@@ -536,14 +556,17 @@ commands as needed.</p>
 <h2 id="commands">Commands</h2>
 
 <ul>
-  <li><a href="/xpm/cli/init/">xpm init</a></li>
-  <li><a href="/xpm/cli/install/">xpm install</a></li>
-  <li><a href="/xpm/cli/run-script/">xpm run-script</a></li>
+  <li><a href="/xpm/cli/init/"><code class="language-plaintext highlighter-rouge">xpm init</code></a></li>
+  <li><a href="/xpm/cli/install/"><code class="language-plaintext highlighter-rouge">xpm install</code></a></li>
+  <li><a href="/xpm/cli/link/"><code class="language-plaintext highlighter-rouge">xpm link</code></a></li>
+  <li><a href="/xpm/cli/list/"><code class="language-plaintext highlighter-rouge">xpm list</code></a></li>
+  <li><a href="/xpm/cli/run/"><code class="language-plaintext highlighter-rouge">xpm run</code></a></li>
+  <li><a href="/xpm/cli/uninstall/"><code class="language-plaintext highlighter-rouge">xpm uninstall</code></a></li>
 </ul>
 
 
         
-    <a target="_blank" rel="noopener" href="https://github.com/xpack/web-jekyll/blob/master/pages/core/xpm/cli/overview.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
+    <a target="_blank" rel="noopener" href="https://github.com/xpack/web-jekyll/blob/master/pages/core/xpm/cli/index.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
 
     
 
@@ -588,7 +611,7 @@ commands as needed.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Mar 17, 2021<br/> Site last generated: Mar 17, 2021 <br />
+<span>Page last updated:</span> Mar 28, 2021<br/> Site last generated: Mar 28, 2021 <br />
                 </div>
             </div>
 </footer>

@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="The xPack Project" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","@type":"WebSite","url":"https://xpack.github.io/","headline":"The xPack Project","dateModified":"2021-03-17T08:03:31+00:00","datePublished":"2019-06-20T20:11:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","@type":"WebSite","url":"https://xpack.github.io/","headline":"The xPack Project","dateModified":"2021-03-28T20:22:39+00:00","datePublished":"2019-06-20T20:11:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -550,7 +550,8 @@
 
 <p>In short: help developers manage dependencies.</p>
 
-<p>Based on a simple multi-version manager (built on top of <strong>npm</strong>),
+<p>Based on a simple multi-version dependencies manager
+(built on top of <strong>npm</strong>),
 the xPack project aims to provide a set of cross-platform tools
 to manage, configure and build complex,
 modular, multi-target (multi-architecture, multi-board, multi-toolchain)
@@ -567,7 +568,7 @@ functional project suddenly failed after
 upgrading the system? In other words, were you hit by the dependencies
 hell? If so, xPacks may help you.</em></p>
 
-<p><strong>xPacks</strong> are general purpose multi-version software packages,
+<p><strong>xPacks</strong> are general purpose versioned software projects,
 built on top of the highly successful
 <a href="https://docs.npmjs.com/getting-started/what-is-npm">npm packages</a>
 in the <a href="https://nodejs.org/en/">Node.js</a> JavaScript ecosystem.
@@ -575,16 +576,17 @@ in the <a href="https://nodejs.org/en/">Node.js</a> JavaScript ecosystem.
 exactly the same format as <strong>npm packages</strong>, and can be
 stored in the same repositories.</p>
 
-<p>By <strong>multi-version</strong> it is understood not only that packages can have
+<p>By design the xPacks tools are <strong>multi-version</strong>, which means
+not only that packages can have
 multiple versions, but they <strong>can be installed in parallel</strong>, each
-project having its own set of dependencies, thus upgrading the system
-no longer impacts the project.</p>
+project/configuration having its own set of dependencies,
+thus upgrading the system no longer impacts the project.</p>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Most of the tools are generic and do not
 mandate the use of a package manager; the binary xPacks are plain archives
 that can be extracted manually; the source xPacks can be linked to
 projects as Git submodules, etc; they all can be used in traditional
-environments too, just that it is much more work to do.</div>
+environments too, just that it requires much more work.</div>
 
 <p>Although the focus is on <strong>C/C++</strong>, most of the tools are language agnostic
 and can be used with other programming languages as well.</p>
@@ -607,7 +609,7 @@ published as separated GitHub <em>organisations</em>
 (<a href="https://github.com/xpack">xpack</a>,
 <a href="https://github.com/xpack-dev-tools">xpack-dev-tools</a>,
 <a href="https://github.com/micro-os-plus/">micro-os-plus</a>,
-<a href="https://github.com/xpacks">xpacks</a>).</p>
+<a href="https://github.com/xpack-3rd-party">xpack-3rd-party</a>).</p>
 
 <h2 id="xpack-core-tools">xPack Core Tools</h2>
 
@@ -615,17 +617,16 @@ published as separated GitHub <em>organisations</em>
 
 <ul>
   <li><a href="/xpm/"><code class="language-plaintext highlighter-rouge">xpm</code></a> - the <strong>xPack Package Manager</strong></li>
-  <li><a href="/xpbuild/"><code class="language-plaintext highlighter-rouge">@xpack/xpbuild</code></a> - the <strong>xPack Basic Project Builder</strong> (under development)</li>
 </ul>
 
 <p>Planned:</p>
 
 <ul>
+  <li><a href="/xpbuild/"><code class="language-plaintext highlighter-rouge">@xpack/xpbuild</code></a> - the <strong>xPack Project Builder</strong> (under development)</li>
   <li><a href="/xpbuild/"><code class="language-plaintext highlighter-rouge">@xpack/xpcdl</code></a> - the <strong>xPack Build Configurator</strong></li>
   <li><code class="language-plaintext highlighter-rouge">@xpack/xpliquid</code> - the <strong>xPack Liquid Template Engine</strong></li>
   <li><code class="language-plaintext highlighter-rouge">@xpack/xpjson</code> - the <strong>xPack JSON Manager</strong></li>
   <li><a href="/xpninja/"><code class="language-plaintext highlighter-rouge">@xpack/xpninja</code></a> - the <strong>xPack Build Runner</strong></li>
-  <li><a href="/xpmake/"><code class="language-plaintext highlighter-rouge">@xpack/xpmake</code></a> - the <strong>xPack Build Generator</strong></li>
 </ul>
 
 <p>These projects are hosted in the GitHub
@@ -672,20 +673,51 @@ published as separated GitHub <em>organisations</em>
 <p>Packages part of the µOS++ framework:</p>
 
 <ul>
-  <li><a href="https://github.com/micro-os-plus/startup-xpack"><code class="language-plaintext highlighter-rouge">@micro-os-plus/startup</code></a> - µOS++ Startup</li>
-  <li><a href="https://github.com/micro-os-plus/semihosting-xpack"><code class="language-plaintext highlighter-rouge">@micro-os-plus/semihosting</code></a> - µOS++ Semihosting</li>
-  <li><a href="https://github.com/micro-os-plus/diag-trace-xpack"><code class="language-plaintext highlighter-rouge">@micro-os-plus/diag-trace</code></a> - µOS++ Tracing</li>
-  <li><a href="https://github.com/micro-os-plus/libs-c-xpack"><code class="language-plaintext highlighter-rouge">@micro-os-plus/libs-c</code></a> - µOS++ C library</li>
-  <li><a href="https://github.com/micro-os-plus/libs-cpp-xpack"><code class="language-plaintext highlighter-rouge">@micro-os-plus/libs-cpp</code></a> - µOS++ C++ library</li>
+  <li><a href="https://github.com/micro-os-plus/architecture-cortexm-xpack">@micro-os-plus/architecture-cortexm</a>
+A source xPack with the µOS++ Arm Cortex-M architecture port</li>
+  <li><a href="https://github.com/micro-os-plus/architecture-riscv-xpack">@micro-os-plus/architecture-riscv</a>
+A source xPack with the µOS++ RISC-V architecture port</li>
+  <li><a href="https://github.com/micro-os-plus/architecture-synthetic-posix-xpack">@micro-os-plus/architecture-synthetic-posix</a>
+A source xPack with the µOS++ synthetic POSIX architecture port</li>
+  <li><a href="https://github.com/micro-os-plus/build-helper-xpack">@micro-os-plus/build-helper</a>
+A source xPack to assist the µOS++ builds</li>
+  <li><a href="https://github.com/micro-os-plus/cmsis-os-xpack">@micro-os-plus/cmsis-os</a>
+A source xPack with the µOS++ CMSIS RTOS compatibility layer</li>
+  <li><a href="https://github.com/micro-os-plus/devices-stm32f0-extras-xpack">@micro-os-plus/devices-stm32f0-extras</a>
+A source xPack with µOS++ complementary STM32F0 files</li>
+  <li><a href="https://github.com/micro-os-plus/devices-stm32f4-extras-xpack">@micro-os-plus/devices-stm32f4-extras</a>
+A source xPack with µOS++ complementary STM32F4 files</li>
+  <li><a href="https://github.com/micro-os-plus/diag-trace-xpack">@micro-os-plus/diag-trace</a>
+A source xPack with the µOS++ trace::printf() tracing infrastructure</li>
+  <li><a href="https://github.com/micro-os-plus/libs-c-xpack">@micro-os-plus/libs-c</a>
+A source xPack with µOS++ complementary C library functions</li>
+  <li><a href="https://github.com/micro-os-plus/libs-cpp-xpack">@micro-os-plus/libs-cpp</a>
+A source xPack with complementary C++ library functions</li>
+  <li><a href="https://github.com/micro-os-plus/libs-cpp-estd-xpack">@micro-os-plus/libs-cpp-estd</a>
+A source xPack with µOS++ embedded std:: support</li>
+  <li><a href="https://github.com/micro-os-plus/memory-allocators-xpack">@micro-os-plus/memory-allocators</a>
+A source xPack with µOS++ memory allocators</li>
+  <li><a href="https://github.com/micro-os-plus/posix-io-xpack">@micro-os-plus/posix-io</a>
+A source xPack with POSIX I/O</li>
+  <li><a href="https://github.com/micro-os-plus/rtos-xpack">@micro-os-plus/rtos</a>
+A source xPack with the µOS++ RTOS</li>
+  <li><a href="https://github.com/micro-os-plus/semihosting-xpack">@micro-os-plus/semihosting</a>
+A source xPack with the portable semihosting definitions</li>
+  <li><a href="https://github.com/micro-os-plus/startup-xpack">@micro-os-plus/startup</a>
+A source xPack with the µOS++ startup code for bare-metal platforms</li>
+  <li><a href="https://github.com/micro-os-plus/utils-lists-xpack">@micro-os-plus/utils-lists</a>
+A source xPack with C++ lists support for µOS++</li>
+  <li><a href="https://github.com/micro-os-plus/version-xpack">@micro-os-plus/version</a>
+A source xPack with the µOS++ version definitions</li>
 </ul>
 
 <h3 id="3rd-party">3rd Party</h3>
 
-<p>Packages with 3rd party content (mind the <strong>plural</strong> in the scope name):</p>
+<p>Packages with 3rd party content:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">@xpacks/freertos</code> - FreeRTOS</li>
-  <li><code class="language-plaintext highlighter-rouge">@xpacks/chan-fatfs</code> - Chan-FatFS</li>
+  <li><code class="language-plaintext highlighter-rouge">@xpack-3rd-party/freertos</code> - FreeRTOS</li>
+  <li><code class="language-plaintext highlighter-rouge">@xpack-3rd-party/chan-fatfs</code> - Chan-FatFS</li>
 </ul>
 
 <h2 id="xpack-build-box-xbb">xPack Build Box (XBB)</h2>
@@ -746,7 +778,6 @@ to get notifications on new releases.</li>
 </form>
 
 
-
         
 
 
@@ -765,7 +796,7 @@ to get notifications on new releases.</li>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Mar 17, 2021<br/> Site last generated: Mar 17, 2021 <br />
+<span>Page last updated:</span> Mar 28, 2021<br/> Site last generated: Mar 28, 2021 <br />
                 </div>
             </div>
 </footer>

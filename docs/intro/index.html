@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack 101" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/intro/"},"@type":"BlogPosting","url":"https://xpack.github.io/intro/","headline":"xPack 101","dateModified":"2021-03-17T08:03:31+00:00","datePublished":"2019-06-26T05:57:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/intro/"},"@type":"BlogPosting","url":"https://xpack.github.io/intro/","headline":"xPack 101","dateModified":"2021-03-28T20:22:39+00:00","datePublished":"2019-06-26T05:57:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -579,8 +579,9 @@ why would we need yet another one?</p>
 exactly the same format as <strong>npm</strong>, and xPacks can be stored in the same
 repositories, public or private.</p>
 
-<p>And <strong>xpm</strong>, the package manager, builds on top of <strong>npm</strong>, the very popular
-JavaScript package manager, extending it with new language neutral features,
+<p>And <strong>xpm</strong>, the dependencies manager, builds on top of <strong>npm</strong>, the very
+popular JavaScript package manager, extending it with new language
+neutral features,
 so things are not that scary as they seemed initially.</p>
 
 <h2 id="im-perfectly-happy-with-my-development-environment-why-would-i-bother-with-xpacks">I’m perfectly happy with my development environment, why would I bother with xPacks?</h2>
@@ -591,8 +592,8 @@ systems up-to-date, but not rarely the latest and greatest available versions
 break older applications and various complex processes, like build
 scripts, that depend on older versions.</p>
 
-<p><strong>xPacks</strong> are intended to solve exactly this problem, by providing
-a simple and uniform solution of
+<p>The <strong>xPacks</strong> dependency mechanism is intended to solve exactly this problem,
+by providing a simple and uniform solution of
 installing different versions of the same package in different
 folders, and managing dependencies.</p>
 
@@ -605,15 +606,15 @@ this input do its best to parametrise the process (for example a project build),
 to accomodate for all these differences.</p>
 
 <p>This approach started with GNU <em>configure</em>, and today use even more complex
-solutions, like <em>cMake</em> or <em>meson</em> scripts.</p>
+solutions, like <em>CMake</em> or <em>meson</em> scripts.</p>
 
 <p>Well, instead of permanently wondering how to make use of the new versions,
 and making the auto-configure scripts more and more complex with every day,
 why not allow the application to ask for the exact versions that are known
 to be compatible, and let an automated tool handle the dependencies?</p>
 
-<p><strong>xPacks</strong> can do just this, bring in the project exactly the
-versions needed, thus making the auto-configure step superfluos.</p>
+<p>The <strong>xPacks</strong> dependency manager can do just this, bring in the project
+exactly the versions needed, thus making the auto-configure step superfluos.</p>
 
 <h2 id="but-what-are-xpacks">But what are xPacks?</h2>
 
@@ -651,7 +652,7 @@ be another choice.</p>
 
 <div class="bs-callout bs-callout-primary">An xPack is a folder which includes a
 <code class="language-plaintext highlighter-rouge">package.json</code> file, defining at least
-the package <code class="language-plaintext highlighter-rouge">name</code>, the package <code class="language-plaintext highlighter-rouge">version</code>, and an <code class="language-plaintext highlighter-rouge">xpack</code> object,
+the package <code class="language-plaintext highlighter-rouge">name</code>, the package <code class="language-plaintext highlighter-rouge">version</code>, and an <code class="language-plaintext highlighter-rouge">xpack</code> property,
 even empty.</div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The name and version are mandatory
@@ -663,10 +664,10 @@ define them in all packages.</div>
 definition might be:</p>
 
 <div class="bs-callout bs-callout-primary">An xPack is a npm package with
-an additional <code class="language-plaintext highlighter-rouge">xpack</code> object defined in <code class="language-plaintext highlighter-rouge">package.json</code>.</div>
+an additional <code class="language-plaintext highlighter-rouge">xpack</code> property defined in <code class="language-plaintext highlighter-rouge">package.json</code>.</div>
 
 <div class="bs-callout bs-callout-primary">A binary xPack is an xPack with
-two additional <code class="language-plaintext highlighter-rouge">xpack.binaries</code> and <code class="language-plaintext highlighter-rouge">xpack.bin</code> objects defined in
+two additional <code class="language-plaintext highlighter-rouge">xpack.binaries</code> and <code class="language-plaintext highlighter-rouge">xpack.bin</code> properties defined in
 <code class="language-plaintext highlighter-rouge">package.json</code>.</div>
 
 <h3 id="package-formats">Package formats</h3>
@@ -710,16 +711,16 @@ Creating project 'xyz'...
 File 'package.json' generated.
 File 'LICENSE' generated.
 
-'xpm init' completed in 542 ms.
+'xpm init' completed in 98 ms.
 </span><span class="gp">$</span><span class="w"> </span><span class="nb">ls</span> <span class="nt">-l</span>
 <span class="go">total 16
 -rw-r--r--  1 ilg  staff  1070 Jul  1 23:33 LICENSE
 -rw-r--r--  1 ilg  staff   645 Jul  1 23:33 package.json
 </span><span class="gp">$</span><span class="w"> </span><span class="nb">cat </span>package.json
 <span class="go">{
-  "name": "xyz",
-  "version": "1.0.0",
-</span><span class="gp">  "description": "An xPack with &lt;your-description-here&gt;</span><span class="s2">",
+</span><span class="gp">  "name": "@&lt;scope&gt;</span>/xyz<span class="s2">",
+</span><span class="go">  "version": "0.1.0",
+</span><span class="gp">  "description": "A source xPack with &lt;your-description-here&gt;</span><span class="s2">",
 </span><span class="go">  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
@@ -729,9 +730,9 @@ File 'LICENSE' generated.
 </span><span class="gp">    "url": "git+https://github.com/&lt;user-id&gt;</span>/xyz.git<span class="s2">"
 </span><span class="go">  },
   "bugs": {
-</span><span class="gp">    "url": "https://github.com/&lt;user-id&gt;</span>/xyz/issues<span class="s2">"
+</span><span class="gp">    "url": "https://github.com/&lt;user-id&gt;</span>/xyz/issues/<span class="s2">"
 </span><span class="go">  },
-</span><span class="gp">  "homepage": "https://github.com/&lt;user-id&gt;</span>/xyz<span class="s2">",
+</span><span class="gp">  "homepage": "https://github.com/&lt;user-id&gt;</span>/xyz/<span class="s2">",
 </span><span class="go">  "keywords": [
     "xpack"
   ],
@@ -765,15 +766,61 @@ them, please continue to read how binary and source xPacks work.</p>
 
 <p>Let’s assume that ‘my-awesome-project’ needs the <code class="language-plaintext highlighter-rouge">arm-none-eabi-gcc</code>
 toolchain to build,
-and not any version but a specific one, like <code class="language-plaintext highlighter-rouge">8.2.1</code>; it also needs the
-xPack Basic Builder, xpbuild.</p>
+and not any version but a specific one, like <code class="language-plaintext highlighter-rouge">10.2.1</code>; it also needs
+the latest CMake, ninja and the liquidjs npm module.</p>
+
+<p>For this, in the project forlder, issue the following command, which
+will install the required tools in a central location, and add links
+to them.</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> @xpack-dev-tools/arm-none-eabi-gcc@10.2.1-1.1.2 @xpack-dev-tools/cmake@latest @xpack-dev-tools/ninja-build@latest liquidjs@latest <span class="nt">--verbose</span>
+<span class="go">xPack manager - install package(s)
+
+Processing @xpack-dev-tools/arm-none-eabi-gcc@10.2.1-1.1.2...
+Folder 'xpacks/xpack-dev-tools-arm-none-eabi-gcc' linked to global '@xpack-dev-tools/arm-none-eabi-gcc/10.2.1-1.1.2'.
+File 'xpacks/.bin/arm-none-eabi-addr2line' linked to '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-addr2line'.
+File 'xpacks/.bin/arm-none-eabi-ar' linked to '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-ar'.
+</span><span class="c">...
+</span><span class="go">File 'xpacks/.bin/arm-none-eabi-g++' linked to '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-g++'.
+File 'xpacks/.bin/arm-none-eabi-gcc' linked to '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc'.
+</span><span class="c">...
+</span><span class="go">File 'xpacks/.bin/arm-none-eabi-strip' linked to '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-strip'.
+Adding '@xpack-dev-tools/arm-none-eabi-gcc' to 'devDependencies'...
+
+Processing @xpack-dev-tools/cmake@3.19.2-2.1...
+Folder 'xpacks/xpack-dev-tools-cmake' linked to global '@xpack-dev-tools/cmake/3.19.2-2.1'.
+File 'xpacks/.bin/ccmake' linked to '../xpack-dev-tools-cmake/.content/bin/ccmake'.
+File 'xpacks/.bin/cmake' linked to '../xpack-dev-tools-cmake/.content/bin/cmake'.
+File 'xpacks/.bin/cpack' linked to '../xpack-dev-tools-cmake/.content/bin/cpack'.
+File 'xpacks/.bin/ctest' linked to '../xpack-dev-tools-cmake/.content/bin/ctest'.
+Adding '@xpack-dev-tools/cmake' to 'devDependencies'...
+
+Processing @xpack-dev-tools/ninja-build@1.10.2-2.1...
+Folder 'xpacks/xpack-dev-tools-ninja-build' linked to global '@xpack-dev-tools/ninja-build/1.10.2-2.1'.
+File 'xpacks/.bin/ninja' linked to '../xpack-dev-tools-ninja-build/.content/bin/ninja'.
+Adding '@xpack-dev-tools/ninja-build' to 'devDependencies'...
+
+Processing liquidjs@9.23.3...
+Folder 'node_modules/liquidjs' linked to global 'liquidjs/9.23.3'.
+File 'node_modules/.bin/liquidjs' linked to '../liquidjs/bin/liquid.js'.
+File 'node_modules/.bin/liquid' linked to '../liquidjs/bin/liquid.js'.
+Adding 'liquidjs' to 'devDependencies'...
+
+'xpm install' completed in 1.364 sec.
+</span></code></pre></div></div>
+
+<p>This will also update the <code class="language-plaintext highlighter-rouge">package.json</code> with details about the dependencies:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-awesome-project"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@&lt;scope&gt;/xyz"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
   </span><span class="nl">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"@xpack/xpbuild"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.2.3"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"@xpack-dev-tools/arm-none-eabi-gcc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9.3.1-1.1"</span><span class="w">
+    </span><span class="nl">"@xpack-dev-tools/arm-none-eabi-gcc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.2.1-1.1.2"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"@xpack-dev-tools/cmake"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.19.2-2.1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"@xpack-dev-tools/ninja-build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.10.2-2.1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"liquidjs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^9.23.3"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"xpack"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -787,28 +834,74 @@ highest version that does not change the major number, if available.</div>
 Use this syntax for binary xPacks with longer version numbers,
 which generally do not abide by the semver requirements.</div>
 
-<p>Running <code class="language-plaintext highlighter-rouge">xpm install</code> in the project folder will first install the toolchain
-in the central xPack storage (a folder in user’s home), then add a folder
-<code class="language-plaintext highlighter-rouge">xpacks/.bin</code> and inside it create links (or <code class="language-plaintext highlighter-rouge">.cmd</code> stubs on Windows) to the
-toolchain executables, like <code class="language-plaintext highlighter-rouge">xpacks/.bin/arm-none-eabi-gcc</code>.</p>
+<p>The result is the tools being downloaded and installed in the central
+xPack storage (a folder in user’s home) and links from the project
+to that folders created in the local <code class="language-plaintext highlighter-rouge">xpacks</code> folder, with links to
+individual programs added in <code class="language-plaintext highlighter-rouge">xpacks/.bin</code> (or <code class="language-plaintext highlighter-rouge">.cmd</code> stubs on Windows).</p>
 
-<p>TODO: show the output of tree on the xpacks folder.</p>
-
-<p>Similarly for the builder, which is a Node.js CLI npm module, after
+<p>Similarly for liquidjs, which is a Node.js CLI npm module, after
 installing the module, npm will
-add a folder <code class="language-plaintext highlighter-rouge">node_modules/.bin</code> where a link to the <code class="language-plaintext highlighter-rouge">xpbuild</code> executable
-will be created (or a <code class="language-plaintext highlighter-rouge">xpbuild.cmd</code> stub on Windows).</p>
+add a folder <code class="language-plaintext highlighter-rouge">node_modules/.bin</code> where links to the executables
+will be created (or <code class="language-plaintext highlighter-rouge">.cmd</code> stubs on Windows).</p>
 
-<p>TODO: show the output of the <code class="language-plaintext highlighter-rouge">tree</code> command on the <code class="language-plaintext highlighter-rouge">node_modules</code> folder.</p>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-a</span>
+<span class="c">.
+</span><span class="go">├── .DS_Store
+├── LICENSE
+├── node_modules
+│   ├── .bin
+</span><span class="gp">│   │   ├── liquid -&gt;</span><span class="w"> </span>../liquidjs/bin/liquid.js
+<span class="gp">│   │   └── liquidjs -&gt;</span><span class="w"> </span>../liquidjs/bin/liquid.js
+<span class="gp">│   └── liquidjs -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/liquidjs/9.23.3
+<span class="go">├── package.json
+└── xpacks
+    ├── .bin
+</span><span class="gp">    │   ├── arm-none-eabi-addr2line -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-addr2line
+<span class="gp">    │   ├── arm-none-eabi-ar -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-ar
+<span class="gp">    │   ├── arm-none-eabi-as -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-as
+<span class="gp">    │   ├── arm-none-eabi-c++ -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-c++
+<span class="gp">    │   ├── arm-none-eabi-c++filt -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-c++filt
+<span class="gp">    │   ├── arm-none-eabi-cpp -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-cpp
+<span class="gp">    │   ├── arm-none-eabi-elfedit -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-elfedit
+<span class="gp">    │   ├── arm-none-eabi-g++ -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-g++
+<span class="gp">    │   ├── arm-none-eabi-gcc -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc
+<span class="gp">    │   ├── arm-none-eabi-gcc-ar -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc-ar
+<span class="gp">    │   ├── arm-none-eabi-gcc-nm -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc-nm
+<span class="gp">    │   ├── arm-none-eabi-gcc-ranlib -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc-ranlib
+<span class="gp">    │   ├── arm-none-eabi-gcov -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcov
+<span class="gp">    │   ├── arm-none-eabi-gcov-dump -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcov-dump
+<span class="gp">    │   ├── arm-none-eabi-gcov-tool -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcov-tool
+<span class="gp">    │   ├── arm-none-eabi-gdb -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb
+<span class="gp">    │   ├── arm-none-eabi-gdb-add-index -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb-add-index
+<span class="gp">    │   ├── arm-none-eabi-gdb-add-index-py3 -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb-add-index-py3
+<span class="gp">    │   ├── arm-none-eabi-gdb-py3 -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb-py3
+<span class="gp">    │   ├── arm-none-eabi-gprof -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gprof
+<span class="gp">    │   ├── arm-none-eabi-ld -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-ld
+<span class="gp">    │   ├── arm-none-eabi-ld.bfd -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-ld.bfd
+<span class="gp">    │   ├── arm-none-eabi-nm -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-nm
+<span class="gp">    │   ├── arm-none-eabi-objcopy -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-objcopy
+<span class="gp">    │   ├── arm-none-eabi-objdump -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-objdump
+<span class="gp">    │   ├── arm-none-eabi-ranlib -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-ranlib
+<span class="gp">    │   ├── arm-none-eabi-readelf -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-readelf
+<span class="gp">    │   ├── arm-none-eabi-size -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-size
+<span class="gp">    │   ├── arm-none-eabi-strings -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-strings
+<span class="gp">    │   ├── arm-none-eabi-strip -&gt;</span><span class="w"> </span>../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-strip
+<span class="gp">    │   ├── ccmake -&gt;</span><span class="w"> </span>../xpack-dev-tools-cmake/.content/bin/ccmake
+<span class="gp">    │   ├── cmake -&gt;</span><span class="w"> </span>../xpack-dev-tools-cmake/.content/bin/cmake
+<span class="gp">    │   ├── cpack -&gt;</span><span class="w"> </span>../xpack-dev-tools-cmake/.content/bin/cpack
+<span class="gp">    │   ├── ctest -&gt;</span><span class="w"> </span>../xpack-dev-tools-cmake/.content/bin/ctest
+<span class="gp">    │   └── ninja -&gt;</span><span class="w"> </span>../xpack-dev-tools-ninja-build/.content/bin/ninja
+<span class="gp">    ├── xpack-dev-tools-arm-none-eabi-gcc -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@xpack-dev-tools/arm-none-eabi-gcc/10.2.1-1.1.2
+<span class="gp">    ├── xpack-dev-tools-cmake -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@xpack-dev-tools/cmake/3.19.2-2.1
+<span class="gp">    └── xpack-dev-tools-ninja-build -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@xpack-dev-tools/ninja-build/1.10.2-2.1
+<span class="go">
+8 directories, 40 files 
+</span></code></pre></div></div>
 
-<p>When running actions like <code class="language-plaintext highlighter-rouge">xpm run build</code>, the <code class="language-plaintext highlighter-rouge">PATH</code> is automatically
+<p>When later running actions like <code class="language-plaintext highlighter-rouge">xpm run build</code>, the <code class="language-plaintext highlighter-rouge">PATH</code> is automatically
 adjusted to <code class="language-plaintext highlighter-rouge">xpacks/.bin:node_modules/.bin:$PATH</code>, so the exact versions
 of the tools required in the dependencies list will be preferred over any
 existing tools with the same names that might be present in the <code class="language-plaintext highlighter-rouge">PATH</code>.</p>
-
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The <code class="language-plaintext highlighter-rouge">@xpack/xpbuild</code> package referred above
-is not yet available with
-this name, do not try to use it yet.</div>
 
 <h3 id="binary-xpacks-are-probably-huge-arent-they">Binary xPacks are probably huge, aren’t they?</h3>
 
@@ -819,34 +912,65 @@ binaries themselves.</p>
 
 <h2 id="how-do-source-xpacks-work">How do source xPacks work?</h2>
 
-<p>Even simpler. Let’s assume that the ‘awesome project’ also needs the
+<p>Even simpler. Let’s assume that the ‘xyz project’ also needs the
 µOS++ trace support, which is available as the source xPack
 <code class="language-plaintext highlighter-rouge">@micro-os-plus/diag-trace</code>.</p>
 
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> @micro-os-plus/diag-trace <span class="nt">--verbose</span>
+<span class="go">xPack manager - install package(s)
+
+Processing @micro-os-plus/diag-trace@1.0.7...
+Folder 'xpacks/micro-os-plus-diag-trace' linked to global '@micro-os-plus/diag-trace/1.0.7'.
+Adding '@micro-os-plus/diag-trace' to 'dependencies'...
+
+'xpm install' completed in 136 ms.
+</span></code></pre></div></div>
+
+<p>This results in another link in the <code class="language-plaintext highlighter-rouge">xpacks</code> folder
+(mind the linearised package name):</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree xpacks     
+<span class="go">xpacks
+</span><span class="gp">├── micro-os-plus-diag-trace -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@micro-os-plus/diag-trace/1.0.7
+<span class="gp">├── xpack-dev-tools-arm-none-eabi-gcc -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@xpack-dev-tools/arm-none-eabi-gcc/10.2.1-1.1.2
+<span class="gp">├── xpack-dev-tools-cmake -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@xpack-dev-tools/cmake/3.19.2-2.1
+<span class="gp">└── xpack-dev-tools-ninja-build -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@xpack-dev-tools/ninja-build/1.10.2-2.1
+<span class="go">
+4 directories, 0 files
+</span><span class="gp">$</span><span class="w"> </span>tree xpacks/micro-os-plus-diag-trace 
+<span class="go">xpacks/micro-os-plus-diag-trace
+├── CHANGELOG.md
+├── LICENSE
+├── README.md
+├── include
+│   └── micro-os-plus
+│       └── diag
+│           └── trace.h
+├── package.json
+└── src
+    └── trace.cpp
+
+4 directories, 6 files
+</span></code></pre></div></div>
+
+<p>and the addition of a new dependency in <code class="language-plaintext highlighter-rouge">package.json</code>:</p>
+
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-awesome-xpack"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@&lt;scope&gt;/xyz"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
   </span><span class="nl">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@micro-os-plus/diag-trace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.0.6"</span><span class="w">
+    </span><span class="nl">"@micro-os-plus/diag-trace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.0.7"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"@xpack/xpbuild"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.2.3"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"@xpack-dev-tools/arm-none-eabi-gcc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9.3.1-1.1"</span><span class="w">
+    </span><span class="nl">"@xpack-dev-tools/arm-none-eabi-gcc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.2.1-1.1.2"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"@xpack-dev-tools/cmake"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.19.2-2.1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"@xpack-dev-tools/ninja-build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.10.2-2.1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"liquidjs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^9.23.3"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"xpack"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
-
-<p>Running <code class="language-plaintext highlighter-rouge">xpm install</code> in the project folder will first install the
-<code class="language-plaintext highlighter-rouge">@micro-os-plus/diag-trace</code> package, possibly with all other dependencies,
-recursively.</p>
-
-<p>Then xpm will add links to all dependent packages in the <code class="language-plaintext highlighter-rouge">xpacks</code> folder,
-like <code class="language-plaintext highlighter-rouge">xpacks/micro-os-plus-diag-trace</code> (mind the linearised package name);
-now the project can refer to
-them as to any sub-folder local to the project.</p>
-
-<p>TODO: show the output of tree on the xpacks folder.</p>
 
 <h2 id="example">Example</h2>
 
@@ -928,6 +1052,8 @@ Folder 'gnu-mcu-eclipse-windows-build-tools' linked to '@gnu-mcu-eclipse/windows
 </span><span class="gp">$</span><span class="w">
 </span></code></pre></div></div>
 
+<p>TODO: update for a more recent blinky project.</p>
+
 <h2 id="continuous-integration-use-cases">Continuous Integration use cases</h2>
 
 <p>The high degree of automation provided by xpm is of great help
@@ -936,7 +1062,7 @@ for automated test environments.</p>
 <h3 id="travis">Travis</h3>
 
 <p>For example, with the proper scripts configured, the Travis configuration
-for an xPack is as simple as this:</p>
+for an xPack project is as simple as this:</p>
 
 <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">os</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="s">linux</span>
@@ -948,7 +1074,7 @@ for an xPack is as simple as this:</p>
   <span class="pi">-</span> <span class="s2">"</span><span class="s">node"</span>
 
 <span class="na">install</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">npm install --global xpm</span>
+  <span class="pi">-</span> <span class="s">npm install --global xpm@latest</span>
 
 <span class="na">script</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="s">xpm install</span>
@@ -999,7 +1125,7 @@ for an xPack is as simple as this:</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Mar 17, 2021<br/> Site last generated: Mar 17, 2021 <br />
+<span>Page last updated:</span> Mar 28, 2021<br/> Site last generated: Mar 28, 2021 <br />
                 </div>
             </div>
 </footer>

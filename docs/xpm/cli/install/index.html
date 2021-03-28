@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xpm install" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/cli/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/xpm/cli/install/","headline":"xpm install","dateModified":"2021-03-17T08:03:31+00:00","datePublished":"2017-10-09T09:56:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/cli/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/xpm/cli/install/","headline":"xpm install","dateModified":"2021-03-28T20:22:39+00:00","datePublished":"2017-10-09T09:56:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -356,7 +356,28 @@
           
           
           
-          <li><a title="xpm run-script" href="/xpm/cli/run-script/">xpm run-script</a></li>
+          <li><a title="xpm link" href="/xpm/cli/link/">xpm link</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm list" href="/xpm/cli/list/">xpm list</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm run" href="/xpm/cli/run/">xpm run</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm uninstall" href="/xpm/cli/uninstall/">xpm uninstall</a></li>
           
           
           
@@ -420,20 +441,21 @@ $('#toc').on('click', 'a', function() {
 
    <h2 id="synopsis">Synopsis</h2>
 
-<p>Invoked with args referring to packages:</p>
+<p>Invoked with arguments referring to packages:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm install [&lt;options&gt; ...] [&lt;args&gt;...]
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="o">[</span>&lt;options&gt; ...] <span class="o">[</span>&lt;packs&gt;...]
 </code></pre></div></div>
 
-<p>Invoked with no args, running in a package folder:</p>
+<p>Invoked with no package arguments, and running in a package folder:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="o">[</span>&lt;options&gt; ...]
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="o">[</span>&lt;options&gt; ...]
 </code></pre></div></div>
 
 <p>Aliases:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">i</code></li>
+  <li><code class="language-plaintext highlighter-rouge">intstall</code></li>
 </ul>
 
 <h2 id="description">Description</h2>
@@ -532,16 +554,21 @@ use case is to use names of packages stored on the public repository,
 but since xpm uses the same library to manage downloads as npm,
 all formats are accepted:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm install [&lt;@scope&gt;/]&lt;name&gt;
-xpm install [&lt;@scope&gt;/]&lt;name&gt;@&lt;tag&gt;
-xpm install [&lt;@scope&gt;/]&lt;name&gt;@&lt;version&gt;
-xpm install [&lt;@scope&gt;/]&lt;name&gt;@&lt;version range&gt;
-xpm install &lt;git-host&gt;:&lt;git-user&gt;/&lt;repo-name&gt;
-xpm install &lt;git repo url&gt;
-xpm install &lt;tarball file&gt;
-xpm install &lt;tarball url&gt;
-xpm install &lt;folder&gt;
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="o">[</span>&lt;@scope&gt;/]&lt;name&gt;
+xpm <span class="nb">install</span> <span class="o">[</span>&lt;@scope&gt;/]&lt;name&gt;@&lt;tag&gt;
+xpm <span class="nb">install</span> <span class="o">[</span>&lt;@scope&gt;/]&lt;name&gt;@&lt;version&gt;
+xpm <span class="nb">install</span> <span class="o">[</span>&lt;@scope&gt;/]&lt;name&gt;@&lt;version range&gt;
+xpm <span class="nb">install</span> &lt;github&gt;:&lt;organization&gt;/&lt;repo-name&gt;[#commit-id]
+xpm <span class="nb">install</span> &lt;github&gt;:&lt;organization&gt;/&lt;repo-name&gt;[#semver:X.Y.Z]
+xpm <span class="nb">install</span> &lt;gitlab&gt;:&lt;organization&gt;/&lt;repo-name&gt;[#commit-id]
+xpm <span class="nb">install</span> &lt;gitlab&gt;:&lt;organization&gt;/&lt;repo-name&gt;[#semver:X.Y.Z]
+xpm <span class="nb">install</span> &lt;git repo url&gt;
+xpm <span class="nb">install</span> &lt;tarball file&gt;
+xpm <span class="nb">install</span> &lt;tarball url&gt;
+xpm <span class="nb">install</span> &lt;folder&gt;
 </code></pre></div></div>
+
+<p>When refering to GitHub by semver, a tag named <code class="language-plaintext highlighter-rouge">vX.Y.Z</code> must be present.</p>
 
 <p>For detail please see <a href="https://docs.npmjs.com/cli/install"><code class="language-plaintext highlighter-rouge">npm install</code></a>.</p>
 
@@ -563,42 +590,55 @@ Extracting 'gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.7-20190524-0603-macos.tgz'
 
 <h3 id="help---help">Help (<code class="language-plaintext highlighter-rouge">--help</code>)</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ xpm install --help
-
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--help</span>
+<span class="go">
 xPack manager - install package(s)
-Usage: xpm install [options...] [--global] [--system] [--force] [--dry-run]
-                   [[@&lt;scope&gt;]/&lt;name&gt;[@&lt;version]]
-
+Usage: xpm install [options...] [--global] [--system] [--force]
+</span><span class="gp">                   [--config &lt;config_name&gt;</span><span class="o">]</span> <span class="o">[</span><span class="nt">--dry-run</span><span class="o">]</span> <span class="o">[</span><span class="nt">--save-prod</span><span class="o">]</span>
+<span class="go">                   [--no-save] [--save-dev] [--save-optional] [--save-bundle]
+                   [--save-exact]
+</span><span class="gp">                   [[@&lt;scope&gt;</span>/]&lt;name&gt;[@&lt;version]|&lt;github_name&gt;/&lt;repo&gt;]...
+<span class="go">
 Install options:
-  -g|--global           Install the package globally in the home folder (optional)
-  -sy|--system          Install the package in a system folder (not impl) (optional)
-  -f|--force            Force install over existing package (optional)
-  -n|--dry-run          Pretend to install the package (not impl) (optional)
+  -g|--global                Install the package globally in the home folder (optional)
+  -sy|--system               Install the package in a system folder (optional)
+  -f|--force                 Force install over existing package (optional)
+</span><span class="gp">  -c|--config &lt;config_name&gt;</span><span class="w">  </span>Install configuration specific dependencies <span class="o">(</span>optional<span class="o">)</span>
+<span class="go">  -n|--dry-run               Pretend to install the package(s) (optional)
+</span><span class="gp">  -P|--save-prod             Save to dependencies;</span><span class="w"> </span>default unless <span class="nt">-D</span> or <span class="nt">-O</span> <span class="o">(</span>optional<span class="o">)</span>
+<span class="go">  --no-save                  Prevent saving to dependencies (optional)
+  -D|--save-dev              Save to devDependencies (optional)
+  -O|--save-optional         Save to optionalDependencies (optional)
+  -B|--save-bundle           Save to bundleDependencies (optional)
+  -E|--save-exact            Save deps with exact version (optional)
 
 Common options:
-  --loglevel &lt;level&gt;    Set log level (silent|warn|info|verbose|debug|trace)
-  -s|--silent           Disable all messages (--loglevel silent)
-  -q|--quiet            Mostly quiet, warnings and errors (--loglevel warn)
-  --informative         Informative (--loglevel info)
-  -v|--verbose          Verbose (--loglevel verbose)
-  -d|--debug            Debug messages (--loglevel debug)
-  -dd|--trace           Trace messages (--loglevel trace, -d -d)
-  --no-update-notifier  Skip check for a more recent version
-  -C &lt;folder&gt;           Set current folder
+</span><span class="gp">  --loglevel &lt;level&gt;</span><span class="w">         </span>Set log level <span class="o">(</span>silent|warn|info|verbose|debug|trace<span class="o">)</span> 
+<span class="go">  -s|--silent                Disable all messages (--loglevel silent) 
+  -q|--quiet                 Mostly quiet, warnings and errors (--loglevel warn) 
+  --informative              Informative (--loglevel info) 
+  -v|--verbose               Verbose (--loglevel verbose) 
+  -d|--debug                 Debug messages (--loglevel debug) 
+  -dd|--trace                Trace messages (--loglevel trace, -d -d) 
+  --no-update-notifier       Skip check for a more recent version 
+</span><span class="gp">  -C &lt;folder&gt;</span><span class="w">                </span>Set current folder 
+<span class="go">
+xpm -h|--help                Quick help 
+xpm --version                Show version 
+xpm -i|--interactive         Enter interactive mode 
 
-xpm -h|--help           Quick help
-xpm --version           Show version
-xpm -i|--interactive    Enter interactive mode
+npm xpm@0.9.0 '/Users/ilg/.nvm/versions/node/v14.16.0/lib/node_modules/xpm'
+</span><span class="gp">Home page: &lt;https://xpack.github.io/xpm/&gt;</span><span class="w">
+</span><span class="gp">Bug reports: &lt;https://github.com/xpack/xpm-js/issues/&gt;</span><span class="w">
+</span></code></pre></div></div>
 
-npm xpm@0.5.0 '/Users/ilg/Library/npm/lib/node_modules/xpm'
-Home page: &lt;https://github.com/xpack/xpm-js&gt;
-Bug reports: &lt;https://github.com/xpack/xpm-js/issues&gt;
-$
-</code></pre></div></div>
+<h3 id="global-install--g--global">Global install (<code class="language-plaintext highlighter-rouge">-g|--global</code>)</h3>
 
-<h3 id="install-globally--g--global">Install globally (<code class="language-plaintext highlighter-rouge">-g|--global</code>)</h3>
+<p>Install package(s) in the global repository (in the user home folder).</p>
 
-<p>Install the package(s) in the global repository (in the user home folder).</p>
+<h3 id="system-install--sy--system">System install (<code class="language-plaintext highlighter-rouge">-sy|--system</code>)</h3>
+
+<p>Install package(s) in the system repository.</p>
 
 <h3 id="force-install--f--force">Force install (<code class="language-plaintext highlighter-rouge">-f|--force</code>)</h3>
 
@@ -606,10 +646,115 @@ $
 
 <p>Use this option to force xpm to reinstall a package.</p>
 
+<h3 id="configuration--c--config">Configuration (<code class="language-plaintext highlighter-rouge">-c|--config</code>)</h3>
+
+<p>Install dependencies into an existing configuration build
+folder instead of the top project folder.</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--config</span> stm32f4discovery-cmake-gcc10-debug @xpack-dev-tools/arm-none-eabi-gcc@10.2.1-1.1.2
+<span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--config</span> stm32f4discovery-cmake-gcc9-debug @xpack-dev-tools/arm-none-eabi-gcc@9.3.1-1.4.1
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">xpacks</code> folders are not stored in the project folder, but in the
+configuration build folder, configured via the <code class="language-plaintext highlighter-rouge">buildFolderRelativePath</code>
+property.</p>
+
+<p>Similarly, the dependencies are stored in the configuration, for
+example:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"xpack"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"configurations"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"stm32f4discovery-cmake-gcc10-debug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@xpack-dev-tools/arm-none-eabi-gcc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.2.1-1.1.2"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"stm32f4discovery-cmake-gcc9-debug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@xpack-dev-tools/arm-none-eabi-gcc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9.3.1-1.4.1"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
 <h3 id="dry-run--n--dry-run">Dry-run (<code class="language-plaintext highlighter-rouge">-n|--dry-run</code>)</h3>
 
-<p>Do everything except to actually install the package(s).</p>
+<p>Do everything except to actually install the packages(s).</p>
 
+<h3 id="save-to-dependencies--p--save-prod">Save to dependencies (<code class="language-plaintext highlighter-rouge">-P|--save-prod</code>)</h3>
+
+<p>Add the installed packages to the <code class="language-plaintext highlighter-rouge">dependencies</code> array and
+update the <code class="language-plaintext highlighter-rouge">package.json</code>;</p>
+
+<p>Unless an explicit <code class="language-plaintext highlighter-rouge">-D</code> or <code class="language-plaintext highlighter-rouge">-O</code>, source xPacks are stored to
+<code class="language-plaintext highlighter-rouge">dependencies</code> by default.</p>
+
+<h3 id="prevent-saving-to-dependencies---no-save">Prevent saving to dependencies (<code class="language-plaintext highlighter-rouge">--no-save</code>)</h3>
+
+<p>Prevent saving to dependencies and updating the <code class="language-plaintext highlighter-rouge">package.json</code> file.</p>
+
+<h3 id="save-to-devdependencies--d--save-dev">Save to devDependencies (<code class="language-plaintext highlighter-rouge">-D|--save-dev</code>)</h3>
+
+<p>Add the installed packages to the <code class="language-plaintext highlighter-rouge">devDependencies</code> array and
+update the <code class="language-plaintext highlighter-rouge">package.json</code>.</p>
+
+<p>Unless an explicit <code class="language-plaintext highlighter-rouge">-P</code>, binary xPacks and npm modules are stored to
+<code class="language-plaintext highlighter-rouge">devDependencies</code> by default.</p>
+
+<h3 id="save-to-optionaldependencies--o--save-optional">Save to optionalDependencies (<code class="language-plaintext highlighter-rouge">-O|--save-optional</code>)</h3>
+
+<p>Add the installed packages to the <code class="language-plaintext highlighter-rouge">optionalDependencies</code> array and
+update the <code class="language-plaintext highlighter-rouge">package.json</code>.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Currently xpm does not use the
+optional dependencies, but npm may do so.</div>
+
+<h3 id="save-to-bundledependencies--b--save-bundle">Save to bundleDependencies (<code class="language-plaintext highlighter-rouge">-B|--save-bundle</code>)</h3>
+
+<p>Add the installed packages to the <code class="language-plaintext highlighter-rouge">bundleDependencies</code> array and
+update the <code class="language-plaintext highlighter-rouge">package.json</code>.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Currently xpm does not use the
+bundle dependencies, but npm may do so.</div>
+
+<h3 id="save-with-exact-version--e--save-exact">Save with exact version (<code class="language-plaintext highlighter-rouge">-E|--save-exact</code>)</h3>
+
+<p>By default, the stored reference to the installed package
+uses the <code class="language-plaintext highlighter-rouge">^</code> syntax,
+which is the npm/semver convention that means <em>compatible</em>,
+in other words the
+highest version that does not change the major number, if available.</p>
+
+<p>For example:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"liquidjs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^9.23.3"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"xpack"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>This option changes the behaviour by storing the version without <code class="language-plaintext highlighter-rouge">^</code>,
+which means the exact version is required.</p>
+
+<p>Unless an explicit <code class="language-plaintext highlighter-rouge">-D</code>, binary xPacks with longer version
+strings (that do not comply to
+semver) are stored without <code class="language-plaintext highlighter-rouge">^</code> by default, for example:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"@xpack-dev-tools/arm-none-eabi-gcc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.2.1-1.1.2"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"xpack"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
 
         
@@ -658,7 +803,7 @@ $
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Mar 17, 2021<br/> Site last generated: Mar 17, 2021 <br />
+<span>Page last updated:</span> Mar 28, 2021<br/> Site last generated: Mar 28, 2021 <br />
                 </div>
             </div>
 </footer>
