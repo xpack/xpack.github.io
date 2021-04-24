@@ -77,7 +77,7 @@ $ cd web-jekyll.git
 $ bundle exec jekyll serve --trace --safe --baseurl "/web-preview"
 ```
 
-To view the result, point the browser to `http://localhost:4002/web-preview`.
+To view the result, point the browser to `http://localhost:4002/web-preview/`.
 
 To test links:
 

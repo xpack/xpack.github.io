@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to create a new xPack Git repository" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/how-to-new-git/"},"@type":"BlogPosting","url":"https://xpack.github.io/develop/how-to-new-git/","headline":"How to create a new xPack Git repository","dateModified":"2021-03-28T20:22:39+00:00","datePublished":"2019-07-09T14:48:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/how-to-new-git/"},"@type":"BlogPosting","url":"https://xpack.github.io/develop/how-to-new-git/","headline":"How to create a new xPack Git repository","dateModified":"2021-04-24T17:31:30+00:00","datePublished":"2019-07-09T14:48:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -423,6 +423,22 @@
       
   
   <li>
+      <a title="VS Code Extensions" href="#">VS Code Extensions</a>
+      <ul>
+          
+          
+          
+          <li><a title="xPack C/C++ Build Tools" href="/vscode/">xPack C/C++ Build Tools</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
       <a title="Support" href="#">Support</a>
       <ul>
           
@@ -599,7 +615,7 @@ code on a separate branch, like <code class="language-plaintext highlighter-roug
 <p>With each upstream release, while on the <code class="language-plaintext highlighter-rouge">originals</code> branch,
 fuly remove the content and extract the newly released archive.</p>
 
-<p>In case the archive contains binary files, or other large files considerd
+<p>In case the archive contains binary files, or other large files considered
 not essential for the xPack distribution, add them to <code class="language-plaintext highlighter-rouge">.gitignore</code>.</p>
 
 <h2 id="the-xpack-branch-and-three-way-merging">The <code class="language-plaintext highlighter-rouge">xpack</code> branch and three-way merging</h2>
@@ -628,28 +644,19 @@ of the <code class="language-plaintext highlighter-rouge">master</code> branch.<
 do not enforce the use of a branch named <code class="language-plaintext highlighter-rouge">xpack</code>, this is only
 a recommendation.</div>
 
-<h3 id="the-github-template-project">The GitHub Template project</h3>
+<h3 id="do-not-use-a-github-template-project">Do not use a GitHub Template project</h3>
 
-<p>The easiest way to create new projects is to use the existing
-<a href="https://github.com/xpack/github-template-xpack">GitHub Template</a> project.
-Instantiate it into your organisation and update the project details
-in <code class="language-plaintext highlighter-rouge">package.json</code> and the copyright owner.</p>
+<p>The easiest way to create new projects would be to use an existing
+GitHub Template project.</p>
 
-<ul>
-  <li>click the <strong>Use this template</strong> button</li>
-  <li>select the owner or the organisation</li>
-  <li>enter the repository name, preferably suffixed with <code class="language-plaintext highlighter-rouge">-xpack</code></li>
-  <li>enter the description <code class="language-plaintext highlighter-rouge">A source/binary xPack with ...</code></li>
-  <li>select Public</li>
-  <li>enable <strong>Include all branches</strong> (very important!)</li>
-  <li>click <strong>Create repositories from template</strong></li>
-</ul>
+<p>Unfortunately this path leads to repositories with weirds histories,
+like disconnected commits, and is not practical.</p>
 
 <h3 id="create-the-github-project-manually">Create the GitHub project manually</h3>
 
 <p>The following steps apply to GitHub. Adjust them for other Git hosting sites.</p>
 
-<p>The editor of choice is Visual Studio Code (VSC), but you can use
+<p>The editor of choice is Visual Studio Code (VS Code), but you can use
 any editor you like; just be sure that on Windows it does not mess the
 line terminators.</p>
 
@@ -692,13 +699,13 @@ choice for xPacks, but any other license of your choice is also ok</li>
 small <strong>Clone to HTTPS</strong> window</li>
   <li>click the <strong>Copy</strong> icon, or explicitly copy the URL</li>
   <li>in a terminal window, in a place of our choice, create a folder
-to store all xPacks (for example it can be named <code class="language-plaintext highlighter-rouge">xpacks</code>):
-    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">mkdir</span> <span class="nt">-p</span> xpacks
-<span class="gp">$</span><span class="w"> </span><span class="nb">cd </span>xpacks
-<span class="gp">$</span><span class="w"> </span>git clone https://github.com/&lt;user&gt;/&lt;project&gt;.git &lt;project&gt;.git
-</code></pre></div>    </div>
-  </li>
+to store all xPacks (for example it can be named <code class="language-plaintext highlighter-rouge">xpacks</code>):</li>
 </ul>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> xpacks
+<span class="nb">cd </span>xpacks
+git clone https://github.com/&lt;user&gt;/&lt;project&gt;.git &lt;project&gt;.git
+</code></pre></div></div>
 
 <h3 id="edit-the-gitignore-file">Edit the <code class="language-plaintext highlighter-rouge">.gitignore</code> file</h3>
 
@@ -708,7 +715,7 @@ to store all xPacks (for example it can be named <code class="language-plaintext
   <li>add the following to <code class="language-plaintext highlighter-rouge">.gitignore</code>:</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># xpm
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code># xpm
 xpacks/
 
 # Windows
@@ -725,7 +732,7 @@ Thumbs.db
   <li>for Eclipse C/C++ projects you can include:</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Eclipse
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Eclipse
 .settings/
 Debug/
 Release/
@@ -733,7 +740,7 @@ test-*/
 build/
 </code></pre></div></div>
 
-<p>With VSC, Sourcetree or Git:</p>
+<p>With VS Code, Sourcetree or Git:</p>
 
 <ul>
   <li>stage the <code class="language-plaintext highlighter-rouge">.gitignore</code> file</li>
@@ -750,7 +757,7 @@ your name in the copyright notice.</p>
 
 <p>Check and possibly adjust to match your <code class="language-plaintext highlighter-rouge">LICENSE</code> requirements.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MIT License
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MIT License
 
 Copyright (c) 2021 Liviu Ionescu
 
@@ -758,7 +765,7 @@ Permission is hereby granted, free of charge, to any person obtaining a copy
 ...
 </code></pre></div></div>
 
-<p>With VSC, Sourcetree or Git:</p>
+<p>With VS Code, Sourcetree or Git:</p>
 
 <ul>
   <li>stage the <code class="language-plaintext highlighter-rouge">LICENSE</code> file</li>
@@ -775,12 +782,12 @@ party content, it is recommended to use an <code class="language-plaintext highl
 <p>In this case, to warn users about this configuration, edit
 the <code class="language-plaintext highlighter-rouge">README.md</code> file and replace its entire content with:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This project does not use the `master` branch, please
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This project does not use the `master` branch, please
 switch to the `xpack` branch to get the project files.
 
 </code></pre></div></div>
 
-<p>With VSC, Sourcetree or Git:</p>
+<p>With VS Code, Sourcetree or Git:</p>
 
 <ul>
   <li>stage the <code class="language-plaintext highlighter-rouge">README.md</code> file</li>
@@ -793,6 +800,7 @@ switch to the `xpack` branch to get the project files.
 branch:</p>
 
 <p>Sourcetree:</p>
+
 <ul>
   <li>select the <code class="language-plaintext highlighter-rouge">master</code> branch</li>
   <li>click the <strong>Branch</strong> button</li>
@@ -802,11 +810,11 @@ branch:</p>
 
 <p>Edit the README file to read:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This branch is used to recreate the 3rd party project history
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This branch is used to recreate the 3rd party project history
 from release archives.
 </code></pre></div></div>
 
-<p>With VSC, Sourcetree or Git:</p>
+<p>With VS Code, Sourcetree or Git:</p>
 
 <ul>
   <li>stage the <code class="language-plaintext highlighter-rouge">README.md</code> file</li>
@@ -815,19 +823,20 @@ from release archives.
 
 <h3 id="create-the-xpack-branch">Create the <code class="language-plaintext highlighter-rouge">xpack</code> branch</h3>
 
-<p>With VSC, Sourcetree or Git.</p>
+<p>With VS Code, Sourcetree or Git.</p>
 
 <ul>
-  <li>VSC menu <strong>View</strong> → <strong>Command Palette…</strong>
+  <li>VS Code menu <strong>View</strong> → <strong>Command Palette…</strong>
     <ul>
       <li><strong>Git: Create branch</strong></li>
     </ul>
   </li>
 </ul>
 
-<p>(or with GitLens)</p>
+<p>(or with Git view, <strong>…</strong> → <strong>Branch</strong> → <strong>Create Branch…</strong>)</p>
 
 <p>Sourcetree:</p>
+
 <ul>
   <li>select the <code class="language-plaintext highlighter-rouge">master</code> branch</li>
   <li>click the <strong>Branch</strong> button</li>
@@ -837,9 +846,10 @@ from release archives.
 
 <h3 id="publish-all-branches">Publish all branches</h3>
 
-<p>With VSC, Sourcetree or Git.</p>
+<p>With VS Code, Sourcetree or Git.</p>
 
-<p>(Sourcetree)</p>
+<p>With Sourcetree:</p>
+
 <ul>
   <li>click the <strong>Push</strong> button</li>
   <li>select all local branches (<code class="language-plaintext highlighter-rouge">master</code>, <code class="language-plaintext highlighter-rouge">xpack</code> and maybe the <code class="language-plaintext highlighter-rouge">originals</code>)</li>
@@ -876,7 +886,7 @@ the <strong>View Remote</strong> button):</p>
   },
   "repository": {
     "type": "git",
-</span><span class="gp">    "url": "git+https://github.com/&lt;user-id&gt;</span>/&lt;project-name&gt;-xpack.git<span class="s2">"
+</span><span class="gp">    "url": "https://github.com/&lt;user-id&gt;</span>/&lt;project-name&gt;-xpack.git<span class="s2">"
 </span><span class="go">  },
   "bugs": {
 </span><span class="gp">    "url": "https://github.com/&lt;user-id&gt;</span>/&lt;project-name&gt;-xpack/issues<span class="s2">"
@@ -911,40 +921,46 @@ or accept 1.0.0 for the first stable release; generally use the
   <li>as <strong>description</strong>, use the same string as the GitHub project description</li>
   <li>in <strong>scripts</strong>, check and possibly remove a trailing comma,</li>
   <li>as <strong>url</strong> and <strong>homepage</strong>, use the actual project Git URL</li>
-  <li>as <strong>author</strong>, enter full data, like
-    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-</span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Liviu Ionescu"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ilg@livius.net"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/ilg-ul/"</span><span class="w">
+  <li>as <strong>author</strong>, enter full data, like</li>
+</ul>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Liviu Ionescu"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ilg@livius.net"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/ilg-ul/"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>    </div>
-  </li>
+</span></code></pre></div></div>
+
+<ul>
   <li>as <strong>license</strong>, enter the <a href="https://spdx.org/licenses/">SPDX</a> license
 identifier (like <code class="language-plaintext highlighter-rouge">MIT</code>); if the license is not a standard one, provide
-the text in a <code class="language-plaintext highlighter-rouge">LICENSE</code> file and update the JSON to read:
-    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w"> </span><span class="nl">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEE LICENSE IN &lt;filename&gt;"</span><span class="w"> </span><span class="p">}</span><span class="w">
-</span></code></pre></div>    </div>
-  </li>
-  <li>if the package is inspired by other existing code, enter the author
-as the first contributor, for example:
-    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-</span><span class="nl">"contributors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEGGER Microcontroller GmbH &amp; Co. KG"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"support@segger.com"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.segger.com/"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>    </div>
-  </li>
+the text in a <code class="language-plaintext highlighter-rouge">LICENSE</code> file and update the JSON to read:</li>
 </ul>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w"> </span><span class="nl">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEE LICENSE IN &lt;filename&gt;"</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<ul>
+  <li>if the package is inspired by other existing code, enter the author
+as the first contributor, for example:</li>
+</ul>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"contributors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEGGER Microcontroller GmbH &amp; Co. KG"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"support@segger.com"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.segger.com/"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
 <h3 id="commit-the-initial-package-file">Commit the initial package file</h3>
 
-<p>With VSC, Sourcetree or Git:</p>
+<p>With VS Code, Sourcetree or Git:</p>
 
 <ul>
   <li>stage the <code class="language-plaintext highlighter-rouge">package.json</code></li>
@@ -961,13 +977,15 @@ as the first contributor, for example:
   <li>after the main title, copy the project description</li>
   <li>explain how to install the xPack
 (like <code class="language-plaintext highlighter-rouge">xpm install --global @scope/name</code>)</li>
-  <li>in the License section, use something like
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The original content is released under the
-[MIT License](https://opensource.org/licenses/MIT), with all rights reserved to
-[Liviu Ionescu](https://github.com/ilg-ul).
-</code></pre></div>    </div>
-  </li>
+  <li>in the License section, use something like</li>
 </ul>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gu">### License</span>
+
+The original content is released under the
+<span class="p">[</span><span class="nv">MIT License</span><span class="p">](</span><span class="sx">https://opensource.org/licenses/MIT</span><span class="p">)</span>, with all rights reserved to
+<span class="p">[</span><span class="nv">Liviu Ionescu</span><span class="p">](</span><span class="sx">https://github.com/ilg-ul/</span><span class="p">)</span>.
+</code></pre></div></div>
 
 <p>With Sourcetree or Git:</p>
 
@@ -1075,7 +1093,7 @@ only the <code class="language-plaintext highlighter-rouge">package.json</code>,
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Mar 28, 2021<br/> Site last generated: Mar 28, 2021 <br />
+<span>Page last updated:</span> Apr 24, 2021<br/> Site last generated: Apr 24, 2021 <br />
                 </div>
             </div>
 </footer>

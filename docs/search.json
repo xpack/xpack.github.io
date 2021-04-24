@@ -118,17 +118,6 @@
 
 
 {
-"title": "The xPack CMake Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/cmake/faq/",
-"summary": ""
-}
-,
-
-
-
-{
 "title": "The xPack QEMU Arm Frequently Asked Questions",
 "tags": "",
 "keywords": "",
@@ -140,21 +129,10 @@
 
 
 {
-"title": "The xPack Meson Build Frequently Asked Questions",
+"title": "The xPack GNU Arm Embedded GCC Frequently Asked Questions",
 "tags": "",
 "keywords": "",
-"url": "/meson-build/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The xPack GNU RISC-V Embedded GCC Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/riscv-none-embed-gcc/faq/",
+"url": "/arm-none-eabi-gcc/faq/",
 "summary": ""
 }
 ,
@@ -173,10 +151,32 @@
 
 
 {
+"title": "The xPack CMake Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/cmake/faq/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "The xPack Ninja Build Frequently Asked Questions",
 "tags": "",
 "keywords": "",
 "url": "/ninja-build/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack GNU RISC-V Embedded GCC Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/riscv-none-embed-gcc/faq/",
 "summary": ""
 }
 ,
@@ -195,10 +195,21 @@
 
 
 {
-"title": "The xPack GNU Arm Embedded GCC Frequently Asked Questions",
+"title": "The xPack Meson Build Frequently Asked Questions",
 "tags": "",
 "keywords": "",
-"url": "/arm-none-eabi-gcc/faq/",
+"url": "/meson-build/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "FAQ",
+"tags": "",
+"keywords": "",
+"url": "/vscode/faq/",
 "summary": ""
 }
 ,
@@ -252,12 +263,95 @@
 
 
 
+
+
 {
-"title": "xPack Developer info",
+"title": "xpm - common options",
 "tags": "",
 "keywords": "",
-"url": "/develop/",
-"summary": "<p>Resources for xPack developers.</p>"
+"url": "/xpm/cli/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "xpm files",
+"tags": "",
+"keywords": "",
+"url": "/xpm/files/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack Package Manager",
+"tags": "",
+"keywords": "xPackpackagemanager",
+"url": "/xpm/",
+"summary": "<p>A tool to manage dependencies for generic multi-version source and binary packages, inspired by npm.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Basic Project Builder",
+"tags": "",
+"keywords": "",
+"url": "/xpbuild/",
+"summary": "<p>A tool to build day to day projects without having to manually write make files, with an emphasis on C/C++ and embedded applications, inspired by Eclipse CDT managed builder (work in progress).</p>"
+}
+,
+
+
+
+
+
+{
+"title": "The xPack Build Runner",
+"tags": "",
+"keywords": "make",
+"url": "/xpninja/",
+"summary": "<p>A light and fast tool to build generic projects, inspired by Ninja Build but with the configuration files in JSON (in design phase).</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Build Configurator",
+"tags": "",
+"keywords": "make",
+"url": "/xpcdl/",
+"summary": "<p>A tool to manage project configurations, inspired by eCos CDL, but with the configuration files in JSON (in design phase).</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Build Generator",
+"tags": "",
+"keywords": "make",
+"url": "/xpmake/",
+"summary": "<p>An advanced tool to build complex projects, inspired by CMake, but with the configuration files in JSON and actions in JavaScript (in design phase).</p>"
+}
+,
+
+
+
+
+
+{
+"title": "Maintainer info",
+"tags": "",
+"keywords": "",
+"url": "/maintain/",
+"summary": "<p>Resources for the xPack projects maintainers.</p>"
 }
 ,
 
@@ -277,171 +371,11 @@
 
 
 {
-"title": "The xPack Build Generator",
-"tags": "",
-"keywords": "make",
-"url": "/xpmake/",
-"summary": "<p>An advanced tool to build complex projects, inspired by CMake, but with the configuration files in JSON and actions in JavaScript (in design phase).</p>"
-}
-,
-
-
-
-{
-"title": "xpm files",
-"tags": "",
-"keywords": "",
-"url": "/xpm/files/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "xpm - common options",
-"tags": "",
-"keywords": "",
-"url": "/xpm/cli/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The xPack Package Manager",
-"tags": "",
-"keywords": "xPackpackagemanager",
-"url": "/xpm/",
-"summary": "<p>A tool to manage dependencies for generic multi-version source and binary packages, inspired by npm.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack Build Runner",
-"tags": "",
-"keywords": "make",
-"url": "/xpninja/",
-"summary": "<p>A light and fast tool to build generic projects, inspired by Ninja Build but with the configuration files in JSON (in design phase).</p>"
-}
-,
-
-
-
-
-
-{
-"title": "The xPack Build Configurator",
-"tags": "",
-"keywords": "make",
-"url": "/xpcdl/",
-"summary": "<p>A tool to manage project configurations, inspired by eCos CDL, but with the configuration files in JSON (in design phase).</p>"
-}
-,
-
-
-
-
-
-{
-"title": "The xPack Basic Project Builder",
-"tags": "",
-"keywords": "",
-"url": "/xpbuild/",
-"summary": "<p>A tool to build day to day projects without having to manually write make files, with an emphasis on C/C++ and embedded applications, inspired by Eclipse CDT managed builder (work in progress).</p>"
-}
-,
-
-
-
-
-
-{
-"title": "Maintainer info",
-"tags": "",
-"keywords": "",
-"url": "/maintain/",
-"summary": "<p>Resources for the xPack projects maintainers.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack CMake",
-"tags": "",
-"keywords": "cmake",
-"url": "/cmake/",
-"summary": "<p>A binary distribution of CMake.</p>"
-}
-,
-
-
-
-{
 "title": "The xPack QEMU Arm",
 "tags": "",
 "keywords": "qemuarmcortex-mgraphic",
 "url": "/qemu-arm/",
 "summary": "<p>A binary distribution of QEMU Arm.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack Meson Build",
-"tags": "",
-"keywords": "meson-build",
-"url": "/meson-build/",
-"summary": "<p>A binary distribution of Meson Build.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack GNU RISC-V Embedded GCC",
-"tags": "",
-"keywords": "riscv-none-embed-gccriscvgccembedded",
-"url": "/riscv-none-embed-gcc/",
-"summary": "<p>A binary distribution of GNU RISC-V Embedded GCC.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack Windows Build Tools",
-"tags": "",
-"keywords": "windows-build-tools",
-"url": "/windows-build-tools/",
-"summary": "<p>A Windows binary distribution of GNU Make, to be used with Eclipse Embedded CDT.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack Ninja Build",
-"tags": "",
-"keywords": "ninja-build",
-"url": "/ninja-build/",
-"summary": "<p>A binary distribution of Ninja Build.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack OpenOCD",
-"tags": "",
-"keywords": "openocd",
-"url": "/openocd/",
-"summary": "<p>A binary distribution of OpenOCD.</p>"
 }
 ,
 
@@ -459,11 +393,99 @@
 
 
 {
+"title": "The xPack Windows Build Tools",
+"tags": "",
+"keywords": "windows-build-tools",
+"url": "/windows-build-tools/",
+"summary": "<p>A Windows binary distribution of GNU Make, to be used with Eclipse Embedded CDT.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack CMake",
+"tags": "",
+"keywords": "cmake",
+"url": "/cmake/",
+"summary": "<p>A binary distribution of CMake.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Ninja Build",
+"tags": "",
+"keywords": "ninja-build",
+"url": "/ninja-build/",
+"summary": "<p>A binary distribution of Ninja Build.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack GNU RISC-V Embedded GCC",
+"tags": "",
+"keywords": "riscv-none-embed-gccriscvgccembedded",
+"url": "/riscv-none-embed-gcc/",
+"summary": "<p>A binary distribution of GNU RISC-V Embedded GCC.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack OpenOCD",
+"tags": "",
+"keywords": "openocd",
+"url": "/openocd/",
+"summary": "<p>A binary distribution of OpenOCD.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Meson Build",
+"tags": "",
+"keywords": "meson-build",
+"url": "/meson-build/",
+"summary": "<p>A binary distribution of Meson Build.</p>"
+}
+,
+
+
+
+{
 "title": "The xPack Metadata",
 "tags": "",
 "keywords": "",
 "url": "/metadata/",
 "summary": "<p>The metadata used by xPack tools.</p>"
+}
+,
+
+
+
+{
+"title": "xPack Developer info",
+"tags": "",
+"keywords": "",
+"url": "/develop/",
+"summary": "<p>Resources for xPack developers.</p>"
+}
+,
+
+
+
+{
+"title": "Visual Studio Code xPack C/C++ Managed Build Extension",
+"tags": "",
+"keywords": "",
+"url": "/vscode/",
+"summary": "<p>Use VS Code to manage and build C/C++ projects using the xPack tools.</p>"
 }
 ,
 
@@ -536,17 +558,6 @@
 
 
 {
-"title": "How to install the xPack CMake binaries",
-"tags": "",
-"keywords": "",
-"url": "/cmake/install/",
-"summary": "<p>The recommended method is via xpm.</p>"
-}
-,
-
-
-
-{
 "title": "How to install the xPack QEMU Arm binaries",
 "tags": "",
 "keywords": "",
@@ -558,21 +569,10 @@
 
 
 {
-"title": "How to install the xPack Meson Build binaries",
+"title": "How to install the xPack GNU Arm Embedded GCC binaries",
 "tags": "",
 "keywords": "",
-"url": "/meson-build/install/",
-"summary": "<p>The recommended method is via xpm.</p>"
-}
-,
-
-
-
-{
-"title": "How to install the xPack GNU RISC-V Embedded GCC binaries",
-"tags": "",
-"keywords": "",
-"url": "/riscv-none-embed-gcc/install/",
+"url": "/arm-none-eabi-gcc/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -591,10 +591,32 @@
 
 
 {
+"title": "How to install the xPack CMake binaries",
+"tags": "",
+"keywords": "",
+"url": "/cmake/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
 "title": "How to install the xPack Ninja Build binaries",
 "tags": "",
 "keywords": "",
 "url": "/ninja-build/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "How to install the xPack GNU RISC-V Embedded GCC binaries",
+"tags": "",
+"keywords": "",
+"url": "/riscv-none-embed-gcc/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -613,11 +635,22 @@
 
 
 {
-"title": "How to install the xPack GNU Arm Embedded GCC binaries",
+"title": "How to install the xPack Meson Build binaries",
 "tags": "",
 "keywords": "",
-"url": "/arm-none-eabi-gcc/install/",
+"url": "/meson-build/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "How to install the VS Code xPack Extension",
+"tags": "",
+"keywords": "vscodexpackinstall",
+"url": "/vscode/install/",
+"summary": ""
 }
 ,
 
@@ -812,6 +845,19 @@
 
 
 
+{
+"title": "Quick Start - Hello World",
+"tags": "",
+"keywords": "",
+"url": "/vscode/quick-start/",
+"summary": "<p>Create a simple Hello World project.</p>"
+}
+,
+
+
+
+
+
 
 
 
@@ -898,17 +944,6 @@
 
 
 {
-"title": "How to get help for xPack CMake",
-"tags": "",
-"keywords": "",
-"url": "/cmake/support/",
-"summary": ""
-}
-,
-
-
-
-{
 "title": "How to get help for xPack QEMU Arm",
 "tags": "",
 "keywords": "",
@@ -920,21 +955,10 @@
 
 
 {
-"title": "How to get help for xPack Meson Build",
+"title": "How to get help for xPack GNU Arm Embedded GCC?",
 "tags": "",
 "keywords": "",
-"url": "/meson-build/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack GNU RISC-V Embedded GCC?",
-"tags": "",
-"keywords": "",
-"url": "/riscv-none-embed-gcc/support/",
+"url": "/arm-none-eabi-gcc/support/",
 "summary": ""
 }
 ,
@@ -953,10 +977,32 @@
 
 
 {
+"title": "How to get help for xPack CMake",
+"tags": "",
+"keywords": "",
+"url": "/cmake/support/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "How to get help for xPack Ninja Build",
 "tags": "",
 "keywords": "",
 "url": "/ninja-build/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack GNU RISC-V Embedded GCC?",
+"tags": "",
+"keywords": "",
+"url": "/riscv-none-embed-gcc/support/",
 "summary": ""
 }
 ,
@@ -975,10 +1021,21 @@
 
 
 {
-"title": "How to get help for xPack GNU Arm Embedded GCC?",
+"title": "How to get help for xPack Meson Build",
 "tags": "",
 "keywords": "",
-"url": "/arm-none-eabi-gcc/support/",
+"url": "/meson-build/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for the VS Code xPack extension",
+"tags": "",
+"keywords": "",
+"url": "/vscode/support/",
 "summary": ""
 }
 ,
@@ -1095,6 +1152,46 @@
 
 
 
+
+
+{
+"title": "VS Code xPack extension v0.4.4 released",
+"tags": "releasesvscodevscode-xpackextension",
+"keywords": "",
+"url": "/blog/2021/04/22/vscode-xpack-v0-4-4-released/",
+"summary": "<p>Version <strong>0.4.4</strong> is a new development release of <strong>ilg-vscode.xpack</strong>; it adds commands to create simple projects from templates.</p>"
+}
+,
+
+
+{
+"title": "VS Code xPack extension v0.3.2 released",
+"tags": "releasesvscodevscode-xpackextension",
+"keywords": "",
+"url": "/blog/2021/04/19/vscode-xpack-v0-3-2-released/",
+"summary": "<p>Version <strong>0.3.2</strong> is a new development release of <strong>ilg-vscode.xpack</strong>; it adds commands to create configurations &amp; actions.</p>"
+}
+,
+
+
+{
+"title": "VS Code xPack extension v0.2.2 released",
+"tags": "releasesvscodevscode-xpackextension",
+"keywords": "",
+"url": "/blog/2021/04/14/vscode-xpack-v0-2-2-released/",
+"summary": "<p>Version <strong>0.2.2</strong> is a new development release of <strong>ilg-vscode.xpack</strong>; it adds IntelliSense support.</p>"
+}
+,
+
+
+{
+"title": "VS Code xPack extension v0.1.5 released",
+"tags": "releasesvscodevscode-xpackextension",
+"keywords": "",
+"url": "/blog/2021/04/09/vscode-xpack-v0-1-5-released-copy/",
+"summary": "<p>Version <strong>0.1.5</strong> is a new development release of <strong>ilg-vscode.xpack</strong>; it adds the actions explorer.</p>"
+}
+,
 
 
 {

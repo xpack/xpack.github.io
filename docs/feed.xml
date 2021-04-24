@@ -5,9 +5,81 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 28 Mar 2021 20:32:50 +0000</pubDate>
-        <lastBuildDate>Sun, 28 Mar 2021 20:32:50 +0000</lastBuildDate>
+        <pubDate>Sat, 24 Apr 2021 17:32:29 +0000</pubDate>
+        <lastBuildDate>Sat, 24 Apr 2021 17:32:29 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>VS Code xPack extension v0.4.4 released</title>
+            <description>&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;</description>
+            <pubDate>Thu, 22 Apr 2021 20:40:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/04/22/vscode-xpack-v0-4-4-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/04/22/vscode-xpack-v0-4-4-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>vscode</category>
+            
+            <category>vscode-xpack</category>
+            
+            <category>extension</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>VS Code xPack extension v0.3.2 released</title>
+            <description>&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;</description>
+            <pubDate>Mon, 19 Apr 2021 20:40:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/04/19/vscode-xpack-v0-3-2-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/04/19/vscode-xpack-v0-3-2-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>vscode</category>
+            
+            <category>vscode-xpack</category>
+            
+            <category>extension</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>VS Code xPack extension v0.2.2 released</title>
+            <description>&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;</description>
+            <pubDate>Wed, 14 Apr 2021 20:40:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/04/14/vscode-xpack-v0-2-2-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/04/14/vscode-xpack-v0-2-2-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>vscode</category>
+            
+            <category>vscode-xpack</category>
+            
+            <category>extension</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>VS Code xPack extension v0.1.5 released</title>
+            <description>&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;</description>
+            <pubDate>Fri, 09 Apr 2021 20:40:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/04/09/vscode-xpack-v0-1-5-released-copy/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/04/09/vscode-xpack-v0-1-5-released-copy/</guid>
+            
+            <category>releases</category>
+            
+            <category>vscode</category>
+            
+            <category>vscode-xpack</category>
+            
+            <category>extension</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack xpm v0.9.1 released</title>
@@ -109,82 +181,6 @@
             <category>releases</category>
             
             <category>openocd</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack Meson Build v0.56.2-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/meson-build/&quot;&gt;The xPack Meson Build&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://mesonbuild.com&quot;&gt;Meson&lt;/a&gt; build system.&lt;/p&gt;</description>
-            <pubDate>Tue, 02 Feb 2021 21:50:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2021/02/02/meson-build-v0-56-2-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2021/02/02/meson-build-v0-56-2-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>meson-build</category>
-            
-            <category>meson</category>
-            
-            <category>build</category>
-            
-            <category>python</category>
-            
-            <category>ninja</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack QEMU Arm v2.8.0-12 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/qemu-arm/&quot;&gt;The xPack QEMU Arm&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;http://www.qemu.org&quot;&gt;QEMU&lt;/a&gt;, with several extensions for Arm Cortex-Mdevices.&lt;/p&gt;</description>
-            <pubDate>Tue, 02 Feb 2021 09:30:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2021/02/02/qemu-arm-v2-8-0-12-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2021/02/02/qemu-arm-v2-8-0-12-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>qemu</category>
-            
-            <category>emulator</category>
-            
-            <category>arm</category>
-            
-            <category>cortex-m</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack xpm v0.8.1 released</title>
-            <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; stands for &lt;strong&gt;x&lt;/strong&gt;Pack &lt;strong&gt;p&lt;/strong&gt;ackage &lt;strong&gt;m&lt;/strong&gt;anager and is a &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Sat, 30 Jan 2021 19:49:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2021/01/30/xpm-v0-8-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2021/01/30/xpm-v0-8-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>xpm</category>
-            
-            <category>package</category>
-            
-            <category>manager</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack CMake v3.19.2-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/cmake/&quot;&gt;The xPack CMake&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://cmake.org&quot;&gt;CMake&lt;/a&gt; build system.&lt;/p&gt;</description>
-            <pubDate>Wed, 06 Jan 2021 17:08:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2021/01/06/cmake-v3-19-2-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2021/01/06/cmake-v3-19-2-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>cmake</category>
-            
-            <category>build</category>
             
             
         </item>
