@@ -668,6 +668,17 @@
 
 
 {
+"title": "IntelliSense (the project indexer)",
+"tags": "",
+"keywords": "",
+"url": "/vscode/intellisense/",
+"summary": "<p>IntelliSense is a general term for various code editing features including: code completion, parameter info, quick info, and member lists.</p>"
+}
+,
+
+
+
+{
 "title": "xPack 101",
 "tags": "",
 "keywords": "",
@@ -1152,6 +1163,16 @@
 
 
 
+
+
+{
+"title": "VS Code xPack extension v0.4.7 released",
+"tags": "releasesvscodevscode-xpackextension",
+"keywords": "",
+"url": "/blog/2021/04/24/vscode-xpack-v0-4-7-released/",
+"summary": "<p>Version <strong>0.4.7</strong> is a new development release of <strong>ilg-vscode.xpack</strong>; it fixes a bug and avoids a warning.</p>"
+}
+,
 
 
 {

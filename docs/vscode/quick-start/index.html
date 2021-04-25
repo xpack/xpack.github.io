@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Quick Start - Hello World" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/vscode/quick-start/"},"@type":"BlogPosting","url":"https://xpack.github.io/vscode/quick-start/","headline":"Quick Start - Hello World","dateModified":"2021-04-24T18:37:53+00:00","datePublished":"2021-04-24T21:25:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/vscode/quick-start/"},"@type":"BlogPosting","url":"https://xpack.github.io/vscode/quick-start/","headline":"Quick Start - Hello World","dateModified":"2021-04-25T13:56:59+00:00","datePublished":"2021-04-24T21:25:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -310,6 +310,13 @@
           
           
           
+          <li><a title="IntelliSense" href="/vscode/intellisense/">IntelliSense</a></li>
+          
+          
+          
+          
+          
+          
           <li><a title="Support" href="/vscode/support/">Support</a></li>
           
           
@@ -464,7 +471,7 @@ of the explorers on the bottom left corner, and enabling
 associated with custom sequences of commands (shown as tooltips).
 There are global
 actions, and actions specific to each build configuration.
-Actions can be executed by clicking the 
+Actions can be executed by clicking the
 triangular icon (▷) at the right side
 of the explorer line (described by tooltip as <strong>Run Action</strong>).</p>
 
@@ -536,16 +543,26 @@ invokes the <code class="language-plaintext highlighter-rouge">hello-world</code
 
 <h2 id="intellisense">IntelliSense</h2>
 
+<p>VS Code provides a very elaborate code indexer, called
+<a href="https://code.visualstudio.com/docs/editor/intellisense">IntelliSense</a>.</p>
+
+<p>The VS Code C/C++ extension stores the IntelliSense
+configuration in <code class="language-plaintext highlighter-rouge">${workspaceFolder}/.vscode/c_cpp_properties.json</code> files,
+located in each workspace folder.</p>
+
 <p>For build system generators which create the <code class="language-plaintext highlighter-rouge">compile_commands.json</code> file
 (like CMake and meson), the xPack extension automatically
-adds the paths to these files in the <code class="language-plaintext highlighter-rouge">.vscode/c_cpp_properties.json</code> file,
-and the VS Code C/C++ extension automatically processes them.</p>
+adds the paths to these files in the <code class="language-plaintext highlighter-rouge">c_cpp_properties.json</code> file,
+and the VS Code C/C++ extension can automatically process them.</p>
 
 <p><img src="/assets/images/2021/intellisense-debug.png" alt="IntelliSense Debug" /></p>
 
-<p>As it can be seen, the editor renders dead code in gray (actually in a
+<p>As it can be seen, the editor renders any dead code in gray (actually in a
 set of lighter colours), which is a good sign that the project
 was configured correctly.</p>
+
+<p>For details on the indexer, please read the separate
+<a href="/vscode/intellisense/">Intellisense</a> web page.</p>
 
 <h2 id="switching-build-configurations">Switching build configurations</h2>
 
@@ -567,6 +584,14 @@ when editing C/C++ source files.</div>
 and show the debug dead code as grey:</p>
 
 <p><img src="/assets/images/2021/intellisense-release.png" alt="IntelliSense Release" /></p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> When the <code class="language-plaintext highlighter-rouge">compile_commands.json</code>
+files do not exist (for example
+right after the project creation and
+before performing the first build), VS Code
+cannot provide IntelliSense services. Run the <strong>build</strong> action,
+or at least the <strong>prepare</strong> action, for all configurations, to create
+these files.</div>
 
 <h2 id="closing-the-workspace">Closing the workspace</h2>
 
@@ -600,11 +625,11 @@ and manually add them to any custom configuration.</p>
 
 <h3 id="create-a-c-version-of-the-hello-world">Create a C version of the Hello World</h3>
 
-<p>The project template is configurable, and can be invoked in interractive
+<p>The project template is configurable, and can be invoked in interactive
 mode, which will ask the user for different choices, including
 choosing between C and C++ projects.</p>
 
-<p>To do this from withon the xPack extension, select the 
+<p>To do this from within the xPack extension, select the
 <strong>xPack: Create a Hello World project</strong> and check the console for
 the questions.</p>
 
@@ -630,7 +655,7 @@ the questions.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Apr 24, 2021<br/> Site last generated: Apr 24, 2021 <br />
+<span>Page last updated:</span> Apr 25, 2021<br/> Site last generated: Apr 25, 2021 <br />
                 </div>
             </div>
 </footer>
