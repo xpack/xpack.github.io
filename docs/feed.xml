@@ -5,9 +5,27 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 27 Apr 2021 12:24:31 +0000</pubDate>
-        <lastBuildDate>Tue, 27 Apr 2021 12:24:31 +0000</lastBuildDate>
+        <pubDate>Tue, 27 Apr 2021 21:59:28 +0000</pubDate>
+        <lastBuildDate>Tue, 27 Apr 2021 21:59:28 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>VS Code xPack extension v0.4.8 released</title>
+            <description>&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;</description>
+            <pubDate>Tue, 27 Apr 2021 21:51:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/04/27/vscode-xpack-v0-4-8-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/04/27/vscode-xpack-v0-4-8-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>vscode</category>
+            
+            <category>vscode-xpack</category>
+            
+            <category>extension</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Meson Build v0.56.2-2 released</title>
@@ -163,22 +181,6 @@
             <pubDate>Tue, 16 Mar 2021 21:30:00 +0000</pubDate>
             <link>https://xpack.github.io/blog/2021/03/16/cmake-v3-19-2-2-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2021/03/16/cmake-v3-19-2-2-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>cmake</category>
-            
-            <category>build</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack CMake v3.18.6-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/cmake/&quot;&gt;The xPack CMake&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://cmake.org&quot;&gt;CMake&lt;/a&gt; build system.&lt;/p&gt;</description>
-            <pubDate>Tue, 16 Mar 2021 21:30:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2021/03/16/cmake-v3-18-6-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2021/03/16/cmake-v3-18-6-1-released/</guid>
             
             <category>releases</category>
             

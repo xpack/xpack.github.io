@@ -1166,6 +1166,16 @@
 
 
 {
+"title": "VS Code xPack extension v0.4.8 released",
+"tags": "releasesvscodevscode-xpackextension",
+"keywords": "",
+"url": "/blog/2021/04/27/vscode-xpack-v0-4-8-released/",
+"summary": "<p>Version <strong>0.4.8</strong> is a new development release of <strong>ilg-vscode.xpack</strong>; it fixes a bug.</p>"
+}
+,
+
+
+{
 "title": "xPack Meson Build v0.56.2-2 released",
 "tags": "releasesmeson-buildmesonbuildpythonninja",
 "keywords": "",
