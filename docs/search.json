@@ -1166,6 +1166,16 @@
 
 
 {
+"title": "xPack Meson Build v0.56.2-2 released",
+"tags": "releasesmeson-buildmesonbuildpythonninja",
+"keywords": "",
+"url": "/blog/2021/04/27/meson-build-v0-56-2-2-released/",
+"summary": "<p>Version 0.56.2-2 is a maintenance release of the <strong>xPack Meson Build</strong> package, intended to fix the macOS starting bug.</p>"
+}
+,
+
+
+{
 "title": "VS Code xPack extension v0.4.7 released",
 "tags": "releasesvscodevscode-xpackextension",
 "keywords": "",
