@@ -1177,6 +1177,16 @@
 
 
 {
+"title": "xPack Ninja Build v1.10.2-3 released",
+"tags": "releasesninja-buildninjabuildspeedsmall",
+"keywords": "",
+"url": "/blog/2021/04/28/ninja-build-v1-10-2-3-released/",
+"summary": "<p>Version 1.10.2-3 is a maintenance release of the <strong>xPack Ninja Build</strong> package, fixing the spawning of cmd.exe scripts on Windows.</p>"
+}
+,
+
+
+{
 "title": "VS Code xPack extension v0.4.9 released",
 "tags": "releasesvscodevscode-xpackextension",
 "keywords": "",
