@@ -5,9 +5,27 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Fri, 30 Apr 2021 21:25:40 +0000</pubDate>
-        <lastBuildDate>Fri, 30 Apr 2021 21:25:40 +0000</lastBuildDate>
+        <pubDate>Tue, 04 May 2021 22:02:20 +0000</pubDate>
+        <lastBuildDate>Tue, 04 May 2021 22:02:20 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>VS Code xPack extension v0.4.10 released</title>
+            <description>&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;</description>
+            <pubDate>Tue, 04 May 2021 21:53:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/05/04/vscode-xpack-v0-4-10-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/05/04/vscode-xpack-v0-4-10-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>vscode</category>
+            
+            <category>vscode-xpack</category>
+            
+            <category>extension</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Ninja Build v1.10.2-3 released</title>
@@ -167,24 +185,6 @@
             <pubDate>Sun, 28 Mar 2021 20:15:00 +0000</pubDate>
             <link>https://xpack.github.io/blog/2021/03/28/xpm-v0-9-1-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2021/03/28/xpm-v0-9-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>xpm</category>
-            
-            <category>package</category>
-            
-            <category>manager</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack xpm v0.9.0 released</title>
-            <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; is a&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt; dependencies.&lt;/p&gt;</description>
-            <pubDate>Sat, 27 Mar 2021 11:25:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2021/03/27/xpm-v0-9-0-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2021/03/27/xpm-v0-9-0-released/</guid>
             
             <category>releases</category>
             

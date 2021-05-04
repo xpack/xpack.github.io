@@ -1177,6 +1177,16 @@
 
 
 {
+"title": "VS Code xPack extension v0.4.10 released",
+"tags": "releasesvscodevscode-xpackextension",
+"keywords": "",
+"url": "/blog/2021/05/04/vscode-xpack-v0-4-10-released/",
+"summary": "<p>Version <strong>0.4.10</strong> is a new development release of <strong>ilg-vscode.xpack</strong>; it adds several enhancements.</p>"
+}
+,
+
+
+{
 "title": "xPack Ninja Build v1.10.2-3 released",
 "tags": "releasesninja-buildninjabuildspeedsmall",
 "keywords": "",
