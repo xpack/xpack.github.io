@@ -34,8 +34,6 @@
 
 
 
-
-
 {
 "title": "The xPack Build Definitions",
 "tags": "",
@@ -44,6 +42,8 @@
 "summary": "<p>The metadata used by the build tools.</p>"
 }
 ,
+
+
 
 
 
@@ -96,10 +96,10 @@
 
 
 {
-"title": "FAQ",
+"title": "The xPack CMake Frequently Asked Questions",
 "tags": "",
 "keywords": "",
-"url": "/xpm/faq/",
+"url": "/cmake/faq/",
 "summary": ""
 }
 ,
@@ -107,10 +107,43 @@
 
 
 {
-"title": "FAQ",
+"title": "The xPack Ninja Build Frequently Asked Questions",
 "tags": "",
 "keywords": "",
-"url": "/xpbuild/faq/",
+"url": "/ninja-build/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack OpenOCD Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/openocd/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack Meson Build Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/meson-build/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack GNU RISC-V Embedded GCC Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/riscv-none-embed-gcc/faq/",
 "summary": ""
 }
 ,
@@ -151,10 +184,10 @@
 
 
 {
-"title": "The xPack CMake Frequently Asked Questions",
+"title": "FAQ",
 "tags": "",
 "keywords": "",
-"url": "/cmake/faq/",
+"url": "/xpm/faq/",
 "summary": ""
 }
 ,
@@ -162,43 +195,10 @@
 
 
 {
-"title": "The xPack Ninja Build Frequently Asked Questions",
+"title": "FAQ",
 "tags": "",
 "keywords": "",
-"url": "/ninja-build/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The xPack GNU RISC-V Embedded GCC Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/riscv-none-embed-gcc/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The xPack OpenOCD Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/openocd/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The xPack Meson Build Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/meson-build/faq/",
+"url": "/xpbuild/faq/",
 "summary": ""
 }
 ,
@@ -263,108 +263,56 @@
 
 
 
-
-
 {
-"title": "xpm - common options",
+"title": "The xPack CMake",
 "tags": "",
-"keywords": "",
-"url": "/xpm/cli/",
-"summary": ""
+"keywords": "cmake",
+"url": "/cmake/",
+"summary": "<p>A binary distribution of CMake.</p>"
 }
 ,
 
 
 
 {
-"title": "xpm files",
+"title": "The xPack Ninja Build",
 "tags": "",
-"keywords": "",
-"url": "/xpm/files/",
-"summary": ""
+"keywords": "ninja-build",
+"url": "/ninja-build/",
+"summary": "<p>A binary distribution of Ninja Build.</p>"
 }
 ,
 
 
 
 {
-"title": "The xPack Package Manager",
+"title": "The xPack OpenOCD",
 "tags": "",
-"keywords": "xPackpackagemanager",
-"url": "/xpm/",
-"summary": "<p>A tool to manage dependencies for generic multi-version source and binary packages, inspired by npm.</p>"
+"keywords": "openocd",
+"url": "/openocd/",
+"summary": "<p>A binary distribution of OpenOCD.</p>"
 }
 ,
 
 
 
 {
-"title": "The xPack Basic Project Builder",
+"title": "The xPack Meson Build",
 "tags": "",
-"keywords": "",
-"url": "/xpbuild/",
-"summary": "<p>A tool to build day to day projects without having to manually write make files, with an emphasis on C/C++ and embedded applications, inspired by Eclipse CDT managed builder (work in progress).</p>"
-}
-,
-
-
-
-
-
-{
-"title": "The xPack Build Runner",
-"tags": "",
-"keywords": "make",
-"url": "/xpninja/",
-"summary": "<p>A light and fast tool to build generic projects, inspired by Ninja Build but with the configuration files in JSON (in design phase).</p>"
+"keywords": "meson-build",
+"url": "/meson-build/",
+"summary": "<p>A binary distribution of Meson Build.</p>"
 }
 ,
 
 
 
 {
-"title": "The xPack Build Configurator",
+"title": "The xPack GNU RISC-V Embedded GCC",
 "tags": "",
-"keywords": "make",
-"url": "/xpcdl/",
-"summary": "<p>A tool to manage project configurations, inspired by eCos CDL, but with the configuration files in JSON (in design phase).</p>"
-}
-,
-
-
-
-{
-"title": "The xPack Build Generator",
-"tags": "",
-"keywords": "make",
-"url": "/xpmake/",
-"summary": "<p>An advanced tool to build complex projects, inspired by CMake, but with the configuration files in JSON and actions in JavaScript (in design phase).</p>"
-}
-,
-
-
-
-
-
-{
-"title": "Maintainer info",
-"tags": "",
-"keywords": "",
-"url": "/maintain/",
-"summary": "<p>Resources for the xPack projects maintainers.</p>"
-}
-,
-
-
-
-
-
-{
-"title": "The xPack Build Box",
-"tags": "",
-"keywords": "",
-"url": "/xbb/",
-"summary": "<p>An elaborated environment for building binary xPacks.</p>"
+"keywords": "riscv-none-embed-gccriscvgccembedded",
+"url": "/riscv-none-embed-gcc/",
+"summary": "<p>A binary distribution of GNU RISC-V Embedded GCC.</p>"
 }
 ,
 
@@ -404,57 +352,26 @@
 
 
 {
-"title": "The xPack CMake",
+"title": "xPack Developer info",
 "tags": "",
-"keywords": "cmake",
-"url": "/cmake/",
-"summary": "<p>A binary distribution of CMake.</p>"
+"keywords": "",
+"url": "/develop/",
+"summary": "<p>Resources for xPack developers.</p>"
 }
 ,
 
 
 
 {
-"title": "The xPack Ninja Build",
+"title": "Maintainer info",
 "tags": "",
-"keywords": "ninja-build",
-"url": "/ninja-build/",
-"summary": "<p>A binary distribution of Ninja Build.</p>"
+"keywords": "",
+"url": "/maintain/",
+"summary": "<p>Resources for the xPack projects maintainers.</p>"
 }
 ,
 
 
-
-{
-"title": "The xPack GNU RISC-V Embedded GCC",
-"tags": "",
-"keywords": "riscv-none-embed-gccriscvgccembedded",
-"url": "/riscv-none-embed-gcc/",
-"summary": "<p>A binary distribution of GNU RISC-V Embedded GCC.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack OpenOCD",
-"tags": "",
-"keywords": "openocd",
-"url": "/openocd/",
-"summary": "<p>A binary distribution of OpenOCD.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack Meson Build",
-"tags": "",
-"keywords": "meson-build",
-"url": "/meson-build/",
-"summary": "<p>A binary distribution of Meson Build.</p>"
-}
-,
 
 
 
@@ -470,13 +387,96 @@
 
 
 {
-"title": "xPack Developer info",
+"title": "The xPack Build Box",
 "tags": "",
 "keywords": "",
-"url": "/develop/",
-"summary": "<p>Resources for xPack developers.</p>"
+"url": "/xbb/",
+"summary": "<p>An elaborated environment for building binary xPacks.</p>"
 }
 ,
+
+
+
+{
+"title": "The xPack Build Generator",
+"tags": "",
+"keywords": "make",
+"url": "/xpmake/",
+"summary": "<p>An advanced tool to build complex projects, inspired by CMake, but with the configuration files in JSON and actions in JavaScript (in design phase).</p>"
+}
+,
+
+
+
+
+
+{
+"title": "The xPack Build Runner",
+"tags": "",
+"keywords": "make",
+"url": "/xpninja/",
+"summary": "<p>A light and fast tool to build generic projects, inspired by Ninja Build but with the configuration files in JSON (in design phase).</p>"
+}
+,
+
+
+
+{
+"title": "xpm files",
+"tags": "",
+"keywords": "",
+"url": "/xpm/files/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "xpm - common options",
+"tags": "",
+"keywords": "",
+"url": "/xpm/cli/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack Package Manager",
+"tags": "",
+"keywords": "xPackpackagemanager",
+"url": "/xpm/",
+"summary": "<p>A tool to manage dependencies for generic multi-version source and binary packages, inspired by npm.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Basic Project Builder",
+"tags": "",
+"keywords": "",
+"url": "/xpbuild/",
+"summary": "<p>A tool to build day to day projects without having to manually write make files, with an emphasis on C/C++ and embedded applications, inspired by Eclipse CDT managed builder (work in progress).</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Build Configurator",
+"tags": "",
+"keywords": "make",
+"url": "/xpcdl/",
+"summary": "<p>A tool to manage project configurations, inspired by eCos CDL, but with the configuration files in JSON (in design phase).</p>"
+}
+,
+
+
+
+
 
 
 
@@ -525,33 +525,55 @@
 
 
 {
-"title": "xpm install",
+"title": "How to install the xPack CMake binaries",
 "tags": "",
 "keywords": "",
-"url": "/xpm/cli/install/",
-"summary": ""
+"url": "/cmake/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
 
 
 
 {
-"title": "How to install xpm",
+"title": "How to install the xPack Ninja Build binaries",
 "tags": "",
-"keywords": "xpmnpmxpackinstall",
-"url": "/xpm/install/",
-"summary": ""
+"keywords": "",
+"url": "/ninja-build/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
 
 
 
 {
-"title": "How to install xpbuild",
+"title": "How to install the xPack OpenOCD binaries",
 "tags": "",
-"keywords": "xpbuildxpackinstall",
-"url": "/xpbuild/install/",
-"summary": ""
+"keywords": "",
+"url": "/openocd/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "How to install the xPack Meson Build binaries",
+"tags": "",
+"keywords": "",
+"url": "/meson-build/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "How to install the xPack GNU RISC-V Embedded GCC binaries",
+"tags": "",
+"keywords": "",
+"url": "/riscv-none-embed-gcc/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
 
@@ -591,55 +613,33 @@
 
 
 {
-"title": "How to install the xPack CMake binaries",
+"title": "xpm install",
 "tags": "",
 "keywords": "",
-"url": "/cmake/install/",
-"summary": "<p>The recommended method is via xpm.</p>"
+"url": "/xpm/cli/install/",
+"summary": ""
 }
 ,
 
 
 
 {
-"title": "How to install the xPack Ninja Build binaries",
+"title": "How to install xpm",
 "tags": "",
-"keywords": "",
-"url": "/ninja-build/install/",
-"summary": "<p>The recommended method is via xpm.</p>"
+"keywords": "xpmnpmxpackinstall",
+"url": "/xpm/install/",
+"summary": ""
 }
 ,
 
 
 
 {
-"title": "How to install the xPack GNU RISC-V Embedded GCC binaries",
+"title": "How to install xpbuild",
 "tags": "",
-"keywords": "",
-"url": "/riscv-none-embed-gcc/install/",
-"summary": "<p>The recommended method is via xpm.</p>"
-}
-,
-
-
-
-{
-"title": "How to install the xPack OpenOCD binaries",
-"tags": "",
-"keywords": "",
-"url": "/openocd/install/",
-"summary": "<p>The recommended method is via xpm.</p>"
-}
-,
-
-
-
-{
-"title": "How to install the xPack Meson Build binaries",
-"tags": "",
-"keywords": "",
-"url": "/meson-build/install/",
-"summary": "<p>The recommended method is via xpm.</p>"
+"keywords": "xpbuildxpackinstall",
+"url": "/xpbuild/install/",
+"summary": ""
 }
 ,
 
@@ -787,6 +787,15 @@
 
 
 
+{
+"title": "How to get support",
+"tags": "",
+"keywords": "",
+"url": "/support/",
+"summary": ""
+}
+,
+
 
 
 {
@@ -801,15 +810,6 @@
 
 
 
-
-{
-"title": "How to get support",
-"tags": "",
-"keywords": "",
-"url": "/support/",
-"summary": ""
-}
-,
 
 
 
@@ -841,8 +841,6 @@
 
 
 
-
-
 {
 "title": "GDB with Python support",
 "tags": "",
@@ -851,6 +849,8 @@
 "summary": "<p>Support for Python 2 and 3 is available in GDB.</p>"
 }
 ,
+
+
 
 
 
@@ -933,10 +933,10 @@
 
 
 {
-"title": "How to get help for xpm",
+"title": "How to get help for xPack CMake",
 "tags": "",
 "keywords": "",
-"url": "/xpm/support/",
+"url": "/cmake/support/",
 "summary": ""
 }
 ,
@@ -944,10 +944,43 @@
 
 
 {
-"title": "How to get help for xpbuild",
+"title": "How to get help for xPack Ninja Build",
 "tags": "",
 "keywords": "",
-"url": "/xpbuild/support/",
+"url": "/ninja-build/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack OpenOCD?",
+"tags": "",
+"keywords": "",
+"url": "/openocd/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack Meson Build",
+"tags": "",
+"keywords": "",
+"url": "/meson-build/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack GNU RISC-V Embedded GCC?",
+"tags": "",
+"keywords": "",
+"url": "/riscv-none-embed-gcc/support/",
 "summary": ""
 }
 ,
@@ -988,10 +1021,10 @@
 
 
 {
-"title": "How to get help for xPack CMake",
+"title": "How to get help for xpm",
 "tags": "",
 "keywords": "",
-"url": "/cmake/support/",
+"url": "/xpm/support/",
 "summary": ""
 }
 ,
@@ -999,43 +1032,10 @@
 
 
 {
-"title": "How to get help for xPack Ninja Build",
+"title": "How to get help for xpbuild",
 "tags": "",
 "keywords": "",
-"url": "/ninja-build/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack GNU RISC-V Embedded GCC?",
-"tags": "",
-"keywords": "",
-"url": "/riscv-none-embed-gcc/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack OpenOCD?",
-"tags": "",
-"keywords": "",
-"url": "/openocd/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack Meson Build",
-"tags": "",
-"keywords": "",
-"url": "/meson-build/support/",
+"url": "/xpbuild/support/",
 "summary": ""
 }
 ,
@@ -1174,6 +1174,16 @@
 
 
 
+
+
+{
+"title": "VS Code xPack extension v0.4.11 released",
+"tags": "releasesvscodevscode-xpackextension",
+"keywords": "",
+"url": "/blog/2021/05/05/vscode-xpack-v0-4-11-released/",
+"summary": "<p>Version <strong>0.4.11</strong> is a new development release of <strong>ilg-vscode.xpack</strong>; it does some cleanups.</p>"
+}
+,
 
 
 {
