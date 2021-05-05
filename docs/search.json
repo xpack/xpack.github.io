@@ -1145,6 +1145,17 @@
 "title": "",
 "tags": "",
 "keywords": "",
+"url": "/blog/2021/05/05/vscode-xpack-v0-4-11-released/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
 "url": "/xpm/files/folders/",
 "summary": ""
 }
@@ -1177,11 +1188,11 @@
 
 
 {
-"title": "VS Code xPack extension v0.4.11 released",
+"title": "VS Code xPack extension v0.4.12 released",
 "tags": "releasesvscodevscode-xpackextension",
 "keywords": "",
-"url": "/blog/2021/05/05/vscode-xpack-v0-4-11-released/",
-"summary": "<p>Version <strong>0.4.11</strong> is a new development release of <strong>ilg-vscode.xpack</strong>; it does some cleanups.</p>"
+"url": "/blog/2021/05/05/vscode-xpack-v0-4-12-released/",
+"summary": "<p>Version <strong>0.4.12</strong> is a new development release of <strong>ilg-vscode.xpack</strong>; it does some cleanups.</p>"
 }
 ,
 
