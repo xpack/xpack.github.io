@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="For consistency, use the Standard JS validation tools.">
+<meta name="description" content="For consistency, use the Standard JS/TS validation tools.">
 <meta name="keywords" content=" ">
-<title>JavaScript Style Guide | The xPack Project</title>
+<title>JavaScript Style Guide | The xPack Build Framework</title>
 <link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
 
 
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="JavaScript Style Guide" />
 <script type="application/ld+json">
-{"headline":"JavaScript Style Guide","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","datePublished":"2017-10-08T23:47:00+00:00","dateModified":"2021-05-05T16:50:16+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/js-style-guide/"},"url":"https://xpack.github.io/develop/js-style-guide/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"headline":"JavaScript Style Guide","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","datePublished":"2017-10-08T23:47:00+00:00","dateModified":"2021-05-11T16:10:45+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/js-style-guide/"},"url":"https://xpack.github.io/develop/js-style-guide/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -555,7 +555,7 @@
 <div class="post-content">
 
    
-    <div class="summary">For consistency, use the Standard JS validation tools.
+    <div class="summary">For consistency, use the Standard JS/TS validation tools.
 </div>
    
 
@@ -585,18 +585,29 @@ $('#toc').on('click', 'a', function() {
     
 
 
-   <h2 id="standard-js">Standard JS</h2>
+   <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Given the positive experience with
+TypeScript while writing the VS Code xPack extension, starting with 2021,
+existing JavaScript projects will be migrated to TypeScript.</div>
 
-<p>After many years dealing with style guides for various languages, the conclusion is that the style itself is less important than applying it consistently.</p>
+<h2 id="standard-tsjs">Standard TS/JS</h2>
 
-<p>So, for the xPack JavaScript source files to be consistent, the first requirement is to pass the <a href="https://standardjs.com">Standard JS</a> validation tools.</p>
+<p>After many years dealing with style guides for various languages,
+the conclusion is that the style itself is less important than applying
+it consistently.</p>
+
+<p>So, for the xPack JavaScript source files to be consistent, the first
+requirement is to pass the <a href="https://standardjs.com">Standard JS</a>
+validation tools, which also have a TypeScript variant
+(<a href="https://www.npmjs.com/package/ts-standard">ts-standard</a>)</p>
 
 <p>After this, the main recommendations are:</p>
 
 <ul>
   <li>use the <strong>ECMAScript 6</strong> specifications (ES 6),</li>
-  <li>if the module does something reasonably complex, the module public functions <strong>must be asynchronous</strong>,</li>
-  <li>asynchronous functions must <strong>use promises</strong> (and definitely <strong>avoid callbacks</strong>),</li>
+  <li>if the module does something reasonably complex, the module public
+functions <strong>must be asynchronous</strong>,</li>
+  <li>asynchronous functions must <strong>use promises</strong> (and definitely
+<strong>avoid callbacks</strong>),</li>
   <li><strong>reentrancy</strong> should be seriously considered (avoid module-global variables).</li>
 </ul>
 
@@ -604,9 +615,14 @@ $('#toc').on('click', 'a', function() {
 
 <h2 id="the-xpack-project-preferences">The xPack project preferences</h2>
 
-<h3 id="prefer-es6-solutions">Prefer ES6 solutions</h3>
+<h3 id="prefer-typescript-to-javascript">Prefer TypeScript to JavaScript</h3>
 
-<p>This is Rule no. 1, that overrides all other rules. Definitely <strong>avoid using old style code</strong>.</p>
+<p>This is Rule no. 1, that overrides all other rules.</p>
+
+<p>If JavaScript code must be
+still used in some places, prefer ES6 solution.</p>
+
+<p>Definitely <strong>avoid using old style code</strong>.</p>
 
 <h3 id="use-classes-as-much-as-possible">Use classes as much as possible</h3>
 
@@ -662,7 +678,7 @@ be updated to <code class="language-plaintext highlighter-rouge">require().func1
 <span class="p">};</span>
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">.</span><span class="nx">func2</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
 <span class="p">...</span>
-<span class="kd">const</span> <span class="nx">func</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">name</span><span class="dl">'</span><span class="p">).</span><span class="nx">func1</span>
+<span class="kd">const</span> <span class="p">{</span> <span class="nx">func1</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">name</span><span class="dl">'</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>The recommendation is to always return functions or preferably classes
@@ -911,24 +927,24 @@ useful during tests).</p>
 
 <h3 id="use-a-separate-location-for-private-variables">Use a separate location for private variables</h3>
 
-<p>To reduce clutter, group the private variables below a <code class="language-plaintext highlighter-rouge">private_</code> object.</p>
+<p>To reduce clutter, group the private variables below a <code class="language-plaintext highlighter-rouge">_private</code> object.</p>
 
 <p>No need to end the name of the variables with <code class="language-plaintext highlighter-rouge">_</code>.</p>
 
 <h3 id="use-a-separate-location-for-cached-variables">Use a separate location for cached variables</h3>
 
-<p>If the object uses local cached objects, group them below a <code class="language-plaintext highlighter-rouge">cache_</code> object.
+<p>If the object uses local cached objects, group them below a <code class="language-plaintext highlighter-rouge">_cache</code> object.
 Initialise it to an empty object in the constructor an in the <code class="language-plaintext highlighter-rouge">clear()</code> method.</p>
 
 <p>No need to end the name of the variables with <code class="language-plaintext highlighter-rouge">_</code>.</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Base</span> <span class="p">{</span>
   <span class="kd">constructor</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">cache_</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">_cache</span> <span class="o">=</span> <span class="p">{}</span>
   <span class="p">}</span>
 
   <span class="nx">clear</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">cache_</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">_cache</span> <span class="o">=</span> <span class="p">{}</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -1356,7 +1372,7 @@ is called. The <code class="language-plaintext highlighter-rouge">[[Construct]]<
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> May 5, 2021<br/> Site last generated: May 5, 2021 <br />
+<span>Page last updated:</span> May 11, 2021<br/> Site last generated: May 11, 2021 <br />
                 </div>
             </div>
 </footer>

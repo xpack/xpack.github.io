@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="A npm module with an extra xpack property.">
 <meta name="keywords" content=" ">
-<title>xPack 101 | The xPack Project</title>
+<title>xPack 101 | The xPack Build Framework</title>
 <link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
 
 
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack 101" />
 <script type="application/ld+json">
-{"headline":"xPack 101","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","datePublished":"2019-06-26T05:57:00+00:00","dateModified":"2021-05-05T16:50:16+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/intro/"},"url":"https://xpack.github.io/intro/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"headline":"xPack 101","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","datePublished":"2019-06-26T05:57:00+00:00","dateModified":"2021-05-11T16:10:45+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/intro/"},"url":"https://xpack.github.io/intro/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -595,7 +595,7 @@ why would we need yet another one?</p>
 exactly the same format as <strong>npm</strong>, and xPacks can be stored in the same
 repositories, public or private.</p>
 
-<p>And <strong>xpm</strong>, the dependencies manager, builds on top of <strong>npm</strong>, the very
+<p>And <strong>xpm</strong>, the project manager, builds on top of <strong>npm</strong>, the very
 popular JavaScript package manager, extending it with new language
 neutral features,
 so things are not that scary as they seemed initially.</p>
@@ -629,7 +629,7 @@ and making the auto-configure scripts more and more complex with every day,
 why not allow the application to ask for the exact versions that are known
 to be compatible, and let an automated tool handle the dependencies?</p>
 
-<p>The <strong>xPacks</strong> dependency manager can do just this, bring in the project
+<p>The <strong>xPacks</strong> project manager can do just this, bring in the project
 exactly the versions needed, thus making the auto-configure step superfluos.</p>
 
 <h2 id="but-what-are-xpacks">But what are xPacks?</h2>
@@ -911,7 +911,7 @@ will be created (or <code class="language-plaintext highlighter-rouge">.cmd</cod
 <span class="gp">    ├── xpack-dev-tools-cmake -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@xpack-dev-tools/cmake/3.19.2-2.1
 <span class="gp">    └── xpack-dev-tools-ninja-build -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@xpack-dev-tools/ninja-build/1.10.2-2.1
 <span class="go">
-8 directories, 40 files 
+8 directories, 40 files
 </span></code></pre></div></div>
 
 <p>When later running actions like <code class="language-plaintext highlighter-rouge">xpm run build</code>, the <code class="language-plaintext highlighter-rouge">PATH</code> is automatically
@@ -945,7 +945,7 @@ Adding '@micro-os-plus/diag-trace' to 'dependencies'...
 <p>This results in another link in the <code class="language-plaintext highlighter-rouge">xpacks</code> folder
 (mind the linearised package name):</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree xpacks     
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree xpacks
 <span class="go">xpacks
 </span><span class="gp">├── micro-os-plus-diag-trace -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@micro-os-plus/diag-trace/1.0.7
 <span class="gp">├── xpack-dev-tools-arm-none-eabi-gcc -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@xpack-dev-tools/arm-none-eabi-gcc/10.2.1-1.1.2
@@ -953,7 +953,7 @@ Adding '@micro-os-plus/diag-trace' to 'dependencies'...
 <span class="gp">└── xpack-dev-tools-ninja-build -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@xpack-dev-tools/ninja-build/1.10.2-2.1
 <span class="go">
 4 directories, 0 files
-</span><span class="gp">$</span><span class="w"> </span>tree xpacks/micro-os-plus-diag-trace 
+</span><span class="gp">$</span><span class="w"> </span>tree xpacks/micro-os-plus-diag-trace
 <span class="go">xpacks/micro-os-plus-diag-trace
 ├── CHANGELOG.md
 ├── LICENSE
@@ -1141,7 +1141,7 @@ for an xPack project is as simple as this:</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> May 5, 2021<br/> Site last generated: May 5, 2021 <br />
+<span>Page last updated:</span> May 11, 2021<br/> Site last generated: May 11, 2021 <br />
                 </div>
             </div>
 </footer>

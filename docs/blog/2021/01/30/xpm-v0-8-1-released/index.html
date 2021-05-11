@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Version 0.8.1 is a new release of xpm; it allows to install xPacks from Git repositories and adds new commands (list, uninstall); it also changes the default...">
 <meta name="keywords" content="releasesxpmpackagemanager,  ">
-<title>xPack xpm v0.8.1 released | The xPack Project</title>
+<title>xPack xpm v0.8.1 released | The xPack Build Framework</title>
 <link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
 
 
@@ -19,8 +19,8 @@
 <meta property="og:title" content="xPack xpm v0.8.1 released" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="xpm stands for xPack package manager and is a Node.js CLI application to manage xPacks." />
-<meta property="og:description" content="xpm stands for xPack package manager and is a Node.js CLI application to manage xPacks." />
+<meta name="description" content="xpm stands for xPack project manager and is a Node.js CLI application to manage xPacks." />
+<meta property="og:description" content="xpm stands for xPack project manager and is a Node.js CLI application to manage xPacks." />
 <link rel="canonical" href="https://xpack.github.io/blog/2021/01/30/xpm-v0-8-1-released/" />
 <meta property="og:url" content="https://xpack.github.io/blog/2021/01/30/xpm-v0-8-1-released/" />
 <meta property="og:type" content="article" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack xpm v0.8.1 released" />
 <script type="application/ld+json">
-{"headline":"xPack xpm v0.8.1 released","description":"xpm stands for xPack package manager and is a Node.js CLI application to manage xPacks.","datePublished":"2021-01-30T19:49:00+00:00","dateModified":"2021-05-05T16:50:16+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/01/30/xpm-v0-8-1-released/"},"url":"https://xpack.github.io/blog/2021/01/30/xpm-v0-8-1-released/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"headline":"xPack xpm v0.8.1 released","description":"xpm stands for xPack project manager and is a Node.js CLI application to manage xPacks.","datePublished":"2021-01-30T19:49:00+00:00","dateModified":"2021-05-11T16:10:45+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/01/30/xpm-v0-8-1-released/"},"url":"https://xpack.github.io/blog/2021/01/30/xpm-v0-8-1-released/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -577,7 +577,7 @@
 </div>
         
 
-        <p><strong>xpm</strong> stands for <strong>x</strong>Pack <strong>p</strong>ackage <strong>m</strong>anager and is a 
+        <p><strong>xpm</strong> stands for <strong>x</strong>Pack <strong>p</strong>roject <strong>m</strong>anager and is a
 <a href="https://nodejs.org/en/">Node.js</a> CLI
 application to manage
 <a href="https://xpack.github.io/intro/#but-what-are-xpacks">xPacks</a>.</p>
@@ -616,7 +616,7 @@ is generally compatible with previous 0.7.x releases.</p>
 
 <ul>
   <li>[#66] - due to a partial implementation,
-installing packages that were not published in the npmjs.com repository, 
+installing packages that were not published in the npmjs.com repository,
 directly from Git, GitHub, GitLab, archive or local files, failed; fixed</li>
   <li>[#72] - installing standalone packages was done by directly copying
 the content locally; for consistency reasons,the behaviour was changed,
@@ -684,20 +684,20 @@ The xPack package manager command line tool
 <span class="go">  init, install, link, list, run-script, uninstall
 
 Common options:
-</span><span class="gp">  --loglevel &lt;level&gt;</span><span class="w">     </span>Set log level <span class="o">(</span>silent|warn|info|verbose|debug|trace<span class="o">)</span> 
-<span class="go">  -s|--silent            Disable all messages (--loglevel silent) 
-  -q|--quiet             Mostly quiet, warnings and errors (--loglevel warn) 
-  --informative          Informative (--loglevel info) 
-  -v|--verbose           Verbose (--loglevel verbose) 
-  -d|--debug             Debug messages (--loglevel debug) 
-  -dd|--trace            Trace messages (--loglevel trace, -d -d) 
-  --no-update-notifier   Skip check for a more recent version 
-</span><span class="gp">  -C &lt;folder&gt;</span><span class="w">            </span>Set current folder 
+</span><span class="gp">  --loglevel &lt;level&gt;</span><span class="w">     </span>Set log level <span class="o">(</span>silent|warn|info|verbose|debug|trace<span class="o">)</span>
+<span class="go">  -s|--silent            Disable all messages (--loglevel silent)
+  -q|--quiet             Mostly quiet, warnings and errors (--loglevel warn)
+  --informative          Informative (--loglevel info)
+  -v|--verbose           Verbose (--loglevel verbose)
+  -d|--debug             Debug messages (--loglevel debug)
+  -dd|--trace            Trace messages (--loglevel trace, -d -d)
+  --no-update-notifier   Skip check for a more recent version
+</span><span class="gp">  -C &lt;folder&gt;</span><span class="w">            </span>Set current folder
 <span class="go">
-xpm -h|--help            Quick help 
-</span><span class="gp">xpm &lt;command&gt;</span><span class="w"> </span><span class="nt">-h</span>|--help  Quick <span class="nb">help </span>on <span class="nb">command</span> 
-<span class="go">xpm --version            Show version 
-xpm -i|--interactive     Enter interactive mode 
+xpm -h|--help            Quick help
+</span><span class="gp">xpm &lt;command&gt;</span><span class="w"> </span><span class="nt">-h</span>|--help  Quick <span class="nb">help </span>on <span class="nb">command</span>
+<span class="go">xpm --version            Show version
+xpm -i|--interactive     Enter interactive mode
 
 npm xpm@0.8.1 '/Users/ilg/.nvm/versions/node/v12.14.0/lib/node_modules/xpm'
 </span><span class="gp">Home page: &lt;https://xpack.github.io/xpm/&gt;</span><span class="w">
@@ -781,7 +781,7 @@ progress</em> and should be used with caution.</div>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> May 5, 2021<br/> Site last generated: May 5, 2021 <br />
+<span>Page last updated:</span> May 11, 2021<br/> Site last generated: May 11, 2021 <br />
                 </div>
             </div>
 </footer>

@@ -444,7 +444,7 @@
 
 
 {
-"title": "The xPack Package Manager",
+"title": "The xPack Project Manager",
 "tags": "",
 "keywords": "xPackpackagemanager",
 "url": "/xpm/",
@@ -492,7 +492,7 @@
 
 
 {
-"title": "The xPack Project",
+"title": "The xPack Build Framework",
 "tags": "",
 "keywords": "packages, code sharing, reusing, libraries, applications, c/c++, embedded",
 "url": "/",
@@ -694,7 +694,7 @@
 "tags": "",
 "keywords": "",
 "url": "/develop/js-style-guide/",
-"summary": "<p>For consistency, use the Standard JS validation tools.</p>"
+"summary": "<p>For consistency, use the Standard JS/TS validation tools.</p>"
 }
 ,
 
