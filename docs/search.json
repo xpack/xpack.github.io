@@ -1202,7 +1202,7 @@
 "tags": "releasesxpmpackagemanager",
 "keywords": "",
 "url": "/blog/2021/05/12/xpm-v0-10-1-released/",
-"summary": "<p>Version <strong>0.10.1</strong> is a new release of <strong>xpm</strong>; it fixes some bugs and adds several enhancements.</p>"
+"summary": "<p>Version <strong>0.10.1</strong> is a new release of <strong>xpm</strong>; it adds an extensive set of variables and filters to the Liquid substitution engine and fixes a bug.</p>"
 }
 ,
 

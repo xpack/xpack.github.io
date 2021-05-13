@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Version 0.10.1 is a new release of xpm; it fixes some bugs and adds several enhancements.">
+<meta name="description" content="Version 0.10.1 is a new release of xpm; it adds an extensive set of variables and filters to the Liquid substitution engine and fixes a bug.">
 <meta name="keywords" content="releasesxpmpackagemanager,  ">
 <title>xPack xpm v0.10.1 released | The xPack Build Framework</title>
 <link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack xpm v0.10.1 released" />
 <script type="application/ld+json">
-{"headline":"xPack xpm v0.10.1 released","description":"xpm is a Node.js CLI application to manage xPacks dependencies.","datePublished":"2021-05-12T12:39:00+00:00","dateModified":"2021-05-12T18:54:53+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/05/12/xpm-v0-10-1-released/"},"url":"https://xpack.github.io/blog/2021/05/12/xpm-v0-10-1-released/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"headline":"xPack xpm v0.10.1 released","description":"xpm is a Node.js CLI application to manage xPacks dependencies.","datePublished":"2021-05-12T12:39:00+00:00","dateModified":"2021-05-13T10:12:18+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/05/12/xpm-v0-10-1-released/"},"url":"https://xpack.github.io/blog/2021/05/12/xpm-v0-10-1-released/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -573,7 +573,7 @@
     <div class="post-content" itemprop="articleBody">
 
         
-        <div class="summary">Version <strong>0.10.1</strong> is a new release of <strong>xpm</strong>; it fixes some bugs and adds several enhancements.
+        <div class="summary">Version <strong>0.10.1</strong> is a new release of <strong>xpm</strong>; it adds an extensive set of variables and filters to the Liquid substitution engine and fixes a bug.
 </div>
         
 
@@ -612,6 +612,9 @@ do to prevent these warnings.</div>
 <p>The 0.10.1 release
 is generally compatible with previous releases.</p>
 
+<p>The main change is the addition of an extensive set of variables and
+filters to the Liquid substitution engine.</p>
+
 <h3 id="bug-fixes">Bug fixes</h3>
 
 <ul>
@@ -639,7 +642,9 @@ is present, no install is performed</li>
 <ul>
   <li>[#101] - the <code class="language-plaintext highlighter-rouge">CliExitCodes</code> &amp; <code class="language-plaintext highlighter-rouge">CliError</code> were passed in the <code class="language-plaintext highlighter-rouge">context</code>,
 to be used by templates</li>
-  <li>[#99] - the Liquid code is now in a separate package, <code class="language-plaintext highlighter-rouge">@xpack/xpm-liquid</code></li>
+  <li>[#99] - the Liquid code is now in a separate package, <code class="language-plaintext highlighter-rouge">@xpack/xpm-liquid</code>;
+it adds an extensive set of variables and filters; for details see project
+<a href="https://github.com/xpack/xpm-liquid-ts#readme">README</a></li>
   <li>[#100] - the Liquid tag <code class="language-plaintext highlighter-rouge">endl</code> was removed</li>
 </ul>
 
@@ -761,7 +766,7 @@ progress</em> and should be used with caution.</div>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> May 12, 2021<br/> Site last generated: May 12, 2021 <br />
+<span>Page last updated:</span> May 13, 2021<br/> Site last generated: May 13, 2021 <br />
                 </div>
             </div>
 </footer>
