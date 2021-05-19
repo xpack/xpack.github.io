@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="FAQ" />
 <script type="application/ld+json">
-{"headline":"FAQ","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","datePublished":"2019-06-28T08:03:00+00:00","dateModified":"2021-05-19T16:48:23+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/faq/"},"url":"https://xpack.github.io/xpm/faq/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"headline":"FAQ","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","datePublished":"2019-06-28T08:03:00+00:00","dateModified":"2021-05-19T19:25:43+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/faq/"},"url":"https://xpack.github.io/xpm/faq/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -422,6 +422,26 @@
   <div class="panel panel-default">
       <div class="panel-heading">
           <h4 class="panel-title">
+              <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-60">zsh: command not found: xpm</a>
+          </h4>
+      </div>
+      <div id="collapse-60" class="panel-collapse collapse noCrossRef">
+          <div class="panel-body">
+              
+<p>The location where npm installs global modules got lost; most probably
+you recently switched to <code class="language-plaintext highlighter-rouge">zsh</code> and forgot to migrate the shell startup
+to <code class="language-plaintext highlighter-rouge">.zprofile</code>.</p>
+
+<p>Copy the <code class="language-plaintext highlighter-rouge">PATH</code> setting from your previous shell startup file to
+<code class="language-plaintext highlighter-rouge">.zprofile</code>.</p>
+
+          </div>
+      </div>
+  </div>
+
+  <div class="panel panel-default">
+      <div class="panel-heading">
+          <h4 class="panel-title">
               <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-50">Why xpm manages configurations, instead of limiting itself to manage
 dependencies/packages, as the name implies?</a>
           </h4>
@@ -457,8 +477,8 @@ does not understand the <code class="language-plaintext highlighter-rouge">async
 
 <p>Errors may look like:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ xpm -v
-/home/ilg/opt/npm/lib/node_modules/xpm/node_modules/@ilg/cli-start-options/lib/cli-application.js:150
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nt">-v</span>
+<span class="go">/home/ilg/opt/npm/lib/node_modules/xpm/node_modules/@ilg/cli-start-options/lib/cli-application.js:150
   static async start () {
                ^^^^^
 SyntaxError: Unexpected identifier
@@ -469,10 +489,10 @@ SyntaxError: Unexpected identifier
     at Function.Module._load (module.js:301:12)
     at Module.require (module.js:354:17)
     at require (internal/module.js:12:17)
-    at Object.&lt;anonymous&gt; (/home/ilg/opt/npm/lib/node_modules/xpm/node_modules/@ilg/cli-start-options/index.js:55:24)
-    at Module._compile (module.js:410:26)
+</span><span class="gp">    at Object.&lt;anonymous&gt;</span><span class="w"> </span><span class="o">(</span>/home/ilg/opt/npm/lib/node_modules/xpm/node_modules/@ilg/cli-start-options/index.js:55:24<span class="o">)</span>
+<span class="go">    at Module._compile (module.js:410:26)
     at Object.Module._extensions..js (module.js:417:10)
-</code></pre></div></div>
+</span></code></pre></div></div>
 
 <p>The solution is to install the most recent LTS version of Node, as
 described in the <a href="/install/">prerequisites</a> page.</p>
@@ -499,12 +519,12 @@ thus preventing the packages to be installed.</p>
 
 <p>Errors may look like:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Downloading https://github.com/gnu-mcu-eclipse/qemu/releases/download/v2.8.0-4-20190211/gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-win64.zip...
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">Downloading https://github.com/gnu-mcu-eclipse/qemu/releases/download/v2.8.0-4-20190211/gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-win64.zip...
 { Error: sha256-p3CgzXJt4zi5g0kxQXlOpss3Xu5Yy+Zv8HXWXkUdg6g= integrity checksum failed when using sha256: wanted sha256-p3CgzXJt4zi5g0kxQXlOpss3Xu5Yy+Zv8HXWXkUdg6g= but got sha512-k1s9UW6Zb20llIuopUwbf3D38OP1F+Nkgf3wGWwsXPwoQfhuiR89+VF3Rrf7YF20fN3tG4/3jZSC3apiHbQ6NA== sha256-ABnfxLMtY8E5KqJkrtIlPB4ML7CSFvjizCabv7i7SbU=. (9 bytes)
-...
-Extracting 'gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-win64.zip'...
+</span><span class="c">...
+</span><span class="go">Extracting 'gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-win64.zip'...
 error: Cannot read property 'path' of null
-</code></pre></div></div>
+</span></code></pre></div></div>
 
 <p>The solution is to configure the antivirus program to be less aggressive,
 at least for files in the
@@ -530,9 +550,10 @@ this folder is hidden for regular browsing in Finder.</p>
 
 <p>To make it back visible, use:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>/usr/bin/chflags nohidden ~/Library
-<span class="gp">$</span><span class="w"> </span>xattr <span class="nt">-d</span> com.apple.FinderInfo ~/Library
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/bin/chflags nohidden ~/Library
+xattr <span class="nt">-d</span> com.apple.FinderInfo ~/Library
 </code></pre></div></div>
+
 
           </div>
       </div>
@@ -552,8 +573,8 @@ all folders starting with a dot are hidden for regular browsing in Finder.</p>
 
 <p>Fortunately there is a workaround for this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmd+shift+'.'
-</code></pre></div></div>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">cmd+shift+'.'
+</span></code></pre></div></div>
 
 <p>This keyboard shortcut works like a toggle, using it once makes files
 starting with dot visible,

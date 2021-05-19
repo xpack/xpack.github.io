@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install xpm" />
 <script type="application/ld+json">
-{"headline":"How to install xpm","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","datePublished":"2017-10-09T11:14:00+00:00","dateModified":"2021-05-19T16:48:23+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/install/"},"url":"https://xpack.github.io/xpm/install/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"headline":"How to install xpm","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","datePublished":"2017-10-09T11:14:00+00:00","dateModified":"2021-05-19T19:25:43+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/install/"},"url":"https://xpack.github.io/xpm/install/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -425,7 +425,7 @@ npm package <a href="https://www.npmjs.com/package/xpm">xpm</a> from the
 <h2 id="prerequisites">Prerequisites</h2>
 
 <ul>
-  <li>a recent <a href="https://nodejs.org">Node.js</a> (&gt;=<strong>10.x</strong>), since the ECMAScript 6 
+  <li>a recent <a href="https://nodejs.org">Node.js</a> (&gt;=<strong>10.x</strong>), since the ECMAScript 6
 class syntax is used and some dependencies also require new features</li>
   <li>a recent <a href="https://docs.npmjs.com/cli/npm">npm</a>.</li>
 </ul>
@@ -448,16 +448,16 @@ user home folder, in <code class="language-plaintext highlighter-rouge">%APPDATA
 (like <code class="language-plaintext highlighter-rouge">C:\Users\ilg\AppData\Roaming\npm</code>), and managing packages
 does not require administrative rights.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;npm install --global xpm@latest
-C:\Users\ilg\AppData\Roaming\npm\xpm -&gt; C:\Users\ilg\AppData\Roaming\npm\node_modules\xpm\bin\xpm.js
-+ xpm@0.5.0
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">C:\&gt;</span>npm <span class="nb">install</span> <span class="nt">--global</span> xpm@latest
+<span class="gp">C:\Users\ilg\AppData\Roaming\npm\xpm -&gt;</span><span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\i</span>lg<span class="se">\A</span>ppData<span class="se">\R</span>oaming<span class="se">\n</span>pm<span class="se">\n</span>ode_modules<span class="se">\x</span>pm<span class="se">\b</span><span class="k">in</span><span class="se">\x</span>pm.js
+<span class="go">+ xpm@0.5.0
 added 260 packages from 147 contributors in 36.304s
-</code></pre></div></div>
+</span></code></pre></div></div>
 
 <p>The result is a pair of files in the <code class="language-plaintext highlighter-rouge">%APPDATA%\npm</code> folder:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;dir "%APPDATA%"\npm\xpm*
- Volume in drive C has no label.
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">C:\&gt;</span><span class="nb">dir</span> <span class="s2">"%APPDATA%"</span><span class="se">\n</span>pm<span class="se">\x</span>pm<span class="k">*</span>
+<span class="go"> Volume in drive C has no label.
  Volume Serial Number is 28CE-1C06
 
  Directory of C:\Users\ilg\AppData\Roaming\npm
@@ -466,45 +466,45 @@ added 260 packages from 147 contributors in 36.304s
 18/04/2018  10:40               196 xpm.cmd
                2 File(s)            515 bytes
                0 Dir(s)  51,207,155,712 bytes free
-</code></pre></div></div>
+</span></code></pre></div></div>
 
 <p>If you followed the instructions in the
 <a href="/install/">prerequisites</a> page, you should
 already have this path configured and the program should start normally:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;xpm --version
-0.5.0
-</code></pre></div></div>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">C:\&gt;</span>xpm <span class="nt">--version</span>
+<span class="go">0.5.0
+</span></code></pre></div></div>
 
 <h3 id="power-shell-execution-policy">Power Shell execution policy</h3>
 
 <p>By default, Power Shell restricts scripts, and <strong>xpm</strong> is not allowed to run:</p>
 
-<div class="language-ps highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">PS</span> <span class="nf">C:\Users\ilg</span><span class="p">&gt;</span> <span class="nf">xpm</span> <span class="nf">--version</span>
-<span class="nf">xpm</span> <span class="nf">:</span> <span class="nf">File</span> <span class="nf">C:\Users\ilg\AppData\Roaming\npm\xpm.ps1</span> <span class="nf">cannot</span> <span class="nf">be</span> <span class="nf">loaded</span> <span class="nf">because</span> <span class="nf">running</span> <span class="nf">scripts</span> <span class="nf">is</span> <span class="nf">disabled</span> <span class="nf">on</span> <span class="nf">this</span>
-<span class="nf">system.</span> <span class="nf">For</span> <span class="nf">more</span> <span class="nf">information,</span> <span class="nf">see</span> <span class="nf">about_Execution_Policies</span> <span class="nf">at</span> <span class="nf">https:</span><span class="nv">/go.microsoft.com/fwlink/?LinkID=135170.</span>
-<span class="nf">At</span> <span class="nf">line:1</span> <span class="nf">char:1</span>
-<span class="nf">+</span> <span class="nf">xpm</span> <span class="nf">--version</span>
-<span class="nf">+</span> <span class="nf">~~~</span>
-    <span class="nf">+</span> <span class="nf">CategoryInfo</span>          <span class="nf">:</span> <span class="nf">SecurityError:</span> <span class="s">(:)</span> <span class="p">[]</span><span class="nf">,</span> <span class="nf">PSSecurityException</span>
-    <span class="nf">+</span> <span class="nf">FullyQualifiedErrorId</span> <span class="nf">:</span> <span class="nf">UnauthorizedAccess</span>
-<span class="nf">PS</span> <span class="nf">C:\Users\ilg</span><span class="p">&gt;</span>
-</code></pre></div></div>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">PS C:\Users\ilg&gt;</span><span class="w"> </span>xpm <span class="nt">--version</span>
+<span class="go">xpm : File C:\Users\ilg\AppData\Roaming\npm\xpm.ps1 cannot be loaded because running scripts is disabled on this
+system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ xpm --version
++ ~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+</span><span class="gp">PS C:\Users\ilg&gt;</span><span class="w">
+</span></code></pre></div></div>
 
 <p>In order to run <strong>xpm</strong> it is
 necessary to change the execution policy:</p>
 
-<div class="language-ps highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">PS</span> <span class="nf">C:\Users\ilg</span><span class="p">&gt;</span> <span class="nf">Set-ExecutionPolicy</span> <span class="nf">-ExecutionPolicy</span> <span class="nf">Unrestricted</span> <span class="nf">-Scope</span> <span class="nf">CurrentUser</span>
-
-<span class="nf">Execution</span> <span class="nf">Policy</span> <span class="nf">Change</span>
-<span class="nf">The</span> <span class="nf">execution</span> <span class="nf">policy</span> <span class="nf">helps</span> <span class="nf">protect</span> <span class="nf">you</span> <span class="nf">from</span> <span class="nf">scripts</span> <span class="nf">that</span> <span class="nf">you</span> <span class="nf">do</span> <span class="kr">not</span> <span class="nf">trust.</span> <span class="nf">Changing</span> <span class="nf">the</span> <span class="nf">execution</span> <span class="nf">policy</span> <span class="nf">might</span> <span class="nf">expose</span>
-<span class="nf">you</span> <span class="nf">to</span> <span class="nf">the</span> <span class="nf">security</span> <span class="nf">risks</span> <span class="nf">described</span> <span class="nf">in</span> <span class="nf">the</span> <span class="nf">about_Execution_Policies</span> <span class="nf">help</span> <span class="nf">topic</span> <span class="nf">at</span>
-<span class="nf">https:</span><span class="nv">/go.microsoft.com/fwlink/?LinkID=135170.</span> <span class="nf">Do</span> <span class="nf">you</span> <span class="nf">want</span> <span class="nf">to</span> <span class="nf">change</span> <span class="nf">the</span> <span class="nf">execution</span> <span class="nf">policy?</span>
-<span class="p">[</span><span class="nf">Y</span><span class="p">]</span> <span class="nf">Yes</span>  <span class="p">[</span><span class="nf">A</span><span class="p">]</span> <span class="nf">Yes</span> <span class="nf">to</span> <span class="nf">All</span>  <span class="p">[</span><span class="nf">N</span><span class="p">]</span> <span class="nf">No</span>  <span class="p">[</span><span class="nf">L</span><span class="p">]</span> <span class="nf">No</span> <span class="nf">to</span> <span class="nf">All</span>  <span class="p">[</span><span class="nf">S</span><span class="p">]</span> <span class="nf">Suspend</span>  <span class="p">[</span><span class="nf">?</span><span class="p">]</span> <span class="nf">Help</span> <span class="s">(default is "N")</span><span class="nf">:</span> <span class="nf">A</span>
-<span class="nf">PS</span> <span class="nf">C:\Users\ilg</span><span class="p">&gt;</span> <span class="nf">xpm</span> <span class="nf">--version</span>
-<span class="nf">0.8.1</span>
-<span class="nf">PS</span> <span class="nf">C:\Users\ilg</span><span class="p">&gt;</span>
-</code></pre></div></div>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">PS C:\Users\ilg&gt;</span><span class="w"> </span>Set-ExecutionPolicy <span class="nt">-ExecutionPolicy</span> Unrestricted <span class="nt">-Scope</span> CurrentUser
+<span class="go">
+Execution Policy Change
+The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose
+you to the security risks described in the about_Execution_Policies help topic at
+https:/go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): A
+</span><span class="gp">PS C:\Users\ilg&gt;</span><span class="w"> </span>xpm <span class="nt">--version</span>
+<span class="go">0.8.1
+</span><span class="gp">PS C:\Users\ilg&gt;</span><span class="w">
+</span></code></pre></div></div>
 
 <h3 id="aggressive-antivirus-programs--xpm">Aggressive antivirus programs &amp; xpm</h3>
 
@@ -515,12 +515,12 @@ thus preventing the packages to be installed.</p>
 
 <p>Errors may look like:</p>
 
-<pre><code class="language-cmd">Downloading https://github.com/gnu-mcu-eclipse/qemu/releases/download/v2.8.0-4-20190211/gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-win64.zip...
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">Downloading https://github.com/gnu-mcu-eclipse/qemu/releases/download/v2.8.0-4-20190211/gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-win64.zip...
 { Error: sha256-p3CgzXJt4zi5g0kxQXlOpss3Xu5Yy+Zv8HXWXkUdg6g= integrity checksum failed when using sha256: wanted sha256-p3CgzXJt4zi5g0kxQXlOpss3Xu5Yy+Zv8HXWXkUdg6g= but got sha512-k1s9UW6Zb20llIuopUwbf3D38OP1F+Nkgf3wGWwsXPwoQfhuiR89+VF3Rrf7YF20fN3tG4/3jZSC3apiHbQ6NA== sha256-ABnfxLMtY8E5KqJkrtIlPB4ML7CSFvjizCabv7i7SbU=. (9 bytes)
-...
-Extracting 'gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-win64.zip'...
+</span><span class="c">...
+</span><span class="go">Extracting 'gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-win64.zip'...
 error: Cannot read property 'path' of null
-</code></pre>
+</span></code></pre></div></div>
 
 <p>The solution is to configure the antivirus program to be less aggressive,
 at least for files in the
@@ -540,7 +540,7 @@ already have configured npm to use a location in the home folder.</p>
 
 <p>With the environment properly set, the command to install xpm is:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>npm <span class="nb">install</span> <span class="nt">--global</span> xpm@latest
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">--global</span> xpm@latest
 </code></pre></div></div>
 
 <p>To test if xpm starts:</p>
@@ -548,7 +548,7 @@ already have configured npm to use a location in the home folder.</p>
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>which xpm
 <span class="go">/Users/ilg/Library/npm/bin/xpm
 </span><span class="gp">$</span><span class="w"> </span>xpm <span class="nt">--version</span>
-<span class="go">0.5.0
+<span class="go">0.10.2
 </span></code></pre></div></div>
 
 
@@ -566,7 +566,7 @@ already have configured npm to use a location in the home folder.</p>
 
 <p>With the environment properly set, the command to install xpm is:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>npm <span class="nb">install</span> <span class="nt">--global</span> xpm@latest
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">--global</span> xpm@latest
 </code></pre></div></div>
 
 <p>To test if xpm starts:</p>
@@ -574,7 +574,7 @@ already have configured npm to use a location in the home folder.</p>
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>which xpm
 <span class="go">/home/ilg/opt/npm/bin/xpm
 </span><span class="gp">$</span><span class="w"> </span>xpm <span class="nt">--version</span>
-<span class="go">0.5.0
+<span class="go">0.10.2
 </span></code></pre></div></div>
 
 <h3 id="using-an-out-of-date-nodejs">Using an out of date Node.js</h3>
@@ -583,8 +583,8 @@ already have configured npm to use a location in the home folder.</p>
 insisting on using the one provided by the distribution usually results in
 errors like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ xpm -v
-/home/ilg/opt/npm/lib/node_modules/xpm/node_modules/@ilg/cli-start-options/lib/cli-application.js:150
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nt">-v</span>
+<span class="go">/home/ilg/opt/npm/lib/node_modules/xpm/node_modules/@ilg/cli-start-options/lib/cli-application.js:150
   static async start () {
                ^^^^^
 SyntaxError: Unexpected identifier
@@ -595,10 +595,10 @@ SyntaxError: Unexpected identifier
     at Function.Module._load (module.js:301:12)
     at Module.require (module.js:354:17)
     at require (internal/module.js:12:17)
-    at Object.&lt;anonymous&gt; (/home/ilg/opt/npm/lib/node_modules/xpm/node_modules/@ilg/cli-start-options/index.js:55:24)
-    at Module._compile (module.js:410:26)
+</span><span class="gp">    at Object.&lt;anonymous&gt;</span><span class="w"> </span><span class="o">(</span>/home/ilg/opt/npm/lib/node_modules/xpm/node_modules/@ilg/cli-start-options/index.js:55:24<span class="o">)</span>
+<span class="go">    at Module._compile (module.js:410:26)
     at Object.Module._extensions..js (module.js:417:10)
-</code></pre></div></div>
+</span></code></pre></div></div>
 
 <p>This problem is caused by the old Node.js, unable to understand the
 <code class="language-plaintext highlighter-rouge">async</code> keyword.</p>
@@ -615,7 +615,7 @@ SyntaxError: Unexpected identifier
 
 <p>To remove xpm, the command is:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>npm uninstall <span class="nt">--global</span> xpm
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm uninstall <span class="nt">--global</span> xpm
 </code></pre></div></div>
 
 <h2 id="miscellaneous">Miscellaneous</h2>
@@ -629,7 +629,7 @@ folder is <a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions
 benefit from it by using the <code class="language-plaintext highlighter-rouge">npx</code> comand, as a trampoline to start xpm:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>npx xpm <span class="nt">--version</span>
-<span class="go">0.4.3
+<span class="go">0.10.2
 </span></code></pre></div></div>
 
 <p>However, for regular usage, this method is not efficient, since
@@ -664,14 +664,14 @@ is hidden for regular browsing in Finder.</p>
 
 <p>To make it back visible, use:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>/usr/bin/chflags nohidden ~/Library
-<span class="gp">$</span><span class="w"> </span>xattr <span class="nt">-d</span> com.apple.FinderInfo ~/Library
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/bin/chflags nohidden ~/Library
+xattr <span class="nt">-d</span> com.apple.FinderInfo ~/Library
 </code></pre></div></div>
 
 <p>A more general solution is to make all hidden files:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>defaults write com.apple.Finder AppleShowAllFiles <span class="nb">true</span>
-<span class="gp">$</span><span class="w"> </span>killall Finder
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>defaults write com.apple.Finder AppleShowAllFiles <span class="nb">true
+</span>killall Finder
 </code></pre></div></div>
 
 <p>Another anoying behaviour of the file browser is to hide names starting
@@ -680,24 +680,30 @@ extracted in a folder named <code class="language-plaintext highlighter-rouge">.
 
 <p>Fortunately there is a workaround for this too:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmd+shift+'.'
-</code></pre></div></div>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">cmd+shift+'.'
+</span></code></pre></div></div>
 
 <p>This keyboard shortcut works like a toggle, using it once makes files
 starting with dot visible,
 using it again reverts to hiding them.</p>
 
+<h2 id="zsh-command-not-found-xpm"><code class="language-plaintext highlighter-rouge">zsh: command not found: xpm</code></h2>
+
+<p>If you recently switched to <code class="language-plaintext highlighter-rouge">zsh</code>, or updated macOS to 11.x, which does
+this automatically, you need to copy the <code class="language-plaintext highlighter-rouge">PATH</code> setting from your previous shell startup file to <code class="language-plaintext highlighter-rouge">.zprofile</code>, otherwise the location
+where npm installs global modules is not in the path.</p>
+
 <h2 id="user-info">User info</h2>
 
 <p>To get an initial glimpse on the program, ask for help:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nt">--help</span>
-<span class="go">
-The xPack package manager command line tool
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">% xpm --help
+
+The xPack project manager command line tool
 </span><span class="gp">Usage: xpm &lt;command&gt;</span><span class="w"> </span><span class="o">[</span>&lt;subcommand&gt;...] <span class="o">[</span>&lt;options&gt; ...] <span class="o">[</span>&lt;args&gt;...]
 <span class="go">
 </span><span class="gp">where &lt;command&gt;</span><span class="w"> </span>is one of:
-<span class="go">  build, init, install, run-script
+<span class="go">  init, install, link, list, run, uninstall
 
 Common options:
 </span><span class="gp">  --loglevel &lt;level&gt;</span><span class="w">     </span>Set log level <span class="o">(</span>silent|warn|info|verbose|debug|trace<span class="o">)</span>
@@ -707,6 +713,7 @@ Common options:
   -v|--verbose           Verbose (--loglevel verbose)
   -d|--debug             Debug messages (--loglevel debug)
   -dd|--trace            Trace messages (--loglevel trace, -d -d)
+  --no-update-notifier   Skip check for a more recent version
 </span><span class="gp">  -C &lt;folder&gt;</span><span class="w">            </span>Set current folder
 <span class="go">
 xpm -h|--help            Quick help
@@ -714,10 +721,10 @@ xpm -h|--help            Quick help
 <span class="go">xpm --version            Show version
 xpm -i|--interactive     Enter interactive mode
 
-npm xpm@0.2.10 '/Users/ilg/My Files/MacBookPro Projects/xPack/npm-modules/xpm-js.git'
-</span><span class="gp">Home page: &lt;https://github.com/xpack/xpm-js&gt;</span><span class="w">
-</span><span class="gp">Bug reports: &lt;https://github.com/xpack/xpm-js/issues&gt;</span><span class="w">
-</span><span class="gp">$</span><span class="w">
+npm xpm@0.10.2 '/Users/ilg/.nvm/versions/node/v14.16.0/lib/node_modules/xpm'
+</span><span class="gp">Home page: &lt;https://xpack.github.io/xpm/&gt;</span><span class="w">
+</span><span class="gp">Bug reports: &lt;https://github.com/xpack/xpm-js/issues/&gt;</span><span class="w">
+</span><span class="go">%
 </span></code></pre></div></div>
 
 

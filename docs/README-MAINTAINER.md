@@ -16,18 +16,18 @@ tools are present.
 If you are like me and prefer really separated things, install a separate
 Homebrew instance, only for the jekyll builds.
 
-```console
-$ mkdir -p "${HOME}/opt"
-$ git clone https://github.com/ilg-ul/opt-install-scripts \
+```sh
+mkdir -p "${HOME}/opt"
+git clone https://github.com/ilg-ul/opt-install-scripts \
     "${HOME}/opt/install-scripts.git"
 
-$ caffeinate bash
-$ exec bash "${HOME}/opt/install-scripts.git/install-homebrew-jekyll.sh"
+caffeinate bash
+exec bash "${HOME}/opt/install-scripts.git/install-homebrew-jekyll.sh"
 ```
 
 Add a new alias to your `.profile`:
 
-```console
+```sh
 alias ajkl='export PATH=/Users/ilg/opt/homebrew/jekyll/bin:${PATH}'
 ```
 
@@ -49,8 +49,8 @@ Bundler version 2.0.1
 
 To manage the web site, a local copy of this repository is required.
 
-```console
-$ git clone https://github.com/xpack/web-jekyll.git web-jekyll.git
+```sh
+git clone https://github.com/xpack/web-jekyll.git web-jekyll.git
 ```
 
 ## Install jekyll & gems
@@ -72,19 +72,20 @@ The current development cycle is edit-save-build-view.
 
 The build can be performed automatically by Jekyll when started in server mode.
 
-```console
-$ cd web-jekyll.git
-$ bundle exec jekyll serve --trace --safe --baseurl "/web-preview"
+```sh
+cd web-jekyll.git
+bundle exec jekyll serve --trace --safe --baseurl "/web-preview"
 ```
 
 To view the result, point the browser to `http://localhost:4002/web-preview/`.
 
 To test links:
 
-```console
-$ bundle exec jekyll build
-$ bundle exec htmlproofer --allow-hash-href --url-swap \^/web-preview/\:/ ./_site
-$ bundle exec htmlproofer --allow-hash-href --url-swap \^/web-preview/\:/ --url-ignore /github.com/xpack/xpack.github.io/blob/master/ ./_site
+```sh
+bundle exec jekyll build
+bundle exec htmlproofer --allow-hash-href --url-swap \^/web-preview/\:/ ./_site
+bundle exec htmlproofer --allow-hash-href --url-swap \^/web-preview/\:/ \
+  --url-ignore /github.com/xpack/xpack.github.io/blob/master/ ./_site
 ```
 
 ## Publish
