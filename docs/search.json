@@ -1188,6 +1188,16 @@
 
 
 {
+"title": "xPack xpm v0.10.2 released",
+"tags": "releasesxpmpackagemanager",
+"keywords": "",
+"url": "/blog/2021/05/19/xpm-v0-10-2-released/",
+"summary": "<p>Version <strong>0.10.2</strong> is a maintenance release; it bundles dependencies to avoid install warnings.</p>"
+}
+,
+
+
+{
 "title": "xPack CMake v3.19.8-1 released",
 "tags": "releasescmakebuild",
 "keywords": "",

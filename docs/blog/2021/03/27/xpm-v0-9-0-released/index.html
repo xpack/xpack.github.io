@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack xpm v0.9.0 released" />
 <script type="application/ld+json">
-{"headline":"xPack xpm v0.9.0 released","description":"xpm is a Node.js CLI application to manage xPacks dependencies.","datePublished":"2021-03-27T11:25:00+00:00","dateModified":"2021-05-19T12:41:16+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/03/27/xpm-v0-9-0-released/"},"url":"https://xpack.github.io/blog/2021/03/27/xpm-v0-9-0-released/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"headline":"xPack xpm v0.9.0 released","description":"xpm is a Node.js CLI application to manage xPacks dependencies.","datePublished":"2021-03-27T11:25:00+00:00","dateModified":"2021-05-19T16:48:23+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/03/27/xpm-v0-9-0-released/"},"url":"https://xpack.github.io/blog/2021/03/27/xpm-v0-9-0-released/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -593,19 +593,18 @@ please read the
 
 <p>To install the <strong>latest stable</strong> version available, use:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>npm <span class="nb">install</span> <span class="nt">--global</span> xpm@latest
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">--global</span> xpm@latest
 </code></pre></div></div>
 
 <p>To install this specific version, use:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> xpm@0.9.0
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> xpm@0.9.0
 </code></pre></div></div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> In the current configuration,
-<strong>npm</strong> complains about several deprecated
-packages; these packages are used by some third party packages, and until
-those packages will update their dependencies, there is not much we can
-do to prevent these warnings.</div>
+<strong>npm</strong> complains about several deprecated packages;
+until these third party packages will be updated,
+in v0.10.2 an workaround was added, by bundling the dependencies.</div>
 
 <h2 id="changes">Changes</h2>
 
@@ -667,6 +666,7 @@ related to the content of <code class="language-plaintext highlighter-rouge">pac
 <h3 id="known-problems">Known problems</h3>
 
 <ul>
+  <li>the warnings triggered by third party dependencies during install; fixed in v0.10.2</li>
   <li>[#57] when multiple versions of the same package are referenced
 via different dependencies paths, the program fails; version
 mitigation will be implemented in a future release.</li>
@@ -685,20 +685,20 @@ The xPack package manager command line tool
 <span class="go">  init, install, link, list, run, uninstall
 
 Common options:
-</span><span class="gp">  --loglevel &lt;level&gt;</span><span class="w">     </span>Set log level <span class="o">(</span>silent|warn|info|verbose|debug|trace<span class="o">)</span> 
-<span class="go">  -s|--silent            Disable all messages (--loglevel silent) 
-  -q|--quiet             Mostly quiet, warnings and errors (--loglevel warn) 
-  --informative          Informative (--loglevel info) 
-  -v|--verbose           Verbose (--loglevel verbose) 
-  -d|--debug             Debug messages (--loglevel debug) 
-  -dd|--trace            Trace messages (--loglevel trace, -d -d) 
-  --no-update-notifier   Skip check for a more recent version 
-</span><span class="gp">  -C &lt;folder&gt;</span><span class="w">            </span>Set current folder 
+</span><span class="gp">  --loglevel &lt;level&gt;</span><span class="w">     </span>Set log level <span class="o">(</span>silent|warn|info|verbose|debug|trace<span class="o">)</span>
+<span class="go">  -s|--silent            Disable all messages (--loglevel silent)
+  -q|--quiet             Mostly quiet, warnings and errors (--loglevel warn)
+  --informative          Informative (--loglevel info)
+  -v|--verbose           Verbose (--loglevel verbose)
+  -d|--debug             Debug messages (--loglevel debug)
+  -dd|--trace            Trace messages (--loglevel trace, -d -d)
+  --no-update-notifier   Skip check for a more recent version
+</span><span class="gp">  -C &lt;folder&gt;</span><span class="w">            </span>Set current folder
 <span class="go">
-xpm -h|--help            Quick help 
-</span><span class="gp">xpm &lt;command&gt;</span><span class="w"> </span><span class="nt">-h</span>|--help  Quick <span class="nb">help </span>on <span class="nb">command</span> 
-<span class="go">xpm --version            Show version 
-xpm -i|--interactive     Enter interactive mode 
+xpm -h|--help            Quick help
+</span><span class="gp">xpm &lt;command&gt;</span><span class="w"> </span><span class="nt">-h</span>|--help  Quick <span class="nb">help </span>on <span class="nb">command</span>
+<span class="go">xpm --version            Show version
+xpm -i|--interactive     Enter interactive mode
 
 npm xpm@0.9.0 '/Users/ilg/.nvm/versions/node/v14.16.0/lib/node_modules/xpm'
 </span><span class="gp">Home page: &lt;https://xpack.github.io/xpm/&gt;</span><span class="w">

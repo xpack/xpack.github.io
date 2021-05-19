@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack xpm v0.10.1 released" />
 <script type="application/ld+json">
-{"headline":"xPack xpm v0.10.1 released","description":"xpm is a Node.js CLI application to manage xPacks dependencies.","datePublished":"2021-05-12T12:39:00+00:00","dateModified":"2021-05-19T12:41:16+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/05/12/xpm-v0-10-1-released/"},"url":"https://xpack.github.io/blog/2021/05/12/xpm-v0-10-1-released/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"headline":"xPack xpm v0.10.1 released","description":"xpm is a Node.js CLI application to manage xPacks dependencies.","datePublished":"2021-05-12T12:39:00+00:00","dateModified":"2021-05-19T16:48:23+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/05/12/xpm-v0-10-1-released/"},"url":"https://xpack.github.io/blog/2021/05/12/xpm-v0-10-1-released/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -602,10 +602,9 @@ please read the
 </code></pre></div></div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> In the current configuration,
-<strong>npm</strong> complains about several deprecated
-packages; these packages are used by some third party packages, and until
-those packages will update their dependencies, there is not much we can
-do to prevent these warnings.</div>
+<strong>npm</strong> complains about several deprecated packages;
+until these third party packages will be updated,
+in v0.10.2 an workaround was added, by bundling the dependencies.</div>
 
 <h2 id="changes">Changes</h2>
 
@@ -651,6 +650,7 @@ it adds an extensive set of variables and filters; for details see project
 <h3 id="known-problems">Known problems</h3>
 
 <ul>
+  <li>the warnings triggered by third party dependencies during install; fixed in v0.10.2</li>
   <li>[#57] - when multiple versions of the same package are referenced
 via different dependencies paths, the program fails; version
 mitigation will be implemented in a future release.</li>

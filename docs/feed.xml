@@ -5,9 +5,27 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Wed, 19 May 2021 12:43:13 +0000</pubDate>
-        <lastBuildDate>Wed, 19 May 2021 12:43:13 +0000</lastBuildDate>
+        <pubDate>Wed, 19 May 2021 16:49:36 +0000</pubDate>
+        <lastBuildDate>Wed, 19 May 2021 16:49:36 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>xPack xpm v0.10.2 released</title>
+            <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; is a&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt; dependencies.&lt;/p&gt;</description>
+            <pubDate>Wed, 19 May 2021 16:15:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/05/19/xpm-v0-10-2-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/05/19/xpm-v0-10-2-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>xpm</category>
+            
+            <category>package</category>
+            
+            <category>manager</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack CMake v3.19.8-1 released</title>
@@ -165,24 +183,6 @@
             <pubDate>Sat, 24 Apr 2021 18:43:00 +0000</pubDate>
             <link>https://xpack.github.io/blog/2021/04/24/vscode-xpack-v0-4-7-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2021/04/24/vscode-xpack-v0-4-7-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>vscode</category>
-            
-            <category>vscode-xpack</category>
-            
-            <category>extension</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>VS Code xPack extension v0.4.4 released</title>
-            <description>&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;</description>
-            <pubDate>Thu, 22 Apr 2021 20:40:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2021/04/22/vscode-xpack-v0-4-4-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2021/04/22/vscode-xpack-v0-4-4-released/</guid>
             
             <category>releases</category>
             
