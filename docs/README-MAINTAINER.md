@@ -166,7 +166,7 @@ required versions are properly installed.
 
 - [Web](https://xpack.github.io/)
 - [Web preview](https://xpack.github.io/web-preview/)
-- [GitHub Actions](https://github.com/xpack/web-jekyll/actions)
+- [GitHub Actions](https://github.com/xpack/web-jekyll/actions/)
 
 Other:
 
