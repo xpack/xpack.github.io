@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack GNU Arm Embedded GCC binaries" />
 <script type="application/ld+json">
-{"headline":"How to install the xPack GNU Arm Embedded GCC binaries","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","datePublished":"2019-07-10T14:53:00+00:00","dateModified":"2021-05-19T20:44:43+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/arm-none-eabi-gcc/install/"},"url":"https://xpack.github.io/arm-none-eabi-gcc/install/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"headline":"How to install the xPack GNU Arm Embedded GCC binaries","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","datePublished":"2019-07-10T14:53:00+00:00","dateModified":"2021-05-24T18:43:17+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/arm-none-eabi-gcc/install/"},"url":"https://xpack.github.io/arm-none-eabi-gcc/install/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -361,7 +361,7 @@
 
    <h2 id="overview">Overview</h2>
 
-<p>The <strong>xPack GNU Arm Embedded GCC</strong> can be installed automatically, via <strong>xpm</strong> (the
+<p>The <strong>xPack GNU Arm Embedded GCC</strong> can be installed automatically, via <code class="language-plaintext highlighter-rouge">xpm</code> (the
 recommended method), or manually, by downloading and unpacking one of the
 portable archives.</p>
 
@@ -428,7 +428,7 @@ older versions or configure the path manually.</div>
 as shown before. If there is a new release, it will be installed,
 otherwise a message will warn that the package is already installed.</p>
 
-<p>Future versions of xpm will implement the <code class="language-plaintext highlighter-rouge">outdted</code> and <code class="language-plaintext highlighter-rouge">update</code> command,
+<p>Future versions of xpm will implement the <code class="language-plaintext highlighter-rouge">outdated</code> and <code class="language-plaintext highlighter-rouge">update</code> commands,
 as npm does.</p>
 
 <h3 id="uninstall">Uninstall</h3>
@@ -457,7 +457,8 @@ released as portable
 archives that can be installed in any location.</p>
 
 <p>The archives can be downloaded from the
-GitHub <a href="https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/">releases</a> page.</p>
+GitHub <a href="https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/">releases</a>
+pages.</p>
 
 <h3 id="download">Download</h3>
 
@@ -478,7 +479,8 @@ The <code class="language-plaintext highlighter-rouge">win32</code> part is conf
 
 <h3 id="unpack">Unpack</h3>
 
-<p>Unpack the archive and copy the versioned folder into the
+<p>To manually install the xPack GNU Arm Embedded GCC,
+unpack the archive and copy the versioned folder into the
 <code class="language-plaintext highlighter-rouge">%USERPROFILE%\AppData\Roaming\xPacks\arm-none-eabi-gcc</code>
 (for example <code class="language-plaintext highlighter-rouge">C:\Users\ilg\AppData\Roaming\xPacks\arm-none-eabi-gcc</code>) folder;
 according to Microsoft, <code class="language-plaintext highlighter-rouge">AppData\Roaming</code> is the recommended location for
@@ -568,7 +570,7 @@ older versions or configure the path manually.</div>
 as shown before. If there is a new release, it will be installed,
 otherwise a message will warn that the package is already installed.</p>
 
-<p>Future versions of xpm will implement the <code class="language-plaintext highlighter-rouge">outdted</code> and <code class="language-plaintext highlighter-rouge">update</code> command,
+<p>Future versions of xpm will implement the <code class="language-plaintext highlighter-rouge">outdated</code> and <code class="language-plaintext highlighter-rouge">update</code> commands,
 as npm does.</p>
 
 <h3 id="uninstall">Uninstall</h3>
@@ -597,7 +599,8 @@ released as portable
 archives that can be installed in any location.</p>
 
 <p>The archives can be downloaded from the
-GitHub <a href="https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/">releases</a> page.</p>
+GitHub <a href="https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/">releases</a>
+pages.</p>
 
 <h3 id="download">Download</h3>
 
@@ -611,8 +614,9 @@ Download the latest version named like:</p>
 
 <h3 id="unpack">Unpack</h3>
 
-<p>To install GNU Arm Embedded GCC, unpack the archive and copy it to
-<code class="language-plaintext highlighter-rouge">/${HOME}/opt/xPacks/arm-none-eabi-gcc/xpack-arm-none-eabi-gcc-&lt;version&gt;</code>:</p>
+<p>To manually install the xPack GNU Arm Embedded GCC,
+unpack the archive and copy it to
+<code class="language-plaintext highlighter-rouge">~/opt/xPacks/arm-none-eabi-gcc/xpack-arm-none-eabi-gcc-&lt;version&gt;</code>:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">mkdir</span> <span class="nt">-p</span> ~/opt/xPacks/arm-none-eabi-gcc
 <span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> ~/opt/xPacks/arm-none-eabi-gcc
@@ -773,7 +777,7 @@ older versions or configure the path manually.</div>
 as shown before. If there is a new release, it will be installed,
 otherwise a message will warn that the package is already installed.</p>
 
-<p>Future versions of xpm will implement the <code class="language-plaintext highlighter-rouge">outdted</code> and <code class="language-plaintext highlighter-rouge">update</code> command,
+<p>Future versions of xpm will implement the <code class="language-plaintext highlighter-rouge">outdated</code> and <code class="language-plaintext highlighter-rouge">update</code> commands,
 as npm does.</p>
 
 <h3 id="uninstall">Uninstall</h3>
@@ -802,7 +806,8 @@ released as portable
 archives that can be installed in any location.</p>
 
 <p>The archives can be downloaded from the
-GitHub <a href="https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/">releases</a> page.</p>
+GitHub <a href="https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/">releases</a>
+pages.</p>
 
 <h3 id="download">Download</h3>
 
@@ -815,14 +820,15 @@ GitHub <a href="https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/relea
 </ul>
 
 <p>As the name implies, these are GNU/Linux <code class="language-plaintext highlighter-rouge">tar.gz</code> archives; they were build on
-CentOS, but can be executed on most recent GNU/Linux distributions.
+Ubuntu, but can be executed on most recent GNU/Linux distributions.
 Select the <code class="language-plaintext highlighter-rouge">-x64</code> file for 64-bit machines and the <code class="language-plaintext highlighter-rouge">-ia32</code> file for 32-bit
 machines.</p>
 
 <h3 id="unpack">Unpack</h3>
 
-<p>To install GNU Arm Embedded GCC, unpack the archive and copy it to
-<code class="language-plaintext highlighter-rouge">/${HOME}/opt/xPacks/arm-none-eabi-gcc/xpack-arm-none-eabi-gcc-&lt;version&gt;</code>:</p>
+<p>To manually install the xPack GNU Arm Embedded GCC,
+unpack the archive and copy it to
+<code class="language-plaintext highlighter-rouge">~/opt/xPacks/arm-none-eabi-gcc/xpack-arm-none-eabi-gcc-&lt;version&gt;</code>:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">mkdir</span> <span class="nt">-p</span> ~/opt/xPacks/arm-none-eabi-gcc
 <span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> ~/opt/xPacks/arm-none-eabi-gcc
@@ -996,7 +1002,7 @@ the user or system path!</div>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> May 19, 2021<br/> Site last generated: May 19, 2021 <br />
+<span>Page last updated:</span> May 24, 2021<br/> Site last generated: May 24, 2021 <br />
                 </div>
             </div>
 </footer>

@@ -129,6 +129,17 @@
 
 
 {
+"title": "The xPack GNU Compiler Collection Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/gcc/faq/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "The xPack OpenOCD Frequently Asked Questions",
 "tags": "",
 "keywords": "",
@@ -404,6 +415,17 @@
 
 
 {
+"title": "The xPack GNU Compiler Collection (GCC)",
+"tags": "",
+"keywords": "gnugccc++obj-cobj-c++fortran",
+"url": "/gcc/",
+"summary": "<p>A binary distribution of the GNU Compiler Collection (C/C++/Obj-C/Obj-C++/Fortran).</p>"
+}
+,
+
+
+
+{
 "title": "The xPack OpenOCD",
 "tags": "",
 "keywords": "openocd",
@@ -563,6 +585,17 @@
 "keywords": "vscodexpackinstall",
 "url": "/vscode/install/",
 "summary": ""
+}
+,
+
+
+
+{
+"title": "How to install the xPack GNU Compiler Collection binaries",
+"tags": "",
+"keywords": "",
+"url": "/gcc/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
 
@@ -901,6 +934,8 @@
 
 
 
+
+
 {
 "title": "xpm run",
 "tags": "",
@@ -966,6 +1001,17 @@
 
 
 {
+"title": "How to get help for xPack GNU Compiler Collection",
+"tags": "",
+"keywords": "",
+"url": "/gcc/support/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "How to get help for xPack OpenOCD?",
 "tags": "",
 "keywords": "",
@@ -988,7 +1034,7 @@
 
 
 {
-"title": "How to get help for xPack GNU RISC-V Embedded GCC?",
+"title": "How to get help for xPack GNU RISC-V Embedded GCC",
 "tags": "",
 "keywords": "",
 "url": "/riscv-none-embed-gcc/support/",
@@ -1010,7 +1056,7 @@
 
 
 {
-"title": "How to get help for xPack GNU Arm Embedded GCC?",
+"title": "How to get help for xPack GNU Arm Embedded GCC",
 "tags": "",
 "keywords": "",
 "url": "/arm-none-eabi-gcc/support/",
@@ -1185,6 +1231,16 @@
 
 
 
+
+
+{
+"title": "xPack GCC v8.5.0-1 released",
+"tags": "releasesgccbinariesc++",
+"keywords": "",
+"url": "/blog/2021/05/24/gcc-v8-5-0-1-released/",
+"summary": "<p>Version 8.5.0-1 is the first release of <strong>xPack GCC</strong>.</p>"
+}
+,
 
 
 {

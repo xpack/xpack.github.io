@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack OpenOCD binaries" />
 <script type="application/ld+json">
-{"headline":"How to install the xPack OpenOCD binaries","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","datePublished":"2015-09-09T16:43:00+00:00","dateModified":"2021-05-19T20:44:43+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/openocd/install/"},"url":"https://xpack.github.io/openocd/install/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"headline":"How to install the xPack OpenOCD binaries","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","datePublished":"2015-09-09T16:43:00+00:00","dateModified":"2021-05-24T18:43:17+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/openocd/install/"},"url":"https://xpack.github.io/openocd/install/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -361,7 +361,7 @@
 
    <h2 id="overview">Overview</h2>
 
-<p>The <strong>xPack OpenOCD</strong> can be installed automatically, via <strong>xpm</strong> (the
+<p>The <strong>xPack OpenOCD</strong> can be installed automatically, via <code class="language-plaintext highlighter-rouge">xpm</code> (the
 recommended method), or manually, by downloading and unpacking one of the
 portable archives.</p>
 
@@ -468,7 +468,8 @@ The <code class="language-plaintext highlighter-rouge">win32</code> part is conf
 
 <h3 id="unpack">Unpack</h3>
 
-<p>Unpack the archive and copy it into the
+<p>To manually install the xPack OpenOCD,
+unpack the archive and copy it into the
 <code class="language-plaintext highlighter-rouge">%USERPROFILE%\AppData\Roaming\xPacks\openocd</code>
 (for example <code class="language-plaintext highlighter-rouge">C:\Users\ilg\AppData\Roaming\xPacks\openocd</code>) folder;
 according to Microsoft, <code class="language-plaintext highlighter-rouge">AppData\Roaming</code> is the recommended location for
@@ -638,8 +639,9 @@ Download the latest version named like:</p>
 
 <h3 id="unpack">Unpack</h3>
 
-<p>To install OpenOCD, unpack the archive and copy it to
-<code class="language-plaintext highlighter-rouge">/${HOME}/opt/xPacks/openocd/&lt;version&gt;</code>:</p>
+<p>To manually install the xPack OpenOCD,
+unpack the archive and copy it to
+<code class="language-plaintext highlighter-rouge">~/opt/xPacks/openocd/&lt;version&gt;</code>:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">mkdir</span> <span class="nt">-p</span> ~/opt
 <span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> ~/opt
@@ -797,14 +799,15 @@ Download the latest version named like:</p>
 </ul>
 
 <p>As the name implies, these are GNU/Linux <code class="language-plaintext highlighter-rouge">tar.gz</code> archives; they were build on
-CentOS, but can be executed on most recent GNU/Linux distributions.
+Ubuntu, but can be executed on most recent GNU/Linux distributions.
 Select the <code class="language-plaintext highlighter-rouge">-x64</code> file for 64-bit machines and the <code class="language-plaintext highlighter-rouge">-x32</code> file for 32-bit
 machines.</p>
 
 <h3 id="unpack">Unpack</h3>
 
-<p>To install OpenOCD, unpack the archive and move it to
-<code class="language-plaintext highlighter-rouge">/${HOME}/opt/xPacks/openocd/xpack-openocd-0.10.0-13</code>:</p>
+<p>To manually install the xPack OpenOCD,
+unpack the archive and move it to
+<code class="language-plaintext highlighter-rouge">~/opt/xPacks/openocd/xpack-openocd-0.10.0-13</code>:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">mkdir</span> <span class="nt">-p</span> ~/opt
 <span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> ~/opt
@@ -1007,7 +1010,7 @@ Info : Listening on port 3333 for gdb connections
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> May 19, 2021<br/> Site last generated: May 19, 2021 <br />
+<span>Page last updated:</span> May 24, 2021<br/> Site last generated: May 24, 2021 <br />
                 </div>
             </div>
 </footer>
