@@ -1234,6 +1234,16 @@
 
 
 {
+"title": "xPack Meson Build v0.57.2-1 released",
+"tags": "releasesmeson-buildmesonbuildpythonninja",
+"keywords": "",
+"url": "/blog/2021/05/26/meson-build-v0-57-2-1-released/",
+"summary": "<p>Version 0.57.2-1 is a new release of the <strong>xPack Meson Build</strong> package, following the Meson release.</p>"
+}
+,
+
+
+{
 "title": "xPack GCC v8.5.0-1 released",
 "tags": "releasesgccbinariesc++",
 "keywords": "",
