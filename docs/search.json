@@ -1234,6 +1234,16 @@
 
 
 {
+"title": "xPack xpm v0.10.3 released",
+"tags": "releasesxpmpackagemanager",
+"keywords": "",
+"url": "/blog/2021/05/26/xpm-v0-10-3-released/",
+"summary": "<p>Version <strong>0.10.3</strong> is a maintenance release; it updates the README.</p>"
+}
+,
+
+
+{
 "title": "xPack Meson Build v0.57.2-1 released",
 "tags": "releasesmeson-buildmesonbuildpythonninja",
 "keywords": "",

@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install xpm" />
 <script type="application/ld+json">
-{"headline":"How to install xpm","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","datePublished":"2017-10-09T11:14:00+00:00","dateModified":"2021-05-26T16:25:26+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/install/"},"url":"https://xpack.github.io/xpm/install/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"headline":"How to install xpm","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","datePublished":"2017-10-09T11:14:00+00:00","dateModified":"2021-05-26T18:43:19+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/install/"},"url":"https://xpack.github.io/xpm/install/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -692,6 +692,27 @@ using it again reverts to hiding them.</p>
 <p>If you recently switched to <code class="language-plaintext highlighter-rouge">zsh</code>, or updated macOS to 11.x, which does
 this automatically, you need to copy the <code class="language-plaintext highlighter-rouge">PATH</code> setting from your previous shell startup file to <code class="language-plaintext highlighter-rouge">.zprofile</code>, otherwise the location
 where npm installs global modules is not in the path.</p>
+
+<h2 id="cannot-find-module-ilgcli-start-options"><code class="language-plaintext highlighter-rouge">Cannot find module '@ilg/cli-start-options'</code></h2>
+
+<p>In certain conditions, npm may fail when installing
+a new xpm over an existing one, and xpm becomes unusable,
+complaining about missing modules.</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">% xpm --version
+internal/modules/cjs/loader.js:888
+</span><span class="gp">  throw err;</span><span class="w">
+</span><span class="go">  ^
+
+Error: Cannot find module '@ilg/cli-start-options'
+Require stack:
+- /home/ilg/.nvm/versions/node/v14.17.0/lib/node_modules/xpm/lib/main.js
+- /home/ilg/.nvm/versions/node/v14.17.0/lib/node_modules/xpm/bin/xpm.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:885:15)
+</span></code></pre></div></div>
+
+<p>If this happens, a new install usually fixes the problem,
+if not, the safe way is to first uninstall xpm and then re-install.</p>
 
 <h2 id="user-info">User info</h2>
 
