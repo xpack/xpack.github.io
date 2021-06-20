@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Version 2.8.0-8 is a maintenance release, to fix a bug affecting STM32F1 GPIOs.">
-<meta name="keywords" content="releasesqemuemulatorarmcortex-m,  ">
-<title>xPack QEMU Arm v2.8.0-8 released | The xPack Build Framework</title>
+<meta name="description" content="Version 0.10.5 is a maintenance release; it adds warnings for extra xpm init args.">
+<meta name="keywords" content="releasesxpmpackagemanager,  ">
+<title>xPack xpm v0.10.5 released | The xPack Build Framework</title>
 <link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
 
 
@@ -14,21 +14,21 @@
 <link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
 
 <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>xPack QEMU Arm v2.8.0-8 released</title>
+<title>xPack xpm v0.10.5 released</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="xPack QEMU Arm v2.8.0-8 released" />
+<meta property="og:title" content="xPack xpm v0.10.5 released" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Download" />
-<meta property="og:description" content="Download" />
-<link rel="canonical" href="https://xpack.github.io/blog/2019/11/05/qemu-arm-v2-8-0-8-released/" />
-<meta property="og:url" content="https://xpack.github.io/blog/2019/11/05/qemu-arm-v2-8-0-8-released/" />
+<meta name="description" content="xpm is a Node.js CLI application to manage xPacks dependencies." />
+<meta property="og:description" content="xpm is a Node.js CLI application to manage xPacks dependencies." />
+<link rel="canonical" href="https://xpack.github.io/blog/2021/06/20/xpm-v0-10-5-released/" />
+<meta property="og:url" content="https://xpack.github.io/blog/2021/06/20/xpm-v0-10-5-released/" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-11-05T00:09:00+00:00" />
+<meta property="article:published_time" content="2021-06-20T18:55:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="xPack QEMU Arm v2.8.0-8 released" />
+<meta property="twitter:title" content="xPack xpm v0.10.5 released" />
 <script type="application/ld+json">
-{"headline":"xPack QEMU Arm v2.8.0-8 released","description":"Download","datePublished":"2019-11-05T00:09:00+00:00","dateModified":"2021-06-20T18:57:08+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2019/11/05/qemu-arm-v2-8-0-8-released/"},"url":"https://xpack.github.io/blog/2019/11/05/qemu-arm-v2-8-0-8-released/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"headline":"xPack xpm v0.10.5 released","description":"xpm is a Node.js CLI application to manage xPacks dependencies.","datePublished":"2021-06-20T18:55:00+00:00","dateModified":"2021-06-20T18:57:08+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/06/20/xpm-v0-10-5-released/"},"url":"https://xpack.github.io/blog/2021/06/20/xpm-v0-10-5-released/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -253,7 +253,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: '/search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="xPack QEMU Arm v2.8.0-8 released">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="xPack xpm v0.10.5 released">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -556,8 +556,8 @@
             <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
 
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">xPack QEMU Arm v2.8.0-8 released</h1>
-        <p class="post-meta"><time datetime="2019-11-05T00:09:00+00:00" itemprop="datePublished">Nov 5, 2019</time> <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">/ Liviu Ionescu</span></span> /
+        <h1 class="post-title" itemprop="name headline">xPack xpm v0.10.5 released</h1>
+        <p class="post-meta"><time datetime="2021-06-20T18:55:00+00:00" itemprop="datePublished">Jun 20, 2021</time> <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">/ Liviu Ionescu</span></span> /
             
             
             
@@ -565,19 +565,9 @@
             
             
             
-            <a href="/tags/qemu/">qemu</a>, 
             
             
             
-            <a href="/tags/emulator/">emulator</a>, 
-            
-            
-            
-            <a href="/tags/arm/">arm</a>, 
-            
-            
-            
-            <a href="/tags/cortex-m/">cortex-m</a>
             
             
             
@@ -590,184 +580,132 @@
     <div class="post-content" itemprop="articleBody">
 
         
-        <div class="summary">Version 2.8.0-8 is a maintenance release, to fix a bug affecting STM32F1 GPIOs.
+        <div class="summary">Version <strong>0.10.5</strong> is a maintenance release; it adds warnings for extra xpm init args.
 </div>
         
 
-        <h2 id="download">Download</h2>
-
-<p>The binary files are available from GitHub <a href="https://github.com/xpack-dev-tools/qemu-arm-xpack/releases/tag/v2.8.0-8/">releases</a>.</p>
+        <p><strong>xpm</strong> is a
+<a href="https://nodejs.org/en/">Node.js</a> CLI
+application to manage
+<a href="https://xpack.github.io/intro/#but-what-are-xpacks">xPacks</a> dependencies.</p>
 
 <h2 id="install">Install</h2>
 
-<p>The full details of installing the <strong>xPack QEMU Arm</strong> on various platforms
-are presented in the separate
-<a href="/qemu-arm/install/">Install</a> page.</p>
+<p><strong>xpm</strong> is a Node.js module that can be installed with <code class="language-plaintext highlighter-rouge">npm</code>.</p>
 
-<h3 id="easy-install">Easy install</h3>
+<p>For the prerequisites, since it is recommended
+to use a version manager or to customize the <strong>npm</strong> install location,
+please read the
+<a href="https://xpack.github.io/xpm/install/">Install</a> page for more details.</p>
 
-<p>The easiest way to install QEMU Arm is with
-<a href="/xpm/"><code class="language-plaintext highlighter-rouge">xpm</code></a>
-by using the <strong>binary xPack</strong>, available as
-<a href="https://www.npmjs.com/package/@xpack-dev-tools/qemu-arm"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/qemu-arm</code></a>
-from the <a href="https://www.npmjs.com"><code class="language-plaintext highlighter-rouge">npmjs.com</code></a> registry.</p>
+<p>To install the <strong>latest stable</strong> version available, use:</p>
 
-<p>To install the latest version available, use:</p>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/qemu-arm@latest
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm uninstall <span class="nt">--global</span> xpm
+npm <span class="nb">install</span> <span class="nt">--global</span> xpm@latest
 </code></pre></div></div>
 
 <p>To install this specific version, use:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/qemu-arm@2.8.0-8.1
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> xpm@0.10.5
 </code></pre></div></div>
-
-<h2 id="compliance">Compliance</h2>
-
-<p>xPack QEMU Arm currently is based on the official <a href="http://www.qemu.org">QEMU</a>,
-with major changes.</p>
-
-<p>The current version is based on:</p>
-
-<ul>
-  <li>QEMU version 2.8.0, commit <a href="https://github.com/xpack-dev-tools/qemu/commit/0737f32daf35f3730ed2461ddfaaf034c2ec7ff0">0737f32</a> from Dec 20th, 2016</li>
-</ul>
 
 <h2 id="changes">Changes</h2>
 
-<p>Compared to the master <code class="language-plaintext highlighter-rouge">qemu-system-arm</code>, the changes are major, all
-application class Arm
-devices were removed and replaced by several Cortex-M devices.</p>
+<p>The 0.10.5 release
+is generally compatible with previous releases.</p>
 
-<p>The supported boards are:</p>
+<p>The main change is the bundling of dependencies to avoid the deprecation
+warnings during install.</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">xPack 64-bit QEMU v2.8.0 (qemu-system-gnuarmeclipse).
-
-Supported boards:
-  Maple                LeafLab Arduino-style STM32 microcontroller board (r5)
-  NUCLEO-F103RB        ST Nucleo Development Board for STM32 F1 series
-  NUCLEO-F411RE        ST Nucleo Development Board for STM32 F4 series
-  NetduinoGo           Netduino GoBus Development Board with STM32F4
-  NetduinoPlus2        Netduino Development Board with STM32F4
-  OLIMEXINO-STM32      Olimex Maple (Arduino-like) Development Board
-  STM32-E407           Olimex Development Board for STM32F407ZGT6
-  STM32-H103           Olimex Header Board for STM32F103RBT6
-  STM32-P103           Olimex Prototype Board for STM32F103RBT6
-  STM32-P107           Olimex Prototype Board for STM32F107VCT6
-  STM32F0-Discovery    ST Discovery kit for STM32F051 lines
-  STM32F4-Discovery    ST Discovery kit for STM32F407/417 lines
-  STM32F429I-Discovery ST Discovery kit for STM32F429/439 lines
-</span><span class="gp">  generic              Generic Cortex-M board;</span><span class="w"> </span>use <span class="nt">-mcu</span> to define the device
-<span class="go">
-Supported MCUs:
-  STM32F051R8
-  STM32F103RB
-  STM32F107VC
-  STM32F405RG
-  STM32F407VG
-  STM32F407ZG
-  STM32F411RE
-  STM32F429ZI
-</span></code></pre></div></div>
-
-<p>Warning: support for hardware floating point on Cortex-M4 devices is not
-available yet.</p>
-
-<h2 id="bug-fixes">Bug fixes</h2>
+<h3 id="bug-fixes">Bug fixes</h3>
 
 <ul>
-  <li>[<a href="https://github.com/xpack-dev-tools/qemu/issues/1">#1</a>] due to an
-unfortunate copy/paste in a previous patch, some references to F4
-were added to the F1 GPIO code, crashing QEMU for F1 targets; fixed;</li>
-  <li>[<a href="https://github.com/xpack-dev-tools/qemu/issues/2">#2</a>] due an error
-in a previous patch enabling custom RAM sizes, the actual device RAM
-size was overriden by 128 and small boards had more memory than real;
-fixed.</li>
+  <li>none.</li>
 </ul>
 
-<h2 id="known-problems">Known problems</h2>
+<h3 id="enhancements">Enhancements</h3>
 
 <ul>
-  <li>Ctrl-C does not interrupt the execution if the <code class="language-plaintext highlighter-rouge">--nographic</code> option is used.</li>
+  <li>[#110] - xpm init does not need args; warn if encountered.</li>
+</ul>
+
+<h3 id="other-changes">Other changes</h3>
+
+<ul>
+  <li>none.</li>
+</ul>
+
+<h3 id="known-problems">Known problems</h3>
+
+<ul>
+  <li>[#57] - when multiple versions of the same package are referenced
+via different dependencies paths, the program fails; version
+mitigation will be implemented in a future release.</li>
 </ul>
 
 <h2 id="documentation">Documentation</h2>
 
-<p>The original documentation is available in the <code class="language-plaintext highlighter-rouge">share/doc</code> folder.</p>
+<p>The program interprets <code class="language-plaintext highlighter-rouge">--help</code> and displays a top help page:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">% xpm --help
+
+The xPack project manager command line tool
+</span><span class="gp">Usage: xpm &lt;command&gt;</span><span class="w"> </span><span class="o">[</span>&lt;subcommand&gt;...] <span class="o">[</span>&lt;options&gt; ...] <span class="o">[</span>&lt;args&gt;...]
+<span class="go">
+</span><span class="gp">where &lt;command&gt;</span><span class="w"> </span>is one of:
+<span class="go">  init, install, link, list, run, uninstall
+
+Common options:
+</span><span class="gp">  --loglevel &lt;level&gt;</span><span class="w">     </span>Set log level <span class="o">(</span>silent|warn|info|verbose|debug|trace<span class="o">)</span>
+<span class="go">  -s|--silent            Disable all messages (--loglevel silent)
+  -q|--quiet             Mostly quiet, warnings and errors (--loglevel warn)
+  --informative          Informative (--loglevel info)
+  -v|--verbose           Verbose (--loglevel verbose)
+  -d|--debug             Debug messages (--loglevel debug)
+  -dd|--trace            Trace messages (--loglevel trace, -d -d)
+  --no-update-notifier   Skip check for a more recent version
+</span><span class="gp">  -C &lt;folder&gt;</span><span class="w">            </span>Set current folder
+<span class="go">
+xpm -h|--help            Quick help
+</span><span class="gp">xpm &lt;command&gt;</span><span class="w"> </span><span class="nt">-h</span>|--help  Quick <span class="nb">help </span>on <span class="nb">command</span>
+<span class="go">xpm --version            Show version
+xpm -i|--interactive     Enter interactive mode
+
+npm xpm@0.10.5 '/Users/ilg/.nvm/versions/node/v14.16.0/lib/node_modules/xpm'
+</span><span class="gp">Home page: &lt;https://xpack.github.io/xpm/&gt;</span><span class="w">
+</span><span class="gp">Bug reports: &lt;https://github.com/xpack/xpm-js/issues/&gt;</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Similar pages are available for each command.</p>
+
+<p>For more detials, the project documentation is available online from the
+<a href="https://xpack.github.io/xpm/">web site</a>.</p>
 
 <h2 id="supported-platforms">Supported platforms</h2>
 
-<p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided.</p>
+<p><strong>npm</strong> is a portable application that can run on
+<strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> (Intel and Arm).</p>
 
-<p>The binaries were built using the
-<a href="https://github.com/xpack/xpack-build-box">xPack Build Box (XBB)</a>, a set
-of build environments based on slightly older distributions, that should be
-compatible with most recent systems.</p>
+<h2 id="ci-tests">CI tests</h2>
 
-<ul>
-  <li>GNU/Linux: all binaries were built with GCC 7.4, running in a CentOS 6
-Docker container</li>
-  <li>Windows: all binaries were built with mingw-w64 GCC 7.4, running in a
-CentOS 6 Docker container</li>
-  <li>macOS: most binaries were built with GCC 7.4, running in a separate
-folder on macOS 10.10.5; GDB cannot be compiled with GCC, so Apple
-clang was used.</li>
-</ul>
-
-<h2 id="tests">Tests</h2>
-
-<p>The binaries were testes on Windows 10 Pro 32/64-bit, Ubuntu 18 LTS 64-bit,
-Xubuntu 18 LTS 32-bit and macOS 10.14.</p>
-
-<p>The tests consist in running a simple blinky application
-on the graphically emulated STM32F4DISCOVERY board. The binaries were
-those generated by
-<a href="https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/tree/xpack/tests/eclipse">simple Eclipse projects</a>
-available in the <strong>xPack GNU Arm Embedded GCC</strong> project.</p>
-
-<h2 id="checksums">Checksums</h2>
-
-<p>The SHA-256 hashes for the files are:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>6b8439660287505725967d6d90e4379bc065e97fb38e2440941e5d328dabc5fa
-xpack-qemu-arm-2.8.0-8-darwin-x64.tgz
-
-c1e665a94998ab719af3973075a9d9e870a3da5fc11c2541904b122476beb179
-xpack-qemu-arm-2.8.0-8-linux-x32.tgz
-
-1bbf79a6ff549621916f19929c5cab78441737e126d29c540e23b28600041b2c
-xpack-qemu-arm-2.8.0-8-linux-x64.tgz
-
-a880c30e99f0c6542701a9fab0ba6c62af6c80e349998dd20aebe7ee634a5fae
-xpack-qemu-arm-2.8.0-8-win32-x32.zip
-
-cb7319cd877247d6e9edea94c0e9111bdc060fef70b7944a78d5a7ed8df77d68
-xpack-qemu-arm-2.8.0-8-win32-x64.zip
-</code></pre></div></div>
+<p>Continuous integration tests are done via GitHub
+<a href="https://github.com/xpack/xpm-js/actions">actions</a>.</p>
 
 <h2 id="download-analytics">Download analytics</h2>
 
 <ul>
-  <li>GitHub <a href="https://github.com/xpack-dev-tools/qemu-arm-xpack/">xpack-dev-tools/qemu-arm-xpack</a>
+  <li>npmjs.com <a href="https://www.npmjs.com/package/xpm">xpm</a>
     <ul>
-      <li>this release <a href="https://github.com/xpack-dev-tools/qemu-arm-xpack/releases/v2.8.0-8/"><img src="https://img.shields.io/github/downloads/xpack-dev-tools/qemu-arm-xpack/v2.8.0-8/total.svg" alt="Github All Releases" /></a></li>
-      <li>all xPack releases <a href="https://github.com/xpack-dev-tools/qemu-arm-xpack/releases/"><img src="https://img.shields.io/github/downloads/xpack-dev-tools/qemu-arm-xpack/total.svg" alt="Github All Releases" /></a></li>
-      <li>all GNU MCU Eclipse releases <a href="https://github.com/gnu-mcu-eclipse/qemu/releases/"><img src="https://img.shields.io/github/downloads/gnu-mcu-eclipse/qemu/total.svg" alt="Github All Releases" /></a></li>
-      <li><a href="https://somsubhra.github.io/github-release-stats/?username=xpack-dev-tools&amp;repository=qemu-arm-xpack">individual file counters</a> (grouped per release)</li>
-    </ul>
-  </li>
-  <li>npmjs.com <a href="https://www.npmjs.com/package/@xpack-dev-tools/qemu-arm">@xpack-dev-tools/qemu-arm</a>
-    <ul>
-      <li>latest releases <a href="https://www.npmjs.com/package/@xpack-dev-tools/qemu-arm/"><img src="https://img.shields.io/npm/dw/@xpack-dev-tools/qemu-arm.svg" alt="npm" /></a></li>
-      <li>all @xpack-dev-tools releases <a href="https://www.npmjs.com/package/@xpack-dev-tools/qemu-arm/"><img src="https://img.shields.io/npm/dt/@xpack-dev-tools/qemu-arm.svg" alt="npm" /></a></li>
-      <li>all @gnu-mcu-eclipse releases <a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/qemu/"><img src="https://img.shields.io/npm/dt/@gnu-mcu-eclipse/qemu.svg" alt="npm" /></a></li>
+      <li>last week <a href="https://www.npmjs.com/package/xpm/"><img src="https://img.shields.io/npm/dw/xpm.svg" alt="npm" /></a></li>
+      <li>all time <a href="https://www.npmjs.com/package/xpm/"><img src="https://img.shields.io/npm/dt/xpm.svg" alt="npm" /></a></li>
     </ul>
   </li>
 </ul>
 
-<p>Credit to <a href="https://shields.io">Shields IO</a> for the badges and to
-<a href="https://github.com/Somsubhra/github-release-stats">Somsubhra/github-release-stats</a>
-for the individual file counters.</p>
+<p>Credit to <a href="https://shields.io">Shields IO</a> for the badges.</p>
+
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important:</b> The <strong>xpm</strong> tool is currently <em>work in
+progress</em> and should be used with caution.</div>
 
     </div>
 
@@ -776,7 +714,7 @@ for the individual file counters.</p>
 </article>
 
     
-    <a target="_blank" rel="noopener" href="https://github.com/xpack/web-jekyll/blob/master/_posts/releases/qemu-arm/2019-11-04-qemu-arm-v2-8-0-8-released.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
+    <a target="_blank" rel="noopener" href="https://github.com/xpack/web-jekyll/blob/master/_posts/releases/xpm/2021-06-20-xpm-v0-10-5-released.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
 
     
 
@@ -794,7 +732,7 @@ for the individual file counters.</p>
     <script type="text/javascript">
         var disqus_config = function () {
             this.page.url = '';  // Your page's canonical URL variable
-            this.page.identifier = '/blog/2019/11/05/qemu-arm-v2-8-0-8-released/'; // Your page's unique identifier variable
+            this.page.identifier = '/blog/2021/06/20/xpm-v0-10-5-released/'; // Your page's unique identifier variable
         };
 
         (function() { // DON'T EDIT BELOW THIS LINE

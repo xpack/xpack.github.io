@@ -1234,6 +1234,16 @@
 
 
 {
+"title": "xPack xpm v0.10.5 released",
+"tags": "releasesxpmpackagemanager",
+"keywords": "",
+"url": "/blog/2021/06/20/xpm-v0-10-5-released/",
+"summary": "<p>Version <strong>0.10.5</strong> is a maintenance release; it adds warnings for extra xpm init args.</p>"
+}
+,
+
+
+{
 "title": "VS Code xPack extension v0.4.14 released",
 "tags": "releasesvscodevscode-xpackextension",
 "keywords": "",
