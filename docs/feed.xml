@@ -5,9 +5,27 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sat, 19 Jun 2021 08:11:53 +0000</pubDate>
-        <lastBuildDate>Sat, 19 Jun 2021 08:11:53 +0000</lastBuildDate>
+        <pubDate>Sun, 20 Jun 2021 10:06:45 +0000</pubDate>
+        <lastBuildDate>Sun, 20 Jun 2021 10:06:45 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>VS Code xPack extension v0.4.14 released</title>
+            <description>&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;</description>
+            <pubDate>Sun, 20 Jun 2021 09:44:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/06/20/vscode-xpack-v0-4-14-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/06/20/vscode-xpack-v0-4-14-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>vscode</category>
+            
+            <category>vscode-xpack</category>
+            
+            <category>extension</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack xpm v0.10.3 released</title>
@@ -169,28 +187,6 @@
             <category>vscode-xpack</category>
             
             <category>extension</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack Ninja Build v1.10.2-3 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/ninja-build/&quot;&gt;The xPack Ninja Build&lt;/a&gt;is the &lt;strong&gt;xPack&lt;/strong&gt; distribution of the&lt;a href=&quot;https://ninja-build.org&quot;&gt;Ninja&lt;/a&gt; build system.&lt;/p&gt;</description>
-            <pubDate>Wed, 28 Apr 2021 19:58:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2021/04/28/ninja-build-v1-10-2-3-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2021/04/28/ninja-build-v1-10-2-3-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>ninja-build</category>
-            
-            <category>ninja</category>
-            
-            <category>build</category>
-            
-            <category>speed</category>
-            
-            <category>small</category>
             
             
         </item>

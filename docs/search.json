@@ -1234,6 +1234,16 @@
 
 
 {
+"title": "VS Code xPack extension v0.4.14 released",
+"tags": "releasesvscodevscode-xpackextension",
+"keywords": "",
+"url": "/blog/2021/06/20/vscode-xpack-v0-4-14-released/",
+"summary": "<p>Version <strong>0.4.14</strong> is a new development release of <strong>ilg-vscode.xpack</strong>; it uses a new version of the liquid engine.</p>"
+}
+,
+
+
+{
 "title": "xPack xpm v0.10.3 released",
 "tags": "releasesxpmpackagemanager",
 "keywords": "",
