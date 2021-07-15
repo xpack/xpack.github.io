@@ -5,9 +5,27 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 20 Jun 2021 19:02:10 +0000</pubDate>
-        <lastBuildDate>Sun, 20 Jun 2021 19:02:10 +0000</lastBuildDate>
+        <pubDate>Thu, 15 Jul 2021 08:21:18 +0000</pubDate>
+        <lastBuildDate>Thu, 15 Jul 2021 08:21:18 +0000</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>VS Code xPack extension v0.4.15 released</title>
+            <description>&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;</description>
+            <pubDate>Thu, 15 Jul 2021 07:57:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/07/15/vscode-xpack-v0-4-15-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/07/15/vscode-xpack-v0-4-15-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>vscode</category>
+            
+            <category>vscode-xpack</category>
+            
+            <category>extension</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack xpm v0.10.5 released</title>
@@ -169,24 +187,6 @@
             <category>package</category>
             
             <category>manager</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>VS Code xPack extension v0.4.12 released</title>
-            <description>&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;</description>
-            <pubDate>Wed, 05 May 2021 16:47:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2021/05/05/vscode-xpack-v0-4-12-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2021/05/05/vscode-xpack-v0-4-12-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>vscode</category>
-            
-            <category>vscode-xpack</category>
-            
-            <category>extension</category>
             
             
         </item>
