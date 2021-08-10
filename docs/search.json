@@ -1234,6 +1234,16 @@
 
 
 {
+"title": "VS Code xPack extension v0.4.16 released",
+"tags": "releasesvscodevscode-xpackextensionc++",
+"keywords": "",
+"url": "/blog/2021/08/10/vscode-xpack-v0-4-16-released/",
+"summary": "<p>Version <strong>0.4.16</strong> is a maintenance release of <strong>ilg-vscode.xpack</strong>; it fixes a bug affecting performing the actions after editing package.json.</p>"
+}
+,
+
+
+{
 "title": "xPack xpm v0.10.7 released",
 "tags": "releasesxpmpackagemanager",
 "keywords": "",
