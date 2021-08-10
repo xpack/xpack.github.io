@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack tools" />
 <script type="application/ld+json">
-{"headline":"How to install the xPack tools","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","datePublished":"2017-10-09T11:14:00+00:00","dateModified":"2021-08-10T17:42:19+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"url":"https://xpack.github.io/install/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"headline":"How to install the xPack tools","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","datePublished":"2017-10-09T11:14:00+00:00","dateModified":"2021-08-10T18:37:39+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"url":"https://xpack.github.io/install/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -627,38 +627,38 @@ with administrative rights.</p>
 <p>The result is a folder like <code class="language-plaintext highlighter-rouge">C:\Program Files\nodejs</code>, added to the
 system path since it includes the <code class="language-plaintext highlighter-rouge">node.exe</code> binary.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;where node.exe
+<pre><code class="language-doscon">C:\&gt;where node.exe
 C:\Program Files\nodejs\node.exe
 C:\&gt;node --version
 v12.14.0
-</code></pre></div></div>
+</code></pre>
 
 <h2 id="npm-update"><code class="language-plaintext highlighter-rouge">npm</code> update</h2>
 
 <p>A version of <strong>npm</strong>, usually a bit older, comes packed with Node.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;where npm.cmd
+<pre><code class="language-doscon">C:\&gt;where npm.cmd
 C:\Program Files\nodejs\npm.cmd
 C:\&gt;npm --version
 12.14.0
-</code></pre></div></div>
+</code></pre>
 
 <p>It is recommended to update it to the latest version:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;npm install --global npm@latest
+<pre><code class="language-doscon">C:\&gt;npm install --global npm@latest
 C:\Users\ilg\AppData\Roaming\npm\npm -&gt; C:\Users\ilg\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
 C:\Users\ilg\AppData\Roaming\npm\npx -&gt; C:\Users\ilg\AppData\Roaming\npm\node_modules\npm\bin\npx-cli.js
 + npm@6.14.7
 added 435 packages from 816 contributors in 72.64s
-</code></pre></div></div>
+</code></pre>
 
 <p>Surprisingly, checking the version usually shows the old version:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;where npm.cmd
+<pre><code class="language-doscon">C:\&gt;where npm.cmd
 C:\Program Files\nodejs\npm.cmd
 C:\&gt;npm --version
 12.14.0
-</code></pre></div></div>
+</code></pre>
 
 <p>This is because on Windows, by default, global node packages are
 installed in the
@@ -666,18 +666,18 @@ user home folder, in <code class="language-plaintext highlighter-rouge">%APPDATA
 (like <code class="language-plaintext highlighter-rouge">C:\Users\ilg\AppData\Roaming\npm</code>);
 and this path <strong>is not</strong> in the default environment.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;echo %Path%
-</code></pre></div></div>
+<pre><code class="language-doscon">C:\&gt;echo %Path%
+</code></pre>
 
 <p>It must be added manually in front of the current path:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;set Path=%APPDATA%\npm;%Path%
-</code></pre></div></div>
+<pre><code class="language-doscon">C:\&gt;set Path=%APPDATA%\npm;%Path%
+</code></pre>
 
 <p>To make this setting persistent, also issue the following:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;setx Path "%APPDATA%\npm;%Path%"
-</code></pre></div></div>
+<pre><code class="language-doscon">C:\&gt;setx Path "%APPDATA%\npm;%Path%"
+</code></pre>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Please note the syntax differences, no equal
 sign and double quotes, specific to <code class="language-plaintext highlighter-rouge">setx</code> but harmful to <code class="language-plaintext highlighter-rouge">set</code>.</div>
@@ -688,9 +688,9 @@ the syntax to match their specifics.</div>
 
 <p>After this, the new version of the program should be visible:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;npm --version
+<pre><code class="language-doscon">C:\&gt;npm --version
 6.14.7
-</code></pre></div></div>
+</code></pre>
 
 <h2 id="git">Git</h2>
 
@@ -700,6 +700,33 @@ also install the <a href="https://git-scm.com/download/win">Git for Windows</a> 
 
 <p>The xPack Core Tools can run either in the Windows <code class="language-plaintext highlighter-rouge">cmd.exe</code> terminal,
 or in the Git shell terminal.</p>
+
+<h2 id="powershell-execution-policies">PowerShell Execution Policies</h2>
+
+<p>Recent Windows versions use PowerShell, which has a more restrictive
+execution policy intended to prevent
+the execution of malicious scripts; unfortunatelly this also prevents
+the execution of node.js applications.</p>
+
+<p>If you get a message in the console as the one below:</p>
+
+<pre><code class="language-doscon">xpm : File C:\Users\...\AppData\Roaming\npm\xpm.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at
+https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ xpm init --template @xpack/hello-world-template@latest --property lan ...
++ ~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+The terminal process "C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -Command xpm init --template @xpack/hello-world-template@latest --property language
+</code></pre>
+
+<p>then run the following command in a PowerShell terminal:</p>
+
+<pre><code class="language-doscon">Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser
+</code></pre>
+
+<p>For more details please read the Microsoft
+<a href="https://docs.microsoft.com/en-gb/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.1">about_Execution_Policies</a> page.</p>
 
 
 	</div>
@@ -741,16 +768,16 @@ in the <code class="language-plaintext highlighter-rouge">~/.nvm/versions/node</
 <p>If you have a previous version of npm installed with a local prefix,
 remove it:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo rm</span> <span class="nt">-rf</span> /usr/local/lib/node-modules /usr/local/bin/node /usr/local/bin/npm /usr/local/bin/npm
-<span class="gp">$</span><span class="w"> </span><span class="nb">rm</span> <span class="nt">-rf</span> ~/Library/npm ~/opt/npm
-<span class="gp">$</span><span class="w"> </span>npm config delete prefix
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo rm</span> <span class="nt">-rf</span> /usr/local/lib/node-modules /usr/local/bin/node /usr/local/bin/npm /usr/local/bin/npm
+<span class="nb">rm</span> <span class="nt">-rf</span> ~/Library/npm ~/opt/npm
+npm config delete prefix
 </code></pre></div></div>
 
 <p>Also remove <code class="language-plaintext highlighter-rouge">${HOME}/Library/npm/bin</code> or <code class="language-plaintext highlighter-rouge">${HOME}/opt/npm/bin</code> from the PATH.</p>
 
 <p>When everything is clean, run the install script:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-o-</span> https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-o-</span> https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 </code></pre></div></div>
 
 <p>This will install the version manager in <code class="language-plaintext highlighter-rouge">~/.nvm</code>, and add a few lines to
@@ -908,9 +935,9 @@ in the <code class="language-plaintext highlighter-rouge">~/.nvm/versions/node</
 <p>If you have a previous version of npm installed with a local prefix,
 remove it:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo rm</span> <span class="nt">-rf</span> /usr/local/lib/nodejs
-<span class="gp">$</span><span class="w"> </span><span class="nb">rm</span> <span class="nt">-rf</span> ~/opt/npm
-<span class="gp">$</span><span class="w"> </span>npm config delete prefix
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo rm</span> <span class="nt">-rf</span> /usr/local/lib/nodejs
+<span class="nb">rm</span> <span class="nt">-rf</span> ~/opt/npm
+npm config delete prefix
 </code></pre></div></div>
 
 <p>Also remove <code class="language-plaintext highlighter-rouge">${HOME}/opt/npm/bin</code> from the PATH.</p>
