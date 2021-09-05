@@ -1234,6 +1234,16 @@
 
 
 {
+"title": "xPack xpm v0.10.8 released",
+"tags": "releasesxpmpackagemanager",
+"keywords": "",
+"url": "/blog/2021/09/03/xpm-v0-10-8-released/",
+"summary": "<p>Version <strong>0.10.8</strong> is a maintenance release; it adds –force-32bit to install.</p>"
+}
+,
+
+
+{
 "title": "VS Code xPack extension v0.4.16 released",
 "tags": "releasesvscodevscode-xpackextensionc++",
 "keywords": "",
