@@ -15,7 +15,7 @@
 
 <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>xpm install</title>
-<meta name="generator" content="Jekyll v3.9.0" />
+<meta name="generator" content="Jekyll v4.2.1" />
 <meta property="og:title" content="xpm install" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xpm install" />
 <script type="application/ld+json">
-{"headline":"xpm install","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","datePublished":"2017-10-09T09:56:00+00:00","dateModified":"2021-09-05T12:40:07+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/cli/install/"},"url":"https://xpack.github.io/xpm/cli/install/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/cli/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/xpm/cli/install/","headline":"xpm install","dateModified":"2021-10-15T07:31:44+00:00","datePublished":"2017-10-09T09:56:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -550,7 +550,7 @@ Folder 'gnu-mcu-eclipse-windows-build-tools' linked to '@gnu-mcu-eclipse/windows
 <h3 id="install-packages">Install packages</h3>
 
 <p>When invoked with arguments, they must refer to packages. The common
-use case is to use names of packages stored on the public repository,
+use case is to use names of packages stored on the public npm repository,
 but since xpm uses the same library to manage downloads as npm,
 all formats are accepted:</p>
 
@@ -613,19 +613,19 @@ Install options:
   -E|--save-exact            Save deps with exact version (optional)
 
 Common options:
-</span><span class="gp">  --loglevel &lt;level&gt;</span><span class="w">         </span>Set log level <span class="o">(</span>silent|warn|info|verbose|debug|trace<span class="o">)</span> 
-<span class="go">  -s|--silent                Disable all messages (--loglevel silent) 
-  -q|--quiet                 Mostly quiet, warnings and errors (--loglevel warn) 
-  --informative              Informative (--loglevel info) 
-  -v|--verbose               Verbose (--loglevel verbose) 
-  -d|--debug                 Debug messages (--loglevel debug) 
-  -dd|--trace                Trace messages (--loglevel trace, -d -d) 
-  --no-update-notifier       Skip check for a more recent version 
-</span><span class="gp">  -C &lt;folder&gt;</span><span class="w">                </span>Set current folder 
+</span><span class="gp">  --loglevel &lt;level&gt;</span><span class="w">         </span>Set log level <span class="o">(</span>silent|warn|info|verbose|debug|trace<span class="o">)</span>
+<span class="go">  -s|--silent                Disable all messages (--loglevel silent)
+  -q|--quiet                 Mostly quiet, warnings and errors (--loglevel warn)
+  --informative              Informative (--loglevel info)
+  -v|--verbose               Verbose (--loglevel verbose)
+  -d|--debug                 Debug messages (--loglevel debug)
+  -dd|--trace                Trace messages (--loglevel trace, -d -d)
+  --no-update-notifier       Skip check for a more recent version
+</span><span class="gp">  -C &lt;folder&gt;</span><span class="w">                </span>Set current folder
 <span class="go">
-xpm -h|--help                Quick help 
-xpm --version                Show version 
-xpm -i|--interactive         Enter interactive mode 
+xpm -h|--help                Quick help
+xpm --version                Show version
+xpm -i|--interactive         Enter interactive mode
 
 npm xpm@0.9.0 '/Users/ilg/.nvm/versions/node/v14.16.0/lib/node_modules/xpm'
 </span><span class="gp">Home page: &lt;https://xpack.github.io/xpm/&gt;</span><span class="w">
@@ -634,7 +634,7 @@ npm xpm@0.9.0 '/Users/ilg/.nvm/versions/node/v14.16.0/lib/node_modules/xpm'
 
 <h3 id="global-install--g--global">Global install (<code class="language-plaintext highlighter-rouge">-g|--global</code>)</h3>
 
-<p>Install package(s) in the global repository (in the user home folder).</p>
+<p>Install package(s) in the global xPacks store (in the user home folder).</p>
 
 <h3 id="system-install--sy--system">System install (<code class="language-plaintext highlighter-rouge">-sy|--system</code>)</h3>
 
@@ -803,7 +803,7 @@ semver) are stored without <code class="language-plaintext highlighter-rouge">^<
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Sep 5, 2021<br/> Site last generated: Sep 5, 2021 <br />
+<span>Page last updated:</span> Oct 15, 2021<br/> Site last generated: Oct 15, 2021 <br />
                 </div>
             </div>
 </footer>

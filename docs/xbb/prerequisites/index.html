@@ -15,7 +15,7 @@
 
 <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Prerequisites for building xPack binaries</title>
-<meta name="generator" content="Jekyll v3.9.0" />
+<meta name="generator" content="Jekyll v4.2.1" />
 <meta property="og:title" content="Prerequisites for building xPack binaries" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Prerequisites for building xPack binaries" />
 <script type="application/ld+json">
-{"headline":"Prerequisites for building xPack binaries","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","datePublished":"2017-07-06T17:55:00+00:00","dateModified":"2021-09-05T12:40:07+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/prerequisites/"},"url":"https://xpack.github.io/xbb/prerequisites/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/prerequisites/"},"@type":"BlogPosting","url":"https://xpack.github.io/xbb/prerequisites/","headline":"Prerequisites for building xPack binaries","dateModified":"2021-10-15T07:31:44+00:00","datePublished":"2017-07-06T17:55:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -596,17 +596,17 @@ containers (separate 32/64-bit containers) based on older
 and more conservative distributions, to avoid problems when
 attempting to run the executables on older versions.</p>
 
-<p>The XBB v3.2 uses Ubuntu 12 for Intel GNU/Linux and Ubuntu 16 for
+<p>The XBB v3.3 uses Ubuntu 12 for Intel GNU/Linux and Ubuntu 16 for
 Arm GNU/Linux.</p>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Building Arm binaries requires
 an Arm machine. A Raspberry Pi 4 8GB equiped with a SanDisk Extreme
 USB 3 SSD are a good solution.</div>
 
-<p>v2.x used CentOS 6 for Intel, and CentOS 7 was the favourite when
+<p>XBB v2.x used CentOS 6 for Intel, and CentOS 7 was the favourite when
 considering the update, but Docker CentOS 7 armv7l container does not
 run on 64-bit Docker host, and requires a 32-bit host, which is impractical.
-The problem was reported as 
+The problem was reported as
 <a href="https://github.com/CentOS/sig-cloud-instance-images/issues/171">#171</a>
 and posted on the CentOS
 <a href="https://forums.centos.org/viewtopic.php?f=48&amp;t=75475">forum</a>, but so far
@@ -626,10 +626,10 @@ perfectly fine. For better results, dedicate 3-4 cores and 8-12 GB of RAM.</p>
 <ul>
   <li>Ubuntu 16.04 LTS, running as a virtual machine in Parallels Desktop on macOS 10.12.</li>
   <li>Ubuntu 17.10, running as a virtual machine in VirtualBox on macOS 10.13</li>
-  <li>Ubuntu 18.04 Server, running on an Intel NUC NUC8i7BEH with 32GB of RAM</li>
-  <li>Debian 10 (buster), running on an Intel NUC NUC8i7BEH with 32GB of RAM</li>
-  <li>Debian 9 (stretch), running on a ROCK Pi with 4GB of RAM</li>
-  <li>Raspberry Pi OS 64-bit, running on a Raspberry Pi 4 with 4GB of RAM</li>
+  <li>Ubuntu 18.04 Server, running on an Intel NUC NUC8i7BEH with 32 GB of RAM</li>
+  <li>Debian 10 (buster), running on an Intel NUC NUC8i7BEH with 32 GB of RAM</li>
+  <li>Debian 9 (stretch), running on a ROCK Pi with 4 GB of RAM</li>
+  <li>Raspberry Pi OS 64-bit, running on a Raspberry Pi 4 with 4 or 8 GB of RAM</li>
 </ul>
 
 <p>The build scripts do most of the actual work in the Docker container, and,
@@ -642,17 +642,17 @@ apart from Docker, the host machine has no other special requirements.</p>
 
 <p>For example, the steps to install Docker on a modern 64-bit Ubuntu system are basically:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>apt-get update
-<span class="go">
-</span><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>apt-transport-https ca-certificates  curl software-properties-common
-<span class="go">
-</span><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg | <span class="nb">sudo </span>apt-key add -
-<span class="go">
-</span><span class="gp">$</span><span class="w"> </span><span class="nv">version_name</span><span class="o">=</span><span class="si">$(</span>lsb_release <span class="nt">-cs</span><span class="si">)</span>
-<span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>add-apt-repository  <span class="s2">"deb [arch=amd64] https://download.docker.com/linux/ubuntu  </span><span class="k">${</span><span class="nv">version_name</span><span class="k">}</span><span class="s2"> stable"</span>
-<span class="go">
-</span><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>apt-get update
-<span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>apt-get <span class="nt">-y</span> <span class="nb">install </span>docker-ce
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get update
+
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>apt-transport-https ca-certificates  curl software-properties-common
+
+curl <span class="nt">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg | <span class="nb">sudo </span>apt-key add -
+
+<span class="nv">version_name</span><span class="o">=</span><span class="si">$(</span>lsb_release <span class="nt">-cs</span><span class="si">)</span>
+<span class="nb">sudo </span>add-apt-repository  <span class="s2">"deb [arch=amd64] https://download.docker.com/linux/ubuntu  </span><span class="k">${</span><span class="nv">version_name</span><span class="k">}</span><span class="s2"> stable"</span>
+
+<span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get <span class="nt">-y</span> <span class="nb">install </span>docker-ce
 </code></pre></div></div>
 
 <div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Please note that the above lines get the
@@ -686,15 +686,15 @@ Hello from Docker!
 <p>To allow Docker to run as a regular user, you need to be a member of
 the <code class="language-plaintext highlighter-rouge">docker</code> group.</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>groupadd docker
-<span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>gpasswd <span class="nt">-a</span> <span class="k">${</span><span class="nv">USER</span><span class="k">}</span> docker
-<span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>service docker restart
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>groupadd docker
+<span class="nb">sudo </span>gpasswd <span class="nt">-a</span> <span class="k">${</span><span class="nv">USER</span><span class="k">}</span> docker
+<span class="nb">sudo </span>service docker restart
 </code></pre></div></div>
 
 <p>The above script are for Ubuntu and the Debian family. For other
 distributions, the last line may differ, for example for Arch Linux use:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>systemctl restart docker
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl restart docker
 </code></pre></div></div>
 
 <p>To make these changes effective, preferably <strong>reboot</strong> the machine.</p>
@@ -714,12 +714,13 @@ Hello from Docker!
 version (currently 10.13).</p>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The procedure failed on macOS 10.15 and
-was postponed to macOS 11.0, when some changes are expected anyway.</div>
+was moved to macOS 11.0, which will be used for Apple Silicon platforms
+anyway.</div>
 
 <p>For production builds it is recommended to use a slightly older version.
-macOS 10.10 is a good compromise.</p>
+macOS 10.13 is a good compromise.</p>
 
-<p>It is not mandatory to have a physical macOS 10.10 machine, a virtual
+<p>It is not mandatory to have a physical macOS 10.13 machine, a virtual
 machine is also perfectly fine. Both Parallels and VirtualBox were
 checked and work without problems.</p>
 
@@ -731,19 +732,7 @@ separate Xcode add-on. The best place to get it is from the
 although this might require enrolling to the developer program
 (free of charge).</p>
 
-<p>The recommended way is to first install Xcode, then the Command Line Tools.</p>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xcode-select <span class="nt">-p</span>
-<span class="go">/Applications/Xcode.app/Contents/Developer
-</span><span class="gp">$</span><span class="w"> </span>gcc <span class="nt">--version</span>
-<span class="go">Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/c++/4.2.1
-Apple LLVM version 9.0.0 (clang-900.0.39.2)
-Target: x86_64-apple-darwin17.4.0
-Thread model: posix
-InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-</span></code></pre></div></div>
-
-<p>It is also possible to install the Command Line Tools separately
+<p>The recommended way is to install the Command Line Tools separately
 via a command line:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xcode-select <span class="nt">--install</span>
@@ -760,17 +749,16 @@ InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> In recent macOS versions it is
 recommended to install only the CommandLineTools package.</div>
 
-<h4 id="install-docker-1">Install Docker</h4>
+<h4 id="macos-docker">macOS Docker</h4>
 
-<p>On macOS, Docker can be installed by following the official
-<a href="https://docs.docker.com/docker-for-mac/install/">Install Docker on macOS</a>
-instructions.</p>
-
-<p>Due to the specifics of macOS, Docker cannot run native; instead,
+<p>Due to the specifics of macOS, Docker cannot run natively; instead,
 it uses a GNU/Linux virtual machine running in Apple HyperKit
-(Apple’s virtualization framework).</p>
+(Apple’s virtualization framework), and a file system compatibility
+layer.</p>
 
-<p>For better results, dedicate 3-4 cores and 4-8 GB of RAM to Docker.</p>
+<p>The end result is that Docker runs slow, consumes a lot of memory,
+and is not reliable, so it is not recommended to run the
+Linux/Windows builds on macOS.</p>
 
 <h3 id="docker-images">Docker images</h3>
 
@@ -780,7 +768,7 @@ the Dockerfiles available from
 <a href="https://github.com/xpack/xpack-build-box/tree/master/">XBB (xPack Build Box)</a>.</p>
 
 <p>If not already loaded, Docker will load the images at first usage.
-The images are relatively large, around 3-4 GB.</p>
+The images are relatively large, around 3-5 GB.</p>
 
 <p>It is possible to separately load the Docker images, using the
 script <code class="language-plaintext highlighter-rouge">preload-images</code> command of each script.</p>
@@ -806,7 +794,7 @@ script <code class="language-plaintext highlighter-rouge">preload-images</code> 
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Sep 5, 2021<br/> Site last generated: Sep 5, 2021 <br />
+<span>Page last updated:</span> Oct 15, 2021<br/> Site last generated: Oct 15, 2021 <br />
                 </div>
             </div>
 </footer>

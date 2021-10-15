@@ -15,7 +15,7 @@
 
 <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>The xPack Build Box</title>
-<meta name="generator" content="Jekyll v3.9.0" />
+<meta name="generator" content="Jekyll v4.2.1" />
 <meta property="og:title" content="The xPack Build Box" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="The xPack Build Box" />
 <script type="application/ld+json">
-{"headline":"The xPack Build Box","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","datePublished":"2016-03-09T09:04:00+00:00","dateModified":"2021-09-05T12:40:07+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/"},"url":"https://xpack.github.io/xbb/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/"},"@type":"BlogPosting","url":"https://xpack.github.io/xbb/","headline":"The xPack Build Box","dateModified":"2021-10-15T07:31:44+00:00","datePublished":"2016-03-09T09:04:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -592,10 +592,205 @@ $('#toc').on('click', 'a', function() {
     
 
 
-   <p>TBD</p>
+   <p>The xPack Build Box is an elaborated build environment focused on
+obtaining <strong>reproducible builds</strong> while building <strong>cross-platform standalone
+binaries</strong> for GNU/Linux, macOS and Windows.</p>
+
+<h2 id="how-it-works">How it works?</h2>
+
+<p>XBB achieves repetability and consistency by compiling all dependencies
+from sources.</p>
+
+<p>This applies both to the development environment and to the final
+application binaries.</p>
+
+<p>By strictly controlling the versions of the compiled sources and tools, it is
+possible to create build environments that use about the same tools
+on both GNU/Linux (Intel and Arm) and macOS, helping to obtain
+consistent results.</p>
+
+<p>On GNU/Linux, to allow the builds to run on any distribution,
+the actual development tools are packed as Docker images
+(Intel/Arm, 32/64-bit).</p>
+
+<h2 id="types-of-builds">Types of builds</h2>
+
+<p>There are two types of builds:</p>
 
 <ul>
-  <li><a href="/xbb/prerequisites/">Prerequisites</a></li>
+  <li>local/native builds, intended for development and running on the local
+machine</li>
+  <li>distribution builds, intended for xPack binary distributions and running
+on most modern machines</li>
+</ul>
+
+<p>The main use cases of XBBs are distribution builds, but they can be used
+for native builds as well.</p>
+
+<h2 id="supported-platforms">Supported platforms</h2>
+
+<p>Generally, xPack binaries are available for the following platforms:</p>
+
+<ul>
+  <li>Intel Windows 32-bit</li>
+  <li>Intel Windows 64-bit</li>
+  <li>Intel GNU/Linux 32-bit</li>
+  <li>Intel GNU/Linux 64-bit</li>
+  <li>Arm GNU/Linux 32-bit</li>
+  <li>Arm GNU/Linux 64-bit</li>
+  <li>Intel macOS 64-bit</li>
+</ul>
+
+<p>XBB supports creating binaries for all these platforms.</p>
+
+<p>For the detailed supported versions, please check the specific
+<a href="/xbb/releases/">release</a> page.</p>
+
+<h3 id="arm-binaries">Arm binaries</h3>
+
+<p>Support for Arm binaries was added in v3.1, in early 2020.</p>
+
+<p>The supported architectures are:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">arm64v8</code> - the ARMv8 64-bit architecture Aarch64</li>
+  <li><code class="language-plaintext highlighter-rouge">arm32v7</code> - the ARMv7 32-bit architecture with hardware float (armhf)</li>
+</ul>
+
+<h2 id="docker-specifics">Docker specifics</h2>
+
+<p>As with any Docker builds, the XBB builds run completely inside Docker
+containers, which start afresh each time they are instantiated.</p>
+
+<p>To pass the folder with the build scripts in and the results out,
+it is usual to use a <code class="language-plaintext highlighter-rouge">Work</code> folder, for example:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>docker run <span class="nt">-it</span> <span class="nt">--volume</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Work:/Host/Work"</span> ilegeul/ubuntu:amd64-12.04-xbb-v3.3
+<span class="gp">root@831bc35faf9f:/#</span><span class="w"> </span><span class="nb">ls</span> <span class="nt">-l</span> /Host/Work
+<span class="go">total 175320
+drwxr-xr-x  14 root root       448 Mar  7 19:47 arm-none-eabi-gcc-9.2.1-1.2
+drwxr-xr-x 144 root root      4608 Mar  9 13:15 cache
+drwxr-xr-x  34 root root      1088 Mar 26 11:22 openocd-0.10.0-14
+drwxr-xr-x  12 root root       384 Oct 30 19:00 riscv-none-embed-gcc-8.3.0-1.1
+</span></code></pre></div></div>
+
+<p>In this simple configuration, the builds run with root permissions; with
+more elaborate configurations it is possible to start the Docker images
+with user rights, but they are beyound the scope of this document.</p>
+
+<h2 id="how-to-use-the-xbb-tools">How to use the XBB tools</h2>
+
+<p>Both on GNU/Linux and macOS, the XBB tools are installed in separate
+folders, and are fully distinct from the system tools.</p>
+
+<p>To access them, the application should update the <code class="language-plaintext highlighter-rouge">PATH</code> to prefer
+the newer XBB tools.</p>
+
+<p>Scripts defining some helper functions are available.</p>
+
+<h3 id="gnulinux">GNU/Linux</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">xbb_activate</code> function can be called either for the entire lifespan
+of the script, or, for a better isolation, in inner shells when the new
+tools are really needed.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> <span class="s2">"/opt/xbb/xbb-source.sh"</span>
+...
+<span class="o">(</span>
+  xbb_activate
+
+  ...
+  ./configure
+  make
+<span class="o">)</span>
+</code></pre></div></div>
+
+<h3 id="macos">macOS</h3>
+
+<p>For macOS the recommended use case is similar, except the XBB tools
+are installed in the user HOME folder:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/.local/xbb/xbb-source.sh"</span>
+...
+<span class="o">(</span>
+  xbb_activate
+
+  ...
+<span class="o">)</span>
+</code></pre></div></div>
+
+<h2 id="the-xbb-sourcesh-script">The <code class="language-plaintext highlighter-rouge">xbb-source.sh</code> script</h2>
+
+<p>The build environment includes a helper script, <code class="language-plaintext highlighter-rouge">xbb-source.sh</code>,
+which should be included
+with <code class="language-plaintext highlighter-rouge">source</code> by the build scripts, to define more bash functions to
+the shell.</p>
+
+<p>These functions are used to extend the environment with resources available
+in the XBB folders.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">xbb_activate</code> function is used to extend the <code class="language-plaintext highlighter-rouge">PATH</code> with folders
+in the XBB folders, in front of existing
+folders, so that <strong>the XBB executables are preferred over the system ones</strong>.</p>
+
+<h2 id="the-pkg-config-verbose-script">The <code class="language-plaintext highlighter-rouge">pkg-config-verbose</code> script</h2>
+
+<p>While running the configuration step, it is sometimes useful to trace
+how <code class="language-plaintext highlighter-rouge">pkg-config</code> identifies resources to be used during the build.</p>
+
+<p>The standard <code class="language-plaintext highlighter-rouge">pkg-config</code> does not have an option to increase verbosity.</p>
+
+<p>The workaround is to use a separate script that displays the received command
+and the response on the stderr stream.</p>
+
+<p>This script is not specific to XBB, and can be used with any build.</p>
+
+<p>For this, copy the file into <code class="language-plaintext highlighter-rouge">.../xbb/bin</code> or any other folder present
+in the PATH and pass the script name via the environment.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">chmod</span> +x /opt/xbb/bin/pkg-config-verbose
+<span class="nb">export </span><span class="nv">PKG_CONFIG</span><span class="o">=</span>pkg-config-verbose
+</code></pre></div></div>
+
+<h2 id="tex">TeX</h2>
+
+<p>All images include the TeX tools; on GNU/Linux, they are
+installed either in the system folders or in a custom global folder
+(like <code class="language-plaintext highlighter-rouge">/opt/texlive</code>); on on macOS they are installed in a custom local
+folder (like <code class="language-plaintext highlighter-rouge">${HOME}/.local/texlive</code>).</p>
+
+<h2 id="maintainer-info">Maintainer info</h2>
+
+<ul>
+  <li><a href="https://github.com/xpack/xpack-build-box/blob/master/README-MAINTAINER.md">README-MAINTAINER</a></li>
+</ul>
+
+<h2 id="future-plans">Future plans</h2>
+
+<p>The current XBB got extremely complex due to the initial requirement to
+also support RedHat Enterprise systems.</p>
+
+<p>RedHat maintenance support 1 for RHEL 7 ended in Aug. 2020, with
+maintenance support 2 to last until June. 2024. However XBB support
+for RHEL 7 is a tough requirement, and will be dropped in the next major
+release, probably in 2022.</p>
+
+<p>For the future release, the plan is to move up to
+Ubuntu 18 (GLIBC 2.27). This will also provide compatibility with
+RedHat 8 / Debian 10, which both use GLIBC 2.28.</p>
+
+<h2 id="credits">Credits</h2>
+
+<p>The xPack Build Box is inspired by the
+<a href="https://github.com/phusion/holy-build-box">Holy Build Box</a>.</p>
+
+<h2 id="links">Links</h2>
+
+<ul>
+  <li><a href="/xbb/prerequisites/">Prerequisites</a> for using XBB</li>
+  <li><a href="/xbb/end-of-life/">End-of-life</a> considerations for GNU/Linux distributions</li>
+  <li><a href="/xbb/releases/">Releases</a></li>
+  <li><a href="https://github.com/xpack/xpack-build-box">GitHub</a></li>
 </ul>
 
 
@@ -642,7 +837,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Sep 5, 2021<br/> Site last generated: Sep 5, 2021 <br />
+<span>Page last updated:</span> Oct 15, 2021<br/> Site last generated: Oct 15, 2021 <br />
                 </div>
             </div>
 </footer>

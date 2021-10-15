@@ -15,7 +15,7 @@
 
 <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>xPack xpm v0.8.1 released</title>
-<meta name="generator" content="Jekyll v3.9.0" />
+<meta name="generator" content="Jekyll v4.2.1" />
 <meta property="og:title" content="xPack xpm v0.8.1 released" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack xpm v0.8.1 released" />
 <script type="application/ld+json">
-{"headline":"xPack xpm v0.8.1 released","description":"xpm stands for xPack project manager and is a Node.js CLI application to manage xPacks.","datePublished":"2021-01-30T19:49:00+00:00","dateModified":"2021-09-05T12:40:07+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/01/30/xpm-v0-8-1-released/"},"url":"https://xpack.github.io/blog/2021/01/30/xpm-v0-8-1-released/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"xpm stands for xPack project manager and is a Node.js CLI application to manage xPacks.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/01/30/xpm-v0-8-1-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2021/01/30/xpm-v0-8-1-released/","headline":"xPack xpm v0.8.1 released","dateModified":"2021-10-15T07:31:44+00:00","datePublished":"2021-01-30T19:49:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -580,7 +580,7 @@
     <div class="post-content" itemprop="articleBody">
 
         
-        <div class="summary">Version <strong>0.8.1</strong> is a new release of <strong>xpm</strong>; it allows to install xPacks from Git repositories and adds new commands (list, uninstall); it also changes the default repository location on Linux.
+        <div class="summary">Version <strong>0.8.1</strong> is a new release of <strong>xpm</strong>; it allows to install xPacks from Git repositories and adds new commands (list, uninstall); it also changes the default global xPacks store location on Linux.
 </div>
         
 
@@ -628,7 +628,7 @@ directly from Git, GitHub, GitLab, archive or local files, failed; fixed</li>
   <li>[#72] - installing standalone packages was done by directly copying
 the content locally; for consistency reasons,the behaviour was changed,
 the content is now also
-installed in the central repository and links are added locally, as
+installed in the global xPacks store and links are added locally, as
 for any package</li>
   <li>[#70] - in certain conditions, if the project <code class="language-plaintext highlighter-rouge">package.json</code> had no
 name/version properties defined, the program crashed with asserts; a better
@@ -641,11 +641,11 @@ error processing was implemented</li>
   <li>[#78] - installing dependencies proved quite slow; to make things
 faster, dependencies are downloaded in parallel</li>
   <li>[#13] - the command <code class="language-plaintext highlighter-rouge">uninstall</code> was added; it can remove packages
-from the local project or from the global repository (<code class="language-plaintext highlighter-rouge">-g</code>)</li>
+from the local project or from the global store (<code class="language-plaintext highlighter-rouge">-g</code>)</li>
   <li>[#76] - the command <code class="language-plaintext highlighter-rouge">list</code> was added; it can list packages
-installed in the local project or in the global repository (<code class="language-plaintext highlighter-rouge">-g</code>)</li>
-  <li>[#73] - with folders from the central repository linked to the local
-project, it was possible to change the content in the central repository,
+installed in the local project or in the global store (<code class="language-plaintext highlighter-rouge">-g</code>)</li>
+  <li>[#73] - with folders from the global store linked to the local
+project, it was possible to change the content in the global store,
 thus damaging the packages; to prevent this, now all installed
 packages are changed to read-only, and changed back to read-write
 only before uninstall</li>
@@ -789,7 +789,7 @@ progress</em> and should be used with caution.</div>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Sep 5, 2021<br/> Site last generated: Sep 5, 2021 <br />
+<span>Page last updated:</span> Oct 15, 2021<br/> Site last generated: Oct 15, 2021 <br />
                 </div>
             </div>
 </footer>

@@ -15,7 +15,7 @@
 
 <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>The xPack Build Framework</title>
-<meta name="generator" content="Jekyll v3.9.0" />
+<meta name="generator" content="Jekyll v4.2.1" />
 <meta property="og:title" content="The xPack Build Framework" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="The xPack Build Framework" />
 <script type="application/ld+json">
-{"headline":"The xPack Build Framework","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","datePublished":"2019-06-20T20:11:00+00:00","dateModified":"2021-09-05T12:40:07+00:00","@type":"WebSite","url":"https://xpack.github.io/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","@type":"WebSite","url":"https://xpack.github.io/","headline":"The xPack Build Framework","dateModified":"2021-10-15T07:31:44+00:00","datePublished":"2019-06-20T20:11:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -660,7 +660,6 @@ published as separated GitHub <em>organisations</em>
 <p>The main binary tools packed as xPacks are:</p>
 
 <ul>
-  <li><a href="/gcc/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/gcc</code></a> - the <strong>xPack GNU Compiler Collection (GCC)</strong> (C/C++/Obj-C/Obj-C++/Fortran)</li>
   <li><a href="/arm-none-eabi-gcc/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/arm-none-eabi-gcc</code></a> - the <strong>xPack Arm Embedded GCC</strong> toolchain</li>
   <li><a href="/openocd/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/openocd</code></a> - the <strong>xPack OpenOCD</strong></li>
   <li><a href="/qemu-arm/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/qemu-arm</code></a> - the <strong>xPack QEMU Arm Cortex-M</strong></li>
@@ -674,13 +673,13 @@ published as separated GitHub <em>organisations</em>
 <p>Under development:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/gcc</code> - the <strong>xPack GNU GCC</strong></li>
+  <li><a href="/gcc/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/gcc</code></a> - the <strong>xPack GNU Compiler Collection (GCC)</strong> (C/C++/Obj-C/Obj-C++/Fortran)</li>
+  <li><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/clang</code> - the <strong>xPack GNU GDB</strong></li>
 </ul>
 
 <p>Planned:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/gdb</code> - the <strong>xPack GNU GDB</strong></li>
   <li><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/coreutils</code> - the <strong>xPack GNU coreutils</strong></li>
   <li><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/make</code> - the <strong>xPack make</strong></li>
 </ul>
@@ -745,21 +744,10 @@ A source xPack with the µOS++ version definitions</li>
 
 <h2 id="xpack-build-box-xbb">xPack Build Box (XBB)</h2>
 
-<p>Scripts to create the development environments used to build the
-archives used by the binary xPacks.</p>
-
-<p>The development environments are based on:</p>
-
-<ul>
-  <li><strong>Ubuntu 12</strong> Docker images, used to build the Intel GNU/Linux and Windows
-distributions</li>
-  <li><strong>Ubuntu 16</strong> Docker images, used to build the Arm GNU/Linux
-distributions</li>
-  <li><strong>macOS 10.10</strong> tools, used to build the macOS Intel distributions</li>
-</ul>
-
-<p>These scripts are hosted in the Github
-<a href="https://github.com/xpack/xpack-build-box"><code class="language-plaintext highlighter-rouge">xpack/xpack-build-box</code></a> project.</p>
+<p>The <a href="/xbb/">xPack Build Box</a>
+is an elaborated build environment focused on
+obtaining reproducible builds while creating cross-platform standalone
+binaries for GNU/Linux, macOS and Windows.</p>
 
 <h2 id="notifications">Notifications</h2>
 
@@ -819,7 +807,7 @@ to get notifications on new releases.</li>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Sep 5, 2021<br/> Site last generated: Sep 5, 2021 <br />
+<span>Page last updated:</span> Oct 15, 2021<br/> Site last generated: Oct 15, 2021 <br />
                 </div>
             </div>
 </footer>

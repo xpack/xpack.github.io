@@ -15,7 +15,7 @@
 
 <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>xPack 101</title>
-<meta name="generator" content="Jekyll v3.9.0" />
+<meta name="generator" content="Jekyll v4.2.1" />
 <meta property="og:title" content="xPack 101" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack 101" />
 <script type="application/ld+json">
-{"headline":"xPack 101","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","datePublished":"2019-06-26T05:57:00+00:00","dateModified":"2021-09-05T12:40:07+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/intro/"},"url":"https://xpack.github.io/intro/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/intro/"},"@type":"BlogPosting","url":"https://xpack.github.io/intro/","headline":"xPack 101","dateModified":"2021-10-15T07:31:44+00:00","datePublished":"2019-06-26T05:57:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -598,9 +598,9 @@ $('#toc').on('click', 'a', function() {
 xPacks. There are enough package formats and package managers,
 why would we need yet another one?</p>
 
-<p>Well, first, <strong>xPacks</strong> do not introduce a new package format, but use
-exactly the same format as <strong>npm</strong>, and xPacks can be stored in the same
-repositories, public or private.</p>
+<p>Well, first, the xPacks project <strong>does not introduce a new package format</strong>,
+but uses exactly the same format as <strong>npm</strong>,
+and xPacks can be stored in the same repositories, public or private.</p>
 
 <p>And <strong>xpm</strong>, the project manager, builds on top of <strong>npm</strong>, the very
 popular JavaScript package manager, extending it with new language
@@ -793,7 +793,7 @@ and not any version but a specific one, like <code class="language-plaintext hig
 the latest CMake, ninja and the liquidjs npm module.</p>
 
 <p>For this, in the project forlder, issue the following command, which
-will install the required tools in a central location, and add links
+will install the required tools in a global xPacks store location, and add links
 to them.</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> @xpack-dev-tools/arm-none-eabi-gcc@10.2.1-1.1.2 @xpack-dev-tools/cmake@latest @xpack-dev-tools/ninja-build@latest liquidjs@latest <span class="nt">--verbose</span>
@@ -857,8 +857,8 @@ highest version that does not change the major number, if available.</div>
 Use this syntax for binary xPacks with longer version numbers,
 which generally do not abide by the semver requirements.</div>
 
-<p>The result is the tools being downloaded and installed in the central
-xPack storage (a folder in user’s home) and links from the project
+<p>The result is the tools being downloaded and installed in the global
+xPack store (a folder in user’s home) and links from the project
 to that folders created in the local <code class="language-plaintext highlighter-rouge">xpacks</code> folder, with links to
 individual programs added in <code class="language-plaintext highlighter-rouge">xpacks/.bin</code> (or <code class="language-plaintext highlighter-rouge">.cmd</code> stubs on Windows).</p>
 
@@ -1148,7 +1148,7 @@ for an xPack project is as simple as this:</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Sep 5, 2021<br/> Site last generated: Sep 5, 2021 <br />
+<span>Page last updated:</span> Oct 15, 2021<br/> Site last generated: Oct 15, 2021 <br />
                 </div>
             </div>
 </footer>

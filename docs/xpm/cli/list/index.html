@@ -15,7 +15,7 @@
 
 <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>xpm list</title>
-<meta name="generator" content="Jekyll v3.9.0" />
+<meta name="generator" content="Jekyll v4.2.1" />
 <meta property="og:title" content="xpm list" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xpm list" />
 <script type="application/ld+json">
-{"headline":"xpm list","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","datePublished":"2021-01-27T20:32:00+00:00","dateModified":"2021-09-05T12:40:07+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/cli/list/"},"url":"https://xpack.github.io/xpm/cli/list/","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/cli/list/"},"@type":"BlogPosting","url":"https://xpack.github.io/xpm/cli/list/","headline":"xpm list","dateModified":"2021-10-15T07:31:44+00:00","datePublished":"2021-01-27T20:32:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -454,7 +454,7 @@ $('#toc').on('click', 'a', function() {
 <h2 id="description">Description</h2>
 
 <p>This command lists the packages installed in the project located
-in the current folder or installed in the global repository.</p>
+in the current folder or installed in the global xPacks store.</p>
 
 <p>Example:</p>
 
@@ -476,19 +476,19 @@ List options:
 </span><span class="gp">  -c|--config &lt;config_name&gt;</span><span class="w">  </span>Show the configuration specific dependencies <span class="o">(</span>optional<span class="o">)</span>
 <span class="go">
 Common options:
-</span><span class="gp">  --loglevel &lt;level&gt;</span><span class="w">         </span>Set log level <span class="o">(</span>silent|warn|info|verbose|debug|trace<span class="o">)</span> 
-<span class="go">  -s|--silent                Disable all messages (--loglevel silent) 
-  -q|--quiet                 Mostly quiet, warnings and errors (--loglevel warn) 
-  --informative              Informative (--loglevel info) 
-  -v|--verbose               Verbose (--loglevel verbose) 
-  -d|--debug                 Debug messages (--loglevel debug) 
-  -dd|--trace                Trace messages (--loglevel trace, -d -d) 
-  --no-update-notifier       Skip check for a more recent version 
-</span><span class="gp">  -C &lt;folder&gt;</span><span class="w">                </span>Set current folder 
+</span><span class="gp">  --loglevel &lt;level&gt;</span><span class="w">         </span>Set log level <span class="o">(</span>silent|warn|info|verbose|debug|trace<span class="o">)</span>
+<span class="go">  -s|--silent                Disable all messages (--loglevel silent)
+  -q|--quiet                 Mostly quiet, warnings and errors (--loglevel warn)
+  --informative              Informative (--loglevel info)
+  -v|--verbose               Verbose (--loglevel verbose)
+  -d|--debug                 Debug messages (--loglevel debug)
+  -dd|--trace                Trace messages (--loglevel trace, -d -d)
+  --no-update-notifier       Skip check for a more recent version
+</span><span class="gp">  -C &lt;folder&gt;</span><span class="w">                </span>Set current folder
 <span class="go">
-xpm -h|--help                Quick help 
-xpm --version                Show version 
-xpm -i|--interactive         Enter interactive mode 
+xpm -h|--help                Quick help
+xpm --version                Show version
+xpm -i|--interactive         Enter interactive mode
 
 npm xpm@0.9.0 '/Users/ilg/.nvm/versions/node/v14.16.0/lib/node_modules/xpm'
 </span><span class="gp">Home page: &lt;https://xpack.github.io/xpm/&gt;</span><span class="w">
@@ -497,13 +497,11 @@ npm xpm@0.9.0 '/Users/ilg/.nvm/versions/node/v14.16.0/lib/node_modules/xpm'
 
 <h3 id="list-global-packages--g--global">List global packages (<code class="language-plaintext highlighter-rouge">-g|--global</code>)</h3>
 
-<p>List the packages installed in the global
-repository.</p>
+<p>List the packages installed in the global store.</p>
 
 <h3 id="list-system-packages--sy--system">List system packages (<code class="language-plaintext highlighter-rouge">-sy|--system</code>)</h3>
 
-<p>List the packages installed in the system
-repository.</p>
+<p>List the packages installed in the system store.</p>
 
 <h3 id="configuration--c--config">Configuration (<code class="language-plaintext highlighter-rouge">-c|--config</code>)</h3>
 
@@ -557,7 +555,7 @@ instead of the dependencies installed in top project folder.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Sep 5, 2021<br/> Site last generated: Sep 5, 2021 <br />
+<span>Page last updated:</span> Oct 15, 2021<br/> Site last generated: Oct 15, 2021 <br />
                 </div>
             </div>
 </footer>
