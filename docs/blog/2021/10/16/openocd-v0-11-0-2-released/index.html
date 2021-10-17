@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack OpenOCD 0.11.0-2 released" />
 <script type="application/ld+json">
-{"description":"The xPack OpenOCD is a standalone cross-platform binary distribution of OpenOCD.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/10/16/openocd-v0-11-0-2-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2021/10/16/openocd-v0-11-0-2-released/","headline":"xPack OpenOCD 0.11.0-2 released","dateModified":"2021-10-16T22:39:01+00:00","datePublished":"2021-10-16T22:27:46+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"The xPack OpenOCD is a standalone cross-platform binary distribution of OpenOCD.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/10/16/openocd-v0-11-0-2-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2021/10/16/openocd-v0-11-0-2-released/","headline":"xPack OpenOCD 0.11.0-2 released","dateModified":"2021-10-17T10:29:48+00:00","datePublished":"2021-10-16T22:27:46+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -596,6 +596,21 @@ are the <strong>Raspberry Pi</strong> class devices.</div>
 
 <p>The binary files are available from GitHub <a href="https://github.com/xpack-dev-tools/openocd-xpack/releases/tag/v0.11.0-2/">releases</a>.</p>
 
+<h2 id="prerquisites">Prerquisites</h2>
+
+<ul>
+  <li>Intel GNU/Linux 32/64-bit: any system with <strong>GLIBC 2.15</strong> or higher
+(like Ubuntu 12 or later, Debian 8 or later, RedHat/CentOS 7 later,
+Fedora 20 or later, etc)</li>
+  <li>Arm GNU/Linux 32/64-bit: any system with <strong>GLIBC 2.23</strong> or higher
+(like Ubuntu 16 or later, Debian 9 or later, RedHat/CentOS 8 or later,
+Fedora 24 or later, etc)</li>
+  <li>Intel Windows 32/64-bit: Windows 7 with the Universal C Runtime
+(<a href="https://support.microsoft.com/en-us/topic/update-for-universal-c-runtime-in-windows-c0514201-7fe6-95a3-b0a5-287930f3560c">UCRT</a>),
+Windows 8, Windows 10</li>
+  <li>Intel macOS 64-bit: 10.13 or later</li>
+</ul>
+
 <h2 id="install">Install</h2>
 
 <p>The full details of installing the <strong>xPack OpenOCD</strong> on various platforms
@@ -728,27 +743,13 @@ relative path.</p>
 
 <p>The original documentation is available in the <code class="language-plaintext highlighter-rouge">share/doc</code> folder.</p>
 
-<h2 id="supported-platforms">Supported platforms</h2>
+<h2 id="build">Build</h2>
 
-<p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>Intel/Arm GNU/Linux</strong> are provided.</p>
-
-<p>The binaries were built using the
-<a href="https://github.com/xpack/xpack-build-box">xPack Build Box (XBB)</a>, a set
+<p>The binaries for all supported platforms
+(Windows, macOS and Intel &amp; Arm GNU/Linux) were built using the
+<a href="https://xpack.github.io/xbb/">xPack Build Box (XBB)</a>, a set
 of build environments based on slightly older distributions, that should be
 compatible with most recent systems.</p>
-
-<ul>
-  <li>Intel GNU/Linux: all binaries were built with GCC 11.1, running in an
-Ubuntu 12 Docker container</li>
-  <li>Arm GNU/Linux: all binaries were built with GCC 11.1, running in an
-Ubuntu 16 Docker container (added in mid-2020)</li>
-  <li>Windows: all binaries were built with mingw-w64 GCC 11.1, running in an
-Ubuntu 12 Docker container</li>
-  <li>macOS: all binaries were built with GCC 11.1, running in a separate
-folder on macOS 10.13.6, but were tested and also run on 10.10.</li>
-</ul>
-
-<h2 id="build">Build</h2>
 
 <p>The scripts used to build this distribution are in:</p>
 
@@ -905,7 +906,7 @@ for the individual file counters.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Oct 16, 2021<br/> Site last generated: Oct 16, 2021 <br />
+<span>Page last updated:</span> Oct 17, 2021<br/> Site last generated: Oct 17, 2021 <br />
                 </div>
             </div>
 </footer>
