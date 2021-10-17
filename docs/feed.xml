@@ -5,9 +5,29 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 17 Oct 2021 10:35:44 +0000</pubDate>
-        <lastBuildDate>Sun, 17 Oct 2021 10:35:44 +0000</lastBuildDate>
+        <pubDate>Sun, 17 Oct 2021 15:59:27 +0000</pubDate>
+        <lastBuildDate>Sun, 17 Oct 2021 15:59:27 +0000</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+        <item>
+            <title>xPack QEMU Arm 2.8.0-13 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/qemu-arm/&quot;&gt;The xPack QEMU Arm&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://www.qemu.org&quot;&gt;QEMU&lt;/a&gt;, with several extensions for Arm Cortex-Mdevices.&lt;/p&gt;</description>
+            <pubDate>Sun, 17 Oct 2021 15:19:18 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/10/17/qemu-arm-v2-8-0-13-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/10/17/qemu-arm-v2-8-0-13-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>qemu</category>
+            
+            <category>emulator</category>
+            
+            <category>arm</category>
+            
+            <category>cortex-m</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack OpenOCD 0.11.0-2 released</title>
@@ -165,24 +185,6 @@
             <category>vscode-xpack</category>
             
             <category>extension</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack xpm v0.10.3 released</title>
-            <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; is a&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt; dependencies.&lt;/p&gt;</description>
-            <pubDate>Wed, 26 May 2021 18:38:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2021/05/26/xpm-v0-10-3-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2021/05/26/xpm-v0-10-3-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>xpm</category>
-            
-            <category>package</category>
-            
-            <category>manager</category>
             
             
         </item>
