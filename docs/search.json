@@ -1247,6 +1247,16 @@
 
 
 {
+"title": "xPack Windows Build Tools 4.2.1-3 released",
+"tags": "releaseswindows-build-toolsbuildmakermmkdirbusybox",
+"keywords": "",
+"url": "/blog/2021/10/18/windows-build-tools-v4-2-1-3-released/",
+"summary": "<p>Version 4.2.1-3 is a maintenance release; it updates to the latest upstream Busybox and to the new build scripts.</p>"
+}
+,
+
+
+{
 "title": "xPack QEMU Arm 2.8.0-13 released",
 "tags": "releasesqemuemulatorarmcortex-m",
 "keywords": "",
