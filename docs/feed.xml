@@ -5,9 +5,25 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 18 Oct 2021 14:25:39 +0000</pubDate>
-        <lastBuildDate>Mon, 18 Oct 2021 14:25:39 +0000</lastBuildDate>
+        <pubDate>Mon, 18 Oct 2021 22:22:01 +0000</pubDate>
+        <lastBuildDate>Mon, 18 Oct 2021 22:22:01 +0000</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+        <item>
+            <title>xPack CMake 3.20.6-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/cmake/&quot;&gt;The xPack CMake&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://cmake.org&quot;&gt;CMake&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Mon, 18 Oct 2021 21:45:04 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/10/18/cmake-v3-20-6-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/10/18/cmake-v3-20-6-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>cmake</category>
+            
+            <category>build</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Windows Build Tools 4.2.1-3 released</title>
@@ -173,24 +189,6 @@
             <category>vscode-xpack</category>
             
             <category>extension</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack xpm v0.10.5 released</title>
-            <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; is a&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt; dependencies.&lt;/p&gt;</description>
-            <pubDate>Sun, 20 Jun 2021 18:55:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2021/06/20/xpm-v0-10-5-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2021/06/20/xpm-v0-10-5-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>xpm</category>
-            
-            <category>package</category>
-            
-            <category>manager</category>
             
             
         </item>
