@@ -1247,6 +1247,16 @@
 
 
 {
+"title": "xPack Ninja Build 1.10.2-4 released",
+"tags": "releasesninja-buildninjabuildspeedsmall",
+"keywords": "",
+"url": "/blog/2021/10/19/ninja-build-v1-10-2-4-released/",
+"summary": "<p>Version 1.10.2-4 is a maintenance release; it is a rebuild with the latest build environment.</p>"
+}
+,
+
+
+{
 "title": "xPack CMake 3.20.6-1 released",
 "tags": "releasescmakebuild",
 "keywords": "",
