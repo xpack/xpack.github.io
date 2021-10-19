@@ -1247,6 +1247,16 @@
 
 
 {
+"title": "xPack Meson Build 0.58.2-1 released",
+"tags": "releasesmeson-buildmesonbuildpythonninja",
+"keywords": "",
+"url": "/blog/2021/10/19/meson-build-v0-58-2-1-released/",
+"summary": "<p>Version 0.58.2-1 is a new release; it follows the upstream release; it also updates to the latest build environment.</p>"
+}
+,
+
+
+{
 "title": "xPack Ninja Build 1.10.2-4 released",
 "tags": "releasesninja-buildninjabuildspeedsmall",
 "keywords": "",

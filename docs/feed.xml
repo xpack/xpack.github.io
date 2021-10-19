@@ -5,9 +5,31 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 19 Oct 2021 12:14:21 +0000</pubDate>
-        <lastBuildDate>Tue, 19 Oct 2021 12:14:21 +0000</lastBuildDate>
+        <pubDate>Tue, 19 Oct 2021 20:52:05 +0000</pubDate>
+        <lastBuildDate>Tue, 19 Oct 2021 20:52:05 +0000</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+        <item>
+            <title>xPack Meson Build 0.58.2-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/meson-build/&quot;&gt;The xPack Meson Build&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://meson-build.org&quot;&gt;Meson Build&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Tue, 19 Oct 2021 20:20:30 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/10/19/meson-build-v0-58-2-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/10/19/meson-build-v0-58-2-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>meson-build</category>
+            
+            <category>meson</category>
+            
+            <category>build</category>
+            
+            <category>python</category>
+            
+            <category>ninja</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Ninja Build 1.10.2-4 released</title>
@@ -167,24 +189,6 @@
             <pubDate>Mon, 09 Aug 2021 09:24:00 +0000</pubDate>
             <link>https://xpack.github.io/blog/2021/08/09/xpm-v0-10-7-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2021/08/09/xpm-v0-10-7-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>xpm</category>
-            
-            <category>package</category>
-            
-            <category>manager</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack xpm v0.10.6 released</title>
-            <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; is a&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt; dependencies.&lt;/p&gt;</description>
-            <pubDate>Tue, 20 Jul 2021 19:14:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2021/07/20/xpm-v0-10-6-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2021/07/20/xpm-v0-10-6-released/</guid>
             
             <category>releases</category>
             
