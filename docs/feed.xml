@@ -5,9 +5,23 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 19 Oct 2021 20:52:05 +0000</pubDate>
-        <lastBuildDate>Tue, 19 Oct 2021 20:52:05 +0000</lastBuildDate>
+        <pubDate>Wed, 20 Oct 2021 19:30:01 +0000</pubDate>
+        <lastBuildDate>Wed, 20 Oct 2021 19:30:01 +0000</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+        <item>
+            <title>xPack GCC 11.2.0-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/gcc/&quot;&gt;The xPack GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://gcc.org&quot;&gt;GCC&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Wed, 20 Oct 2021 11:12:55 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/10/20/gcc-v11-2-0-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/10/20/gcc-v11-2-0-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>gcc</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Meson Build 0.58.2-1 released</title>
@@ -179,24 +193,6 @@
             <category>extension</category>
             
             <category>c++</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack xpm v0.10.7 released</title>
-            <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; is a&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt; dependencies.&lt;/p&gt;</description>
-            <pubDate>Mon, 09 Aug 2021 09:24:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2021/08/09/xpm-v0-10-7-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2021/08/09/xpm-v0-10-7-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>xpm</category>
-            
-            <category>package</category>
-            
-            <category>manager</category>
             
             
         </item>
