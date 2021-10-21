@@ -1247,6 +1247,16 @@
 
 
 {
+"title": "xPack LLVM clang 12.0.1-1 released",
+"tags": "releasesclang",
+"keywords": "",
+"url": "/blog/2021/10/21/clang-v12-0-1-1-released/",
+"summary": "<p>Version 12.0.1-1 is the first release of the <strong>xPack LLVM clang</strong> package.</p>"
+}
+,
+
+
+{
 "title": "xPack GCC 11.2.0-1 released",
 "tags": "releasesgcc",
 "keywords": "",
