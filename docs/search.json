@@ -1247,6 +1247,16 @@
 
 
 {
+"title": "xPack Arm Embedded GCC 10.3.1-2.1 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
+"keywords": "",
+"url": "/blog/2021/10/25/arm-none-eabi-gcc-v10-3-1-2-1-released/",
+"summary": "<p>Version 10.3.1-2.1 is a new release; it follows the upstream Arm release.</p>"
+}
+,
+
+
+{
 "title": "xPack LLVM clang 12.0.1-1 released",
 "tags": "releasesclang",
 "keywords": "",
