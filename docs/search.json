@@ -432,6 +432,17 @@
 
 
 {
+"title": "The LLVM clang",
+"tags": "",
+"keywords": "LLVMclangc++",
+"url": "/clang/",
+"summary": "<p>A binary distribution of the LLVM clang.</p>"
+}
+,
+
+
+
+{
 "title": "The xPack QEMU Arm",
 "tags": "",
 "keywords": "qemuarmcortex-mgraphic",
@@ -522,9 +533,9 @@
 {
 "title": "The xPack GNU Compiler Collection (GCC)",
 "tags": "",
-"keywords": "gnugccc++obj-cobj-c++fortran",
+"keywords": "gnugccc++",
 "url": "/gcc/",
-"summary": "<p>A binary distribution of the GNU Compiler Collection (C/C++/Obj-C/Obj-C++/Fortran).</p>"
+"summary": "<p>A binary distribution of the GNU Compiler Collection.</p>"
 }
 ,
 
