@@ -162,6 +162,12 @@ Bundle updated!
 People using forked repositories must run `bundle install` to be sure the
 required versions are properly installed.
 
+## Add tags
+
+```sh
+bash scripts/createtag.sh XXX
+```
+
 ## Links
 
 - [Web](https://xpack.github.io/)
