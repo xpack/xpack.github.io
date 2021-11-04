@@ -1265,6 +1265,16 @@
 
 
 {
+"title": "xPack GNU RISC-V Embedded GCC 10.1.0-1.2 released",
+"tags": "releasesriscvriscv-none-embed-gccgccbinariesc++",
+"keywords": "",
+"url": "/blog/2021/11/04/riscv-none-embed-gcc-v10-1-0-1-2-released/",
+"summary": "<p>Version <strong>10.1.0-1.2</strong> is a maintenance release; it fixes the mising multi-libs on Windows and updates to the latest build scripts.</p>"
+}
+,
+
+
+{
 "title": "xPack Arm Embedded GCC 10.3.1-2.1 released",
 "tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
 "keywords": "",
