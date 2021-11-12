@@ -1276,6 +1276,16 @@
 
 
 {
+"title": "xPack Arm Embedded GCC 10.3.1-2.2 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
+"keywords": "",
+"url": "/blog/2021/11/12/arm-none-eabi-gcc-v10-3-1-2-2-released/",
+"summary": "<p>Version <strong>10.3.1-2.2</strong> is a maintenance release; it slightly reduces the size of the archives.</p>"
+}
+,
+
+
+{
 "title": "xPack GNU RISC-V Embedded GCC 10.2.0-1.2 released",
 "tags": "releasesriscvriscv-none-embed-gccgccbinariesc++",
 "keywords": "",
