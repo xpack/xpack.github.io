@@ -1276,6 +1276,16 @@
 
 
 {
+"title": "xPack Meson Build 0.59.4-1 released",
+"tags": "releasesmeson-buildmesonbuildpythonninja",
+"keywords": "",
+"url": "/blog/2021/12/06/meson-build-v0-59-4-1-released/",
+"summary": "<p>Version <strong>0.59.4-1</strong> is a new release; it follows the upstream release. It also <strong>adds support for Apple Silicon</strong> and updates to the latest build scripts.</p>"
+}
+,
+
+
+{
 "title": "xPack CMake 3.20.6-2 released",
 "tags": "releasescmakebuild",
 "keywords": "",

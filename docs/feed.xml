@@ -5,9 +5,31 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 06 Dec 2021 16:37:03 +0000</pubDate>
-        <lastBuildDate>Mon, 06 Dec 2021 16:37:03 +0000</lastBuildDate>
+        <pubDate>Mon, 06 Dec 2021 20:02:37 +0000</pubDate>
+        <lastBuildDate>Mon, 06 Dec 2021 20:02:37 +0000</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+        <item>
+            <title>xPack Meson Build 0.59.4-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/meson-build/&quot;&gt;The xPack Meson Build&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://meson-build.org&quot;&gt;Meson Build&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Mon, 06 Dec 2021 19:45:29 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/12/06/meson-build-v0-59-4-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/12/06/meson-build-v0-59-4-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>meson-build</category>
+            
+            <category>meson</category>
+            
+            <category>build</category>
+            
+            <category>python</category>
+            
+            <category>ninja</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack CMake 3.20.6-2 released</title>
@@ -185,28 +207,6 @@
             <category>releases</category>
             
             <category>gcc</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack Meson Build 0.58.2-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/meson-build/&quot;&gt;The xPack Meson Build&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://meson-build.org&quot;&gt;Meson Build&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Tue, 19 Oct 2021 20:20:30 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2021/10/19/meson-build-v0-58-2-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2021/10/19/meson-build-v0-58-2-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>meson-build</category>
-            
-            <category>meson</category>
-            
-            <category>build</category>
-            
-            <category>python</category>
-            
-            <category>ninja</category>
             
             
         </item>
