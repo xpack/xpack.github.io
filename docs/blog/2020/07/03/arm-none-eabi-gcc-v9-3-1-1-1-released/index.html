@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack GNU Arm Embedded GCC v9.3.1-1.1 released" />
 <script type="application/ld+json">
-{"description":"This is the xPack distribution of the GNU Arm Embedded Toolchain.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2020/07/03/arm-none-eabi-gcc-v9-3-1-1-1-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2020/07/03/arm-none-eabi-gcc-v9-3-1-1-1-released/","headline":"xPack GNU Arm Embedded GCC v9.3.1-1.1 released","dateModified":"2021-11-19T20:12:44+00:00","datePublished":"2020-07-03T07:19:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"This is the xPack distribution of the GNU Arm Embedded Toolchain.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2020/07/03/arm-none-eabi-gcc-v9-3-1-1-1-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2020/07/03/arm-none-eabi-gcc-v9-3-1-1-1-released/","headline":"xPack GNU Arm Embedded GCC v9.3.1-1.1 released","dateModified":"2021-12-06T12:32:26+00:00","datePublished":"2020-07-03T07:19:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -714,11 +714,11 @@ install locally:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">python3_version</span><span class="o">=</span><span class="s2">"3.7.9"</span>
 <span class="nb">mkdir</span> <span class="nt">-p</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Downloads"</span>
-curl <span class="nt">-L</span> <span class="nt">--fail</span> <span class="nt">-o</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Downloads/Python-</span><span class="k">${</span><span class="nv">python3_version</span><span class="k">}</span><span class="s2">.tgz"</span> https://www.python.org/ftp/python/<span class="k">${</span><span class="nv">python3_version</span><span class="k">}</span>/Python-<span class="k">${</span><span class="nv">python3_version</span><span class="k">}</span>.tgz 
+curl <span class="nt">-L</span> <span class="nt">--fail</span> <span class="nt">-o</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Downloads/Python-</span><span class="k">${</span><span class="nv">python3_version</span><span class="k">}</span><span class="s2">.tgz"</span> https://www.python.org/ftp/python/<span class="k">${</span><span class="nv">python3_version</span><span class="k">}</span>/Python-<span class="k">${</span><span class="nv">python3_version</span><span class="k">}</span>.tgz
 <span class="nb">rm</span> <span class="nt">-rf</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Work/Python-</span><span class="k">${</span><span class="nv">python3_version</span><span class="k">}</span><span class="s2">"</span>
 <span class="nb">mkdir</span> <span class="nt">-p</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Work"</span>
 <span class="nb">cd</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Work"</span>
-<span class="nb">tar </span>xzf <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Downloads/Python-</span><span class="k">${</span><span class="nv">python3_version</span><span class="k">}</span><span class="s2">.tgz"</span> 
+<span class="nb">tar </span>xzf <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Downloads/Python-</span><span class="k">${</span><span class="nv">python3_version</span><span class="k">}</span><span class="s2">.tgz"</span>
 <span class="nb">cd</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Work/Python-</span><span class="k">${</span><span class="nv">python3_version</span><span class="k">}</span><span class="s2">"</span>
 bash ./configure <span class="nt">--prefix</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/opt"</span>
 make
@@ -776,7 +776,7 @@ in the environment, it might interfere with the xPack binaries.</p>
 
 <h3 id="executable_path"><code class="language-plaintext highlighter-rouge">@executable_path</code></h3>
 
-<p>Similarly, on macOS, the dynamic libraries are adjusted with <code class="language-plaintext highlighter-rouge">otool</code> to use a
+<p>Similarly, on macOS, the binaries are adjusted with <code class="language-plaintext highlighter-rouge">otool</code> to use a
 relative path.</p>
 
 <h2 id="documentation">Documentation</h2>
@@ -842,25 +842,25 @@ executed again.</p>
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>6f5e5b94ecf2afece992b46a60465e3ed5aae172202c2a4e34f8e81e5b0da790  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>6f5e5b94ecf2afece992b46a60465e3ed5aae172202c2a4e34f8e81e5b0da790
 xpack-arm-none-eabi-gcc-9.3.1-1.1-darwin-x64.tar.gz
 
-8791f653f1fc15b004987a2b84a7c0aabd71bde11e0e68eb32846e9b1ad80986  
+8791f653f1fc15b004987a2b84a7c0aabd71bde11e0e68eb32846e9b1ad80986
 xpack-arm-none-eabi-gcc-9.3.1-1.1-linux-arm64.tar.gz
 
-bb4e1f6c72e32a1696edcfdec57d32ece64ac691a0363e4781db559addac7b79  
+bb4e1f6c72e32a1696edcfdec57d32ece64ac691a0363e4781db559addac7b79
 xpack-arm-none-eabi-gcc-9.3.1-1.1-linux-arm.tar.gz
 
-be98731e1bb05fd78e2ec5727f7d6c9a6f2ae548970bbd0998de7079021d8e11  
+be98731e1bb05fd78e2ec5727f7d6c9a6f2ae548970bbd0998de7079021d8e11
 xpack-arm-none-eabi-gcc-9.3.1-1.1-linux-x32.tar.gz
 
-10b859d83c7a451add58eaf79afdb9a4a66fc38920884e8a54c809e0a1f4ed3e  
+10b859d83c7a451add58eaf79afdb9a4a66fc38920884e8a54c809e0a1f4ed3e
 xpack-arm-none-eabi-gcc-9.3.1-1.1-linux-x64.tar.gz
 
-5cc86c9d17c4fda97107b374ae939fedf9d7428d06e6c31418ea0e5ff1e6aa41  
+5cc86c9d17c4fda97107b374ae939fedf9d7428d06e6c31418ea0e5ff1e6aa41
 xpack-arm-none-eabi-gcc-9.3.1-1.1-win32-x32.zip
 
-91ab5e1b9b3ffcc606262e2be96bd70ab0be26a42d21e610340412f65de2bb16  
+91ab5e1b9b3ffcc606262e2be96bd70ab0be26a42d21e610340412f65de2bb16
 xpack-arm-none-eabi-gcc-9.3.1-1.1-win32-x64.zip
 </code></pre></div></div>
 
@@ -934,7 +934,7 @@ for the individual file counters.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Nov 19, 2021<br/> Site last generated: Nov 19, 2021 <br />
+<span>Page last updated:</span> Dec 6, 2021<br/> Site last generated: Dec 6, 2021 <br />
                 </div>
             </div>
 </footer>
