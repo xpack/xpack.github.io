@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Version 0.9.0 is a new release of xpm; it adds support for configurations and configuration specific dependencies.">
-<meta name="keywords" content="releasesxpmpackagemanager,  ">
-<title>xPack xpm v0.9.0 released | The xPack Build Framework</title>
+<meta name="description" content="Version 3.20.6-2 is a maintenance release; it adds support for Apple Silicon and updates to the latest build scripts.">
+<meta name="keywords" content="releasescmakebuild,  ">
+<title>xPack CMake 3.20.6-2 released | The xPack Build Framework</title>
 <link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
 
 
@@ -14,21 +14,21 @@
 <link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
 
 <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>xPack xpm v0.9.0 released</title>
+<title>xPack CMake 3.20.6-2 released</title>
 <meta name="generator" content="Jekyll v4.2.1" />
-<meta property="og:title" content="xPack xpm v0.9.0 released" />
+<meta property="og:title" content="xPack CMake 3.20.6-2 released" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="xpm is a Node.js CLI application to manage xPacks dependencies." />
-<meta property="og:description" content="xpm is a Node.js CLI application to manage xPacks dependencies." />
-<link rel="canonical" href="https://xpack.github.io/blog/2021/03/27/xpm-v0-9-0-released/" />
-<meta property="og:url" content="https://xpack.github.io/blog/2021/03/27/xpm-v0-9-0-released/" />
+<meta name="description" content="The xPack CMake is a standalone cross-platform binary distribution of CMake." />
+<meta property="og:description" content="The xPack CMake is a standalone cross-platform binary distribution of CMake." />
+<link rel="canonical" href="https://xpack.github.io/blog/2021/12/06/cmake-v3-20-6-2-released/" />
+<meta property="og:url" content="https://xpack.github.io/blog/2021/12/06/cmake-v3-20-6-2-released/" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-03-27T11:25:00+00:00" />
+<meta property="article:published_time" content="2021-12-06T16:19:14+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="xPack xpm v0.9.0 released" />
+<meta property="twitter:title" content="xPack CMake 3.20.6-2 released" />
 <script type="application/ld+json">
-{"description":"xpm is a Node.js CLI application to manage xPacks dependencies.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/03/27/xpm-v0-9-0-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2021/03/27/xpm-v0-9-0-released/","headline":"xPack xpm v0.9.0 released","dateModified":"2021-12-06T16:22:29+00:00","datePublished":"2021-03-27T11:25:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"The xPack CMake is a standalone cross-platform binary distribution of CMake.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/12/06/cmake-v3-20-6-2-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2021/12/06/cmake-v3-20-6-2-released/","headline":"xPack CMake 3.20.6-2 released","dateModified":"2021-12-06T16:22:29+00:00","datePublished":"2021-12-06T16:19:14+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -253,7 +253,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: '/search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="xPack xpm v0.9.0 released">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="xPack CMake 3.20.6-2 released">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -556,8 +556,8 @@
             <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
 
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">xPack xpm v0.9.0 released</h1>
-        <p class="post-meta"><time datetime="2021-03-27T11:25:00+00:00" itemprop="datePublished">Mar 27, 2021</time> <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">/ Liviu Ionescu</span></span> /
+        <h1 class="post-title" itemprop="name headline">xPack CMake 3.20.6-2 released</h1>
+        <p class="post-meta"><time datetime="2021-12-06T16:19:14+00:00" itemprop="datePublished">Dec 6, 2021</time> <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">/ Liviu Ionescu</span></span> /
             
             
             
@@ -565,15 +565,11 @@
             
             
             
-            <a href="/tags/xpm/">xpm</a>, 
+            <a href="/tags/cmake/">cmake</a>, 
             
             
             
-            <a href="/tags/package/">package</a>, 
-            
-            
-            
-            <a href="/tags/manager/">manager</a>
+            <a href="/tags/build/">build</a>
             
             
             
@@ -586,169 +582,269 @@
     <div class="post-content" itemprop="articleBody">
 
         
-        <div class="summary">Version <strong>0.9.0</strong> is a new release of <strong>xpm</strong>; it adds support for configurations and configuration specific dependencies.
+        <div class="summary">Version <strong>3.20.6-2</strong> is a maintenance release; it <strong>adds support for Apple Silicon</strong> and updates to the latest build scripts.
 </div>
         
 
-        <p><strong>xpm</strong> is a
-<a href="https://nodejs.org/en/">Node.js</a> CLI
-application to manage
-<a href="https://xpack.github.io/intro/#but-what-are-xpacks">xPacks</a> dependencies.</p>
+        <p><a href="https://xpack.github.io/cmake/">The xPack CMake</a>
+is a standalone cross-platform binary distribution of
+<a href="http://cmake.org">CMake</a>.</p>
+
+<p>There are separate binaries for <strong>Windows</strong> (Intel 32/64-bit),
+<strong>macOS</strong> (Intel 64-bit, Apple Silicon 64-bit)
+and <strong>GNU/Linux</strong> (Intel 32/64-bit, Arm 32/64-bit).</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The main targets for the Arm binaries
+are the <strong>Raspberry Pi</strong> class devices.</div>
+
+<h2 id="download">Download</h2>
+
+<p>The binary files are available from GitHub <a href="https://github.com/xpack-dev-tools/cmake-xpack/releases/tag/v3.20.6-2/">Releases</a>.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+  <li>Intel GNU/Linux 32/64-bit: any system with <strong>GLIBC 2.15</strong> or higher
+(like Ubuntu 12 or later, Debian 8 or later, RedHat/CentOS 7 later,
+Fedora 20 or later, etc)</li>
+  <li>Arm GNU/Linux 32/64-bit: any system with <strong>GLIBC 2.23</strong> or higher
+(like Ubuntu 16 or later, Debian 9 or later, RedHat/CentOS 8 or later,
+Fedora 24 or later, etc)</li>
+  <li>Intel Windows 32/64-bit: Windows 7 with the Universal C Runtime
+(<a href="https://support.microsoft.com/en-us/topic/update-for-universal-c-runtime-in-windows-c0514201-7fe6-95a3-b0a5-287930f3560c">UCRT</a>),
+Windows 8, Windows 10</li>
+  <li>Intel macOS 64-bit: 10.13 or later</li>
+  <li>Apple Silicon macOS 64-bit: 11.6 or later</li>
+</ul>
 
 <h2 id="install">Install</h2>
 
-<p><strong>xpm</strong> is a Node.js module that can be installed with <code class="language-plaintext highlighter-rouge">npm</code>.</p>
+<p>The full details of installing the <strong>xPack CMake</strong> on various platforms
+are presented in the separate
+<a href="/cmake/install/">Install</a> page.</p>
 
-<p>For the prerequisites, since it is recommended
-to use a version manager or to customize the <strong>npm</strong> install location,
-please read the
-<a href="https://xpack.github.io/xpm/install/">Install</a> page for more details.</p>
+<h3 id="easy-install">Easy install</h3>
 
-<p>To install the <strong>latest stable</strong> version available, use:</p>
+<p>The easiest way to install CMake is with
+<a href="/xpm/"><code class="language-plaintext highlighter-rouge">xpm</code></a>
+by using the <strong>binary xPack</strong>, available as
+<a href="https://www.npmjs.com/package/@xpack-dev-tools/cmake"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/cmake</code></a>
+from the <a href="https://www.npmjs.com"><code class="language-plaintext highlighter-rouge">npmjs.com</code></a> registry.</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm uninstall <span class="nt">--global</span> xpm
-npm <span class="nb">install</span> <span class="nt">--global</span> xpm@latest
+<p>With the <code class="language-plaintext highlighter-rouge">xpm</code> tool available, installing
+the latest version of the package and adding it as
+a dependency for a project is quite easy:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>my-project
+xpm init <span class="c"># Only at first use.</span>
+
+xpm <span class="nb">install</span> @xpack-dev-tools/cmake@latest
+
+<span class="nb">ls</span> <span class="nt">-l</span> xpacks/.bin
 </code></pre></div></div>
 
 <p>To install this specific version, use:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> xpm@0.9.0
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> @xpack-dev-tools/cmake@3.20.6-2.1
 </code></pre></div></div>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> In the current configuration,
-<strong>npm</strong> complains about several deprecated packages;
-until these third party packages will be updated,
-in v0.10.2 an workaround was added, by bundling the dependencies.</div>
+<p>It is also possible to install Meson Build globally, in the user home folder,
+but this requires xPack aware tools to automatically identify them and
+manage paths.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/cmake@latest
+</code></pre></div></div>
+
+<h3 id="uninstall">Uninstall</h3>
+
+<p>To remove the links from the current project:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>my-project
+
+xpm uninstall @xpack-dev-tools/cmake
+</code></pre></div></div>
+
+<p>To completely remove the package from the global store:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm uninstall <span class="nt">--global</span> @xpack-dev-tools/cmake
+</code></pre></div></div>
+
+<h2 id="compliance">Compliance</h2>
+
+<p>The <strong>xPack CMake</strong> is based on the official
+<a href="https://cmake.org">CMake</a>, with minimal changes.</p>
+
+<p>The current version is based on:</p>
+
+<ul>
+  <li>CMake release
+<a href="https://github.com/Kitware/CMake/releases/tag/v3.20.6/">3.20.6</a>
+from Sep 20, 2021.</li>
+</ul>
 
 <h2 id="changes">Changes</h2>
 
-<p>The 0.9.0 release
-is generally compatible with previous releases.</p>
+<p>Compared to the upstream version, the Windows version also supports
+spawning scripts via <code class="language-plaintext highlighter-rouge">cmd.exe /c</code>. These scripts are used by <strong>npm</strong>/<strong>xpm</strong>
+to redirect invocations to the central packages repository.</p>
 
-<p>The main change over the previous release is support for multiple
-<em>configurations</em>, usually <em>build configurations</em>,
-which are intended to support development for applications using multiple
-build folders (like debug/release, but also multi-platform builds).</p>
-
-<h3 id="bug-fixes">Bug fixes</h3>
+<h2 id="bug-fixes">Bug fixes</h2>
 
 <ul>
   <li>none</li>
 </ul>
 
-<h3 id="enhancements">Enhancements</h3>
-
-<p>The main enhancement is the addition of <code class="language-plaintext highlighter-rouge">xpack.configurations</code> in
-<code class="language-plaintext highlighter-rouge">package.json</code>, and <code class="language-plaintext highlighter-rouge">--config</code> for most commands.</p>
+<h2 id="enhancements">Enhancements</h2>
 
 <ul>
-  <li>[#94] - add <code class="language-plaintext highlighter-rouge">--config</code> to <code class="language-plaintext highlighter-rouge">xpm link</code></li>
-  <li>[#95] - add <code class="language-plaintext highlighter-rouge">--config</code> to <code class="language-plaintext highlighter-rouge">xpm uninstall</code></li>
-  <li>[#96] - update <code class="language-plaintext highlighter-rouge">xpm list</code> to show configurations dependencies</li>
-  <li>[#90] - iterate all configurations on <code class="language-plaintext highlighter-rouge">xpm install</code></li>
-  <li>[#88] - add support for configurations &amp; actions</li>
+  <li>none</li>
 </ul>
 
-<p>Another important enhancement is the addition of <code class="language-plaintext highlighter-rouge">properties</code> and of a
-template engine to process substitutions in actions/scripts.</p>
+<h2 id="known-problems">Known problems</h2>
 
 <ul>
-  <li>[#91] - fix use of properties in substitutions</li>
-  <li>[#92] - Add <code class="language-plaintext highlighter-rouge">os.platform</code> and <code class="language-plaintext highlighter-rouge">os.arch</code> to substitution map</li>
-  <li>[#91] - add template <code class="language-plaintext highlighter-rouge">properties</code>; if <code class="language-plaintext highlighter-rouge">--config</code> is used, the
-configuration properties take precedence over package properties.</li>
+  <li>none</li>
 </ul>
 
-<p>Other enhancements:</p>
+<h2 id="shared-libraries">Shared libraries</h2>
 
-<ul>
-  <li>[#35] - to better accomodate future enhancements, and spot cases
-when an old xpm is used to process a <code class="language-plaintext highlighter-rouge">package.json</code> which includes
-new content, the <code class="language-plaintext highlighter-rouge">xpack.checkMinimumXpmRequired</code> property was added</li>
-  <li>[#93] - processing for <code class="language-plaintext highlighter-rouge">--dry-run</code> was implemented for <code class="language-plaintext highlighter-rouge">xpm install</code></li>
-  <li>[#89] - prefer run &amp; run-action</li>
-</ul>
+<p>On all platforms the packages are standalone, and expect only the standard
+runtime to be present on the host.</p>
 
-<h3 id="other-changes">Other changes</h3>
+<p>All dependencies that are build as shared libraries are copied locally
+in the <code class="language-plaintext highlighter-rouge">libexec</code> folder (or in the same folder as the executable for Windows).</p>
 
-<ul>
-  <li>the <code class="language-plaintext highlighter-rouge">xpm install</code> command now sets all installed packages as read-only</li>
-  <li>the validation code returns CliExitCodes.ERROR.INPUT for errors
-related to the content of <code class="language-plaintext highlighter-rouge">package.json</code></li>
-</ul>
+<h3 id="dt_rpath-and-ld_library_path"><code class="language-plaintext highlighter-rouge">DT_RPATH</code> and <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code></h3>
 
-<h3 id="known-problems">Known problems</h3>
+<p>On GNU/Linux the binaries are adjusted to use a relative path:</p>
 
-<ul>
-  <li>the warnings triggered by third party dependencies during install; fixed in v0.10.2</li>
-  <li>[#57] when multiple versions of the same package are referenced
-via different dependencies paths, the program fails; version
-mitigation will be implemented in a future release.</li>
-</ul>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>readelf <span class="nt">-d</span> library.so | <span class="nb">grep </span>runpath
+<span class="gp"> 0x000000000000001d (RPATH)            Library rpath: [$</span>ORIGIN]
+</code></pre></div></div>
+
+<p>In the GNU ld.so search strategy, the <code class="language-plaintext highlighter-rouge">DT_RPATH</code> has
+the highest priority, higher than <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code>, so if this later one
+is set in the environment, it should not interfere with the xPack binaries.</p>
+
+<p>Please note that previous versions, up to mid-2020, used <code class="language-plaintext highlighter-rouge">DT_RUNPATH</code>, which
+has a priority lower than <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code>, and does not tolerate setting
+it in the environment.</p>
+
+<h3 id="rpath"><code class="language-plaintext highlighter-rouge">@rpath</code></h3>
+
+<p>Similarly, on macOS, the binaries are adjusted with <code class="language-plaintext highlighter-rouge">install_name_tool</code> to use a
+relative path.</p>
 
 <h2 id="documentation">Documentation</h2>
 
-<p>The program interprets <code class="language-plaintext highlighter-rouge">--help</code> and displays a top help page:</p>
+<p>The current version specific CMake documentation is available in each packet:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nt">--help</span>
-<span class="go">
-The xPack package manager command line tool
-</span><span class="gp">Usage: xpm &lt;command&gt;</span><span class="w"> </span><span class="o">[</span>&lt;subcommand&gt;...] <span class="o">[</span>&lt;options&gt; ...] <span class="o">[</span>&lt;args&gt;...]
-<span class="go">
-</span><span class="gp">where &lt;command&gt;</span><span class="w"> </span>is one of:
-<span class="go">  init, install, link, list, run, uninstall
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">doc/cmake-X.Y/html/index.html</code></li>
+</ul>
 
-Common options:
-</span><span class="gp">  --loglevel &lt;level&gt;</span><span class="w">     </span>Set log level <span class="o">(</span>silent|warn|info|verbose|debug|trace<span class="o">)</span>
-<span class="go">  -s|--silent            Disable all messages (--loglevel silent)
-  -q|--quiet             Mostly quiet, warnings and errors (--loglevel warn)
-  --informative          Informative (--loglevel info)
-  -v|--verbose           Verbose (--loglevel verbose)
-  -d|--debug             Debug messages (--loglevel debug)
-  -dd|--trace            Trace messages (--loglevel trace, -d -d)
-  --no-update-notifier   Skip check for a more recent version
-</span><span class="gp">  -C &lt;folder&gt;</span><span class="w">            </span>Set current folder
-<span class="go">
-xpm -h|--help            Quick help
-</span><span class="gp">xpm &lt;command&gt;</span><span class="w"> </span><span class="nt">-h</span>|--help  Quick <span class="nb">help </span>on <span class="nb">command</span>
-<span class="go">xpm --version            Show version
-xpm -i|--interactive     Enter interactive mode
+<p>and online from:</p>
 
-npm xpm@0.9.0 '/Users/ilg/.nvm/versions/node/v14.16.0/lib/node_modules/xpm'
-</span><span class="gp">Home page: &lt;https://xpack.github.io/xpm/&gt;</span><span class="w">
-</span><span class="gp">Bug reports: &lt;https://github.com/xpack/xpm-js/issues/&gt;</span><span class="w">
-</span></code></pre></div></div>
+<ul>
+  <li><a href="https://cmake.org/documentation/">https://cmake.org/documentation/</a></li>
+</ul>
 
-<p>Similar pages are available for each command.</p>
+<h2 id="build">Build</h2>
 
-<p>For more detials, the project documentation is available online from the
-<a href="https://xpack.github.io/xpm/">web site</a>.</p>
+<p>The binaries for all supported platforms
+(Windows, macOS and GNU/Linux) were built using the
+<a href="https://xpack.github.io/xbb/">xPack Build Box (XBB)</a>, a set
+of build environments based on slightly older distributions, that should be
+compatible with most recent systems.</p>
 
-<h2 id="supported-platforms">Supported platforms</h2>
+<p>The scripts used to build this distribution are in:</p>
 
-<p><strong>npm</strong> is a portable application that can run on
-<strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> (Intel and Arm).</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">distro-info/scripts</code></li>
+</ul>
+
+<p>For the prerequisites and more details on the build procedure, please see the
+<a href="https://github.com/xpack-dev-tools/cmake-xpack/blob/xpack/README-BUILD.md">How to build</a> page.</p>
 
 <h2 id="ci-tests">CI tests</h2>
 
-<p>Continuous integration tests are done via GitHub
-<a href="https://github.com/xpack/xpm-js/actions">actions</a>.</p>
+<p>Before publishing, a set of simple tests were performed on an exhaustive
+set of platforms. The results are available from:</p>
+
+<ul>
+  <li><a href="https://github.com/xpack-dev-tools/cmake-xpack/actions/">GitHub Actions</a></li>
+  <li><a href="https://app.travis-ci.com/github/xpack-dev-tools/cmake-xpack/builds/">travis-ci.com</a></li>
+</ul>
+
+<h2 id="tests">Tests</h2>
+
+<p>TBD</p>
+
+<h2 id="checksums">Checksums</h2>
+
+<p>The SHA-256 hashes for the files are:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">80cfe688c6290a2eb527b5de19ed60848cc7d423dc643fa7152eedbf4c336a85
+xpack-cmake-3.20.6-2-darwin-arm64.tar.gz
+
+4647c8bd45cc2ee151fa6cf60d60db991fa96cd8b4593126569af0e382d17c44
+xpack-cmake-3.20.6-2-darwin-x64.tar.gz
+
+4c942096abb275139a1c21474c87112ba731419af386dc84cbd6c4f9e49c6a05
+xpack-cmake-3.20.6-2-linux-arm.tar.gz
+
+04aae33537e211cfc6062faece07ac0f4ab28062015186658ac7a02ad5ae6dea
+xpack-cmake-3.20.6-2-linux-arm64.tar.gz
+
+d43267651a018ef004e2689f5ce25276491701470a6e33d250b640c69cac197f
+xpack-cmake-3.20.6-2-linux-ia32.tar.gz
+
+0995feab1594eeb39d51ed008c122f56328d4f7bf702be4919e1a82a0e13bcb6
+xpack-cmake-3.20.6-2-linux-x64.tar.gz
+
+59b8906e6e2a62920b59a742458c392a3a0a8965666a58c2fa4e2a3a96f9038d
+xpack-cmake-3.20.6-2-win32-ia32.zip
+
+1c2bd6c8c035367da7dd37f3f972596097764c488fb01c7eb13ac558a7aa900e
+xpack-cmake-3.20.6-2-win32-x64.zip
+
+</span></code></pre></div></div>
+
+<h2 id="deprecation-notices">Deprecation notices</h2>
+
+<h3 id="32-bit-support">32-bit support</h3>
+
+<p>Support for 32-bit Intel Linux and Intel Windows will most probably
+be dropped in 2022. Support for 32-bit Arm Linux will be preserved
+for a while, due to the large user base of 32-bit Raspberry Pi systems.</p>
+
+<h3 id="linux-minimum-requirements">Linux minimum requirements</h3>
+
+<p>Support for RedHat 7 will most probably be dropped in 2022, and the
+minimum requirement will be raised to GLIBC 2.27, available starting
+with Ubuntu 18 and RedHat 8.</p>
 
 <h2 id="download-analytics">Download analytics</h2>
 
 <ul>
-  <li>npmjs.com <a href="https://www.npmjs.com/package/xpm">xpm</a>
+  <li>GitHub <a href="https://github.com/xpack-dev-tools/cmake-xpack/">xpack-dev-tools/cmake-xpack</a>
     <ul>
-      <li>last week <a href="https://www.npmjs.com/package/xpm/"><img src="https://img.shields.io/npm/dw/xpm.svg" alt="npm" /></a></li>
-      <li>all time <a href="https://www.npmjs.com/package/xpm/"><img src="https://img.shields.io/npm/dt/xpm.svg" alt="npm" /></a></li>
+      <li>this release <a href="https://github.com/xpack-dev-tools/cmake-xpack/releases/v/"><img src="https://img.shields.io/github/downloads/xpack-dev-tools/cmake-xpack/v/total.svg" alt="Github All Releases" /></a></li>
+      <li>all xPack releases <a href="https://github.com/xpack-dev-tools/cmake-xpack/releases/"><img src="https://img.shields.io/github/downloads/xpack-dev-tools/cmake-xpack/total.svg" alt="Github All Releases" /></a></li>
+      <li><a href="https://somsubhra.github.io/github-release-stats/?username=xpack-dev-tools&amp;repository=cmake-xpack">individual file counters</a> (grouped per release)</li>
+    </ul>
+  </li>
+  <li>npmjs.com <a href="https://www.npmjs.com/package/@xpack-dev-tools/cmake">@xpack-dev-tools/cmake</a>
+    <ul>
+      <li>latest releases <a href="https://www.npmjs.com/package/@xpack-dev-tools/cmake/"><img src="https://img.shields.io/npm/dw/@xpack-dev-tools/cmake.svg" alt="npm" /></a></li>
+      <li>all @xpack-dev-tools releases <a href="https://www.npmjs.com/package/@xpack-dev-tools/cmake/"><img src="https://img.shields.io/npm/dt/@xpack-dev-tools/cmake.svg" alt="npm" /></a></li>
     </ul>
   </li>
 </ul>
 
-<p>Credit to <a href="https://shields.io">Shields IO</a> for the badges.</p>
-
-<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important:</b> The <strong>xpm</strong> tool is currently <em>work in
-progress</em> and should be used with caution.</div>
+<p>Credit to <a href="https://shields.io">Shields IO</a> for the badges and to
+<a href="https://github.com/Somsubhra/github-release-stats">Somsubhra/github-release-stats</a>
+for the individual file counters.</p>
 
     </div>
 
@@ -757,7 +853,7 @@ progress</em> and should be used with caution.</div>
 </article>
 
     
-    <a target="_blank" rel="noopener" href="https://github.com/xpack/web-jekyll/blob/master/_posts/releases/xpm/2021-03-27-xpm-v0-9-0-released.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
+    <a target="_blank" rel="noopener" href="https://github.com/xpack/web-jekyll/blob/master/_posts/releases/cmake/2021-12-06-cmake-v3-20-6-2-released.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
 
     
 
@@ -775,7 +871,7 @@ progress</em> and should be used with caution.</div>
     <script type="text/javascript">
         var disqus_config = function () {
             this.page.url = '';  // Your page's canonical URL variable
-            this.page.identifier = '/blog/2021/03/27/xpm-v0-9-0-released/'; // Your page's unique identifier variable
+            this.page.identifier = '/blog/2021/12/06/cmake-v3-20-6-2-released/'; // Your page's unique identifier variable
         };
 
         (function() { // DON'T EDIT BELOW THIS LINE

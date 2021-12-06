@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="GNU MCU Eclipse QEMU v2.8.0-5 20190424 released" />
 <script type="application/ld+json">
-{"description":"Version 2.8.0-5 20190424 is a maintenance release, to fix several bugs.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2019/04/24/qemu-v2-8-0-5-20190424-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2019/04/24/qemu-v2-8-0-5-20190424-released/","headline":"GNU MCU Eclipse QEMU v2.8.0-5 20190424 released","dateModified":"2021-12-06T12:32:26+00:00","datePublished":"2019-04-24T19:39:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Version 2.8.0-5 20190424 is a maintenance release, to fix several bugs.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2019/04/24/qemu-v2-8-0-5-20190424-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2019/04/24/qemu-v2-8-0-5-20190424-released/","headline":"GNU MCU Eclipse QEMU v2.8.0-5 20190424 released","dateModified":"2021-12-06T16:22:29+00:00","datePublished":"2019-04-24T19:39:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -598,12 +598,12 @@
 <h2 id="bug-fixes">Bug fixes</h2>
 
 <ul>
-  <li>[<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/66">#66</a>] for some STM32 
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/66">#66</a>] for some STM32
 devices, the USART SR reset value was wrong; fixed.</li>
   <li>[<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/63">#63</a>] the command
 line option to set the total memory size (<code class="language-plaintext highlighter-rouge">-memory size=kb</code>) was ignored;
 fixed.</li>
-  <li>[<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/43">#43</a>] the values 
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/43">#43</a>] the values
 returned by the semihosting command <code class="language-plaintext highlighter-rouge">SYS_HEAPINFO</code> were not accurate;
 since these values cannot be computed, now the command returns all 0.</li>
   <li>[<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/39">#39</a>] in certain
@@ -623,16 +623,16 @@ fixed, now an error message is issued.</li>
 
 <h2 id="build-notes">Build notes</h2>
 
-<p>The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bit), 
+<p>The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bit),
 and run on any distribution based on CentOS 6 or later.</p>
 
-<p>The Windows binaries were built with mingw-w64, and run on any reasonably 
+<p>The Windows binaries were built with mingw-w64, and run on any reasonably
 recent <strong>i686</strong> and <strong>x86_64</strong> Windows machines.</p>
 
 <h2 id="easy-install">Easy install</h2>
 
-<p>QEMU is also available as an 
-<a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/qemu">xPack</a> and can be 
+<p>QEMU is also available as an
+<a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/qemu">xPack</a> and can be
 conveniently installed with <a href="https://www.npmjs.com/package/xpm"><code class="language-plaintext highlighter-rouge">xpm</code></a>:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/qemu@2.8.0-5.1
@@ -644,37 +644,36 @@ conveniently installed with <a href="https://www.npmjs.com/package/xpm"><code cl
 </code></pre></div></div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The method to select the path based
-on the xPack version was already 
-added to the Eclipse plug-in, but for now is only available in the version 
-published on the test site 
+on the xPack version was already
+added to the Eclipse plug-in, but for now is only available in the version
+published on the test site
 (http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-test/).</div>
 
 <h2 id="manual-install">Manual install</h2>
 
-<p>Instructions on how to install the binaries are available in the 
-<a href="/qemu-arm/install/">How to install the QEMU binaries?</a> 
+<p>Instructions on how to install the binaries are available in the
+<a href="/qemu-arm/install/">How to install the QEMU binaries?</a>
 page.</p>
 
 <h2 id="checksums">Checksums</h2>
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">fe599df8d544942bb463668049aa734f3e5bb8c9e4404390d978120b7b78ecf2 
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">fe599df8d544942bb463668049aa734f3e5bb8c9e4404390d978120b7b78ecf2
 gnu-mcu-eclipse-qemu-2.8.0-5-20190424-0724-centos32.tgz
 
-dd9d31233eeb9fb116dfd4e4d9bc49e12e683f498a13bdd680b37c2d9111f3dd 
+dd9d31233eeb9fb116dfd4e4d9bc49e12e683f498a13bdd680b37c2d9111f3dd
 gnu-mcu-eclipse-qemu-2.8.0-5-20190424-0724-centos64.tgz
 
-a3d87dff41417bb469d2993c6d33943a21e97113ba0545ce2978b7bdcc32c4bc 
+a3d87dff41417bb469d2993c6d33943a21e97113ba0545ce2978b7bdcc32c4bc
 gnu-mcu-eclipse-qemu-2.8.0-5-20190424-0724-macos.tgz
 
-cc4cd29ae9cd676a7b2309f3f82e7f885e0de0419af744b57bcb2ab4629d4ca7 
+cc4cd29ae9cd676a7b2309f3f82e7f885e0de0419af744b57bcb2ab4629d4ca7
 gnu-mcu-eclipse-qemu-2.8.0-5-20190424-0724-win32.zip
 
-ca23c5b7af40d58ee0b3e0a29295bdd443d318cdb7d9b9cf2220e4801c555164 
+ca23c5b7af40d58ee0b3e0a29295bdd443d318cdb7d9b9cf2220e4801c555164
 gnu-mcu-eclipse-qemu-2.8.0-5-20190424-0724-win64.zip
 </span></code></pre></div></div>
-
 
     </div>
 

@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="The xPack Build Definitions" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/metadata/build/"},"@type":"BlogPosting","url":"https://xpack.github.io/metadata/build/","headline":"The xPack Build Definitions","dateModified":"2021-12-06T12:32:26+00:00","datePublished":"2017-10-09T13:46:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/metadata/build/"},"@type":"BlogPosting","url":"https://xpack.github.io/metadata/build/","headline":"The xPack Build Definitions","dateModified":"2021-12-06T16:22:29+00:00","datePublished":"2017-10-09T13:46:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -625,19 +625,19 @@ defined symbols, header folder/files, etc).</li>
   </span><span class="p">],</span><span class="w">
   </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"STM32F4DISCOVERY Blinky project"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"blinky"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"target"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> 
+  </span><span class="nl">"target"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"platform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"stm32f4-discovery"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"cpu"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"device"</span><span class="p">:</span><span class="w"> </span><span class="s2">"stm32f407vg"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="nl">"toolsCollections"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> 
+  </span><span class="nl">"toolsCollections"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="s2">"xpack-arm-none-eabi-gcc"</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="nl">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c++"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"builder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ninja"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"buildConfigurations"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"debug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> 
+    </span><span class="nl">"debug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"addSourcePaths"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="s2">"src"</span><span class="w">
       </span><span class="p">],</span><span class="w">
@@ -658,7 +658,7 @@ defined symbols, header folder/files, etc).</li>
             </span><span class="s2">"-std=gnu11"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-fmessage-length=0"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-fsigned-char"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"-ffunction-sections"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-ffunction-sections"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-fdata-sections"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-DDEBUG"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-DTRACE"</span><span class="p">,</span><span class="w">
@@ -684,15 +684,15 @@ defined symbols, header folder/files, etc).</li>
             </span><span class="s2">"-Wall"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-Wextra"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-O0"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"-std=gnu++11"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-std=gnu++11"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-fabi-version=0"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"-fno-exceptions"</span><span class="p">,</span><span class="w"> 
-            </span><span class="s2">"-fno-rtti"</span><span class="p">,</span><span class="w"> 
-            </span><span class="s2">"-fno-use-cxa-atexit"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-fno-exceptions"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-fno-rtti"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-fno-use-cxa-atexit"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-fno-threadsafe-statics"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-fmessage-length=0"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-fsigned-char"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"-ffunction-sections"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-ffunction-sections"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-fdata-sections"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-DDEBUG"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-DTRACE"</span><span class="p">,</span><span class="w">
@@ -721,12 +721,12 @@ defined symbols, header folder/files, etc).</li>
             </span><span class="s2">"-std=gnu11"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-fmessage-length=0"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-fsigned-char"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"-ffunction-sections"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-ffunction-sections"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-fdata-sections"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-Wl,--gc-sections"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"-T{{ project.absolutePath }}/linker-scripts/mem.ld"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-T{{ project.absolutePath }}/linker-scripts/mem.ld"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-T{{ project.absolutePath }}/linker-scripts/sections.ld"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"-nostartfiles"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-nostartfiles"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-Wl,-Map,</span><span class="se">\"</span><span class="s2">{{ artefact.name }}.map</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"--specs=nano.specs"</span><span class="w">
           </span><span class="p">]</span><span class="w">
@@ -754,7 +754,7 @@ defined symbols, header folder/files, etc).</li>
             </span><span class="s2">"-std=gnu11"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-fmessage-length=0"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-fsigned-char"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"-ffunction-sections"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-ffunction-sections"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-fdata-sections"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-DNDEBUG"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-DSTM32F407xx"</span><span class="p">,</span><span class="w">
@@ -777,15 +777,15 @@ defined symbols, header folder/files, etc).</li>
             </span><span class="s2">"-Wall"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-Wextra"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-Os"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"-std=gnu++11"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-std=gnu++11"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-fabi-version=0"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"-fno-exceptions"</span><span class="p">,</span><span class="w"> 
-            </span><span class="s2">"-fno-rtti"</span><span class="p">,</span><span class="w"> 
-            </span><span class="s2">"-fno-use-cxa-atexit"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-fno-exceptions"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-fno-rtti"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"-fno-use-cxa-atexit"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-fno-threadsafe-statics"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-fmessage-length=0"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-fsigned-char"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"-ffunction-sections"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-ffunction-sections"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-fdata-sections"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-DNDEBUG"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-DSTM32F407xx"</span><span class="p">,</span><span class="w">
@@ -811,12 +811,12 @@ defined symbols, header folder/files, etc).</li>
             </span><span class="s2">"-std=gnu11"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-fmessage-length=0"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-fsigned-char"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"-ffunction-sections"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-ffunction-sections"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-fdata-sections"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-Wl,--gc-sections"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"-T{{ project.absolutePath }}/linker-scripts/mem.ld"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-T{{ project.absolutePath }}/linker-scripts/mem.ld"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-T{{ project.absolutePath }}/linker-scripts/sections.ld"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"-nostartfiles"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"-nostartfiles"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"-Wl,-Map,</span><span class="se">\"</span><span class="s2">{{ artefact.name }}.map</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"--specs=nano.specs"</span><span class="w">
           </span><span class="p">]</span><span class="w">
@@ -1106,7 +1106,7 @@ for example when creating new debug launchers.</p>
 <p>Example:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"target"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> 
+  </span><span class="nl">"target"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"platform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"stm32f4-discovery"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"cpu"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"device"</span><span class="p">:</span><span class="w"> </span><span class="s2">"stm32f407vg"</span><span class="w">

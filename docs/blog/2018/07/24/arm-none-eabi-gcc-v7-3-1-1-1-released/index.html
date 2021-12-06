@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="GNU MCU Eclipse ARM Embedded GCC v7.3.1-1.1 20180724 released" />
 <script type="application/ld+json">
-{"description":"Version v7.3.1-1.1 20180724 is a new release of GNU MCU Eclipse ARM Embedded GCC.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2018/07/24/arm-none-eabi-gcc-v7-3-1-1-1-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2018/07/24/arm-none-eabi-gcc-v7-3-1-1-1-released/","headline":"GNU MCU Eclipse ARM Embedded GCC v7.3.1-1.1 20180724 released","dateModified":"2021-12-06T12:32:26+00:00","datePublished":"2018-07-24T09:09:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Version v7.3.1-1.1 20180724 is a new release of GNU MCU Eclipse ARM Embedded GCC.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2018/07/24/arm-none-eabi-gcc-v7-3-1-1-1-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2018/07/24/arm-none-eabi-gcc-v7-3-1-1-1-released/","headline":"GNU MCU Eclipse ARM Embedded GCC v7.3.1-1.1 20180724 released","dateModified":"2021-12-06T16:22:29+00:00","datePublished":"2018-07-24T09:09:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -597,31 +597,31 @@
 
 <h2 id="compliance">Compliance</h2>
 
-<p>This release follows the official 
-<a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm">GNU Arm Embedded Toolchain</a> 
-<strong>7-2018-q2-update</strong> release from June 27, 2018 and it is based on the 
+<p>This release follows the official
+<a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm">GNU Arm Embedded Toolchain</a>
+<strong>7-2018-q2-update</strong> release from June 27, 2018 and it is based on the
 <code class="language-plaintext highlighter-rouge">gcc-arm-none-eabi-7-2018-q2-update-src.tar.bz2</code> source invariant.</p>
 
 <h2 id="binaries">Binaries</h2>
 
 <p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided.</p>
 
-<p>The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bit), 
+<p>The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bit),
 and run on any distribution based on CentOS 6 or later.</p>
 
-<p>The macOS binary was built on a macOS 10.10.5 and must run on any newer 
+<p>The macOS binary was built on a macOS 10.10.5 and must run on any newer
 macOS system.</p>
 
-<p>The Windows binaries were built with mingw-w64, and run on any reasonably 
+<p>The Windows binaries were built with mingw-w64, and run on any reasonably
 recent <strong>i686</strong> and <strong>x86_64</strong> Windows machines.</p>
 
-<p>Instructions on how to install the binaries are available in the 
+<p>Instructions on how to install the binaries are available in the
 <a href="/arm-none-eabi-gcc/install/">How to install the ARM toolchain?</a>
 page.</p>
 
-<p>The toolchain is also available as an 
-<a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/arm-none-eabi-gcc">xPack</a> 
-and can be conveniently installed with 
+<p>The toolchain is also available as an
+<a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/arm-none-eabi-gcc">xPack</a>
+and can be conveniently installed with
 <a href="https://www.npmjs.com/package/xpm"><code class="language-plaintext highlighter-rouge">xpm</code></a>:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/arm-none-eabi-gcc
@@ -629,16 +629,16 @@ and can be conveniently installed with
 
 <p>This installs the latest available version.</p>
 
-<p>For better control and repeatability, the build scripts use Docker containers; 
-all files required during builds are available as a separate 
+<p>For better control and repeatability, the build scripts use Docker containers;
+all files required during builds are available as a separate
 <a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build">gnu-mcu-eclipse/arm-none-eabi-gcc-build</a>
 project.</p>
 
 <h2 id="known-problems">Known problems</h2>
 
 <ul>
-  <li>due to some changes in newlib, the definition of the <code class="language-plaintext highlighter-rouge">_EXFUN</code> macro changed 
-and the semihosting projects fail to build with a compile error in 
+  <li>due to some changes in newlib, the definition of the <code class="language-plaintext highlighter-rouge">_EXFUN</code> macro changed
+and the semihosting projects fail to build with a compile error in
 <code class="language-plaintext highlighter-rouge">system/src/newlib/_syscalls.c</code>. The problem is in the project template, and
 a fix will be available in the next release of GNU MCU Eclipse plug-ins
 <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/317">#317</a>.</li>

@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="GNU MCU Eclipse QEMU v2.8.0-6 20190517 released" />
 <script type="application/ld+json">
-{"description":"Version 2.8.0-6 20190517 is a maintenance release, to fix the bug affecting the graphical mode in GNU/Linux, introduced in the previous release.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2019/05/17/qemu-v2-8-0-6-20190517-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2019/05/17/qemu-v2-8-0-6-20190517-released/","headline":"GNU MCU Eclipse QEMU v2.8.0-6 20190517 released","dateModified":"2021-12-06T12:32:26+00:00","datePublished":"2019-05-17T12:50:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Version 2.8.0-6 20190517 is a maintenance release, to fix the bug affecting the graphical mode in GNU/Linux, introduced in the previous release.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2019/05/17/qemu-v2-8-0-6-20190517-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2019/05/17/qemu-v2-8-0-6-20190517-released/","headline":"GNU MCU Eclipse QEMU v2.8.0-6 20190517 released","dateModified":"2021-12-06T16:22:29+00:00","datePublished":"2019-05-17T12:50:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -591,7 +591,7 @@
 
         
 
-        <p>Version 2.8.0-6 20190517 is a maintenance release, to fix the bug 
+        <p>Version 2.8.0-6 20190517 is a maintenance release, to fix the bug
 affecting the graphical mode in GNU/Linux, introduced in the previous release.</p>
 
 <p><a href="https://github.com/gnu-mcu-eclipse/qemu/releases/tag/v2.8.0-6-20190517/">Binary files »</a></p>
@@ -599,10 +599,10 @@ affecting the graphical mode in GNU/Linux, introduced in the previous release.</
 <h2 id="bug-fixes">Bug fixes</h2>
 
 <ul>
-  <li>[<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/68">#68</a>] in the 
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/68">#68</a>] in the
 previous version, due to a build error, the SDL2 library did not include
 X11 support, and QEMU was not able to start in graphical mode when
-running on GNU/Linux; X11 support was added to the build environment 
+running on GNU/Linux; X11 support was added to the build environment
 and the included SDL2 was fixed.</li>
 </ul>
 
@@ -618,16 +618,16 @@ and the included SDL2 was fixed.</li>
 
 <h2 id="build-notes">Build notes</h2>
 
-<p>The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bit), 
+<p>The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bit),
 and run on any distribution based on CentOS 6 or later.</p>
 
-<p>The Windows binaries were built with mingw-w64, and run on any reasonably 
+<p>The Windows binaries were built with mingw-w64, and run on any reasonably
 recent <strong>i686</strong> and <strong>x86_64</strong> Windows machines.</p>
 
 <h2 id="easy-install">Easy install</h2>
 
-<p>QEMU is also available as an 
-<a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/qemu">xPack</a> and can be 
+<p>QEMU is also available as an
+<a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/qemu">xPack</a> and can be
 conveniently installed with <a href="https://www.npmjs.com/package/xpm"><code class="language-plaintext highlighter-rouge">xpm</code></a>:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/qemu@2.8.0-6.1
@@ -639,37 +639,36 @@ conveniently installed with <a href="https://www.npmjs.com/package/xpm"><code cl
 </code></pre></div></div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The method to select the path based on the
-xPack version was already 
-added to the Eclipse plug-in, but for now is only available in the version 
-published on the test site 
+xPack version was already
+added to the Eclipse plug-in, but for now is only available in the version
+published on the test site
 (http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-test/).</div>
 
 <h2 id="manual-install">Manual install</h2>
 
-<p>Instructions on how to install the binaries are available in the 
-<a href="/qemu-arm/install/">How to install the QEMU binaries?</a> 
+<p>Instructions on how to install the binaries are available in the
+<a href="/qemu-arm/install/">How to install the QEMU binaries?</a>
 page.</p>
 
 <h2 id="checksums">Checksums</h2>
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">e5d2e1beffc0b19d422c90ec98c4bd76e6e4036d6b2e1625cd8d93f6ac6f046a 
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">e5d2e1beffc0b19d422c90ec98c4bd76e6e4036d6b2e1625cd8d93f6ac6f046a
 gnu-mcu-eclipse-qemu-2.8.0-6-20190517-1329-centos32.tgz
 
-ab94e8d71f54e1d28fdae63b5f0d0cbd792234de371e3883583aaf920d9f64cf 
+ab94e8d71f54e1d28fdae63b5f0d0cbd792234de371e3883583aaf920d9f64cf
 gnu-mcu-eclipse-qemu-2.8.0-6-20190517-1329-centos64.tgz
 
-85c787c9d20751ba03b0557d47c268b5f06fde3dfb245b83fe1b44f45362a7b1 
+85c787c9d20751ba03b0557d47c268b5f06fde3dfb245b83fe1b44f45362a7b1
 gnu-mcu-eclipse-qemu-2.8.0-6-20190517-1329-macos.tgz
 
-4bf582db378aeaa40f324c34f80356b36c4016365607f3c7d820182de853f76f 
+4bf582db378aeaa40f324c34f80356b36c4016365607f3c7d820182de853f76f
 gnu-mcu-eclipse-qemu-2.8.0-6-20190517-1329-win32.zip
 
-894c25c79cdc9b0017e3d977725496192f37f6d536d4107e8e07a9cf4fbf9d22 
+894c25c79cdc9b0017e3d977725496192f37f6d536d4107e8e07a9cf4fbf9d22
 gnu-mcu-eclipse-qemu-2.8.0-6-20190517-1329-win64.zip
 </span></code></pre></div></div>
-
 
     </div>
 

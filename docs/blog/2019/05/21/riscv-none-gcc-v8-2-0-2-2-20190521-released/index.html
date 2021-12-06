@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="GNU MCU Eclipse RISC-V Embedded GCC v8.2.0-2.2 20190521 released" />
 <script type="application/ld+json">
-{"description":"Version v8.2.0-2.2-20190521 is a maintenance release of GNU MCU Eclipse RISC-V Embedded GCC, that fixes the previous bug affecting GDB on macOS.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2019/05/21/riscv-none-gcc-v8-2-0-2-2-20190521-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2019/05/21/riscv-none-gcc-v8-2-0-2-2-20190521-released/","headline":"GNU MCU Eclipse RISC-V Embedded GCC v8.2.0-2.2 20190521 released","dateModified":"2021-12-06T12:32:26+00:00","datePublished":"2019-05-21T12:55:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Version v8.2.0-2.2-20190521 is a maintenance release of GNU MCU Eclipse RISC-V Embedded GCC, that fixes the previous bug affecting GDB on macOS.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2019/05/21/riscv-none-gcc-v8-2-0-2-2-20190521-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2019/05/21/riscv-none-gcc-v8-2-0-2-2-20190521-released/","headline":"GNU MCU Eclipse RISC-V Embedded GCC v8.2.0-2.2 20190521 released","dateModified":"2021-12-06T16:22:29+00:00","datePublished":"2019-05-21T12:55:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -583,29 +583,29 @@
 
         
 
-        <p>Version v8.2.0-2.2-20190521 is a maintenance release of <strong>GNU MCU Eclipse 
+        <p>Version v8.2.0-2.2-20190521 is a maintenance release of <strong>GNU MCU Eclipse
 RISC-V Embedded GCC</strong>, that fixes the previous bug affecting GDB on macOS.</p>
 
 <p><a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/tag/v8.2.0-2.2-20190521/">Binary files »</a></p>
 
 <h2 id="compliance">Compliance</h2>
 
-<p>Starting with v8.2.0-2, this distribution closely follows the official 
-<a href="https://www.sifive.com">SiFive</a> 
+<p>Starting with v8.2.0-2, this distribution closely follows the official
+<a href="https://www.sifive.com">SiFive</a>
 <a href="https://github.com/sifive/freedom-tools">Freedom Tools</a> distribution.</p>
 
-<p>This release is similar to the SiFive 2019-02 release, including support for 
+<p>This release is similar to the SiFive 2019-02 release, including support for
 SiFive specific CLIC interrupts.</p>
 
 <p>The following commits were used:</p>
 
 <ul>
-  <li>the <a href="https://github.com/sifive/riscv-gcc">sifive/riscv-gcc</a> project, 
+  <li>the <a href="https://github.com/sifive/riscv-gcc">sifive/riscv-gcc</a> project,
 branch <code class="language-plaintext highlighter-rouge">sifive-gcc-8.2.0</code>, commit
 <a href="https://github.com/sifive/riscv-gcc/tree/242abcaff697d0a1ea12dccc975465e1bfeb8331">242abcaff6</a>
 from from 5 April 2019</li>
-  <li>the <a href="https://github.com/sifive/riscv-binutils-gdb">sifive/riscv-binutils-gdb</a> 
-project, branch <code class="language-plaintext highlighter-rouge">sifive-binutils-2.32</code>, commit 
+  <li>the <a href="https://github.com/sifive/riscv-binutils-gdb">sifive/riscv-binutils-gdb</a>
+project, branch <code class="language-plaintext highlighter-rouge">sifive-binutils-2.32</code>, commit
 <a href="https://github.com/sifive/riscv-binutils-gdb/tree/164267155c96f91472a539ca78ac919993bc5b4e">164267155c</a>
 from 28 February 2019</li>
   <li>the <a href="https://github.com/sifive/riscv-newlib">sifive/riscv-newlib</a> project,
@@ -613,14 +613,14 @@ commit <a href="https://github.com/sifive/riscv-newlib/tree/42c2e3fb9f557d59b76d
 from 17 November 2018</li>
 </ul>
 
-<p>GDB was upstreamed and does not require SiFive specific patches, 
-so the current build uses 
-<code class="language-plaintext highlighter-rouge">git://sourceware.org/git/binutils-gdb.git</code>, the <code class="language-plaintext highlighter-rouge">c8aa0bb</code> commit from 
+<p>GDB was upstreamed and does not require SiFive specific patches,
+so the current build uses
+<code class="language-plaintext highlighter-rouge">git://sourceware.org/git/binutils-gdb.git</code>, the <code class="language-plaintext highlighter-rouge">c8aa0bb</code> commit from
 28 Feb 2019.</p>
 
 <h2 id="improvements">Improvements</h2>
 
-<p>All architectures, ABIs and libraries supported by the <code class="language-plaintext highlighter-rouge">riscv64-unknown-elf</code> 
+<p>All architectures, ABIs and libraries supported by the <code class="language-plaintext highlighter-rouge">riscv64-unknown-elf</code>
 toolchain are also supported, with the following improvements:</p>
 
 <ul>
@@ -635,19 +635,19 @@ toolchain are also supported, with the following improvements:</p>
 
 <p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided.</p>
 
-<p>The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bit), 
+<p>The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bit),
 and run on any distribution based on CentOS 6 or later.</p>
 
-<p>The Windows binaries were built with mingw-w64, and run on any reasonably 
+<p>The Windows binaries were built with mingw-w64, and run on any reasonably
 recent <strong>i686</strong> and <strong>x86_64</strong> Windows machines.</p>
 
-<p>Instructions on how to install the binaries are available in the 
-<a href="/riscv-none-embed-gcc/install/">How to install the RISC-V toolchain?</a> 
+<p>Instructions on how to install the binaries are available in the
+<a href="/riscv-none-embed-gcc/install/">How to install the RISC-V toolchain?</a>
 page.</p>
 
-<p>The toolchain is also available as an 
-<a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/riscv-none-gcc">xPack</a> 
-and can be conveniently installed with 
+<p>The toolchain is also available as an
+<a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/riscv-none-gcc">xPack</a>
+and can be conveniently installed with
 <a href="https://www.npmjs.com/package/xpm"><code class="language-plaintext highlighter-rouge">xpm</code></a>:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/riscv-none-gcc
@@ -655,9 +655,9 @@ and can be conveniently installed with
 
 <p>This installs the latest available version.</p>
 
-<p>For better control and repeatability, the build scripts use Docker 
-containers; all files required during builds are available as a separate 
-<a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build">gnu-mcu-eclipse/riscv-none-gcc-build</a> 
+<p>For better control and repeatability, the build scripts use Docker
+containers; all files required during builds are available as a separate
+<a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build">gnu-mcu-eclipse/riscv-none-gcc-build</a>
 project.</p>
 
 <h2 id="tests">Tests</h2>
@@ -665,7 +665,7 @@ project.</p>
 <p>The binaries were testes on Windows 10 Pro 32/64-bit, Ubuntu 18 LTS 64-bit,
 Xubuntu 18 LTS 32-bit and macOS 10.13.</p>
 
-<p>The tests consist in building and debugging some 
+<p>The tests consist in building and debugging some
 <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build/tree/master/tests/eclipse">simple Eclipse projects</a>
 available in the build project.</p>
 
@@ -683,19 +683,19 @@ executed again.</p>
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">b36a7633780b98f357ea88b5d80af114b735dd837c9bf74c1d5ba436d2e5def3 
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">b36a7633780b98f357ea88b5d80af114b735dd837c9bf74c1d5ba436d2e5def3
 gnu-mcu-eclipse-riscv-none-gcc-8.2.0-2.2-20190521-0004-centos32.tgz
 
-3b9d585f6851b137b3938fb288c5e95d13d0580002fa6ca82b754fcffbff508c 
+3b9d585f6851b137b3938fb288c5e95d13d0580002fa6ca82b754fcffbff508c
 gnu-mcu-eclipse-riscv-none-gcc-8.2.0-2.2-20190521-0004-centos64.tgz
 
-3bc735ff39820e7775b8e64516d1b89e562a6a744dc591519e7200571aa7aa6c 
+3bc735ff39820e7775b8e64516d1b89e562a6a744dc591519e7200571aa7aa6c
 gnu-mcu-eclipse-riscv-none-gcc-8.2.0-2.2-20190521-0004-macos.tgz
 
-cba4a66bebc1cef9c0612254b9c7f50a4ff5f9c4d7ab20904bc8d64ad5acb016 
+cba4a66bebc1cef9c0612254b9c7f50a4ff5f9c4d7ab20904bc8d64ad5acb016
 gnu-mcu-eclipse-riscv-none-gcc-8.2.0-2.2-20190521-0004-win32.zip
 
-3997402997d7606ff4f744d9602ec098f269c0df23bcce8117aff29cd46df971 
+3997402997d7606ff4f744d9602ec098f269c0df23bcce8117aff29cd46df971
 gnu-mcu-eclipse-riscv-none-gcc-8.2.0-2.2-20190521-0004-win64.zip
 </span></code></pre></div></div>
 

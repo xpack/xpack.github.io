@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.6 20190510 released" />
 <script type="application/ld+json">
-{"description":"Version v8.2.1-1.6 20190510 is a maintenance release of GNU MCU Eclipse ARM Embedded GCC that (finally) fixes the bugs affecting Windows LTO builds, present in the previous release.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/","headline":"GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.6 20190510 released","dateModified":"2021-12-06T12:32:26+00:00","datePublished":"2019-05-10T03:05:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Version v8.2.1-1.6 20190510 is a maintenance release of GNU MCU Eclipse ARM Embedded GCC that (finally) fixes the bugs affecting Windows LTO builds, present in the previous release.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/","headline":"GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.6 20190510 released","dateModified":"2021-12-06T16:22:29+00:00","datePublished":"2019-05-10T03:05:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -595,49 +595,49 @@
 
         
 
-        <p>Version v8.2.1-1.6 20190510 is a maintenance release of 
-<strong>GNU MCU Eclipse ARM Embedded GCC</strong> that (finally) fixes the bugs 
+        <p>Version v8.2.1-1.6 20190510 is a maintenance release of
+<strong>GNU MCU Eclipse ARM Embedded GCC</strong> that (finally) fixes the bugs
 affecting Windows LTO builds, present in the previous release.</p>
 
 <p><a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases/tag/v8.2.1-1.6/">Binary files »</a></p>
 
 <h2 id="compliance">Compliance</h2>
 
-<p>This release follows the official 
-<a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm">GNU Arm Embedded Toolchain</a> 
-<strong>8-2018-q4-major</strong> release from December 20, 2018 and it is based on the 
+<p>This release follows the official
+<a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm">GNU Arm Embedded Toolchain</a>
+<strong>8-2018-q4-major</strong> release from December 20, 2018 and it is based on the
 <code class="language-plaintext highlighter-rouge">gcc-arm-none-eabi-8-2018-q4-major-src.tar.bz2</code> source invariant,
-which include GCC 8.2.1. GDB was built with the latest available 
+which include GCC 8.2.1. GDB was built with the latest available
 sources (8.3.50).</p>
 
 <h2 id="changes">Changes</h2>
 
-<p>Compared to the ARM distribution, the build procedure is more or less the 
-same and there should be no functional differences, except the following 
+<p>Compared to the ARM distribution, the build procedure is more or less the
+same and there should be no functional differences, except the following
 bug fixes:</p>
 
 <ul>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build/issues/4">#4</a>]
-the Windows paths with spaces bug apparently was caused by an old version of 
-and with the new version (5.0.4) the 
-<a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=89249">89249</a> 
+the Windows paths with spaces bug apparently was caused by an old version of
+and with the new version (5.0.4) the
+<a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=89249">89249</a>
 <code class="language-plaintext highlighter-rouge">gcc.c</code> patch is no longer needed;</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build/issues/3">#3</a>]
 due to a problem in the GCC configure script and the specifics of the static
-build, LTO was not effective on Windows, and the initial workaround proved 
+build, LTO was not effective on Windows, and the initial workaround proved
 not effective either; in the new build environment the configure script is
 enables LTO and it is functional on windows too;</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build/issues/1">#1</a>]
 the <code class="language-plaintext highlighter-rouge">liblto_plugin</code> copied/linked to the <code class="language-plaintext highlighter-rouge">lib/bdf-plugins</code> for <code class="language-plaintext highlighter-rouge">ar</code>
 to find it and be able to process archives with LTO objects</li>
-  <li>a patch was applied to binutils to fix the 32-bit objcopy bug 
+  <li>a patch was applied to binutils to fix the 32-bit objcopy bug
 <a href="https://sourceware.org/bugzilla/show_bug.cgi?id=24065">24065</a></li>
   <li>a patch was applied to gcc to fix the Windows LTO with -g bug
 <a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=89183">89183</a></li>
 </ul>
 
-<p>Due to a large number of fixes needed, GDB was built with the 
-latest Git commit bda678b9 from 2019-05-09, 
+<p>Due to a large number of fixes needed, GDB was built with the
+latest Git commit bda678b9 from 2019-05-09,
 corresponding to GDB 8.3.50, to fix
 the bugs affecting C++ LTO projects
 <a href="https://sourceware.org/bugzilla/show_bug.cgi?id=24145">24145</a>.</p>
@@ -654,22 +654,22 @@ API, not yet available at the moment of this release.</p>
 
 <p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided.</p>
 
-<p>The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bit), 
+<p>The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bit),
 and run on any distribution based on CentOS 6 or later.</p>
 
-<p>The macOS binary was built on a macOS 10.10.5 and must run on any newer 
+<p>The macOS binary was built on a macOS 10.10.5 and must run on any newer
 macOS system.</p>
 
-<p>The Windows binaries were built with mingw-w64, and run on any reasonably 
+<p>The Windows binaries were built with mingw-w64, and run on any reasonably
 recent <strong>i686</strong> and <strong>x86_64</strong> Windows machines.</p>
 
-<p>Instructions on how to install the binaries are available in the 
+<p>Instructions on how to install the binaries are available in the
 <a href="/arm-none-eabi-gcc/install/">How to install the ARM toolchain?</a>
 page.</p>
 
-<p>The toolchain is also available as an 
-<a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/arm-none-eabi-gcc">xPack</a> 
-and can be conveniently installed with 
+<p>The toolchain is also available as an
+<a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/arm-none-eabi-gcc">xPack</a>
+and can be conveniently installed with
 <a href="https://www.npmjs.com/package/xpm"><code class="language-plaintext highlighter-rouge">xpm</code></a>:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/arm-none-eabi-gcc
@@ -677,8 +677,8 @@ and can be conveniently installed with
 
 <p>This installs the latest available version.</p>
 
-<p>For better control and repeatability, the build scripts use Docker containers; 
-all files required during builds are available as a separate 
+<p>For better control and repeatability, the build scripts use Docker containers;
+all files required during builds are available as a separate
 <a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build">gnu-mcu-eclipse/arm-none-eabi-gcc-build</a>
 project.</p>
 
@@ -687,7 +687,7 @@ project.</p>
 <p>The binaries were testes on Windows 10 Pro 32/64-bit, Ubuntu 18 LTS 64-bit,
 Xubuntu 18 LTS 32-bit and macOS 10.13.</p>
 
-<p>The tests consist in building and debugging some 
+<p>The tests consist in building and debugging some
 <a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build/tree/master/tests/eclipse">simple Eclipse projects</a>
 available in the build project.</p>
 
@@ -699,29 +699,29 @@ executed again.</p>
 
 <h3 id="illegal-links-in-libexec-for-linux">Illegal links in <code class="language-plaintext highlighter-rouge">libexec</code> for Linux</h3>
 
-<p>Although the current release is fully functional, due to a problem with 
-the GCC make, the build created links with illegal names in the <code class="language-plaintext highlighter-rouge">libexec</code> 
-folders. The current code used to unpack the archives does not complain, 
-but future versions may include more thorough checks and fail. A new 
+<p>Although the current release is fully functional, due to a problem with
+the GCC make, the build created links with illegal names in the <code class="language-plaintext highlighter-rouge">libexec</code>
+folders. The current code used to unpack the archives does not complain,
+but future versions may include more thorough checks and fail. A new
 release to fix this issue will be available soon.</p>
 
 <h2 id="checksums">Checksums</h2>
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">a4fc37f897ff50a3e3807e87db60ccb0844f37eb618f0935ece94a581fd98eec 
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">a4fc37f897ff50a3e3807e87db60ccb0844f37eb618f0935ece94a581fd98eec
 gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.6-20190510-1829-centos32.tgz
 
-e85df3bdc9b8e9c91e00924feb6f7f9909c94af08bd7e097d4ab857e0facc316 
+e85df3bdc9b8e9c91e00924feb6f7f9909c94af08bd7e097d4ab857e0facc316
 gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.6-20190510-1829-centos64.tgz
 
-63cdda07c539d2a43df89d7ec17b2ab4119ebfe4a5c46295c2bc1821755b093b 
+63cdda07c539d2a43df89d7ec17b2ab4119ebfe4a5c46295c2bc1821755b093b
 gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.6-20190510-1829-macos.tgz
 
-780cda157454dd073132c52aa46f2d43b1f325a1f38a82c3283de76492899fb1 
+780cda157454dd073132c52aa46f2d43b1f325a1f38a82c3283de76492899fb1
 gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.6-20190510-1829-win32.zip
 
-a88823b4cbb9e060975f14e1e839eace1cf0cb26386f99d52e692b15455ec3dd 
+a88823b4cbb9e060975f14e1e839eace1cf0cb26386f99d52e692b15455ec3dd
 gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.6-20190510-1829-win64.zip
 </span></code></pre></div></div>
 

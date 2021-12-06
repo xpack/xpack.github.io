@@ -1276,6 +1276,16 @@
 
 
 {
+"title": "xPack CMake 3.20.6-2 released",
+"tags": "releasescmakebuild",
+"keywords": "",
+"url": "/blog/2021/12/06/cmake-v3-20-6-2-released/",
+"summary": "<p>Version <strong>3.20.6-2</strong> is a maintenance release; it <strong>adds support for Apple Silicon</strong> and updates to the latest build scripts.</p>"
+}
+,
+
+
+{
 "title": "xPack Ninja Build 1.10.2-5 released",
 "tags": "releasesninja-buildninjabuildspeedsmall",
 "keywords": "",
