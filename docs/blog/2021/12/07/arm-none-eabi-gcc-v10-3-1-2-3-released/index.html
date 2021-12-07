@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack Arm Embedded GCC 10.3.1-2.3 released" />
 <script type="application/ld+json">
-{"description":"The xPack Arm Embedded GCC is a standalone cross-platform binary distribution of GNU Arm Embedded Toolchain.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/12/07/arm-none-eabi-gcc-v10-3-1-2-3-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2021/12/07/arm-none-eabi-gcc-v10-3-1-2-3-released/","headline":"xPack Arm Embedded GCC 10.3.1-2.3 released","dateModified":"2021-12-07T18:16:42+00:00","datePublished":"2021-12-07T13:32:25+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"The xPack Arm Embedded GCC is a standalone cross-platform binary distribution of GNU Arm Embedded Toolchain.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/12/07/arm-none-eabi-gcc-v10-3-1-2-3-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2021/12/07/arm-none-eabi-gcc-v10-3-1-2-3-released/","headline":"xPack Arm Embedded GCC 10.3.1-2.3 released","dateModified":"2021-12-07T18:40:58+00:00","datePublished":"2021-12-07T13:32:25+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -803,7 +803,7 @@ is set in the environment, it should not interfere with the xPack binaries.</p>
 has a priority lower than <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code>, and does not tolerate setting
 it in the environment.</p>
 
-<h3 id="rpath"><code class="language-plaintext highlighter-rouge">@rpath</code></h3>
+<h3 id="rpath-and-loader_path"><code class="language-plaintext highlighter-rouge">@rpath</code> and <code class="language-plaintext highlighter-rouge">@loader_path</code></h3>
 
 <p>Similarly, on macOS, the binaries are adjusted with <code class="language-plaintext highlighter-rouge">install_name_tool</code> to use a
 relative path.</p>
