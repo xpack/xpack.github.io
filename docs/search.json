@@ -1276,6 +1276,16 @@
 
 
 {
+"title": "xPack Arm Embedded GCC 10.3.1-2.3 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
+"keywords": "",
+"url": "/blog/2021/12/07/arm-none-eabi-gcc-v10-3-1-2-3-released/",
+"summary": "<p>Version <strong>10.3.1-2.3</strong> is a maintenance release;  it <strong>adds support for Apple Silicon</strong> and updates to the latest build scripts.</p>"
+}
+,
+
+
+{
 "title": "xPack Meson Build 0.59.4-1 released",
 "tags": "releasesmeson-buildmesonbuildpythonninja",
 "keywords": "",

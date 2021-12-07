@@ -5,9 +5,33 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 06 Dec 2021 20:02:37 +0000</pubDate>
-        <lastBuildDate>Mon, 06 Dec 2021 20:02:37 +0000</lastBuildDate>
+        <pubDate>Tue, 07 Dec 2021 13:40:56 +0000</pubDate>
+        <lastBuildDate>Tue, 07 Dec 2021 13:40:56 +0000</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+        <item>
+            <title>xPack Arm Embedded GCC 10.3.1-2.3 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/arm-none-eabi-gcc/&quot;&gt;The xPack Arm Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/open-source/gnu-toolchain/gnu-rm&quot;&gt;GNU Arm Embedded Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Tue, 07 Dec 2021 13:32:25 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/12/07/arm-none-eabi-gcc-v10-3-1-2-3-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/12/07/arm-none-eabi-gcc-v10-3-1-2-3-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>arm</category>
+            
+            <category>arm-none-eabi-gcc</category>
+            
+            <category>gcc</category>
+            
+            <category>binaries</category>
+            
+            <category>c++</category>
+            
+            <category>exceptions</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Meson Build 0.59.4-1 released</title>
@@ -193,20 +217,6 @@
             <category>releases</category>
             
             <category>clang</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack GCC 11.2.0-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/gcc/&quot;&gt;The xPack GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://gcc.org&quot;&gt;GCC&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Wed, 20 Oct 2021 11:12:55 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2021/10/20/gcc-v11-2-0-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2021/10/20/gcc-v11-2-0-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>gcc</category>
             
             
         </item>
