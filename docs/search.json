@@ -1280,7 +1280,7 @@
 "tags": "releasesopenocd",
 "keywords": "",
 "url": "/blog/2021/12/07/openocd-v0-11-0-3-released/",
-"summary": "<p>Version <strong>0.11.0-3</strong> is a maintenance release; it updates to the latest upstream master, <strong>adds support for Apple Silicon</strong> and updates to the latest build scripts</p>"
+"summary": "<p>Version <strong>0.11.0-3</strong> is a maintenance release; it updates to the latest upstream master, <strong>adds support for Apple Silicon</strong> and uses the latest build scripts.</p>"
 }
 ,
 
@@ -1290,7 +1290,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
 "keywords": "",
 "url": "/blog/2021/12/07/arm-none-eabi-gcc-v10-3-1-2-3-released/",
-"summary": "<p>Version <strong>10.3.1-2.3</strong> is a maintenance release;  it <strong>adds support for Apple Silicon</strong> and updates to the latest build scripts.</p>"
+"summary": "<p>Version <strong>10.3.1-2.3</strong> is a maintenance release;  it <strong>adds support for Apple Silicon</strong> and uses the latest build scripts.</p>"
 }
 ,
 
@@ -1300,7 +1300,7 @@
 "tags": "releasesmeson-buildmesonbuildpythonninja",
 "keywords": "",
 "url": "/blog/2021/12/06/meson-build-v0-59-4-1-released/",
-"summary": "<p>Version <strong>0.59.4-1</strong> is a new release; it follows the upstream release. It also <strong>adds support for Apple Silicon</strong> and updates to the latest build scripts.</p>"
+"summary": "<p>Version <strong>0.59.4-1</strong> is a new release; it follows the upstream release. It also <strong>adds support for Apple Silicon</strong> and uses the latest build scripts.</p>"
 }
 ,
 
@@ -1310,7 +1310,7 @@
 "tags": "releasescmakebuild",
 "keywords": "",
 "url": "/blog/2021/12/06/cmake-v3-20-6-2-released/",
-"summary": "<p>Version <strong>3.20.6-2</strong> is a maintenance release; it <strong>adds support for Apple Silicon</strong> and updates to the latest build scripts.</p>"
+"summary": "<p>Version <strong>3.20.6-2</strong> is a maintenance release; it <strong>adds support for Apple Silicon</strong> and uses the latest build scripts.</p>"
 }
 ,
 
@@ -1320,7 +1320,7 @@
 "tags": "releasesninja-buildninjabuildspeedsmall",
 "keywords": "",
 "url": "/blog/2021/12/06/ninja-build-v1-10-2-5-released/",
-"summary": "<p>Version <strong>1.10.2-5</strong> is a maintenance release; it <strong>adds support for Apple Silicon</strong> and updates to the latest build scripts.</p>"
+"summary": "<p>Version <strong>1.10.2-5</strong> is a maintenance release; it <strong>adds support for Apple Silicon</strong> and uses the latest build scripts.</p>"
 }
 ,
 
