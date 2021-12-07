@@ -5,9 +5,23 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 07 Dec 2021 13:40:56 +0000</pubDate>
-        <lastBuildDate>Tue, 07 Dec 2021 13:40:56 +0000</lastBuildDate>
+        <pubDate>Tue, 07 Dec 2021 18:33:42 +0000</pubDate>
+        <lastBuildDate>Tue, 07 Dec 2021 18:33:42 +0000</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+        <item>
+            <title>xPack OpenOCD 0.11.0-3 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/openocd/&quot;&gt;The xPack OpenOCD&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://openocd.org&quot;&gt;OpenOCD&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Tue, 07 Dec 2021 18:11:14 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/12/07/openocd-v0-11-0-3-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/12/07/openocd-v0-11-0-3-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>openocd</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Arm Embedded GCC 10.3.1-2.3 released</title>
@@ -203,20 +217,6 @@
             <category>c++</category>
             
             <category>exceptions</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack LLVM clang 12.0.1-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/clang/&quot;&gt;The xPack LLVM clang&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://clang.org&quot;&gt;LLVM clang&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Thu, 21 Oct 2021 21:51:58 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2021/10/21/clang-v12-0-1-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2021/10/21/clang-v12-0-1-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>clang</category>
             
             
         </item>
