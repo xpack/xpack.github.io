@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to create a new xPack Git repository" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/how-to-new-git/"},"@type":"BlogPosting","url":"https://xpack.github.io/develop/how-to-new-git/","headline":"How to create a new xPack Git repository","dateModified":"2021-12-07T19:45:56+00:00","datePublished":"2019-07-09T14:48:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/how-to-new-git/"},"@type":"BlogPosting","url":"https://xpack.github.io/develop/how-to-new-git/","headline":"How to create a new xPack Git repository","dateModified":"2021-12-26T09:47:33+00:00","datePublished":"2019-07-09T14:48:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -692,7 +692,12 @@ choice for xPacks, but any other license of your choice is also ok</li>
   </li>
   <li>select the <strong>Settings</strong> tab
     <ul>
-      <li>in the <strong>Features</strong> section, disable the <strong>Wikis</strong> and <strong>Projects</strong> options</li>
+      <li>in the <strong>Features</strong> section
+        <ul>
+          <li>disable the <strong>Wikis</strong> and <strong>Projects</strong> options</li>
+          <li>enable <strong>Discussions</strong></li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ul>
@@ -706,11 +711,11 @@ choice for xPacks, but any other license of your choice is also ok</li>
 small <strong>Clone to HTTPS</strong> window</li>
   <li>click the <strong>Copy</strong> icon, or explicitly copy the URL</li>
   <li>in a terminal window, in a place of our choice, create a folder
-to store all xPacks (for example it can be named <code class="language-plaintext highlighter-rouge">xpacks</code>):</li>
+to store all xPacks (for example it can be named <code class="language-plaintext highlighter-rouge">xPacks</code>):</li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> xpacks
-<span class="nb">cd </span>xpacks
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> xPacks
+<span class="nb">cd </span>xPacks
 git clone https://github.com/&lt;user&gt;/&lt;project&gt;.git &lt;project&gt;.git
 </code></pre></div></div>
 
@@ -787,7 +792,7 @@ organise the branches, for consistency with xPacks that use 3rd
 party content, it is recommended to use an <code class="language-plaintext highlighter-rouge">xpack</code> branch.</p>
 
 <p>In this case, to warn users about this configuration, edit
-the <code class="language-plaintext highlighter-rouge">README.md</code> file and replace its entire content with:</p>
+the <code class="language-plaintext highlighter-rouge">README.md</code> file; keep the header line and replace the content with:</p>
 
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This project does not use the `master` branch, please
 switch to the `xpack` branch to get the project files.
@@ -1069,10 +1074,10 @@ only the <code class="language-plaintext highlighter-rouge">package.json</code>,
 
 <p>In general, depending on the <em>disruption</em> degree, chose one of the following:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> &lt;project&gt;.git
-<span class="gp">$</span><span class="w"> </span>npm version patch
-<span class="gp">$</span><span class="w"> </span>npm version minor
-<span class="gp">$</span><span class="w"> </span>npm version major
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> &lt;project&gt;.git
+npm version patch
+npm version minor
+npm version major
 </code></pre></div></div>
 
 <p>With Sourcetree or Git:</p>
@@ -1100,7 +1105,7 @@ only the <code class="language-plaintext highlighter-rouge">package.json</code>,
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2021 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Dec 7, 2021<br/> Site last generated: Dec 7, 2021 <br />
+<span>Page last updated:</span> Dec 26, 2021<br/> Site last generated: Dec 26, 2021 <br />
                 </div>
             </div>
 </footer>
