@@ -5,14 +5,32 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 26 Dec 2021 10:15:17 +0000</pubDate>
-        <lastBuildDate>Sun, 26 Dec 2021 10:15:17 +0000</lastBuildDate>
+        <pubDate>Tue, 28 Dec 2021 12:35:49 +0000</pubDate>
+        <lastBuildDate>Tue, 28 Dec 2021 12:35:49 +0000</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+        <item>
+            <title>xPack xpm v0.11.2 released</title>
+            <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; is a&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt; dependencies.&lt;/p&gt;</description>
+            <pubDate>Tue, 28 Dec 2021 12:16:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2021/12/28/xpm-v0-11-2-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2021/12/28/xpm-v0-11-2-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>xpm</category>
+            
+            <category>package</category>
+            
+            <category>manager</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack xpm v0.11.0 released</title>
             <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; is a&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt; dependencies.&lt;/p&gt;</description>
-            <pubDate>Sun, 26 Dec 2021 08:12:00 +0000</pubDate>
+            <pubDate>Sun, 26 Dec 2021 09:12:00 +0000</pubDate>
             <link>https://xpack.github.io/blog/2021/12/26/xpm-v0-11-0-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2021/12/26/xpm-v0-11-0-released/</guid>
             
@@ -177,28 +195,6 @@
             <pubDate>Sat, 06 Nov 2021 10:12:10 +0000</pubDate>
             <link>https://xpack.github.io/blog/2021/11/06/riscv-none-embed-gcc-v10-2-0-1-1-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2021/11/06/riscv-none-embed-gcc-v10-2-0-1-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>riscv</category>
-            
-            <category>riscv-none-embed-gcc</category>
-            
-            <category>gcc</category>
-            
-            <category>binaries</category>
-            
-            <category>c++</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack GNU RISC-V Embedded GCC 10.1.0-1.2 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/riscv-none-embed-gcc/&quot;&gt;The xPack GNU RISC-V Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of the&lt;a href=&quot;https://github.com/sifive/freedom-tools/releases&quot;&gt;SiFive RISC-V GCC&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Thu, 04 Nov 2021 11:50:38 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2021/11/04/riscv-none-embed-gcc-v10-1-0-1-2-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2021/11/04/riscv-none-embed-gcc-v10-1-0-1-2-released/</guid>
             
             <category>releases</category>
             

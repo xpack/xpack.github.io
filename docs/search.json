@@ -1276,6 +1276,16 @@
 
 
 {
+"title": "xPack xpm v0.11.2 released",
+"tags": "releasesxpmpackagemanager",
+"keywords": "",
+"url": "/blog/2021/12/28/xpm-v0-11-2-released/",
+"summary": "<p>Version <strong>0.11.2</strong> is a maintenance release; it fixes a recursion and improves error reporting.</p>"
+}
+,
+
+
+{
 "title": "xPack xpm v0.11.0 released",
 "tags": "releasesxpmpackagemanager",
 "keywords": "",
