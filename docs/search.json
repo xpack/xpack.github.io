@@ -113,10 +113,10 @@
 
 
 {
-"title": "The xPack GNU RISC-V Embedded GCC Frequently Asked Questions",
+"title": "The xPack Windows Build Tools Frequently Asked Questions",
 "tags": "",
 "keywords": "",
-"url": "/riscv-none-embed-gcc/faq/",
+"url": "/windows-build-tools/faq/",
 "summary": ""
 }
 ,
@@ -135,6 +135,17 @@
 
 
 {
+"title": "The xPack OpenOCD Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/openocd/faq/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "The xPack GNU Arm Embedded GCC Frequently Asked Questions",
 "tags": "",
 "keywords": "",
@@ -146,21 +157,10 @@
 
 
 {
-"title": "The xPack QEMU Arm Frequently Asked Questions",
+"title": "The xPack GNU RISC-V Embedded GCC Frequently Asked Questions",
 "tags": "",
 "keywords": "",
-"url": "/qemu-arm/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The xPack Meson Build Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/meson-build/faq/",
+"url": "/riscv-none-embed-gcc/faq/",
 "summary": ""
 }
 ,
@@ -179,6 +179,17 @@
 
 
 {
+"title": "The xPack QEMU Arm Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/qemu-arm/faq/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "The xPack Ninja Build Frequently Asked Questions",
 "tags": "",
 "keywords": "",
@@ -190,21 +201,10 @@
 
 
 {
-"title": "The xPack Windows Build Tools Frequently Asked Questions",
+"title": "The xPack Meson Build Frequently Asked Questions",
 "tags": "",
 "keywords": "",
-"url": "/windows-build-tools/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The xPack OpenOCD Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/openocd/faq/",
+"url": "/meson-build/faq/",
 "summary": ""
 }
 ,
@@ -291,39 +291,6 @@
 
 
 
-{
-"title": "The xPack Build Box",
-"tags": "",
-"keywords": "",
-"url": "/xbb/",
-"summary": "<p>An elaborated environment for building binary xPacks.</p>"
-}
-,
-
-
-
-
-
-{
-"title": "xPack Developer info",
-"tags": "",
-"keywords": "",
-"url": "/develop/",
-"summary": "<p>Resources for xPack developers.</p>"
-}
-,
-
-
-
-{
-"title": "Maintainer info",
-"tags": "",
-"keywords": "",
-"url": "/maintain/",
-"summary": "<p>Resources for the xPack projects maintainers.</p>"
-}
-,
-
 
 
 {
@@ -332,83 +299,6 @@
 "keywords": "LLVMclangc++",
 "url": "/clang/",
 "summary": "<p>A binary distribution of the LLVM clang.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack GNU RISC-V Embedded GCC",
-"tags": "",
-"keywords": "riscv-none-embed-gccriscvgccembedded",
-"url": "/riscv-none-embed-gcc/",
-"summary": "<p>A binary distribution of GNU RISC-V Embedded GCC.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack CMake",
-"tags": "",
-"keywords": "cmake",
-"url": "/cmake/",
-"summary": "<p>A binary distribution of CMake.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack GNU Arm Embedded GCC",
-"tags": "",
-"keywords": "arm-none-eabi-gccarmgccembedded",
-"url": "/arm-none-eabi-gcc/",
-"summary": "<p>A binary distribution of GNU Arm Embedded GCC.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack QEMU Arm",
-"tags": "",
-"keywords": "qemuarmcortex-mgraphic",
-"url": "/qemu-arm/",
-"summary": "<p>A binary distribution of QEMU Arm.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack Meson Build",
-"tags": "",
-"keywords": "meson-build",
-"url": "/meson-build/",
-"summary": "<p>A binary distribution of Meson Build.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack GNU Compiler Collection (GCC)",
-"tags": "",
-"keywords": "gnugccc++",
-"url": "/gcc/",
-"summary": "<p>A binary distribution of the GNU Compiler Collection.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack Ninja Build",
-"tags": "",
-"keywords": "ninja-build",
-"url": "/ninja-build/",
-"summary": "<p>A binary distribution of Ninja Build.</p>"
 }
 ,
 
@@ -426,6 +316,17 @@
 
 
 {
+"title": "The xPack CMake",
+"tags": "",
+"keywords": "cmake",
+"url": "/cmake/",
+"summary": "<p>A binary distribution of CMake.</p>"
+}
+,
+
+
+
+{
 "title": "The xPack OpenOCD",
 "tags": "",
 "keywords": "openocd",
@@ -437,11 +338,66 @@
 
 
 {
-"title": "The xPack Metadata",
+"title": "The xPack GNU Arm Embedded GCC",
 "tags": "",
-"keywords": "",
-"url": "/metadata/",
-"summary": "<p>The metadata used by xPack tools.</p>"
+"keywords": "arm-none-eabi-gccarmgccembedded",
+"url": "/arm-none-eabi-gcc/",
+"summary": "<p>A binary distribution of GNU Arm Embedded GCC.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack GNU RISC-V Embedded GCC",
+"tags": "",
+"keywords": "riscv-none-embed-gccriscvgccembedded",
+"url": "/riscv-none-embed-gcc/",
+"summary": "<p>A binary distribution of GNU RISC-V Embedded GCC.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack GNU Compiler Collection (GCC)",
+"tags": "",
+"keywords": "gnugccc++",
+"url": "/gcc/",
+"summary": "<p>A binary distribution of the GNU Compiler Collection.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack QEMU Arm",
+"tags": "",
+"keywords": "qemuarmcortex-mgraphic",
+"url": "/qemu-arm/",
+"summary": "<p>A binary distribution of QEMU Arm.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Ninja Build",
+"tags": "",
+"keywords": "ninja-build",
+"url": "/ninja-build/",
+"summary": "<p>A binary distribution of Ninja Build.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Meson Build",
+"tags": "",
+"keywords": "meson-build",
+"url": "/meson-build/",
+"summary": "<p>A binary distribution of Meson Build.</p>"
 }
 ,
 
@@ -459,15 +415,57 @@
 
 
 {
-"title": "The xPack Build Configurator",
+"title": "Maintainer info",
 "tags": "",
-"keywords": "make",
-"url": "/xpcdl/",
-"summary": "<p>A tool to manage project configurations, inspired by eCos CDL, but with the configuration files in JSON (in design phase).</p>"
+"keywords": "",
+"url": "/maintain/",
+"summary": "<p>Resources for the xPack projects maintainers.</p>"
 }
 ,
 
 
+
+{
+"title": "The xPack Metadata",
+"tags": "",
+"keywords": "",
+"url": "/metadata/",
+"summary": "<p>The metadata used by xPack tools.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Build Box",
+"tags": "",
+"keywords": "",
+"url": "/xbb/",
+"summary": "<p>An elaborated environment for building binary xPacks.</p>"
+}
+,
+
+
+
+{
+"title": "xPack Developer info",
+"tags": "",
+"keywords": "",
+"url": "/develop/",
+"summary": "<p>Resources for xPack developers.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Build Generator",
+"tags": "",
+"keywords": "make",
+"url": "/xpmake/",
+"summary": "<p>An advanced tool to build complex projects, inspired by CMake, but with the configuration files in JSON and actions in JavaScript (in design phase).</p>"
+}
+,
 
 
 
@@ -479,6 +477,8 @@
 "summary": "<p>A tool to build day to day projects without having to manually write make files, with an emphasis on C/C++ and embedded applications, inspired by Eclipse CDT managed builder (work in progress).</p>"
 }
 ,
+
+
 
 
 
@@ -515,16 +515,18 @@
 
 
 
-
-
 {
-"title": "The xPack Build Generator",
+"title": "The xPack Build Configurator",
 "tags": "",
 "keywords": "make",
-"url": "/xpmake/",
-"summary": "<p>An advanced tool to build complex projects, inspired by CMake, but with the configuration files in JSON and actions in JavaScript (in design phase).</p>"
+"url": "/xpcdl/",
+"summary": "<p>A tool to manage project configurations, inspired by eCos CDL, but with the configuration files in JSON (in design phase).</p>"
 }
 ,
+
+
+
+
 
 
 
@@ -536,8 +538,6 @@
 "summary": "<p>A light and fast tool to build generic projects, inspired by Ninja Build but with the configuration files in JSON (in design phase).</p>"
 }
 ,
-
-
 
 
 
@@ -575,10 +575,10 @@
 
 
 {
-"title": "How to install the xPack GNU RISC-V Embedded GCC binaries",
+"title": "How to install the xPack Windows Build Tools binaries",
 "tags": "",
 "keywords": "",
-"url": "/riscv-none-embed-gcc/install/",
+"url": "/windows-build-tools/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -597,6 +597,17 @@
 
 
 {
+"title": "How to install the xPack OpenOCD binaries",
+"tags": "",
+"keywords": "",
+"url": "/openocd/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
 "title": "How to install the xPack GNU Arm Embedded GCC binaries",
 "tags": "",
 "keywords": "",
@@ -608,21 +619,10 @@
 
 
 {
-"title": "How to install the xPack QEMU Arm binaries",
+"title": "How to install the xPack GNU RISC-V Embedded GCC binaries",
 "tags": "",
 "keywords": "",
-"url": "/qemu-arm/install/",
-"summary": "<p>The recommended method is via xpm.</p>"
-}
-,
-
-
-
-{
-"title": "How to install the xPack Meson Build binaries",
-"tags": "",
-"keywords": "",
-"url": "/meson-build/install/",
+"url": "/riscv-none-embed-gcc/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -641,6 +641,17 @@
 
 
 {
+"title": "How to install the xPack QEMU Arm binaries",
+"tags": "",
+"keywords": "",
+"url": "/qemu-arm/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
 "title": "How to install the xPack Ninja Build binaries",
 "tags": "",
 "keywords": "",
@@ -652,21 +663,10 @@
 
 
 {
-"title": "How to install the xPack Windows Build Tools binaries",
+"title": "How to install the xPack Meson Build binaries",
 "tags": "",
 "keywords": "",
-"url": "/windows-build-tools/install/",
-"summary": "<p>The recommended method is via xpm.</p>"
-}
-,
-
-
-
-{
-"title": "How to install the xPack OpenOCD binaries",
-"tags": "",
-"keywords": "",
-"url": "/openocd/install/",
+"url": "/meson-build/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -861,8 +861,6 @@
 
 
 
-
-
 {
 "title": "xpbuild - common options",
 "tags": "",
@@ -871,6 +869,8 @@
 "summary": ""
 }
 ,
+
+
 
 
 
@@ -1002,10 +1002,10 @@
 
 
 {
-"title": "How to get help for xPack GNU RISC-V Embedded GCC",
+"title": "How to get help for xPack Windows Build Tools",
 "tags": "",
 "keywords": "",
-"url": "/riscv-none-embed-gcc/support/",
+"url": "/windows-build-tools/support/",
 "summary": ""
 }
 ,
@@ -1024,6 +1024,17 @@
 
 
 {
+"title": "How to get help for xPack OpenOCD?",
+"tags": "",
+"keywords": "",
+"url": "/openocd/support/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "How to get help for xPack GNU Arm Embedded GCC",
 "tags": "",
 "keywords": "",
@@ -1035,21 +1046,10 @@
 
 
 {
-"title": "How to get help for xPack QEMU Arm",
+"title": "How to get help for xPack GNU RISC-V Embedded GCC",
 "tags": "",
 "keywords": "",
-"url": "/qemu-arm/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack Meson Build",
-"tags": "",
-"keywords": "",
-"url": "/meson-build/support/",
+"url": "/riscv-none-embed-gcc/support/",
 "summary": ""
 }
 ,
@@ -1068,6 +1068,17 @@
 
 
 {
+"title": "How to get help for xPack QEMU Arm",
+"tags": "",
+"keywords": "",
+"url": "/qemu-arm/support/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "How to get help for xPack Ninja Build",
 "tags": "",
 "keywords": "",
@@ -1079,21 +1090,10 @@
 
 
 {
-"title": "How to get help for xPack Windows Build Tools",
+"title": "How to get help for xPack Meson Build",
 "tags": "",
 "keywords": "",
-"url": "/windows-build-tools/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack OpenOCD?",
-"tags": "",
-"keywords": "",
-"url": "/openocd/support/",
+"url": "/meson-build/support/",
 "summary": ""
 }
 ,
@@ -1306,7 +1306,7 @@
 
 
 {
-"title": "xPack OpenOCD 0.11.0-3 released",
+"title": "xPack OpenOCD v0.11.0-3 released",
 "tags": "releasesopenocd",
 "keywords": "",
 "url": "/blog/2021/12/07/openocd-v0-11-0-3-released/",
@@ -1316,7 +1316,7 @@
 
 
 {
-"title": "xPack Arm Embedded GCC 10.3.1-2.3 released",
+"title": "xPack Arm Embedded GCC v10.3.1-2.3 released",
 "tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
 "keywords": "",
 "url": "/blog/2021/12/07/arm-none-eabi-gcc-v10-3-1-2-3-released/",
@@ -1326,7 +1326,7 @@
 
 
 {
-"title": "xPack Meson Build 0.59.4-1 released",
+"title": "xPack Meson Build v0.59.4-1 released",
 "tags": "releasesmeson-buildmesonbuildpythonninja",
 "keywords": "",
 "url": "/blog/2021/12/06/meson-build-v0-59-4-1-released/",
@@ -1336,7 +1336,7 @@
 
 
 {
-"title": "xPack CMake 3.20.6-2 released",
+"title": "xPack CMake v3.20.6-2 released",
 "tags": "releasescmakebuild",
 "keywords": "",
 "url": "/blog/2021/12/06/cmake-v3-20-6-2-released/",
@@ -1346,7 +1346,7 @@
 
 
 {
-"title": "xPack Ninja Build 1.10.2-5 released",
+"title": "xPack Ninja Build v1.10.2-5 released",
 "tags": "releasesninja-buildninjabuildspeedsmall",
 "keywords": "",
 "url": "/blog/2021/12/06/ninja-build-v1-10-2-5-released/",
@@ -1356,7 +1356,7 @@
 
 
 {
-"title": "xPack Arm Embedded GCC 10.3.1-2.2 released",
+"title": "xPack Arm Embedded GCC v10.3.1-2.2 released",
 "tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
 "keywords": "",
 "url": "/blog/2021/11/12/arm-none-eabi-gcc-v10-3-1-2-2-released/",
@@ -1366,7 +1366,7 @@
 
 
 {
-"title": "xPack GNU RISC-V Embedded GCC 10.2.0-1.2 released",
+"title": "xPack GNU RISC-V Embedded GCC v10.2.0-1.2 released",
 "tags": "releasesriscvriscv-none-embed-gccgccbinariesc++",
 "keywords": "",
 "url": "/blog/2021/11/11/riscv-none-embed-gcc-v10-2-0-1-2-released/",
@@ -1376,7 +1376,7 @@
 
 
 {
-"title": "xPack GNU RISC-V Embedded GCC 10.2.0-1.1 released",
+"title": "xPack GNU RISC-V Embedded GCC v10.2.0-1.1 released",
 "tags": "releasesriscvriscv-none-embed-gccgccbinariesc++",
 "keywords": "",
 "url": "/blog/2021/11/06/riscv-none-embed-gcc-v10-2-0-1-1-released/",
@@ -1386,7 +1386,7 @@
 
 
 {
-"title": "xPack GNU RISC-V Embedded GCC 10.1.0-1.2 released",
+"title": "xPack GNU RISC-V Embedded GCC v10.1.0-1.2 released",
 "tags": "releasesriscvriscv-none-embed-gccgccbinariesc++",
 "keywords": "",
 "url": "/blog/2021/11/04/riscv-none-embed-gcc-v10-1-0-1-2-released/",
@@ -1396,7 +1396,7 @@
 
 
 {
-"title": "xPack Arm Embedded GCC 10.3.1-2.1 released",
+"title": "xPack Arm Embedded GCC v10.3.1-2.1 released",
 "tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
 "keywords": "",
 "url": "/blog/2021/10/25/arm-none-eabi-gcc-v10-3-1-2-1-released/",
@@ -1406,7 +1406,7 @@
 
 
 {
-"title": "xPack LLVM clang 12.0.1-1 released",
+"title": "xPack LLVM clang v12.0.1-1 released",
 "tags": "releasesclang",
 "keywords": "",
 "url": "/blog/2021/10/21/clang-v12-0-1-1-released/",
@@ -1416,7 +1416,7 @@
 
 
 {
-"title": "xPack GCC 11.2.0-1 released",
+"title": "xPack GCC v11.2.0-1 released",
 "tags": "releasesgcc",
 "keywords": "",
 "url": "/blog/2021/10/20/gcc-v11-2-0-1-released/",
@@ -1426,7 +1426,7 @@
 
 
 {
-"title": "xPack Meson Build 0.58.2-1 released",
+"title": "xPack Meson Build v0.58.2-1 released",
 "tags": "releasesmeson-buildmesonbuildpythonninja",
 "keywords": "",
 "url": "/blog/2021/10/19/meson-build-v0-58-2-1-released/",
@@ -1436,7 +1436,7 @@
 
 
 {
-"title": "xPack Ninja Build 1.10.2-4 released",
+"title": "xPack Ninja Build v1.10.2-4 released",
 "tags": "releasesninja-buildninjabuildspeedsmall",
 "keywords": "",
 "url": "/blog/2021/10/19/ninja-build-v1-10-2-4-released/",
@@ -1446,7 +1446,7 @@
 
 
 {
-"title": "xPack CMake 3.20.6-1 released",
+"title": "xPack CMake v3.20.6-1 released",
 "tags": "releasescmakebuild",
 "keywords": "",
 "url": "/blog/2021/10/18/cmake-v3-20-6-1-released/",
@@ -1456,7 +1456,7 @@
 
 
 {
-"title": "xPack Windows Build Tools 4.2.1-3 released",
+"title": "xPack Windows Build Tools v4.2.1-3 released",
 "tags": "releaseswindows-build-toolsbuildmakermmkdirbusybox",
 "keywords": "",
 "url": "/blog/2021/10/18/windows-build-tools-v4-2-1-3-released/",
@@ -1466,7 +1466,7 @@
 
 
 {
-"title": "xPack QEMU Arm 2.8.0-13 released",
+"title": "xPack QEMU Arm v2.8.0-13 released",
 "tags": "releasesqemuemulatorarmcortex-m",
 "keywords": "",
 "url": "/blog/2021/10/17/qemu-arm-v2-8-0-13-released/",
@@ -1476,7 +1476,7 @@
 
 
 {
-"title": "xPack OpenOCD 0.11.0-2 released",
+"title": "xPack OpenOCD v0.11.0-2 released",
 "tags": "releasesopenocd",
 "keywords": "",
 "url": "/blog/2021/10/16/openocd-v0-11-0-2-released/",

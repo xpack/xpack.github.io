@@ -5,8 +5,8 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 30 Dec 2021 10:04:35 +0000</pubDate>
-        <lastBuildDate>Thu, 30 Dec 2021 10:04:35 +0000</lastBuildDate>
+        <pubDate>Wed, 12 Jan 2022 14:42:22 +0000</pubDate>
+        <lastBuildDate>Wed, 12 Jan 2022 14:42:22 +0000</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
         
         <item>
@@ -64,7 +64,7 @@
         </item>
         
         <item>
-            <title>xPack OpenOCD 0.11.0-3 released</title>
+            <title>xPack OpenOCD v0.11.0-3 released</title>
             <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/openocd/&quot;&gt;The xPack OpenOCD&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://openocd.org&quot;&gt;OpenOCD&lt;/a&gt;.&lt;/p&gt;</description>
             <pubDate>Tue, 07 Dec 2021 18:11:14 +0000</pubDate>
             <link>https://xpack.github.io/blog/2021/12/07/openocd-v0-11-0-3-released/</link>
@@ -78,7 +78,7 @@
         </item>
         
         <item>
-            <title>xPack Arm Embedded GCC 10.3.1-2.3 released</title>
+            <title>xPack Arm Embedded GCC v10.3.1-2.3 released</title>
             <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/arm-none-eabi-gcc/&quot;&gt;The xPack Arm Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/open-source/gnu-toolchain/gnu-rm&quot;&gt;GNU Arm Embedded Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
             <pubDate>Tue, 07 Dec 2021 13:32:25 +0000</pubDate>
             <link>https://xpack.github.io/blog/2021/12/07/arm-none-eabi-gcc-v10-3-1-2-3-released/</link>
@@ -102,7 +102,7 @@
         </item>
         
         <item>
-            <title>xPack Meson Build 0.59.4-1 released</title>
+            <title>xPack Meson Build v0.59.4-1 released</title>
             <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/meson-build/&quot;&gt;The xPack Meson Build&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://meson-build.org&quot;&gt;Meson Build&lt;/a&gt;.&lt;/p&gt;</description>
             <pubDate>Mon, 06 Dec 2021 19:45:29 +0000</pubDate>
             <link>https://xpack.github.io/blog/2021/12/06/meson-build-v0-59-4-1-released/</link>
@@ -124,7 +124,7 @@
         </item>
         
         <item>
-            <title>xPack CMake 3.20.6-2 released</title>
+            <title>xPack CMake v3.20.6-2 released</title>
             <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/cmake/&quot;&gt;The xPack CMake&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://cmake.org&quot;&gt;CMake&lt;/a&gt;.&lt;/p&gt;</description>
             <pubDate>Mon, 06 Dec 2021 16:19:14 +0000</pubDate>
             <link>https://xpack.github.io/blog/2021/12/06/cmake-v3-20-6-2-released/</link>
@@ -140,7 +140,7 @@
         </item>
         
         <item>
-            <title>xPack Ninja Build 1.10.2-5 released</title>
+            <title>xPack Ninja Build v1.10.2-5 released</title>
             <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/ninja-build/&quot;&gt;The xPack Ninja Build&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://ninja-build.org&quot;&gt;Ninja Build&lt;/a&gt;.&lt;/p&gt;</description>
             <pubDate>Mon, 06 Dec 2021 11:53:54 +0000</pubDate>
             <link>https://xpack.github.io/blog/2021/12/06/ninja-build-v1-10-2-5-released/</link>
@@ -162,7 +162,7 @@
         </item>
         
         <item>
-            <title>xPack Arm Embedded GCC 10.3.1-2.2 released</title>
+            <title>xPack Arm Embedded GCC v10.3.1-2.2 released</title>
             <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/arm-none-eabi-gcc/&quot;&gt;The xPack Arm Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/open-source/gnu-toolchain/gnu-rm&quot;&gt;GNU Arm Embedded Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
             <pubDate>Fri, 12 Nov 2021 18:05:36 +0000</pubDate>
             <link>https://xpack.github.io/blog/2021/11/12/arm-none-eabi-gcc-v10-3-1-2-2-released/</link>
@@ -186,7 +186,7 @@
         </item>
         
         <item>
-            <title>xPack GNU RISC-V Embedded GCC 10.2.0-1.2 released</title>
+            <title>xPack GNU RISC-V Embedded GCC v10.2.0-1.2 released</title>
             <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/riscv-none-embed-gcc/&quot;&gt;The xPack GNU RISC-V Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of the&lt;a href=&quot;https://github.com/sifive/freedom-tools/releases&quot;&gt;SiFive RISC-V GCC&lt;/a&gt;.&lt;/p&gt;</description>
             <pubDate>Thu, 11 Nov 2021 09:37:02 +0000</pubDate>
             <link>https://xpack.github.io/blog/2021/11/11/riscv-none-embed-gcc-v10-2-0-1-2-released/</link>
