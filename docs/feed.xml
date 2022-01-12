@@ -5,8 +5,8 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Wed, 12 Jan 2022 21:33:48 +0000</pubDate>
-        <lastBuildDate>Wed, 12 Jan 2022 21:33:48 +0000</lastBuildDate>
+        <pubDate>Wed, 12 Jan 2022 21:37:23 +0000</pubDate>
+        <lastBuildDate>Wed, 12 Jan 2022 21:37:23 +0000</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
         
         <item>
@@ -66,7 +66,7 @@
         <item>
             <title>xPack Build Box v3.4 released</title>
             <description>&lt;p&gt;The xPack Build Box (XBB) is a build environment intended for reproducible builds.&lt;/p&gt;</description>
-            <pubDate>Thu, 16 Dec 2021 09:00:00 +0000</pubDate>
+            <pubDate>Thu, 16 Dec 2021 10:00:00 +0000</pubDate>
             <link>https://xpack.github.io/blog/2021/12/16/xbb-v3.4-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2021/12/16/xbb-v3.4-released/</guid>
             
