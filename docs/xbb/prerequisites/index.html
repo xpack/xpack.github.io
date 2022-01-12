@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Prerequisites for building xPack binaries" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/prerequisites/"},"@type":"BlogPosting","url":"https://xpack.github.io/xbb/prerequisites/","headline":"Prerequisites for building xPack binaries","dateModified":"2022-01-12T14:34:13+00:00","datePublished":"2017-07-06T17:55:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/prerequisites/"},"@type":"BlogPosting","url":"https://xpack.github.io/xbb/prerequisites/","headline":"Prerequisites for building xPack binaries","dateModified":"2022-01-12T21:33:09+00:00","datePublished":"2017-07-06T17:55:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -596,24 +596,14 @@ containers (separate 32/64-bit containers) based on older
 and more conservative distributions, to avoid problems when
 attempting to run the executables on older versions.</p>
 
-<p>The XBB v3.3 uses Ubuntu 12 for Intel GNU/Linux and Ubuntu 16 for
-Arm GNU/Linux.</p>
+<p>The XBB v3.4 uses Ubuntu 18 for both Intel and Arm GNU/Linux.</p>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Building Arm binaries requires
 an Arm machine. A Raspberry Pi 4 8GB equiped with a SanDisk Extreme
 USB 3 SSD are a good solution.</div>
 
-<p>XBB v2.x used CentOS 6 for Intel, and CentOS 7 was the favourite when
-considering the update, but Docker CentOS 7 armv7l container does not
-run on 64-bit Docker host, and requires a 32-bit host, which is impractical.
-The problem was reported as
-<a href="https://github.com/CentOS/sig-cloud-instance-images/issues/171">#171</a>
-and posted on the CentOS
-<a href="https://forums.centos.org/viewtopic.php?f=48&amp;t=75475">forum</a>, but so far
-there were no solution.</p>
-
 <p>The Windows binaries are generated on the same Docker Intel GNU/Linux
-containers, using <a href="http://mingw-w64.org">mingw-w64</a>.</p>
+container, using <a href="http://mingw-w64.org">mingw-w64</a>.</p>
 
 <h3 id="gnulinux">GNU/Linux</h3>
 
@@ -624,11 +614,8 @@ perfectly fine. For better results, dedicate 3-4 cores and 8-12 GB of RAM.</p>
 <p>The procedure was tested on:</p>
 
 <ul>
-  <li>Ubuntu 16.04 LTS, running as a virtual machine in Parallels Desktop on macOS 10.12.</li>
-  <li>Ubuntu 17.10, running as a virtual machine in VirtualBox on macOS 10.13</li>
-  <li>Ubuntu 18.04 Server, running on an Intel NUC NUC8i7BEH with 32 GB of RAM</li>
+  <li>Ubuntu 18.04 LTS, running on an Intel NUC NUC8i7BEH with 32 GB of RAM</li>
   <li>Debian 10 (buster), running on an Intel NUC NUC8i7BEH with 32 GB of RAM</li>
-  <li>Debian 9 (stretch), running on a ROCK Pi with 4 GB of RAM</li>
   <li>Raspberry Pi OS 64-bit, running on a Raspberry Pi 4 with 4 or 8 GB of RAM</li>
 </ul>
 
@@ -662,10 +649,7 @@ This is true for most versions, except the very latest one, which might not
 yet be made available by the Docker team. In this case set the
 <code class="language-plaintext highlighter-rouge">version_name</code> manually to the previous version.
 You can also do this by
-manually editting the <code class="language-plaintext highlighter-rouge">/etc/apt/sources.list</code> file.
-At the time
-of writing this, the version for Ubuntu 19.10 <strong>eoan</strong> is not available
-and you must use <strong>disco</strong>.</div>
+manually editting the <code class="language-plaintext highlighter-rouge">/etc/apt/sources.list</code> file.</div>
 
 <p>To check if the install is functional, run the <em>Hello World</em> image,
 for the moment as <code class="language-plaintext highlighter-rouge">sudo</code>:</p>
@@ -710,19 +694,16 @@ Hello from Docker!
 
 <h3 id="macos">macOS</h3>
 
-<p>For development build, the procedure is executed on the latest macOS
-version (currently 10.13).</p>
-
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The procedure failed on macOS 10.15 and
-was moved to macOS 11.0, which will be used for Apple Silicon platforms
-anyway.</div>
+<p>For development build, the procedure is executed on a recent macOS
+version (currently 11.6).</p>
 
 <p>For production builds it is recommended to use a slightly older version.
 macOS 10.13 is a good compromise.</p>
 
 <p>It is not mandatory to have a physical macOS 10.13 machine, a virtual
 machine is also perfectly fine. Both Parallels and VirtualBox were
-checked and work without problems.</p>
+checked and were functional (although VirtualBox was not as stable
+as Parallels).</p>
 
 <h4 id="install-the-command-line-tools">Install the Command Line Tools</h4>
 
@@ -739,15 +720,17 @@ via a command line:</p>
 <span class="gp">$</span><span class="w"> </span>xcode-select <span class="nt">-p</span>
 <span class="go">/Library/Developer/CommandLineTools
 </span><span class="gp">$</span><span class="w"> </span>gcc <span class="nt">--version</span>
-<span class="go">Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
-Apple LLVM version 8.1.0 (clang-802.0.42)
-Target: x86_64-apple-darwin16.7.0
+<span class="go">Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/4.2.1
+Apple clang version 13.0.0 (clang-1300.0.29.3)
+Target: x86_64-apple-darwin20.6.0
 Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 </span></code></pre></div></div>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> In recent macOS versions it is
-recommended to install only the CommandLineTools package.</div>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Xcode alone includes the compiler
+in the Xcode.app folder, which may very in different versions;
+for a stable configuration it is
+required to install the CommandLineTools package.</div>
 
 <h4 id="macos-docker">macOS Docker</h4>
 
@@ -768,7 +751,7 @@ the Dockerfiles available from
 <a href="https://github.com/xpack/xpack-build-box/tree/master/">XBB (xPack Build Box)</a>.</p>
 
 <p>If not already loaded, Docker will load the images at first usage.
-The images are relatively large, around 3-5 GB.</p>
+The images are relatively large, around 5 GB.</p>
 
 <p>It is possible to separately load the Docker images, using the
 script <code class="language-plaintext highlighter-rouge">preload-images</code> command of each script.</p>

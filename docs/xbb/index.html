@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="The xPack Build Box" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/"},"@type":"BlogPosting","url":"https://xpack.github.io/xbb/","headline":"The xPack Build Box","dateModified":"2022-01-12T14:34:13+00:00","datePublished":"2016-03-09T09:04:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/"},"@type":"BlogPosting","url":"https://xpack.github.io/xbb/","headline":"The xPack Build Box","dateModified":"2022-01-12T21:33:09+00:00","datePublished":"2016-03-09T09:04:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -632,21 +632,24 @@ for native builds as well.</p>
 <p>Generally, xPack binaries are available for the following platforms:</p>
 
 <ul>
-  <li>Intel Windows 32-bit</li>
-  <li>Intel Windows 64-bit</li>
-  <li>Intel GNU/Linux 32-bit</li>
-  <li>Intel GNU/Linux 64-bit</li>
-  <li>Arm GNU/Linux 32-bit</li>
-  <li>Arm GNU/Linux 64-bit</li>
-  <li>Intel macOS 64-bit</li>
+  <li>Windows Intel 64-bit</li>
+  <li>GNU/Linux Intel 64-bit</li>
+  <li>GNU/Linux Arm 32-bit</li>
+  <li>GNU/Linux Arm 64-bit</li>
+  <li>macOS Intel 64-bit</li>
+  <li>macOS Apple Silicon 64-bit</li>
 </ul>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Starting with 2022, support for
+macOS Apple Silicon was added; 32-bit support for Windows and
+GNU/Linux Intel was discontinued.</div>
 
 <p>XBB supports creating binaries for all these platforms.</p>
 
 <p>For the detailed supported versions, please check the specific
 <a href="/xbb/releases/">release</a> page.</p>
 
-<h3 id="arm-binaries">Arm binaries</h3>
+<h3 id="gnulinux-arm-binaries">GNU/Linux Arm binaries</h3>
 
 <p>Support for Arm binaries was added in v3.1, in early 2020.</p>
 
@@ -657,6 +660,10 @@ for native builds as well.</p>
   <li><code class="language-plaintext highlighter-rouge">arm32v7</code> - the ARMv7 32-bit architecture with hardware float (armhf)</li>
 </ul>
 
+<h3 id="macos-apple-silicon">macOS Apple Silicon</h3>
+
+<p>Support for Apple Silicon was added in v3.4, in late 2021.</p>
+
 <h2 id="docker-specifics">Docker specifics</h2>
 
 <p>As with any Docker builds, the XBB builds run completely inside Docker
@@ -665,7 +672,7 @@ containers, which start afresh each time they are instantiated.</p>
 <p>To pass the folder with the build scripts in and the results out,
 it is usual to use a <code class="language-plaintext highlighter-rouge">Work</code> folder, for example:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>docker run <span class="nt">-it</span> <span class="nt">--volume</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Work:/Host/Work"</span> ilegeul/ubuntu:amd64-12.04-xbb-v3.3
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>docker run <span class="nt">-it</span> <span class="nt">--volume</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Work:/Host/Work"</span> ilegeul/ubuntu:amd64-18.04-xbb-v3.4
 <span class="gp">root@831bc35faf9f:/#</span><span class="w"> </span><span class="nb">ls</span> <span class="nt">-l</span> /Host/Work
 <span class="go">total 175320
 drwxr-xr-x  14 root root       448 Mar  7 19:47 arm-none-eabi-gcc-9.2.1-1.2
@@ -772,11 +779,10 @@ also support RedHat Enterprise systems.</p>
 
 <p>RedHat maintenance support 1 for RHEL 7 ended in Aug. 2020, with
 maintenance support 2 to last until June. 2024. However XBB support
-for RHEL 7 is a tough requirement, and will be dropped in the next major
-release, probably in 2022.</p>
+for RHEL 7 is a tough requirement, and was discontinued starting with 2022.</p>
 
-<p>For the future release, the plan is to move up to
-Ubuntu 18 (GLIBC 2.27). This will also provide compatibility with
+<p>Compatibility was moved up to
+Ubuntu 18 (GLIBC 2.27). This also provides compatibility with
 RedHat 8 / Debian 10, which both use GLIBC 2.28.</p>
 
 <h2 id="credits">Credits</h2>

@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="End-of-support schedule" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/end-of-support/"},"@type":"BlogPosting","url":"https://xpack.github.io/xbb/end-of-support/","headline":"End-of-support schedule","dateModified":"2022-01-12T14:34:13+00:00","datePublished":"2021-10-13T12:15:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/end-of-support/"},"@type":"BlogPosting","url":"https://xpack.github.io/xbb/end-of-support/","headline":"End-of-support schedule","dateModified":"2022-01-12T21:33:09+00:00","datePublished":"2021-10-13T12:15:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -600,9 +600,8 @@ and RHEL 7 end of extended life-cycle support is 2024.</p>
 <p>Due to maintenance issues, starting with XBB v3.1, support for CentOS/RHEL 6
 was discontinued.</p>
 
-<p>However support for RHEL 7 is very important, and will be preserved for
-as long as possible. In practical terms, the ldd version must be
-2.17 or lower.</p>
+<p>Similarly, starting with XBB v3.4, support for CentOS/RHEL 7
+was discontinued</p>
 
 <h2 id="gnulinux-distro-versions">GNU/Linux distro versions</h2>
 
@@ -621,17 +620,17 @@ the <code class="language-plaintext highlighter-rouge">ldd --version</code>:</p>
   <li><code class="language-plaintext highlighter-rouge">debian:7</code> - wheezy - 2013-2016, GLIBC 2.13, kernel 3.2</li>
   <li><code class="language-plaintext highlighter-rouge">debian:8</code> - jessie - 2015-2018, GLIBC 2.19, kernel 3.16</li>
   <li><code class="language-plaintext highlighter-rouge">debian:9</code> - stretch - 2017-2020, GLIBC 2.24, kernel 4.9.0-6 (first with arm64)</li>
-  <li><code class="language-plaintext highlighter-rouge">debian:10</code> - buster - 2019-2022, GLIBC 2.28, kernel 4.19.0-6 &lt;– supported by next XBB</li>
+  <li><code class="language-plaintext highlighter-rouge">debian:10</code> - buster - 2019-2022, GLIBC 2.28, kernel 4.19.0-6 &lt;– <strong>XBB v3.4</strong></li>
 </ul>
 
 <h3 id="ubuntu"><a href="https://en.wikipedia.org/wiki/Ubuntu_version_history">Ubuntu</a></h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">ubuntu:10.04</code> - lucy - 2010-2015, GLIBC 2.11.1</li>
-  <li><code class="language-plaintext highlighter-rouge">ubuntu:12.04</code> - precise - 2012-2019, GLIBC 2.15, kernel <strong>3.2</strong> &lt;— <strong>XBB v3.3</strong> Intel Linux choice</li>
+  <li><code class="language-plaintext highlighter-rouge">ubuntu:12.04</code> - precise - 2012-2019, GLIBC 2.15, kernel <strong>3.2</strong> &lt;— XBB v3.3 Intel Linux choice</li>
   <li><code class="language-plaintext highlighter-rouge">ubuntu:14.04</code> - trusty - 2014-2022, GLIBC 2.19, kernel 3.16</li>
-  <li><code class="language-plaintext highlighter-rouge">ubuntu:16.04</code> - xenial - 2016-2024, GLIBC <strong>2.23</strong>, kernel 4.4 &lt;— <strong>XBB v3.3</strong> Arm Linux choice</li>
-  <li><code class="language-plaintext highlighter-rouge">ubuntu:18.04</code> - bionic - 2018-2028, GLIBC <strong>2.27</strong>, kernel 4.15 &lt;– <strong>next XBB</strong> Intel &amp; Arm Linux choice</li>
+  <li><code class="language-plaintext highlighter-rouge">ubuntu:16.04</code> - xenial - 2016-2024, GLIBC <strong>2.23</strong>, kernel 4.4 &lt;— XBB v3.3 Arm Linux choice</li>
+  <li><code class="language-plaintext highlighter-rouge">ubuntu:18.04</code> - bionic - 2018-2028, GLIBC <strong>2.27</strong>, kernel 4.15 &lt;– <strong>XBB v3.4</strong> Intel &amp; Arm Linux choice</li>
   <li><code class="language-plaintext highlighter-rouge">ubuntu:20.04</code> - focal - 2020-2-30, GLIBC 2.31, kernel 5.4</li>
 </ul>
 
@@ -639,16 +638,16 @@ the <code class="language-plaintext highlighter-rouge">ldd --version</code>:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">registry.access.redhat.com/rhel6</code> - GLIBC 2.12 (no longer supported)</li>
-  <li><code class="language-plaintext highlighter-rouge">registry.access.redhat.com/rhel7</code> - GLIBC 2.17, kernel 3.10 &lt;– still supported by XBB v3.3, but not for long</li>
-  <li><code class="language-plaintext highlighter-rouge">registry.access.redhat.com/ubi8</code> - GLIBC 2.28, kernel 5.10 (<strong>next XBB</strong>)</li>
+  <li><code class="language-plaintext highlighter-rouge">registry.access.redhat.com/rhel7</code> - GLIBC 2.17, kernel 3.10 &lt;– XBB v3.3</li>
+  <li><code class="language-plaintext highlighter-rouge">registry.access.redhat.com/ubi8</code> - GLIBC 2.28, kernel 5.10 &lt;– <strong>XBB v3.4</strong></li>
 </ul>
 
 <h3 id="centos"><a href="https://en.wikipedia.org/wiki/CentOS">CentOS</a></h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">centos:6</code> - 2011-2020, GLIBC 2.12 (no longer supported)</li>
-  <li><code class="language-plaintext highlighter-rouge">centos:7</code> - 2014-2024, GLIBC 2.17, kernel 3.10 &lt;— still supported by XBB v3.3, but not for long</li>
-  <li><code class="language-plaintext highlighter-rouge">centos:8</code> - 2019-2029, GLIBC 2.28, kernel 4.18 &lt;– (<strong>next XBB</strong>)</li>
+  <li><code class="language-plaintext highlighter-rouge">centos:7</code> - 2014-2024, GLIBC 2.17, kernel 3.10 &lt;— XBB v3.3</li>
+  <li><code class="language-plaintext highlighter-rouge">centos:8</code> - 2019-2029, GLIBC 2.28, kernel 4.18 &lt;– <strong>XBB v3.4</strong></li>
 </ul>
 
 <p>Last version was 8.4; discontinued by the end of 2021; see Rocky Linux.</p>
@@ -665,7 +664,7 @@ the <code class="language-plaintext highlighter-rouge">ldd --version</code>:</p>
   <li><code class="language-plaintext highlighter-rouge">fedora:26</code> - 2017-07, GLIBC 2.25, kernel 4.11</li>
   <li><code class="language-plaintext highlighter-rouge">fedora:27</code> - 2017-11, GLIBC 2.26, kernel 4.13</li>
   <li><code class="language-plaintext highlighter-rouge">fedora:28</code> - 2018-05, GLIBC 2.27, kernel 4.16</li>
-  <li><code class="language-plaintext highlighter-rouge">fedora:29</code> - 2018-10, GLIBC 2.28, kernel 4.18 &lt;– (<strong>next XBB</strong>)</li>
+  <li><code class="language-plaintext highlighter-rouge">fedora:29</code> - 2018-10, GLIBC 2.28, kernel 4.18 &lt;– <strong>XBB v3.4</strong></li>
   <li><code class="language-plaintext highlighter-rouge">fedora:30</code> - 2019-05, GLIBC 2.29, kernel 5.0</li>
   <li><code class="language-plaintext highlighter-rouge">fedora:31</code> - 2019-10, GLIBC 2.30, kernel 5.3</li>
   <li><code class="language-plaintext highlighter-rouge">fedora:32</code> - 2020-04, GLIBC 2.31, kernel 5.6</li>
@@ -676,30 +675,27 @@ the <code class="language-plaintext highlighter-rouge">ldd --version</code>:</p>
 
 <h2 id="32-bit-support">32-bit support</h2>
 
-<p>Existing support for 32-bit builds will be preserved for the moment,
-but might be dropped in one of the future version; for consistency
-reasons, it is expected to continue to generate 32-bit binares
-as long as Node.js still supports them via the
-<a href="https://unofficial-builds.nodejs.org/download/">unofficial builds</a>
-(watch for the presence of <code class="language-plaintext highlighter-rouge">-linux-x86.tar.*</code> files).</p>
+<p>Existing support for 32-bit Windows and GNU/Linux Intel builds was dropped.
+Support for 32-bit GNU/Linux Arm will be preserved for the moment, since
+there are still many 32-bit Raspberry Pi machines,
+but might be dropped in one of the future version.</p>
 
 <h2 id="conclusions">Conclusions</h2>
 
-<h3 id="xbb-v33">XBB v3.3</h3>
+<h3 id="xbb-v34">XBB v3.4</h3>
 
-<p>For Intel GNU/Linux, to preserve support for older distributions,
-the <strong>Ubuntu 12 (precise)</strong> (2.15) distribution was selected;
-the resulting binaries should also run on RHEL 7 or newer;
-support for RHEL 6 was discontinued.</p>
+<p>For GNU/Linux, to preserve support for older distributions,
+the <strong>Ubuntu 18 (bionic)</strong> (2.27) distribution was selected;
+the resulting binaries should also run on RHEL 8 or newer,
+Debian 10, Fedora 29 or newer;
+support for RHEL 7 was discontinued.</p>
 
-<p>For Arm binaries, the base distribution is <strong>Ubuntu 16.04 LTS (xenial)</strong>,
-(2.23); the resulting binaries should run on all Raspberry Pi class
-machines, or larger/newer.</p>
+<p>For Arm binaries, the resulting binaries should run on all
+Raspberry Pi class machines, or larger/newer.</p>
 
 <h3 id="next-xbb">Next XBB</h3>
 
-<p>The next major release will move up to GLIBC 2.27, available in Ubuntu 18 LTS
-and compatible with Debian 10, RHEL 8, Fedora 29, etc.</p>
+<p>The future releases will move to a modular aproach, using binary xPacks.</p>
 
 
         
