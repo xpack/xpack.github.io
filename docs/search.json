@@ -1276,6 +1276,16 @@
 
 
 {
+"title": "xPack QEMU Arm v6.2.0-1 released",
+"tags": "releasesqemuemulatorarmaarch64cortex-m",
+"keywords": "",
+"url": "/blog/2022/01/13/qemu-arm-v6-2-0-1-released/",
+"summary": "<p>Version <strong>6.2.0-1</strong> is a new release; it follows the upstream QEMU release.</p>"
+}
+,
+
+
+{
 "title": "xPack xpm v0.12.1 released",
 "tags": "releasesxpmpackagemanager",
 "keywords": "",
