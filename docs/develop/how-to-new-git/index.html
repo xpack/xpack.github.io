@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to create a new xPack Git repository" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/how-to-new-git/"},"@type":"BlogPosting","url":"https://xpack.github.io/develop/how-to-new-git/","headline":"How to create a new xPack Git repository","dateModified":"2022-01-13T18:38:42+00:00","datePublished":"2019-07-09T14:48:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/how-to-new-git/"},"@type":"BlogPosting","url":"https://xpack.github.io/develop/how-to-new-git/","headline":"How to create a new xPack Git repository","dateModified":"2022-01-19T08:59:35+00:00","datePublished":"2019-07-09T14:48:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -589,14 +589,16 @@ $('#toc').on('click', 'a', function() {
     
 
 
-   <p>The technical definition of an xPack is <em>a folder which includes a
+   <h2 id="overview">Overview</h2>
+
+<p>The technical definition of an xPack is <em>a folder which includes a
 package.json file with some minimal content</em>
 (<a href="/intro/">full definition</a>);
 it does not require
 any special structure for the folders or for the version-control system,
 if any.</p>
 
-<h2 id="projects-with-3rd-party-content">Projects with 3rd party content</h2>
+<h3 id="projects-with-3rd-party-content">Projects with 3rd party content</h3>
 
 <p>The first thought is that xPacks, as a new technology,
 will be used for new projects,
@@ -608,24 +610,7 @@ software projects, each using its specific structure, and migrating them to
 xPacks may add some maintenance burden to keep them in sync with the
 originals.</p>
 
-<p>If the 3rd party projects use a public Git, fork them, with its original
-<code class="language-plaintext highlighter-rouge">master</code> branch, and continue to track them in the future.</p>
-
-<h2 id="the-originals-branch">The <code class="language-plaintext highlighter-rouge">originals</code> branch</h2>
-
-<p>If the 3rd party projects do not use a
-public Git project, but are distributed only as release archives, to
-keep track of the changes it is recommended to
-recreate the Git with the original
-code on a separate branch, like <code class="language-plaintext highlighter-rouge">originals</code>.</p>
-
-<p>With each upstream release, while on the <code class="language-plaintext highlighter-rouge">originals</code> branch,
-fuly remove the content and extract the newly released archive.</p>
-
-<p>In case the archive contains binary files, or other large files considered
-not essential for the xPack distribution, add them to <code class="language-plaintext highlighter-rouge">.gitignore</code>.</p>
-
-<h2 id="the-xpack-branch-and-three-way-merging">The <code class="language-plaintext highlighter-rouge">xpack</code> branch and three-way merging</h2>
+<h3 id="the-xpack-branch-and-three-way-merging">The <code class="language-plaintext highlighter-rouge">xpack</code> branch and three-way merging</h3>
 
 <p>One way to reduce the maintenance burden of source xPacks is to use the
 <a href="https://en.wikipedia.org/wiki/Merge_(version_control)#Three-way_merge">three-way merge</a>
@@ -641,23 +626,43 @@ easily track the upstream repository, while the xPack specific changes
 continue to be developed using the <code class="language-plaintext highlighter-rouge">xpack</code> branch; from time to time the
 main branch can be merged into the <code class="language-plaintext highlighter-rouge">xpack</code> branch and things kept in sync.</p>
 
-<h2 id="creating-xpacks">Creating xPacks</h2>
-
-<p>For consistency reasons, it is recommended for the new xPacks, even if
-they do not include 3rd party content, to use the <code class="language-plaintext highlighter-rouge">xpack</code> branch instead
-of the <code class="language-plaintext highlighter-rouge">master</code> branch.</p>
-
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The xPack tools do not require and
 do not enforce the use of a branch named <code class="language-plaintext highlighter-rouge">xpack</code>, this is only
 a recommendation.</div>
 
-<h3 id="do-not-use-a-github-template-project">Do not use a GitHub Template project</h3>
+<h2 id="create-xpacks-with-3rd-party-content">Create xPacks with 3rd party content</h2>
 
-<p>The easiest way to create new projects would be to use an existing
-GitHub Template project.</p>
+<h3 id="existing-git">Existing Git</h3>
 
-<p>Unfortunately this path leads to repositories with weirds histories,
-like disconnected commits, and is not practical.</p>
+<p>If the 3rd party project uses a public Git, fork it, with its original
+<code class="language-plaintext highlighter-rouge">master</code> branch, and continue from the <strong>Common steps</strong> section.</p>
+
+<h3 id="non-public-repository">Non-public repository</h3>
+
+<p>If the 3rd party project does not use a public repository,
+it is necessary to create one.</p>
+
+<p>For projects distributed as archives, to simplify maintenance,
+it is recommended to reconstruct the history in a separate branch
+(like <code class="language-plaintext highlighter-rouge">originals</code>).</p>
+
+<h2 id="create-xpacks-repositories">Create xPacks repositories</h2>
+
+<p>If the project does not already have a forked repository, create a new
+Git project.</p>
+
+<p>!!!!
+For consistency reasons, it is recommended for the new xPacks, even if
+they do not include 3rd party content, to use the <code class="language-plaintext highlighter-rouge">xpack</code> branch instead
+of the <code class="language-plaintext highlighter-rouge">master</code> branch.</p>
+
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Do not use a GitHub Template project!
+The easiest way to create new projects would be to use an existing
+GitHub Template project. Unfortunately, at the time of testing,
+the repositories resulted
+by using this method had weirds histories,
+like disconnected commits; until this will be fixed,
+this method is not recommended.</div>
 
 <h3 id="create-the-github-project-manually">Create the GitHub project manually</h3>
 
@@ -748,7 +753,6 @@ Thumbs.db
 .settings/
 Debug/
 Release/
-test-*/
 build/
 </code></pre></div></div>
 
@@ -757,31 +761,6 @@ build/
 <ul>
   <li>stage the <code class="language-plaintext highlighter-rouge">.gitignore</code> file</li>
   <li>commit with the following message: <strong>.gitignore: add xPack specifics</strong></li>
-</ul>
-
-<h3 id="checkedit-the-license-file">Check/edit the <code class="language-plaintext highlighter-rouge">LICENSE</code> file</h3>
-
-<p>The automatically generated <code class="language-plaintext highlighter-rouge">LICENSE</code> file already includes the
-user name as the copyright owner. When the project is owned by
-an organisation, the name refers to the organisation. Probably
-this is not exactly what you need, and you might prefer to have
-your name in the copyright notice.</p>
-
-<p>Check and possibly adjust to match your <code class="language-plaintext highlighter-rouge">LICENSE</code> requirements.</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MIT License
-
-Copyright (c) 2021 Liviu Ionescu
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-...
-</code></pre></div></div>
-
-<p>With VS Code, Sourcetree or Git:</p>
-
-<ul>
-  <li>stage the <code class="language-plaintext highlighter-rouge">LICENSE</code> file</li>
-  <li>commit with the following message: <strong>LICENSE: update copyright owner</strong></li>
 </ul>
 
 <h3 id="edit-the-master-readmemd-file">Edit the master <code class="language-plaintext highlighter-rouge">README.md</code> file</h3>
@@ -806,38 +785,39 @@ switch to the `xpack` branch to get the project files.
   <li>commit with the following message: <strong>README: ‘no master’ notice</strong></li>
 </ul>
 
-<h3 id="create-the-originals-branch">Create the <code class="language-plaintext highlighter-rouge">originals</code> branch</h3>
+<h2 id="create-the-originals-branch">Create the <code class="language-plaintext highlighter-rouge">originals</code> branch</h2>
 
-<p>If the xPack will be used for 3rd party content, create an <code class="language-plaintext highlighter-rouge">originals</code>
-branch:</p>
+<p>For a 3rd party project that does not use a
+public Git project, but is distributed only as release archives, to
+keep track of the changes it is recommended to
+recreate the Git with the original
+code on a separate branch, like <code class="language-plaintext highlighter-rouge">originals</code>, and later treat it
+as the <code class="language-plaintext highlighter-rouge">master</code> branch.</p>
 
-<p>Sourcetree:</p>
+<p>With each upstream release, while on the <code class="language-plaintext highlighter-rouge">originals</code> branch,
+fuly remove the content and extract the newly released archive.</p>
 
-<ul>
-  <li>select the <code class="language-plaintext highlighter-rouge">master</code> branch</li>
-  <li>click the <strong>Branch</strong> button</li>
-  <li>in the <strong>Name Branch</strong> field, enter <code class="language-plaintext highlighter-rouge">originals</code></li>
-  <li>click the <strong>Create Branch</strong> button</li>
-</ul>
+<p>Then merge the update <code class="language-plaintext highlighter-rouge">originals</code> branch into the <code class="language-plaintext highlighter-rouge">xpacks</code> branch.</p>
 
-<p>Edit the README file to read:</p>
+<p>In case the archive contains binary files, or other large files considered
+not essential for the xPack distribution, add them to <code class="language-plaintext highlighter-rouge">.gitignore</code>.</p>
+
+<p>Add/Edit the README file to read:</p>
 
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This branch is used to recreate the 3rd party project history
 from release archives.
 </code></pre></div></div>
 
-<p>With VS Code, Sourcetree or Git:</p>
+<p>Commit with the following message: <strong>README: notice for 3rd party content</strong></p>
 
-<ul>
-  <li>stage the <code class="language-plaintext highlighter-rouge">README.md</code> file</li>
-  <li>commit with the following message: <strong>README: notice for 3rd party content</strong></li>
-</ul>
+<h2 id="common-steps">Common steps</h2>
 
 <h3 id="create-the-xpack-branch">Create the <code class="language-plaintext highlighter-rouge">xpack</code> branch</h3>
 
 <p>With VS Code, Sourcetree or Git.</p>
 
 <ul>
+  <li>select the <code class="language-plaintext highlighter-rouge">master</code> branch</li>
   <li>VS Code menu <strong>View</strong> → <strong>Command Palette…</strong>
     <ul>
       <li><strong>Git: Create branch</strong></li>
@@ -926,7 +906,8 @@ the <strong>View Remote</strong> button):</p>
 <ul>
   <li>as <strong>name</strong> enter the scope (your npm account name or one of
 your npm organisations) and the project name, without <code class="language-plaintext highlighter-rouge">-xpack.git</code>
-(like <code class="language-plaintext highlighter-rouge">@micro-os-plus/diag-trace</code>, <code class="language-plaintext highlighter-rouge">@xpack-dev-tools/ninja-build</code>)</li>
+(like <code class="language-plaintext highlighter-rouge">@micro-os-plus/diag-trace</code>, <code class="language-plaintext highlighter-rouge">@xpack-dev-tools/ninja-build</code>,
+<code class="language-plaintext highlighter-rouge">@xpack-3rd-party/arm-cmsis-core</code>)</li>
   <li>as <strong>version</strong>, enter <code class="language-plaintext highlighter-rouge">0.1.0</code> if the project is in early development,
 or accept 1.0.0 for the first stable release; generally use the
 <a href="http://semver.org">semver</a> conventions</li>
@@ -964,9 +945,26 @@ as the first contributor, for example:</li>
     </span><span class="p">{</span><span class="w">
       </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEGGER Microcontroller GmbH &amp; Co. KG"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"support@segger.com"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.segger.com/"</span><span class="w">
+      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.segger.com/"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
     </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Update the list of npm scripts:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"npm-install"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npm install"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"pack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npm pack"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"version-patch"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npm version patch"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"version-minor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npm version minor"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"postversion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"git push origin --all &amp;&amp; git push origin --tags"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"git-log"</span><span class="p">:</span><span class="w"> </span><span class="s2">"git log --pretty='%cd * %h %s' --date=short"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
@@ -977,6 +975,31 @@ as the first contributor, for example:</li>
 <ul>
   <li>stage the <code class="language-plaintext highlighter-rouge">package.json</code></li>
   <li>commit with the following message: <strong>package.json: v0.1.0</strong></li>
+</ul>
+
+<h3 id="checkedit-the-license-file">Check/edit the <code class="language-plaintext highlighter-rouge">LICENSE</code> file</h3>
+
+<p>The automatically generated <code class="language-plaintext highlighter-rouge">LICENSE</code> file already includes the
+user name as the copyright owner. When the project is owned by
+an organisation, the name refers to the organisation. Probably
+this is not exactly what you need, and you might prefer to have
+your name in the copyright notice.</p>
+
+<p>Check and possibly adjust to match your <code class="language-plaintext highlighter-rouge">LICENSE</code> requirements.</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MIT License
+
+Copyright (c) 2022 Liviu Ionescu
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+...
+</code></pre></div></div>
+
+<p>With VS Code, Sourcetree or Git:</p>
+
+<ul>
+  <li>stage the <code class="language-plaintext highlighter-rouge">LICENSE</code> file</li>
+  <li>commit with the following message: <strong>LICENSE: update copyright owner</strong></li>
 </ul>
 
 <h3 id="edit-the-readmemd-file-with-actual-content">Edit the <code class="language-plaintext highlighter-rouge">README.md</code> file with actual content</h3>
@@ -1004,6 +1027,47 @@ The original content is released under the
 <ul>
   <li>stage the <code class="language-plaintext highlighter-rouge">README*.md</code> files</li>
   <li>commit with the following message: <strong>README: preliminary content</strong></li>
+</ul>
+
+<h3 id="add-a-changelogmd-file">Add a CHANGELOG.md file</h3>
+
+<p>A possible content:</p>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># Change &amp; release log</span>
+
+Releases in reverse chronological order.
+
+Please check
+<span class="p">[</span><span class="nv">GitHub</span><span class="p">](</span><span class="sx">https://github.com/micro-os-plus/micro-test-plus-xpack/issues/</span><span class="p">)</span>
+and close existing issues and pull requests.
+
+<span class="gu">## 2022-01-03</span>
+<span class="p">
+-</span> v2.0.5
+</code></pre></div></div>
+
+<p>With Sourcetree or Git:</p>
+
+<ul>
+  <li>stage the <code class="language-plaintext highlighter-rouge">CHANGELOG.md</code> files</li>
+  <li>commit with the following message: <strong>CHANGELOG: preliminary content</strong></li>
+</ul>
+
+<h3 id="add-npmignore">Add .npmignore</h3>
+
+<p>If the package uses 3rd party content, add a <code class="language-plaintext highlighter-rouge">.npmignore</code> file.</p>
+
+<p>Update the content until <code class="language-plaintext highlighter-rouge">npm pack</code> shows only the desired content.</p>
+
+<h3 id="add-readme-maintainermd">Add README-MAINTAINER.md</h3>
+
+<p>Create or copy/paste from a similar project.</p>
+
+<p>With Sourcetree or Git:</p>
+
+<ul>
+  <li>stage the <code class="language-plaintext highlighter-rouge">README-MAINTAINER.md</code> files</li>
+  <li>commit with the following message: <strong>README-MAINTAINER: preliminary content</strong></li>
 </ul>
 
 <h3 id="publish-the-initial-version-to-github">Publish the initial version to GitHub</h3>
@@ -1057,7 +1121,8 @@ to <code class="language-plaintext highlighter-rouge">master</code>.</p>
   <li><code class="language-plaintext highlighter-rouge">npm version v1.10.0-1.1</code>; the first 4 numbers are the same as the
 GitHub release; the fifth number is the npm specific version</li>
   <li><code class="language-plaintext highlighter-rouge">npm pack</code> and check the content of the archive, which should list
-only the <code class="language-plaintext highlighter-rouge">package.json</code>, the <code class="language-plaintext highlighter-rouge">README.md</code>, <code class="language-plaintext highlighter-rouge">LICENSE</code> and <code class="language-plaintext highlighter-rouge">CHANGELOG.md</code></li>
+only the desired content and
+the <code class="language-plaintext highlighter-rouge">package.json</code>, the <code class="language-plaintext highlighter-rouge">README.md</code>, <code class="language-plaintext highlighter-rouge">LICENSE</code> and <code class="language-plaintext highlighter-rouge">CHANGELOG.md</code> files</li>
   <li>push all changes to GitHub</li>
   <li><code class="language-plaintext highlighter-rouge">npm publish --access public --tag next</code></li>
 </ul>
@@ -1105,7 +1170,7 @@ npm version major
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jan 13, 2022<br/> Site last generated: Jan 13, 2022 <br />
+<span>Page last updated:</span> Jan 19, 2022<br/> Site last generated: Jan 19, 2022 <br />
                 </div>
             </div>
 </footer>
