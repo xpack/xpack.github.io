@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Version 0.11.2 is a maintenance release; it fixes a recursion and improves error reporting.">
+<meta name="description" content="Version 0.12.9 is a new release; it adds support for PowerShell shims on Windows.">
 <meta name="keywords" content="releasesxpmpackagemanager,  ">
-<title>xPack xpm v0.11.2 released | The xPack Build Framework</title>
+<title>xPack xpm v0.12.9 released | The xPack Build Framework</title>
 <link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
 
 
@@ -14,21 +14,21 @@
 <link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
 
 <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>xPack xpm v0.11.2 released</title>
+<title>xPack xpm v0.12.9 released</title>
 <meta name="generator" content="Jekyll v4.2.1" />
-<meta property="og:title" content="xPack xpm v0.11.2 released" />
+<meta property="og:title" content="xPack xpm v0.12.9 released" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="xpm is a Node.js CLI application to manage xPacks dependencies." />
 <meta property="og:description" content="xpm is a Node.js CLI application to manage xPacks dependencies." />
-<link rel="canonical" href="https://xpack.github.io/blog/2021/12/28/xpm-v0-11-2-released/" />
-<meta property="og:url" content="https://xpack.github.io/blog/2021/12/28/xpm-v0-11-2-released/" />
+<link rel="canonical" href="https://xpack.github.io/blog/2022/01/14/xpm-v0-12-9-released/" />
+<meta property="og:url" content="https://xpack.github.io/blog/2022/01/14/xpm-v0-12-9-released/" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-12-28T12:16:00+00:00" />
+<meta property="article:published_time" content="2022-01-14T16:38:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="xPack xpm v0.11.2 released" />
+<meta property="twitter:title" content="xPack xpm v0.12.9 released" />
 <script type="application/ld+json">
-{"description":"xpm is a Node.js CLI application to manage xPacks dependencies.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/12/28/xpm-v0-11-2-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2021/12/28/xpm-v0-11-2-released/","headline":"xPack xpm v0.11.2 released","dateModified":"2022-01-19T08:59:35+00:00","datePublished":"2021-12-28T12:16:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"xpm is a Node.js CLI application to manage xPacks dependencies.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/01/14/xpm-v0-12-9-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2022/01/14/xpm-v0-12-9-released/","headline":"xPack xpm v0.12.9 released","dateModified":"2022-01-19T10:03:39+00:00","datePublished":"2022-01-14T16:38:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -253,7 +253,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: '/search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="xPack xpm v0.11.2 released">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="xPack xpm v0.12.9 released">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -556,8 +556,8 @@
             <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
 
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">xPack xpm v0.11.2 released</h1>
-        <p class="post-meta"><time datetime="2021-12-28T12:16:00+00:00" itemprop="datePublished">Dec 28, 2021</time> <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">/ Liviu Ionescu</span></span> /
+        <h1 class="post-title" itemprop="name headline">xPack xpm v0.12.9 released</h1>
+        <p class="post-meta"><time datetime="2022-01-14T16:38:00+00:00" itemprop="datePublished">Jan 14, 2022</time> <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">/ Liviu Ionescu</span></span> /
             
             
             
@@ -586,7 +586,7 @@
     <div class="post-content" itemprop="articleBody">
 
         
-        <div class="summary">Version <strong>0.11.2</strong> is a maintenance release; it fixes a recursion and improves error reporting.
+        <div class="summary">Version <strong>0.12.9</strong> is a new release; it adds support for PowerShell shims on Windows.
 </div>
         
 
@@ -612,12 +612,12 @@ npm <span class="nb">install</span> <span class="nt">--global</span> xpm@latest
 
 <p>To install this specific version, use:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> xpm@0.11.2
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> xpm@0.12.9
 </code></pre></div></div>
 
 <h2 id="changes">Changes</h2>
 
-<p>The 0.11.2 release
+<p>The 0.12.9 release
 is generally compatible with previous releases.</p>
 
 <p>The main change is the bundling of dependencies to avoid the deprecation
@@ -626,16 +626,13 @@ warnings during install.</p>
 <h3 id="bug-fixes">Bug fixes</h3>
 
 <ul>
-  <li>[#125] the changes in v0.11.0 introduced a regression, affecting some
-of the <code class="language-plaintext highlighter-rouge">install --config</code> use cases; fixed;</li>
+  <li>[#128] update the cmd-shim logic to offer .ps1 shims</li>
 </ul>
 
 <h3 id="enhancements">Enhancements</h3>
 
 <ul>
-  <li>[#126] in cases when the substitutions fail, for exmple due to missing
-variables, the full stack trace was displayed; the error processing logic
-was improved and normally only the error message is displayed;</li>
+  <li>[#129] rework the <code class="language-plaintext highlighter-rouge">spawn()</code> logic</li>
 </ul>
 
 <h3 id="other-changes">Other changes</h3>
@@ -680,7 +677,7 @@ xpm -h|--help            Quick help
 <span class="go">xpm --version            Show version
 xpm -i|--interactive     Enter interactive mode
 
-npm xpm@0.11.2 '/Users/ilg/.nvm/versions/node/v14.16.0/lib/node_modules/xpm'
+npm xpm@0.12.9 '/Users/ilg/.nvm/versions/node/v14.16.0/lib/node_modules/xpm'
 </span><span class="gp">Home page: &lt;https://xpack.github.io/xpm/&gt;</span><span class="w">
 </span><span class="gp">Bug reports: &lt;https://github.com/xpack/xpm-js/issues/&gt;</span><span class="w">
 </span></code></pre></div></div>
@@ -723,7 +720,7 @@ progress</em> and should be used with caution.</div>
 </article>
 
     
-    <a target="_blank" rel="noopener" href="https://github.com/xpack/web-jekyll/blob/master/_posts/releases/xpm/2021-12-28-xpm-v0-11-2-released.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
+    <a target="_blank" rel="noopener" href="https://github.com/xpack/web-jekyll/blob/master/_posts/releases/xpm/2022-01-14-xpm-v0-12-9-released.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
 
     
 
@@ -741,7 +738,7 @@ progress</em> and should be used with caution.</div>
     <script type="text/javascript">
         var disqus_config = function () {
             this.page.url = '';  // Your page's canonical URL variable
-            this.page.identifier = '/blog/2021/12/28/xpm-v0-11-2-released/'; // Your page's unique identifier variable
+            this.page.identifier = '/blog/2022/01/14/xpm-v0-12-9-released/'; // Your page's unique identifier variable
         };
 
         (function() { // DON'T EDIT BELOW THIS LINE

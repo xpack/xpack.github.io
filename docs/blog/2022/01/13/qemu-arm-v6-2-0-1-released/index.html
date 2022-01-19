@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack QEMU Arm v6.2.0-1 released" />
 <script type="application/ld+json">
-{"description":"The xPack QEMU Arm is a standalone cross-platform binary distribution of QEMU, with several extensions for Arm Cortex-M devices.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/01/13/qemu-arm-v6-2-0-1-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2022/01/13/qemu-arm-v6-2-0-1-released/","headline":"xPack QEMU Arm v6.2.0-1 released","dateModified":"2022-01-19T08:59:35+00:00","datePublished":"2022-01-13T17:10:40+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"The xPack QEMU Arm is a standalone cross-platform binary distribution of QEMU, with several extensions for Arm Cortex-M devices.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/01/13/qemu-arm-v6-2-0-1-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2022/01/13/qemu-arm-v6-2-0-1-released/","headline":"xPack QEMU Arm v6.2.0-1 released","dateModified":"2022-01-19T10:03:39+00:00","datePublished":"2022-01-13T17:10:40+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -920,6 +920,10 @@ Cortex-M4 devices is not available.</div>
 <h2 id="known-problems">Known problems</h2>
 
 <ul>
+  <li>[<a href="https://github.com/xpack-dev-tools/qemu-arm-xpack/issues/18">#18</a>]
+graphical mode on macOS is not functional, due to some
+QEMU internal issues related to SDL; fixed in 6.2.0-2, by
+reverting to Cocoa</li>
   <li>for <code class="language-plaintext highlighter-rouge">qemu-system-gnuarmeclipse</code>, Ctrl-C does not interrupt
 the execution if the <code class="language-plaintext highlighter-rouge">--nographic</code> option is used.</li>
 </ul>
