@@ -34,8 +34,6 @@
 
 
 
-
-
 {
 "title": "The xPack Build Definitions",
 "tags": "",
@@ -44,6 +42,8 @@
 "summary": "<p>The metadata used by the build tools.</p>"
 }
 ,
+
+
 
 
 
@@ -124,6 +124,28 @@
 
 
 {
+"title": "The xPack QEMU Arm Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/qemu-arm/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack Ninja Build Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/ninja-build/faq/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "The xPack CMake Frequently Asked Questions",
 "tags": "",
 "keywords": "",
@@ -135,10 +157,10 @@
 
 
 {
-"title": "The xPack OpenOCD Frequently Asked Questions",
+"title": "The xPack Meson Build Frequently Asked Questions",
 "tags": "",
 "keywords": "",
-"url": "/openocd/faq/",
+"url": "/meson-build/faq/",
 "summary": ""
 }
 ,
@@ -146,10 +168,10 @@
 
 
 {
-"title": "The xPack GNU Arm Embedded GCC Frequently Asked Questions",
+"title": "The xPack OpenOCD Frequently Asked Questions",
 "tags": "",
 "keywords": "",
-"url": "/arm-none-eabi-gcc/faq/",
+"url": "/openocd/faq/",
 "summary": ""
 }
 ,
@@ -179,43 +201,10 @@
 
 
 {
-"title": "The xPack QEMU Arm Frequently Asked Questions",
+"title": "The xPack GNU Arm Embedded GCC Frequently Asked Questions",
 "tags": "",
 "keywords": "",
-"url": "/qemu-arm/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The xPack Ninja Build Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/ninja-build/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The xPack Meson Build Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/meson-build/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "FAQ",
-"tags": "",
-"keywords": "",
-"url": "/vscode/faq/",
+"url": "/arm-none-eabi-gcc/faq/",
 "summary": ""
 }
 ,
@@ -238,6 +227,17 @@
 "tags": "",
 "keywords": "",
 "url": "/xpm/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "FAQ",
+"tags": "",
+"keywords": "",
+"url": "/vscode/faq/",
 "summary": ""
 }
 ,
@@ -291,14 +291,23 @@
 
 
 
+{
+"title": "The xPack Metadata",
+"tags": "",
+"keywords": "",
+"url": "/metadata/",
+"summary": "<p>The metadata used by xPack tools.</p>"
+}
+,
+
 
 
 {
-"title": "The LLVM clang",
+"title": "xPack Developer info",
 "tags": "",
-"keywords": "LLVMclangc++",
-"url": "/clang/",
-"summary": "<p>A binary distribution of the LLVM clang.</p>"
+"keywords": "",
+"url": "/develop/",
+"summary": "<p>Resources for xPack developers.</p>"
 }
 ,
 
@@ -316,6 +325,39 @@
 
 
 {
+"title": "The xPack QEMU Arm",
+"tags": "",
+"keywords": "qemuarmcortex-mgraphic",
+"url": "/qemu-arm/",
+"summary": "<p>A binary distribution of QEMU Arm.</p>"
+}
+,
+
+
+
+{
+"title": "The LLVM clang",
+"tags": "",
+"keywords": "LLVMclangc++",
+"url": "/clang/",
+"summary": "<p>A binary distribution of the LLVM clang.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Ninja Build",
+"tags": "",
+"keywords": "ninja-build",
+"url": "/ninja-build/",
+"summary": "<p>A binary distribution of Ninja Build.</p>"
+}
+,
+
+
+
+{
 "title": "The xPack CMake",
 "tags": "",
 "keywords": "cmake",
@@ -327,22 +369,22 @@
 
 
 {
-"title": "The xPack OpenOCD",
+"title": "The xPack Meson Build",
 "tags": "",
-"keywords": "openocd",
-"url": "/openocd/",
-"summary": "<p>A binary distribution of OpenOCD.</p>"
+"keywords": "meson-build",
+"url": "/meson-build/",
+"summary": "<p>A binary distribution of Meson Build.</p>"
 }
 ,
 
 
 
 {
-"title": "The xPack GNU Arm Embedded GCC",
+"title": "The xPack OpenOCD",
 "tags": "",
-"keywords": "arm-none-eabi-gccarmgccembedded",
-"url": "/arm-none-eabi-gcc/",
-"summary": "<p>A binary distribution of GNU Arm Embedded GCC.</p>"
+"keywords": "openocd",
+"url": "/openocd/",
+"summary": "<p>A binary distribution of OpenOCD.</p>"
 }
 ,
 
@@ -371,44 +413,11 @@
 
 
 {
-"title": "The xPack QEMU Arm",
+"title": "The xPack GNU Arm Embedded GCC",
 "tags": "",
-"keywords": "qemuarmcortex-mgraphic",
-"url": "/qemu-arm/",
-"summary": "<p>A binary distribution of QEMU Arm.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack Ninja Build",
-"tags": "",
-"keywords": "ninja-build",
-"url": "/ninja-build/",
-"summary": "<p>A binary distribution of Ninja Build.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack Meson Build",
-"tags": "",
-"keywords": "meson-build",
-"url": "/meson-build/",
-"summary": "<p>A binary distribution of Meson Build.</p>"
-}
-,
-
-
-
-{
-"title": "Visual Studio Code xPack C/C++ Managed Build Extension",
-"tags": "",
-"keywords": "",
-"url": "/vscode/",
-"summary": "<p>Use VS Code to manage and build C/C++ projects using the xPack tools.</p>"
+"keywords": "arm-none-eabi-gccarmgccembedded",
+"url": "/arm-none-eabi-gcc/",
+"summary": "<p>A binary distribution of GNU Arm Embedded GCC.</p>"
 }
 ,
 
@@ -426,17 +435,6 @@
 
 
 {
-"title": "The xPack Metadata",
-"tags": "",
-"keywords": "",
-"url": "/metadata/",
-"summary": "<p>The metadata used by xPack tools.</p>"
-}
-,
-
-
-
-{
 "title": "The xPack Build Box",
 "tags": "",
 "keywords": "",
@@ -448,24 +446,28 @@
 
 
 {
-"title": "xPack Developer info",
+"title": "The xPack Build Configurator",
 "tags": "",
-"keywords": "",
-"url": "/develop/",
-"summary": "<p>Resources for xPack developers.</p>"
+"keywords": "make",
+"url": "/xpcdl/",
+"summary": "<p>A tool to manage project configurations, inspired by eCos CDL, but with the configuration files in JSON (in design phase).</p>"
 }
 ,
 
 
 
 {
-"title": "The xPack Build Generator",
+"title": "The xPack Build Runner",
 "tags": "",
 "keywords": "make",
-"url": "/xpmake/",
-"summary": "<p>An advanced tool to build complex projects, inspired by CMake, but with the configuration files in JSON and actions in JavaScript (in design phase).</p>"
+"url": "/xpninja/",
+"summary": "<p>A light and fast tool to build generic projects, inspired by Ninja Build but with the configuration files in JSON (in design phase).</p>"
 }
 ,
+
+
+
+
 
 
 
@@ -480,13 +482,11 @@
 
 
 
-
-
 {
-"title": "xpm files",
+"title": "xpm - common options",
 "tags": "",
 "keywords": "",
-"url": "/xpm/files/",
+"url": "/xpm/cli/",
 "summary": ""
 }
 ,
@@ -494,10 +494,10 @@
 
 
 {
-"title": "xpm - common options",
+"title": "xpm files",
 "tags": "",
 "keywords": "",
-"url": "/xpm/cli/",
+"url": "/xpm/files/",
 "summary": ""
 }
 ,
@@ -516,28 +516,28 @@
 
 
 {
-"title": "The xPack Build Configurator",
+"title": "The xPack Build Generator",
 "tags": "",
 "keywords": "make",
-"url": "/xpcdl/",
-"summary": "<p>A tool to manage project configurations, inspired by eCos CDL, but with the configuration files in JSON (in design phase).</p>"
+"url": "/xpmake/",
+"summary": "<p>An advanced tool to build complex projects, inspired by CMake, but with the configuration files in JSON and actions in JavaScript (in design phase).</p>"
 }
 ,
-
-
 
 
 
 
 
 {
-"title": "The xPack Build Runner",
+"title": "Visual Studio Code xPack C/C++ Managed Build Extension",
 "tags": "",
-"keywords": "make",
-"url": "/xpninja/",
-"summary": "<p>A light and fast tool to build generic projects, inspired by Ninja Build but with the configuration files in JSON (in design phase).</p>"
+"keywords": "",
+"url": "/vscode/",
+"summary": "<p>Use VS Code to manage and build C/C++ projects using the xPack tools.</p>"
 }
 ,
+
+
 
 
 
@@ -586,6 +586,28 @@
 
 
 {
+"title": "How to install the xPack QEMU Arm binaries",
+"tags": "",
+"keywords": "",
+"url": "/qemu-arm/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "How to install the xPack Ninja Build binaries",
+"tags": "",
+"keywords": "",
+"url": "/ninja-build/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
 "title": "How to install the xPack CMake binaries",
 "tags": "",
 "keywords": "",
@@ -597,10 +619,10 @@
 
 
 {
-"title": "How to install the xPack OpenOCD binaries",
+"title": "How to install the xPack Meson Build binaries",
 "tags": "",
 "keywords": "",
-"url": "/openocd/install/",
+"url": "/meson-build/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -608,10 +630,10 @@
 
 
 {
-"title": "How to install the xPack GNU Arm Embedded GCC binaries",
+"title": "How to install the xPack OpenOCD binaries",
 "tags": "",
 "keywords": "",
-"url": "/arm-none-eabi-gcc/install/",
+"url": "/openocd/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -641,44 +663,11 @@
 
 
 {
-"title": "How to install the xPack QEMU Arm binaries",
+"title": "How to install the xPack GNU Arm Embedded GCC binaries",
 "tags": "",
 "keywords": "",
-"url": "/qemu-arm/install/",
+"url": "/arm-none-eabi-gcc/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
-}
-,
-
-
-
-{
-"title": "How to install the xPack Ninja Build binaries",
-"tags": "",
-"keywords": "",
-"url": "/ninja-build/install/",
-"summary": "<p>The recommended method is via xpm.</p>"
-}
-,
-
-
-
-{
-"title": "How to install the xPack Meson Build binaries",
-"tags": "",
-"keywords": "",
-"url": "/meson-build/install/",
-"summary": "<p>The recommended method is via xpm.</p>"
-}
-,
-
-
-
-{
-"title": "How to install the VS Code xPack Extension",
-"tags": "",
-"keywords": "vscodexpackinstall",
-"url": "/vscode/install/",
-"summary": ""
 }
 ,
 
@@ -711,6 +700,17 @@
 "tags": "",
 "keywords": "xpmnpmxpackinstall",
 "url": "/xpm/install/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to install the VS Code xPack Extension",
+"tags": "",
+"keywords": "vscodexpackinstall",
+"url": "/vscode/install/",
 "summary": ""
 }
 ,
@@ -861,6 +861,8 @@
 
 
 
+
+
 {
 "title": "xpbuild - common options",
 "tags": "",
@@ -869,8 +871,6 @@
 "summary": ""
 }
 ,
-
-
 
 
 
@@ -906,8 +906,6 @@
 
 
 
-
-
 {
 "title": "GDB with Python support",
 "tags": "",
@@ -916,6 +914,8 @@
 "summary": "<p>Support for Python 2 and 3 is available in GDB.</p>"
 }
 ,
+
+
 
 
 
@@ -1013,6 +1013,28 @@
 
 
 {
+"title": "How to get help for xPack QEMU Arm",
+"tags": "",
+"keywords": "",
+"url": "/qemu-arm/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack Ninja Build",
+"tags": "",
+"keywords": "",
+"url": "/ninja-build/support/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "How to get help for xPack CMake",
 "tags": "",
 "keywords": "",
@@ -1024,10 +1046,10 @@
 
 
 {
-"title": "How to get help for xPack OpenOCD?",
+"title": "How to get help for xPack Meson Build",
 "tags": "",
 "keywords": "",
-"url": "/openocd/support/",
+"url": "/meson-build/support/",
 "summary": ""
 }
 ,
@@ -1035,10 +1057,10 @@
 
 
 {
-"title": "How to get help for xPack GNU Arm Embedded GCC",
+"title": "How to get help for xPack OpenOCD?",
 "tags": "",
 "keywords": "",
-"url": "/arm-none-eabi-gcc/support/",
+"url": "/openocd/support/",
 "summary": ""
 }
 ,
@@ -1068,43 +1090,10 @@
 
 
 {
-"title": "How to get help for xPack QEMU Arm",
+"title": "How to get help for xPack GNU Arm Embedded GCC",
 "tags": "",
 "keywords": "",
-"url": "/qemu-arm/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack Ninja Build",
-"tags": "",
-"keywords": "",
-"url": "/ninja-build/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack Meson Build",
-"tags": "",
-"keywords": "",
-"url": "/meson-build/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for the VS Code xPack extension",
-"tags": "",
-"keywords": "",
-"url": "/vscode/support/",
+"url": "/arm-none-eabi-gcc/support/",
 "summary": ""
 }
 ,
@@ -1127,6 +1116,17 @@
 "tags": "",
 "keywords": "",
 "url": "/xpm/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for the VS Code xPack extension",
+"tags": "",
+"keywords": "",
+"url": "/vscode/support/",
 "summary": ""
 }
 ,
@@ -1306,6 +1306,16 @@
 
 
 
+
+
+{
+"title": "xPack LLVM clang v12.0.1-2 released",
+"tags": "releasesclang",
+"keywords": "",
+"url": "/blog/2022/02/08/clang-v12-0-1-2-released/",
+"summary": "<p>Version <strong>12.0.1-2</strong> is a maintenance release; it updates to the latest build scripts and adds support for Apple Silicon.</p>"
+}
+,
 
 
 {
