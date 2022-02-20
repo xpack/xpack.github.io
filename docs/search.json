@@ -891,6 +891,17 @@
 
 
 
+{
+"title": "GNU predefined macros",
+"tags": "",
+"keywords": "gnugccc++preprocessormacros",
+"url": "/gcc/predefined-macros/",
+"summary": "<p>The preprocessosr built-in macros.</p>"
+}
+,
+
+
+
 
 
 {
@@ -1306,6 +1317,16 @@
 
 
 
+
+
+{
+"title": "xPack GCC v11.2.0-3 released",
+"tags": "releasesgcc",
+"keywords": "",
+"url": "/blog/2022/02/11/gcc-v11-2-0-3-released/",
+"summary": "<p>Version <strong>11.2.0-3</strong> is a maintenance release; it adds support for Apple Silicon and updates to binutils 2.38, which supports weak symbols on Windows.</p>"
+}
+,
 
 
 {

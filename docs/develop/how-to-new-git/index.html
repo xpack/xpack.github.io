@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to create a new xPack Git repository" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/how-to-new-git/"},"@type":"BlogPosting","url":"https://xpack.github.io/develop/how-to-new-git/","headline":"How to create a new xPack Git repository","dateModified":"2022-02-08T17:30:59+00:00","datePublished":"2019-07-09T14:48:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/how-to-new-git/"},"@type":"BlogPosting","url":"https://xpack.github.io/develop/how-to-new-git/","headline":"How to create a new xPack Git repository","dateModified":"2022-02-20T06:57:01+00:00","datePublished":"2019-07-09T14:48:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -481,6 +481,13 @@
           
           
           
+          <li class="active"><a title="Create new xPack repo" href="/develop/how-to-new-git/">Create new xPack repo</a></li>
+          
+          
+          
+          
+          
+          
           <li><a title="JavaScript Style Guide" href="/develop/js-style-guide/">JavaScript Style Guide</a></li>
           
           
@@ -634,8 +641,46 @@ a recommendation.</div>
 
 <h3 id="existing-git">Existing Git</h3>
 
-<p>If the 3rd party project uses a public Git, fork it, with its original
-<code class="language-plaintext highlighter-rouge">master</code> branch, and continue from the <strong>Common steps</strong> section.</p>
+<p>If the 3rd party project uses a public Git:</p>
+
+<ul>
+  <li>fork it, with its original <code class="language-plaintext highlighter-rouge">master</code> or <code class="language-plaintext highlighter-rouge">main</code> branch (for example in the
+<a href="https://github.com/xpack-3rd-party">3rd party xPacks</a> organization)</li>
+  <li>preferably rename it, to add a <code class="language-plaintext highlighter-rouge">-xpack</code> suffix</li>
+  <li>select the <strong>Settings</strong> tab
+    <ul>
+      <li>in the <strong>Features</strong> section
+        <ul>
+          <li>disable <strong>Wikis</strong></li>
+          <li>enable <strong>Issues</strong></li>
+          <li>enable <strong>Sponsorship</strong> (if needed); Set up sponsor</li>
+          <li>disable <strong>Projects</strong></li>
+          <li>enable <strong>Discussions</strong>, Set up discussions</li>
+        </ul>
+      </li>
+      <li>quit the <strong>Settings</strong> tab (there is no Save)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Clone the project locally on the development machine:</p>
+
+<ul>
+  <li>select the GitHub project</li>
+  <li>select the <strong>Code</strong> tab</li>
+  <li>click the <strong>Clone or download</strong> button; this will open a
+small <strong>Clone to HTTPS</strong> window</li>
+  <li>click the <strong>Copy</strong> icon, or explicitly copy the URL</li>
+  <li>in a terminal window, in a place of our choice, create a folder
+to store all xPacks (for example it can be named <code class="language-plaintext highlighter-rouge">xpack-3rd-party</code>)</li>
+</ul>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> xpack-3rd-party
+<span class="nb">cd </span>xpack-3rd-party
+git clone https://github.com/xpack-3rd-party/&lt;project&gt;.git &lt;project&gt;.git
+</code></pre></div></div>
+
+<p>Continue from the <strong>Common steps</strong> section below.</p>
 
 <h3 id="non-public-repository">Non-public repository</h3>
 
@@ -644,17 +689,18 @@ it is necessary to create one.</p>
 
 <p>For projects distributed as archives, to simplify maintenance,
 it is recommended to reconstruct the history in a separate branch
-(like <code class="language-plaintext highlighter-rouge">originals</code>).</p>
+(like <code class="language-plaintext highlighter-rouge">originals</code>) by adding commits with the content of each released
+archive.</p>
 
 <h2 id="create-xpacks-repositories">Create xPacks repositories</h2>
 
 <p>If the project does not already have a forked repository, create a new
 Git project.</p>
 
-<p>!!!!
-For consistency reasons, it is recommended for the new xPacks, even if
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For consistency reasons, it is
+recommended for the new xPacks, even if
 they do not include 3rd party content, to use the <code class="language-plaintext highlighter-rouge">xpack</code> branch instead
-of the <code class="language-plaintext highlighter-rouge">master</code> branch.</p>
+of the <code class="language-plaintext highlighter-rouge">master</code> branch.</div>
 
 <div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Do not use a GitHub Template project!
 The easiest way to create new projects would be to use an existing
@@ -699,10 +745,13 @@ choice for xPacks, but any other license of your choice is also ok</li>
     <ul>
       <li>in the <strong>Features</strong> section
         <ul>
-          <li>disable the <strong>Wikis</strong> and <strong>Projects</strong> options</li>
+          <li>disable <strong>Wikis</strong></li>
+          <li>enable <strong>Sponsorship</strong> (if needed)</li>
+          <li>disable <strong>Projects</strong></li>
           <li>enable <strong>Discussions</strong></li>
         </ul>
       </li>
+      <li>quit the <strong>Settings</strong> tab (there is no Save)</li>
     </ul>
   </li>
 </ul>
@@ -724,9 +773,58 @@ to store all xPacks (for example it can be named <code class="language-plaintext
 git clone https://github.com/&lt;user&gt;/&lt;project&gt;.git &lt;project&gt;.git
 </code></pre></div></div>
 
+<h3 id="edit-the-master-readmemd-file">Edit the master <code class="language-plaintext highlighter-rouge">README.md</code> file</h3>
+
+<p>As mentioned in the introduction,
+although for original xPacks there are no constraints on how to
+organise the branches, for consistency with xPacks that use 3rd
+party content, it is recommended to use an <code class="language-plaintext highlighter-rouge">xpack</code> branch.</p>
+
+<p>In this case, to warn users about this configuration, edit
+the <code class="language-plaintext highlighter-rouge">README.md</code> file; keep the header line and replace the content with:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This project does not use the `master` branch, please
+switch to the `xpack` branch to get the project files.
+
+</code></pre></div></div>
+
+<p>With VS Code, Fork or Git:</p>
+
+<ul>
+  <li>stage the <code class="language-plaintext highlighter-rouge">README.md</code> file</li>
+  <li>commit with the following message: <strong>README: ‘no master’ notice</strong></li>
+</ul>
+
+<h2 id="create-the-originals-branch">Create the <code class="language-plaintext highlighter-rouge">originals</code> branch</h2>
+
+<p>For a 3rd party project that does not use a
+public Git project, but is distributed only as release archives, to
+keep track of the changes it is recommended to
+recreate the Git with the original
+code on a separate branch, like <code class="language-plaintext highlighter-rouge">originals</code>, and later treat it
+as the <code class="language-plaintext highlighter-rouge">master</code> branch.</p>
+
+<p>With each upstream release, while on the <code class="language-plaintext highlighter-rouge">originals</code> branch,
+fuly remove the content and extract the newly released archive.</p>
+
+<p>Then merge the update <code class="language-plaintext highlighter-rouge">originals</code> branch into the <code class="language-plaintext highlighter-rouge">xpack</code> branch.</p>
+
+<p>In case the archive contains binary files, or other large files considered
+not essential for the xPack distribution, add them to <code class="language-plaintext highlighter-rouge">.gitignore</code>.</p>
+
+<p>Add/Edit the README file to add:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This branch is used to recreate the 3rd party project history
+from release archives.
+</code></pre></div></div>
+
+<p>Commit with the following message: <strong>README: notice for 3rd party content</strong></p>
+
+<h2 id="common-steps">Common steps</h2>
+
 <h3 id="edit-the-gitignore-file">Edit the <code class="language-plaintext highlighter-rouge">.gitignore</code> file</h3>
 
-<p>With Visual Studio Code:</p>
+<p>With VS Code:</p>
 
 <ul>
   <li>add the following to <code class="language-plaintext highlighter-rouge">.gitignore</code>:</li>
@@ -735,6 +833,8 @@ git clone https://github.com/&lt;user&gt;/&lt;project&gt;.git &lt;project&gt;.gi
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code># xpm
 xpacks/
 build/
+
+*.tgz
 
 # Windows
 Thumbs.db
@@ -757,100 +857,33 @@ Release/
 
 </code></pre></div></div>
 
-<p>With VS Code, Sourcetree or Git:</p>
+<p>With VS Code, Fork or Git:</p>
 
 <ul>
   <li>stage the <code class="language-plaintext highlighter-rouge">.gitignore</code> file</li>
   <li>commit with the following message: <strong>.gitignore: add xPack specifics</strong></li>
 </ul>
 
-<h3 id="edit-the-master-readmemd-file">Edit the master <code class="language-plaintext highlighter-rouge">README.md</code> file</h3>
-
-<p>As mentioned in the introduction,
-although for original xPacks there are no constraints on how to
-organise the branches, for consistency with xPacks that use 3rd
-party content, it is recommended to use an <code class="language-plaintext highlighter-rouge">xpack</code> branch.</p>
-
-<p>In this case, to warn users about this configuration, edit
-the <code class="language-plaintext highlighter-rouge">README.md</code> file; keep the header line and replace the content with:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This project does not use the `master` branch, please
-switch to the `xpack` branch to get the project files.
-
-</code></pre></div></div>
-
-<p>With VS Code, Sourcetree or Git:</p>
-
-<ul>
-  <li>stage the <code class="language-plaintext highlighter-rouge">README.md</code> file</li>
-  <li>commit with the following message: <strong>README: ‘no master’ notice</strong></li>
-</ul>
-
-<h2 id="create-the-originals-branch">Create the <code class="language-plaintext highlighter-rouge">originals</code> branch</h2>
-
-<p>For a 3rd party project that does not use a
-public Git project, but is distributed only as release archives, to
-keep track of the changes it is recommended to
-recreate the Git with the original
-code on a separate branch, like <code class="language-plaintext highlighter-rouge">originals</code>, and later treat it
-as the <code class="language-plaintext highlighter-rouge">master</code> branch.</p>
-
-<p>With each upstream release, while on the <code class="language-plaintext highlighter-rouge">originals</code> branch,
-fuly remove the content and extract the newly released archive.</p>
-
-<p>Then merge the update <code class="language-plaintext highlighter-rouge">originals</code> branch into the <code class="language-plaintext highlighter-rouge">xpacks</code> branch.</p>
-
-<p>In case the archive contains binary files, or other large files considered
-not essential for the xPack distribution, add them to <code class="language-plaintext highlighter-rouge">.gitignore</code>.</p>
-
-<p>Add/Edit the README file to read:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This branch is used to recreate the 3rd party project history
-from release archives.
-</code></pre></div></div>
-
-<p>Commit with the following message: <strong>README: notice for 3rd party content</strong></p>
-
-<h2 id="common-steps">Common steps</h2>
-
 <h3 id="create-the-xpack-branch">Create the <code class="language-plaintext highlighter-rouge">xpack</code> branch</h3>
 
-<p>With VS Code, Sourcetree or Git.</p>
+<p>With VS Code, Fork or Git:</p>
 
 <ul>
   <li>select the <code class="language-plaintext highlighter-rouge">master</code> branch</li>
-  <li>VS Code menu <strong>View</strong> → <strong>Command Palette…</strong>
-    <ul>
-      <li><strong>Git: Create branch</strong></li>
-    </ul>
-  </li>
-</ul>
-
-<p>(or with Git view, <strong>…</strong> → <strong>Branch</strong> → <strong>Create Branch…</strong>)</p>
-
-<p>Sourcetree:</p>
-
-<ul>
-  <li>select the <code class="language-plaintext highlighter-rouge">master</code> branch</li>
-  <li>click the <strong>Branch</strong> button</li>
-  <li>in the <strong>Name Branch</strong> field, enter <code class="language-plaintext highlighter-rouge">xpack</code></li>
-  <li>click the <strong>Create Branch</strong> button</li>
+  <li>create new branch <code class="language-plaintext highlighter-rouge">xpack</code></li>
 </ul>
 
 <h3 id="publish-all-branches">Publish all branches</h3>
 
-<p>With VS Code, Sourcetree or Git.</p>
-
-<p>With Sourcetree:</p>
+<p>With VS Code, Fork or Git:</p>
 
 <ul>
-  <li>click the <strong>Push</strong> button</li>
-  <li>select all local branches (<code class="language-plaintext highlighter-rouge">master</code>, <code class="language-plaintext highlighter-rouge">xpack</code> and maybe the <code class="language-plaintext highlighter-rouge">originals</code>)</li>
-  <li>click the <strong>OK</strong> button</li>
+  <li>push all local branches (<code class="language-plaintext highlighter-rouge">master</code>, <code class="language-plaintext highlighter-rouge">xpack</code> and maybe the <code class="language-plaintext highlighter-rouge">originals</code>)</li>
 </ul>
 
-<p>With the GitHub web interface (as shortcut, in Sourcetree, click
-the <strong>View Remote</strong> button):</p>
+<h3 id="change-default-branch-to-xpack">Change default branch to <code class="language-plaintext highlighter-rouge">xpack</code></h3>
+
+<p>With the GitHub web interface:</p>
 
 <ul>
   <li>select the <strong>Settings</strong> tab</li>
@@ -902,7 +935,7 @@ the <strong>View Remote</strong> button):</p>
 </span><span class="gp">$</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Open <code class="language-plaintext highlighter-rouge">package.json</code> with Visual Studio Code:</p>
+<p>Open <code class="language-plaintext highlighter-rouge">package.json</code> with VS Code:</p>
 
 <ul>
   <li>as <strong>name</strong> enter the scope (your npm account name or one of
@@ -971,7 +1004,7 @@ as the first contributor, for example:</li>
 
 <h3 id="commit-the-initial-package-file">Commit the initial package file</h3>
 
-<p>With VS Code, Sourcetree or Git:</p>
+<p>With VS Code, Fork or Git:</p>
 
 <ul>
   <li>stage the <code class="language-plaintext highlighter-rouge">package.json</code></li>
@@ -996,7 +1029,7 @@ Permission is hereby granted, free of charge, to any person obtaining a copy
 ...
 </code></pre></div></div>
 
-<p>With VS Code, Sourcetree or Git:</p>
+<p>With VS Code, Fork or Git:</p>
 
 <ul>
   <li>stage the <code class="language-plaintext highlighter-rouge">LICENSE</code> file</li>
@@ -1023,7 +1056,7 @@ The original content is released under the
 <span class="p">[</span><span class="nv">Liviu Ionescu</span><span class="p">](</span><span class="sx">https://github.com/ilg-ul/</span><span class="p">)</span>.
 </code></pre></div></div>
 
-<p>With Sourcetree or Git:</p>
+<p>With VS Code, Fork or Git:</p>
 
 <ul>
   <li>stage the <code class="language-plaintext highlighter-rouge">README*.md</code> files</li>
@@ -1047,7 +1080,7 @@ and close existing issues and pull requests.
 -</span> v2.0.5
 </code></pre></div></div>
 
-<p>With Sourcetree or Git:</p>
+<p>With VS Code, Fork or Git:</p>
 
 <ul>
   <li>stage the <code class="language-plaintext highlighter-rouge">CHANGELOG.md</code> files</li>
@@ -1064,7 +1097,7 @@ and close existing issues and pull requests.
 
 <p>Create or copy/paste from a similar project.</p>
 
-<p>With Sourcetree or Git:</p>
+<p>With VS Code, Fork or Git:</p>
 
 <ul>
   <li>stage the <code class="language-plaintext highlighter-rouge">README-MAINTAINER.md</code> files</li>
@@ -1073,7 +1106,7 @@ and close existing issues and pull requests.
 
 <h3 id="publish-the-initial-version-to-github">Publish the initial version to GitHub</h3>
 
-<p>With Sourcetree or Git:</p>
+<p>With VS Code, Fork or Git:</p>
 
 <ul>
   <li>click the <strong>Push</strong> button (to push the <code class="language-plaintext highlighter-rouge">xpack</code> branch to the server)</li>
@@ -1087,7 +1120,7 @@ and close existing issues and pull requests.
 
 <h3 id="commit-the-initial-content">Commit the initial content</h3>
 
-<p>With Sourcetree or Git:</p>
+<p>With VS Code, Fork or Git:</p>
 
 <ul>
   <li>stage the new files</li>
@@ -1096,7 +1129,7 @@ and close existing issues and pull requests.
 
 <h3 id="create-the-xpack-develop-branch">Create the <code class="language-plaintext highlighter-rouge">xpack-develop</code> branch</h3>
 
-<p>With Sourcetree or Git:</p>
+<p>With VS Code, Fork or Git:</p>
 
 <ul>
   <li>select the <code class="language-plaintext highlighter-rouge">xpack</code> branch</li>
@@ -1108,9 +1141,10 @@ to <code class="language-plaintext highlighter-rouge">master</code>.</p>
 
 <h3 id="publish-the-branches-to-github">Publish the branches to GitHub</h3>
 
+<p>With VS Code, Fork or Git:</p>
+
 <ul>
-  <li>with Sourcetree or Git, click <strong>Push</strong> and select all
-(or at least <code class="language-plaintext highlighter-rouge">xpack</code> and <code class="language-plaintext highlighter-rouge">xpack-develop</code>)</li>
+  <li><strong>Push</strong> all branches (or at least <code class="language-plaintext highlighter-rouge">xpack</code> and <code class="language-plaintext highlighter-rouge">xpack-develop</code>)</li>
 </ul>
 
 <h3 id="publish-the-initial-version-to-the-npmjs-public-registry">Publish the initial version to the npmjs public registry</h3>
@@ -1146,10 +1180,10 @@ npm version minor
 npm version major
 </code></pre></div></div>
 
-<p>With Sourcetree or Git:</p>
+<p>With VS Code, Fork or Git:</p>
 
 <ul>
-  <li>click <strong>Push</strong>, to push the commits</li>
+  <li><strong>Push</strong> the commits</li>
 </ul>
 
 
@@ -1171,7 +1205,7 @@ npm version major
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Feb 8, 2022<br/> Site last generated: Feb 8, 2022 <br />
+<span>Page last updated:</span> Feb 20, 2022<br/> Site last generated: Feb 20, 2022 <br />
                 </div>
             </div>
 </footer>
