@@ -5,9 +5,33 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Fri, 25 Feb 2022 16:16:26 +0000</pubDate>
-        <lastBuildDate>Fri, 25 Feb 2022 16:16:26 +0000</lastBuildDate>
+        <pubDate>Sat, 05 Mar 2022 10:07:58 +0000</pubDate>
+        <lastBuildDate>Sat, 05 Mar 2022 10:07:58 +0000</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+        <item>
+            <title>xPack Windows Build Tools v4.3.0-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/windows-build-tools/&quot;&gt;The xPack Windows Build Tools&lt;/a&gt;is a standalone Windows binary distribution of&lt;strong&gt;GNU make&lt;/strong&gt; and a few of other tools required by the Eclipse Embedded CDT(formerly GNU MCU/ARM Eclipse) project, but the binaries can also be used ingeneric build environments.&lt;/p&gt;</description>
+            <pubDate>Sat, 05 Mar 2022 09:45:52 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/03/05/windows-build-tools-v4-3-0-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/03/05/windows-build-tools-v4-3-0-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>windows-build-tools</category>
+            
+            <category>build</category>
+            
+            <category>make</category>
+            
+            <category>rm</category>
+            
+            <category>mkdir</category>
+            
+            <category>busybox</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack GCC v11.2.0-3 released</title>
@@ -169,28 +193,6 @@
             <category>c++</category>
             
             <category>exceptions</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack Meson Build v0.59.4-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/meson-build/&quot;&gt;The xPack Meson Build&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://meson-build.org&quot;&gt;Meson Build&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Mon, 06 Dec 2021 19:45:29 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2021/12/06/meson-build-v0-59-4-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2021/12/06/meson-build-v0-59-4-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>meson-build</category>
-            
-            <category>meson</category>
-            
-            <category>build</category>
-            
-            <category>python</category>
-            
-            <category>ninja</category>
             
             
         </item>

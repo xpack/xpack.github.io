@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to create a new xPack Git repository" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/how-to-new-git/"},"@type":"BlogPosting","url":"https://xpack.github.io/develop/how-to-new-git/","headline":"How to create a new xPack Git repository","dateModified":"2022-02-25T16:15:21+00:00","datePublished":"2019-07-09T14:48:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/how-to-new-git/"},"@type":"BlogPosting","url":"https://xpack.github.io/develop/how-to-new-git/","headline":"How to create a new xPack Git repository","dateModified":"2022-03-05T09:50:00+00:00","datePublished":"2019-07-09T14:48:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1172,6 +1172,20 @@ README-MAINTAINER*.md
   <li>commit with the following message: <strong>.npmignore preliminary content</strong></li>
 </ul>
 
+<h3 id="add-githubworkflows">Add .github/workflows/*</h3>
+
+<p>Copy/paste files like:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">CI.yml</code></li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">test-all.yml</code></p>
+  </li>
+  <li>commit with the following message: <strong>.github/workflows preliminary content</strong></li>
+</ul>
+
+<p>For projects with an upstream Git, disable existing workflows.</p>
+
 <h3 id="publish-the-initial-version-to-github">Publish the initial version to GitHub</h3>
 
 <p>With VS Code, Fork or Git:</p>
@@ -1184,6 +1198,7 @@ README-MAINTAINER*.md
 
 <ul>
   <li>add project files</li>
+  <li>copy/paste the <code class="language-plaintext highlighter-rouge">tests[-xpack]</code> folder</li>
 </ul>
 
 <h3 id="commit-the-initial-content">Commit the initial content</h3>
@@ -1273,7 +1288,7 @@ npm version major
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Feb 25, 2022<br/> Site last generated: Feb 25, 2022 <br />
+<span>Page last updated:</span> Mar 5, 2022<br/> Site last generated: Mar 5, 2022 <br />
                 </div>
             </div>
 </footer>
