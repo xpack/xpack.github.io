@@ -5,9 +5,23 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sat, 05 Mar 2022 10:29:47 +0000</pubDate>
-        <lastBuildDate>Sat, 05 Mar 2022 10:29:47 +0000</lastBuildDate>
+        <pubDate>Thu, 24 Mar 2022 13:18:04 +0000</pubDate>
+        <lastBuildDate>Thu, 24 Mar 2022 13:18:04 +0000</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+        <item>
+            <title>xPack LLVM clang v13.0.1-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/clang/&quot;&gt;The xPack LLVM clang&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://clang.org&quot;&gt;LLVM clang&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Thu, 24 Mar 2022 13:09:26 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/03/24/clang-v13-0-1-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/03/24/clang-v13-0-1-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>clang</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Windows Build Tools v4.3.0-1 released</title>
@@ -169,30 +183,6 @@
             <category>releases</category>
             
             <category>openocd</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack Arm Embedded GCC v10.3.1-2.3 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/arm-none-eabi-gcc/&quot;&gt;The xPack Arm Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/open-source/gnu-toolchain/gnu-rm&quot;&gt;GNU Arm Embedded Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Tue, 07 Dec 2021 13:32:25 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2021/12/07/arm-none-eabi-gcc-v10-3-1-2-3-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2021/12/07/arm-none-eabi-gcc-v10-3-1-2-3-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>arm</category>
-            
-            <category>arm-none-eabi-gcc</category>
-            
-            <category>gcc</category>
-            
-            <category>binaries</category>
-            
-            <category>c++</category>
-            
-            <category>exceptions</category>
             
             
         </item>
