@@ -5,9 +5,25 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 24 Mar 2022 21:19:47 +0000</pubDate>
-        <lastBuildDate>Thu, 24 Mar 2022 21:19:47 +0000</lastBuildDate>
+        <pubDate>Fri, 25 Mar 2022 16:49:42 +0000</pubDate>
+        <lastBuildDate>Fri, 25 Mar 2022 16:49:42 +0000</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+        <item>
+            <title>xPack CMake v3.21.6-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/cmake/&quot;&gt;The xPack CMake&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://cmake.org&quot;&gt;CMake&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Fri, 25 Mar 2022 16:30:08 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/03/25/cmake-v3-21-6-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/03/25/cmake-v3-21-6-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>cmake</category>
+            
+            <category>build</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Meson Build v0.60.3-1 released</title>
@@ -173,24 +189,6 @@
             <category>package</category>
             
             <category>manager</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack Build Box v3.4 released</title>
-            <description>&lt;p&gt;The xPack Build Box (XBB) is a build environment intended for reproducible builds.&lt;/p&gt;</description>
-            <pubDate>Thu, 16 Dec 2021 10:00:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2021/12/16/xbb-v3.4-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2021/12/16/xbb-v3.4-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>xbb</category>
-            
-            <category>build</category>
-            
-            <category>box</category>
             
             
         </item>
