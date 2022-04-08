@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack tools" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/install/","headline":"How to install the xPack tools","dateModified":"2022-04-08T06:26:33+00:00","datePublished":"2017-10-09T11:14:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/install/","headline":"How to install the xPack tools","dateModified":"2022-04-08T16:16:52+00:00","datePublished":"2017-10-09T11:14:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -908,6 +908,25 @@ added 3 packages from 2 contributors, removed 3 packages and updated 20 packages
 <p>At any time, to switch between any of the installed versions,
 use <code class="language-plaintext highlighter-rouge">nvm use &lt;version&gt;</code>.</p>
 
+<h2 id="command-line-tools">Command Line Tools</h2>
+
+<p>Although not a requirement for the node/npm/xpm tools themselves, if the xPack
+toolchains are used for software development, including running tests,
+the system C/C++ headers and most probably other tools, will be needed;
+they are provided by Apple as the separate Command Line Tools package.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Please note that although these headers
+are also part of Xcode, their location is not fixed, hence the Command
+Line Tools package must still be installed.</div>
+
+<p>To install the Command Line Tools only if they are not already in the expected location, use:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-d</span> <span class="s2">"/Library/Developer/CommandLineTools/"</span> <span class="o">]</span>
+<span class="k">then
+  </span>xcode-select <span class="nt">--install</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
 
 	</div>
 	<div role="tabpanel" class="tab-pane" id="linux_1">
@@ -1079,6 +1098,15 @@ use <code class="language-plaintext highlighter-rouge">nvm use &lt;version&gt;</
 Ubuntu 18 LTS and Manjaro 18; for other shells they may need small
 adjustments.</div>
 
+<h2 id="the-gcc-development-headers-and-libraries">The GCC development headers and libraries</h2>
+
+<p>Although not a requirement for the node/npm/xpm tools themselves, if the
+xPack toolchains
+are used for software development, including for running tests, the
+system C/C++ headers and libraries will be needed.</p>
+
+<p>Install them according to the distribution specifics.</p>
+
 
 	</div>
 </div>
@@ -1088,7 +1116,8 @@ adjustments.</div>
 <p>The next step is to install the
 <a href="/xpm/install/">xPack Project Manager</a>.</p>
 
-<p>If you already know what this is all about, issue the following command:</p>
+<p>If you followed the TL;DR steps, it was already installed. Otherwise,
+if you already know what this is all about, issue the following command:</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">--global</span> xpm@latest
 </code></pre></div></div>
