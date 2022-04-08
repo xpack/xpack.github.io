@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack tools" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/install/","headline":"How to install the xPack tools","dateModified":"2022-04-03T05:33:19+00:00","datePublished":"2017-10-09T11:14:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/install/","headline":"How to install the xPack tools","dateModified":"2022-04-08T06:26:33+00:00","datePublished":"2017-10-09T11:14:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -582,8 +582,8 @@ via <strong>npm</strong> which uses Node.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>A recent <a href="https://nodejs.org">Node.js</a> (&gt;=<strong>10.x</strong>), since the ECMAScript 6 class
-syntax is used, and some dependencies may also require new features.</p>
+<p>A recent <a href="https://nodejs.org">Node.js</a> (&gt;=<strong>12.x</strong>), since
+some dependencies require new features.</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>node <span class="nt">--version</span>
 <span class="go">v12.14.0
@@ -605,9 +605,11 @@ the <code class="language-plaintext highlighter-rouge">npm-cli.js</code> script,
 the npm functionality (on Windows instead of soft links,
 <code class="language-plaintext highlighter-rouge">.cmd</code> stubs are used).</p>
 
-<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> The usual method is to install Node with
-administrative rights;
-however, the prefered method is to install it
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> Due to a misconception, some distributions
+offer to install Node with administrative rights; this is not a problem
+for Node itself, but will also require administrative rights for using
+npm and xpm;
+to simplify maintenance, the preferred method is to install Node/npm
 in a custom location in the home folder, using a version
 manager or by directly unpacking the archive distributions.
 Regardless how and where it is installed, the <code class="language-plaintext highlighter-rouge">node</code>
@@ -747,14 +749,19 @@ The terminal process "C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe 
 <span class="nb">exit</span>
 </code></pre></div></div>
 
-<p>and in new terminal:</p>
+<p>and in a new terminal:</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm <span class="nb">install</span> <span class="nt">--lts</span> node
 nvm use node
-node <span class="nt">--version</span>
 nvm install-latest-npm
-npm <span class="nt">--version</span>
 npm <span class="nb">install</span> <span class="nt">--global</span> xpm@latest
+</code></pre></div></div>
+
+<p>To check the result, use:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node <span class="nt">--version</span>
+npm <span class="nt">--version</span>
+xpm <span class="nt">--version</span>
 </code></pre></div></div>
 
 <h2 id="install-nvm-node-version-manager">Install <code class="language-plaintext highlighter-rouge">nvm</code> (node version manager)</h2>
@@ -787,12 +794,20 @@ npm config delete prefix
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-o-</span> https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 </code></pre></div></div>
 
-<p>This will install the version manager in <code class="language-plaintext highlighter-rouge">~/.nvm</code>, and add a few lines to
-the shell profile, for example to <code class="language-plaintext highlighter-rouge">.bash_profile</code> on older versions.</p>
+<p>This will install the version manager in <code class="language-plaintext highlighter-rouge">~/.nvm</code>, and suggest to
+add a few lines to the shell profile, for example to <code class="language-plaintext highlighter-rouge">.zprofile</code>.</p>
 
-<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Please note that macOS Catalina no
-longer uses bash, and the current npm install script does not
-support zsh yet, so the two lines must be manually added to `.zprofile.</div>
+<p>To do this, use:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="o">&gt;&gt;</span>.zprofile
+<span class="nb">echo</span> <span class="s1">'export NVM_DIR="$HOME/.nvm"'</span> <span class="o">&gt;&gt;</span>.zprofile
+<span class="nb">echo</span> <span class="s1">'[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; \. "$NVM_DIR/nvm.sh"  # This loads nvm'</span> <span class="o">&gt;&gt;</span> .zprofile
+
+<span class="nb">cat</span> .zprofile
+</code></pre></div></div>
+
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Please note that without these settings
+nvm is not functional.</div>
 
 <p>To install the latest node, after updating the shell profile, open a new
 terminal (to make use of the new environment variables) and issue the
@@ -905,14 +920,19 @@ use <code class="language-plaintext highlighter-rouge">nvm use &lt;version&gt;</
 <span class="nb">exit</span>
 </code></pre></div></div>
 
-<p>and in new terminal:</p>
+<p>and in a new terminal:</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm <span class="nb">install</span> <span class="nt">--lts</span> node
 nvm use node
-node <span class="nt">--version</span>
 nvm install-latest-npm
-npm <span class="nt">--version</span>
 npm <span class="nb">install</span> <span class="nt">--global</span> xpm@latest
+</code></pre></div></div>
+
+<p>To check the result, use:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node <span class="nt">--version</span>
+npm <span class="nt">--version</span>
+xpm <span class="nt">--version</span>
 </code></pre></div></div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The official Node.js distribution no
@@ -935,7 +955,7 @@ For details, see the
 page.</p>
 
 <p>In short, <a href="https://github.com/nvm-sh/nvm">nvm</a> changes the install
-location to <code class="language-plaintext highlighter-rouge">C:\Users\&lt;user&gt;\AppData\Roaming\npm</code> and allows to install
+location to <code class="language-plaintext highlighter-rouge">~/.nvm</code> and allows to install
 multiple instances of node
 in the <code class="language-plaintext highlighter-rouge">~/.nvm/versions/node</code> folder.</p>
 
@@ -1126,7 +1146,7 @@ builds, or to build it from sources; for more details see the
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Apr 3, 2022<br/> Site last generated: Apr 3, 2022 <br />
+<span>Page last updated:</span> Apr 8, 2022<br/> Site last generated: Apr 8, 2022 <br />
                 </div>
             </div>
 </footer>
