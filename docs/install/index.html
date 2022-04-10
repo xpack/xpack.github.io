@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack prerequisites" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/install/","headline":"How to install the xPack prerequisites","dateModified":"2022-04-10T19:48:12+00:00","datePublished":"2017-10-09T11:14:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/install/","headline":"How to install the xPack prerequisites","dateModified":"2022-04-10T21:22:42+00:00","datePublished":"2017-10-09T11:14:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -746,13 +746,34 @@ The terminal process "C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe 
 		
 <h2 id="tldr">TL;DR</h2>
 
-<p>If you know what you’re doing, copy/paste the following
+<p>If you prefer a shortcut, copy/paste the following
 <a href="https://github.com/xpack/assets/blob/master/scripts/install-nvm-node-npm-xpm.sh">script</a> into a terminal:</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-o-</span> https://raw.githubusercontent.com/xpack/assets/master/scripts/install-nvm-node-npm-xpm.sh | bash
 
 <span class="nb">exit</span>
 </code></pre></div></div>
+
+<h2 id="command-line-tools">Command Line Tools</h2>
+
+<p>The system C/C++ headers and most development tools are not in the
+standard macOS distribution, and need to be installed separately;
+they are provided by Apple as the separate Command Line Tools package.</p>
+
+<p>If you followed the TL;DR steps, it was already installed. Otherwise,
+to install the Command Line Tools only if they are not already in the
+expected location, use:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-d</span> <span class="s2">"/Library/Developer/CommandLineTools/"</span> <span class="o">]</span>
+<span class="k">then
+  </span>xcode-select <span class="nt">--install</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Please note that although the C/C++ headers
+are also part of Xcode, their location is not fixed, hence the Command
+Line Tools package must still be installed, for the xPack toolchains to
+find them in the expected location.</div>
 
 <h2 id="install-nvm-node-version-manager">Install <code class="language-plaintext highlighter-rouge">nvm</code> (node version manager)</h2>
 
@@ -772,9 +793,9 @@ in the <code class="language-plaintext highlighter-rouge">~/.nvm/versions/node</
 <p>If you have a previous version of npm installed with a local prefix,
 remove it:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo rm</span> <span class="nt">-rf</span> /usr/local/lib/node-modules /usr/local/bin/node /usr/local/bin/npm /usr/local/bin/npm
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm config delete prefix
+<span class="nb">sudo rm</span> <span class="nt">-rf</span> /usr/local/lib/node-modules /usr/local/bin/node /usr/local/bin/npm /usr/local/bin/npm
 <span class="nb">rm</span> <span class="nt">-rf</span> ~/Library/npm ~/opt/npm
-npm config delete prefix
 </code></pre></div></div>
 
 <p>Also remove <code class="language-plaintext highlighter-rouge">${HOME}/Library/npm/bin</code> or <code class="language-plaintext highlighter-rouge">${HOME}/opt/npm/bin</code> from the PATH.</p>
@@ -890,32 +911,13 @@ added 3 packages from 2 contributors, removed 3 packages and updated 20 packages
 <p>At any time, to switch between any of the installed versions,
 use <code class="language-plaintext highlighter-rouge">nvm use &lt;version&gt;</code>.</p>
 
-<h2 id="command-line-tools">Command Line Tools</h2>
-
-<p>Although not a requirement for the node/npm/xpm tools themselves, if the xPack
-toolchains are used for software development, including running tests,
-the system C/C++ headers and most probably other tools, will be needed;
-they are provided by Apple as the separate Command Line Tools package.</p>
-
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Please note that although these headers
-are also part of Xcode, their location is not fixed, hence the Command
-Line Tools package must still be installed.</div>
-
-<p>To install the Command Line Tools only if they are not already in the expected location, use:</p>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-d</span> <span class="s2">"/Library/Developer/CommandLineTools/"</span> <span class="o">]</span>
-<span class="k">then
-  </span>xcode-select <span class="nt">--install</span>
-<span class="k">fi</span>
-</code></pre></div></div>
-
 
 	</div>
 	<div role="tabpanel" class="tab-pane" id="linux_1">
 		
 <h2 id="tldr">TL;DR</h2>
 
-<p>If you know what you’re doing, copy/paste the following
+<p>If you prefer a shortcut, copy/paste the following
 <a href="https://github.com/xpack/assets/blob/master/scripts/install-nvm-node-npm-xpm.sh">script</a> into a terminal:</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-o-</span> https://raw.githubusercontent.com/xpack/assets/master/scripts/install-nvm-node-npm-xpm.sh | bash
