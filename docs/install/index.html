@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack tools" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/install/","headline":"How to install the xPack tools","dateModified":"2022-04-10T19:35:34+00:00","datePublished":"2017-10-09T11:14:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/install/","headline":"How to install the xPack tools","dateModified":"2022-04-10T19:42:24+00:00","datePublished":"2017-10-09T11:14:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -587,7 +587,7 @@ some dependencies require new features. Detailed instructions
 for each supported platform are available in the next section.</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>node <span class="nt">--version</span>
-<span class="go">v12.14.0
+<span class="go">v16.14.2
 </span></code></pre></div></div>
 
 <p>If this is your first encounter with <strong>npm</strong>, you need to install the
@@ -642,7 +642,7 @@ system path since it includes the <code class="language-plaintext highlighter-ro
 <pre><code class="language-doscon">C:\&gt;where node.exe
 C:\Program Files\nodejs\node.exe
 C:\&gt;node --version
-v12.14.0
+v16.14.2
 </code></pre>
 
 <h2 id="npm-update"><code class="language-plaintext highlighter-rouge">npm</code> update</h2>
@@ -652,7 +652,7 @@ v12.14.0
 <pre><code class="language-doscon">C:\&gt;where npm.cmd
 C:\Program Files\nodejs\npm.cmd
 C:\&gt;npm --version
-12.14.0
+16.14.2
 </code></pre>
 
 <p>It is recommended to update it to the latest version:</p>
@@ -660,7 +660,7 @@ C:\&gt;npm --version
 <pre><code class="language-doscon">C:\&gt;npm install --global npm@latest
 C:\Users\ilg\AppData\Roaming\npm\npm -&gt; C:\Users\ilg\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
 C:\Users\ilg\AppData\Roaming\npm\npx -&gt; C:\Users\ilg\AppData\Roaming\npm\node_modules\npm\bin\npx-cli.js
-+ npm@6.14.7
++ npm@8.6.0
 added 435 packages from 816 contributors in 72.64s
 </code></pre>
 
@@ -669,7 +669,7 @@ added 435 packages from 816 contributors in 72.64s
 <pre><code class="language-doscon">C:\&gt;where npm.cmd
 C:\Program Files\nodejs\npm.cmd
 C:\&gt;npm --version
-12.14.0
+16.14.2
 </code></pre>
 
 <p>This is because on Windows, by default, global node packages are
@@ -701,7 +701,7 @@ the syntax to match their specifics.</div>
 <p>After this, the new version of the program should be visible:</p>
 
 <pre><code class="language-doscon">C:\&gt;npm --version
-6.14.7
+8.6.0
 </code></pre>
 
 <h2 id="git">Git</h2>
@@ -788,7 +788,7 @@ curl <span class="nt">-o-</span> https://raw.githubusercontent.com/nvm-sh/nvm/ma
 
 <p>This will install the version manager in <code class="language-plaintext highlighter-rouge">~/.nvm</code>, and add a few lines to the shell profile (<code class="language-plaintext highlighter-rouge">.zshrc</code>, which must be present).</p>
 
-<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Please note that without these settings
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Please note that without these shell settings
 nvm is not functional.</div>
 
 <p>To install the latest node, after updating the shell profile, open a new
@@ -796,7 +796,7 @@ terminal (to make use of the new environment variables) and issue the
 following:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>nvm <span class="nb">install</span> <span class="nt">--lts</span> node
-<span class="go">Downloading and installing node v12.14.0...
+<span class="go">Downloading and installing node v16.14.2...
 Downloading https://nodejs.org/dist/v12.13.0/node-v12.13.0-darwin-x64.tar.gz...
 </span><span class="gp">#</span><span class="c">####################################################################### 100.0%</span>
 <span class="go">Computing checksum with shasum -a 256
