@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack tools" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/install/","headline":"How to install the xPack tools","dateModified":"2022-04-10T17:30:59+00:00","datePublished":"2017-10-09T11:14:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/install/","headline":"How to install the xPack tools","dateModified":"2022-04-10T19:35:34+00:00","datePublished":"2017-10-09T11:14:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -602,9 +602,9 @@ there are two Node versions, <strong>LTS</strong> (<strong>Long Term Service</st
 platform and install it as usual. For GNU/Linux and macOS, the recommended
 procedure is to <strong>use a version manager</strong> (see below).
 The result is a binary program named <code class="language-plaintext highlighter-rouge">node</code> (that can be used to execute
-JavaScript code from the terminal), and a link named <code class="language-plaintext highlighter-rouge">npm</code>, pointing to
+JavaScript code from the terminal), and a symbolic link named <code class="language-plaintext highlighter-rouge">npm</code>, pointing to
 the <code class="language-plaintext highlighter-rouge">npm-cli.js</code> script, which is part of the Node module that implements
-the npm functionality (on Windows instead of soft links,
+the npm functionality (on Windows, where symbolic links are problematic,
 <code class="language-plaintext highlighter-rouge">.cmd</code> stubs are used).</p>
 
 <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> Due to a misconception, some
