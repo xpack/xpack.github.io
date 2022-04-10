@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack tools" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/install/","headline":"How to install the xPack tools","dateModified":"2022-04-10T15:32:11+00:00","datePublished":"2017-10-09T11:14:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/install/","headline":"How to install the xPack tools","dateModified":"2022-04-10T16:06:19+00:00","datePublished":"2017-10-09T11:14:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -583,7 +583,8 @@ via <strong>npm</strong> which uses Node.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 
 <p>A recent <a href="https://nodejs.org">Node.js</a> (&gt;=<strong>12.x</strong>), since
-some dependencies require new features.</p>
+some dependencies require new features. Detailed instructions
+for each supported platform are available in the next section.</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>node <span class="nt">--version</span>
 <span class="go">v12.14.0
@@ -598,15 +599,17 @@ there are two Node versions, <strong>LTS</strong> (<strong>Long Term Service</st
 <p><img src="/assets/images/2019/nodejs-org.png" alt="The Node Download page" /></p>
 
 <p>The general procedure is to download the package suitable for your
-platform and install it as usual.
+platform and install it as usual. For GNU/Linux and macOS, the recommended
+procedure is to <strong>use a version manager</strong> (see below).
 The result is a binary program named <code class="language-plaintext highlighter-rouge">node</code> (that can be used to execute
 JavaScript code from the terminal), and a link named <code class="language-plaintext highlighter-rouge">npm</code>, pointing to
 the <code class="language-plaintext highlighter-rouge">npm-cli.js</code> script, which is part of the Node module that implements
 the npm functionality (on Windows instead of soft links,
 <code class="language-plaintext highlighter-rouge">.cmd</code> stubs are used).</p>
 
-<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> Due to a misconception, some distributions
-offer to install Node with administrative rights; this is not a problem
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> Due to a misconception, some
+distributions offer to install Node with administrative rights;
+this is not a problem
 for Node itself, but will also require administrative rights for using
 npm and xpm;
 to simplify maintenance, the preferred method is to install Node/npm
