@@ -5,9 +5,27 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 17 Apr 2022 14:02:39 +0000</pubDate>
-        <lastBuildDate>Sun, 17 Apr 2022 14:02:39 +0000</lastBuildDate>
+        <pubDate>Sun, 17 Apr 2022 17:24:06 +0000</pubDate>
+        <lastBuildDate>Sun, 17 Apr 2022 17:24:06 +0000</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+        <item>
+            <title>xPack xpm v0.13.0 released</title>
+            <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; is a&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt; dependencies.&lt;/p&gt;</description>
+            <pubDate>Sun, 17 Apr 2022 17:02:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/04/17/xpm-v0-13-0-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/04/17/xpm-v0-13-0-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>xpm</category>
+            
+            <category>package</category>
+            
+            <category>manager</category>
+            
+            
+        </item>
         
         <item>
             <title>VS Code xPack extension v0.4.17 released</title>
@@ -161,28 +179,6 @@
             <category>releases</category>
             
             <category>clang</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack QEMU Arm v6.2.0-2 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/qemu-arm/&quot;&gt;The xPack QEMU Arm&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://www.qemu.org&quot;&gt;QEMU&lt;/a&gt;, with several extensions for Arm Cortex-Mdevices.&lt;/p&gt;</description>
-            <pubDate>Wed, 19 Jan 2022 08:37:33 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/01/19/qemu-arm-v6-2-0-2-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/01/19/qemu-arm-v6-2-0-2-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>qemu</category>
-            
-            <category>emulator</category>
-            
-            <category>arm</category>
-            
-            <category>aarch64</category>
-            
-            <category>cortex-m</category>
             
             
         </item>
