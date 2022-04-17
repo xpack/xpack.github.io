@@ -1322,6 +1322,16 @@
 
 
 {
+"title": "VS Code xPack extension v0.4.17 released",
+"tags": "releasesvscodevscode-xpackextensionc++",
+"keywords": "",
+"url": "/blog/2022/04/17/vscode-xpack-v0-4-17-released/",
+"summary": "<p>Version <strong>0.4.17</strong> is a maintenance release of <strong>ilg-vscode.xpack</strong>; it add support from inheritance in build configurations.</p>"
+}
+,
+
+
+{
 "title": "xPack xpm v0.12.10 released",
 "tags": "releasesxpmpackagemanager",
 "keywords": "",
