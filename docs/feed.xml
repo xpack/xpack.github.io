@@ -5,16 +5,16 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 17 Apr 2022 17:24:06 +0000</pubDate>
-        <lastBuildDate>Sun, 17 Apr 2022 17:24:06 +0000</lastBuildDate>
+        <pubDate>Mon, 18 Apr 2022 08:16:07 +0000</pubDate>
+        <lastBuildDate>Mon, 18 Apr 2022 08:16:07 +0000</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
         
         <item>
-            <title>xPack xpm v0.13.0 released</title>
+            <title>xPack xpm v0.13.1 released</title>
             <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; is a&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt; dependencies.&lt;/p&gt;</description>
-            <pubDate>Sun, 17 Apr 2022 17:02:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/04/17/xpm-v0-13-0-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/04/17/xpm-v0-13-0-released/</guid>
+            <pubDate>Mon, 18 Apr 2022 07:58:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/04/18/xpm-v0-13-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/04/18/xpm-v0-13-1-released/</guid>
             
             <category>releases</category>
             

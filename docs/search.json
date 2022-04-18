@@ -1290,6 +1290,17 @@
 "title": "",
 "tags": "",
 "keywords": "",
+"url": "/blog/2022/04/17/xpm-v0-13-0-released/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
 "url": "/xpm/files/folders/",
 "summary": ""
 }
@@ -1322,11 +1333,11 @@
 
 
 {
-"title": "xPack xpm v0.13.0 released",
+"title": "xPack xpm v0.13.1 released",
 "tags": "releasesxpmpackagemanager",
 "keywords": "",
-"url": "/blog/2022/04/17/xpm-v0-13-0-released/",
-"summary": "<p>Version <strong>0.13.0</strong> is a new release; it fixes several issues and adds support for inheritance in build configurations.</p>"
+"url": "/blog/2022/04/18/xpm-v0-13-1-released/",
+"summary": "<p>Version <strong>0.13.1</strong> is a new release; it fixes several issues and adds support for inheritance in build configurations.</p>"
 }
 ,
 
