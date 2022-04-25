@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="End-of-support schedule" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/end-of-support/"},"@type":"BlogPosting","url":"https://xpack.github.io/xbb/end-of-support/","headline":"End-of-support schedule","dateModified":"2022-04-21T10:27:40+00:00","datePublished":"2021-10-13T12:15:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/end-of-support/"},"@type":"BlogPosting","url":"https://xpack.github.io/xbb/end-of-support/","headline":"End-of-support schedule","dateModified":"2022-04-25T11:26:21+00:00","datePublished":"2021-10-13T12:15:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -612,7 +612,8 @@ was discontinued</p>
 
 <h2 id="gnulinux-distro-versions">GNU/Linux distro versions</h2>
 
-<p>To better decide whch versions to support, below is a list of existing versions.</p>
+<p>To better decide which versions to support, below is a list of existing
+versions.</p>
 
 <p>The names are in fact docker image names, and can be used directly to query
 the <code class="language-plaintext highlighter-rouge">ldd --version</code>:</p>
@@ -628,6 +629,8 @@ the <code class="language-plaintext highlighter-rouge">ldd --version</code>:</p>
   <li><code class="language-plaintext highlighter-rouge">debian:8</code> - jessie - 2015-2018, GLIBC 2.19, kernel 3.16</li>
   <li><code class="language-plaintext highlighter-rouge">debian:9</code> - stretch - 2017-2020, GLIBC 2.24, kernel 4.9.0-6 (first with arm64)</li>
   <li><code class="language-plaintext highlighter-rouge">debian:10</code> - buster - 2019-2022, GLIBC 2.28, kernel 4.19.0-6 &lt;– <strong>XBB v3.4</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">debian:11</code> - bullseye - 2021-2026, GLIBC 2.31, kernel 5.10</li>
+  <li><code class="language-plaintext highlighter-rouge">debian:12</code> - bookworm - ?</li>
 </ul>
 
 <h3 id="ubuntu"><a href="https://en.wikipedia.org/wiki/Ubuntu_version_history">Ubuntu</a></h3>
@@ -638,7 +641,8 @@ the <code class="language-plaintext highlighter-rouge">ldd --version</code>:</p>
   <li><code class="language-plaintext highlighter-rouge">ubuntu:14.04</code> - trusty - 2014-2022, GLIBC 2.19, kernel 3.16</li>
   <li><code class="language-plaintext highlighter-rouge">ubuntu:16.04</code> - xenial - 2016-2024, GLIBC <strong>2.23</strong>, kernel 4.4 &lt;— XBB v3.3 Arm Linux choice</li>
   <li><code class="language-plaintext highlighter-rouge">ubuntu:18.04</code> - bionic - 2018-2028, GLIBC <strong>2.27</strong>, kernel 4.15 &lt;– <strong>XBB v3.4</strong> Intel &amp; Arm Linux choice</li>
-  <li><code class="language-plaintext highlighter-rouge">ubuntu:20.04</code> - focal - 2020-2-30, GLIBC 2.31, kernel 5.4</li>
+  <li><code class="language-plaintext highlighter-rouge">ubuntu:20.04</code> - focal - 2020-2230, GLIBC 2.31, kernel 5.4</li>
+  <li><code class="language-plaintext highlighter-rouge">ubuntu:22.04</code> - jammy - 2022-2232, GLIBC 2.35, kernel 5.15</li>
 </ul>
 
 <h3 id="rhel"><a href="https://access.redhat.com/support/policy/updates/errata/#Life_Cycle_Dates">RHEL</a></h3>
@@ -676,16 +680,33 @@ the <code class="language-plaintext highlighter-rouge">ldd --version</code>:</p>
   <li><code class="language-plaintext highlighter-rouge">fedora:31</code> - 2019-10, GLIBC 2.30, kernel 5.3</li>
   <li><code class="language-plaintext highlighter-rouge">fedora:32</code> - 2020-04, GLIBC 2.31, kernel 5.6</li>
   <li><code class="language-plaintext highlighter-rouge">fedora:33</code> - 2020-10, GLIBC 2.32, kernel 5.8</li>
-  <li><code class="language-plaintext highlighter-rouge">fedora:34</code> - 2021-04, GLIBC 2.33, kernel 5.11</li>
-  <li><code class="language-plaintext highlighter-rouge">fedora:35</code> - 2021-11, GLIBC 2.34, kernel 5.14</li>
+  <li><code class="language-plaintext highlighter-rouge">fedora:34</code> - 2021-04 - 2022-05, GLIBC 2.33, kernel 5.11</li>
+  <li><code class="language-plaintext highlighter-rouge">fedora:35</code> - 2021-11 - 2022-12, GLIBC 2.34, kernel 5.15</li>
+  <li><code class="language-plaintext highlighter-rouge">fedora:36</code> - 2021-11 - 2023-05, GLIBC 2.35, kernel 5.17</li>
+  <li><code class="language-plaintext highlighter-rouge">fedora:37</code> - 2021-11 - 2023-11, GLIBC ?, kernel ?</li>
+</ul>
+
+<h2 id="raspberry-pi">Raspberry Pi</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">raspbian/stretch</code> - (Raspbian 9.4 stretch) - GLIBC 2.24</li>
+  <li><code class="language-plaintext highlighter-rouge">balenalib/raspberrypi3:buster</code> - (Debian 10) - GLIBC 2.28 (armv7l)</li>
+  <li><code class="language-plaintext highlighter-rouge">balenalib/raspberrypi3:bullseye</code> - (Debian 11) - GLIBC 2.31 (armv7l)</li>
+  <li><code class="language-plaintext highlighter-rouge">balenalib/raspberrypi4-64-debian:bullseye</code> (Debian 11) - GLIBC 2.31 (aarch64)</li>
 </ul>
 
 <h2 id="32-bit-support">32-bit support</h2>
 
 <p>Existing support for 32-bit Windows and GNU/Linux Intel builds was dropped.
-Support for 32-bit GNU/Linux Arm will be preserved for the moment, since
-there are still many 32-bit Raspberry Pi machines,
+Support for 32-bit GNU/Linux Arm (<code class="language-plaintext highlighter-rouge">armv7l</code>) will be preserved for the moment,
+since there are still many 32-bit Raspberry Pi machines,
 but might be dropped in one of the future version.</p>
+
+<h2 id="armv6">armv6</h2>
+
+<p><code class="language-plaintext highlighter-rouge">armv6</code> is currently not supported, so the resulting binaries do not
+run on Raspberry Pi 1, Raspberry Pi Zero
+and Compute Module 1.</p>
 
 <h2 id="conclusions">Conclusions</h2>
 
@@ -702,7 +723,7 @@ Raspberry Pi class machines, or larger/newer.</p>
 
 <h3 id="next-xbb">Next XBB</h3>
 
-<p>The future releases will move to a modular aproach, using binary xPacks.</p>
+<p>The future releases will move to a modular approach, using binary xPacks.</p>
 
 
         
@@ -723,7 +744,7 @@ Raspberry Pi class machines, or larger/newer.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Apr 21, 2022<br/> Site last generated: Apr 21, 2022 <br />
+<span>Page last updated:</span> Apr 25, 2022<br/> Site last generated: Apr 25, 2022 <br />
                 </div>
             </div>
 </footer>
