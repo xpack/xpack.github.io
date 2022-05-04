@@ -5,9 +5,31 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Wed, 04 May 2022 18:58:04 +0000</pubDate>
-        <lastBuildDate>Wed, 04 May 2022 18:58:04 +0000</lastBuildDate>
+        <pubDate>Wed, 04 May 2022 22:43:35 +0000</pubDate>
+        <lastBuildDate>Wed, 04 May 2022 22:43:35 +0000</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+        <item>
+            <title>xPack QEMU Arm v7.0.0-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/qemu-arm/&quot;&gt;The xPack QEMU Arm&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://www.qemu.org&quot;&gt;QEMU&lt;/a&gt;, with several extensions for Arm Cortex-Mdevices.&lt;/p&gt;</description>
+            <pubDate>Wed, 04 May 2022 22:26:07 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/05/04/qemu-arm-v7-0-0-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/05/04/qemu-arm-v7-0-0-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>qemu</category>
+            
+            <category>emulator</category>
+            
+            <category>arm</category>
+            
+            <category>aarch64</category>
+            
+            <category>cortex-m</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack QEMU RISC-V v7.0.0-1 released</title>
@@ -167,20 +189,6 @@
             <category>python</category>
             
             <category>ninja</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack LLVM clang v13.0.1-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/clang/&quot;&gt;The xPack LLVM clang&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://clang.org&quot;&gt;LLVM clang&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Thu, 24 Mar 2022 13:09:26 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/03/24/clang-v13-0-1-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/03/24/clang-v13-0-1-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>clang</category>
             
             
         </item>
