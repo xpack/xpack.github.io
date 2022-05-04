@@ -1333,6 +1333,16 @@
 
 
 {
+"title": "xPack QEMU RISC-V v7.0.0-1 released",
+"tags": "releasesqemuemulatorrisc-v",
+"keywords": "",
+"url": "/blog/2022/05/04/qemu-riscv-v7-0-0-1-released/",
+"summary": "<p>Version <strong>7.0.0-1</strong> is a new release.</p>"
+}
+,
+
+
+{
 "title": "xPack xpm v0.13.3 released",
 "tags": "releasesxpmpackagemanager",
 "keywords": "",
