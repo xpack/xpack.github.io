@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xpm uninstall" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/cli/uninstall/"},"@type":"BlogPosting","url":"https://xpack.github.io/xpm/cli/uninstall/","headline":"xpm uninstall","dateModified":"2022-05-04T22:32:49+00:00","datePublished":"2021-01-27T20:22:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/cli/uninstall/"},"@type":"BlogPosting","url":"https://xpack.github.io/xpm/cli/uninstall/","headline":"xpm uninstall","dateModified":"2022-05-14T07:22:48+00:00","datePublished":"2021-01-27T20:22:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -470,39 +470,39 @@ available in the current folder or from the global xPacks store.</p>
 
 <h3 id="help---help">Help (<code class="language-plaintext highlighter-rouge">--help</code>)</h3>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm uninstall <span class="nt">--help</span>
-<span class="go">
-xPack manager - uninstall package(s)
-Usage: xpm uninstall [options...] [--global] [--system]
-</span><span class="gp">                     [--config &lt;config_name&gt;</span><span class="o">]</span> <span class="o">[</span><span class="nt">--dry-run</span><span class="o">]</span> <span class="o">[</span><span class="nt">--no-save</span><span class="o">]</span>
-<span class="gp">                     [[@&lt;scope&gt;</span>/]&lt;name&gt;[@&lt;version]...
-<span class="go">
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm uninstall <span class="nt">--help</span>
+
+xPack manager - uninstall package<span class="o">(</span>s<span class="o">)</span>
+Usage: xpm uninstall <span class="o">[</span>options...] <span class="o">[</span><span class="nt">--global</span><span class="o">]</span> <span class="o">[</span><span class="nt">--system</span><span class="o">]</span>
+                     <span class="o">[</span><span class="nt">--config</span> &lt;config_name&gt;] <span class="o">[</span><span class="nt">--dry-run</span><span class="o">]</span> <span class="o">[</span><span class="nt">--no-save</span><span class="o">]</span>
+                     <span class="o">[[</span>@&lt;scope&gt;/]&lt;name&gt;[@&lt;version]...
+
 Uninstall options:
-  -g|--global                Uninstall the global package(s) (optional)
-  -sy|--system               Uninstall the system package(s) (not impl) (optional)
-</span><span class="gp">  -c|--config &lt;config_name&gt;</span><span class="w">  </span>Show the configuration specific dependencies <span class="o">(</span>optional<span class="o">)</span>
-<span class="go">  -n|--dry-run               Pretend to uninstall the package (optional)
-  --no-save                  Prevent saving to dependencies (optional)
+  <span class="nt">-g</span>|--global                Uninstall the global package<span class="o">(</span>s<span class="o">)</span> <span class="o">(</span>optional<span class="o">)</span>
+  <span class="nt">-sy</span>|--system               Uninstall the system package<span class="o">(</span>s<span class="o">)</span> <span class="o">(</span>not impl<span class="o">)</span> <span class="o">(</span>optional<span class="o">)</span>
+  <span class="nt">-c</span>|--config &lt;config_name&gt;  Show the configuration specific dependencies <span class="o">(</span>optional<span class="o">)</span>
+  <span class="nt">-n</span>|--dry-run               Pretend to uninstall the package <span class="o">(</span>optional<span class="o">)</span>
+  <span class="nt">--no-save</span>                  Prevent saving to dependencies <span class="o">(</span>optional<span class="o">)</span>
 
 Common options:
-</span><span class="gp">  --loglevel &lt;level&gt;</span><span class="w">         </span>Set log level <span class="o">(</span>silent|warn|info|verbose|debug|trace<span class="o">)</span>
-<span class="go">  -s|--silent                Disable all messages (--loglevel silent)
-  -q|--quiet                 Mostly quiet, warnings and errors (--loglevel warn)
-  --informative              Informative (--loglevel info)
-  -v|--verbose               Verbose (--loglevel verbose)
-  -d|--debug                 Debug messages (--loglevel debug)
-  -dd|--trace                Trace messages (--loglevel trace, -d -d)
-  --no-update-notifier       Skip check for a more recent version
-</span><span class="gp">  -C &lt;folder&gt;</span><span class="w">                </span>Set current folder
-<span class="go">
-xpm -h|--help                Quick help
-xpm --version                Show version
-xpm -i|--interactive         Enter interactive mode
+  <span class="nt">--loglevel</span> &lt;level&gt;         Set log level <span class="o">(</span>silent|warn|info|verbose|debug|trace<span class="o">)</span>
+  <span class="nt">-s</span>|--silent                Disable all messages <span class="o">(</span><span class="nt">--loglevel</span> silent<span class="o">)</span>
+  <span class="nt">-q</span>|--quiet                 Mostly quiet, warnings and errors <span class="o">(</span><span class="nt">--loglevel</span> warn<span class="o">)</span>
+  <span class="nt">--informative</span>              Informative <span class="o">(</span><span class="nt">--loglevel</span> info<span class="o">)</span>
+  <span class="nt">-v</span>|--verbose               Verbose <span class="o">(</span><span class="nt">--loglevel</span> verbose<span class="o">)</span>
+  <span class="nt">-d</span>|--debug                 Debug messages <span class="o">(</span><span class="nt">--loglevel</span> debug<span class="o">)</span>
+  <span class="nt">-dd</span>|--trace                Trace messages <span class="o">(</span><span class="nt">--loglevel</span> trace, <span class="nt">-d</span> <span class="nt">-d</span><span class="o">)</span>
+  <span class="nt">--no-update-notifier</span>       Skip check <span class="k">for </span>a more recent version
+  <span class="nt">-C</span> &lt;folder&gt;                Set current folder
 
-npm xpm@0.9.0 '/Users/ilg/.nvm/versions/node/v14.16.0/lib/node_modules/xpm'
-</span><span class="gp">Home page: &lt;https://xpack.github.io/xpm/&gt;</span><span class="w">
-</span><span class="gp">Bug reports: &lt;https://github.com/xpack/xpm-js/issues/&gt;</span><span class="w">
-</span></code></pre></div></div>
+xpm <span class="nt">-h</span>|--help                Quick <span class="nb">help
+</span>xpm <span class="nt">--version</span>                Show version
+xpm <span class="nt">-i</span>|--interactive         Enter interactive mode
+
+npm xpm@0.9.0 <span class="s1">'/Users/ilg/.nvm/versions/node/v14.16.0/lib/node_modules/xpm'</span>
+Home page: &lt;https://xpack.github.io/xpm/&gt;
+Bug reports: &lt;https://github.com/xpack/xpm-js/issues/&gt;
+</code></pre></div></div>
 
 <h3 id="global-uninstall--g--global">Global uninstall (<code class="language-plaintext highlighter-rouge">-g|--global</code>)</h3>
 
@@ -572,7 +572,7 @@ instead of the top project folder.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> May 4, 2022<br/> Site last generated: May 4, 2022 <br />
+<span>Page last updated:</span> May 14, 2022<br/> Site last generated: May 14, 2022 <br />
                 </div>
             </div>
 </footer>

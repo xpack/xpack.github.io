@@ -168,6 +168,15 @@ required versions are properly installed.
 bash scripts/createtag.sh XXX
 ```
 
+## Redirect
+
+If pages are moved to a different URL, leave a redirect behind:
+
+```yml
+redirect_from:
+  - /blog/2022/04/17/xpm-v0-13-0-released/
+```
+
 ## Links
 
 - [Web](https://xpack.github.io/)
