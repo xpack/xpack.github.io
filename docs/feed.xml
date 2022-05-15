@@ -5,13 +5,13 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 15 May 2022 22:23:16 +0000</pubDate>
-        <lastBuildDate>Sun, 15 May 2022 22:23:16 +0000</lastBuildDate>
+        <pubDate>Sun, 15 May 2022 22:29:40 +0000</pubDate>
+        <lastBuildDate>Sun, 15 May 2022 22:29:40 +0000</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
         
         <item>
-            <title>xPack Arm Embedded GCC v11.2.1-1.1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/arm-none-eabi-gcc/&quot;&gt;The xPack Arm Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/open-source/gnu-toolchain/gnu-rm&quot;&gt;GNU Arm Embedded Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
+            <title>xPack GNU Arm Embedded GCC v11.2.1-1.1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/arm-none-eabi-gcc/&quot;&gt;The xPack GNU Arm Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/open-source/gnu-toolchain/gnu-rm&quot;&gt;GNU Arm Embedded Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
             <pubDate>Sun, 15 May 2022 21:58:52 +0000</pubDate>
             <link>https://xpack.github.io/blog/2022/05/15/arm-none-eabi-gcc-v11-2-1-1-1-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2022/05/15/arm-none-eabi-gcc-v11-2-1-1-1-released/</guid>
@@ -34,8 +34,8 @@
         </item>
         
         <item>
-            <title>xPack AArch64 Embedded GCC v11.2.1-1.1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/aarch64-none-elf-gcc/&quot;&gt;The xPack AArch64 Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain&quot;&gt;GNU AArch64 Embedded Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
+            <title>xPack GNU AArch64 Embedded GCC v11.2.1-1.1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/aarch64-none-elf-gcc/&quot;&gt;The xPack GNU AArch64 Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain&quot;&gt;GNU AArch64 Embedded Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
             <pubDate>Sun, 15 May 2022 09:14:17 +0000</pubDate>
             <link>https://xpack.github.io/blog/2022/05/15/aarch64-none-elf-gcc-v11-2-1-1-1-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2022/05/15/aarch64-none-elf-gcc-v11-2-1-1-1-released/</guid>

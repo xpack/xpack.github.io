@@ -1388,7 +1388,7 @@
 
 
 {
-"title": "xPack Arm Embedded GCC v11.2.1-1.1 released",
+"title": "xPack GNU Arm Embedded GCC v11.2.1-1.1 released",
 "tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
 "keywords": "",
 "url": "/blog/2022/05/15/arm-none-eabi-gcc-v11-2-1-1-1-released/",
@@ -1398,7 +1398,7 @@
 
 
 {
-"title": "xPack AArch64 Embedded GCC v11.2.1-1.1 released",
+"title": "xPack GNU AArch64 Embedded GCC v11.2.1-1.1 released",
 "tags": "releasesarmaarch64-none-elf-gccgccbinariesc++exceptions",
 "keywords": "",
 "url": "/blog/2022/05/15/aarch64-none-elf-gcc-v11-2-1-1-1-released/",
@@ -1628,7 +1628,7 @@
 
 
 {
-"title": "xPack Arm Embedded GCC v10.3.1-2.3 released",
+"title": "xPack GNU Arm Embedded GCC v10.3.1-2.3 released",
 "tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
 "keywords": "",
 "url": "/blog/2021/12/07/arm-none-eabi-gcc-v10-3-1-2-3-released/",
@@ -1668,7 +1668,7 @@
 
 
 {
-"title": "xPack Arm Embedded GCC v10.3.1-2.2 released",
+"title": "xPack GNU Arm Embedded GCC v10.3.1-2.2 released",
 "tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
 "keywords": "",
 "url": "/blog/2021/11/12/arm-none-eabi-gcc-v10-3-1-2-2-released/",
@@ -1708,7 +1708,7 @@
 
 
 {
-"title": "xPack Arm Embedded GCC v10.3.1-2.1 released",
+"title": "xPack GNU Arm Embedded GCC v10.3.1-2.1 released",
 "tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
 "keywords": "",
 "url": "/blog/2021/10/25/arm-none-eabi-gcc-v10-3-1-2-1-released/",
