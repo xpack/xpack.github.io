@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Version 11.3.0-1 is a new release; it follows the GNU release.">
+<meta name="description" content="Version 11.3.0-1 is a new release; it follows the GNU GCC release.">
 <meta name="keywords" content="releasesriscvriscv-none-elf-gccgccbinariesc++,  ">
 <title>xPack GNU RISC-V Embedded GCC v11.3.0-1 released | The xPack Build Framework</title>
 <link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack GNU RISC-V Embedded GCC v11.3.0-1 released" />
 <script type="application/ld+json">
-{"description":"The xPack GNU RISC-V Embedded GCC is a standalone cross-platform binary distribution of the GNU GCC.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/05/14/riscv-none-elf-gcc-v11-3-0-1-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2022/05/14/riscv-none-elf-gcc-v11-3-0-1-released/","headline":"xPack GNU RISC-V Embedded GCC v11.3.0-1 released","dateModified":"2022-05-14T07:22:48+00:00","datePublished":"2022-05-14T05:47:10+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"The xPack GNU RISC-V Embedded GCC is a standalone cross-platform binary distribution of the GNU GCC.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/05/14/riscv-none-elf-gcc-v11-3-0-1-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2022/05/14/riscv-none-elf-gcc-v11-3-0-1-released/","headline":"xPack GNU RISC-V Embedded GCC v11.3.0-1 released","dateModified":"2022-05-15T04:34:14+00:00","datePublished":"2022-05-14T05:47:10+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -599,7 +599,7 @@
     <div class="post-content" itemprop="articleBody">
 
         
-        <div class="summary">Version <strong>11.3.0-1</strong> is a new release; it follows the GNU release.
+        <div class="summary">Version <strong>11.3.0-1</strong> is a new release; it follows the GNU GCC release.
 </div>
         
 
@@ -697,9 +697,16 @@ xpm uninstall @xpack-dev-tools/riscv-none-elf-gcc
 
 <h2 id="compliance">Compliance</h2>
 
-<p>The xPack GNU RISC-V Embedded GCC generally follows the official
-GNU GCC <a href="https://gcc.gnu.org/releases.html">releases</a>),
-with as little differences as possible.</p>
+<p>The xPack GNU RISC-V Embedded GCC use the official sources,
+with no functional changes:</p>
+
+<ul>
+  <li>GCC 11.3.0</li>
+  <li>binutils 2.38</li>
+  <li>gdb 12.1</li>
+  <li>newlib 4.2.0.20211231</li>
+  <li>python 3.10.4</li>
+</ul>
 
 <h2 id="supported-libraries">Supported libraries</h2>
 
@@ -769,6 +776,11 @@ with as little differences as possible.</p>
 <h2 id="changes">Changes</h2>
 
 <p>Compared to the upstream GNU release, there are no functional changes.</p>
+
+<h3 id="risc-none-elf-gcc">risc-none-elf-gcc</h3>
+
+<p>For compliance reasons, starting with 11.x, the name of the toolchain
+was updated to <code class="language-plaintext highlighter-rouge">risc-none-elf-gcc</code>.</p>
 
 <h3 id="newlib-nano">newlib-nano</h3>
 
@@ -1005,7 +1017,7 @@ for the individual file counters.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> May 14, 2022<br/> Site last generated: May 14, 2022 <br />
+<span>Page last updated:</span> May 15, 2022<br/> Site last generated: May 15, 2022 <br />
                 </div>
             </div>
 </footer>

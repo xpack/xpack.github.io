@@ -5,9 +5,31 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sat, 14 May 2022 07:25:48 +0000</pubDate>
-        <lastBuildDate>Sat, 14 May 2022 07:25:48 +0000</lastBuildDate>
+        <pubDate>Sun, 15 May 2022 04:35:10 +0000</pubDate>
+        <lastBuildDate>Sun, 15 May 2022 04:35:10 +0000</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+        <item>
+            <title>xPack GNU RISC-V Embedded GCC v12.1.0-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/riscv-none-elf-gcc/&quot;&gt;The xPack GNU RISC-V Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of the&lt;a href=&quot;https://gcc.gnu.org/releases.html&quot;&gt;GNU GCC&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Sun, 15 May 2022 03:50:50 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/05/15/riscv-none-elf-gcc-v12-1-0-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/05/15/riscv-none-elf-gcc-v12-1-0-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>riscv</category>
+            
+            <category>riscv-none-elf-gcc</category>
+            
+            <category>gcc</category>
+            
+            <category>binaries</category>
+            
+            <category>c++</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack GNU RISC-V Embedded GCC v11.3.0-1 released</title>
@@ -173,22 +195,6 @@
             <category>releases</category>
             
             <category>openocd</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack CMake v3.21.6-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/cmake/&quot;&gt;The xPack CMake&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://cmake.org&quot;&gt;CMake&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Fri, 25 Mar 2022 16:30:08 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/03/25/cmake-v3-21-6-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/03/25/cmake-v3-21-6-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>cmake</category>
-            
-            <category>build</category>
             
             
         </item>
