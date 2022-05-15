@@ -1388,6 +1388,16 @@
 
 
 {
+"title": "xPack AArch64 Embedded GCC v11.2.1-1.1 released",
+"tags": "releasesarmaarch64-none-elf-gccgccbinariesc++exceptions",
+"keywords": "",
+"url": "/blog/2022/05/15/aarch64-none-elf-gcc-v11-2-1-1-1-released/",
+"summary": "<p>Version <strong>11.2.1-1.1</strong> is a new release; it follows the upstream Arm release.</p>"
+}
+,
+
+
+{
 "title": "xPack GNU RISC-V Embedded GCC v12.1.0-1 released",
 "tags": "releasesriscvriscv-none-elf-gccgccbinariesc++",
 "keywords": "",

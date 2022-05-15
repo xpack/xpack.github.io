@@ -5,9 +5,33 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 15 May 2022 04:35:10 +0000</pubDate>
-        <lastBuildDate>Sun, 15 May 2022 04:35:10 +0000</lastBuildDate>
+        <pubDate>Sun, 15 May 2022 09:48:34 +0000</pubDate>
+        <lastBuildDate>Sun, 15 May 2022 09:48:34 +0000</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+        <item>
+            <title>xPack AArch64 Embedded GCC v11.2.1-1.1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/aarch64-none-elf-gcc/&quot;&gt;The xPack AArch64 Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain&quot;&gt;GNU AArch64 Embedded Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Sun, 15 May 2022 09:14:17 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/05/15/aarch64-none-elf-gcc-v11-2-1-1-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/05/15/aarch64-none-elf-gcc-v11-2-1-1-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>arm</category>
+            
+            <category>aarch64-none-elf-gcc</category>
+            
+            <category>gcc</category>
+            
+            <category>binaries</category>
+            
+            <category>c++</category>
+            
+            <category>exceptions</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack GNU RISC-V Embedded GCC v12.1.0-1 released</title>
@@ -181,20 +205,6 @@
             <category>package</category>
             
             <category>manager</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack OpenOCD v0.11.0-4 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/openocd/&quot;&gt;The xPack OpenOCD&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://openocd.org&quot;&gt;OpenOCD&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Fri, 25 Mar 2022 18:16:20 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/03/25/openocd-v0-11-0-4-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/03/25/openocd-v0-11-0-4-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>openocd</category>
             
             
         </item>
