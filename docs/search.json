@@ -1388,6 +1388,16 @@
 
 
 {
+"title": "xPack Ninja Build v1.11.0-1 released",
+"tags": "releasesninja-buildninjabuildspeedsmall",
+"keywords": "",
+"url": "/blog/2022/05/17/ninja-build-v1-11-0-1-released/",
+"summary": "<p>Version <strong>1.11.0-1</strong> is a new release; it follows the upstream release.</p>"
+}
+,
+
+
+{
 "title": "xPack GNU Arm Embedded GCC v11.2.1-1.1 released",
 "tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
 "keywords": "",

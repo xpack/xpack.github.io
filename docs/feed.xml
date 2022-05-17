@@ -5,9 +5,31 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 15 May 2022 22:29:40 +0000</pubDate>
-        <lastBuildDate>Sun, 15 May 2022 22:29:40 +0000</lastBuildDate>
+        <pubDate>Tue, 17 May 2022 07:39:59 +0000</pubDate>
+        <lastBuildDate>Tue, 17 May 2022 07:39:59 +0000</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+        <item>
+            <title>xPack Ninja Build v1.11.0-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/ninja-build/&quot;&gt;The xPack Ninja Build&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://ninja-build.org&quot;&gt;Ninja Build&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Tue, 17 May 2022 07:07:07 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/05/17/ninja-build-v1-11-0-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/05/17/ninja-build-v1-11-0-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>ninja-build</category>
+            
+            <category>ninja</category>
+            
+            <category>build</category>
+            
+            <category>speed</category>
+            
+            <category>small</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack GNU Arm Embedded GCC v11.2.1-1.1 released</title>
@@ -191,26 +213,6 @@
             <category>package</category>
             
             <category>manager</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>VS Code xPack extension v0.4.17 released</title>
-            <description>&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;</description>
-            <pubDate>Sun, 17 Apr 2022 13:56:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/04/17/vscode-xpack-v0-4-17-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/04/17/vscode-xpack-v0-4-17-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>vscode</category>
-            
-            <category>vscode-xpack</category>
-            
-            <category>extension</category>
-            
-            <category>c++</category>
             
             
         </item>
