@@ -5,9 +5,27 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Wed, 18 May 2022 08:10:28 +0000</pubDate>
-        <lastBuildDate>Wed, 18 May 2022 08:10:28 +0000</lastBuildDate>
+        <pubDate>Wed, 18 May 2022 15:19:04 +0000</pubDate>
+        <lastBuildDate>Wed, 18 May 2022 15:19:04 +0000</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+        <item>
+            <title>xPack xpm v0.13.4 released</title>
+            <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; is a&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt; dependencies.&lt;/p&gt;</description>
+            <pubDate>Wed, 18 May 2022 15:00:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/05/18/xpm-v0-13-4-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/05/18/xpm-v0-13-4-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>xpm</category>
+            
+            <category>package</category>
+            
+            <category>manager</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack GNU RISC-V Embedded GCC v12.1.0-2 released</title>
@@ -191,24 +209,6 @@
             <pubDate>Tue, 03 May 2022 07:16:00 +0000</pubDate>
             <link>https://xpack.github.io/blog/2022/05/03/xpm-v0-13-3-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2022/05/03/xpm-v0-13-3-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>xpm</category>
-            
-            <category>package</category>
-            
-            <category>manager</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack xpm v0.13.2 released</title>
-            <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; is a&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt; dependencies.&lt;/p&gt;</description>
-            <pubDate>Sat, 30 Apr 2022 15:27:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/04/30/xpm-v0-13-2-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/04/30/xpm-v0-13-2-released/</guid>
             
             <category>releases</category>
             
