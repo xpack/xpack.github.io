@@ -1388,6 +1388,16 @@
 
 
 {
+"title": "VS Code xPack extension v0.4.18 released",
+"tags": "releasesvscodevscode-xpackextensionc++",
+"keywords": "",
+"url": "/blog/2022/05/21/vscode-xpack-v0-4-18-released/",
+"summary": "<p>Version <strong>0.4.18</strong> is a maintenance release of <strong>ilg-vscode.xpack</strong>; it implements the <code class="language-plaintext highlighter-rouge">hidden</code> property for inherited build configurations.</p>"
+}
+,
+
+
+{
 "title": "xPack xpm v0.13.4 released",
 "tags": "releasesxpmpackagemanager",
 "keywords": "",
