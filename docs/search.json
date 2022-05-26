@@ -1388,6 +1388,16 @@
 
 
 {
+"title": "xPack xpm v0.13.5 released",
+"tags": "releasesxpmpackagemanager",
+"keywords": "",
+"url": "/blog/2022/05/26/xpm-v0-13-5-released/",
+"summary": "<p>Version <strong>0.13.5</strong> is a maintenance release; it filter out hidden configurations in <code class="language-plaintext highlighter-rouge">install --all-configs</code>.</p>"
+}
+,
+
+
+{
 "title": "VS Code xPack extension v0.4.18 released",
 "tags": "releasesvscodevscode-xpackextensionc++",
 "keywords": "",
