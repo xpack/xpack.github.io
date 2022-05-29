@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack GNU Arm Embedded GCC v11.2.1-1.1 released" />
 <script type="application/ld+json">
-{"description":"The xPack GNU Arm Embedded GCC is a standalone cross-platform binary distribution of GNU Arm Embedded Toolchain.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/05/15/arm-none-eabi-gcc-v11-2-1-1-1-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2022/05/15/arm-none-eabi-gcc-v11-2-1-1-1-released/","headline":"xPack GNU Arm Embedded GCC v11.2.1-1.1 released","dateModified":"2022-05-26T14:39:47+00:00","datePublished":"2022-05-15T21:58:52+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"description":"The xPack GNU Arm Embedded GCC is a standalone cross-platform binary distribution of GNU Arm Embedded Toolchain.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/05/15/arm-none-eabi-gcc-v11-2-1-1-1-released/"},"@type":"BlogPosting","url":"https://xpack.github.io/blog/2022/05/15/arm-none-eabi-gcc-v11-2-1-1-1-released/","headline":"xPack GNU Arm Embedded GCC v11.2.1-1.1 released","dateModified":"2022-05-29T14:04:08+00:00","datePublished":"2022-05-15T21:58:52+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -787,7 +787,11 @@ the distribution.</p>
 <h2 id="known-problems">Known problems</h2>
 
 <ul>
-  <li>none</li>
+  <li>for unknown reasons, in the Arm distribution used as reference,
+support for parsing XML files in GDB was disabled; when connecting
+to SEGGER J-Link GDB server, the warning <em>Can not parse XML target
+description; XML support was disabled at compile time</em> is displayed
+and some functionality is not available; fixed in 11.2.1-1.2.</li>
 </ul>
 
 <h2 id="shared-libraries">Shared libraries</h2>
@@ -965,7 +969,7 @@ for the individual file counters.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> May 26, 2022<br/> Site last generated: May 26, 2022 <br />
+<span>Page last updated:</span> May 29, 2022<br/> Site last generated: May 29, 2022 <br />
                 </div>
             </div>
 </footer>
