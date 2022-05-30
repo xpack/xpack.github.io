@@ -1301,6 +1301,17 @@
 "title": "",
 "tags": "",
 "keywords": "",
+"url": "/blog/2022/05/29/arm-none-eabi-gcc-v11-2-1-1-2-released/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
 "url": "/riscv-none-embed-gcc/faq/",
 "summary": ""
 }
@@ -1391,8 +1402,8 @@
 "title": "xPack GNU Arm Embedded GCC v11.2.1-1.2 released",
 "tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
 "keywords": "",
-"url": "/blog/2022/05/29/arm-none-eabi-gcc-v11-2-1-1-2-released/",
-"summary": "<p>Version <strong>11.2.1-1.2</strong> is a maintenance release; it brings back support for parsing XML files in GDB, allowing it to auto-configure on target capabilities when connecting to J-Link GDB server.</p>"
+"url": "/blog/2022/05/30/arm-none-eabi-gcc-v11-2-1-1-2-released/",
+"summary": "<p>Version <strong>11.2.1-1.2</strong> is a maintenance release; it brings back support for parsing XML files in GDB, allowing it to auto-configure on target capabilities when connecting to J-Link GDB server and fixes libconv.a, which resulted empty in the previous release</p>"
 }
 ,
 
