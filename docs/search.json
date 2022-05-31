@@ -1399,6 +1399,16 @@
 
 
 {
+"title": "xPack GNU AArch64 Embedded GCC v11.2.1-1.2 released",
+"tags": "releasesarmaarch64-none-elf-gccgccbinariesc++exceptions",
+"keywords": "",
+"url": "/blog/2022/05/31/aarch64-none-elf-gcc-v11-2-1-1-2-released/",
+"summary": "<p>Version <strong>11.2.1-1.2</strong> is a maintenance release; it brings back support for parsing XML files in GDB, allowing it to auto-configure on target capabilities when connecting to J-Link GDB server and fixes libgcov.a, which resulted empty in the previous release.</p>"
+}
+,
+
+
+{
 "title": "xPack GNU Arm Embedded GCC v11.2.1-1.2 released",
 "tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
 "keywords": "",
