@@ -5,9 +5,23 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Wed, 15 Jun 2022 19:43:36 +0000</pubDate>
-        <lastBuildDate>Wed, 15 Jun 2022 19:43:36 +0000</lastBuildDate>
+        <pubDate>Thu, 16 Jun 2022 20:44:56 +0000</pubDate>
+        <lastBuildDate>Thu, 16 Jun 2022 20:44:56 +0000</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+        <item>
+            <title>xPack GCC v12.1.0-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/gcc/&quot;&gt;The xPack GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://gcc.org&quot;&gt;GCC&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Thu, 16 Jun 2022 20:18:35 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/06/16/gcc-v12-1-0-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/06/16/gcc-v12-1-0-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>gcc</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack xpm v0.13.6 released</title>
@@ -185,30 +199,6 @@
             <category>speed</category>
             
             <category>small</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack GNU Arm Embedded GCC v11.2.1-1.1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/arm-none-eabi-gcc/&quot;&gt;The xPack GNU Arm Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/open-source/gnu-toolchain/gnu-rm&quot;&gt;GNU Arm Embedded Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Sun, 15 May 2022 21:58:52 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/05/15/arm-none-eabi-gcc-v11-2-1-1-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/05/15/arm-none-eabi-gcc-v11-2-1-1-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>arm</category>
-            
-            <category>arm-none-eabi-gcc</category>
-            
-            <category>gcc</category>
-            
-            <category>binaries</category>
-            
-            <category>c++</category>
-            
-            <category>exceptions</category>
             
             
         </item>
