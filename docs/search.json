@@ -298,6 +298,17 @@
 
 
 
+{
+"title": "DEPRECATED: The GNU MCU Eclipse QEMU",
+"tags": "",
+"keywords": "qemuarmcortex-mgraphic",
+"url": "/qemu-arm/gnuarmeclipse/",
+"summary": "<p>The initial custom QEMU used with Eclipse.</p>"
+}
+,
+
+
+
 
 
 
@@ -932,11 +943,11 @@
 
 
 {
-"title": "The xPack QEMU Arm command line options",
+"title": "The GNU MCU Eclipse QEMU command line options",
 "tags": "",
 "keywords": "",
 "url": "/qemu-arm/options/",
-"summary": "<p>The QEMU Arm command line options allow to start standalone graphical or non-graphical emulation sessions, or to run as a GBD server in connection to a GDB client.</p>"
+"summary": "<p>DEPRECATED: The  GNU MCU Eclipse QEMU command line options allow to start standalone graphical or non-graphical emulation sessions, or to run as a GBD server in connection to a GDB client.</p>"
 }
 ,
 
