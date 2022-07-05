@@ -13,9 +13,9 @@
 <link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
 <link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
 
-<!-- Begin Jekyll SEO tag v2.7.1 -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>The XCDL metadata (outdated)</title>
-<meta name="generator" content="Jekyll v4.2.1" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="The XCDL metadata (outdated)" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="The XCDL metadata (outdated)" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xcdl/guide/metadata/"},"@type":"BlogPosting","url":"https://xpack.github.io/xcdl/guide/metadata/","headline":"The XCDL metadata (outdated)","dateModified":"2022-06-16T20:24:29+00:00","datePublished":"2015-11-15T10:00:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-07-05T15:06:28+00:00","datePublished":"2015-11-15T10:00:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"The XCDL metadata (outdated)","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xcdl/guide/metadata/"},"url":"https://xpack.github.io/xcdl/guide/metadata/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -201,15 +201,15 @@
                     <ul class="dropdown-menu">
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack" target="_blank" rel="noopener">xPack Core Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack Core Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack-dev-tools" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-3rd-party/" target="_blank" rel="noopener">3rd Party xPacks</a></li>
                         
                         
                         
@@ -226,10 +226,6 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        
-                        
-                        <li><a class="extern" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
-                        
                         
                         
                         <li><a class="extern" href="https://gitter.im/xpack/" target="_blank" rel="noopener">The xPack Chatroom</a></li>
@@ -315,7 +311,11 @@
          -->
 </ul>
 
-<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise, if placed
+inside customscripts.js, the script runs before the sidebar code runs
+and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
             </div>
@@ -462,7 +462,7 @@ $('#toc').on('click', 'a', function() {
 
 <p>Each package has one top-level XCDL file meta/xcdl.xml. The first object in the top-level file should be <code class="language-plaintext highlighter-rouge">&lt;package&gt;</code> and there should be only one <code class="language-plaintext highlighter-rouge">&lt;package&gt;</code> object per package.</p>
 
-<p>By default, an object is placed added to the children list of the top level object defined in the parent folder, so the objects hierarchy follows the file system folders hierarchy, but it is possible to override this using a parent property. This is generally useful for separately distributed packages, to attach in a convenient location in the hierarchy. Components, options and interfaces can also be reparented, but this is less common.</p>
+<p>By default, an object is placed added to the children list of the top level object defined in the parent folder, so the objects hierarchy follows the file system folders hierarchy, but it is possible to override this using a parent property. This is generally useful for separately distributed packages, to attach in a convenient location in the hierarchy. Components, options and interfaces can also be re-parented, but this is less common.</p>
 
 <p>Components can also contain options and other XCDL objects, in fact that is what distinguishes them from options. These can be defined in the body of the <code class="language-plaintext highlighter-rouge">&lt;component&gt;</code>:</p>
 
@@ -485,7 +485,7 @@ $('#toc').on('click', 'a', function() {
 &lt;/component&gt;
 </code></pre></div></div>
 
-<p>Nesting options inside the bodies of components like this is fine for simple packages with only a limited number of configuration options, but it becomes unsatisfactory as the number of options increases. Instead it is possible to split the XCDL data into multiple XCDL file, on a per-component basis. The <code class="language-plaintext highlighter-rouge">&lt;includeFile&gt;</code> property should be used for this. For example, in the case of the C library all stdio-related configuration options could be put into stdio.xml, and the top-level XCDL file libc.xml would contain the following:</p>
+<p>Nesting options inside the bodies of components like this is fine for simple packages with only a limited number of configuration options, but it becomes unsatisfactory as the number of options increases. Instead it is possible to split the XCDL data into multiple XCDL file, on a per-component basis. The <code class="language-plaintext highlighter-rouge">&lt;includeFile&gt;</code> property should be used for this. For example, in the case of the C library all stdio-related configuration options could be put into <code class="language-plaintext highlighter-rouge">stdio.xml</code>, and the top-level XCDL file <code class="language-plaintext highlighter-rouge">libc.xml</code> would contain the following:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;package name="libc"&gt;
   ...
@@ -515,7 +515,7 @@ $('#toc').on('click', 'a', function() {
 
 <h3 id="information-providing-properties">Information-providing properties</h3>
 
-<p>Users can only be expected to manipulate configuration options sensibly if they are given sufficient information about these options. There are three properties which serve to explain an option in plain text: the <code class="language-plaintext highlighter-rouge">&lt;display&gt;</code> property gives a textual alias for an option, which is usually more comprehensible than something like <em>[time zones]</em>; the <code class="language-plaintext highlighter-rouge">&lt;description&gt;</code> property gives a longer description, typically a paragraph or so; the <code class="language-plaintext highlighter-rouge">&lt;doc&gt;</code> property specifies the location of additional online documentation related to a configuration option. In the context of a graphical tool the <code class="language-plaintext highlighter-rouge">&lt;display&gt;</code> string will be the primary way for users to identify configuration options; the <description> paragraph will be visible whenever the option is selected; the online documentation will only be accessed when the user explicitly requests it.</description></p>
+<p>Users can only be expected to manipulate configuration options sensibly if they are given sufficient information about these options. There are three properties which serve to explain an option in plain text: the <code class="language-plaintext highlighter-rouge">&lt;display&gt;</code> property gives a textual alias for an option, which is usually more comprehensible than something like <em>[time zones]</em>; the <code class="language-plaintext highlighter-rouge">&lt;description&gt;</code> property gives a longer description, typically a paragraph or so; the <code class="language-plaintext highlighter-rouge">&lt;doc&gt;</code> property specifies the location of additional online documentation related to a configuration option. In the context of a graphical tool the <code class="language-plaintext highlighter-rouge">&lt;display&gt;</code> string will be the primary way for users to identify configuration options; the <code class="language-plaintext highlighter-rouge">&lt;description&gt;</code> paragraph will be visible whenever the option is selected; the online documentation will only be accessed when the user explicitly requests it.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;package name="uitron"&gt;
 
@@ -548,7 +548,7 @@ $('#toc').on('click', 'a', function() {
 &lt;/package&gt;
 </code></pre></div></div>
 
-<p>The <code class="language-plaintext highlighter-rouge">&lt;parent&gt;</code> property can also be used in the body of a <code class="language-plaintext highlighter-rouge">&lt;component&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;option&gt;</code> or <code class="language-plaintext highlighter-rouge">&lt;interface&gt;</code>, but this is less common. However care has to be taken since excessive reparenting can be confusing. Care also has to be taken when reparenting below some other package that may not actually be loaded in a given configuration, since the resulting behaviour is undefined.</p>
+<p>The <code class="language-plaintext highlighter-rouge">&lt;parent&gt;</code> property can also be used in the body of a <code class="language-plaintext highlighter-rouge">&lt;component&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;option&gt;</code> or <code class="language-plaintext highlighter-rouge">&lt;interface&gt;</code>, but this is less common. However care has to be taken since excessive re-parenting can be confusing. Care also has to be taken when re-parenting below some other package that may not actually be loaded in a given configuration, since the resulting behaviour is undefined.</p>
 
 <p>The <code class="language-plaintext highlighter-rouge">&lt;includeFile&gt;</code> property can only be used in the body of a <code class="language-plaintext highlighter-rouge">&lt;component&gt;</code> object. The property takes a single filename as argument, and this should be another XCDL file containing additional options, subcomponents and interfaces that should go below the current component in the hierarchy. If the directory layout conventions are observed then the component framework will look for the specified file relative to the meta subdirectory of the package, otherwise the filename will be treated as relative to the package’s top-level directory.</p>
 
@@ -589,11 +589,11 @@ Both the boolean and the data part of the option are user-modifiable. To make th
   </li>
 </ul>
 
-<p>For more details of XCDL flavors and how a flavor affects expression evaluation, and other consequences, see the Section called Values and Expressions.</p>
+<p>For more details of XCDL flavors and how a flavour affects expression evaluation, and other consequences, see the Section called Values and Expressions.</p>
 
 <p>The <code class="language-plaintext highlighter-rouge">&lt;valueType&gt;</code> property cannot be used for a package because packages always have the <em>string</em> type. Options and components have the <em>none</em> type by default, since most configuration choices are simple yes-or-no choices. Interfaces have the <em>int</em> type by default.</p>
 
-<p>The <configurable> property can disable the change of the boolean part in the interface, so the option cannot be enabled/disabled by the user.</configurable></p>
+<p>The <code class="language-plaintext highlighter-rouge">&lt;configurable&gt;</code> property can disable the change of the boolean part in the interface, so the option cannot be enabled/disabled by the user.</p>
 
 <p>The <code class="language-plaintext highlighter-rouge">&lt;computed&gt;</code> property can be used for options which should not be user-modifiable, but which instead are fixed by the target hardware or determined from the current values of other options. In general calculated options should be avoided, since they can be confusing to users who need to figure out whether or not a particular option can actually be changed. There are a number of valid uses for calculated options, and quite a few invalid ones as well. The reference packages should be consulted for further details. The property takes an ordinary XCDL expression as argument, for example:</p>
 
@@ -609,7 +609,7 @@ Both the boolean and the data part of the option are user-modifiable. To make th
 &lt;/option&gt;
 </code></pre></div></div>
 
-<p>The <code class="language-plaintext highlighter-rouge">&lt;computed&gt;</code> property cannot be used for packages or interfaces. The value of a package always corresponds to the version of that package which is loaded, and this is under user control. Interfaces are implicitly calculated, based on the number of active and enabled implementors.</p>
+<p>The <code class="language-plaintext highlighter-rouge">&lt;computed&gt;</code> property cannot be used for packages or interfaces. The value of a package always corresponds to the version of that package which is loaded, and this is under user control. Interfaces are implicitly calculated, based on the number of active and enabled implementers.</p>
 
 <p>The <code class="language-plaintext highlighter-rouge">&lt;defaultValue&gt;</code> property is similar to <code class="language-plaintext highlighter-rouge">&lt;computed&gt;</code>, but only specifies a default value which users can modify. Again this property is not relevant to packages or interfaces. A typical example would be:</p>
 
@@ -625,7 +625,7 @@ Both the boolean and the data part of the option are user-modifiable. To make th
 &lt;/option&gt;
 </code></pre></div></div>
 
-<p>The <code class="language-plaintext highlighter-rouge">&lt;legalValues&gt;</code> property imposes a constraint on the possible values of the data part of an option. Hence it is only applicable to options with the data or booldata flavors. It cannot be used for a package since the only valid value for a package is its version number. The arguments to the <legalValues> property should constitute a XCDL list expression.</legalValues></p>
+<p>The <code class="language-plaintext highlighter-rouge">&lt;legalValues&gt;</code> property imposes a constraint on the possible values of the data part of an option. Hence it is only applicable to options with the data or booldata flavors. It cannot be used for a package since the only valid value for a package is its version number. The arguments to the <code class="language-plaintext highlighter-rouge">&lt;legalValues&gt;</code> property should constitute a XCDL list expression.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;component name="libc"&gt;
 
@@ -644,7 +644,7 @@ Both the boolean and the data part of the option are user-modifiable. To make th
 &lt;/component&gt;
 </code></pre></div></div>
 
-<p>The <activeIf> property does not relate directly to an option’s value, but rather to its active state. Usually this is controlled via the configuration hierarchy: if the *[libc/stdio]* component is disabled then all options below it are inactive and do not have any consequences. In some cases the hierarchy does not provide sufficient control, for example an option should only be active if two disjoint sets of conditions are satisfied: the hierarchy could be used for one of these conditions, and an additional <activeIf> property could be used for the other one. The arguments to <activeIf> should constitute a XCDL goal expression.</activeIf></activeIf></activeIf></p>
+<p>The <code class="language-plaintext highlighter-rouge">&lt;activeIf&gt;</code> property does not relate directly to an option’s value, but rather to its active state. Usually this is controlled via the configuration hierarchy: if the <em>[libc/stdio]</em> component is disabled then all options below it are inactive and do not have any consequences. In some cases the hierarchy does not provide sufficient control, for example an option should only be active if two disjoint sets of conditions are satisfied: the hierarchy could be used for one of these conditions, and an additional <code class="language-plaintext highlighter-rouge">&lt;activeIf&gt;</code> property could be used for the other one. The arguments to <code class="language-plaintext highlighter-rouge">&lt;activeIf&gt;</code> should constitute a XCDL goal expression.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--  Do not provide extra semaphore debugging if there are no semaphores --&gt;
 &lt;option name="binsem"&gt;
@@ -729,7 +729,7 @@ Both the boolean and the data part of the option are user-modifiable. To make th
 
 <p>The arguments to the <code class="language-plaintext highlighter-rouge">&lt;sourceFile&gt;</code> property should be one source file. Typically most of the sources will be needed for the package as a whole, and hence they will be listed in several <code class="language-plaintext highlighter-rouge">&lt;sourceFile&gt;</code> properties in the object body. Some sources may be specific to particular configuration options, in other words there is no point in compiling them unless that option is enabled, in which case the sources should be listed in a compile property in the corresponding <code class="language-plaintext highlighter-rouge">&lt;option&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;component&gt;</code> or <code class="language-plaintext highlighter-rouge">&lt;interface&gt;</code> body.</p>
 
-<p>Some packages may have more complicated build requirements, for example they may involve a special target such as a linker script which should not end up in the usual library, or they may involve special build steps for generating an object file. The <make> and <make_object> properties provide support for such requirements, for example:</make_object></make></p>
+<p>Some packages may have more complicated build requirements, for example they may involve a special target such as a linker script which should not end up in the usual library, or they may involve special build steps for generating an object file. The <code class="language-plaintext highlighter-rouge">&lt;make&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;make_object&gt;</code> properties provide support for such requirements, for example:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;package name="am33"&gt;
 
@@ -818,9 +818,9 @@ Both the boolean and the data part of the option are user-modifiable. To make th
 
 <p>The next issue to consider is whether or not a particular option is active. Configuration options are organized in a hierarchy of components and sub-components. For example the C library package contains a <code class="language-plaintext highlighter-rouge">component('libc/stdio')</code> containing all the options related to standard I/O. If a user disables the component as a whole then all the options below it become inactive: it makes no sense to disable all stdio functionality and then manipulate the buffer sizes.</p>
 
-<p>Inactive is not quite the same as disabled, although the effects are similar. The value of an inactive option is preserved. If the user modifies a buffer size option, then disables the whole stdio component, the buffer size value remains in case the stdio component is re-enabled later on. Some tools such as the graphical configuration tool will treat inactive options specially, for example such options may be grayed out.</p>
+<p>Inactive is not quite the same as disabled, although the effects are similar. The value of an inactive option is preserved. If the user modifies a buffer size option, then disables the whole stdio component, the buffer size value remains in case the stdio component is re-enabled later on. Some tools such as the graphical configuration tool will treat inactive options specially, for example such options may be greyed out.</p>
 
-<p>The active or inactive state of an option may affect other packages. For example a package may use the sprintf() function and require support for floating point conversions, a constraint that is not satisfied if the relevant option is inactive. It is necessary to define exactly what it means for an option to be inactive:</p>
+<p>The active or inactive state of an option may affect other packages. For example a package may use the <code class="language-plaintext highlighter-rouge">sprintf()</code> function and require support for floating point conversions, a constraint that is not satisfied if the relevant option is inactive. It is necessary to define exactly what it means for an option to be inactive:</p>
 
 <ol>
   <li>An option is inactive if its parent is either inactive or disabled. For example if <code class="language-plaintext highlighter-rouge">component('libc/stdio')</code> is disabled then all the options and sub-components become inactive; since <code class="language-plaintext highlighter-rouge">component('libc/stdio/floating point')</code> is now inactive, <code class="language-plaintext highlighter-rouge">component('libc/stdio/floating point/printf')</code> is inactive as well.</li>
@@ -971,7 +971,7 @@ Both the boolean and the data part of the option are user-modifiable. To make th
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jun 16, 2022<br/> Site last generated: Jun 16, 2022 <br />
+<span>Page last updated:</span> Jul 5, 2022<br/> Site last generated: Jul 5, 2022 <br />
                 </div>
             </div>
 </footer>

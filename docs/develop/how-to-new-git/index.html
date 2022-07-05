@@ -13,9 +13,9 @@
 <link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
 <link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
 
-<!-- Begin Jekyll SEO tag v2.7.1 -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>How to create a new xPack Git repository</title>
-<meta name="generator" content="Jekyll v4.2.1" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="How to create a new xPack Git repository" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to create a new xPack Git repository" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/how-to-new-git/"},"@type":"BlogPosting","url":"https://xpack.github.io/develop/how-to-new-git/","headline":"How to create a new xPack Git repository","dateModified":"2022-06-16T20:24:29+00:00","datePublished":"2019-07-09T14:48:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-07-05T15:06:28+00:00","datePublished":"2019-07-09T14:48:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to create a new xPack Git repository","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/how-to-new-git/"},"url":"https://xpack.github.io/develop/how-to-new-git/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -201,15 +201,15 @@
                     <ul class="dropdown-menu">
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack" target="_blank" rel="noopener">xPack Core Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack Core Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack-dev-tools" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-3rd-party/" target="_blank" rel="noopener">3rd Party xPacks</a></li>
                         
                         
                         
@@ -226,10 +226,6 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        
-                        
-                        <li><a class="extern" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
-                        
                         
                         
                         <li><a class="extern" href="https://gitter.im/xpack/" target="_blank" rel="noopener">The xPack Chatroom</a></li>
@@ -370,7 +366,21 @@
           
           
           
+          <li><a title="clang" href="/clang/">clang</a></li>
+          
+          
+          
+          
+          
+          
           <li><a title="arm-none-eabi-gcc" href="/arm-none-eabi-gcc/">arm-none-eabi-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="aarch64-none-elf-gcc" href="/aarch64-none-elf-gcc/">aarch64-none-elf-gcc</a></li>
           
           
           
@@ -392,6 +402,13 @@
           
           
           <li><a title="qemu-arm" href="/qemu-arm/">qemu-arm</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="qemu-riscv" href="/qemu-riscv/">qemu-riscv</a></li>
           
           
           
@@ -551,7 +568,11 @@
          -->
 </ul>
 
-<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise, if placed
+inside customscripts.js, the script runs before the sidebar code runs
+and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
             </div>
@@ -737,7 +758,7 @@ of the <code class="language-plaintext highlighter-rouge">master</code> branch.<
 The easiest way to create new projects would be to use an existing
 GitHub Template project. Unfortunately, at the time of testing,
 the repositories resulted
-by using this method had weirds histories,
+by using this method had weird histories,
 like disconnected commits; until this will be fixed,
 this method is not recommended.</div>
 
@@ -754,9 +775,9 @@ an xPack, it is recommended to suffix the project name with ‘-xpack’.</div>
 
 <p>With a browser, at GitHub, select your account or organisation.
 (for the purposes of this project, here are some organisations that use xPacks:
-<a href="https://github.com/xpacks">xPacks</a>,
-<a href="https://github.com/xpack-dev-tools">xPacks Dev Tools</a>,
-<a href="https://github.com/micro-os-plus">µOS++</a>).</p>
+<a href="https://github.com/xpack-dev-tools/">xPacks Dev Tools</a>,
+<a href="https://github.com/micro-os-plus/">µOS++</a>,
+<a href="https://github.com/xpack-3rd-party/">3rd party source xPacks</a>).</p>
 
 <ul>
   <li>click the green <strong>New</strong> button to create a new repository
@@ -838,7 +859,7 @@ code on a separate branch, like <code class="language-plaintext highlighter-roug
 as the <code class="language-plaintext highlighter-rouge">master</code> branch.</p>
 
 <p>With each upstream release, while on the <code class="language-plaintext highlighter-rouge">originals</code> branch,
-fuly remove the content and extract the newly released archive.</p>
+fully remove the content and extract the newly released archive.</p>
 
 <p>Then merge the update <code class="language-plaintext highlighter-rouge">originals</code> branch into the <code class="language-plaintext highlighter-rouge">xpack</code> branch.</p>
 
@@ -1288,7 +1309,7 @@ npm version major
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jun 16, 2022<br/> Site last generated: Jun 16, 2022 <br />
+<span>Page last updated:</span> Jul 5, 2022<br/> Site last generated: Jul 5, 2022 <br />
                 </div>
             </div>
 </footer>

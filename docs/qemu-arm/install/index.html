@@ -13,9 +13,9 @@
 <link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
 <link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
 
-<!-- Begin Jekyll SEO tag v2.7.1 -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>How to install the xPack QEMU Arm binaries</title>
-<meta name="generator" content="Jekyll v4.2.1" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="How to install the xPack QEMU Arm binaries" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack QEMU Arm binaries" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/qemu-arm/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/qemu-arm/install/","headline":"How to install the xPack QEMU Arm binaries","dateModified":"2022-06-16T20:24:29+00:00","datePublished":"2015-09-04T14:03:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-07-05T15:06:28+00:00","datePublished":"2015-09-04T14:03:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack QEMU Arm binaries","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/qemu-arm/install/"},"url":"https://xpack.github.io/qemu-arm/install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -201,15 +201,15 @@
                     <ul class="dropdown-menu">
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack" target="_blank" rel="noopener">xPack Core Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack Core Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack-dev-tools" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-3rd-party/" target="_blank" rel="noopener">3rd Party xPacks</a></li>
                         
                         
                         
@@ -226,10 +226,6 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        
-                        
-                        <li><a class="extern" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
-                        
                         
                         
                         <li><a class="extern" href="https://gitter.im/xpack/" target="_blank" rel="noopener">The xPack Chatroom</a></li>
@@ -334,7 +330,11 @@
          -->
 </ul>
 
-<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise, if placed
+inside customscripts.js, the script runs before the sidebar code runs
+and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
             </div>
@@ -384,7 +384,7 @@ follow the instructions from the
 <p>With xpm available, installing
 the latest version of the package is quite easy:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/qemu-arm@latest <span class="nt">--verbose</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/qemu-arm@latest <span class="nt">--verbose</span>
 </code></pre></div></div>
 
 <p>This command will always install the latest available version,
@@ -444,11 +444,7 @@ Download the latest version named like:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">xpack-qemu-arm-2.8.0-7-win32-x64.zip</code></li>
-  <li><code class="language-plaintext highlighter-rouge">xpack-qemu-arm-2.8.0-7-win32-x32.zip</code></li>
 </ul>
-
-<p>Select the <code class="language-plaintext highlighter-rouge">-x64</code> file for 64-bit Windows machines and the <code class="language-plaintext highlighter-rouge">-x32</code> file
-for 32-bit Windows machines.</p>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> In case you wonder where the suffix comes
 from, it is exactly the Node.js <code class="language-plaintext highlighter-rouge">process.platform</code> and <code class="language-plaintext highlighter-rouge">process.arch</code>.
@@ -477,10 +473,10 @@ for the executable in this location.</div>
 
 <p>To check if the manually installed QEMU starts, use something like:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\qemu-arm\xpack-qemu-arm-2.8.0-7\bin\qemu-system-gnuarmeclipse.exe" --version
+<pre><code class="language-doscon">C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\qemu-arm\xpack-qemu-arm-2.8.0-7\bin\qemu-system-gnuarmeclipse.exe" --version
 xPack 64-bit QEMU emulator version 2.8.0-7 (v2.8.0-7-20180523-6-gee07085299-dirty)
 Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
-</code></pre></div></div>
+</code></pre>
 
 <h4 id="drivers">Drivers</h4>
 
@@ -503,13 +499,13 @@ Download the latest version named like:</p>
 
 <p>To manually install the xPack QEMU Arm,
 unpack the archive and move it to
-<code class="language-plaintext highlighter-rouge">~/opt/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7</code>:</p>
+<code class="language-plaintext highlighter-rouge">~/.local/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7</code>:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">mkdir</span> <span class="nt">-p</span> ~/opt
-<span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> ~/opt
-<span class="go">
-</span><span class="gp">$</span><span class="w"> </span><span class="nb">tar </span>xvf ~/Downloads/xpack-qemu-arm-2.8.0-7-darwin-x64.tgz
-<span class="gp">$</span><span class="w"> </span><span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/.local/xPacks/qemu-arm
+<span class="nb">cd</span> ~/.local/xPacks/qemu-arm
+
+<span class="nb">tar </span>xvf ~/Downloads/xpack-qemu-arm-2.8.0-7-darwin-x64.tgz
+<span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xpack-qemu-arm-2.8.0-7
 </code></pre></div></div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For manual installs, the recommended
@@ -522,8 +518,8 @@ for the executable in this location.</div>
 
 <p>The result is a structure like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 /Users/ilg/Library/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7
-<span class="go">/Users/ilg/Library/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7/
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 /Users/ilg/.local/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7
+<span class="go">/Users/ilg/.local/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7/
 ├── README.md
 ├── bin
 │   ├── libSDL2-2.0.0.dylib
@@ -554,7 +550,7 @@ for the executable in this location.</div>
 
 <p>To check if the manually installed QEMU starts, use something like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7/bin/qemu-system-gnuarmeclipse <span class="nt">--version</span>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7/bin/qemu-system-gnuarmeclipse <span class="nt">--version</span>
 <span class="go">xPack 64-bit QEMU emulator version 2.8.0-7 (v2.8.0-4-20190211-47-g109b69f49a-dirty)
 Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
 </span></code></pre></div></div>
@@ -570,25 +566,22 @@ Download the latest version named like:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">xpack-qemu-arm-2.8.0-7-linux-x64.tgz</code></li>
-  <li><code class="language-plaintext highlighter-rouge">xpack-qemu-arm-2.8.0-7-linux-x32.tgz</code></li>
 </ul>
 
 <p>As the name implies, these are GNU/Linux <code class="language-plaintext highlighter-rouge">tar.gz</code> archives; they were build on
-Ubuntu, but can be executed on most recent GNU/Linux distributions.
-Select the <code class="language-plaintext highlighter-rouge">-x64</code> file for 64-bit machines and the <code class="language-plaintext highlighter-rouge">-x32</code> file for 32-bit
-machines.</p>
+Ubuntu, but can be executed on most recent GNU/Linux distributions.</p>
 
 <h3 id="unpack">Unpack</h3>
 
 <p>To manually install the xPack QEMU Arm,
 unpack the archive and move it to
-<code class="language-plaintext highlighter-rouge">~/opt/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7</code>:</p>
+<code class="language-plaintext highlighter-rouge">~/.local/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7</code>:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">mkdir</span> <span class="nt">-p</span> ~/opt
-<span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> ~/opt
-<span class="go">
-</span><span class="gp">$</span><span class="w"> </span><span class="nb">tar </span>xvf ~/Downloads/xpack-qemu-arm-2.8.0-7-linux-x64.tgz
-<span class="gp">$</span><span class="w"> </span><span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/.local/xPacks/qemu-arm
+<span class="nb">cd</span> ~/.local/xPacks/qemu-arm
+
+<span class="nb">tar </span>xvf ~/Downloads/xpack-qemu-arm-2.8.0-7-linux-x64.tgz
+<span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xpack-qemu-arm-2.8.0-7
 </code></pre></div></div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For manual installs, the recommended
@@ -603,8 +596,8 @@ for the executable in this location.</div>
 
 <p>The result is a structure like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 <span class="s1">'/home/ilg/opt/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7'</span>
-<span class="go">/home/ilg/opt/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7/
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 <span class="s1">'/home/ilg/.local/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7'</span>
+<span class="go">/home/ilg/.local/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7/
 ├── bin
 </span><span class="gp">│   ├── libglib-2.0.so.0 -&gt;</span><span class="w"> </span>libglib-2.0.so.0.5600.4
 <span class="go">│   ├── libglib-2.0.so.0.5600.4
@@ -643,7 +636,7 @@ for the executable in this location.</div>
 
 <p>To check if the manually installed QEMU starts, use something like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7/bin/qemu-system-gnuarmeclipse <span class="nt">--version</span>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7/bin/qemu-system-gnuarmeclipse <span class="nt">--version</span>
 <span class="go">xPack 64-bit QEMU emulator version 2.8.0-7 (v2.8.0-4-20190211-47-g109b69f49a-dirty)
 Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
 </span></code></pre></div></div>
@@ -674,8 +667,7 @@ drivers required.</p>
     <hr/>
     <p>Comments on the content of this page that might be useful
     for other readers are welcomed here. For question and general
-    support, please use the
-    <a href="https://www.tapatalk.com/groups/xpack/">project forums</a>.
+    support, please use GitHub Discussions.
     </p>
 
     <div id="disqus_thread"></div>
@@ -705,7 +697,7 @@ drivers required.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jun 16, 2022<br/> Site last generated: Jun 16, 2022 <br />
+<span>Page last updated:</span> Jul 5, 2022<br/> Site last generated: Jul 5, 2022 <br />
                 </div>
             </div>
 </footer>

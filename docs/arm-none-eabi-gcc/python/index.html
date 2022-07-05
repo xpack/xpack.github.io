@@ -13,9 +13,9 @@
 <link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
 <link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
 
-<!-- Begin Jekyll SEO tag v2.7.1 -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>GDB with Python support</title>
-<meta name="generator" content="Jekyll v4.2.1" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="GDB with Python support" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="GDB with Python support" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/arm-none-eabi-gcc/python/"},"@type":"BlogPosting","url":"https://xpack.github.io/arm-none-eabi-gcc/python/","headline":"GDB with Python support","dateModified":"2022-06-16T20:24:29+00:00","datePublished":"2020-01-28T17:18:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-07-05T15:06:28+00:00","datePublished":"2020-01-28T17:18:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"GDB with Python support","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/arm-none-eabi-gcc/python/"},"url":"https://xpack.github.io/arm-none-eabi-gcc/python/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -201,15 +201,15 @@
                     <ul class="dropdown-menu">
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack" target="_blank" rel="noopener">xPack Core Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack Core Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack-dev-tools" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-3rd-party/" target="_blank" rel="noopener">3rd Party xPacks</a></li>
                         
                         
                         
@@ -226,10 +226,6 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        
-                        
-                        <li><a class="extern" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
-                        
                         
                         
                         <li><a class="extern" href="https://gitter.im/xpack/" target="_blank" rel="noopener">The xPack Chatroom</a></li>
@@ -334,7 +330,11 @@
          -->
 </ul>
 
-<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise, if placed
+inside customscripts.js, the script runs before the sidebar code runs
+and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
             </div>
@@ -360,6 +360,12 @@
 
 
    <h2 id="overview">Overview</h2>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> This page applies only to early
+releases, which
+required Python to be installed in the system; current releases
+are standalone and include a Python runtime, so
+these steps are no longer required.</div>
 
 <p>Starting with GDB 7, support for
 <a href="https://sourceware.org/gdb/current/onlinedocs/gdb/Python.html">extending GDB with Python scripting</a>
@@ -541,7 +547,7 @@ with different minor numbers.</p>
 <p>Most modern distributions come with both Python 2 and 3 available as
 native packages, but some come with versions different from 2.7 and 3.7.</p>
 
-<p>For consistent results, the GDB binaries were built agains the official
+<p>For consistent results, the GDB binaries were built against the official
 Python binaries, available from
 <a href="https://www.python.org/downloads/source/">Python Source Releases</a>:</p>
 
@@ -572,7 +578,7 @@ make
 <span class="nb">sudo </span>make altinstall
 </code></pre></div></div>
 
-<p>To check where the new biraries were installed:</p>
+<p>To check where the new binaries were installed:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>which python2.7
 <span class="go">/usr/local/bin/python2.7
@@ -597,7 +603,7 @@ make
 <span class="nb">sudo </span>make altinstall
 </code></pre></div></div>
 
-<p>To check where the new biraries were installed:</p>
+<p>To check where the new binaries were installed:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>which python3.7
 <span class="go">/usr/local/bin/python3.7
@@ -664,8 +670,7 @@ ImportError: No module named _sysconfigdata_nd
     <hr/>
     <p>Comments on the content of this page that might be useful
     for other readers are welcomed here. For question and general
-    support, please use the
-    <a href="https://www.tapatalk.com/groups/xpack/">project forums</a>.
+    support, please use GitHub Discussions.
     </p>
 
     <div id="disqus_thread"></div>
@@ -695,7 +700,7 @@ ImportError: No module named _sysconfigdata_nd
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jun 16, 2022<br/> Site last generated: Jun 16, 2022 <br />
+<span>Page last updated:</span> Jul 5, 2022<br/> Site last generated: Jul 5, 2022 <br />
                 </div>
             </div>
 </footer>

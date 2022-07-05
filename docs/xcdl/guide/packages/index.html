@@ -13,9 +13,9 @@
 <link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
 <link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
 
-<!-- Begin Jekyll SEO tag v2.7.1 -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>XCDL packages (outdated)</title>
-<meta name="generator" content="Jekyll v4.2.1" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="XCDL packages (outdated)" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="XCDL packages (outdated)" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xcdl/guide/packages/"},"@type":"BlogPosting","url":"https://xpack.github.io/xcdl/guide/packages/","headline":"XCDL packages (outdated)","dateModified":"2022-06-16T20:24:29+00:00","datePublished":"2015-10-25T10:00:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-07-05T15:06:28+00:00","datePublished":"2015-10-25T10:00:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"XCDL packages (outdated)","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xcdl/guide/packages/"},"url":"https://xpack.github.io/xcdl/guide/packages/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -201,15 +201,15 @@
                     <ul class="dropdown-menu">
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack" target="_blank" rel="noopener">xPack Core Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack Core Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack-dev-tools" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-3rd-party/" target="_blank" rel="noopener">3rd Party xPacks</a></li>
                         
                         
                         
@@ -226,10 +226,6 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        
-                        
-                        <li><a class="extern" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
-                        
                         
                         
                         <li><a class="extern" href="https://gitter.im/xpack/" target="_blank" rel="noopener">The xPack Chatroom</a></li>
@@ -315,7 +311,11 @@
          -->
 </ul>
 
-<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise, if placed
+inside customscripts.js, the script runs before the sidebar code runs
+and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
             </div>
@@ -431,7 +431,7 @@ $('#toc').on('click', 'a', function() {
 
 <h3 id="name"><code class="language-plaintext highlighter-rouge">name</code></h3>
 
-<p>A string that must uniquely identify the project node in the local repository hierarchy. It does not need to match the GitHub repository name, althought usually it is closely related.</p>
+<p>A string that must uniquely identify the project node in the local repository hierarchy. It does not need to match the GitHub repository name, although usually it is closely related.</p>
 
 <p>The parent path must have at least one level, and generally defines the originator of the package (user or organization).</p>
 
@@ -513,7 +513,7 @@ $('#toc').on('click', 'a', function() {
 
 <p>The <code class="language-plaintext highlighter-rouge">archives</code> array define an ordered list of locations where the binary package can be downloaded from.</p>
 
-<p>The inner <code class="language-plaintext highlighter-rouge">repository</code> object defines the location where the release sources are available; only the <code class="language-plaintext highlighter-rouge">tag</code> property is mandatory; if this location is identical with the top definition, the <code class="language-plaintext highlighter-rouge">type</code> and <code class="language-plaintext highlighter-rouge">url</code> properties may be ommited.</p>
+<p>The inner <code class="language-plaintext highlighter-rouge">repository</code> object defines the location where the release sources are available; only the <code class="language-plaintext highlighter-rouge">tag</code> property is mandatory; if this location is identical with the top definition, the <code class="language-plaintext highlighter-rouge">type</code> and <code class="language-plaintext highlighter-rouge">url</code> properties may be omitted.</p>
 
 <p>Example:</p>
 
@@ -796,7 +796,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jun 16, 2022<br/> Site last generated: Jun 16, 2022 <br />
+<span>Page last updated:</span> Jul 5, 2022<br/> Site last generated: Jul 5, 2022 <br />
                 </div>
             </div>
 </footer>

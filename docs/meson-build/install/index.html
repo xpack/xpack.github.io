@@ -13,9 +13,9 @@
 <link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
 <link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
 
-<!-- Begin Jekyll SEO tag v2.7.1 -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>How to install the xPack Meson Build binaries</title>
-<meta name="generator" content="Jekyll v4.2.1" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="How to install the xPack Meson Build binaries" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack Meson Build binaries" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/meson-build/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/meson-build/install/","headline":"How to install the xPack Meson Build binaries","dateModified":"2022-06-16T20:24:29+00:00","datePublished":"2020-09-27T08:09:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-07-05T15:06:28+00:00","datePublished":"2020-09-27T08:09:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack Meson Build binaries","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/meson-build/install/"},"url":"https://xpack.github.io/meson-build/install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -201,15 +201,15 @@
                     <ul class="dropdown-menu">
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack" target="_blank" rel="noopener">xPack Core Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack Core Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack-dev-tools" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-3rd-party/" target="_blank" rel="noopener">3rd Party xPacks</a></li>
                         
                         
                         
@@ -226,10 +226,6 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        
-                        
-                        <li><a class="extern" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
-                        
                         
                         
                         <li><a class="extern" href="https://gitter.im/xpack/" target="_blank" rel="noopener">The xPack Chatroom</a></li>
@@ -334,7 +330,11 @@
          -->
 </ul>
 
-<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise, if placed
+inside customscripts.js, the script runs before the sidebar code runs
+and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
             </div>
@@ -392,7 +392,7 @@ follow the instructions from the
 <p>With xpm available, installing
 the latest version of the package is quite easy:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/meson-build@latest <span class="nt">--verbose</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/meson-build@latest <span class="nt">--verbose</span>
 </code></pre></div></div>
 
 <p>This command will always install the latest available version,
@@ -423,9 +423,9 @@ settings like <strong>Show Hidden Files</strong>.</div>
 
 <p>To check if the xpm installed Meson starts, use something like:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\@xpack-dev-tools\0.55.3-1.1\.content\bin\meson.exe --version
-0.55.3
-</code></pre></div></div>
+<pre><code class="language-doscon">C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\@xpack-dev-tools\0.60.3-1.1\.content\bin\meson.exe --version
+0.60.3
+</code></pre>
 
 <h2 id="manual-install">Manual install</h2>
 
@@ -442,12 +442,8 @@ page.</p>
 Download the latest version named like:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">xpack-meson-build-0.55.3-1-win32-x64.zip</code></li>
-  <li><code class="language-plaintext highlighter-rouge">xpack-meson-build-0.55.3-1-win32-x32.zip</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-meson-build-0.60.3-1-win32-x64.zip</code></li>
 </ul>
-
-<p>Select the <code class="language-plaintext highlighter-rouge">-x64</code> file for 64-bit Windows machines and the <code class="language-plaintext highlighter-rouge">-x32</code> file
-for 32-bit Windows machines.</p>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> In case you wonder where the suffix comes
 from, it is exactly the Node.js <code class="language-plaintext highlighter-rouge">process.platform</code> and <code class="language-plaintext highlighter-rouge">process.arch</code>.
@@ -471,9 +467,9 @@ and <code class="language-plaintext highlighter-rouge">.content</code> to store 
 
 <p>To check if the manually installed Meson starts, use something like:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\meson-build\xpack-meson-0.55.3-1\bin\meson.exe --version
-0.55.3
-</code></pre></div></div>
+<pre><code class="language-doscon">C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\meson-build\xpack-meson-0.60.3-1\bin\meson.exe --version
+0.60.3
+</code></pre>
 
 
 	</div>
@@ -498,7 +494,7 @@ follow the instructions from the
 <p>With xpm available, installing
 the latest version of the package is quite easy:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/meson-build@latest <span class="nt">--verbose</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/meson-build@latest <span class="nt">--verbose</span>
 </code></pre></div></div>
 
 <p>This command will always install the latest available version,
@@ -529,8 +525,8 @@ settings like <strong>Show Hidden Files</strong>.</div>
 
 <p>To check if the xpm installed Meson starts, use something like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/@xpack-dev-tools/meson-build/0.55.3-1.1/.content/bin/meson <span class="nt">--version</span>
-<span class="go">0.55.3
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/@xpack-dev-tools/meson-build/0.60.3-1.1/.content/bin/meson <span class="nt">--version</span>
+<span class="go">0.60.3
 </span></code></pre></div></div>
 
 <h2 id="manual-install">Manual install</h2>
@@ -548,20 +544,20 @@ page.</p>
 Download the latest version named like:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">xpack-meson-build-0.55.3-1-darwin-x64.tgz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-meson-build-0.60.3-1-darwin-x64.tgz</code></li>
 </ul>
 
 <h3 id="unpack">Unpack</h3>
 
 <p>To manually install the xPack Meson Build,
 unpack the archive and copy it to
-<code class="language-plaintext highlighter-rouge">~/opt/xPacks/meson-build/xpack-meson-build-0.55.3-1</code>:</p>
+<code class="language-plaintext highlighter-rouge">~/.local/xPacks/meson-build/xpack-meson-build-0.60.3-1</code>:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">mkdir</span> <span class="nt">-p</span> ~/opt
-<span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> ~/opt
-<span class="go">
-</span><span class="gp">$</span><span class="w"> </span><span class="nb">tar </span>xvf ~/Downloads/xpack-meson-build-0.55.3-1-darwin-x64.tgz
-<span class="gp">$</span><span class="w"> </span><span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xPacks/meson-build/xpack-meson-build-0.55.3-1
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/.local/xPacks/meson-build
+<span class="nb">cd</span> ~/.local/xPacks/meson-build
+
+<span class="nb">tar </span>xvf ~/Downloads/xpack-meson-build-0.60.3-1-darwin-x64.tgz
+<span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xpack-meson-build-0.60.3-1
 </code></pre></div></div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For manual installs, the recommended
@@ -569,31 +565,43 @@ install location is different from the xpm install folders.</div>
 
 <p>The result is a structure like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 /Users/ilg/Library/xPacks/meson-build/xpack-meson-build-0.55.3-1
-<span class="go">/Users/ilg/Library/xPacks/meson-build/xpack-meson-build-0.55.3-1/
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 /Users/ilg/.local/xPacks/meson-build/xpack-meson-build-0.60.3-1
+<span class="go">/Users/ilg/.local/xPacks/meson-build/xpack-meson-build-0.60.3-1/
 ├── README.md
 ├── bin
-│   ├── libcrypt.2.dylib
-│   ├── libgcc_s.1.dylib
-│   ├── libpython3.8.dylib
 │   └── meson
 ├── distro-info
 │   ├── CHANGELOG.md
 │   ├── licenses
 │   ├── patches
 │   └── scripts
-└── lib
-    └── python3.8
-
-7 directories, 6 files
+├── lib
+│   └── python3.10
+└── libexec
+    ├── libcrypt.2.dylib
+    ├── libcrypto.1.1.dylib
+    ├── libffi.8.dylib
+    ├── libgcc_s.1.dylib
+    ├── liblzma.5.dylib
+    ├── libncurses.6.dylib
+    ├── libpanel.6.dylib
+    ├── libpython3.10.dylib
+    ├── libreadline.8.1.dylib
+</span><span class="gp">    ├── libreadline.8.dylib -&gt;</span><span class="w"> </span>libreadline.8.1.dylib
+<span class="go">    ├── libsqlite3.0.dylib
+    ├── libssl.1.1.dylib
+    ├── libz.1.2.11.dylib
+</span><span class="gp">    └── libz.1.dylib -&gt;</span><span class="w"> </span>libz.1.2.11.dylib
+<span class="go">
+8 directories, 17 files
 </span></code></pre></div></div>
 
 <h3 id="test-1">Test</h3>
 
 <p>To check if the manually installed Meson starts, use something like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/meson-build/xpack-meson-build-0.55.3-1/bin/meson <span class="nt">--version</span>
-<span class="go">0.5.3
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/meson-build/xpack-meson-build-0.60.3-1/bin/meson <span class="nt">--version</span>
+<span class="go">0.60.3
 </span></code></pre></div></div>
 
 
@@ -619,7 +627,7 @@ follow the instructions from the
 <p>With xpm available, installing
 the latest version of the package is quite easy:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/meson-build@latest <span class="nt">--verbose</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/meson-build@latest <span class="nt">--verbose</span>
 </code></pre></div></div>
 
 <p>This command will always install the latest available version,
@@ -650,8 +658,8 @@ settings like <strong>Show Hidden Files</strong>.</div>
 
 <p>To check if the xpm installed Meson starts, use something like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/@xpack-dev-tools/meson-build/0.55.3-1.1/.content/bin/meson <span class="nt">--version</span>
-<span class="go">0.55.3
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/@xpack-dev-tools/meson-build/0.60.3-1.1/.content/bin/meson <span class="nt">--version</span>
+<span class="go">0.60.3
 </span></code></pre></div></div>
 
 <h2 id="manual-install">Manual install</h2>
@@ -669,26 +677,23 @@ page.</p>
 Download the latest version named like:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">xpack-meson-build-0.55.3-1-linux-x64.tgz</code></li>
-  <li><code class="language-plaintext highlighter-rouge">xpack-meson-build-0.55.3-1-linux-x32.tgz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-meson-build-0.60.3-1-linux-x64.tgz</code></li>
 </ul>
 
 <p>As the name implies, these are GNU/Linux <code class="language-plaintext highlighter-rouge">tar.gz</code> archives; they were build on
-Ubuntu, but can be executed on most recent GNU/Linux distributions.
-Select the <code class="language-plaintext highlighter-rouge">-x64</code> file for 64-bit machines and the <code class="language-plaintext highlighter-rouge">-x32</code> file for 32-bit
-machines.</p>
+Ubuntu, but can be executed on most recent GNU/Linux distributions.</p>
 
 <h3 id="unpack">Unpack</h3>
 
 <p>To manually install the xPack Meson Build,
 unpack the archive and move it to
-<code class="language-plaintext highlighter-rouge">~/opt/xPacks/meson-build/xpack-meson-build-0.55.3-1</code>:</p>
+<code class="language-plaintext highlighter-rouge">~/.local/xPacks/meson-build/xpack-meson-build-0.60.3-1</code>:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">mkdir</span> <span class="nt">-p</span> ~/opt
-<span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> ~/opt
-<span class="go">
-</span><span class="gp">$</span><span class="w"> </span><span class="nb">tar </span>xvf ~/Downloads/xpack-meson-build-0.55.3-1-linux-x64.tgz
-<span class="gp">$</span><span class="w"> </span><span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xPacks/meson-build/xpack-meson-build-0.55.3-1
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/.local/xPacks/meson-build
+<span class="nb">cd</span> ~/.local/xPacks/meson-build
+
+<span class="nb">tar </span>xvf ~/Downloads/xpack-meson-build-0.60.3-1-linux-x64.tgz
+<span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xpack-meson-build-0.60.3-1
 </code></pre></div></div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For manual installs, the recommended
@@ -696,8 +701,8 @@ install location is slightly different from the xpm install folders,
 which use the scope (like <code class="language-plaintext highlighter-rouge">@xpack-dev-tools</code>) to group different tools,
 and <code class="language-plaintext highlighter-rouge">.content</code> to store the unpacked archive.</div>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 <span class="s1">'/home/ilg/opt/xPacks/meson-build/xpack-meson-build-0.55.3-1'</span>
-<span class="go">/home/ilg/opt/xPacks/meson-build/xpack-meson-build-0.55.3-1/
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 <span class="s1">'/home/ilg/.local/xPacks/meson-build/xpack-meson-build-0.60.3-1'</span>
+<span class="go">/home/ilg/.local/xPacks/meson-build/xpack-meson-build-0.60.3-1/
 ├── bin
 │   └── meson
 ├── distro-info
@@ -706,18 +711,38 @@ and <code class="language-plaintext highlighter-rouge">.content</code> to store 
 │   ├── patches
 │   └── scripts
 ├── lib
-│   └── python3.8
+│   └── python3.10
+├── libexec
+│   ├── libcrypto.so.1.1
+</span><span class="gp">│   ├── libcrypt.so.1 -&gt;</span><span class="w"> </span>libcrypt.so.1.1.0
+<span class="go">│   ├── libcrypt.so.1.1.0
+</span><span class="gp">│   ├── libffi.so.8 -&gt;</span><span class="w"> </span>libffi.so.8.1.0
+<span class="go">│   ├── libffi.so.8.1.0
+</span><span class="gp">│   ├── liblzma.so.5 -&gt;</span><span class="w"> </span>liblzma.so.5.2.5
+<span class="go">│   ├── liblzma.so.5.2.5
+</span><span class="gp">│   ├── libncurses.so.6 -&gt;</span><span class="w"> </span>libncurses.so.6.3
+<span class="go">│   ├── libncurses.so.6.3
+</span><span class="gp">│   ├── libpanel.so.6 -&gt;</span><span class="w"> </span>libpanel.so.6.3
+<span class="go">│   ├── libpanel.so.6.3
+│   ├── libpython3.10.so.1.0
+</span><span class="gp">│   ├── libreadline.so.8 -&gt;</span><span class="w"> </span>libreadline.so.8.1
+<span class="go">│   ├── libreadline.so.8.1
+</span><span class="gp">│   ├── libsqlite3.so.0 -&gt;</span><span class="w"> </span>libsqlite3.so.0.8.6
+<span class="go">│   ├── libsqlite3.so.0.8.6
+│   ├── libssl.so.1.1
+</span><span class="gp">│   ├── libz.so.1 -&gt;</span><span class="w"> </span>libz.so.1.2.11
+<span class="go">│   └── libz.so.1.2.11
 └── README.md
 
-7 directories, 3 files
+8 directories, 22 files
 </span></code></pre></div></div>
 
 <h3 id="test-1">Test</h3>
 
 <p>To check if the manually installed Meson starts, use something like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/meson-build/xpack-meson-build-0.55.3-1/bin/meson <span class="nt">--version</span>
-<span class="go">0.55.3
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/meson-build/xpack-meson-build-0.60.3-1/bin/meson <span class="nt">--version</span>
+<span class="go">0.60.3
 </span></code></pre></div></div>
 
 
@@ -744,8 +769,7 @@ and <code class="language-plaintext highlighter-rouge">.content</code> to store 
     <hr/>
     <p>Comments on the content of this page that might be useful
     for other readers are welcomed here. For question and general
-    support, please use the
-    <a href="https://www.tapatalk.com/groups/xpack/">project forums</a>.
+    support, please use GitHub Discussions.
     </p>
 
     <div id="disqus_thread"></div>
@@ -775,7 +799,7 @@ and <code class="language-plaintext highlighter-rouge">.content</code> to store 
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jun 16, 2022<br/> Site last generated: Jun 16, 2022 <br />
+<span>Page last updated:</span> Jul 5, 2022<br/> Site last generated: Jul 5, 2022 <br />
                 </div>
             </div>
 </footer>

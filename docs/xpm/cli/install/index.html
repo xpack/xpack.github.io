@@ -13,9 +13,9 @@
 <link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
 <link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
 
-<!-- Begin Jekyll SEO tag v2.7.1 -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>xpm install</title>
-<meta name="generator" content="Jekyll v4.2.1" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="xpm install" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xpm install" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/cli/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/xpm/cli/install/","headline":"xpm install","dateModified":"2022-06-16T20:24:29+00:00","datePublished":"2017-10-09T09:56:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-07-05T15:06:28+00:00","datePublished":"2017-10-09T09:56:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"xpm install","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/cli/install/"},"url":"https://xpack.github.io/xpm/cli/install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -201,15 +201,15 @@
                     <ul class="dropdown-menu">
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack" target="_blank" rel="noopener">xPack Core Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack Core Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack-dev-tools" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-3rd-party/" target="_blank" rel="noopener">3rd Party xPacks</a></li>
                         
                         
                         
@@ -226,10 +226,6 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        
-                        
-                        <li><a class="extern" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
-                        
                         
                         
                         <li><a class="extern" href="https://gitter.im/xpack/" target="_blank" rel="noopener">The xPack Chatroom</a></li>
@@ -394,7 +390,11 @@
          -->
 </ul>
 
-<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise, if placed
+inside customscripts.js, the script runs before the sidebar code runs
+and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
             </div>
@@ -568,7 +568,7 @@ xpm <span class="nb">install</span> &lt;tarball url&gt;
 xpm <span class="nb">install</span> &lt;folder&gt;
 </code></pre></div></div>
 
-<p>When refering to GitHub by semver, a tag named <code class="language-plaintext highlighter-rouge">vX.Y.Z</code> must be present.</p>
+<p>When referring to GitHub by semver, a tag named <code class="language-plaintext highlighter-rouge">vX.Y.Z</code> must be present.</p>
 
 <p>For detail please see <a href="https://docs.npmjs.com/cli/install"><code class="language-plaintext highlighter-rouge">npm install</code></a>.</p>
 
@@ -651,8 +651,8 @@ npm xpm@0.9.0 '/Users/ilg/.nvm/versions/node/v14.16.0/lib/node_modules/xpm'
 <p>Install dependencies into an existing configuration build
 folder instead of the top project folder.</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--config</span> stm32f4discovery-cmake-gcc10-debug @xpack-dev-tools/arm-none-eabi-gcc@10.2.1-1.1.2
-<span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--config</span> stm32f4discovery-cmake-gcc9-debug @xpack-dev-tools/arm-none-eabi-gcc@9.3.1-1.4.1
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--config</span> stm32f4discovery-cmake-gcc10-debug @xpack-dev-tools/arm-none-eabi-gcc@10.2.1-1.1.2
+xpm <span class="nb">install</span> <span class="nt">--config</span> stm32f4discovery-cmake-gcc9-debug @xpack-dev-tools/arm-none-eabi-gcc@9.3.1-1.4.1
 </code></pre></div></div>
 
 <p>The <code class="language-plaintext highlighter-rouge">xpacks</code> folders are not stored in the project folder, but in the
@@ -772,8 +772,7 @@ semver) are stored without <code class="language-plaintext highlighter-rouge">^<
     <hr/>
     <p>Comments on the content of this page that might be useful
     for other readers are welcomed here. For question and general
-    support, please use the
-    <a href="https://www.tapatalk.com/groups/xpack/">project forums</a>.
+    support, please use GitHub Discussions.
     </p>
 
     <div id="disqus_thread"></div>
@@ -803,7 +802,7 @@ semver) are stored without <code class="language-plaintext highlighter-rouge">^<
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jun 16, 2022<br/> Site last generated: Jun 16, 2022 <br />
+<span>Page last updated:</span> Jul 5, 2022<br/> Site last generated: Jul 5, 2022 <br />
                 </div>
             </div>
 </footer>

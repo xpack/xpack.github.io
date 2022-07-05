@@ -13,9 +13,9 @@
 <link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
 <link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
 
-<!-- Begin Jekyll SEO tag v2.7.1 -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>The build process (outdated)</title>
-<meta name="generator" content="Jekyll v4.2.1" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="The build process (outdated)" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="The build process (outdated)" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xcdl/guide/build-process/"},"@type":"BlogPosting","url":"https://xpack.github.io/xcdl/guide/build-process/","headline":"The build process (outdated)","dateModified":"2022-06-16T20:24:29+00:00","datePublished":"2015-10-25T10:00:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-07-05T15:06:28+00:00","datePublished":"2015-10-25T10:00:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"The build process (outdated)","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xcdl/guide/build-process/"},"url":"https://xpack.github.io/xcdl/guide/build-process/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -201,15 +201,15 @@
                     <ul class="dropdown-menu">
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack" target="_blank" rel="noopener">xPack Core Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack Core Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack-dev-tools" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-3rd-party/" target="_blank" rel="noopener">3rd Party xPacks</a></li>
                         
                         
                         
@@ -226,10 +226,6 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        
-                        
-                        <li><a class="extern" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
-                        
                         
                         
                         <li><a class="extern" href="https://gitter.im/xpack/" target="_blank" rel="noopener">The xPack Chatroom</a></li>
@@ -315,7 +311,11 @@
          -->
 </ul>
 
-<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise, if placed
+inside customscripts.js, the script runs before the sidebar code runs
+and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
             </div>
@@ -391,7 +391,7 @@ $('#toc').on('click', 'a', function() {
 
 <p>Some build systems may allow application developers to copy a source file from the component repository to the build tree and edit the copy. This allows users to experiment with small changes, for example to add a couple of lines of debugging to a package, without having to modify the master copy in the component repository which could be shared by several projects or several people. Functionality such as this is transparent to component writers, and it is the responsibility of the build system to make sure that the right thing happens.</p>
 
-<p>Note: There are some unresolved issues related to the build tree and install tree. Specifically, when up- dating an existing build or install tree, what should happen to unexpected files or directories? Suppose the user started with a configuration that included the math library, and the install tree contains header files include/math.h and include/sys/ieeefp.h. The user then removed the math library from the configura- tion and is updating the build tree. It is now desirable to remove these header files from the install tree, so that if any application code still attempts to use the math library this will fail at compile time rather than at link time. There will also be some object files in the existing libtarget.a library which are no longer appropriate, and there may be other files in the install tree as a result of custom build steps. The build tree will still contain a directory for the math library, which no longer serves any purpose. However, it is also possible that some of the files in the build tree or the install tree were placed there by the user, in which case removing them automatically would be a bad idea. At present the component framework does not keep track of exactly what should be present in the build and install trees, so it cannot readily determine which files or library members are obsolete and can safely be removed, and which ones are unexpected and need to be reported to the user. This will be addressed in a future release of the system.</p>
+<p>Note: There are some unresolved issues related to the build tree and install tree. Specifically, when up- dating an existing build or install tree, what should happen to unexpected files or directories? Suppose the user started with a configuration that included the math library, and the install tree contains header files include/math.h and include/sys/ieeefp.h. The user then removed the math library from the configuration and is updating the build tree. It is now desirable to remove these header files from the install tree, so that if any application code still attempts to use the math library this will fail at compile time rather than at link time. There will also be some object files in the existing libtarget.a library which are no longer appropriate, and there may be other files in the install tree as a result of custom build steps. The build tree will still contain a directory for the math library, which no longer serves any purpose. However, it is also possible that some of the files in the build tree or the install tree were placed there by the user, in which case removing them automatically would be a bad idea. At present the component framework does not keep track of exactly what should be present in the build and install trees, so it cannot readily determine which files or library members are obsolete and can safely be removed, and which ones are unexpected and need to be reported to the user. This will be addressed in a future release of the system.</p>
 
 <h2 id="configuration-header-file-generation">Configuration Header File Generation</h2>
 
@@ -407,9 +407,9 @@ $('#toc').on('click', 'a', function() {
 
 <p>The define_header property can only occur in the body of a cdl_package command and specifies the name of the header file which should contain the package’s configuration data, for example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;package name="somePackage"&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;package</span> <span class="na">name=</span><span class="s">"somePackage"</span><span class="nt">&gt;</span>
     define_header xyzzy.h
-&lt;/package&gt;
+<span class="nt">&lt;/package&gt;</span>
 </code></pre></div></div>
 
 <p>Given such a define_header property the component framework will use the file pkgconf/xyzzy.h for the package’s configuration data. If a package does not have a define_header property then a suitable file name is constructed from the package’s name. This involves:</p>
@@ -460,7 +460,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jun 16, 2022<br/> Site last generated: Jun 16, 2022 <br />
+<span>Page last updated:</span> Jul 5, 2022<br/> Site last generated: Jul 5, 2022 <br />
                 </div>
             </div>
 </footer>

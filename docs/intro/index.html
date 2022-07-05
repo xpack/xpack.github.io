@@ -13,9 +13,9 @@
 <link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
 <link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
 
-<!-- Begin Jekyll SEO tag v2.7.1 -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>xPack 101</title>
-<meta name="generator" content="Jekyll v4.2.1" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="xPack 101" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack 101" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/intro/"},"@type":"BlogPosting","url":"https://xpack.github.io/intro/","headline":"xPack 101","dateModified":"2022-06-16T20:24:29+00:00","datePublished":"2019-06-26T05:57:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-07-05T15:06:28+00:00","datePublished":"2019-06-26T05:57:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"xPack 101","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/intro/"},"url":"https://xpack.github.io/intro/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -201,15 +201,15 @@
                     <ul class="dropdown-menu">
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack" target="_blank" rel="noopener">xPack Core Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack Core Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack-dev-tools" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-3rd-party/" target="_blank" rel="noopener">3rd Party xPacks</a></li>
                         
                         
                         
@@ -226,10 +226,6 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        
-                        
-                        <li><a class="extern" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
-                        
                         
                         
                         <li><a class="extern" href="https://gitter.im/xpack/" target="_blank" rel="noopener">The xPack Chatroom</a></li>
@@ -370,7 +366,21 @@
           
           
           
+          <li><a title="clang" href="/clang/">clang</a></li>
+          
+          
+          
+          
+          
+          
           <li><a title="arm-none-eabi-gcc" href="/arm-none-eabi-gcc/">arm-none-eabi-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="aarch64-none-elf-gcc" href="/aarch64-none-elf-gcc/">aarch64-none-elf-gcc</a></li>
           
           
           
@@ -392,6 +402,13 @@
           
           
           <li><a title="qemu-arm" href="/qemu-arm/">qemu-arm</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="qemu-riscv" href="/qemu-riscv/">qemu-riscv</a></li>
           
           
           
@@ -551,7 +568,11 @@
          -->
 </ul>
 
-<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise, if placed
+inside customscripts.js, the script runs before the sidebar code runs
+and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
             </div>
@@ -609,7 +630,7 @@ why would we need yet another one?</p>
 but uses exactly the same format as <strong>npm</strong>,
 and xPacks can be stored in the same repositories, public or private.</p>
 
-<p>And <strong>xpm</strong>, the project manager, builds on top of <strong>npm</strong>, the very
+<p>And <strong>xpm</strong>, the project manager, is built on top of <strong>npm</strong>, the very
 popular JavaScript package manager, extending it with new language
 neutral features,
 so things are not that scary as they seemed initially.</p>
@@ -633,7 +654,7 @@ folders, and managing dependencies.</p>
 systems is to add a complex auto-configure mechanism that is able to detect
 which tools/components are present, which versions, and with
 this input do its best to parametrise the process (for example a project build),
-to accomodate for all these differences.</p>
+to accommodate for all these differences.</p>
 
 <p>This approach started with GNU <em>configure</em>, and today use even more complex
 solutions, like <em>CMake</em> or <em>meson</em> scripts.</p>
@@ -644,7 +665,7 @@ why not allow the application to ask for the exact versions that are known
 to be compatible, and let an automated tool handle the dependencies?</p>
 
 <p>The <strong>xPacks</strong> project manager can do just this, bring in the project
-exactly the versions needed, thus making the auto-configure step superfluos.</p>
+exactly the versions needed, thus making the auto-configure step superfluous.</p>
 
 <h2 id="but-what-are-xpacks">But what are xPacks?</h2>
 
@@ -660,9 +681,9 @@ types of xPacks: <strong>source</strong> and <strong>binary</strong>:</p>
 <ul>
   <li><strong>source xPacks</strong> are packages that install source files,
 generally libraries used by the project.</li>
-  <li><strong>binary xPacks</strong> are packages that install standlone binary files,
+  <li><strong>binary xPacks</strong> are packages that install standalone binary files,
 generally tools used during the build process, like toolchains,
-builders, etc; standalone means they are selfcontained and do not
+builders, etc; standalone means they are self-contained and do not
 depend on other shared libraries or tools.</li>
 </ul>
 
@@ -799,7 +820,7 @@ toolchain to build,
 and not any version but a specific one, like <code class="language-plaintext highlighter-rouge">10.2.1</code>; it also needs
 the latest CMake, ninja and the liquidjs npm module.</p>
 
-<p>For this, in the project forlder, issue the following command, which
+<p>For this, in the project folder, issue the following command, which
 will install the required tools in a global xPacks store location, and add links
 to them.</p>
 
@@ -1089,26 +1110,53 @@ Folder 'gnu-mcu-eclipse-windows-build-tools' linked to '@gnu-mcu-eclipse/windows
 <p>The high degree of automation provided by xpm is of great help
 for automated test environments.</p>
 
-<h3 id="travis">Travis</h3>
+<h3 id="github-actions">GitHub Actions</h3>
 
-<p>For example, with the proper scripts configured, the Travis configuration
-for an xPack project is as simple as this:</p>
+<p>For example, with the proper scripts configured, a multi-platform test
+configuration for an xPack project may look like this:</p>
 
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">os</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">linux</span>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">CI on Push</span>
 
-<span class="na">dist</span><span class="pi">:</span> <span class="s">trusty</span>
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">push</span><span class="pi">:</span>
 
-<span class="na">language</span><span class="pi">:</span> <span class="s">node_js</span>
-<span class="na">node_js</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s2">"</span><span class="s">node"</span>
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">ci-test</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">CI</span><span class="nv"> </span><span class="s">tests'</span>
 
-<span class="na">install</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">npm install --global xpm@latest</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">$</span>
 
-<span class="na">script</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">xpm install</span>
-  <span class="pi">-</span> <span class="s">xpm run test</span>
+    <span class="na">strategy</span><span class="pi">:</span>
+      <span class="na">matrix</span><span class="pi">:</span>
+        <span class="na">node-version</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">14</span><span class="pi">]</span>
+        <span class="c1"># https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners</span>
+        <span class="na">os</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">ubuntu-18.04</span><span class="pi">,</span> <span class="nv">macos-10.15</span><span class="pi">,</span> <span class="nv">windows-2019</span><span class="pi">]</span>
+
+    <span class="na">steps</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Checkout</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v2</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">fetch-depth</span><span class="pi">:</span> <span class="m">3</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Setup Node.js $ on $</span>
+      <span class="c1"># https://github.com/actions/setup-node</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/setup-node@v2</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">node-version</span><span class="pi">:</span> <span class="s">$</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install xpm on Linux/macOS</span>
+      <span class="na">if</span><span class="pi">:</span> <span class="s">runner.os != 'Windows'</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="s">sudo npm install --global xpm@latest</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install xpm on Windows</span>
+      <span class="na">if</span><span class="pi">:</span> <span class="s">runner.os == 'Windows'</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="s">npm install --global xpm@latest</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Satisfy project dependencies</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="s">xpm install --quiet</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Run test</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="s">xpm run test</span>
 </code></pre></div></div>
 
 
@@ -1124,8 +1172,7 @@ for an xPack project is as simple as this:</p>
     <hr/>
     <p>Comments on the content of this page that might be useful
     for other readers are welcomed here. For question and general
-    support, please use the
-    <a href="https://www.tapatalk.com/groups/xpack/">project forums</a>.
+    support, please use GitHub Discussions.
     </p>
 
     <div id="disqus_thread"></div>
@@ -1155,7 +1202,7 @@ for an xPack project is as simple as this:</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jun 16, 2022<br/> Site last generated: Jun 16, 2022 <br />
+<span>Page last updated:</span> Jul 5, 2022<br/> Site last generated: Jul 5, 2022 <br />
                 </div>
             </div>
 </footer>

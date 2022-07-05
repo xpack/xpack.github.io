@@ -13,9 +13,9 @@
 <link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
 <link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
 
-<!-- Begin Jekyll SEO tag v2.7.1 -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>How to install the xPack GNU Arm Embedded GCC binaries</title>
-<meta name="generator" content="Jekyll v4.2.1" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="How to install the xPack GNU Arm Embedded GCC binaries" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack GNU Arm Embedded GCC binaries" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/arm-none-eabi-gcc/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/arm-none-eabi-gcc/install/","headline":"How to install the xPack GNU Arm Embedded GCC binaries","dateModified":"2022-06-16T20:24:29+00:00","datePublished":"2019-07-10T14:53:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-07-05T15:06:28+00:00","datePublished":"2019-07-10T14:53:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack GNU Arm Embedded GCC binaries","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/arm-none-eabi-gcc/install/"},"url":"https://xpack.github.io/arm-none-eabi-gcc/install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -201,15 +201,15 @@
                     <ul class="dropdown-menu">
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack" target="_blank" rel="noopener">xPack Core Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack Core Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack-dev-tools" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-3rd-party/" target="_blank" rel="noopener">3rd Party xPacks</a></li>
                         
                         
                         
@@ -226,10 +226,6 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        
-                        
-                        <li><a class="extern" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
-                        
                         
                         
                         <li><a class="extern" href="https://gitter.im/xpack/" target="_blank" rel="noopener">The xPack Chatroom</a></li>
@@ -334,7 +330,11 @@
          -->
 </ul>
 
-<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise, if placed
+inside customscripts.js, the script runs before the sidebar code runs
+and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
             </div>
@@ -393,7 +393,7 @@ follow the instructions from the
 <p>With xpm available, installing
 the latest version of the package is quite easy:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/arm-none-eabi-gcc@latest <span class="nt">--verbose</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/arm-none-eabi-gcc@latest <span class="nt">--verbose</span>
 </code></pre></div></div>
 
 <p>This command will always install the latest available version,
@@ -442,9 +442,9 @@ as npm does.</p>
 
 <p>To check if the xpm installed GCC starts, use something like:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\@xpack-dev-tool\arm-none-eabi-gcc\9.2.1-1.1.1\.content\bin\arm-none-eabi-gcc.exe" --version
-arm-none-eabi-gcc (xPack GNU Arm Embedded GCC, 64-bit) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]
-</code></pre></div></div>
+<pre><code class="language-doscon">C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\@xpack-dev-tool\arm-none-eabi-gcc\11.2.1-1.1.1\.content\bin\arm-none-eabi-gcc.exe" --version
+arm-none-eabi-gcc.exe (xPack GNU Arm Embedded GCC x86_64) 11.2.1 20220111
+</code></pre>
 
 <h2 id="manual-install">Manual install</h2>
 
@@ -462,12 +462,8 @@ pages.</p>
 Download the latest version named like:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">xpack-arm-none-eabi-gcc-9.2.1-1.1-win32-x64.zip</code></li>
-  <li><code class="language-plaintext highlighter-rouge">xpack-arm-none-eabi-gcc-9.2.1-1.1-win32-ia32.zip</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-arm-none-eabi-gcc-11.2.1-1.1-win32-x64.zip</code></li>
 </ul>
-
-<p>Select the <code class="language-plaintext highlighter-rouge">-x64</code> file for 64-bit Windows machines and the <code class="language-plaintext highlighter-rouge">-ia32</code> file
-for 32-bit Windows machines.</p>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> In case you wonder where the suffix comes
 from, it is exactly the Node.js <code class="language-plaintext highlighter-rouge">process.platform</code> and <code class="language-plaintext highlighter-rouge">process.arch</code>.
@@ -498,9 +494,9 @@ for the executables in this location.</div>
 
 <p>To check if the manually installed GCC starts, use something like:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\arm-none-eabi-gcc\xpack-arm-none-eabi-gcc-9.2.1-1.1\bin\arm-none-eabi-gcc.exe" --version
-arm-none-eabi-gcc (xPack GNU Arm Embedded GCC, 64-bit) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]
-</code></pre></div></div>
+<pre><code class="language-doscon">C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\arm-none-eabi-gcc\xpack-arm-none-eabi-gcc-11.2.1-1.1\bin\arm-none-eabi-gcc.exe" --version
+arm-none-eabi-gcc.exe (xPack GNU Arm Embedded GCC x86_64) 11.2.1 20220111
+</code></pre>
 
 <h3 id="windows-build-tools">Windows Build Tools</h3>
 
@@ -531,7 +527,7 @@ follow the instructions from the
 <p>With xpm available, installing
 the latest version of the package is quite easy:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/arm-none-eabi-gcc@latest <span class="nt">--verbose</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/arm-none-eabi-gcc@latest <span class="nt">--verbose</span>
 </code></pre></div></div>
 
 <p>This command will always install the latest available version,
@@ -580,8 +576,8 @@ as npm does.</p>
 
 <p>To check if the xpm installed GCC starts, use something like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/@xpack-dev-tools/arm-none-eabi-gcc/9.2.1-1.1.1/.content/bin/arm-none-eabi-gcc <span class="nt">--version</span>
-<span class="go">arm-none-eabi-gcc (xPack GNU Arm Embedded GCC, 64-bit) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.1.1/.content/bin/arm-none-eabi-gcc <span class="nt">--version</span>
+<span class="go">arm-none-eabi-gcc (xPack GNU Arm Embedded GCC x86_64) 11.2.1 20220111
 </span></code></pre></div></div>
 
 <h2 id="manual-install">Manual install</h2>
@@ -601,20 +597,20 @@ pages.</p>
 Download the latest version named like:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">xpack-arm-none-eabi-gcc-9.2.1-1.1-darwin-x64.tar.gz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-arm-none-eabi-gcc-11.2.1-1.1-darwin-x64.tar.gz</code></li>
 </ul>
 
 <h3 id="unpack">Unpack</h3>
 
 <p>To manually install the xPack GNU Arm Embedded GCC,
 unpack the archive and copy it to
-<code class="language-plaintext highlighter-rouge">~/opt/xPacks/arm-none-eabi-gcc/xpack-arm-none-eabi-gcc-&lt;version&gt;</code>:</p>
+<code class="language-plaintext highlighter-rouge">~/.local/xPacks/arm-none-eabi-gcc/xpack-arm-none-eabi-gcc-&lt;version&gt;</code>:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">mkdir</span> <span class="nt">-p</span> ~/opt/xPacks/arm-none-eabi-gcc
-<span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> ~/opt/xPacks/arm-none-eabi-gcc
-<span class="go">
-</span><span class="gp">$</span><span class="w"> </span><span class="nb">tar </span>xvf ~/Downloads/xpack-arm-none-eabi-gcc-9.2.1-1.1-darwin-x64.tar.gz
-<span class="gp">$</span><span class="w"> </span><span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xpack-arm-none-eabi-gcc-9.2.1-1.1
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/.local/xPacks/arm-none-eabi-gcc
+<span class="nb">cd</span> ~/.local/xPacks/arm-none-eabi-gcc
+
+<span class="nb">tar </span>xvf ~/Downloads/xpack-arm-none-eabi-gcc-11.2.1-1.1-darwin-x64.tar.gz
+<span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xpack-arm-none-eabi-gcc-11.2.1-1.1
 </code></pre></div></div>
 
 <p>You may shorten the last folder name and keep only the version.</p>
@@ -629,8 +625,8 @@ for the executables in this location.</div>
 
 <p>The result is a structure like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 /Users/ilg/Library/xPacks/arm-none-eabi-gcc/xpack-arm-none-eabi-gcc-9.2.1-1.1
-<span class="go">/Users/ilg/Library/xPacks/arm-none-eabi-gcc/xpack-arm-none-eabi-gcc-9.2.1-1.1
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 /Users/ilg/Library/xPacks/arm-none-eabi-gcc/xpack-arm-none-eabi-gcc-11.2.1-1.1
+<span class="go">/Users/ilg/Library/xPacks/arm-none-eabi-gcc/xpack-arm-none-eabi-gcc-11.2.1-1.1
 ├── README.md
 ├── arm-none-eabi
 │   ├── bin
@@ -647,7 +643,7 @@ for the executables in this location.</div>
 │   ├── arm-none-eabi-elfedit
 │   ├── arm-none-eabi-g++
 │   ├── arm-none-eabi-gcc
-│   ├── arm-none-eabi-gcc-9.2.1
+│   ├── arm-none-eabi-gcc-11.2.1
 │   ├── arm-none-eabi-gcc-ar
 │   ├── arm-none-eabi-gcc-nm
 │   ├── arm-none-eabi-gcc-ranlib
@@ -706,8 +702,8 @@ for the executables in this location.</div>
 
 <p>To check if the manually installed GCC starts, use something like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/arm-none-eabi-gcc/xpack-arm-none-eabi-gcc-9.2.1-1.1/bin/arm-none-eabi-gcc <span class="nt">--version</span>
-<span class="go">arm-none-eabi-gcc (xPack GNU Arm Embedded GCC, 64-bit) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/arm-none-eabi-gcc/xpack-arm-none-eabi-gcc-11.2.1-1.1/bin/arm-none-eabi-gcc <span class="nt">--version</span>
+<span class="go">arm-none-eabi-gcc (xPack GNU Arm Embedded GCC x86_64) 11.2.1 20220111
 </span></code></pre></div></div>
 
 
@@ -734,7 +730,7 @@ follow the instructions from the
 <p>With xpm available, installing
 the latest version of the package is quite easy:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/arm-none-eabi-gcc@latest <span class="nt">--verbose</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/arm-none-eabi-gcc@latest <span class="nt">--verbose</span>
 </code></pre></div></div>
 
 <p>This command will always install the latest available version,
@@ -783,8 +779,8 @@ as npm does.</p>
 
 <p>To check if the xpm installed GCC starts, use something like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/@xpack-dev-tools/arm-none-eabi-gcc/9.2.1-1.1.1/.content/bin/arm-none-eabi-gcc <span class="nt">--version</span>
-<span class="go">arm-none-eabi-gcc (xPack GNU Arm Embedded GCC, 64-bit) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.1.1/.content/bin/arm-none-eabi-gcc <span class="nt">--version</span>
+<span class="go">arm-none-eabi-gcc (xPack GNU Arm Embedded GCC x86_64) 11.2.1 20220111
 </span></code></pre></div></div>
 
 <h2 id="manual-install">Manual install</h2>
@@ -803,26 +799,23 @@ pages.</p>
 <code class="language-plaintext highlighter-rouge">.tar.gz</code> archives. Download the latest version named like:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">xpack-arm-none-eabi-gcc-9.2.1-1.1-linux-x64.tar.gz</code></li>
-  <li><code class="language-plaintext highlighter-rouge">xpack-arm-none-eabi-gcc-9.2.1-1.1-linux-ia32.tar.gz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-arm-none-eabi-gcc-11.2.1-1.1-linux-x64.tar.gz</code></li>
 </ul>
 
 <p>As the name implies, these are GNU/Linux <code class="language-plaintext highlighter-rouge">tar.gz</code> archives; they were build on
-Ubuntu, but can be executed on most recent GNU/Linux distributions.
-Select the <code class="language-plaintext highlighter-rouge">-x64</code> file for 64-bit machines and the <code class="language-plaintext highlighter-rouge">-ia32</code> file for 32-bit
-machines.</p>
+Ubuntu, but can be executed on most recent GNU/Linux distributions.</p>
 
 <h3 id="unpack">Unpack</h3>
 
 <p>To manually install the xPack GNU Arm Embedded GCC,
 unpack the archive and copy it to
-<code class="language-plaintext highlighter-rouge">~/opt/xPacks/arm-none-eabi-gcc/xpack-arm-none-eabi-gcc-&lt;version&gt;</code>:</p>
+<code class="language-plaintext highlighter-rouge">~/.local/xPacks/arm-none-eabi-gcc/xpack-arm-none-eabi-gcc-&lt;version&gt;</code>:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">mkdir</span> <span class="nt">-p</span> ~/opt/xPacks/arm-none-eabi-gcc
-<span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> ~/opt/xPacks/arm-none-eabi-gcc
-<span class="go">
-</span><span class="gp">$</span><span class="w"> </span><span class="nb">tar </span>xvf ~/Downloads/xpack-arm-none-eabi-gcc-9.2.1-1.1-linux-x64.tar.gz
-<span class="gp">$</span><span class="w"> </span><span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xpack-arm-none-eabi-gcc-9.2.1-1.1
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/.local/xPacks/arm-none-eabi-gcc
+<span class="nb">cd</span> ~/.local/xPacks/arm-none-eabi-gcc
+
+<span class="nb">tar </span>xvf ~/Downloads/xpack-arm-none-eabi-gcc-11.2.1-1.1-linux-x64.tar.gz
+<span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xpack-arm-none-eabi-gcc-11.2.1-1.1
 </code></pre></div></div>
 
 <p>You may shorten the last folder name and keep only the version.</p>
@@ -839,8 +832,8 @@ for the executables in this location.</div>
 
 <p>The result is a structure like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 /home/ilg/opt/xPacks/arm-none-eabi-gcc/xpack-arm-none-eabi-gcc-9.2.1-1.1
-<span class="go">/home/ilg/opt/xPacks/arm-none-eabi-gcc/xpack-arm-none-eabi-gcc-9.2.1-1.1
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 /home/ilg/.local/xPacks/arm-none-eabi-gcc/xpack-arm-none-eabi-gcc-11.2.1-1.1
+<span class="go">/home/ilg/.local/xPacks/arm-none-eabi-gcc/xpack-arm-none-eabi-gcc-11.2.1-1.1
 ├── arm-none-eabi
 │   ├── bin
 │   ├── include
@@ -856,7 +849,7 @@ for the executables in this location.</div>
 │   ├── arm-none-eabi-elfedit
 │   ├── arm-none-eabi-g++
 │   ├── arm-none-eabi-gcc
-│   ├── arm-none-eabi-gcc-9.2.1
+│   ├── arm-none-eabi-gcc-11.2.1
 │   ├── arm-none-eabi-gcc-ar
 │   ├── arm-none-eabi-gcc-nm
 │   ├── arm-none-eabi-gcc-ranlib
@@ -932,8 +925,8 @@ for the executables in this location.</div>
 
 <p>To check if the manually installed GCC starts, use something like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/opt/xPacks/arm-none-eabi-gcc/xpack-arm-none-eabi-gcc-9.2.1-1.1/bin/arm-none-eabi-gcc <span class="nt">--version</span>
-<span class="go">arm-none-eabi-gcc (xPack GNU Arm Embedded GCC, 64-bit) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/arm-none-eabi-gcc/xpack-arm-none-eabi-gcc-11.2.1-1.1/bin/arm-none-eabi-gcc <span class="nt">--version</span>
+<span class="go">arm-none-eabi-gcc (xPack GNU Arm Embedded GCC x86_64) 11.2.1 20220111
 </span></code></pre></div></div>
 
 
@@ -959,8 +952,7 @@ the user or system path!</div>
     <hr/>
     <p>Comments on the content of this page that might be useful
     for other readers are welcomed here. For question and general
-    support, please use the
-    <a href="https://www.tapatalk.com/groups/xpack/">project forums</a>.
+    support, please use GitHub Discussions.
     </p>
 
     <div id="disqus_thread"></div>
@@ -990,7 +982,7 @@ the user or system path!</div>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jun 16, 2022<br/> Site last generated: Jun 16, 2022 <br />
+<span>Page last updated:</span> Jul 5, 2022<br/> Site last generated: Jul 5, 2022 <br />
                 </div>
             </div>
 </footer>

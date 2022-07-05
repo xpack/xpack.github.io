@@ -19,16 +19,16 @@ Homebrew instance, only for the jekyll builds.
 ```sh
 mkdir -p "${HOME}/opt"
 git clone https://github.com/ilg-ul/opt-install-scripts \
-    "${HOME}/opt/install-scripts.git"
+    "${HOME}/.local/install-scripts.git"
 
 caffeinate bash
-exec bash "${HOME}/opt/install-scripts.git/install-homebrew-jekyll.sh"
+exec bash "${HOME}/.local/install-scripts.git/install-homebrew-jekyll.sh"
 ```
 
 Add a new alias to your `.profile`:
 
 ```sh
-alias ajkl='export PATH=/Users/ilg/opt/homebrew/jekyll/bin:${PATH}'
+alias ajkl='export PATH=/Users/ilg/.local/homebrew/jekyll/bin:${PATH}'
 ```
 
 Then, in a new terminal:
@@ -36,7 +36,7 @@ Then, in a new terminal:
 ```console
 $ ajkl
 $ which ruby
-/Users/ilg/opt/homebrew/jekyll/bin/ruby
+/Users/ilg/.local/homebrew/jekyll/bin/ruby
 $ ruby --version
 ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-darwin17]
 $ gem --version
@@ -63,7 +63,7 @@ my setup it looks necessary.
 $ cd web-jekyll.git
 $ bundle install
 $ bundle exec jekyll --version
-jekyll 3.9.0
+jekyll 4.4.2
 ```
 
 ## Development

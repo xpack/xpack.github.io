@@ -13,9 +13,9 @@
 <link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
 <link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
 
-<!-- Begin Jekyll SEO tag v2.7.1 -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>How to install the xPack GNU Compiler Collection binaries</title>
-<meta name="generator" content="Jekyll v4.2.1" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="How to install the xPack GNU Compiler Collection binaries" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack GNU Compiler Collection binaries" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/gcc/install/"},"@type":"BlogPosting","url":"https://xpack.github.io/gcc/install/","headline":"How to install the xPack GNU Compiler Collection binaries","dateModified":"2022-06-16T20:24:29+00:00","datePublished":"2021-05-21T21:27:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-07-05T15:06:28+00:00","datePublished":"2021-05-21T21:27:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack GNU Compiler Collection binaries","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/gcc/install/"},"url":"https://xpack.github.io/gcc/install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -201,15 +201,15 @@
                     <ul class="dropdown-menu">
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack" target="_blank" rel="noopener">xPack Core Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack Core Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack-dev-tools" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-3rd-party/" target="_blank" rel="noopener">3rd Party xPacks</a></li>
                         
                         
                         
@@ -226,10 +226,6 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        
-                        
-                        <li><a class="extern" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
-                        
                         
                         
                         <li><a class="extern" href="https://gitter.im/xpack/" target="_blank" rel="noopener">The xPack Chatroom</a></li>
@@ -334,7 +330,11 @@
          -->
 </ul>
 
-<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise, if placed
+inside customscripts.js, the script runs before the sidebar code runs
+and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
             </div>
@@ -443,8 +443,8 @@ xpm uninstall @xpack-dev-tools/gcc
 
 <p>To check if the xpm installed GCC starts, use something like:</p>
 
-<pre><code class="language-doscon">C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\@xpack-dev-tool\gcc\8.5.0-1.1\.content\bin\gcc.exe" --version
-gcc version 8.5.0 (xPack GCC 64-bit)
+<pre><code class="language-doscon">C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\@xpack-dev-tool\gcc\12.1.0-1.1\.content\bin\gcc.exe" --version
+gcc (xPack GCC x86_64) -12.1.0
 </code></pre>
 
 <h2 id="manual-install">Manual install</h2>
@@ -462,12 +462,8 @@ GitHub <a href="https://github.com/xpack-dev-tools/gcc-xpack/releases/">releases
 Download the latest version named like:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">xpack-gcc-8.5.0-1-win32-x64.zip</code></li>
-  <li><code class="language-plaintext highlighter-rouge">xpack-gcc-8.5.0-1-win32-ia32.zip</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-gcc-12.1.0-1-win32-x64.zip</code></li>
 </ul>
-
-<p>Select the <code class="language-plaintext highlighter-rouge">-x64</code> file for 64-bit Windows machines and the <code class="language-plaintext highlighter-rouge">-ia32</code> file
-for 32-bit Windows machines.</p>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> In case you wonder where the suffix comes
 from, it is exactly the Node.js <code class="language-plaintext highlighter-rouge">process.platform</code> and <code class="language-plaintext highlighter-rouge">process.arch</code>.
@@ -493,8 +489,8 @@ and <code class="language-plaintext highlighter-rouge">.content</code> to store 
 
 <p>To check if the manually installed GCC starts, use something like:</p>
 
-<pre><code class="language-doscon">C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\gcc\xpack-gcc-8.5.0-1\bin\gcc.exe" --version
-gcc version 8.5.0 (xPack GCC 64-bit)
+<pre><code class="language-doscon">C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\gcc\xpack-gcc-12.1.0-1\bin\gcc.exe" --version
+gcc (xPack GCC x86_64) -12.1.0
 </code></pre>
 
 
@@ -571,8 +567,8 @@ xpm uninstall @xpack-dev-tools/gcc
 
 <p>To check if the xpm installed GCC starts, use something like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/Library/xPacks/@xpack-dev-tools/gcc/8.5.0-1.1/.content/bin/gcc <span class="nt">--version</span>
-<span class="go">gcc version 8.5.0 (xPack GCC 64-bit)
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/Library/xPacks/@xpack-dev-tools/gcc/12.1.0-1.1/.content/bin/gcc <span class="nt">--version</span>
+<span class="go">gcc (xPack GCC x86_64) -12.1.0
 </span></code></pre></div></div>
 
 <h2 id="manual-install">Manual install</h2>
@@ -591,7 +587,7 @@ GitHub <a href="https://github.com/xpack-dev-tools/gcc-xpack/releases/">releases
 Download the latest version named like:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">xpack-gcc-8.5.0-1-darwin-x64.tar.gz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-gcc-12.1.0-1-darwin-x64.tar.gz</code></li>
 </ul>
 
 <h3 id="unpack">Unpack</h3>
@@ -603,8 +599,8 @@ unpack the archive and copy it to
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/.local/xPacks/gcc
 <span class="nb">cd</span> ~/.local/xPacks/gcc
 
-<span class="nb">tar </span>xvf ~/Downloads/xpack-gcc-8.5.0-1-darwin-x64.tar.gz
-<span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xpack-gcc-8.5.0-1
+<span class="nb">tar </span>xvf ~/Downloads/xpack-gcc-12.1.0-1-darwin-x64.tar.gz
+<span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xpack-gcc-12.1.0-1
 </code></pre></div></div>
 
 <p>You may shorten the last folder name and keep only the version.</p>
@@ -614,19 +610,111 @@ install location is different from the xpm install folders.</div>
 
 <p>The result is a structure like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 /Users/ilg/Library/xPacks/gcc/xpack-gcc-8.5.0-1
-<span class="go">/Users/ilg/Library/xPacks/gcc/xpack-gcc-8.5.0-1
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 /Users/ilg/.local/xPacks/gcc/xpack-gcc-12.1.0-1
+<span class="go">/Users/ilg/.local/xPacks/gcc/xpack-gcc-12.1.0-1
 ├── README.md
+├── bin
+│   ├── c++
+│   ├── cpp
+│   ├── g++
+│   ├── gcc
+│   ├── gcov
+│   ├── gcov-dump
+│   ├── gcov-tool
+│   ├── gdb
+│   ├── gdb-add-index
+│   ├── lto-dump
+│   ├── x86_64-apple-darwin21.4.0-c++
+│   ├── x86_64-apple-darwin21.4.0-g++
+│   ├── x86_64-apple-darwin21.4.0-gcc
+│   ├── x86_64-apple-darwin21.4.0-gcc-12.1.0
+│   ├── x86_64-apple-darwin21.4.0-gcc-ar
+│   ├── x86_64-apple-darwin21.4.0-gcc-nm
+│   └── x86_64-apple-darwin21.4.0-gcc-ranlib
+├── distro-info
+│   ├── CHANGELOG.md
+│   ├── licenses
+│   ├── patches
+│   └── scripts
+├── include
+│   ├── c++
+│   └── gdb
+├── lib
+│   ├── gcc
+│   ├── libasan.8.dylib
+</span><span class="gp">│   ├── libasan.dylib -&gt;</span><span class="w"> </span>libasan.8.dylib
+<span class="go">│   ├── libasan.la
+│   ├── libasan_preinit.o
+│   ├── libatomic.1.dylib
+│   ├── libatomic.a
+</span><span class="gp">│   ├── libatomic.dylib -&gt;</span><span class="w"> </span>libatomic.1.dylib
+<span class="go">│   ├── libatomic.la
+│   ├── libcc1.0.so
+│   ├── libcc1.a
+│   ├── libcc1.la
+</span><span class="gp">│   ├── libcc1.so -&gt;</span><span class="w"> </span>libcc1.0.so
+<span class="go">│   ├── libgcc_s.1.1.dylib
+│   ├── libgcc_s.1.dylib
+│   ├── libgomp.1.dylib
+│   ├── libgomp.a
+</span><span class="gp">│   ├── libgomp.dylib -&gt;</span><span class="w"> </span>libgomp.1.dylib
+<span class="go">│   ├── libgomp.la
+│   ├── libgomp.spec
+│   ├── libitm.1.dylib
+│   ├── libitm.a
+</span><span class="gp">│   ├── libitm.dylib -&gt;</span><span class="w"> </span>libitm.1.dylib
+<span class="go">│   ├── libitm.la
+│   ├── libitm.spec
+│   ├── libquadmath.0.dylib
+│   ├── libquadmath.a
+</span><span class="gp">│   ├── libquadmath.dylib -&gt;</span><span class="w"> </span>libquadmath.0.dylib
+<span class="go">│   ├── libquadmath.la
+│   ├── libsanitizer.spec
+│   ├── libssp.0.dylib
+│   ├── libssp.a
+</span><span class="gp">│   ├── libssp.dylib -&gt;</span><span class="w"> </span>libssp.0.dylib
+<span class="go">│   ├── libssp.la
+│   ├── libssp_nonshared.a
+│   ├── libssp_nonshared.la
+│   ├── libstdc++.6.dylib
+│   ├── libstdc++.6.dylib-gdb.py
+│   ├── libstdc++.a
+</span><span class="gp">│   ├── libstdc++.dylib -&gt;</span><span class="w"> </span>libstdc++.6.dylib
+<span class="go">│   ├── libstdc++.la
+│   ├── libstdc++fs.a
+│   ├── libstdc++fs.la
+│   ├── libsupc++.a
+│   ├── libsupc++.la
+│   ├── libubsan.1.dylib
+</span><span class="gp">│   ├── libubsan.dylib -&gt;</span><span class="w"> </span>libubsan.1.dylib
+<span class="go">│   └── libubsan.la
+├── libexec
+│   ├── gcc
+│   ├── libexpat.1.8.8.dylib
+</span><span class="gp">│   ├── libexpat.1.dylib -&gt;</span><span class="w"> </span>libexpat.1.8.8.dylib
+<span class="go">│   ├── libgcc_s.1.1.dylib
+│   ├── libgcc_s.1.dylib
+│   ├── libgmp.10.dylib
+│   ├── libiconv.2.dylib
+│   ├── libisl.23.dylib
+│   ├── libmpc.3.dylib
+│   ├── libmpfr.6.dylib
+│   ├── libncursesw.6.dylib
+│   └── libstdc++.6.dylib
+└── share
+    ├── doc
+    ├── gcc-12.1.0
+    └── gdb
 
-TODO
+16 directories, 77 files
 </span></code></pre></div></div>
 
 <h3 id="test-1">Test</h3>
 
 <p>To check if the manually installed GCC starts, use something like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/gcc/xpack-gcc-8.5.0-1.1/bin/gcc <span class="nt">--version</span>
-<span class="go">gcc version 8.5.0 (xPack GCC 64-bit)
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/gcc/xpack-gcc-12.1.0-1.1/bin/gcc <span class="nt">--version</span>
+<span class="go">gcc (xPack GCC x86_64) -12.1.0
 </span></code></pre></div></div>
 
 
@@ -703,8 +791,8 @@ xpm uninstall @xpack-dev-tools/gcc
 
 <p>To check if the xpm installed GCC starts, use something like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/@xpack-dev-tools/gcc/8.5.0-1.1/.content/bin/gcc <span class="nt">--version</span>
-<span class="go">gcc version 8.5.0 (xPack GCC 64-bit)
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/@xpack-dev-tools/gcc/12.1.0-1.1/.content/bin/gcc <span class="nt">--version</span>
+<span class="go">gcc version 12.1.0 (xPack GCC x86_64)
 </span></code></pre></div></div>
 
 <h2 id="manual-install">Manual install</h2>
@@ -722,14 +810,11 @@ GitHub <a href="https://github.com/xpack-dev-tools/gcc-xpack/releases/">releases
 <code class="language-plaintext highlighter-rouge">.tar.gz</code> archives. Download the latest version named like:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">xpack-gcc-8.5.0-1-linux-x64.tar.gz</code></li>
-  <li><code class="language-plaintext highlighter-rouge">xpack-gcc-8.5.0-1-linux-ia32.tar.gz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-gcc-12.1.0-1-linux-x64.tar.gz</code></li>
 </ul>
 
 <p>As the name implies, these are GNU/Linux <code class="language-plaintext highlighter-rouge">tar.gz</code> archives; they were build on
-Ubuntu, but can be executed on most recent GNU/Linux distributions.
-Select the <code class="language-plaintext highlighter-rouge">-x64</code> file for 64-bit machines and the <code class="language-plaintext highlighter-rouge">-ia32</code> file for 32-bit
-machines.</p>
+Ubuntu, but can be executed on most recent GNU/Linux distributions.</p>
 
 <h3 id="unpack">Unpack</h3>
 
@@ -740,8 +825,8 @@ unpack the archive and copy it to
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/.local/xPacks/gcc
 <span class="nb">cd</span> ~/.local/xPacks/gcc
 
-<span class="nb">tar </span>xvf ~/Downloads/xpack-gcc-8.5.0-1-linux-x64.tar.gz
-<span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xpack-gcc-8.5.0-1
+<span class="nb">tar </span>xvf ~/Downloads/xpack-gcc-12.1.0-1-linux-x64.tar.gz
+<span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xpack-gcc-12.1.0-1
 </code></pre></div></div>
 
 <p>You may shorten the last folder name and keep only the version.</p>
@@ -753,18 +838,186 @@ and <code class="language-plaintext highlighter-rouge">.content</code> to store 
 
 <p>The result is a structure like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 /home/ilg/.local/xPacks/gcc/xpack-gcc-8.5.0-1
-<span class="go">/home/ilg/opt/xPacks/gcc/xpack-gcc-8.5.0-1
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 /home/ilg/.local/xPacks/gcc/xpack-gcc-12.1.0-1
+<span class="go">/home/ilg/.local/xPacks/gcc/xpack-gcc-12.1.0-1
+── bin
+│   ├── addr2line
+│   ├── ar
+│   ├── as
+│   ├── c++
+│   ├── c++filt
+│   ├── cpp
+│   ├── dwp
+│   ├── elfedit
+│   ├── g++
+│   ├── gcc
+│   ├── gcc-ar
+│   ├── gcc-nm
+│   ├── gcc-ranlib
+│   ├── gcore
+│   ├── gcov
+│   ├── gcov-dump
+│   ├── gcov-tool
+│   ├── gdb
+│   ├── gdb-add-index
+│   ├── gprof
+│   ├── ld
+│   ├── ld.bfd
+│   ├── ld.gold
+│   ├── lto-dump
+│   ├── nm
+│   ├── objcopy
+│   ├── objdump
+│   ├── ranlib
+│   ├── readelf
+│   ├── size
+│   ├── strings
+│   ├── strip
+│   ├── x86_64-pc-linux-gnu-c++
+│   ├── x86_64-pc-linux-gnu-g++
+│   ├── x86_64-pc-linux-gnu-gcc
+│   ├── x86_64-pc-linux-gnu-gcc-12.1.0
+│   ├── x86_64-pc-linux-gnu-gcc-ar
+│   ├── x86_64-pc-linux-gnu-gcc-nm
+│   └── x86_64-pc-linux-gnu-gcc-ranlib
+├── distro-info
+│   ├── CHANGELOG.md
+│   ├── licenses
+│   ├── patches
+│   └── scripts
+├── include
+│   ├── ansidecl.h
+│   ├── bfd.h
+│   ├── bfdlink.h
+│   ├── c++
+│   ├── ctf-api.h
+│   ├── ctf.h
+│   ├── diagnostics.h
+│   ├── dis-asm.h
+│   ├── gdb
+│   ├── plugin-api.h
+│   └── symcat.h
+├── lib
+│   ├── bfd-plugins
+│   ├── gcc
+│   ├── libbfd.a
+│   ├── libbfd.la
+│   ├── libctf.a
+│   ├── libctf.la
+│   ├── libctf-nobfd.a
+│   ├── libctf-nobfd.la
+│   ├── libopcodes.a
+│   └── libopcodes.la
+├── lib64
+│   ├── libasan.a
+│   ├── libasan.la
+│   ├── libasan_preinit.o
+</span><span class="gp">│   ├── libasan.so -&gt;</span><span class="w"> </span>libasan.so.8.0.0
+<span class="gp">│   ├── libasan.so.8 -&gt;</span><span class="w"> </span>libasan.so.8.0.0
+<span class="go">│   ├── libasan.so.8.0.0
+│   ├── libatomic.a
+│   ├── libatomic.la
+</span><span class="gp">│   ├── libatomic.so -&gt;</span><span class="w"> </span>libatomic.so.1.2.0
+<span class="gp">│   ├── libatomic.so.1 -&gt;</span><span class="w"> </span>libatomic.so.1.2.0
+<span class="go">│   ├── libatomic.so.1.2.0
+│   ├── libcc1.a
+│   ├── libcc1.la
+</span><span class="gp">│   ├── libcc1.so -&gt;</span><span class="w"> </span>libcc1.so.0.0.0
+<span class="gp">│   ├── libcc1.so.0 -&gt;</span><span class="w"> </span>libcc1.so.0.0.0
+<span class="go">│   ├── libcc1.so.0.0.0
+│   ├── libgcc_s.so
+│   ├── libgcc_s.so.1
+│   ├── libgomp.a
+│   ├── libgomp.la
+</span><span class="gp">│   ├── libgomp.so -&gt;</span><span class="w"> </span>libgomp.so.1.0.0
+<span class="gp">│   ├── libgomp.so.1 -&gt;</span><span class="w"> </span>libgomp.so.1.0.0
+<span class="go">│   ├── libgomp.so.1.0.0
+│   ├── libgomp.spec
+│   ├── libitm.a
+│   ├── libitm.la
+</span><span class="gp">│   ├── libitm.so -&gt;</span><span class="w"> </span>libitm.so.1.0.0
+<span class="gp">│   ├── libitm.so.1 -&gt;</span><span class="w"> </span>libitm.so.1.0.0
+<span class="go">│   ├── libitm.so.1.0.0
+│   ├── libitm.spec
+│   ├── liblsan.a
+│   ├── liblsan.la
+│   ├── liblsan_preinit.o
+</span><span class="gp">│   ├── liblsan.so -&gt;</span><span class="w"> </span>liblsan.so.0.0.0
+<span class="gp">│   ├── liblsan.so.0 -&gt;</span><span class="w"> </span>liblsan.so.0.0.0
+<span class="go">│   ├── liblsan.so.0.0.0
+│   ├── libquadmath.a
+│   ├── libquadmath.la
+</span><span class="gp">│   ├── libquadmath.so -&gt;</span><span class="w"> </span>libquadmath.so.0.0.0
+<span class="gp">│   ├── libquadmath.so.0 -&gt;</span><span class="w"> </span>libquadmath.so.0.0.0
+<span class="go">│   ├── libquadmath.so.0.0.0
+│   ├── libsanitizer.spec
+│   ├── libssp.a
+│   ├── libssp.la
+│   ├── libssp_nonshared.a
+│   ├── libssp_nonshared.la
+</span><span class="gp">│   ├── libssp.so -&gt;</span><span class="w"> </span>libssp.so.0.0.0
+<span class="gp">│   ├── libssp.so.0 -&gt;</span><span class="w"> </span>libssp.so.0.0.0
+<span class="go">│   ├── libssp.so.0.0.0
+│   ├── libstdc++.a
+│   ├── libstdc++fs.a
+│   ├── libstdc++fs.la
+│   ├── libstdc++.la
+</span><span class="gp">│   ├── libstdc++.so -&gt;</span><span class="w"> </span>libstdc++.so.6.0.30
+<span class="gp">│   ├── libstdc++.so.6 -&gt;</span><span class="w"> </span>libstdc++.so.6.0.30
+<span class="go">│   ├── libstdc++.so.6.0.30
+│   ├── libstdc++.so.6.0.30-gdb.py
+│   ├── libsupc++.a
+│   ├── libsupc++.la
+│   ├── libtsan.a
+│   ├── libtsan.la
+│   ├── libtsan_preinit.o
+</span><span class="gp">│   ├── libtsan.so -&gt;</span><span class="w"> </span>libtsan.so.2.0.0
+<span class="gp">│   ├── libtsan.so.2 -&gt;</span><span class="w"> </span>libtsan.so.2.0.0
+<span class="go">│   ├── libtsan.so.2.0.0
+│   ├── libubsan.a
+│   ├── libubsan.la
+</span><span class="gp">│   ├── libubsan.so -&gt;</span><span class="w"> </span>libubsan.so.1.0.0
+<span class="gp">│   ├── libubsan.so.1 -&gt;</span><span class="w"> </span>libubsan.so.1.0.0
+<span class="go">│   └── libubsan.so.1.0.0
+├── libexec
+│   ├── gcc
+</span><span class="gp">│   ├── libexpat.so.1 -&gt;</span><span class="w"> </span>libexpat.so.1.8.8
+<span class="go">│   ├── libexpat.so.1.8.8
+</span><span class="gp">│   ├── libfl.so.2 -&gt;</span><span class="w"> </span>libfl.so.2.0.0
+<span class="go">│   ├── libfl.so.2.0.0
+│   ├── libgcc_s.so.1
+</span><span class="gp">│   ├── libgmp.so.10 -&gt;</span><span class="w"> </span>libgmp.so.10.4.1
+<span class="go">│   ├── libgmp.so.10.4.1
+</span><span class="gp">│   ├── libisl.so.23 -&gt;</span><span class="w"> </span>libisl.so.23.1.0
+<span class="go">│   ├── libisl.so.23.1.0
+</span><span class="gp">│   ├── liblzma.so.5 -&gt;</span><span class="w"> </span>liblzma.so.5.2.5
+<span class="go">│   ├── liblzma.so.5.2.5
+</span><span class="gp">│   ├── libmpc.so.3 -&gt;</span><span class="w"> </span>libmpc.so.3.2.1
+<span class="go">│   ├── libmpc.so.3.2.1
+</span><span class="gp">│   ├── libmpfr.so.6 -&gt;</span><span class="w"> </span>libmpfr.so.6.1.0
+<span class="go">│   ├── libmpfr.so.6.1.0
+</span><span class="gp">│   ├── libncursesw.so.6 -&gt;</span><span class="w"> </span>libncursesw.so.6.3
+<span class="go">│   ├── libncursesw.so.6.3
+</span><span class="gp">│   ├── libstdc++.so.6 -&gt;</span><span class="w"> </span>libstdc++.so.6.0.30
+<span class="go">│   └── libstdc++.so.6.0.30
+├── README.md
+├── share
+│   ├── doc
+│   ├── gcc-12.1.0
+│   └── gdb
+└── x86_64-pc-linux-gnu
+    ├── bin
+    └── lib
 
-TODO
+21 directories, 147 files
 </span></code></pre></div></div>
 
 <h3 id="test-1">Test</h3>
 
 <p>To check if the manually installed GCC starts, use something like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/gcc/xpack-gcc-8.5.0-1/bin/gcc <span class="nt">--version</span>
-<span class="go">gcc version 8.5.0 (xPack GCC 64-bit)
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/gcc/xpack-gcc-12.1.0-1/bin/gcc <span class="nt">--version</span>
+<span class="go">gcc version 12.1.0 (xPack GCC x86_64)
 </span></code></pre></div></div>
 
 
@@ -790,8 +1043,7 @@ the user or system path!</div>
     <hr/>
     <p>Comments on the content of this page that might be useful
     for other readers are welcomed here. For question and general
-    support, please use the
-    <a href="https://www.tapatalk.com/groups/xpack/">project forums</a>.
+    support, please use GitHub Discussions.
     </p>
 
     <div id="disqus_thread"></div>
@@ -821,7 +1073,7 @@ the user or system path!</div>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jun 16, 2022<br/> Site last generated: Jun 16, 2022 <br />
+<span>Page last updated:</span> Jul 5, 2022<br/> Site last generated: Jul 5, 2022 <br />
                 </div>
             </div>
 </footer>

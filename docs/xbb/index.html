@@ -13,9 +13,9 @@
 <link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
 <link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
 
-<!-- Begin Jekyll SEO tag v2.7.1 -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>The xPack Build Box</title>
-<meta name="generator" content="Jekyll v4.2.1" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="The xPack Build Box" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="The xPack Build Box" />
 <script type="application/ld+json">
-{"description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/"},"@type":"BlogPosting","url":"https://xpack.github.io/xbb/","headline":"The xPack Build Box","dateModified":"2022-06-16T20:24:29+00:00","datePublished":"2016-03-09T09:04:00+00:00","author":{"@type":"Person","name":"Liviu Ionescu"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-07-05T15:06:28+00:00","datePublished":"2016-03-09T09:04:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"The xPack Build Box","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/"},"url":"https://xpack.github.io/xbb/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -201,15 +201,15 @@
                     <ul class="dropdown-menu">
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack" target="_blank" rel="noopener">xPack Core Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack Core Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack-dev-tools" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpacks" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-3rd-party/" target="_blank" rel="noopener">3rd Party xPacks</a></li>
                         
                         
                         
@@ -226,10 +226,6 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        
-                        
-                        <li><a class="extern" href="https://www.tapatalk.com/groups/xpack/" target="_blank" rel="noopener">The xPack Forums</a></li>
-                        
                         
                         
                         <li><a class="extern" href="https://gitter.im/xpack/" target="_blank" rel="noopener">The xPack Chatroom</a></li>
@@ -370,7 +366,21 @@
           
           
           
+          <li><a title="clang" href="/clang/">clang</a></li>
+          
+          
+          
+          
+          
+          
           <li><a title="arm-none-eabi-gcc" href="/arm-none-eabi-gcc/">arm-none-eabi-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="aarch64-none-elf-gcc" href="/aarch64-none-elf-gcc/">aarch64-none-elf-gcc</a></li>
           
           
           
@@ -392,6 +402,13 @@
           
           
           <li><a title="qemu-arm" href="/qemu-arm/">qemu-arm</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="qemu-riscv" href="/qemu-riscv/">qemu-riscv</a></li>
           
           
           
@@ -551,7 +568,11 @@
          -->
 </ul>
 
-<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise, if placed
+inside customscripts.js, the script runs before the sidebar code runs
+and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
             </div>
@@ -605,7 +626,7 @@ binaries</strong> for GNU/Linux, macOS and Windows.</p>
 
 <h2 id="how-it-works">How it works?</h2>
 
-<p>XBB achieves repetability and consistency by compiling all dependencies
+<p>XBB achieves repeatability and consistency by compiling all dependencies
 from sources.</p>
 
 <p>This applies both to the development environment and to the final
@@ -690,7 +711,7 @@ drwxr-xr-x  12 root root       384 Oct 30 19:00 riscv-none-embed-gcc-8.3.0-1.1
 
 <p>In this simple configuration, the builds run with root permissions; with
 more elaborate configurations it is possible to start the Docker images
-with user rights, but they are beyound the scope of this document.</p>
+with user rights, but they are beyond the scope of this document.</p>
 
 <h2 id="how-to-use-the-xbb-tools">How to use the XBB tools</h2>
 
@@ -819,8 +840,7 @@ RedHat 8 / Debian 10, which both use GLIBC 2.28.</p>
     <hr/>
     <p>Comments on the content of this page that might be useful
     for other readers are welcomed here. For question and general
-    support, please use the
-    <a href="https://www.tapatalk.com/groups/xpack/">project forums</a>.
+    support, please use GitHub Discussions.
     </p>
 
     <div id="disqus_thread"></div>
@@ -850,7 +870,7 @@ RedHat 8 / Debian 10, which both use GLIBC 2.28.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jun 16, 2022<br/> Site last generated: Jun 16, 2022 <br />
+<span>Page last updated:</span> Jul 5, 2022<br/> Site last generated: Jul 5, 2022 <br />
                 </div>
             </div>
 </footer>
