@@ -170,6 +170,17 @@
 
 
 {
+"title": "The xPack QEMU RISC-V Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/qemu-riscv/faq/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "The xPack CMake Frequently Asked Questions",
 "tags": "",
 "keywords": "",
@@ -467,6 +478,17 @@
 
 
 {
+"title": "The xPack QEMU RISC-V",
+"tags": "",
+"keywords": "qemuriscv",
+"url": "/qemu-riscv/",
+"summary": "<p>A binary distribution of QEMU RISC-V.</p>"
+}
+,
+
+
+
+{
 "title": "The xPack CMake",
 "tags": "",
 "keywords": "cmake",
@@ -669,6 +691,17 @@
 "tags": "",
 "keywords": "",
 "url": "/windows-build-tools/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "How to install the xPack QEMU RISC-V binaries",
+"tags": "",
+"keywords": "",
+"url": "/qemu-riscv/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -1053,6 +1086,8 @@
 
 
 
+
+
 {
 "title": "xpm run",
 "tags": "",
@@ -1133,6 +1168,17 @@
 "tags": "",
 "keywords": "",
 "url": "/windows-build-tools/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack QEMU RISC-V",
+"tags": "",
+"keywords": "",
+"url": "/qemu-riscv/support/",
 "summary": ""
 }
 ,
