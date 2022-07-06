@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack OpenOCD binaries" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-07-05T19:23:17+00:00","datePublished":"2015-09-09T16:43:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack OpenOCD binaries","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/openocd/install/"},"url":"https://xpack.github.io/openocd/install/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-07-06T06:05:52+00:00","datePublished":"2015-09-09T16:43:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack OpenOCD binaries","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/openocd/install/"},"url":"https://xpack.github.io/openocd/install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -402,7 +402,7 @@ your platform).</p>
 
 <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> 
 The install location can be configured using the
-<code class="language-plaintext highlighter-rouge">XPACKS_REPO_FOLDER</code> environment variable; for more details please check the
+<code class="language-plaintext highlighter-rouge">XPACKS_STORE_FOLDER</code> environment variable; for more details please check the
 <a href="/xpm/folders/">xpm folders</a> page.
 </div>
 
@@ -432,8 +432,9 @@ older versions or configure the path manually.</div>
 
 <p>To check if the xpm installed OpenOCD starts, use something like:</p>
 
-<pre><code class="language-doscon">C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\@xpack-dev-tools\openocd\0.10.0-13.1\.content\bin\openocd.exe --version
-xPack OpenOCD, 64-bit Open On-Chip Debugger 0.10.0+dev (2019-07-17-15:21)
+<pre><code class="language-doscon">C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\@xpack-dev-tools\openocd\0.11.0-4.1\.content\bin\openocd.exe --version
+xPack OpenOCD x86_64 Open On-Chip Debugger 0.11.0+dev (2022-03-25-19:34)
+
 </code></pre>
 
 <h2 id="manual-install">Manual install</h2>
@@ -451,7 +452,7 @@ page.</p>
 Download the latest version named like:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">xpack-openocd-0.10.0-13-win32-x64.zip</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-openocd-0.11.0-4-win32-x64.zip</code></li>
 </ul>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> In case you wonder where the suffix comes
@@ -485,8 +486,8 @@ for the executable in this location.</div>
 
 <p>To check if the manually installed OpenOCD starts, use something like:</p>
 
-<pre><code class="language-doscon">C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\openocd\xpack-openocd-0.10.0-13\bin\openocd.exe --version
-xPack OpenOCD, 64-bit Open On-Chip Debugger 0.10.0+dev (2019-07-17-15:21)
+<pre><code class="language-doscon">C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\openocd\xpack-openocd-0.11.0-4\bin\openocd.exe --version
+xPack OpenOCD x86_64 Open On-Chip Debugger 0.11.0+dev (2022-03-25-19:34)
 </code></pre>
 
 <h3 id="drivers">Drivers</h3>
@@ -573,7 +574,7 @@ your platform).</p>
 
 <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> 
 The install location can be configured using the
-<code class="language-plaintext highlighter-rouge">XPACKS_REPO_FOLDER</code> environment variable; for more details please check the
+<code class="language-plaintext highlighter-rouge">XPACKS_STORE_FOLDER</code> environment variable; for more details please check the
 <a href="/xpm/folders/">xpm folders</a> page.
 </div>
 
@@ -603,8 +604,8 @@ older versions or configure the path manually.</div>
 
 <p>To check if the xpm installed OpenOCD starts, use something like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/@xpack-dev-tools/openocd/0.10.0-13.1/.content/bin/openocd <span class="nt">--version</span>
-<span class="go">xPack OpenOCD, 64-bit Open On-Chip Debugger 0.10.0+dev (2019-07-17-15:21)
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/@xpack-dev-tools/openocd/0.11.0-4.1/.content/bin/openocd <span class="nt">--version</span>
+<span class="go">xPack OpenOCD x86_64 Open On-Chip Debugger 0.11.0+dev (2022-03-25-19:34)
 </span></code></pre></div></div>
 
 <h2 id="manual-install">Manual install</h2>
@@ -622,7 +623,8 @@ page.</p>
 Download the latest version named like:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">xpack-openocd-0.10.0-13-darwin-x64.tgz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-openocd-0.11.0-4-darwin-x64.tar.gz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-openocd-0.11.0-4-darwin-arm64.tar.gz</code></li>
 </ul>
 
 <h3 id="unpack">Unpack</h3>
@@ -634,8 +636,8 @@ unpack the archive and copy it to
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/.local/xPacks/openocd
 <span class="nb">cd</span> ~/.local/xPacks/openocd
 
-<span class="nb">tar </span>xvf ~/Downloads/xpack-openocd-0.10.0-13-darwin-x64.tgz
-<span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xpack-openocd-0.10.0-13
+<span class="nb">tar </span>xvf ~/Downloads/xpack-openocd-0.11.0-4-darwin-x64.tar.gz
+<span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xpack-openocd-0.11.0-4
 </code></pre></div></div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For manual installs, the recommended
@@ -648,18 +650,12 @@ for the executable in this location.</div>
 
 <p>The result is a structure like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 /Users/ilg/.local/xPacks/openocd/xpack-openocd-0.10.0-13
-<span class="go">/Users/ilg/.local/xPacks/openocd/xpack-openocd-0.10.0-13
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 /Users/ilg/.local/xPacks/openocd/xpack-openocd-0.11.0-4
+<span class="go">/Users/ilg/.local/xPacks/openocd/xpack-openocd-0.11.0-4
 ├── OpenULINK
 │   └── ulink_firmware.hex
 ├── README.md
 ├── bin
-│   ├── libftdi1.2.4.0.dylib
-</span><span class="gp">│   ├── libftdi1.2.dylib -&gt;</span><span class="w"> </span>libftdi1.2.4.0.dylib
-<span class="go">│   ├── libgcc_s.1.dylib
-│   ├── libhidapi.0.dylib
-│   ├── libusb-0.1.4.dylib
-│   ├── libusb-1.0.0.dylib
 │   └── openocd
 ├── contrib
 │   ├── 60-openocd.rules
@@ -669,6 +665,12 @@ for the executable in this location.</div>
 │   ├── licenses
 │   ├── patches
 │   └── scripts
+├── libexec
+│   ├── libftdi1.2.5.0.dylib
+</span><span class="gp">│   ├── libftdi1.2.dylib -&gt;</span><span class="w"> </span>libftdi1.2.5.0.dylib
+<span class="go">│   ├── libgcc_s.1.dylib
+│   ├── libhidapi.0.dylib
+│   └── libusb-1.0.0.dylib
 ├── scripts
 │   ├── bitsbytes.tcl
 │   ├── board
@@ -686,15 +688,15 @@ for the executable in this location.</div>
 └── share
     └── doc
 
-20 directories, 15 files
+21 directories, 14 files
 </span></code></pre></div></div>
 
 <h3 id="test-1">Test</h3>
 
 <p>To check if the manually installed OpenOCD starts, use something like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/openocd/xpack-openocd-0.10.0-13/bin/openocd <span class="nt">--version</span>
-<span class="go">xPack OpenOCD, 64-bit Open On-Chip Debugger 0.10.0+dev (2019-07-17-15:21)
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/openocd/xpack-openocd-0.11.0-4/bin/openocd <span class="nt">--version</span>
+<span class="go">xPack OpenOCD x86_64 Open On-Chip Debugger 0.11.0+dev (2022-03-25-19:34)
 </span></code></pre></div></div>
 
 	</div>
@@ -729,7 +731,7 @@ your platform).</p>
 
 <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> 
 The install location can be configured using the
-<code class="language-plaintext highlighter-rouge">XPACKS_REPO_FOLDER</code> environment variable; for more details please check the
+<code class="language-plaintext highlighter-rouge">XPACKS_STORE_FOLDER</code> environment variable; for more details please check the
 <a href="/xpm/folders/">xpm folders</a> page.
 </div>
 
@@ -759,8 +761,8 @@ older versions or configure the path manually.</div>
 
 <p>To check if the xpm installed OpenOCD starts, use something like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/@xpack-dev-tools/openocd/0.10.0-13.1/.content/bin/openocd <span class="nt">--version</span>
-<span class="go">xPack OpenOCD, 64-bit Open On-Chip Debugger 0.10.0+dev (2019-07-17-15:21)
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/@xpack-dev-tools/openocd/0.11.0-4.1/.content/bin/openocd <span class="nt">--version</span>
+<span class="go">xPack OpenOCD x86_64 Open On-Chip Debugger 0.11.0+dev (2022-03-25-19:34)
 </span></code></pre></div></div>
 
 <h2 id="manual-install">Manual install</h2>
@@ -778,7 +780,9 @@ page.</p>
 Download the latest version named like:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">xpack-openocd-0.10.0-13-linux-x64.tgz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-openocd-0.11.0-4-linux-x64.tar.gz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-openocd-0.11.0-4-linux-arm.tar.gz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-openocd-0.11.0-4-linux-arm64.tar.gz</code></li>
 </ul>
 
 <p>As the name implies, these are GNU/Linux <code class="language-plaintext highlighter-rouge">tar.gz</code> archives; they were build on
@@ -788,13 +792,13 @@ Ubuntu, but can be executed on most recent GNU/Linux distributions.</p>
 
 <p>To manually install the xPack OpenOCD,
 unpack the archive and move it to
-<code class="language-plaintext highlighter-rouge">~/.local/xPacks/openocd/xpack-openocd-0.10.0-13</code>:</p>
+<code class="language-plaintext highlighter-rouge">~/.local/xPacks/openocd/xpack-openocd-0.11.0-4</code>:</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/.local/xPacks/openocd
 <span class="nb">cd</span> ~/.local/xPacks/openocd
 
-<span class="nb">tar </span>xvf ~/Downloads/xpack-openocd-0.10.0-13-linux-x64.tgz
-<span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xpack-openocd-0.10.0-13
+<span class="nb">tar </span>xvf ~/Downloads/xpack-openocd-0.11.0-4-linux-x64.tar.gz
+<span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xpack-openocd-0.11.0-4
 </code></pre></div></div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For manual installs, the recommended
@@ -807,21 +811,9 @@ install OpenOCD in any folder, it is highly recommended to use this
 path, since by default the Eclipse Embedded CDT debug plug-ins search
 for the executable in this location.</div>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 <span class="s1">'/home/ilg/.local/xPacks/openocd/xpack-openocd-0.10.0-13'</span>
-<span class="go">/home/ilg/.local/xPacks/openocd/xpack-openocd-0.10.0-13/
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 <span class="s1">'/home/ilg/.local/xPacks/openocd/xpack-openocd-0.11.0-4'</span>
+<span class="go">/home/ilg/.local/xPacks/openocd/xpack-openocd-0.11.0-4/
 ├── bin
-</span><span class="gp">│   ├── libftdi1.so.2 -&gt;</span><span class="w"> </span>libftdi1.so.2.4.0
-<span class="go">│   ├── libftdi1.so.2.4.0
-</span><span class="gp">│   ├── libhidapi-hidraw.so.0 -&gt;</span><span class="w"> </span>libhidapi-hidraw.so.0.0.0
-<span class="go">│   ├── libhidapi-hidraw.so.0.0.0
-</span><span class="gp">│   ├── libiconv.so.2 -&gt;</span><span class="w"> </span>libiconv.so.2.6.0
-<span class="go">│   ├── libiconv.so.2.6.0
-│   ├── libudev.so
-</span><span class="gp">│   ├── libudev.so.0 -&gt;</span><span class="w"> </span>libudev.so
-<span class="gp">│   ├── libusb-0.1.so.4 -&gt;</span><span class="w"> </span>libusb-0.1.so.4.4.4
-<span class="go">│   ├── libusb-0.1.so.4.4.4
-</span><span class="gp">│   ├── libusb-1.0.so.0 -&gt;</span><span class="w"> </span>libusb-1.0.so.0.1.0
-<span class="go">│   ├── libusb-1.0.so.0.1.0
 │   └── openocd
 ├── contrib
 │   ├── 60-openocd.rules
@@ -831,6 +823,17 @@ for the executable in this location.</div>
 │   ├── licenses
 │   ├── patches
 │   └── scripts
+├── libexec
+</span><span class="gp">│   ├── libftdi1.so.2 -&gt;</span><span class="w"> </span>libftdi1.so.2.5.0
+<span class="go">│   ├── libftdi1.so.2.5.0
+</span><span class="gp">│   ├── libhidapi-hidraw.so.0 -&gt;</span><span class="w"> </span>libhidapi-hidraw.so.0.0.0
+<span class="go">│   ├── libhidapi-hidraw.so.0.0.0
+</span><span class="gp">│   ├── libiconv.so.2 -&gt;</span><span class="w"> </span>libiconv.so.2.6.1
+<span class="go">│   ├── libiconv.so.2.6.1
+</span><span class="gp">│   ├── libudev.so.1 -&gt;</span><span class="w"> </span>libudev.so.1.6.9
+<span class="go">│   ├── libudev.so.1.6.9
+</span><span class="gp">│   ├── libusb-1.0.so.0 -&gt;</span><span class="w"> </span>libusb-1.0.so.0.3.0
+<span class="go">│   └── libusb-1.0.so.0.3.0
 ├── OpenULINK
 │   └── ulink_firmware.hex
 ├── README.md
@@ -851,15 +854,15 @@ for the executable in this location.</div>
 └── share
     └── doc
 
-20 directories, 21 files
+21 directories, 19 files
 </span></code></pre></div></div>
 
 <h3 id="test-1">Test</h3>
 
 <p>To check if the manually installed OpenOCD starts, use something like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/openocd/xpack-openocd-0.10.0-13/bin/openocd <span class="nt">--version</span>
-<span class="go">xPack OpenOCD, 64-bit Open On-Chip Debugger 0.10.0+dev (2019-07-17-15:21)
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/openocd/xpack-openocd-0.11.0-4/bin/openocd <span class="nt">--version</span>
+<span class="go">xPack OpenOCD x86_64 Open On-Chip Debugger 0.11.0+dev (2022-03-25-19:34)
 </span></code></pre></div></div>
 
 <h3 id="udev">UDEV</h3>
@@ -870,7 +873,7 @@ subsystem. OpenOCD provides an UDEV rules file defining all the
 supported IDs; to install it, just copy the file to <code class="language-plaintext highlighter-rouge">/etc/udev/rules.d</code>
 and eventually notify the daemon:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo cp</span> ~/.local/xPacks/openocd/xpack-openocd-0.10.0-13/contrib/60-openocd.rules /etc/udev/rules.d/
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo cp</span> ~/.local/xPacks/openocd/xpack-openocd-0.11.0-4/contrib/60-openocd.rules /etc/udev/rules.d/
 <span class="nb">sudo </span>udevadm control <span class="nt">--reload-rules</span>
 </code></pre></div></div>
 
@@ -906,8 +909,8 @@ when you have a functional solution post it on the project GitHub Discussions.</
 
 <p>To check if the manually installed OpenOCD starts, use something like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/openocd/xpack-openocd-0.10.0-13/bin/openocd <span class="nt">--version</span>
-<span class="go">xPack OpenOCD, 64-bit Open On-Chip Debugger 0.10.0+dev (2019-07-17-15:21)
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/openocd/xpack-openocd-0.11.0-4/bin/openocd <span class="nt">--version</span>
+<span class="go">xPack OpenOCD x86_64 Open On-Chip Debugger 0.11.0+dev (2022-03-25-19:34)
 </span></code></pre></div></div>
 
 
@@ -924,8 +927,8 @@ to set both the interface and the processor. For example, on
 macOS, to test a connection via ST/LINK v2 to the STM32F4DISCOVERY board,
 you can use the sample below:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/@xpack-dev-tools/openocd/0.10.0-13.1/.content/bin/openocd <span class="nt">-f</span> board/stm32f4discovery.cfg
-<span class="go">xPack OpenOCD, 64-bit Open On-Chip Debugger 0.10.0+dev (2019-07-17-15:21)
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/@xpack-dev-tools/openocd/0.11.0-4.1/.content/bin/openocd <span class="nt">-f</span> board/stm32f4discovery.cfg
+<span class="go">xPack OpenOCD x86_64 Open On-Chip Debugger 0.11.0+dev (2022-03-25-19:34)
 Licensed under GNU GPL v2
 For bug reports, read
 	http://openocd.org/doc/doxygen/bugs.html
@@ -990,7 +993,7 @@ Info : Listening on port 3333 for gdb connections
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jul 5, 2022<br/> Site last generated: Jul 5, 2022 <br />
+<span>Page last updated:</span> Jul 6, 2022<br/> Site last generated: Jul 6, 2022 <br />
                 </div>
             </div>
 </footer>

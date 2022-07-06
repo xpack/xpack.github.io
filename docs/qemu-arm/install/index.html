@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack QEMU Arm binaries" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-07-05T19:23:17+00:00","datePublished":"2015-09-04T14:03:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack QEMU Arm binaries","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/qemu-arm/install/"},"url":"https://xpack.github.io/qemu-arm/install/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-07-06T06:05:52+00:00","datePublished":"2015-09-04T14:03:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack QEMU Arm binaries","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/qemu-arm/install/"},"url":"https://xpack.github.io/qemu-arm/install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -394,7 +394,7 @@ your platform).</p>
 
 <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> 
 The install location can be configured using the
-<code class="language-plaintext highlighter-rouge">XPACKS_REPO_FOLDER</code> environment variable; for more details please check the
+<code class="language-plaintext highlighter-rouge">XPACKS_STORE_FOLDER</code> environment variable; for more details please check the
 <a href="/xpm/folders/">xpm folders</a> page.
 </div>
 
@@ -443,7 +443,7 @@ pages.</p>
 Download the latest version named like:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">xpack-qemu-arm-2.8.0-7-win32-x64.zip</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-qemu-arm-7.0.0-1-win32-x64.zip</code></li>
 </ul>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> In case you wonder where the suffix comes
@@ -473,9 +473,9 @@ for the executable in this location.</div>
 
 <p>To check if the manually installed QEMU starts, use something like:</p>
 
-<pre><code class="language-doscon">C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\qemu-arm\xpack-qemu-arm-2.8.0-7\bin\qemu-system-gnuarmeclipse.exe" --version
-xPack 64-bit QEMU emulator version 2.8.0-7 (v2.8.0-7-20180523-6-gee07085299-dirty)
-Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
+<pre><code class="language-doscon">C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\qemu-arm\xpack-qemu-arm-7.0.0-1\bin\qemu-system-gnuarmeclipse.exe" --version
+xPack QEMU emulator version 7.0.0 (v7.0.0-xpack)
+Copyright (c) 2003-2022 Fabrice Bellard and the QEMU Project developers
 </code></pre>
 
 <h4 id="drivers">Drivers</h4>
@@ -492,20 +492,21 @@ Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
 Download the latest version named like:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">xpack-qemu-arm-2.8.0-7-darwin-x64.tgz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-qemu-arm-7.0.0-1-darwin-x64.tar.gz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-qemu-arm-7.0.0-1-darwin-arm64.tar.gz</code></li>
 </ul>
 
 <h3 id="unpack">Unpack</h3>
 
 <p>To manually install the xPack QEMU Arm,
 unpack the archive and move it to
-<code class="language-plaintext highlighter-rouge">~/.local/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7</code>:</p>
+<code class="language-plaintext highlighter-rouge">~/.local/xPacks/qemu-arm/xpack-qemu-arm-7.0.0-1</code>:</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/.local/xPacks/qemu-arm
 <span class="nb">cd</span> ~/.local/xPacks/qemu-arm
 
-<span class="nb">tar </span>xvf ~/Downloads/xpack-qemu-arm-2.8.0-7-darwin-x64.tgz
-<span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xpack-qemu-arm-2.8.0-7
+<span class="nb">tar </span>xvf ~/Downloads/xpack-qemu-arm-7.0.0-1-darwin-x64.tar.gz
+<span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xpack-qemu-arm-7.0.0-1
 </code></pre></div></div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For manual installs, the recommended
@@ -518,41 +519,64 @@ for the executable in this location.</div>
 
 <p>The result is a structure like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 /Users/ilg/.local/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7
-<span class="go">/Users/ilg/.local/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7/
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 /Users/ilg/.local/xPacks/qemu-arm/xpack-qemu-arm-7.0.0-1
+<span class="go">/Users/ilg/.local/xPacks/qemu-arm/xpack-qemu-arm-7.0.0-1/
 ├── README.md
 ├── bin
-│   ├── libSDL2-2.0.0.dylib
-│   ├── libSDL2_image-2.0.0.dylib
-│   ├── libgcc_s.1.dylib
-│   ├── libglib-2.0.0.dylib
-│   ├── libgthread-2.0.0.dylib
-│   ├── libiconv.2.dylib
-│   ├── libintl.8.dylib
-│   ├── libpixman-1.0.dylib
-│   ├── libstdc++.6.dylib
-│   ├── libz.1.2.11.dylib
-</span><span class="gp">│   ├── libz.1.dylib -&gt;</span><span class="w"> </span>libz.1.2.11.dylib
-<span class="go">│   └── qemu-system-gnuarmeclipse
+│   ├── qemu-system-aarch64
+│   ├── qemu-system-arm
+│   └── qemu-system-gnuarmeclipse
 ├── distro-info
 │   ├── CHANGELOG.md
 │   ├── licenses
 │   ├── patches
 │   └── scripts
-└── share
-    ├── doc
+├── include
+│   └── qemu-plugin.h
+├── libexec
+│   ├── libSDL2-2.0.0.dylib
+│   ├── libSDL2_image-2.0.0.dylib
+│   ├── libcrypto.1.1.dylib
+│   ├── libffi.8.dylib
+│   ├── libgio-2.0.0.dylib
+│   ├── libglib-2.0.0.dylib
+│   ├── libgmodule-2.0.0.dylib
+│   ├── libgobject-2.0.0.dylib
+│   ├── libgthread-2.0.0.dylib
+│   ├── libiconv.2.dylib
+│   ├── libintl.8.dylib
+│   ├── libjpeg.9.dylib
+│   ├── liblzo2.2.dylib
+│   ├── libncursesw.6.dylib
+│   ├── libnettle.8.4.dylib
+</span><span class="gp">│   ├── libnettle.8.dylib -&gt;</span><span class="w"> </span>libnettle.8.4.dylib
+<span class="go">│   ├── libpixman-1.0.40.0.dylib
+</span><span class="gp">│   ├── libpixman-1.0.dylib -&gt;</span><span class="w"> </span>libpixman-1.0.40.0.dylib
+<span class="go">│   ├── libpng16.16.dylib
+│   ├── libssh.4.8.7.dylib
+</span><span class="gp">│   ├── libssh.4.dylib -&gt;</span><span class="w"> </span>libssh.4.8.7.dylib
+<span class="go">│   ├── libusb-1.0.0.dylib
+│   ├── libvdeplug.3.dylib
+│   ├── libz.1.2.12.dylib
+</span><span class="gp">│   ├── libz.1.dylib -&gt;</span><span class="w"> </span>libz.1.2.12.dylib
+<span class="go">│   ├── libzstd.1.5.2.dylib
+</span><span class="gp">│   └── libzstd.1.dylib -&gt;</span><span class="w"> </span>libzstd.1.5.2.dylib
+<span class="go">└── share
+    ├── applications
+    ├── icons
+    ├── legacy
     └── qemu
 
-8 directories, 14 files
+12 directories, 33 files
 </span></code></pre></div></div>
 
 <h3 id="test">Test</h3>
 
 <p>To check if the manually installed QEMU starts, use something like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7/bin/qemu-system-gnuarmeclipse <span class="nt">--version</span>
-<span class="go">xPack 64-bit QEMU emulator version 2.8.0-7 (v2.8.0-4-20190211-47-g109b69f49a-dirty)
-Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/qemu-arm/xpack-qemu-arm-7.0.0-1/bin/qemu-system-gnuarmeclipse <span class="nt">--version</span>
+<span class="go">xPack QEMU emulator version 7.0.0 (v7.0.0-xpack)
+Copyright (c) 2003-2022 Fabrice Bellard and the QEMU Project developers
 </span></code></pre></div></div>
 
 
@@ -565,7 +589,9 @@ Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
 Download the latest version named like:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">xpack-qemu-arm-2.8.0-7-linux-x64.tgz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-qemu-arm-7.0.0-1-linux-x64.tar.gz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-qemu-arm-7.0.0-1-linux-arm.tar.gz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-qemu-arm-7.0.0-1-linux-arm64.tar.gz</code></li>
 </ul>
 
 <p>As the name implies, these are GNU/Linux <code class="language-plaintext highlighter-rouge">tar.gz</code> archives; they were build on
@@ -575,13 +601,13 @@ Ubuntu, but can be executed on most recent GNU/Linux distributions.</p>
 
 <p>To manually install the xPack QEMU Arm,
 unpack the archive and move it to
-<code class="language-plaintext highlighter-rouge">~/.local/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7</code>:</p>
+<code class="language-plaintext highlighter-rouge">~/.local/xPacks/qemu-arm/xpack-qemu-arm-7.0.0-1</code>:</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/.local/xPacks/qemu-arm
 <span class="nb">cd</span> ~/.local/xPacks/qemu-arm
 
-<span class="nb">tar </span>xvf ~/Downloads/xpack-qemu-arm-2.8.0-7-linux-x64.tgz
-<span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xpack-qemu-arm-2.8.0-7
+<span class="nb">tar </span>xvf ~/Downloads/xpack-qemu-arm-7.0.0-1-linux-x64.tar.gz
+<span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> xpack-qemu-arm-7.0.0-1
 </code></pre></div></div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For manual installs, the recommended
@@ -596,49 +622,88 @@ for the executable in this location.</div>
 
 <p>The result is a structure like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 <span class="s1">'/home/ilg/.local/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7'</span>
-<span class="go">/home/ilg/.local/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7/
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-L</span> 2 <span class="s1">'/home/ilg/.local/xPacks/qemu-arm/xpack-qemu-arm-7.0.0-1'</span>
+<span class="go">/home/ilg/.local/xPacks/qemu-arm/xpack-qemu-arm-7.0.0-1/
 ├── bin
-</span><span class="gp">│   ├── libglib-2.0.so.0 -&gt;</span><span class="w"> </span>libglib-2.0.so.0.5600.4
-<span class="go">│   ├── libglib-2.0.so.0.5600.4
-</span><span class="gp">│   ├── libgthread-2.0.so.0 -&gt;</span><span class="w"> </span>libgthread-2.0.so.0.5600.4
-<span class="go">│   ├── libgthread-2.0.so.0.5600.4
-</span><span class="gp">│   ├── libiconv.so.2 -&gt;</span><span class="w"> </span>libiconv.so.2.6.0
-<span class="go">│   ├── libiconv.so.2.6.0
-</span><span class="gp">│   ├── libjpeg.so.9 -&gt;</span><span class="w"> </span>libjpeg.so.9.2.0
-<span class="go">│   ├── libjpeg.so.9.2.0
-</span><span class="gp">│   ├── libpixman-1.so.0 -&gt;</span><span class="w"> </span>libpixman-1.so.0.38.0
-<span class="go">│   ├── libpixman-1.so.0.38.0
-</span><span class="gp">│   ├── libpng16.so.16 -&gt;</span><span class="w"> </span>libpng16.so.16.36.0
-<span class="go">│   ├── libpng16.so.16.36.0
-</span><span class="gp">│   ├── libSDL2-2.0.so.0 -&gt;</span><span class="w"> </span>libSDL2-2.0.so.0.9.0
-<span class="go">│   ├── libSDL2-2.0.so.0.9.0
-</span><span class="gp">│   ├── libSDL2_image-2.0.so.0 -&gt;</span><span class="w"> </span>libSDL2_image-2.0.so.0.2.2
-<span class="go">│   ├── libSDL2_image-2.0.so.0.2.2
-</span><span class="gp">│   ├── libz.so.1 -&gt;</span><span class="w"> </span>libz.so.1.2.11
-<span class="go">│   ├── libz.so.1.2.11
+│   ├── qemu-system-aarch64
+│   ├── qemu-system-arm
 │   └── qemu-system-gnuarmeclipse
 ├── distro-info
 │   ├── CHANGELOG.md
 │   ├── licenses
 │   ├── patches
 │   └── scripts
+├── include
+│   └── qemu-plugin.h
 ├── libexec
+</span><span class="gp">│   ├── libatomic.so.1 -&gt;</span><span class="w"> </span>libatomic.so.1.2.0
+<span class="go">│   ├── libatomic.so.1.2.0
+│   ├── libcrypto.so.1.1
+</span><span class="gp">│   ├── libffi.so.8 -&gt;</span><span class="w"> </span>libffi.so.8.1.0
+<span class="go">│   ├── libffi.so.8.1.0
+│   ├── libgcc_s.so.1
+</span><span class="gp">│   ├── libgio-2.0.so.0 -&gt;</span><span class="w"> </span>libgio-2.0.so.0.5600.4
+<span class="go">│   ├── libgio-2.0.so.0.5600.4
+</span><span class="gp">│   ├── libglib-2.0.so.0 -&gt;</span><span class="w"> </span>libglib-2.0.so.0.5600.4
+<span class="go">│   ├── libglib-2.0.so.0.5600.4
+</span><span class="gp">│   ├── libgmodule-2.0.so.0 -&gt;</span><span class="w"> </span>libgmodule-2.0.so.0.5600.4
+<span class="go">│   ├── libgmodule-2.0.so.0.5600.4
+</span><span class="gp">│   ├── libgobject-2.0.so.0 -&gt;</span><span class="w"> </span>libgobject-2.0.so.0.5600.4
+<span class="go">│   ├── libgobject-2.0.so.0.5600.4
+</span><span class="gp">│   ├── libgthread-2.0.so.0 -&gt;</span><span class="w"> </span>libgthread-2.0.so.0.5600.4
+<span class="go">│   ├── libgthread-2.0.so.0.5600.4
+</span><span class="gp">│   ├── libiconv.so.2 -&gt;</span><span class="w"> </span>libiconv.so.2.6.1
+<span class="go">│   ├── libiconv.so.2.6.1
+</span><span class="gp">│   ├── libjpeg.so.9 -&gt;</span><span class="w"> </span>libjpeg.so.9.5.0
+<span class="go">│   ├── libjpeg.so.9.5.0
+</span><span class="gp">│   ├── liblzo2.so.2 -&gt;</span><span class="w"> </span>liblzo2.so.2.0.0
+<span class="go">│   ├── liblzo2.so.2.0.0
+</span><span class="gp">│   ├── libncursesw.so.6 -&gt;</span><span class="w"> </span>libncursesw.so.6.3
+<span class="go">│   ├── libncursesw.so.6.3
+</span><span class="gp">│   ├── libnettle.so.8 -&gt;</span><span class="w"> </span>libnettle.so.8.4
+<span class="go">│   ├── libnettle.so.8.4
+</span><span class="gp">│   ├── libpixman-1.so.0 -&gt;</span><span class="w"> </span>libpixman-1.so.0.40.0
+<span class="go">│   ├── libpixman-1.so.0.40.0
+</span><span class="gp">│   ├── libpng16.so.16 -&gt;</span><span class="w"> </span>libpng16.so.16.37.0
+<span class="go">│   ├── libpng16.so.16.37.0
+│   ├── libresolv-2.27.so
+</span><span class="gp">│   ├── libresolv.so.2 -&gt;</span><span class="w"> </span>libresolv-2.27.so
+<span class="gp">│   ├── libSDL2-2.0.so.0 -&gt;</span><span class="w"> </span>libSDL2-2.0.so.0.22.0
+<span class="go">│   ├── libSDL2-2.0.so.0.22.0
+</span><span class="gp">│   ├── libSDL2_image-2.0.so.0 -&gt;</span><span class="w"> </span>libSDL2_image-2.0.so.0.2.3
+<span class="go">│   ├── libSDL2_image-2.0.so.0.2.3
+</span><span class="gp">│   ├── libssh.so.4 -&gt;</span><span class="w"> </span>libssh.so.4.8.7
+<span class="go">│   ├── libssh.so.4.8.7
+</span><span class="gp">│   ├── libssp.so.0 -&gt;</span><span class="w"> </span>libssp.so.0.0.0
+<span class="go">│   ├── libssp.so.0.0.0
+</span><span class="gp">│   ├── libstdc++.so.6 -&gt;</span><span class="w"> </span>libstdc++.so.6.0.29
+<span class="go">│   ├── libstdc++.so.6.0.29
+</span><span class="gp">│   ├── libusb-1.0.so.0 -&gt;</span><span class="w"> </span>libusb-1.0.so.0.3.0
+<span class="go">│   ├── libusb-1.0.so.0.3.0
+</span><span class="gp">│   ├── libvdeplug.so.3 -&gt;</span><span class="w"> </span>libvdeplug.so.3.0.1
+<span class="go">│   ├── libvdeplug.so.3.0.1
+</span><span class="gp">│   ├── libz.so.1 -&gt;</span><span class="w"> </span>libz.so.1.2.12
+<span class="go">│   ├── libz.so.1.2.12
+</span><span class="gp">│   ├── libzstd.so.1 -&gt;</span><span class="w"> </span>libzstd.so.1.5.2
+<span class="go">│   ├── libzstd.so.1.5.2
+│   └── qemu-bridge-helper
 ├── README.md
 └── share
-    ├── doc
+    ├── applications
+    ├── icons
+    ├── legacy
     └── qemu
 
-9 directories, 21 files
+12 directories, 57 files
 </span></code></pre></div></div>
 
 <h3 id="test">Test</h3>
 
 <p>To check if the manually installed QEMU starts, use something like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/qemu-arm/xpack-qemu-arm-2.8.0-7/bin/qemu-system-gnuarmeclipse <span class="nt">--version</span>
-<span class="go">xPack 64-bit QEMU emulator version 2.8.0-7 (v2.8.0-4-20190211-47-g109b69f49a-dirty)
-Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/qemu-arm/xpack-qemu-arm-7.0.0-1/bin/qemu-system-gnuarmeclipse <span class="nt">--version</span>
+<span class="go">xPack QEMU emulator version 7.0.0 (v7.0.0-xpack)
+Copyright (c) 2003-2022 Fabrice Bellard and the QEMU Project developers
 </span></code></pre></div></div>
 
 <h4 id="udev--drivers">UDEV &amp; Drivers</h4>
@@ -697,7 +762,7 @@ drivers required.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jul 5, 2022<br/> Site last generated: Jul 5, 2022 <br />
+<span>Page last updated:</span> Jul 6, 2022<br/> Site last generated: Jul 6, 2022 <br />
                 </div>
             </div>
 </footer>

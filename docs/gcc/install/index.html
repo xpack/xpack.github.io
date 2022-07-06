@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack GNU Compiler Collection binaries" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-07-05T19:23:17+00:00","datePublished":"2021-05-21T21:27:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack GNU Compiler Collection binaries","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/gcc/install/"},"url":"https://xpack.github.io/gcc/install/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-07-06T06:05:52+00:00","datePublished":"2021-05-21T21:27:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack GNU Compiler Collection binaries","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/gcc/install/"},"url":"https://xpack.github.io/gcc/install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -406,7 +406,7 @@ your platform).</p>
 
 <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> 
 The install location can be configured using the
-<code class="language-plaintext highlighter-rouge">XPACKS_REPO_FOLDER</code> environment variable; for more details please check the
+<code class="language-plaintext highlighter-rouge">XPACKS_STORE_FOLDER</code> environment variable; for more details please check the
 <a href="/xpm/folders/">xpm folders</a> page.
 </div>
 
@@ -444,7 +444,7 @@ xpm uninstall @xpack-dev-tools/gcc
 <p>To check if the xpm installed GCC starts, use something like:</p>
 
 <pre><code class="language-doscon">C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\@xpack-dev-tool\gcc\12.1.0-1.1\.content\bin\gcc.exe" --version
-gcc (xPack GCC x86_64) -12.1.0
+gcc (xPack GCC x86_64) 12.1.0
 </code></pre>
 
 <h2 id="manual-install">Manual install</h2>
@@ -490,7 +490,7 @@ and <code class="language-plaintext highlighter-rouge">.content</code> to store 
 <p>To check if the manually installed GCC starts, use something like:</p>
 
 <pre><code class="language-doscon">C:\&gt;%USERPROFILE%\AppData\Roaming\xPacks\gcc\xpack-gcc-12.1.0-1\bin\gcc.exe" --version
-gcc (xPack GCC x86_64) -12.1.0
+gcc (xPack GCC x86_64) 12.1.0
 </code></pre>
 
 
@@ -530,7 +530,7 @@ your platform).</p>
 
 <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> 
 The install location can be configured using the
-<code class="language-plaintext highlighter-rouge">XPACKS_REPO_FOLDER</code> environment variable; for more details please check the
+<code class="language-plaintext highlighter-rouge">XPACKS_STORE_FOLDER</code> environment variable; for more details please check the
 <a href="/xpm/folders/">xpm folders</a> page.
 </div>
 
@@ -568,7 +568,7 @@ xpm uninstall @xpack-dev-tools/gcc
 <p>To check if the xpm installed GCC starts, use something like:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/Library/xPacks/@xpack-dev-tools/gcc/12.1.0-1.1/.content/bin/gcc <span class="nt">--version</span>
-<span class="go">gcc (xPack GCC x86_64) -12.1.0
+<span class="go">gcc (xPack GCC x86_64) 12.1.0
 </span></code></pre></div></div>
 
 <h2 id="manual-install">Manual install</h2>
@@ -588,6 +588,7 @@ Download the latest version named like:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">xpack-gcc-12.1.0-1-darwin-x64.tar.gz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-gcc-12.1.0-1-darwin-arm64.tar.gz</code></li>
 </ul>
 
 <h3 id="unpack">Unpack</h3>
@@ -714,7 +715,7 @@ install location is different from the xpm install folders.</div>
 <p>To check if the manually installed GCC starts, use something like:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>~/.local/xPacks/gcc/xpack-gcc-12.1.0-1.1/bin/gcc <span class="nt">--version</span>
-<span class="go">gcc (xPack GCC x86_64) -12.1.0
+<span class="go">gcc (xPack GCC x86_64) 12.1.0
 </span></code></pre></div></div>
 
 
@@ -754,7 +755,7 @@ your platform).</p>
 
 <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> 
 The install location can be configured using the
-<code class="language-plaintext highlighter-rouge">XPACKS_REPO_FOLDER</code> environment variable; for more details please check the
+<code class="language-plaintext highlighter-rouge">XPACKS_STORE_FOLDER</code> environment variable; for more details please check the
 <a href="/xpm/folders/">xpm folders</a> page.
 </div>
 
@@ -811,6 +812,8 @@ GitHub <a href="https://github.com/xpack-dev-tools/gcc-xpack/releases/">releases
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">xpack-gcc-12.1.0-1-linux-x64.tar.gz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-gcc-12.1.0-1-linux-arm.tar.gz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xpack-gcc-12.1.0-1-linux-arm64.tar.gz</code></li>
 </ul>
 
 <p>As the name implies, these are GNU/Linux <code class="language-plaintext highlighter-rouge">tar.gz</code> archives; they were build on
@@ -1073,7 +1076,7 @@ the user or system path!</div>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jul 5, 2022<br/> Site last generated: Jul 5, 2022 <br />
+<span>Page last updated:</span> Jul 6, 2022<br/> Site last generated: Jul 6, 2022 <br />
                 </div>
             </div>
 </footer>
