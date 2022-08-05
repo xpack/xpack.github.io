@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="A tool to manage dependencies for generic multi-version source and binary packages, inspired by npm.">
+<meta name="description" content="A tool to manage dependencies for language neutral multi-version source and binary packages, inspired by npm.">
 <meta name="keywords" content=" xPackpackagemanager">
 <title>The xPack Project Manager | The xPack Build Framework</title>
 <link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="The xPack Project Manager" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-07-30T07:13:34+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"The xPack Project Manager","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/"},"url":"https://xpack.github.io/xpm/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-08-05T16:26:32+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"The xPack Project Manager","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/"},"url":"https://xpack.github.io/xpm/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -412,7 +412,7 @@ and the class never gets inserted.-->
 <div class="post-content">
 
    
-    <div class="summary">A tool to manage dependencies for generic multi-version source and binary packages, inspired by npm.
+    <div class="summary">A tool to manage dependencies for language neutral multi-version source and binary packages, inspired by npm.
 </div>
    
 
@@ -444,13 +444,28 @@ directly skip to the desired pages.</p>
 
 <p><strong>xpm</strong> stands for <strong>x</strong>Pack <strong>p</strong>roject <strong>m</strong>anager and is a
 <a href="https://nodejs.org/en/">Node.js</a> CLI
-application to manage xPack projects; it can install both source and binary xPacks.</p>
+application to manage xPack projects; it can:</p>
+
+<ul>
+  <li>install source and binary packages</li>
+  <li>manage multiple build configurations</li>
+  <li>execute (multi-)command line actions</li>
+  <li>manage properties and perform complex substitutions, using the
+<a href="https://liquidjs.com">LiquidJS</a> engine</li>
+</ul>
 
 <p><strong>xpm</strong> is an extension to <strong>npm</strong> and shares the same public
 packages repository (<a href="https://www.npmjs.com">npmjs.com</a>).</p>
 
 <p>The open source project is hosted on GitHub as
 <a href="https://github.com/xpack/xpm-js.git"><code class="language-plaintext highlighter-rouge">xpack/xpm-js</code></a>.</p>
+
+<p>An example of a representative project using <strong>xpm</strong> to manage multi-platform
+test is
+<a href="https://github.com/micro-os-plus/utils-lists-xpack">@micro-os-plus/utils-lists</a>;
+please check the
+<a href="https://github.com/micro-os-plus/utils-lists-xpack/blob/xpack/package.json">package.json</a>
+file.</p>
 
 <h2 id="xpacks-overview">xPacks overview</h2>
 
@@ -552,7 +567,7 @@ progress</em> and should be used with caution.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jul 30, 2022<br/> Site last generated: Jul 30, 2022 <br />
+<span>Page last updated:</span> Aug 5, 2022<br/> Site last generated: Aug 5, 2022 <br />
                 </div>
             </div>
 </footer>

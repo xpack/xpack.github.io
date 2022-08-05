@@ -379,7 +379,7 @@
 "tags": "",
 "keywords": "xPackpackagemanager",
 "url": "/xpm/",
-"summary": "<p>A tool to manage dependencies for generic multi-version source and binary packages, inspired by npm.</p>"
+"summary": "<p>A tool to manage dependencies for language neutral multi-version source and binary packages, inspired by npm.</p>"
 }
 ,
 
