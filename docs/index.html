@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="The xPack Reproducible Build Framework" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-08-05T16:26:32+00:00","datePublished":"2019-06-20T20:11:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"The xPack Reproducible Build Framework","url":"https://xpack.github.io/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-08-05T19:43:48+00:00","datePublished":"2019-06-20T20:11:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"The xPack Reproducible Build Framework","url":"https://xpack.github.io/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -463,7 +463,7 @@
           
           
           
-          <li><a title="Create new xPack repo" href="/develop/how-to-new-git/">Create new xPack repo</a></li>
+          <li><a title="Create a new xPack repo" href="/develop/how-to-new-git/">Create a new xPack repo</a></li>
           
           
           
@@ -564,7 +564,7 @@ and the class never gets inserted.-->
 
    <h2 id="mission-statement">Mission statement</h2>
 
-<p>In short: help developers manage dependencies.</p>
+<p>In short: help developers manage dependencies and multi-configuration builds.</p>
 
 <p>Based on a simple multi-version dependencies manager
 (built on top of <strong>npm</strong>),
@@ -602,9 +602,10 @@ thus upgrading the system no longer impacts the project.</p>
 mandate the use of a package manager; the binary xPacks are plain archives
 that can be extracted manually; the source xPacks can be linked to
 projects as Git submodules, etc; they all can be used in traditional
-environments too, just that it requires much more work.</div>
+environments too, just that this requires more work.</div>
 
-<p>Although the focus is on <strong>C/C++</strong>, most of the tools are language agnostic
+<p>Although the current focus is on <strong>C/C++</strong>, most of the tools are
+language agnostic
 and can be used with other programming languages as well.</p>
 
 <p>Based on the installed content, there are currently two
@@ -612,7 +613,7 @@ types of xPacks: <strong>source</strong> and <strong>binary</strong>:</p>
 
 <ul>
   <li><strong>source xPacks</strong> are packages that install source files,
-generally libraries dependencies</li>
+generally libraries</li>
   <li><strong>binary xPacks</strong> are packages that install binary/executable files,
 generally tools used during the build process, like toolchains,
 builders, etc.</li>
@@ -638,11 +639,10 @@ published as separated GitHub <em>organisations</em>
 <p>Planned:</p>
 
 <ul>
-  <li><a href="/xpbuild/"><code class="language-plaintext highlighter-rouge">@xpack/xpbuild</code></a> - the <strong>xPack Project Builder</strong> (under development)</li>
-  <li><a href="/xpcdl/"><code class="language-plaintext highlighter-rouge">@xpack/xpcdl</code></a> - the <strong>xPack Build Configurator</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">@xpack/xpmake</code> - the <strong>xPack Project Builder</strong></li>
   <li><code class="language-plaintext highlighter-rouge">@xpack/xpliquid</code> - the <strong>xPack Liquid Template Engine</strong></li>
   <li><code class="language-plaintext highlighter-rouge">@xpack/xpjson</code> - the <strong>xPack JSON Manager</strong></li>
-  <li><a href="/xpninja/"><code class="language-plaintext highlighter-rouge">@xpack/xpninja</code></a> - the <strong>xPack Build Runner</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">@xpack/xpninja</code> - the <strong>xPack Build Runner</strong></li>
 </ul>
 
 <p>These projects are hosted in the GitHub
@@ -650,20 +650,21 @@ published as separated GitHub <em>organisations</em>
 
 <h2 id="xpack-based-development-tools">xPack based Development Tools</h2>
 
-<p>The main binary tools packed as xPacks are:</p>
+<p>The main binary tools packed as xPacks are (in alphabetical order):</p>
 
 <ul>
+  <li><a href="/aarch64-none-elf-gcc/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/aarch64-none-elf-gcc</code></a> - the <strong>xPack GNU AArch64 Embedded GCC</strong> toolchain</li>
   <li><a href="/arm-none-eabi-gcc/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/arm-none-eabi-gcc</code></a> - the <strong>xPack GNU Arm Embedded GCC</strong> toolchain</li>
+  <li><a href="/clang/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/clang</code></a> - the <strong>xPack LLVM clang</strong></li>
+  <li><a href="/cmake/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/cmake</code></a> - the <strong>xPack CMake</strong></li>
+  <li><a href="/gcc/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/gcc</code></a> - the <strong>xPack GNU Compiler Collection (GCC)</strong></li>
+  <li><a href="/meson-build/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/meson-build</code></a> - the <strong>xPack Meson Build</strong></li>
+  <li><a href="/ninja-build/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/ninja-build</code></a> - the <strong>xPack Ninja Build</strong></li>
   <li><a href="/openocd/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/openocd</code></a> - the <strong>xPack OpenOCD</strong></li>
   <li><a href="/qemu-arm/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/qemu-arm</code></a> - the <strong>xPack QEMU Arm</strong></li>
+  <li><a href="/qemu-riscv/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/qemu-riscv</code></a> - the <strong>xPack QEMU RISC-V</strong></li>
   <li><a href="/riscv-none-elf-gcc/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/riscv-none-elf-gcc</code></a> - the <strong>xPack RISC-V Embedded GCC</strong> toolchain</li>
-  <li><a href="/qemu-arm/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/qemu-arm</code></a> - the <strong>xPack QEMU RISC-V</strong></li>
   <li><a href="/windows-build-tools/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/windows-build-tools</code></a> - the <strong>xPack Windows Build Tools</strong></li>
-  <li><a href="/ninja-build/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/ninja-build</code></a> - the <strong>xPack Ninja Build</strong></li>
-  <li><a href="/cmake/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/cmake</code></a> - the <strong>xPack CMake</strong></li>
-  <li><a href="/meson-build/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/meson-build</code></a> - the <strong>xPack Meson Build</strong></li>
-  <li><a href="/gcc/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/gcc</code></a> - the <strong>xPack GNU Compiler Collection (GCC)</strong></li>
-  <li><a href="/clang/"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/clang</code></a> - the <strong>xPack LLVM clang</strong></li>
 </ul>
 
 <p>Planned:</p>
@@ -698,6 +699,10 @@ published as separated GitHub <em>organisations</em>
 <p>Packages part of the µOS++ framework:</p>
 
 <ul>
+  <li><a href="https://github.com/micro-os-plus/architecture-aarch32-xpack/">@micro-os-plus/architecture-aarch32</a>
+A source xPack with the µOS++ AArch32 architecture port</li>
+  <li><a href="https://github.com/micro-os-plus/architecture-aarch64-xpack/">@micro-os-plus/architecture-aarch64</a>
+A source xPack with the µOS++ AArch64 architecture port</li>
   <li><a href="https://github.com/micro-os-plus/architecture-cortexm-xpack/">@micro-os-plus/architecture-cortexm</a>
 A source xPack with the µOS++ Arm Cortex-M architecture port</li>
   <li><a href="https://github.com/micro-os-plus/architecture-riscv-xpack/">@micro-os-plus/architecture-riscv</a>
@@ -708,6 +713,14 @@ A source xPack with the µOS++ synthetic POSIX architecture port</li>
 A source xPack to assist the µOS++ builds</li>
   <li><a href="https://github.com/micro-os-plus/cmsis-os-xpack/">@micro-os-plus/cmsis-os</a>
 A source xPack with the µOS++ CMSIS RTOS compatibility layer</li>
+  <li><a href="https://github.com/micro-os-plus/devices-qemu-aarch32-xpack/">@micro-os-plus/devices-qemu-aarch32</a>
+A source xPack with µOS++ QEMU AArch32 devices files</li>
+  <li><a href="https://github.com/micro-os-plus/devices-qemu-aarch64-xpack/">@micro-os-plus/devices-qemu-aarch64</a>
+A source xPack with µOS++ QEMU AArch64 devices files</li>
+  <li><a href="https://github.com/micro-os-plus/devices-qemu-cortexm-xpack/">@micro-os-plus/devices-qemu-cortexm</a>
+A source xPack with µOS++ QEMU Cortex-M devices files</li>
+  <li><a href="https://github.com/micro-os-plus/devices-qemu-riscv-xpack/">@micro-os-plus/devices-qemu-riscv</a>
+A source xPack with µOS++ QEMU RISC-V devices files</li>
   <li><a href="https://github.com/micro-os-plus/devices-stm32f0-extras-xpack/">@micro-os-plus/devices-stm32f0-extras</a>
 A source xPack with µOS++ complementary STM32F0 files</li>
   <li><a href="https://github.com/micro-os-plus/devices-stm32f4-extras-xpack/">@micro-os-plus/devices-stm32f4-extras</a>
@@ -722,6 +735,8 @@ A source xPack with complementary C++ library functions</li>
 A source xPack with µOS++ embedded std:: support</li>
   <li><a href="https://github.com/micro-os-plus/memory-allocators-xpack/">@micro-os-plus/memory-allocators</a>
 A source xPack with µOS++ memory allocators</li>
+  <li><a href="https://github.com/micro-os-plus/micro-test-plus/">@micro-os-plus/micro-test-plus</a>
+A source xPack with µTest++ testing framework</li>
   <li><a href="https://github.com/micro-os-plus/posix-io-xpack/">@micro-os-plus/posix-io</a>
 A source xPack with POSIX I/O</li>
   <li><a href="https://github.com/micro-os-plus/rtos-xpack/">@micro-os-plus/rtos</a>
@@ -739,6 +754,19 @@ A source xPack with the µOS++ version definitions</li>
 <h3 id="3rd-party">3rd Party</h3>
 
 <p>Packages with 3rd party content:</p>
+
+<ul>
+  <li><a href="https://github.com/xpack-3rd-party/arm-cmsis-core/">@xpack-3rd-party/arm-cmsis-core</a>
+A source xPack with Arm CMSIS Core-M and Core-A files</li>
+  <li><a href="https://github.com/xpack-3rd-party/boost-ut/">@xpack-3rd-party/boost-ut</a>
+A source xPack with Boost-UT files</li>
+  <li><a href="https://github.com/xpack-3rd-party/catch2/">@xpack-3rd-party/catch2</a>
+A source xPack with Catch2 files</li>
+  <li><a href="https://github.com/xpack-3rd-party/googletest/">@xpack-3rd-party/googletest</a>
+A source xPack with Google Test files</li>
+</ul>
+
+<p>Planned:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">@xpack-3rd-party/freertos</code> - FreeRTOS</li>
@@ -773,7 +801,8 @@ are provided <strong>free of charge</strong> under the terms of the
 
 <h2 id="credits">Credits</h2>
 
-<p>Special thanks to <strong>MacStadium</strong>, for providing the Apple Silicon development infrastructure as part of their
+<p>Special thanks to <strong>MacStadium</strong>, for providing the Apple Silicon
+development infrastructure as part of their
 <a href="https://www.macstadium.com/opensource">Open Source Program</a>.</p>
 
 <h2 id="let-us-know-if-you-enjoyed-using-this-project">Let us know if you enjoyed using this project</h2>

@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack 101" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-08-05T16:26:32+00:00","datePublished":"2019-06-26T05:57:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"xPack 101","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/intro/"},"url":"https://xpack.github.io/intro/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-08-05T19:43:48+00:00","datePublished":"2019-06-26T05:57:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"xPack 101","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/intro/"},"url":"https://xpack.github.io/intro/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -463,7 +463,7 @@
           
           
           
-          <li><a title="Create new xPack repo" href="/develop/how-to-new-git/">Create new xPack repo</a></li>
+          <li><a title="Create a new xPack repo" href="/develop/how-to-new-git/">Create a new xPack repo</a></li>
           
           
           
@@ -646,8 +646,8 @@ types of xPacks: <strong>source</strong> and <strong>binary</strong>:</p>
 <ul>
   <li><strong>source xPacks</strong> are packages that install source files,
 generally libraries used by the project.</li>
-  <li><strong>binary xPacks</strong> are packages that install standalone binary files,
-generally tools used during the build process, like toolchains,
+  <li><strong>binary xPacks</strong> are packages that install standalone executables/binary
+files, generally tools used during the build process, like toolchains,
 builders, etc; standalone means they are self-contained and do not
 depend on other shared libraries or tools.</li>
 </ul>
@@ -768,11 +768,12 @@ File 'LICENSE' generated.
 
 <h2 id="why-would-i-convert-my-project-to-an-xpack">Why would I convert my project to an xPack?</h2>
 
-<p>The two main reasons are:</p>
+<p>The top reasons are:</p>
 
 <ul>
   <li>to automate dependencies management</li>
   <li>to automate path management for dependent tools</li>
+  <li>to manage multi-configuration builds</li>
 </ul>
 
 <p>These are both simple and complicated things. To better understand
