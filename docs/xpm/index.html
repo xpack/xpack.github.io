@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="The xPack Project Manager" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-08-05T19:43:48+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"The xPack Project Manager","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/"},"url":"https://xpack.github.io/xpm/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-08-06T13:41:43+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"The xPack Project Manager","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/"},"url":"https://xpack.github.io/xpm/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -201,11 +201,15 @@
                     <ul class="dropdown-menu">
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack Core Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack</a></li>
                         
                         
                         
-                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Tools</a></li>
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Dev Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/micro-os-plus/" target="_blank" rel="noopener">µOS++ IIIe</a></li>
                         
                         
                         
@@ -214,21 +218,6 @@
                         
                         
                         <li><a class="extern" href="https://github.com/eclipse-embed-cdt/" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
-                        
-                        
-                        
-                        <li><a class="extern" href="https://github.com/micro-os-plus/" target="_blank" rel="noopener">µOS++ IIIe</a></li>
-                        
-                        
-                    </ul>
-                </li>
-                
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        
-                        
-                        <li><a class="extern" href="https://gitter.im/xpack/" target="_blank" rel="noopener">The xPack Chatroom</a></li>
                         
                         
                     </ul>
@@ -427,9 +416,9 @@ directly skip to the desired pages.</p>
 <p>User pages:</p>
 
 <ul>
-  <li><a href="/xpm/install/">Install</a></li>
-  <li><a href="/xpm/support/">Support</a></li>
-  <li><a href="/xpm/releases/">Releases</a></li>
+  <li><a href="/xpm/install/">install</a></li>
+  <li><a href="/xpm/support/">support</a></li>
+  <li><a href="/xpm/releases/">releases</a></li>
   <li><a href="https://www.npmjs.com/package/xpm">npmjs.com</a> (published <a href="https://www.npmjs.com/package/xpm?activeTab=versions">versions</a>)</li>
 </ul>
 
@@ -460,12 +449,17 @@ packages repository (<a href="https://www.npmjs.com">npmjs.com</a>).</p>
 <p>The open source project is hosted on GitHub as
 <a href="https://github.com/xpack/xpm-js.git"><code class="language-plaintext highlighter-rouge">xpack/xpm-js</code></a>.</p>
 
+<h3 id="examples">Examples</h3>
+
 <p>An example of a representative project using <strong>xpm</strong> to manage multi-platform
 test is
 <a href="https://github.com/micro-os-plus/utils-lists-xpack">@micro-os-plus/utils-lists</a>;
 please check the
 <a href="https://github.com/micro-os-plus/utils-lists-xpack/blob/xpack/package.json">package.json</a>
 file.</p>
+
+<p>For a hands-on experience, see the
+<a href="https://github.com/xpack/hello-world-template-xpack/">xpack/hello-world-template-xpack</a> project.</p>
 
 <h2 id="xpacks-overview">xPacks overview</h2>
 
@@ -493,6 +487,17 @@ software packages, using the same central repository as <strong>npm</strong>.</p
   <li><a href="/xpm/cli/list/"><code class="language-plaintext highlighter-rouge">xpm list</code></a></li>
   <li><a href="/xpm/cli/run/"><code class="language-plaintext highlighter-rouge">xpm run</code></a></li>
   <li><a href="/xpm/cli/uninstall/"><code class="language-plaintext highlighter-rouge">xpm uninstall</code></a></li>
+</ul>
+
+<p>For publishing and other common operation, use <strong>npm</strong>:</p>
+
+<ul>
+  <li><a href="https://docs.npmjs.com/cli/v8/commands/npm-version/"><code class="language-plaintext highlighter-rouge">npm version</code></a></li>
+  <li><a href="https://docs.npmjs.com/cli/v8/commands/npm-publish/"><code class="language-plaintext highlighter-rouge">npm publish</code></a></li>
+  <li><a href="https://docs.npmjs.com/cli/v8/commands/npm-pack/"><code class="language-plaintext highlighter-rouge">npm pack</code></a></li>
+  <li><a href="https://docs.npmjs.com/cli/v8/commands/npm-deprecate/"><code class="language-plaintext highlighter-rouge">npm deprecate</code></a></li>
+  <li><a href="https://docs.npmjs.com/cli/v8/commands/npm-unpublish/"><code class="language-plaintext highlighter-rouge">npm publish</code></a></li>
+  <li>etc…</li>
 </ul>
 
 <h2 id="configuring-xpm">Configuring xpm</h2>
@@ -567,7 +572,7 @@ progress</em> and should be used with caution.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Aug 5, 2022<br/> Site last generated: Aug 5, 2022 <br />
+<span>Page last updated:</span> Aug 6, 2022<br/> Site last generated: Aug 6, 2022 <br />
                 </div>
             </div>
 </footer>
