@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack xpm v0.10.1 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-08-15T12:08:19+00:00","datePublished":"2021-05-12T12:39:00+00:00","description":"xpm is a Node.js CLI application to manage xPacks dependencies.","headline":"xPack xpm v0.10.1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/05/12/xpm-v0-10-1-released/"},"url":"https://xpack.github.io/blog/2021/05/12/xpm-v0-10-1-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-08-15T15:54:32+00:00","datePublished":"2021-05-12T12:39:00+00:00","description":"xpm is a Node.js CLI application to manage xPacks dependencies.","headline":"xPack xpm v0.10.1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/05/12/xpm-v0-10-1-released/"},"url":"https://xpack.github.io/blog/2021/05/12/xpm-v0-10-1-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -470,7 +470,7 @@ filters to the Liquid substitution engine.</p>
 <h3 id="bug-fixes">Bug fixes</h3>
 
 <ul>
-  <li>[#104] - Attempts to install globally failed if the current folder
+  <li>[#104] Attempts to install globally failed if the current folder
 contained a package.json created by npm; the cause was identified
 to be a misplaced validation check; fixed.</li>
 </ul>
@@ -478,33 +478,33 @@ to be a misplaced validation check; fixed.</li>
 <h3 id="enhancements">Enhancements</h3>
 
 <ul>
-  <li>[#108] - support multi-line properties was added</li>
-  <li>[#107] - the project description was updated to <em>project manager</em></li>
-  <li>[#106] - a check of <code class="language-plaintext highlighter-rouge">minimumXpmRequired</code> was added when creating projects
+  <li>[#108] support multi-line properties was added</li>
+  <li>[#107] the project description was updated to <em>project manager</em></li>
+  <li>[#106] a check of <code class="language-plaintext highlighter-rouge">minimumXpmRequired</code> was added when creating projects
 from templates</li>
-  <li>[#105] - some error messages were changed, in an attempt to make them
+  <li>[#105] some error messages were changed, in an attempt to make them
 more explicit</li>
-  <li>[#103] - when creating projects from templates, if the <code class="language-plaintext highlighter-rouge">bundleDependencies</code>
+  <li>[#103] when creating projects from templates, if the <code class="language-plaintext highlighter-rouge">bundleDependencies</code>
 is present, no install is performed</li>
-  <li>[#102] - projects created via <code class="language-plaintext highlighter-rouge">xpm init</code> now include <code class="language-plaintext highlighter-rouge">minimumXpmRequired</code></li>
+  <li>[#102] projects created via <code class="language-plaintext highlighter-rouge">xpm init</code> now include <code class="language-plaintext highlighter-rouge">minimumXpmRequired</code></li>
 </ul>
 
 <h3 id="other-changes">Other changes</h3>
 
 <ul>
-  <li>[#101] - the <code class="language-plaintext highlighter-rouge">CliExitCodes</code> &amp; <code class="language-plaintext highlighter-rouge">CliError</code> were passed in the <code class="language-plaintext highlighter-rouge">context</code>,
+  <li>[#101] the <code class="language-plaintext highlighter-rouge">CliExitCodes</code> &amp; <code class="language-plaintext highlighter-rouge">CliError</code> were passed in the <code class="language-plaintext highlighter-rouge">context</code>,
 to be used by templates</li>
-  <li>[#99] - the Liquid code is now in a separate package, <code class="language-plaintext highlighter-rouge">@xpack/xpm-liquid</code>;
+  <li>[#99] the Liquid code is now in a separate package, <code class="language-plaintext highlighter-rouge">@xpack/xpm-liquid</code>;
 it adds an extensive set of variables and filters; for details see project
 <a href="https://github.com/xpack/xpm-liquid-ts#readme">README</a></li>
-  <li>[#100] - the Liquid tag <code class="language-plaintext highlighter-rouge">endl</code> was removed</li>
+  <li>[#100] the Liquid tag <code class="language-plaintext highlighter-rouge">endl</code> was removed</li>
 </ul>
 
 <h3 id="known-problems">Known problems</h3>
 
 <ul>
   <li>the warnings triggered by third party dependencies during install; fixed in v0.10.2</li>
-  <li>[#57] - when multiple versions of the same package are referenced
+  <li>[#57] when multiple versions of the same package are referenced
 via different dependencies paths, the program fails; version
 mitigation will be implemented in a future release.</li>
 </ul>
@@ -555,7 +555,7 @@ npm xpm@0.10.1 '/Users/ilg/.nvm/versions/node/v14.16.0/lib/node_modules/xpm'
 <h2 id="ci-tests">CI tests</h2>
 
 <p>Continuous integration tests are done via GitHub
-<a href="https://github.com/xpack/xpm-js/actions">actions</a>.</p>
+<a href="https://github.com/xpack/xpm-js/actions">Actions</a>.</p>
 
 <h2 id="download-analytics">Download analytics</h2>
 

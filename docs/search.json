@@ -1675,6 +1675,16 @@
 
 
 {
+"title": "xPack xpm v0.14.0 released",
+"tags": "releasesxpmpackagemanager",
+"keywords": "",
+"url": "/blog/2022/08/15/xpm-v0-14-0-released/",
+"summary": "<p>Version <strong>0.14.0</strong> is a new major release; it separates xPack from npm dependencies.</p>"
+}
+,
+
+
+{
 "title": "VS Code xPack extension v0.4.19 released",
 "tags": "releasesvscodevscode-xpackextensionc++",
 "keywords": "",

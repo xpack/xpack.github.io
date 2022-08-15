@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack xpm v0.13.1 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-08-15T12:08:19+00:00","datePublished":"2022-04-18T07:58:00+00:00","description":"xpm is a Node.js CLI application to manage xPacks dependencies.","headline":"xPack xpm v0.13.1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/04/18/xpm-v0-13-1-released/"},"url":"https://xpack.github.io/blog/2022/04/18/xpm-v0-13-1-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-08-15T15:54:32+00:00","datePublished":"2022-04-18T07:58:00+00:00","description":"xpm is a Node.js CLI application to manage xPacks dependencies.","headline":"xPack xpm v0.13.1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/04/18/xpm-v0-13-1-released/"},"url":"https://xpack.github.io/blog/2022/04/18/xpm-v0-13-1-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -477,7 +477,7 @@ to reduce redundancy in related (debug/release) configurations.</p>
 <h3 id="bug-fixes">Bug fixes</h3>
 
 <ul>
-  <li>[#133] - by design, the content of the packages installed in the central
+  <li>[#133] by design, the content of the packages installed in the central
 store is expected to be read only; due to a <code class="language-plaintext highlighter-rouge">node</code> documentation
 issue, changing file mode to R/O on Windows was not effective; fixed</li>
 </ul>
@@ -485,24 +485,24 @@ issue, changing file mode to R/O on Windows was not effective; fixed</li>
 <h3 id="enhancements">Enhancements</h3>
 
 <ul>
-  <li>[#134] - implement buildConfiguration inheritance</li>
-  <li>[#135] - add <code class="language-plaintext highlighter-rouge">--ignore-errors</code> to <code class="language-plaintext highlighter-rouge">run</code> &amp; <code class="language-plaintext highlighter-rouge">install</code> to allow scripts
+  <li>[#134] implement buildConfiguration inheritance</li>
+  <li>[#135] add <code class="language-plaintext highlighter-rouge">--ignore-errors</code> to <code class="language-plaintext highlighter-rouge">run</code> &amp; <code class="language-plaintext highlighter-rouge">install</code> to allow scripts
 to continue</li>
-  <li>[#136] - when referring to a non existent configuration, a stack
+  <li>[#136] when referring to a non existent configuration, a stack
 trace was shown; fixed</li>
-  <li>[#131] - improve error message to suggest <code class="language-plaintext highlighter-rouge">--global</code></li>
+  <li>[#131] improve error message to suggest <code class="language-plaintext highlighter-rouge">--global</code></li>
 </ul>
 
 <h3 id="other-changes">Other changes</h3>
 
 <ul>
-  <li>[#109] - prefer <code class="language-plaintext highlighter-rouge">XPACKS_STORE_FOLDER</code> over <code class="language-plaintext highlighter-rouge">XPACKS_REPO_FOLDER</code></li>
+  <li>[#109] prefer <code class="language-plaintext highlighter-rouge">XPACKS_STORE_FOLDER</code> over <code class="language-plaintext highlighter-rouge">XPACKS_REPO_FOLDER</code></li>
 </ul>
 
 <h3 id="known-problems">Known problems</h3>
 
 <ul>
-  <li>[#57] - when multiple versions of the same package are referenced
+  <li>[#57] when multiple versions of the same package are referenced
 via different dependencies paths, the program fails; version
 mitigation will be implemented in a future release.</li>
 </ul>
@@ -553,7 +553,7 @@ npm xpm@0.13.1 '/Users/ilg/.nvm/versions/node/v14.16.0/lib/node_modules/xpm'
 <h2 id="ci-tests">CI tests</h2>
 
 <p>Continuous integration tests are done via GitHub
-<a href="https://github.com/xpack/xpm-js/actions/">actions</a>.</p>
+<a href="https://github.com/xpack/xpm-js/actions/">Actions</a>.</p>
 
 <h2 id="download-analytics">Download analytics</h2>
 

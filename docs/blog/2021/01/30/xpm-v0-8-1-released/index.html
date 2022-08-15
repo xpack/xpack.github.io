@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack xpm v0.8.1 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-08-15T12:08:19+00:00","datePublished":"2021-01-30T19:49:00+00:00","description":"xpm stands for xPack project manager and is a Node.js CLI application to manage xPacks.","headline":"xPack xpm v0.8.1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/01/30/xpm-v0-8-1-released/"},"url":"https://xpack.github.io/blog/2021/01/30/xpm-v0-8-1-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-08-15T15:54:32+00:00","datePublished":"2021-01-30T19:49:00+00:00","description":"xpm stands for xPack project manager and is a Node.js CLI application to manage xPacks.","headline":"xPack xpm v0.8.1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/01/30/xpm-v0-8-1-released/"},"url":"https://xpack.github.io/blog/2021/01/30/xpm-v0-8-1-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -467,15 +467,15 @@ is generally compatible with previous 0.7.x releases.</p>
 <h3 id="bug-fixes">Bug fixes</h3>
 
 <ul>
-  <li>[#66] - due to a partial implementation,
+  <li>[#66] due to a partial implementation,
 installing packages that were not published in the npmjs.com repository,
 directly from Git, GitHub, GitLab, archive or local files, failed; fixed</li>
-  <li>[#72] - installing standalone packages was done by directly copying
+  <li>[#72] installing standalone packages was done by directly copying
 the content locally; for consistency reasons,the behaviour was changed,
 the content is now also
 installed in the global xPacks store and links are added locally, as
 for any package</li>
-  <li>[#70] - in certain conditions, if the project <code class="language-plaintext highlighter-rouge">package.json</code> had no
+  <li>[#70] in certain conditions, if the project <code class="language-plaintext highlighter-rouge">package.json</code> had no
 name/version properties defined, the program crashed with asserts; a better
 error processing was implemented</li>
 </ul>
@@ -483,26 +483,26 @@ error processing was implemented</li>
 <h3 id="enhancements">Enhancements</h3>
 
 <ul>
-  <li>[#78] - installing dependencies proved quite slow; to make things
+  <li>[#78] installing dependencies proved quite slow; to make things
 faster, dependencies are downloaded in parallel</li>
-  <li>[#13] - the command <code class="language-plaintext highlighter-rouge">uninstall</code> was added; it can remove packages
+  <li>[#13] the command <code class="language-plaintext highlighter-rouge">uninstall</code> was added; it can remove packages
 from the local project or from the global store (<code class="language-plaintext highlighter-rouge">-g</code>)</li>
-  <li>[#76] - the command <code class="language-plaintext highlighter-rouge">list</code> was added; it can list packages
+  <li>[#76] the command <code class="language-plaintext highlighter-rouge">list</code> was added; it can list packages
 installed in the local project or in the global store (<code class="language-plaintext highlighter-rouge">-g</code>)</li>
-  <li>[#73] - with folders from the global store linked to the local
+  <li>[#73] with folders from the global store linked to the local
 project, it was possible to change the content in the global store,
 thus damaging the packages; to prevent this, now all installed
 packages are changed to read-only, and changed back to read-write
 only before uninstall</li>
-  <li>[#60] - the default location for installing global packages on Linux
+  <li>[#60] the default location for installing global packages on Linux
 was changed from <code class="language-plaintext highlighter-rouge">$HOME/opt</code> to <code class="language-plaintext highlighter-rouge">$HOME/.local</code>, to better match the
 recommended Linux file system hierarchy</li>
-  <li>[#71] - the general program verbosity was a bit too high; reduced; for
+  <li>[#71] the general program verbosity was a bit too high; reduced; for
 first time users it is recommended to add <code class="language-plaintext highlighter-rouge">-v</code> to increase verbosity</li>
-  <li>[#68] - in certain conditions, after displaying errors, the program
+  <li>[#68] in certain conditions, after displaying errors, the program
 continued to output several more lines, making spotting errors more
 difficult; fixed</li>
-  <li>[#74] - in certain conditions, when the internal links were
+  <li>[#74] in certain conditions, when the internal links were
 no longer available, the <code class="language-plaintext highlighter-rouge">link</code> command reported an
 internal error (<code class="language-plaintext highlighter-rouge">ENOENT</code>), instead of a more user friendly message
 informing about the broken link; fixed</li>
@@ -511,7 +511,7 @@ informing about the broken link; fixed</li>
 <h3 id="other-changes">Other changes</h3>
 
 <ul>
-  <li>[#75] - the <code class="language-plaintext highlighter-rouge">build</code> command was removed, its functionality is already
+  <li>[#75] the <code class="language-plaintext highlighter-rouge">build</code> command was removed, its functionality is already
 provided by the more general <code class="language-plaintext highlighter-rouge">run</code> command</li>
 </ul>
 
@@ -570,7 +570,7 @@ npm xpm@0.8.1 '/Users/ilg/.nvm/versions/node/v12.14.0/lib/node_modules/xpm'
 <h2 id="ci-tests">CI tests</h2>
 
 <p>Continuous integration tests are done via GitHub
-<a href="https://github.com/xpack/xpm-js/actions">actions</a>.</p>
+<a href="https://github.com/xpack/xpm-js/actions">Actions</a>.</p>
 
 <h2 id="download-analytics">Download analytics</h2>
 

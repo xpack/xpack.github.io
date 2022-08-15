@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack xpm v0.9.0 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-08-15T12:08:19+00:00","datePublished":"2021-03-27T11:25:00+00:00","description":"xpm is a Node.js CLI application to manage xPacks dependencies.","headline":"xPack xpm v0.9.0 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/03/27/xpm-v0-9-0-released/"},"url":"https://xpack.github.io/blog/2021/03/27/xpm-v0-9-0-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-08-15T15:54:32+00:00","datePublished":"2021-03-27T11:25:00+00:00","description":"xpm is a Node.js CLI application to manage xPacks dependencies.","headline":"xPack xpm v0.9.0 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/03/27/xpm-v0-9-0-released/"},"url":"https://xpack.github.io/blog/2021/03/27/xpm-v0-9-0-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -481,31 +481,31 @@ build folders (like debug/release, but also multi-platform builds).</p>
 <code class="language-plaintext highlighter-rouge">package.json</code>, and <code class="language-plaintext highlighter-rouge">--config</code> for most commands.</p>
 
 <ul>
-  <li>[#94] - add <code class="language-plaintext highlighter-rouge">--config</code> to <code class="language-plaintext highlighter-rouge">xpm link</code></li>
-  <li>[#95] - add <code class="language-plaintext highlighter-rouge">--config</code> to <code class="language-plaintext highlighter-rouge">xpm uninstall</code></li>
-  <li>[#96] - update <code class="language-plaintext highlighter-rouge">xpm list</code> to show configurations dependencies</li>
-  <li>[#90] - iterate all configurations on <code class="language-plaintext highlighter-rouge">xpm install</code></li>
-  <li>[#88] - add support for configurations &amp; actions</li>
+  <li>[#94] add <code class="language-plaintext highlighter-rouge">--config</code> to <code class="language-plaintext highlighter-rouge">xpm link</code></li>
+  <li>[#95] add <code class="language-plaintext highlighter-rouge">--config</code> to <code class="language-plaintext highlighter-rouge">xpm uninstall</code></li>
+  <li>[#96] update <code class="language-plaintext highlighter-rouge">xpm list</code> to show configurations dependencies</li>
+  <li>[#90] iterate all configurations on <code class="language-plaintext highlighter-rouge">xpm install</code></li>
+  <li>[#88] add support for configurations &amp; actions</li>
 </ul>
 
 <p>Another important enhancement is the addition of <code class="language-plaintext highlighter-rouge">properties</code> and of a
 template engine to process substitutions in actions/scripts.</p>
 
 <ul>
-  <li>[#91] - fix use of properties in substitutions</li>
-  <li>[#92] - Add <code class="language-plaintext highlighter-rouge">os.platform</code> and <code class="language-plaintext highlighter-rouge">os.arch</code> to substitution map</li>
-  <li>[#91] - add template <code class="language-plaintext highlighter-rouge">properties</code>; if <code class="language-plaintext highlighter-rouge">--config</code> is used, the
+  <li>[#91] fix use of properties in substitutions</li>
+  <li>[#92] Add <code class="language-plaintext highlighter-rouge">os.platform</code> and <code class="language-plaintext highlighter-rouge">os.arch</code> to substitution map</li>
+  <li>[#91] add template <code class="language-plaintext highlighter-rouge">properties</code>; if <code class="language-plaintext highlighter-rouge">--config</code> is used, the
 configuration properties take precedence over package properties.</li>
 </ul>
 
 <p>Other enhancements:</p>
 
 <ul>
-  <li>[#35] - to better accommodate future enhancements, and spot cases
+  <li>[#35] to better accommodate future enhancements, and spot cases
 when an old xpm is used to process a <code class="language-plaintext highlighter-rouge">package.json</code> which includes
 new content, the <code class="language-plaintext highlighter-rouge">xpack.checkMinimumXpmRequired</code> property was added</li>
-  <li>[#93] - processing for <code class="language-plaintext highlighter-rouge">--dry-run</code> was implemented for <code class="language-plaintext highlighter-rouge">xpm install</code></li>
-  <li>[#89] - prefer run &amp; run-action</li>
+  <li>[#93] processing for <code class="language-plaintext highlighter-rouge">--dry-run</code> was implemented for <code class="language-plaintext highlighter-rouge">xpm install</code></li>
+  <li>[#89] prefer run &amp; run-action</li>
 </ul>
 
 <h3 id="other-changes">Other changes</h3>
@@ -571,7 +571,7 @@ npm xpm@0.9.0 '/Users/ilg/.nvm/versions/node/v14.16.0/lib/node_modules/xpm'
 <h2 id="ci-tests">CI tests</h2>
 
 <p>Continuous integration tests are done via GitHub
-<a href="https://github.com/xpack/xpm-js/actions">actions</a>.</p>
+<a href="https://github.com/xpack/xpm-js/actions">Actions</a>.</p>
 
 <h2 id="download-analytics">Download analytics</h2>
 
