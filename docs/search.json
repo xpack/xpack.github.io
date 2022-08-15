@@ -1,6 +1,17 @@
 [
 
 
+{
+"title": "0001: Share npm dependencies",
+"tags": "",
+"keywords": "xPackpackagemanagerpolicy",
+"url": "/xpm/policies/0001/",
+"summary": ""
+}
+,
+
+
+
 
 
 
@@ -379,7 +390,7 @@
 "tags": "",
 "keywords": "xPackpackagemanager",
 "url": "/xpm/",
-"summary": "<p>A tool to manage dependencies for language neutral multi-version source and binary packages, inspired by npm.</p>"
+"summary": "<p>A tool to orchestrate builds and manage dependencies for language neutral, multi-version projects, inspired by npm.</p>"
 }
 ,
 
@@ -995,6 +1006,17 @@
 
 
 {
+"title": "xpm Policies",
+"tags": "",
+"keywords": "xPackpackagemanagercompatibilitypolicy",
+"url": "/xpm/policies/",
+"summary": "<p>Compatibility policies.</p>"
+}
+,
+
+
+
+{
 "title": "GNU predefined macros",
 "tags": "",
 "keywords": "gnugccc++preprocessormacros",
@@ -1111,6 +1133,17 @@
 "keywords": "",
 "url": "/xpm/cli/run/",
 "summary": ""
+}
+,
+
+
+
+{
+"title": "xPack Schemas",
+"tags": "",
+"keywords": "",
+"url": "/develop/schemas/",
+"summary": "<p>JSON Schemas.</p>"
 }
 ,
 
@@ -1339,6 +1372,17 @@
 "keywords": "",
 "url": "/xpm/cli/uninstall/",
 "summary": ""
+}
+,
+
+
+
+{
+"title": "VS Code Settings",
+"tags": "",
+"keywords": "",
+"url": "/develop/vs-code-settings/",
+"summary": "<p>VS Code settings useful in xPack projects.</p>"
 }
 ,
 
