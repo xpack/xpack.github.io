@@ -5,9 +5,23 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 15 Aug 2022 17:03:59 +0000</pubDate>
-        <lastBuildDate>Mon, 15 Aug 2022 17:03:59 +0000</lastBuildDate>
+        <pubDate>Sun, 21 Aug 2022 11:16:48 +0000</pubDate>
+        <lastBuildDate>Sun, 21 Aug 2022 11:16:48 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>xPack LLVM clang v14.0.6-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/clang/&quot;&gt;The xPack LLVM clang&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://clang.org&quot;&gt;LLVM clang&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Sun, 21 Aug 2022 10:34:59 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/08/21/clang-v14-0-6-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/08/21/clang-v14-0-6-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>clang</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack xpm v0.14.0 released</title>
@@ -173,26 +187,6 @@
             <category>package</category>
             
             <category>manager</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>VS Code xPack extension v0.4.18 released</title>
-            <description>&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;</description>
-            <pubDate>Sat, 21 May 2022 10:20:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/05/21/vscode-xpack-v0-4-18-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/05/21/vscode-xpack-v0-4-18-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>vscode</category>
-            
-            <category>vscode-xpack</category>
-            
-            <category>extension</category>
-            
-            <category>c++</category>
             
             
         </item>

@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xpm folders" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-08-15T15:54:32+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"xpm folders","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/folders/"},"url":"https://xpack.github.io/xpm/folders/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-08-21T10:42:10+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"xpm folders","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/folders/"},"url":"https://xpack.github.io/xpm/folders/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -436,12 +436,13 @@ setting them in shell init scripts is not effective, since the windows manager
 usually is not started by a shell, but by other system mechanism, which has
 its own configuration files.</p>
 
-<h2 id="environment">Environment</h2>
+<h2 id="environment-variables">Environment variables</h2>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">XPACKS_STORE_FOLDER</code> (was <code class="language-plaintext highlighter-rouge">XPACKS_REPO_FOLDER</code>)</li>
   <li><code class="language-plaintext highlighter-rouge">XPACKS_CACHE_FOLDER</code></li>
-  <li><code class="language-plaintext highlighter-rouge">XPACKS_SYSTEM_FOLDER</code> (not implemented yet)</li>
+  <li><code class="language-plaintext highlighter-rouge">XPACKS_SYSTEM_STORE_FOLDER</code> (not implemented yet; was <code class="language-plaintext highlighter-rouge">XPACKS_SYSTEM_FOLDER</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">XPACKS_SYSTEM_CACHE_FOLDER</code> (not implemented yet)</li>
 </ul>
 
 <h2 id="macos">macOS</h2>
@@ -451,13 +452,15 @@ its own configuration files.</p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">${HOME}/Library/xPacks</code></li>
   <li><code class="language-plaintext highlighter-rouge">${HOME}/Library/Caches/xPacks</code></li>
+  <li><code class="language-plaintext highlighter-rouge">${HOME}/Library/xPacks/.bin</code> (not in PATH)</li>
 </ul>
 
 <p>System install (not implemented yet):</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">/opt/xPacks</code> with</li>
-  <li>links in <code class="language-plaintext highlighter-rouge">/usr/local/bin</code> (normally in <code class="language-plaintext highlighter-rouge">PATH</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">/Library/xPacks</code></li>
+  <li><code class="language-plaintext highlighter-rouge">/Library/Caches/xPacks</code></li>
+  <li><code class="language-plaintext highlighter-rouge">/Library/xPacks/.bin</code> (not in PATH)</li>
 </ul>
 
 <h2 id="gnulinux">GNU/Linux</h2>
@@ -467,13 +470,15 @@ its own configuration files.</p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">${HOME}/.local/xPacks</code> (was <code class="language-plaintext highlighter-rouge">${HOME}/opt/xPacks</code> in earlier versions)</li>
   <li><code class="language-plaintext highlighter-rouge">${HOME}/.cache/xPacks</code></li>
+  <li><code class="language-plaintext highlighter-rouge">${HOME}/.local/xPacks/.bin</code> (not in PATH)</li>
 </ul>
 
-<p>System install (not implemented):</p>
+<p>System install (not implemented yet):</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">/opt/xPacks</code></li>
-  <li>links in <code class="language-plaintext highlighter-rouge">/usr/local/bin</code> (normally in <code class="language-plaintext highlighter-rouge">PATH</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">/opt/xPacks/.cache</code></li>
+  <li><code class="language-plaintext highlighter-rouge">/opt/xPacks/.bin</code> (not in PATH)</li>
 </ul>
 
 <h2 id="windows">Windows</h2>
@@ -481,16 +486,29 @@ its own configuration files.</p>
 <p>Global (home) install:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">%APPDATA%\xPacks</code> (<code class="language-plaintext highlighter-rouge">C:\Users\ilg\AppData\Roaming\xPacks</code>)</li>
-  <li><code class="language-plaintext highlighter-rouge">%LOCALAPPDATA%\Caches\xPacks</code> (<code class="language-plaintext highlighter-rouge">C:\Users\ilg\AppData\Local\Caches\xPacks</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">%APPDATA%\xPacks</code> (like <code class="language-plaintext highlighter-rouge">C:\Users\ilg\AppData\Roaming\xPacks</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">%LOCALAPPDATA%\Caches\xPacks</code> (like <code class="language-plaintext highlighter-rouge">C:\Users\ilg\AppData\Local\Caches\xPacks</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">%APPDATA%\xPacks\.bin</code> (not in <code class="language-plaintext highlighter-rouge">Path</code>)</li>
 </ul>
 
 <p>System install (not implemented):</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">%ProgramFiles%\xPacks</code> (<code class="language-plaintext highlighter-rouge">C:\Program Files\xPacks</code>)</li>
-  <li>links in <code class="language-plaintext highlighter-rouge">%ProgramFiles%\xPacks\.bin</code>, which must be added to the <code class="language-plaintext highlighter-rouge">Path</code></li>
+  <li><code class="language-plaintext highlighter-rouge">%ProgramFiles%\xPacks</code> (like <code class="language-plaintext highlighter-rouge">C:\Program Files\xPacks</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">%ProgramFiles%\xPacks\.cache</code></li>
+  <li><code class="language-plaintext highlighter-rouge">%ProgramFiles%\xPacks\.bin</code> (not in <code class="language-plaintext highlighter-rouge">Path</code>)</li>
 </ul>
+
+<h2 id="links-not-created-by-default">Links not created by default</h2>
+
+<p>Please note that since installing binaries globally is strongly
+discouraged in favour of installing links in each project, the global
+or system links are not installed by default, and require the user to
+explicitly specify the desired folder.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">.bin</code> folders mentioned before are only recommendations and
+intentionally are not in the PATH. However, in special setups,
+users can add links to binaries in any folder.</p>
 
 <h2 id="the-xpacks-folder">The xPacks folder</h2>
 
@@ -615,7 +633,7 @@ recommended to use the default locations.</div>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Aug 15, 2022<br/> Site last generated: Aug 15, 2022 <br />
+<span>Page last updated:</span> Aug 21, 2022<br/> Site last generated: Aug 21, 2022 <br />
                 </div>
             </div>
 </footer>

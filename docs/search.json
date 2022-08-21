@@ -1675,6 +1675,16 @@
 
 
 {
+"title": "xPack LLVM clang v14.0.6-1 released",
+"tags": "releasesclang",
+"keywords": "",
+"url": "/blog/2022/08/21/clang-v14-0-6-1-released/",
+"summary": "<p>Version <strong>14.0.6-1</strong> is a new release; it follows the upstream release.</p>"
+}
+,
+
+
+{
 "title": "xPack xpm v0.14.0 released",
 "tags": "releasesxpmpackagemanager",
 "keywords": "",
