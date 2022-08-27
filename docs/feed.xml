@@ -5,9 +5,33 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 25 Aug 2022 18:01:18 +0000</pubDate>
-        <lastBuildDate>Thu, 25 Aug 2022 18:01:18 +0000</lastBuildDate>
+        <pubDate>Sat, 27 Aug 2022 16:23:17 +0000</pubDate>
+        <lastBuildDate>Sat, 27 Aug 2022 16:23:17 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>xPack GNU AArch64 Embedded GCC v11.3.1-1.2 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/aarch64-none-elf-gcc/&quot;&gt;The xPack GNU AArch64 Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain&quot;&gt;GNU AArch64 Embedded Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Sat, 27 Aug 2022 16:05:52 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/08/27/aarch64-none-elf-gcc-v11-3-1-1-2-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/08/27/aarch64-none-elf-gcc-v11-3-1-1-2-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>arm</category>
+            
+            <category>aarch64-none-elf-gcc</category>
+            
+            <category>gcc</category>
+            
+            <category>binaries</category>
+            
+            <category>c++</category>
+            
+            <category>exceptions</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack GNU AArch64 Embedded GCC v11.3.1-1.1 released</title>
@@ -161,30 +185,6 @@
             <category>arm</category>
             
             <category>aarch64-none-elf-gcc</category>
-            
-            <category>gcc</category>
-            
-            <category>binaries</category>
-            
-            <category>c++</category>
-            
-            <category>exceptions</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack GNU Arm Embedded GCC v11.2.1-1.2 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/arm-none-eabi-gcc/&quot;&gt;The xPack GNU Arm Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/open-source/gnu-toolchain/gnu-rm&quot;&gt;GNU Arm Embedded Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Mon, 30 May 2022 13:28:15 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/05/30/arm-none-eabi-gcc-v11-2-1-1-2-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/05/30/arm-none-eabi-gcc-v11-2-1-1-2-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>arm</category>
-            
-            <category>arm-none-eabi-gcc</category>
             
             <category>gcc</category>
             

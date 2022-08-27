@@ -1675,6 +1675,16 @@
 
 
 {
+"title": "xPack GNU AArch64 Embedded GCC v11.3.1-1.2 released",
+"tags": "releasesarmaarch64-none-elf-gccgccbinariesc++exceptions",
+"keywords": "",
+"url": "/blog/2022/08/27/aarch64-none-elf-gcc-v11-3-1-1-2-released/",
+"summary": "<p>Version <strong>11.3.1-1.2</strong> is a maintenance release; it fixes an issue with the build of <code class="language-plaintext highlighter-rouge">aarch64-none-elf-as</code>.</p>"
+}
+,
+
+
+{
 "title": "xPack GNU AArch64 Embedded GCC v11.3.1-1.1 released",
 "tags": "releasesarmaarch64-none-elf-gccgccbinariesc++exceptions",
 "keywords": "",
