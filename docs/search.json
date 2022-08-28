@@ -1675,6 +1675,16 @@
 
 
 {
+"title": "xPack GNU Arm Embedded GCC v11.3.1-1.1 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
+"keywords": "",
+"url": "/blog/2022/08/28/arm-none-eabi-gcc-v11-3-1-1-1-released/",
+"summary": "<p>Version <strong>11.3.1-1.1</strong> is a new release; it follows the Arm release.</p>"
+}
+,
+
+
+{
 "title": "xPack GNU AArch64 Embedded GCC v11.3.1-1.2 released",
 "tags": "releasesarmaarch64-none-elf-gccgccbinariesc++exceptions",
 "keywords": "",
