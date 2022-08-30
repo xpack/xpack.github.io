@@ -1675,6 +1675,16 @@
 
 
 {
+"title": "xPack GNU RISC-V Embedded GCC v12.2.0-1 released",
+"tags": "releasesriscvriscv-none-elf-gccgccbinariesc++",
+"keywords": "",
+"url": "/blog/2022/08/30/riscv-none-elf-gcc-v12-2-0-1-released/",
+"summary": "<p>Version <strong>12.2.0-1</strong> is a new release; it follows the GNU GCC release.</p>"
+}
+,
+
+
+{
 "title": "xPack GNU Arm Embedded GCC v11.3.1-1.1 released",
 "tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
 "keywords": "",
