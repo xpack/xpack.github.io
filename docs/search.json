@@ -1675,6 +1675,16 @@
 
 
 {
+"title": "xPack LLVM clang v14.0.6-2 released",
+"tags": "releasesclang",
+"keywords": "",
+"url": "/blog/2022/08/31/clang-v14-0-6-2-released/",
+"summary": "<p>Version <strong>14.0.6-2</strong> is a maintenance release; it includes a patch to fix a clangd issue.</p>"
+}
+,
+
+
+{
 "title": "xPack GCC v12.2.0-1 released",
 "tags": "releasesgcc",
 "keywords": "",
