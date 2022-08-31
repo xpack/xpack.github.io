@@ -5,9 +5,31 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Wed, 31 Aug 2022 05:30:18 +0000</pubDate>
-        <lastBuildDate>Wed, 31 Aug 2022 05:30:18 +0000</lastBuildDate>
+        <pubDate>Wed, 31 Aug 2022 14:17:31 +0000</pubDate>
+        <lastBuildDate>Wed, 31 Aug 2022 14:17:31 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>xPack Ninja Build v1.11.1-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/ninja-build/&quot;&gt;The xPack Ninja Build&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://ninja-build.org&quot;&gt;Ninja Build&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Wed, 31 Aug 2022 14:05:18 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/08/31/ninja-build-v1-11-1-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/08/31/ninja-build-v1-11-1-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>ninja-build</category>
+            
+            <category>ninja</category>
+            
+            <category>build</category>
+            
+            <category>speed</category>
+            
+            <category>small</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack LLVM clang v14.0.6-2 released</title>
@@ -179,24 +201,6 @@
             <category>extension</category>
             
             <category>c++</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack xpm v0.13.7 released</title>
-            <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; is a&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt; dependencies.&lt;/p&gt;</description>
-            <pubDate>Wed, 13 Jul 2022 12:07:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/07/13/xpm-v0-13-7-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/07/13/xpm-v0-13-7-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>xpm</category>
-            
-            <category>package</category>
-            
-            <category>manager</category>
             
             
         </item>

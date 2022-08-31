@@ -1675,6 +1675,16 @@
 
 
 {
+"title": "xPack Ninja Build v1.11.1-1 released",
+"tags": "releasesninja-buildninjabuildspeedsmall",
+"keywords": "",
+"url": "/blog/2022/08/31/ninja-build-v1-11-1-1-released/",
+"summary": "<p>Version <strong>1.11.1-1</strong> is a new release; it follows the upstream release.</p>"
+}
+,
+
+
+{
 "title": "xPack LLVM clang v14.0.6-2 released",
 "tags": "releasesclang",
 "keywords": "",
