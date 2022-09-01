@@ -5,9 +5,23 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 01 Sep 2022 15:16:20 +0000</pubDate>
-        <lastBuildDate>Thu, 01 Sep 2022 15:16:20 +0000</lastBuildDate>
+        <pubDate>Thu, 01 Sep 2022 18:42:41 +0000</pubDate>
+        <lastBuildDate>Thu, 01 Sep 2022 18:42:41 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>xPack OpenOCD v0.11.0-5 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/openocd/&quot;&gt;The xPack OpenOCD&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://openocd.org&quot;&gt;OpenOCD&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Thu, 01 Sep 2022 18:29:34 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/09/01/openocd-v0-11-0-5-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/09/01/openocd-v0-11-0-5-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>openocd</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Meson Build v0.61.5-1 released</title>
@@ -187,20 +201,6 @@
             <category>c++</category>
             
             <category>exceptions</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack LLVM clang v14.0.6-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/clang/&quot;&gt;The xPack LLVM clang&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://clang.org&quot;&gt;LLVM clang&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Sun, 21 Aug 2022 10:34:59 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/08/21/clang-v14-0-6-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/08/21/clang-v14-0-6-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>clang</category>
             
             
         </item>
