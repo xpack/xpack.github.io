@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Version 1.10.2-3 is a maintenance release of the xPack Ninja Build package, fixing the spawning of cmd.exe scripts on Windows.">
-<meta name="keywords" content="releasesninja-buildninjabuildspeedsmall,  ">
-<title>xPack Ninja Build v1.10.2-3 released | The xPack Build Framework</title>
+<meta name="description" content="Version 0.61.5-1 is a new release; it follows the upstream release.">
+<meta name="keywords" content="releasesmeson-buildmesonbuildpythonninja,  ">
+<title>xPack Meson Build v0.61.5-1 released | The xPack Build Framework</title>
 <link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
 
 
@@ -14,21 +14,21 @@
 <link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>xPack Ninja Build v1.10.2-3 released</title>
+<title>xPack Meson Build v0.61.5-1 released</title>
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="xPack Ninja Build v1.10.2-3 released" />
+<meta property="og:title" content="xPack Meson Build v0.61.5-1 released" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="The xPack Ninja Build is the xPack distribution of the Ninja build system." />
-<meta property="og:description" content="The xPack Ninja Build is the xPack distribution of the Ninja build system." />
-<link rel="canonical" href="https://xpack.github.io/blog/2021/04/28/ninja-build-v1-10-2-3-released/" />
-<meta property="og:url" content="https://xpack.github.io/blog/2021/04/28/ninja-build-v1-10-2-3-released/" />
+<meta name="description" content="The xPack Meson Build is a standalone cross-platform binary distribution of Meson Build." />
+<meta property="og:description" content="The xPack Meson Build is a standalone cross-platform binary distribution of Meson Build." />
+<link rel="canonical" href="https://xpack.github.io/blog/2022/09/01/meson-build-v0-61-5-1-released/" />
+<meta property="og:url" content="https://xpack.github.io/blog/2022/09/01/meson-build-v0-61-5-1-released/" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-04-28T19:58:00+00:00" />
+<meta property="article:published_time" content="2022-09-01T15:03:21+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="xPack Ninja Build v1.10.2-3 released" />
+<meta property="twitter:title" content="xPack Meson Build v0.61.5-1 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-09-01T15:04:51+00:00","datePublished":"2021-04-28T19:58:00+00:00","description":"The xPack Ninja Build is the xPack distribution of the Ninja build system.","headline":"xPack Ninja Build v1.10.2-3 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/04/28/ninja-build-v1-10-2-3-released/"},"url":"https://xpack.github.io/blog/2021/04/28/ninja-build-v1-10-2-3-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-09-01T15:04:51+00:00","datePublished":"2022-09-01T15:03:21+00:00","description":"The xPack Meson Build is a standalone cross-platform binary distribution of Meson Build.","headline":"xPack Meson Build v0.61.5-1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/09/01/meson-build-v0-61-5-1-released/"},"url":"https://xpack.github.io/blog/2022/09/01/meson-build-v0-61-5-1-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -238,7 +238,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: '/search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="xPack Ninja Build v1.10.2-3 released">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="xPack Meson Build v0.61.5-1 released">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -264,7 +264,7 @@
                 
 
 <ul id="mysidebar" class="nav">
-  <li class="sidebarTitle">Ninja Build </li>
+  <li class="sidebarTitle"> </li>
   
   
   
@@ -274,35 +274,238 @@
           
           
           
-          <li><a title="Overview" href="/ninja-build/">Overview</a></li>
+          <li><a title="Overview" href="/">Overview</a></li>
           
           
           
           
           
           
-          <li><a title="Install" href="/ninja-build/install/">Install</a></li>
+          <li><a title="Intro (xPack 101)" href="/intro/">Intro (xPack 101)</a></li>
           
           
           
           
           
           
-          <li><a title="Support" href="/ninja-build/support/">Support</a></li>
+          <li><a title="Install prerequisites" href="/install/">Install prerequisites</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Core Tools" href="#">Core Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="xpm" href="/xpm/">xpm</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="3rd Party Tools" href="#">3rd Party Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="gcc" href="/gcc/">gcc</a></li>
           
           
           
           
           
           
-          <li><a title="FAQ" href="/ninja-build/faq/">FAQ</a></li>
+          <li><a title="clang" href="/clang/">clang</a></li>
           
           
           
           
           
           
-          <li><a title="Releases" href="/ninja-build/releases/">Releases</a></li>
+          <li><a title="arm-none-eabi-gcc" href="/arm-none-eabi-gcc/">arm-none-eabi-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="aarch64-none-elf-gcc" href="/aarch64-none-elf-gcc/">aarch64-none-elf-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="riscv-none-elf-gcc" href="/riscv-none-elf-gcc/">riscv-none-elf-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="openocd" href="/openocd/">openocd</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="qemu-arm" href="/qemu-arm/">qemu-arm</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="qemu-riscv" href="/qemu-riscv/">qemu-riscv</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="windows-build-tools" href="/windows-build-tools/">windows-build-tools</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="ninja-build" href="/ninja-build/">ninja-build</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="cmake" href="/cmake/">cmake</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="meson-build" href="/meson-build/">meson-build</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="VS Code Extensions" href="#">VS Code Extensions</a>
+      <ul>
+          
+          
+          
+          <li><a title="xPack C/C++ Build Tools" href="/vscode/">xPack C/C++ Build Tools</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Support" href="#">Support</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/support/">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Developer Info" href="#">Developer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/develop/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Create a new xPack repo" href="/develop/how-to-new-git/">Create a new xPack repo</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="JavaScript Style Guide" href="/develop/js-style-guide/">JavaScript Style Guide</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Links" href="/develop/links/">Links</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Maintainer Info" href="#">Maintainer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/maintain/">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Project" href="#">Project</a>
+      <ul>
+          
+          
+          
+          <li><a class="extern" title="License (MIT)" href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">License (MIT)</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="About" href="/about/">About</a></li>
           
           
           
@@ -335,8 +538,8 @@ and the class never gets inserted.-->
             <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
 
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">xPack Ninja Build v1.10.2-3 released</h1>
-        <p class="post-meta"><time datetime="2021-04-28T19:58:00+00:00" itemprop="datePublished">Apr 28, 2021</time> <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">/ Liviu Ionescu</span></span> /
+        <h1 class="post-title" itemprop="name headline">xPack Meson Build v0.61.5-1 released</h1>
+        <p class="post-meta"><time datetime="2022-09-01T15:03:21+00:00" itemprop="datePublished">Sep 1, 2022</time> <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">/ Liviu Ionescu</span></span> /
             
             
             
@@ -344,11 +547,11 @@ and the class never gets inserted.-->
             
             
             
-            <a href="/tags/ninja-build/">ninja-build</a>, 
+            <a href="/tags/meson-build/">meson-build</a>, 
             
             
             
-            <a href="/tags/ninja/">ninja</a>, 
+            <a href="/tags/meson/">meson</a>, 
             
             
             
@@ -356,11 +559,11 @@ and the class never gets inserted.-->
             
             
             
-            <a href="/tags/speed/">speed</a>, 
+            <a href="/tags/python/">python</a>, 
             
             
             
-            <a href="/tags/small/">small</a>
+            <a href="/tags/ninja/">ninja</a>
             
             
             
@@ -373,73 +576,115 @@ and the class never gets inserted.-->
     <div class="post-content" itemprop="articleBody">
 
         
-        <div class="summary">Version 1.10.2-3 is a maintenance release of the <strong>xPack Ninja Build</strong> package, fixing the spawning of cmd.exe scripts on Windows.
+        <div class="summary">Version <strong>0.61.5-1</strong> is a new release; it follows the upstream release.
 </div>
         
 
-        <p><a href="https://xpack.github.io/ninja-build/">The xPack Ninja Build</a>
-is the <strong>xPack</strong> distribution of the
-<a href="https://ninja-build.org">Ninja</a> build system.</p>
+        <p><a href="https://xpack.github.io/meson-build/">The xPack Meson Build</a>
+is a standalone cross-platform binary distribution of
+<a href="http://mesonbuild.org">Meson Build</a>.</p>
 
-<p>There are separate binaries for <strong>Windows</strong> (Intel 32/64-bit),
-<strong>macOS</strong> (Intel 64-bit) and <strong>GNU/Linux</strong> (Intel 32/64-bit, Arm 32/64-bit).</p>
+<p>There are separate binaries for <strong>Windows</strong> (Intel 64-bit),
+<strong>macOS</strong> (Intel 64-bit, Apple Silicon 64-bit)
+and <strong>GNU/Linux</strong> (Intel 64-bit, Arm 32/64-bit).</p>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The main targets for the GNU/Linux
-ARMv7 and Aarch64 binaries are the <strong>Raspberry Pi</strong> class devices
-(RPi 2 and up; no RPi 1, being ARMv6).</div>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The main targets for the Arm binaries
+are the <strong>Raspberry Pi</strong> class devices (armv7l and aarch64;
+armv6 is not supported).</div>
 
 <h2 id="download">Download</h2>
 
-<p>The binary files are available from GitHub <a href="https://github.com/xpack-dev-tools/ninja-build-xpack/releases/tag/v1.10.2-3/">releases</a>.</p>
+<p>The binary files are available from GitHub <a href="https://github.com/xpack-dev-tools/meson-build-xpack/releases/tag/v0.61.5-1/">Releases</a>.</p>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For consistency with the Node.js naming
-conventions, the names of the Intel 32-bit images are now suffixed with
-<code class="language-plaintext highlighter-rouge">-ia32</code>.</div>
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+  <li>GNU/Linux Intel 64-bit: any system with <strong>GLIBC 2.27</strong> or higher
+(like Ubuntu 18 or later, Debian 10 or later, RedHat 8 later,
+Fedora 29 or later, etc)</li>
+  <li>GNU/Linux Arm 32/64-bit: any system with <strong>GLIBC 2.27</strong> or higher
+(like Raspberry Pi OS, Ubuntu 18 or later, Debian 10 or later, RedHat 8 later,
+Fedora 29 or later, etc)</li>
+  <li>Intel Windows 64-bit: Windows 7 with the Universal C Runtime
+(<a href="https://support.microsoft.com/en-us/topic/update-for-universal-c-runtime-in-windows-c0514201-7fe6-95a3-b0a5-287930f3560c">UCRT</a>),
+Windows 8, Windows 10</li>
+  <li>Intel macOS 64-bit: 10.13 or later</li>
+  <li>Apple Silicon macOS 64-bit: 11.6 or later</li>
+</ul>
 
 <h2 id="install">Install</h2>
 
-<p>The full details of installing the <strong>xPack Ninja Build</strong> on various platforms
+<p>The full details of installing the <strong>xPack Meson Build</strong> on various platforms
 are presented in the separate
-<a href="/ninja-build/install/">Install</a> page.</p>
+<a href="/meson-build/install/">Install</a> page.</p>
 
 <h3 id="easy-install">Easy install</h3>
 
-<p>The easiest way to install Ninja Build is with
+<p>The easiest way to install Meson Build is with
 <a href="/xpm/"><code class="language-plaintext highlighter-rouge">xpm</code></a>
 by using the <strong>binary xPack</strong>, available as
-<a href="https://www.npmjs.com/package/@xpack-dev-tools/ninja-build"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/ninja-build</code></a>
+<a href="https://www.npmjs.com/package/@xpack-dev-tools/meson-build"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/meson-build</code></a>
 from the <a href="https://www.npmjs.com"><code class="language-plaintext highlighter-rouge">npmjs.com</code></a> registry.</p>
 
-<p>To install the latest version available, use:</p>
+<p>With the <code class="language-plaintext highlighter-rouge">xpm</code> tool available, installing
+the latest version of the package and adding it as
+a dependency for a project is quite easy:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/ninja-build@latest
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>my-project
+xpm init <span class="c"># Only at first use.</span>
+
+xpm <span class="nb">install</span> @xpack-dev-tools/meson-build@latest
+
+<span class="nb">ls</span> <span class="nt">-l</span> xpacks/.bin
 </code></pre></div></div>
 
 <p>To install this specific version, use:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/ninja-build@1.10.2-3.1
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> @xpack-dev-tools/meson-build@0.61.5-1.1
+</code></pre></div></div>
+
+<p>It is also possible to install Meson Build globally, in the user home folder,
+but this requires xPack aware tools to automatically identify them and
+manage paths.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/meson-build@latest
+</code></pre></div></div>
+
+<h3 id="uninstall">Uninstall</h3>
+
+<p>To remove the links from the current project:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>my-project
+
+xpm uninstall @xpack-dev-tools/meson-build
+</code></pre></div></div>
+
+<p>To completely remove the package from the global store:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm uninstall <span class="nt">--global</span> @xpack-dev-tools/meson-build
 </code></pre></div></div>
 
 <h2 id="compliance">Compliance</h2>
 
-<p>The <strong>xPack Ninja Build</strong> is based on the official
-<a href="https://ninja-build.org">Ninja</a>,
-without any changes.</p>
+<p>The xPack Meson Build generally follows the official
+<a href="http://mesonbuild.org">Meson Build</a> releases.</p>
 
 <p>The current version is based on:</p>
 
 <ul>
-  <li>Ninja release
-<a href="https://github.com/ninja-build/ninja/releases/tag/v1.10.1">1.10.2</a>
-from Nov 28th, 2020.</li>
+  <li>Meson Build release
+<a href="https://github.com/mesonbuild/meson/releases/tag/0.61.5">0.61.5</a>
+from 13 Aug 2022.</li>
 </ul>
+
+<h2 id="changes">Changes</h2>
+
+<p>Compared to the upstream version, there are no functional changes.</p>
 
 <h2 id="bug-fixes">Bug fixes</h2>
 
 <ul>
-  <li>[#1] on Windows, starting npm/xpm applications via the <code class="language-plaintext highlighter-rouge">.cmd</code> forwarders
-still not fully functional, as it was shown when trying meson; the problem
-was identified as the missing quotes around the command passed to cmd.exe.</li>
+  <li>none</li>
 </ul>
 
 <h2 id="enhancements">Enhancements</h2>
@@ -448,25 +693,48 @@ was identified as the missing quotes around the command passed to cmd.exe.</li>
   <li>none</li>
 </ul>
 
-<h2 id="changes">Changes</h2>
-
-<p>Compared to the upstream version, the Windows version also supports
-spawning scripts via <code class="language-plaintext highlighter-rouge">cmd.exe /c</code>. These scripts are used by <strong>npm</strong>/<strong>xpm</strong>
-to redirect invocations to the global xPacks store.</p>
-
 <h2 id="known-problems">Known problems</h2>
 
 <ul>
   <li>none</li>
 </ul>
 
+<h2 id="embedded-python">Embedded Python</h2>
+
+<p>To simplify dependency management, this release embeds a <strong>Python
+3.10.6</strong> instance.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">meson</code> executable is a standard ELF/EXE which includes the Python
+run-time; the <code class="language-plaintext highlighter-rouge">main()</code> function prepares the Python environment and then
+invokes the Meson main:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">PyRun_SimpleString</span><span class="p">(</span><span class="s">"from mesonbuild import mesonmain</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+  <span class="n">PyRun_SimpleString</span><span class="p">(</span><span class="s">"sys.exit(mesonmain.main())</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>The Python library is located in the standard location:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">lib/python3.10</code></li>
+  <li><code class="language-plaintext highlighter-rouge">lib/python3.10/lib-dynload</code> (the platform dependent files)</li>
+</ul>
+
+<p>The Meson files are located in:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">lib/python3.10/mesonbuild</code></li>
+</ul>
+
+<p>To speed up execution, all Python files are compiled and are
+available only as <code class="language-plaintext highlighter-rouge">.pyc</code>.</p>
+
 <h2 id="shared-libraries">Shared libraries</h2>
 
 <p>On all platforms the packages are standalone, and expect only the standard
 runtime to be present on the host.</p>
 
-<p>All dependencies that are build as shared libraries are copied locally in the
-same folder as the executable.</p>
+<p>All dependencies that are build as shared libraries are copied locally
+in the <code class="language-plaintext highlighter-rouge">libexec</code> folder (or in the same folder as the executable for Windows).</p>
 
 <h3 id="dt_rpath-and-ld_library_path"><code class="language-plaintext highlighter-rouge">DT_RPATH</code> and <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code></h3>
 
@@ -480,9 +748,13 @@ same folder as the executable.</p>
 the highest priority, higher than <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code>, so if this later one
 is set in the environment, it should not interfere with the xPack binaries.</p>
 
-<h3 id="executable_path"><code class="language-plaintext highlighter-rouge">@executable_path</code></h3>
+<p>Please note that previous versions, up to mid-2020, used <code class="language-plaintext highlighter-rouge">DT_RUNPATH</code>, which
+has a priority lower than <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code>, and does not tolerate setting
+it in the environment.</p>
 
-<p>Similarly, on macOS, the binaries are adjusted with <code class="language-plaintext highlighter-rouge">otool</code> to use a
+<h3 id="rpath-and-loader_path"><code class="language-plaintext highlighter-rouge">@rpath</code> and <code class="language-plaintext highlighter-rouge">@loader_path</code></h3>
+
+<p>Similarly, on macOS, the binaries are adjusted with <code class="language-plaintext highlighter-rouge">install_name_tool</code> to use a
 relative path.</p>
 
 <h2 id="documentation">Documentation</h2>
@@ -490,30 +762,16 @@ relative path.</p>
 <p>The original documentation is available from:</p>
 
 <ul>
-  <li><a href="https://ninja-build.org/manual.html">https://ninja-build.org/manual.html</a></li>
-</ul>
-
-<h2 id="supported-platforms">Supported platforms</h2>
-
-<p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided.</p>
-
-<p>The binaries were built using the
-<a href="https://github.com/xpack/xpack-build-box">xPack Build Box (XBB)</a>, a set
-of build environments based on slightly older distributions, that should be
-compatible with most recent systems.</p>
-
-<ul>
-  <li>Intel GNU/Linux: all binaries were built with GCC 9.3, running in an
-Ubuntu 12 Docker container</li>
-  <li>Arm GNU/Linux: all binaries were built with GCC 9.3, running in an
-Ubuntu 16 Docker container</li>
-  <li>Windows: all binaries were built with mingw-w64 GCC 9.3, running in an
-Ubuntu 12 Docker container</li>
-  <li>macOS: all binaries were built with GCC 9.3, running in a separate
-folder on macOS 10.10.5.</li>
+  <li><a href="https://mesonbuild.com/Manual.html">https://mesonbuild.com/Manual.html</a></li>
 </ul>
 
 <h2 id="build">Build</h2>
+
+<p>The binaries for all supported platforms
+(Windows, macOS and GNU/Linux) were built using the
+<a href="https://xpack.github.io/xbb/">xPack Build Box (XBB)</a>, a set
+of build environments based on slightly older distributions, that should be
+compatible with most recent systems.</p>
 
 <p>The scripts used to build this distribution are in:</p>
 
@@ -522,64 +780,70 @@ folder on macOS 10.10.5.</li>
 </ul>
 
 <p>For the prerequisites and more details on the build procedure, please see the
-<a href="https://github.com/xpack-dev-tools/ninja-build-xpack/blob/xpack/README-BUILD.md">How to build</a> page.</p>
+<a href="https://github.com/xpack-dev-tools/meson-build-xpack/blob/xpack/README-BUILD.md">How to build</a> page.</p>
 
-<h2 id="travis-tests">Travis tests</h2>
+<h2 id="ci-tests">CI tests</h2>
 
-<p>The first set of tests were performed on Travis, by running
-a simple script to check if the binaries start on a wide range of
-platforms and distributions:</p>
+<p>Before publishing, a set of simple tests were performed on an exhaustive
+set of platforms. The results are available from:</p>
 
 <ul>
-  <li><a href="https://travis-ci.com/github/xpack-dev-tools/ninja-build-xpack/builds/224429685">test xPack Ninja Build on stable platforms</a></li>
-  <li><a href="https://travis-ci.com/github/xpack-dev-tools/ninja-build-xpack/builds/224429690">test xPack Ninja Build on latest platforms</a></li>
+  <li><a href="https://github.com/xpack-dev-tools/meson-build-xpack/actions/">GitHub Actions</a></li>
+  <li><a href="https://app.travis-ci.com/github/xpack-dev-tools/meson-build-xpack/builds/">Travis CI</a></li>
 </ul>
-
-<h2 id="tests">Tests</h2>
-
-<p>TBD</p>
 
 <h2 id="checksums">Checksums</h2>
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">
-bab7c9f80775d71c28bbf0c7322e9209059ca435276df221506c6a84d501e822
-xpack-ninja-build-1.10.2-3-darwin-x64.tar.gz
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">9cc4269af75aefb9c58251332077009ef35ecd31f58c650f9974951073ddfc5d
+xpack-meson-build-0.61.5-1-darwin-arm64.tar.gz
 
-ae093330e3f55f983a8e8de3b3ee4d6962d8ac1ff439fa505ffa34e475d5c5f2
-xpack-ninja-build-1.10.2-3-linux-arm64.tar.gz
+3eacb531e9adf37601ea8729487f4ba4343a72f3b8b8b7563ec1266a4d3108f3
+xpack-meson-build-0.61.5-1-darwin-x64.tar.gz
 
-97baabda3edf74726e5d60682a9b0fe95fdc8895e631694a65974ea94e4650a6
-xpack-ninja-build-1.10.2-3-linux-arm.tar.gz
+5a5ec86d14b7c843d418f0767a73c7e2788625abf18bdd8e1b5d44cfed2d05ea
+xpack-meson-build-0.61.5-1-linux-arm.tar.gz
 
-52ed3dd29174b584bd57ea100f69ab5b1888df7064b9368ba8522fb99957cdbd
-xpack-ninja-build-1.10.2-3-linux-ia32.tar.gz
+e63a0aeb5f3908484dc0af21cbf3b5b6a542729cdbf9b47a517c2031ea07a8c7
+xpack-meson-build-0.61.5-1-linux-arm64.tar.gz
 
-b49522febca4c4605e335b9482b96994f530729337623efc153098738f517e62
-xpack-ninja-build-1.10.2-3-linux-x64.tar.gz
+c928e4d38ee3ca8e5b0aaf236b87d4581df5fb1b47153d40f280246287fd252f
+xpack-meson-build-0.61.5-1-linux-x64.tar.gz
 
-223a3a32c00c12f3a64e42994c88d28a2595f70369893187fef2c96deb0c9e5c
-xpack-ninja-build-1.10.2-3-win32-ia32.zip
+d5b2394c18ea0655a2a9b003950563485154bf4011027675a58425e24b03df9e
+xpack-meson-build-0.61.5-1-win32-x64.zip
 
-e25d9f00bb4052eb6c61641f69ea7dcbf8ab45212d3c2078c98ef2cd1a074a5e
-xpack-ninja-build-1.10.2-3-win32-x64.zip
 </span></code></pre></div></div>
+
+<h2 id="deprecation-notices">Deprecation notices</h2>
+
+<h3 id="32-bit-support">32-bit support</h3>
+
+<p>Support for 32-bit Intel Linux and Intel Windows was
+dropped in 2022. Support for 32-bit Arm Linux (armv7l) will be preserved
+for a while, due to the large user base of 32-bit Raspberry Pi systems.</p>
+
+<h3 id="linux-minimum-requirements">Linux minimum requirements</h3>
+
+<p>Support for RedHat 7 was dropped in 2022 and the
+minimum requirement was raised to GLIBC 2.27, available starting
+with Ubuntu 18, Debian 10 and RedHat 8.</p>
 
 <h2 id="download-analytics">Download analytics</h2>
 
 <ul>
-  <li>GitHub <a href="https://github.com/xpack-dev-tools/ninja-build-xpack/">xpack-dev-tools/ninja-build-xpack</a>
+  <li>GitHub <a href="https://github.com/xpack-dev-tools/meson-build-xpack/">xpack-dev-tools/meson-build-xpack</a>
     <ul>
-      <li>this release <a href="https://github.com/xpack-dev-tools/ninja-build-xpack/releases/v1.10.2-3/"><img src="https://img.shields.io/github/downloads/xpack-dev-tools/ninja-build-xpack/v1.10.2-3/total.svg" alt="Github All Releases" /></a></li>
-      <li>all xPack releases <a href="https://github.com/xpack-dev-tools/ninja-build-xpack/releases/"><img src="https://img.shields.io/github/downloads/xpack-dev-tools/ninja-build-xpack/total.svg" alt="Github All Releases" /></a></li>
-      <li><a href="https://somsubhra.github.io/github-release-stats/?username=xpack-dev-tools&amp;repository=ninja-build-xpack">individual file counters</a> (grouped per release)</li>
+      <li>this release <a href="https://github.com/xpack-dev-tools/meson-build-xpack/releases/v0.61.5-1/"><img src="https://img.shields.io/github/downloads/xpack-dev-tools/meson-build-xpack/v0.61.5-1/total.svg" alt="Github All Releases" /></a></li>
+      <li>all xPack releases <a href="https://github.com/xpack-dev-tools/meson-build-xpack/releases/"><img src="https://img.shields.io/github/downloads/xpack-dev-tools/meson-build-xpack/total.svg" alt="Github All Releases" /></a></li>
+      <li><a href="https://somsubhra.github.io/github-release-stats/?username=xpack-dev-tools&amp;repository=meson-build-xpack">individual file counters</a> (grouped per release)</li>
     </ul>
   </li>
-  <li>npmjs.com <a href="https://www.npmjs.com/package/@xpack-dev-tools/ninja-build">@xpack-dev-tools/ninja-build</a>
+  <li>npmjs.com <a href="https://www.npmjs.com/package/@xpack-dev-tools/meson-build">@xpack-dev-tools/meson-build</a>
     <ul>
-      <li>latest releases <a href="https://www.npmjs.com/package/@xpack-dev-tools/ninja-build/"><img src="https://img.shields.io/npm/dw/@xpack-dev-tools/ninja-build.svg" alt="npm" /></a></li>
-      <li>all @xpack-dev-tools releases <a href="https://www.npmjs.com/package/@xpack-dev-tools/ninja-build/"><img src="https://img.shields.io/npm/dt/@xpack-dev-tools/ninja-build.svg" alt="npm" /></a></li>
+      <li>latest releases <a href="https://www.npmjs.com/package/@xpack-dev-tools/meson-build/"><img src="https://img.shields.io/npm/dw/@xpack-dev-tools/meson-build.svg" alt="npm" /></a></li>
+      <li>all @xpack-dev-tools releases <a href="https://www.npmjs.com/package/@xpack-dev-tools/meson-build/"><img src="https://img.shields.io/npm/dt/@xpack-dev-tools/meson-build.svg" alt="npm" /></a></li>
     </ul>
   </li>
 </ul>
@@ -595,7 +859,7 @@ for the individual file counters.</p>
 </article>
 
     
-    <a target="_blank" rel="noopener" href="https://github.com/xpack/web-jekyll/blob/master/_posts/releases/ninja-build/2021-04-28-ninja-build-v1-10-2-3-released.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
+    <a target="_blank" rel="noopener" href="https://github.com/xpack/web-jekyll/blob/master/_posts/releases/meson-build/2022-09-01-meson-build-v0-61-5-1-released.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
 
     
 
@@ -612,7 +876,7 @@ for the individual file counters.</p>
     <script type="text/javascript">
         var disqus_config = function () {
             this.page.url = '';  // Your page's canonical URL variable
-            this.page.identifier = '/blog/2021/04/28/ninja-build-v1-10-2-3-released/'; // Your page's unique identifier variable
+            this.page.identifier = '/blog/2022/09/01/meson-build-v0-61-5-1-released/'; // Your page's unique identifier variable
         };
 
         (function() { // DON'T EDIT BELOW THIS LINE
