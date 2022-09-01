@@ -5,9 +5,25 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Wed, 31 Aug 2022 14:17:31 +0000</pubDate>
-        <lastBuildDate>Wed, 31 Aug 2022 14:17:31 +0000</lastBuildDate>
+        <pubDate>Thu, 01 Sep 2022 09:02:05 +0000</pubDate>
+        <lastBuildDate>Thu, 01 Sep 2022 09:02:05 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>xPack CMake v3.22.6-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/cmake/&quot;&gt;The xPack CMake&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://cmake.org&quot;&gt;CMake&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Thu, 01 Sep 2022 08:44:13 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/09/01/cmake-v3-22-6-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/09/01/cmake-v3-22-6-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>cmake</category>
+            
+            <category>build</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Ninja Build v1.11.1-1 released</title>
@@ -181,26 +197,6 @@
             <category>package</category>
             
             <category>manager</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>VS Code xPack extension v0.4.19 released</title>
-            <description>&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;</description>
-            <pubDate>Sat, 30 Jul 2022 07:05:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/07/30/vscode-xpack-v0-4-19-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/07/30/vscode-xpack-v0-4-19-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>vscode</category>
-            
-            <category>vscode-xpack</category>
-            
-            <category>extension</category>
-            
-            <category>c++</category>
             
             
         </item>
