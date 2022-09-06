@@ -5,9 +5,31 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 01 Sep 2022 18:42:41 +0000</pubDate>
-        <lastBuildDate>Thu, 01 Sep 2022 18:42:41 +0000</lastBuildDate>
+        <pubDate>Tue, 06 Sep 2022 14:12:04 +0000</pubDate>
+        <lastBuildDate>Tue, 06 Sep 2022 14:12:04 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>xPack QEMU Arm v7.1.0-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/qemu-arm/&quot;&gt;The xPack QEMU Arm&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://www.qemu.org&quot;&gt;QEMU&lt;/a&gt;, with several extensions for Arm Cortex-Mdevices.&lt;/p&gt;</description>
+            <pubDate>Tue, 06 Sep 2022 12:50:46 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/09/06/qemu-arm-v7-1-0-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/09/06/qemu-arm-v7-1-0-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>qemu</category>
+            
+            <category>emulator</category>
+            
+            <category>arm</category>
+            
+            <category>aarch64</category>
+            
+            <category>cortex-m</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack OpenOCD v0.11.0-5 released</title>
@@ -163,30 +185,6 @@
             <pubDate>Sat, 27 Aug 2022 16:05:52 +0000</pubDate>
             <link>https://xpack.github.io/blog/2022/08/27/aarch64-none-elf-gcc-v11-3-1-1-2-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2022/08/27/aarch64-none-elf-gcc-v11-3-1-1-2-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>arm</category>
-            
-            <category>aarch64-none-elf-gcc</category>
-            
-            <category>gcc</category>
-            
-            <category>binaries</category>
-            
-            <category>c++</category>
-            
-            <category>exceptions</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack GNU AArch64 Embedded GCC v11.3.1-1.1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/aarch64-none-elf-gcc/&quot;&gt;The xPack GNU AArch64 Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain&quot;&gt;GNU AArch64 Embedded Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Thu, 25 Aug 2022 17:27:12 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/08/25/aarch64-none-elf-gcc-v11-3-1-1-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/08/25/aarch64-none-elf-gcc-v11-3-1-1-1-released/</guid>
             
             <category>releases</category>
             
