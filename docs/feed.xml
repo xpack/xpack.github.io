@@ -5,9 +5,27 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sat, 10 Sep 2022 15:26:27 +0000</pubDate>
-        <lastBuildDate>Sat, 10 Sep 2022 15:26:27 +0000</lastBuildDate>
+        <pubDate>Sun, 25 Sep 2022 19:51:05 +0000</pubDate>
+        <lastBuildDate>Sun, 25 Sep 2022 19:51:05 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>xPack MinGW-w64 GCC v11.3.0-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/mingw-w64-gcc/&quot;&gt;The xPack MinGW-w64 GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://www.mingw-w64.org&quot;&gt;Mingw-w64&lt;/a&gt;&lt;a href=&quot;http://gcc.org&quot;&gt;GCC&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Sun, 25 Sep 2022 18:31:38 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/09/25/mingw-w64-gcc-v11-3-0-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/09/25/mingw-w64-gcc-v11-3-0-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>gcc</category>
+            
+            <category>mingw</category>
+            
+            <category>mingw-w64</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack QEMU RISC-V v7.1.0-1 released</title>
@@ -169,30 +187,6 @@
             <category>binaries</category>
             
             <category>c++</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack GNU Arm Embedded GCC v11.3.1-1.1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/arm-none-eabi-gcc/&quot;&gt;The xPack GNU Arm Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain&quot;&gt;Arm GNU Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Sun, 28 Aug 2022 04:11:14 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/08/28/arm-none-eabi-gcc-v11-3-1-1-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/08/28/arm-none-eabi-gcc-v11-3-1-1-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>arm</category>
-            
-            <category>arm-none-eabi-gcc</category>
-            
-            <category>gcc</category>
-            
-            <category>binaries</category>
-            
-            <category>c++</category>
-            
-            <category>exceptions</category>
             
             
         </item>

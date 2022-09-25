@@ -1675,6 +1675,16 @@
 
 
 {
+"title": "xPack MinGW-w64 GCC v11.3.0-1 released",
+"tags": "releasesgccmingwmingw-w64",
+"keywords": "",
+"url": "/blog/2022/09/25/mingw-w64-gcc-v11-3-0-1-released/",
+"summary": "<p>Version <strong>11.3.0-1</strong> is the first release.</p>"
+}
+,
+
+
+{
 "title": "xPack QEMU RISC-V v7.1.0-1 released",
 "tags": "releasesqemuemulatorrisc-v",
 "keywords": "",
