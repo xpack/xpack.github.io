@@ -5,9 +5,25 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 25 Sep 2022 19:51:56 +0000</pubDate>
-        <lastBuildDate>Sun, 25 Sep 2022 19:51:56 +0000</lastBuildDate>
+        <pubDate>Mon, 26 Sep 2022 20:03:29 +0000</pubDate>
+        <lastBuildDate>Mon, 26 Sep 2022 20:03:29 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>xPack WineHQ v6.17.0-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/wine/&quot;&gt;The xPack WineHQ&lt;/a&gt;is a standalone binary distribution of&lt;a href=&quot;http://www.winehq.org&quot;&gt;WineHQ&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Mon, 26 Sep 2022 19:55:57 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/09/26/wine-v6-17-0-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/09/26/wine-v6-17-0-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>wine</category>
+            
+            <category>build</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack MinGW-w64 GCC v11.3.0-1 released</title>
@@ -165,28 +181,6 @@
             <category>releases</category>
             
             <category>gcc</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack GNU RISC-V Embedded GCC v12.2.0-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/riscv-none-elf-gcc/&quot;&gt;The xPack GNU RISC-V Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of the&lt;a href=&quot;https://gcc.gnu.org/releases.html&quot;&gt;GNU GCC&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Tue, 30 Aug 2022 03:56:44 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/08/30/riscv-none-elf-gcc-v12-2-0-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/08/30/riscv-none-elf-gcc-v12-2-0-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>riscv</category>
-            
-            <category>riscv-none-elf-gcc</category>
-            
-            <category>gcc</category>
-            
-            <category>binaries</category>
-            
-            <category>c++</category>
             
             
         </item>
