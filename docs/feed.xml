@@ -5,9 +5,23 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 26 Sep 2022 20:03:29 +0000</pubDate>
-        <lastBuildDate>Mon, 26 Sep 2022 20:03:29 +0000</lastBuildDate>
+        <pubDate>Mon, 03 Oct 2022 20:30:42 +0000</pubDate>
+        <lastBuildDate>Mon, 03 Oct 2022 20:30:42 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>xPack XBB Bootstrap v4.0 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/xbb-bootstrap/&quot;&gt;The xPack XBB Bootstrap&lt;/a&gt;is a temporary solution intended to replace the functionalityprovided by the XBB v3.4 Docker images.&lt;/p&gt;</description>
+            <pubDate>Mon, 03 Oct 2022 18:05:43 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/10/03/xbb-bootstrap-v4-0-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/10/03/xbb-bootstrap-v4-0-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>xbb-bootstrap</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack WineHQ v6.17.0-1 released</title>
@@ -167,20 +181,6 @@
             <category>releases</category>
             
             <category>clang</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack GCC v12.2.0-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/gcc/&quot;&gt;The xPack GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://gcc.org&quot;&gt;GCC&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Tue, 30 Aug 2022 14:52:36 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/08/30/gcc-v12-2-0-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/08/30/gcc-v12-2-0-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>gcc</category>
             
             
         </item>

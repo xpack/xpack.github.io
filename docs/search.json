@@ -1675,6 +1675,16 @@
 
 
 {
+"title": "xPack XBB Bootstrap v4.0 released",
+"tags": "releasesxbb-bootstrap",
+"keywords": "",
+"url": "/blog/2022/10/03/xbb-bootstrap-v4-0-released/",
+"summary": "<p>Version <strong>4.0</strong> is a new release; it is intended to replace the functionality provided by the XBB v3.4 Docker images.</p>"
+}
+,
+
+
+{
 "title": "xPack WineHQ v6.17.0-1 released",
 "tags": "releaseswinebuild",
 "keywords": "",
