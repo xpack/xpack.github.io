@@ -5,13 +5,13 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 04 Oct 2022 09:07:55 +0000</pubDate>
-        <lastBuildDate>Tue, 04 Oct 2022 09:07:55 +0000</lastBuildDate>
+        <pubDate>Tue, 04 Oct 2022 10:07:39 +0000</pubDate>
+        <lastBuildDate>Tue, 04 Oct 2022 10:07:39 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
         
         <item>
             <title>xPack XBB Bootstrap v4.0 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/xbb-bootstrap/&quot;&gt;The xPack XBB Bootstrap&lt;/a&gt;is a temporary solution intended to replace the functionalityprovided by the XBB v3.4 Docker images until separate packages willbe available with all required tools.&lt;/p&gt;</description>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/xbb-bootstrap/&quot;&gt;The xPack XBB Bootstrap&lt;/a&gt;is a temporary solution intended to replace the functionalityprovided by the XBB v3.4 Docker images until separate packages willbe available with all required tools.&lt;/p&gt;</description>
             <pubDate>Mon, 03 Oct 2022 18:05:43 +0000</pubDate>
             <link>https://xpack.github.io/blog/2022/10/03/xbb-bootstrap-v4-0-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2022/10/03/xbb-bootstrap-v4-0-released/</guid>
@@ -25,7 +25,7 @@
         
         <item>
             <title>xPack WineHQ v6.17.0-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/wine/&quot;&gt;The xPack WineHQ&lt;/a&gt;is a standalone binary distribution of&lt;a href=&quot;http://www.winehq.org&quot;&gt;WineHQ&lt;/a&gt;.&lt;/p&gt;</description>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/wine/&quot;&gt;The xPack WineHQ&lt;/a&gt;is a standalone binary distribution of&lt;a href=&quot;http://www.winehq.org&quot;&gt;WineHQ&lt;/a&gt;.&lt;/p&gt;</description>
             <pubDate>Mon, 26 Sep 2022 19:55:57 +0000</pubDate>
             <link>https://xpack.github.io/blog/2022/09/26/wine-v6-17-0-1-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2022/09/26/wine-v6-17-0-1-released/</guid>

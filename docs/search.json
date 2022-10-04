@@ -205,6 +205,17 @@
 
 
 {
+"title": "The xPack XBB Bootstrap Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/xbb-bootstrap/faq/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "The xPack GNU RISC-V Embedded GCC Frequently Asked Questions",
 "tags": "",
 "keywords": "",
@@ -557,6 +568,17 @@
 
 
 {
+"title": "The xPack XBB Bootstrap",
+"tags": "",
+"keywords": "xbb-bootstrap",
+"url": "/dev-tools/xbb-bootstrap/",
+"summary": "<p>A binary distribution of XBB Bootstrap.</p>"
+}
+,
+
+
+
+{
 "title": "The xPack GNU RISC-V Embedded GCC",
 "tags": "",
 "keywords": "riscv-none-elf-gccriscvgccembedded",
@@ -781,6 +803,17 @@
 "tags": "",
 "keywords": "",
 "url": "/clang/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "How to install the xPack XBB Bootstrap binaries",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/xbb-bootstrap/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -1201,6 +1234,8 @@
 
 
 
+
+
 {
 "title": "xpm run",
 "tags": "",
@@ -1314,6 +1349,17 @@
 "tags": "",
 "keywords": "",
 "url": "/clang/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack XBB Bootstrap",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/xbb-bootstrap/support/",
 "summary": ""
 }
 ,
