@@ -172,6 +172,17 @@
 
 
 {
+"title": "The xPack WineHQ Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/wine/faq/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "The xPack QEMU Arm Frequently Asked Questions",
 "tags": "",
 "keywords": "",
@@ -231,6 +242,17 @@
 "tags": "",
 "keywords": "",
 "url": "/gcc/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack MinGW-w64 GCC Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/mingw-w64-gcc/faq/",
 "summary": ""
 }
 ,
@@ -502,6 +524,17 @@
 
 
 {
+"title": "The xPack WineHQ",
+"tags": "",
+"keywords": "wine",
+"url": "/dev-tools/wine/",
+"summary": "<p>A binary distribution of WineHQ.</p>"
+}
+,
+
+
+
+{
 "title": "The xPack QEMU Arm",
 "tags": "",
 "keywords": "qemuarmcortex-mgraphic",
@@ -562,6 +595,17 @@
 "keywords": "gnugccc++",
 "url": "/gcc/",
 "summary": "<p>A binary distribution of the GNU Compiler Collection.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack MinGW-w64 GCC",
+"tags": "",
+"keywords": "mingw-w64-gccmingw-w64mingwgcc",
+"url": "/mingw-w64-gcc/",
+"summary": "<p>A binary distribution of MinGW-w64 GCC.</p>"
 }
 ,
 
@@ -711,6 +755,17 @@
 
 
 {
+"title": "How to install the xPack WineHQ binaries",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/wine/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
 "title": "How to install the xPack QEMU Arm binaries",
 "tags": "",
 "keywords": "",
@@ -770,6 +825,17 @@
 "tags": "",
 "keywords": "",
 "url": "/gcc/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "How to install the xPack MinGW-w64 GCC binaries",
+"tags": "",
+"keywords": "",
+"url": "/mingw-w64-gcc/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -909,6 +975,10 @@
 "summary": ""
 }
 ,
+
+
+
+
 
 
 
@@ -1127,6 +1197,10 @@
 
 
 
+
+
+
+
 {
 "title": "xpm run",
 "tags": "",
@@ -1214,6 +1288,17 @@
 
 
 {
+"title": "How to get help for xPack WineHQ",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/wine/support/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "How to get help for xPack QEMU Arm",
 "tags": "",
 "keywords": "",
@@ -1273,6 +1358,17 @@
 "tags": "",
 "keywords": "",
 "url": "/gcc/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack MinGW-w64 GCC",
+"tags": "",
+"keywords": "",
+"url": "/mingw-w64-gcc/support/",
 "summary": ""
 }
 ,
@@ -1385,6 +1481,8 @@
 "summary": "<p>VS Code settings useful in xPack projects.</p>"
 }
 ,
+
+
 
 
 
@@ -1676,7 +1774,7 @@
 
 {
 "title": "xPack XBB Bootstrap v4.0 released",
-"tags": "releasesxbb-bootstrap",
+"tags": "releasesxbb",
 "keywords": "",
 "url": "/blog/2022/10/03/xbb-bootstrap-v4-0-released/",
 "summary": "<p>Version <strong>4.0</strong> is a new release; it is intended to replace the functionality provided by the XBB v3.4 Docker images.</p>"
