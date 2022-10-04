@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to create a new xPack Git repository" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-10-04T10:06:36+00:00","datePublished":"2019-07-09T14:48:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to create a new xPack Git repository","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/how-to-new-git/"},"url":"https://xpack.github.io/develop/how-to-new-git/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-10-04T12:34:08+00:00","datePublished":"2019-07-09T14:48:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to create a new xPack Git repository","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/how-to-new-git/"},"url":"https://xpack.github.io/develop/how-to-new-git/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -833,6 +833,32 @@ switch to the `xpack` branch to get the project files.
   <li>commit with the following message: <strong>README: ‘no master’ notice</strong></li>
 </ul>
 
+<h3 id="edit-the-license-xpack-file">Edit the <code class="language-plaintext highlighter-rouge">LICENSE[-XPACK]</code> file</h3>
+
+<p>The automatically generated <code class="language-plaintext highlighter-rouge">LICENSE</code> file already includes the
+user name as the copyright owner. When the project is owned by
+an organisation, the name refers to the organisation. Probably
+this is not exactly what you need, and you might prefer to have
+your name in the copyright notice.</p>
+
+<p>Check and possibly adjust to match your <code class="language-plaintext highlighter-rouge">LICENSE</code> requirements.</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MIT License
+
+Copyright (c) 2022 Liviu Ionescu
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+...
+</code></pre></div></div>
+
+<p>With VS Code, Fork or Git:</p>
+
+<ul>
+  <li>for 3rd party content, rename it to <code class="language-plaintext highlighter-rouge">LICENSE-XPACK</code></li>
+  <li>stage the file</li>
+  <li>commit with the following message: <strong>LICENSE: update copyright owner</strong></li>
+</ul>
+
 <h3 id="create-the-originals-branch">Create the <code class="language-plaintext highlighter-rouge">originals</code> branch</h3>
 
 <p>For a 3rd party project that does not use a
@@ -1056,32 +1082,6 @@ as the first contributor, for example:</li>
 <ul>
   <li>stage the <code class="language-plaintext highlighter-rouge">package.json</code></li>
   <li>commit with the following message: <strong>package.json: v0.1.0</strong></li>
-</ul>
-
-<h3 id="checkedit-the-license-xpack-file">Check/edit the <code class="language-plaintext highlighter-rouge">LICENSE[-XPACK]</code> file</h3>
-
-<p>The automatically generated <code class="language-plaintext highlighter-rouge">LICENSE</code> file already includes the
-user name as the copyright owner. When the project is owned by
-an organisation, the name refers to the organisation. Probably
-this is not exactly what you need, and you might prefer to have
-your name in the copyright notice.</p>
-
-<p>Check and possibly adjust to match your <code class="language-plaintext highlighter-rouge">LICENSE</code> requirements.</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MIT License
-
-Copyright (c) 2022 Liviu Ionescu
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-...
-</code></pre></div></div>
-
-<p>With VS Code, Fork or Git:</p>
-
-<ul>
-  <li>for 3rd party content, rename it to <code class="language-plaintext highlighter-rouge">LICENSE-XPACK</code></li>
-  <li>stage the file</li>
-  <li>commit with the following message: <strong>LICENSE: update copyright owner</strong></li>
 </ul>
 
 <h3 id="edit-the-readmemd-file-with-actual-content">Edit the <code class="language-plaintext highlighter-rouge">README.md</code> file with actual content</h3>
