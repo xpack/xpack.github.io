@@ -5,9 +5,27 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 04 Oct 2022 12:38:43 +0000</pubDate>
-        <lastBuildDate>Tue, 04 Oct 2022 12:38:43 +0000</lastBuildDate>
+        <pubDate>Sun, 16 Oct 2022 19:15:36 +0000</pubDate>
+        <lastBuildDate>Sun, 16 Oct 2022 19:15:36 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>xPack xpm v0.14.1 released</title>
+            <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; is a&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to orchestrate builds and to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt; dependencies.&lt;/p&gt;</description>
+            <pubDate>Sun, 16 Oct 2022 19:09:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/10/16/xpm-v0-14-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/10/16/xpm-v0-14-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>xpm</category>
+            
+            <category>package</category>
+            
+            <category>manager</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack XBB Bootstrap v4.0 released</title>
@@ -167,20 +185,6 @@
             <category>speed</category>
             
             <category>small</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack LLVM clang v14.0.6-2 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/clang/&quot;&gt;The xPack LLVM clang&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://clang.org&quot;&gt;LLVM clang&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Wed, 31 Aug 2022 04:57:13 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/08/31/clang-v14-0-6-2-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/08/31/clang-v14-0-6-2-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>clang</category>
             
             
         </item>

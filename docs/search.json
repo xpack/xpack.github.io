@@ -1819,6 +1819,16 @@
 
 
 {
+"title": "xPack xpm v0.14.1 released",
+"tags": "releasesxpmpackagemanager",
+"keywords": "",
+"url": "/blog/2022/10/16/xpm-v0-14-1-released/",
+"summary": "<p>Version <strong>0.14.1</strong> is a new major release; it separates xPack from npm dependencies.</p>"
+}
+,
+
+
+{
 "title": "xPack XBB Bootstrap v4.0 released",
 "tags": "releasesxbb",
 "keywords": "",
