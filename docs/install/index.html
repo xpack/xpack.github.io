@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack prerequisites" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-10-16T20:04:51+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack prerequisites","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"url":"https://xpack.github.io/install/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-10-16T20:27:08+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack prerequisites","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"url":"https://xpack.github.io/install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -821,46 +821,54 @@ nvm is not functional.</div>
 terminal (to make use of the new environment variables) and issue the
 following:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>nvm <span class="nb">install</span> <span class="nt">--lts</span> node
-<span class="go">Downloading and installing node v16.14.2...
-Downloading https://nodejs.org/dist/v12.13.0/node-v12.13.0-darwin-x64.tar.gz...
-</span><span class="gp">#</span><span class="c">####################################################################### 100.0%</span>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">% nvm install --lts node
+Downloading and installing node v16.18.0...
+Downloading https://nodejs.org/dist/v16.18.0/node-v16.18.0-darwin-x64.tar.xz...
+</span><span class="gp">#</span><span class="c">############################################################################################ 100.0%</span>
 <span class="go">Computing checksum with shasum -a 256
 Checksums matched!
-</span><span class="gp">Creating default alias: default -&gt;</span><span class="w"> </span>lts/<span class="k">*</span> <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span>
-<span class="go">
+Now using node v16.18.0 (npm v8.19.2)
+
 </span><span class="gp">$</span><span class="w"> </span>nvm <span class="nb">ls</span>
-<span class="gp">-&gt;</span><span class="w">     </span>v12.13.0
-<span class="go">         system
-</span><span class="gp">default -&gt;</span><span class="w"> </span>lts/<span class="k">*</span> <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span>
-<span class="gp">node -&gt;</span><span class="w"> </span>stable <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
-<span class="gp">stable -&gt;</span><span class="w"> </span>12.13 <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
+<span class="go">      v12.22.12
+</span><span class="gp">-&gt;</span><span class="w">     </span>v16.18.0
+<span class="gp">default -&gt;</span><span class="w"> </span>node <span class="o">(</span>-&gt; v16.18.0<span class="o">)</span>
 <span class="gp">iojs -&gt;</span><span class="w"> </span>N/A <span class="o">(</span>default<span class="o">)</span>
 <span class="gp">unstable -&gt;</span><span class="w"> </span>N/A <span class="o">(</span>default<span class="o">)</span>
-<span class="gp">lts/* -&gt;</span><span class="w"> </span>lts/erbium <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span>
+<span class="gp">node -&gt;</span><span class="w"> </span>stable <span class="o">(</span>-&gt; v16.18.0<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">stable -&gt;</span><span class="w"> </span>16.18 <span class="o">(</span>-&gt; v16.18.0<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">lts/* -&gt;</span><span class="w"> </span>lts/gallium <span class="o">(</span>-&gt; v16.18.0<span class="o">)</span>
 <span class="gp">lts/argon -&gt;</span><span class="w"> </span>v4.9.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
 <span class="gp">lts/boron -&gt;</span><span class="w"> </span>v6.17.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
-<span class="gp">lts/carbon -&gt;</span><span class="w"> </span>v8.16.2 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
-<span class="gp">lts/dubnium -&gt;</span><span class="w"> </span>v10.17.0 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
-<span class="gp">lts/erbium -&gt;</span><span class="w"> </span>v12.13.0
+<span class="gp">lts/carbon -&gt;</span><span class="w"> </span>v8.17.0 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/dubnium -&gt;</span><span class="w"> </span>v10.24.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/erbium -&gt;</span><span class="w"> </span>v12.22.12
+<span class="gp">lts/fermium -&gt;</span><span class="w"> </span>v14.20.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/gallium -&gt;</span><span class="w"> </span>v16.18.0
 <span class="go">
 </span><span class="gp">$</span><span class="w"> </span>nvm use node
-<span class="go">Now using node v12.13.0 (npm v6.12.1)
+<span class="go">Now using node v16.18.0 (npm v8.19.2)
 
+</span><span class="gp">$</span><span class="w"> </span>nvm <span class="nb">alias </span>default node
+<span class="gp">default -&gt;</span><span class="w"> </span>node <span class="o">(</span>-&gt; v16.18.0<span class="o">)</span>
+<span class="go">
 </span><span class="gp">$</span><span class="w"> </span>node <span class="nt">--version</span>
-<span class="go">v12.13.0
+<span class="go">v16.18.0
 
 </span><span class="gp">$</span><span class="w"> </span>nvm install-latest-npm
 <span class="go">Attempting to upgrade to the latest working version of npm...
 </span><span class="gp">* Installing latest `npm`;</span><span class="w"> </span><span class="k">if </span>this does not work on your node version, please report a bug!
-<span class="gp">/Users/ilg/.nvm/versions/node/v12.13.0/bin/npm -&gt;</span><span class="w"> </span>/Users/ilg/.nvm/versions/node/v12.13.0/lib/node_modules/npm/bin/npm-cli.js
-<span class="gp">/Users/ilg/.nvm/versions/node/v12.13.0/bin/npx -&gt;</span><span class="w"> </span>/Users/ilg/.nvm/versions/node/v12.13.0/lib/node_modules/npm/bin/npx-cli.js
-<span class="go">+ npm@6.13.0
-added 2 packages from 2 contributors, removed 2 packages and updated 15 packages in 3.293s
-* npm upgraded to: v6.13.0
+<span class="go">
+changed 16 packages, and audited 212 packages in 1s
+
+11 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+* npm upgraded to: v8.19.2
 
 </span><span class="gp">$</span><span class="w"> </span>which npm
-<span class="go">/Users/ilg/.nvm/versions/node/v12.13.0/bin/npm
+<span class="go">/Users/ilg/.nvm/versions/node/v16.18.0/bin/npm
 </span></code></pre></div></div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Please note that this will install the latest
