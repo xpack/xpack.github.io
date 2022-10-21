@@ -5,9 +5,25 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Fri, 21 Oct 2022 08:05:37 +0000</pubDate>
-        <lastBuildDate>Fri, 21 Oct 2022 08:05:37 +0000</lastBuildDate>
+        <pubDate>Fri, 21 Oct 2022 17:34:05 +0000</pubDate>
+        <lastBuildDate>Fri, 21 Oct 2022 17:34:05 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>xPack GNU realpath v9.1.0-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/realpath/&quot;&gt;The xPack GNU realpath&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://realpath.org&quot;&gt;GNU realpath&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Fri, 21 Oct 2022 16:58:24 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/10/21/realpath-v9-1-0-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/10/21/realpath-v9-1-0-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>realpath</category>
+            
+            <category>readlink</category>
+            
+            
+        </item>
         
         <item>
             <title>VS Code xPack extension v0.4.20 released</title>
@@ -167,22 +183,6 @@
             <category>python</category>
             
             <category>ninja</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack CMake v3.22.6-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/cmake/&quot;&gt;The xPack CMake&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://cmake.org&quot;&gt;CMake&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Thu, 01 Sep 2022 08:44:13 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/09/01/cmake-v3-22-6-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/09/01/cmake-v3-22-6-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>cmake</category>
-            
-            <category>build</category>
             
             
         </item>
