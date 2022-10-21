@@ -5,9 +5,29 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 16 Oct 2022 20:28:14 +0000</pubDate>
-        <lastBuildDate>Sun, 16 Oct 2022 20:28:14 +0000</lastBuildDate>
+        <pubDate>Fri, 21 Oct 2022 08:05:37 +0000</pubDate>
+        <lastBuildDate>Fri, 21 Oct 2022 08:05:37 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>VS Code xPack extension v0.4.20 released</title>
+            <description>&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;</description>
+            <pubDate>Thu, 20 Oct 2022 07:48:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/10/20/vscode-xpack-v0-4-20-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/10/20/vscode-xpack-v0-4-20-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>vscode</category>
+            
+            <category>vscode-xpack</category>
+            
+            <category>extension</category>
+            
+            <category>c++</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack xpm v0.14.2 released</title>
@@ -163,28 +183,6 @@
             <category>cmake</category>
             
             <category>build</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack Ninja Build v1.11.1-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/ninja-build/&quot;&gt;The xPack Ninja Build&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://ninja-build.org&quot;&gt;Ninja Build&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Wed, 31 Aug 2022 14:05:18 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/08/31/ninja-build-v1-11-1-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/08/31/ninja-build-v1-11-1-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>ninja-build</category>
-            
-            <category>ninja</category>
-            
-            <category>build</category>
-            
-            <category>speed</category>
-            
-            <category>small</category>
             
             
         </item>
