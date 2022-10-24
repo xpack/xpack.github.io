@@ -1819,6 +1819,16 @@
 
 
 {
+"title": "xPack NixOS PatchELF v0.15.0-1 released",
+"tags": "releasespatchelf",
+"keywords": "",
+"url": "/blog/2022/10/24/patchelf-v0-15-0-1-released/",
+"summary": "<p>Version <strong>0.15.0-1</strong> is the first release NixOS PatchELF.</p>"
+}
+,
+
+
+{
 "title": "xPack GNU realpath v9.1.0-1 released",
 "tags": "releasesrealpathreadlink",
 "keywords": "",
