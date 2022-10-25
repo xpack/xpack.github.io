@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to create a new xPack Git repository" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-10-24T20:46:07+00:00","datePublished":"2019-07-09T14:48:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to create a new xPack Git repository","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/how-to-new-git/"},"url":"https://xpack.github.io/develop/how-to-new-git/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2022-10-25T11:09:22+00:00","datePublished":"2019-07-09T14:48:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to create a new xPack Git repository","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/how-to-new-git/"},"url":"https://xpack.github.io/develop/how-to-new-git/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -944,6 +944,47 @@ Release/
   <li>commit with the following message: <strong>.gitignore: add xPack specifics</strong></li>
 </ul>
 
+<h3 id="add-the-npmignore-file">Add the <code class="language-plaintext highlighter-rouge">.npmignore</code> file</h3>
+
+<p>With VS Code, create a new file with:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+.DS_Store
+.git/
+.github/
+.gitignore
+.gitmodules
+.clang-*
+.cmake-format
+
+.vscode/
+
+patches/
+pkgconfig/
+scripts/
+test*/
+build/
+ci/
+docs/
+example*/
+
+xpacks/
+node_modules/
+
+*.tgz
+
+README-*
+LICENSE-*
+CONTRIBUTING**
+
+</code></pre></div></div>
+
+<ul>
+  <li>update the content until <code class="language-plaintext highlighter-rouge">npm pack</code> shows only the desired content</li>
+  <li>stage the <code class="language-plaintext highlighter-rouge">.npmignore</code> file</li>
+  <li>commit with the following message: <strong>.npmignore preliminary content</strong></li>
+</ul>
+
 <h3 id="publish-all-branches">Publish all branches</h3>
 
 <p>With VS Code, Fork or Git:</p>
@@ -1139,7 +1180,7 @@ and close existing issues and pull requests.
 
 <span class="gu">## 2022-01-03</span>
 <span class="p">
--</span> v2.0.5
+*</span> v2.0.5
 </code></pre></div></div>
 
 <p>With VS Code, Fork or Git:</p>
@@ -1147,34 +1188,6 @@ and close existing issues and pull requests.
 <ul>
   <li>stage the <code class="language-plaintext highlighter-rouge">CHANGELOG.md</code> files</li>
   <li>commit with the following message: <strong>CHANGELOG: preliminary content</strong></li>
-</ul>
-
-<h3 id="add-npmignore">Add .npmignore</h3>
-
-<p>If the package uses 3rd party content, add a <code class="language-plaintext highlighter-rouge">.npmignore</code> file.</p>
-
-<p>Start with something like:</p>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">.github/
-.vscode/
-build/
-ci/
-docs/
-tests*/
-example/
-
-.clang-*
-.cmake-format
-CONTRIBUTING**
-README-MAINTAINER*.md
-
-*.tgz
-
-</span></code></pre></div></div>
-
-<ul>
-  <li>update the content until <code class="language-plaintext highlighter-rouge">npm pack</code> shows only the desired content</li>
-  <li>commit with the following message: <strong>.npmignore preliminary content</strong></li>
 </ul>
 
 <h3 id="add-githubworkflows">Add .github/workflows/*</h3>
@@ -1293,7 +1306,7 @@ npm version major
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2022 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Oct 24, 2022<br/> Site last generated: Oct 24, 2022 <br />
+<span>Page last updated:</span> Oct 25, 2022<br/> Site last generated: Oct 25, 2022 <br />
                 </div>
             </div>
 </footer>

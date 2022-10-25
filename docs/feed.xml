@@ -5,9 +5,23 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 24 Oct 2022 21:05:48 +0000</pubDate>
-        <lastBuildDate>Mon, 24 Oct 2022 21:05:48 +0000</lastBuildDate>
+        <pubDate>Tue, 25 Oct 2022 11:10:58 +0000</pubDate>
+        <lastBuildDate>Tue, 25 Oct 2022 11:10:58 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>xPack pkg-config v0.29.2-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/pkg-config/&quot;&gt;The xPack pkg-config&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://www.freedesktop.org/wiki/Software/pkg-config/&quot;&gt;pkg-config&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Tue, 25 Oct 2022 11:02:09 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/10/25/pkg-config-v0-29-2-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/10/25/pkg-config-v0-29-2-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>pkg-config</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack NixOS PatchELF v0.15.0-1 released</title>
@@ -161,20 +175,6 @@
             <category>aarch64</category>
             
             <category>cortex-m</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack OpenOCD v0.11.0-5 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/openocd/&quot;&gt;The xPack OpenOCD&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://openocd.org&quot;&gt;OpenOCD&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Thu, 01 Sep 2022 18:29:34 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/09/01/openocd-v0-11-0-5-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/09/01/openocd-v0-11-0-5-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>openocd</category>
             
             
         </item>

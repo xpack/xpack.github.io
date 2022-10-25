@@ -1819,6 +1819,16 @@
 
 
 {
+"title": "xPack pkg-config v0.29.2-1 released",
+"tags": "releasespkg-config",
+"keywords": "",
+"url": "/blog/2022/10/25/pkg-config-v0-29-2-1-released/",
+"summary": "<p>Version <strong>0.29.2-1</strong> is the first release of xPack pkg-config.</p>"
+}
+,
+
+
+{
 "title": "xPack NixOS PatchELF v0.15.0-1 released",
 "tags": "releasespatchelf",
 "keywords": "",
