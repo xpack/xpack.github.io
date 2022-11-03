@@ -1819,6 +1819,16 @@
 
 
 {
+"title": "xPack GNU M4 v1.4.19-1 released",
+"tags": "releasesm4",
+"keywords": "",
+"url": "/blog/2022/11/03/m4-v1-4-19-1-released/",
+"summary": "<p>Version <strong>1.4.19-1</strong> is the first release of GNU M4.</p>"
+}
+,
+
+
+{
 "title": "xPack pkg-config v0.29.2-1 released",
 "tags": "releasespkg-config",
 "keywords": "",

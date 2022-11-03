@@ -5,9 +5,23 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 03 Nov 2022 07:07:05 +0000</pubDate>
-        <lastBuildDate>Thu, 03 Nov 2022 07:07:05 +0000</lastBuildDate>
+        <pubDate>Thu, 03 Nov 2022 10:46:57 +0000</pubDate>
+        <lastBuildDate>Thu, 03 Nov 2022 10:46:57 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>xPack GNU M4 v1.4.19-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/m4/&quot;&gt;The xPack GNU M4&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://m4.org&quot;&gt;GNU M4&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Thu, 03 Nov 2022 10:30:44 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/11/03/m4-v1-4-19-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/11/03/m4-v1-4-19-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>m4</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack pkg-config v0.29.2-1 released</title>
@@ -153,28 +167,6 @@
             <category>emulator</category>
             
             <category>risc-v</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack QEMU Arm v7.1.0-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/qemu-arm/&quot;&gt;The xPack QEMU Arm&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://www.qemu.org&quot;&gt;QEMU&lt;/a&gt;, with several extensions for Arm Cortex-Mdevices.&lt;/p&gt;</description>
-            <pubDate>Tue, 06 Sep 2022 12:50:46 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/09/06/qemu-arm-v7-1-0-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/09/06/qemu-arm-v7-1-0-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>qemu</category>
-            
-            <category>emulator</category>
-            
-            <category>arm</category>
-            
-            <category>aarch64</category>
-            
-            <category>cortex-m</category>
             
             
         </item>
