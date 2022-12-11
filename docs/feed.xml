@@ -5,9 +5,23 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Wed, 09 Nov 2022 22:00:12 +0000</pubDate>
-        <lastBuildDate>Wed, 09 Nov 2022 22:00:12 +0000</lastBuildDate>
+        <pubDate>Sun, 11 Dec 2022 11:43:05 +0000</pubDate>
+        <lastBuildDate>Sun, 11 Dec 2022 11:43:05 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>xPack GNU sed v4.9.0-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/sed/&quot;&gt;The xPack GNU sed&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://www.gnu.org/software/sed/&quot;&gt;GNU sed&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Sun, 11 Dec 2022 11:11:34 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/12/11/sed-v4-9-0-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/12/11/sed-v4-9-0-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>sed</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack GNU M4 v1.4.19-1 released</title>
@@ -149,24 +163,6 @@
             <category>mingw</category>
             
             <category>mingw-w64</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack QEMU RISC-V v7.1.0-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/qemu-riscv/&quot;&gt;The xPack QEMU RISC-V&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://www.qemu.org&quot;&gt;QEMU&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Tue, 06 Sep 2022 16:01:32 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/09/06/qemu-riscv-v7-1-0-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/09/06/qemu-riscv-v7-1-0-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>qemu</category>
-            
-            <category>emulator</category>
-            
-            <category>risc-v</category>
             
             
         </item>
