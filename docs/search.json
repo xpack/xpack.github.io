@@ -1819,6 +1819,16 @@
 
 
 {
+"title": "xPack GCC v12.2.0-2 released",
+"tags": "releasesgcc",
+"keywords": "",
+"url": "/blog/2022/12/27/gcc-v12-2-0-2-released/",
+"summary": "<p>Version <strong>12.2.0-2</strong> is a maintenance release;  it add support for 32-bit on Intel Linux and upgrades to binutils 2.39.</p>"
+}
+,
+
+
+{
 "title": "xPack NixOS PatchELF v0.17.0-1 released",
 "tags": "releasespatchelf",
 "keywords": "",

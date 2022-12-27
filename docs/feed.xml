@@ -5,9 +5,23 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 27 Dec 2022 18:01:43 +0000</pubDate>
-        <lastBuildDate>Tue, 27 Dec 2022 18:01:43 +0000</lastBuildDate>
+        <pubDate>Tue, 27 Dec 2022 23:04:14 +0000</pubDate>
+        <lastBuildDate>Tue, 27 Dec 2022 23:04:14 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>xPack GCC v12.2.0-2 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/gcc/&quot;&gt;The xPack GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://gcc.org&quot;&gt;GCC&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Tue, 27 Dec 2022 22:03:16 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2022/12/27/gcc-v12-2-0-2-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2022/12/27/gcc-v12-2-0-2-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>gcc</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack NixOS PatchELF v0.17.0-1 released</title>
@@ -143,20 +157,6 @@
             <category>package</category>
             
             <category>manager</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack XBB Bootstrap v4.0 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/xbb-bootstrap/&quot;&gt;The xPack XBB Bootstrap&lt;/a&gt;is a temporary solution intended to replace the functionalityprovided by the XBB v3.4 Docker images until separate packages willbe available with all required tools.&lt;/p&gt;</description>
-            <pubDate>Mon, 03 Oct 2022 18:05:43 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/10/03/xbb-bootstrap-v4-0-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/10/03/xbb-bootstrap-v4-0-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>xbb</category>
             
             
         </item>
