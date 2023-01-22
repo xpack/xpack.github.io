@@ -5,9 +5,23 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 03 Jan 2023 21:20:02 +0000</pubDate>
-        <lastBuildDate>Tue, 03 Jan 2023 21:20:02 +0000</lastBuildDate>
+        <pubDate>Sun, 22 Jan 2023 17:41:27 +0000</pubDate>
+        <lastBuildDate>Sun, 22 Jan 2023 17:41:27 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>xPack LLVM clang v15.0.7-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/clang/&quot;&gt;The xPack LLVM clang&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://clang.org&quot;&gt;LLVM clang&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Sun, 22 Jan 2023 16:41:30 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2023/01/22/clang-v15-0-7-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2023/01/22/clang-v15-0-7-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>clang</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack WineHQ v7.22.0-1 released</title>
@@ -141,20 +155,6 @@
             <category>releases</category>
             
             <category>pkg-config</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack NixOS PatchELF v0.15.0-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/patchelf/&quot;&gt;The xPack NixOS PatchELF&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://github.com/NixOS/patchelf/&quot;&gt;NixOS PatchELF&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Mon, 24 Oct 2022 20:43:29 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/10/24/patchelf-v0-15-0-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/10/24/patchelf-v0-15-0-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>patchelf</category>
             
             
         </item>
