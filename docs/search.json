@@ -1819,6 +1819,16 @@
 
 
 {
+"title": "xPack xpm v0.14.4 released",
+"tags": "releasesxpmpackagemanager",
+"keywords": "",
+"url": "/blog/2023/01/23/xpm-v0-14-4-released/",
+"summary": "<p>Version <strong>0.14.4</strong> is a maintenance release; it fixes the download bug.</p>"
+}
+,
+
+
+{
 "title": "xPack LLVM clang v15.0.7-1 released",
 "tags": "releasesclang",
 "keywords": "",
