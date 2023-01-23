@@ -1819,6 +1819,16 @@
 
 
 {
+"title": "xPack NixOS PatchELF v0.17.2-1 released",
+"tags": "releasespatchelf",
+"keywords": "",
+"url": "/blog/2023/01/23/patchelf-v0-17-2-1-released/",
+"summary": "<p>Version <strong>0.17.2-1</strong> is a new release; it follows the upstream release.</p>"
+}
+,
+
+
+{
 "title": "xPack xpm v0.14.4 released",
 "tags": "releasesxpmpackagemanager",
 "keywords": "",
