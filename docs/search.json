@@ -1819,6 +1819,16 @@
 
 
 {
+"title": "xPack Ninja Build v1.11.1-2 released",
+"tags": "releasesninja-buildninjabuildspeedsmall",
+"keywords": "",
+"url": "/blog/2023/01/23/ninja-build-v1-11-1-2-released/",
+"summary": "<p>Version <strong>1.11.1-2</strong> is a maintenance release, built with the latest build scripts.</p>"
+}
+,
+
+
+{
 "title": "xPack NixOS PatchELF v0.17.2-1 released",
 "tags": "releasespatchelf",
 "keywords": "",

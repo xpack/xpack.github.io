@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Version 10.1.0-1.2 is a maintenance release; it fixes the missing multi-libs on Windows and updates to the latest build scripts.">
-<meta name="keywords" content="releasesriscvriscv-none-embed-gccgccbinariesc++,  ">
-<title>xPack GNU RISC-V Embedded GCC v10.1.0-1.2 released | The xPack Build Framework</title>
+<meta name="description" content="Version 1.11.1-2 is a maintenance release, built with the latest build scripts.">
+<meta name="keywords" content="releasesninja-buildninjabuildspeedsmall,  ">
+<title>xPack Ninja Build v1.11.1-2 released | The xPack Build Framework</title>
 <link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
 
 
@@ -14,21 +14,21 @@
 <link type="application/rss+xml" rel="alternate" title="" href="https://xpack.github.io/feed.xml">
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>xPack GNU RISC-V Embedded GCC v10.1.0-1.2 released</title>
+<title>xPack Ninja Build v1.11.1-2 released</title>
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="xPack GNU RISC-V Embedded GCC v10.1.0-1.2 released" />
+<meta property="og:title" content="xPack Ninja Build v1.11.1-2 released" />
 <meta name="author" content="Liviu Ionescu" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="The xPack GNU RISC-V Embedded GCC is a standalone cross-platform binary distribution of the SiFive RISC-V GCC." />
-<meta property="og:description" content="The xPack GNU RISC-V Embedded GCC is a standalone cross-platform binary distribution of the SiFive RISC-V GCC." />
-<link rel="canonical" href="https://xpack.github.io/blog/2021/11/04/riscv-none-embed-gcc-v10-1-0-1-2-released/" />
-<meta property="og:url" content="https://xpack.github.io/blog/2021/11/04/riscv-none-embed-gcc-v10-1-0-1-2-released/" />
+<meta name="description" content="The xPack Ninja Build is a standalone cross-platform binary distribution of Ninja Build." />
+<meta property="og:description" content="The xPack Ninja Build is a standalone cross-platform binary distribution of Ninja Build." />
+<link rel="canonical" href="https://xpack.github.io/blog/2023/01/23/ninja-build-v1-11-1-2-released/" />
+<meta property="og:url" content="https://xpack.github.io/blog/2023/01/23/ninja-build-v1-11-1-2-released/" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-11-04T11:50:38+00:00" />
+<meta property="article:published_time" content="2023-01-23T22:51:02+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="xPack GNU RISC-V Embedded GCC v10.1.0-1.2 released" />
+<meta property="twitter:title" content="xPack Ninja Build v1.11.1-2 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-01-23T22:52:41+00:00","datePublished":"2021-11-04T11:50:38+00:00","description":"The xPack GNU RISC-V Embedded GCC is a standalone cross-platform binary distribution of the SiFive RISC-V GCC.","headline":"xPack GNU RISC-V Embedded GCC v10.1.0-1.2 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/11/04/riscv-none-embed-gcc-v10-1-0-1-2-released/"},"url":"https://xpack.github.io/blog/2021/11/04/riscv-none-embed-gcc-v10-1-0-1-2-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-01-23T22:52:41+00:00","datePublished":"2023-01-23T22:51:02+00:00","description":"The xPack Ninja Build is a standalone cross-platform binary distribution of Ninja Build.","headline":"xPack Ninja Build v1.11.1-2 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2023/01/23/ninja-build-v1-11-1-2-released/"},"url":"https://xpack.github.io/blog/2023/01/23/ninja-build-v1-11-1-2-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -238,7 +238,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: '/search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="xPack GNU RISC-V Embedded GCC v10.1.0-1.2 released">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="xPack Ninja Build v1.11.1-2 released">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -264,7 +264,7 @@
                 
 
 <ul id="mysidebar" class="nav">
-  <li class="sidebarTitle">GNU RISC-V Embedded GCC </li>
+  <li class="sidebarTitle"> </li>
   
   
   
@@ -274,35 +274,268 @@
           
           
           
-          <li><a title="Overview" href="/riscv-none-elf-gcc/">Overview</a></li>
+          <li><a title="Overview" href="/">Overview</a></li>
           
           
           
           
           
           
-          <li><a title="Install" href="/riscv-none-elf-gcc/install/">Install</a></li>
+          <li><a title="Intro (xPack 101)" href="/intro/">Intro (xPack 101)</a></li>
           
           
           
           
           
           
-          <li><a title="Support" href="/riscv-none-elf-gcc/support/">Support</a></li>
+          <li><a title="Install prerequisites" href="/install/">Install prerequisites</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Core Tools" href="#">Core Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="xpm" href="/xpm/">xpm</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="3rd Party Tools" href="#">3rd Party Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="gcc" href="/gcc/">gcc</a></li>
           
           
           
           
           
           
-          <li><a title="FAQ" href="/riscv-none-elf-gcc/faq/">FAQ</a></li>
+          <li><a title="clang" href="/clang/">clang</a></li>
           
           
           
           
           
           
-          <li><a title="Releases" href="/riscv-none-elf-gcc/releases/">Releases</a></li>
+          <li><a title="arm-none-eabi-gcc" href="/arm-none-eabi-gcc/">arm-none-eabi-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="aarch64-none-elf-gcc" href="/aarch64-none-elf-gcc/">aarch64-none-elf-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="riscv-none-elf-gcc" href="/riscv-none-elf-gcc/">riscv-none-elf-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="openocd" href="/openocd/">openocd</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="qemu-arm" href="/qemu-arm/">qemu-arm</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="qemu-riscv" href="/qemu-riscv/">qemu-riscv</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="windows-build-tools" href="/windows-build-tools/">windows-build-tools</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="ninja-build" href="/ninja-build/">ninja-build</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="cmake" href="/cmake/">cmake</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="meson-build" href="/meson-build/">meson-build</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="mingw-w64-gcc" href="/mingw-w64-gcc/">mingw-w64-gcc</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Other 3rd Party Tools" href="#">Other 3rd Party Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="wine" href="/dev-tools/wine/">wine</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xbb-bootstrap" href="/dev-tools/xbb-bootstrap/">xbb-bootstrap</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="VS Code Extensions" href="#">VS Code Extensions</a>
+      <ul>
+          
+          
+          
+          <li><a title="xPack C/C++ Build Tools" href="/vscode/">xPack C/C++ Build Tools</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Support" href="#">Support</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/support/">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Developer Info" href="#">Developer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/develop/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="How to create a new xPack repo" href="/develop/how-to-new-git/">How to create a new xPack repo</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="JavaScript Style Guide" href="/develop/js-style-guide/">JavaScript Style Guide</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Links" href="/develop/links/">Links</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Maintainer Info" href="#">Maintainer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/maintain/">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Project" href="#">Project</a>
+      <ul>
+          
+          
+          
+          <li><a class="extern" title="License (MIT)" href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">License (MIT)</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="About" href="/about/">About</a></li>
           
           
           
@@ -335,8 +568,8 @@ and the class never gets inserted.-->
             <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
 
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">xPack GNU RISC-V Embedded GCC v10.1.0-1.2 released</h1>
-        <p class="post-meta"><time datetime="2021-11-04T11:50:38+00:00" itemprop="datePublished">Nov 4, 2021</time> <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">/ Liviu Ionescu</span></span> /
+        <h1 class="post-title" itemprop="name headline">xPack Ninja Build v1.11.1-2 released</h1>
+        <p class="post-meta"><time datetime="2023-01-23T22:51:02+00:00" itemprop="datePublished">Jan 23, 2023</time> <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">/ Liviu Ionescu</span></span> /
             
             
             
@@ -344,23 +577,23 @@ and the class never gets inserted.-->
             
             
             
-            <a href="/tags/riscv/">riscv</a>, 
+            <a href="/tags/ninja-build/">ninja-build</a>, 
             
             
             
-            <a href="/tags/riscv-none-embed-gcc/">riscv-none-embed-gcc</a>, 
+            <a href="/tags/ninja/">ninja</a>, 
             
             
             
-            <a href="/tags/gcc/">gcc</a>, 
+            <a href="/tags/build/">build</a>, 
             
             
             
-            <a href="/tags/binaries/">binaries</a>, 
+            <a href="/tags/speed/">speed</a>, 
             
             
             
-            <a href="/tags/c++/">c++</a>
+            <a href="/tags/small/">small</a>
             
             
             
@@ -373,54 +606,54 @@ and the class never gets inserted.-->
     <div class="post-content" itemprop="articleBody">
 
         
-        <div class="summary">Version <strong>10.1.0-1.2</strong> is a maintenance release; it fixes the missing multi-libs on Windows and updates to the latest build scripts.
+        <div class="summary">Version <strong>1.11.1-2</strong> is a maintenance release, built with the latest build scripts.
 </div>
         
 
-        <p><a href="https://xpack.github.io/riscv-none-embed-gcc/">The xPack GNU RISC-V Embedded GCC</a>
-is a standalone cross-platform binary distribution of the
-<a href="https://github.com/sifive/freedom-tools/releases">SiFive RISC-V GCC</a>.</p>
+        <p><a href="https://xpack.github.io/ninja-build/">The xPack Ninja Build</a>
+is a standalone cross-platform binary distribution of
+<a href="http://ninja-build.org">Ninja Build</a>.</p>
 
-<p>There are separate binaries for <strong>Windows</strong> (Intel 32/64-bit),
-<strong>macOS</strong> (Intel 64-bit) and <strong>GNU/Linux</strong> (Intel 32/64-bit, Arm 64-bit).</p>
+<p>There are separate binaries for <strong>Windows</strong> (Intel 64-bit),
+<strong>macOS</strong> (Intel 64-bit, Apple Silicon 64-bit)
+and <strong>GNU/Linux</strong> (Intel 64-bit, Arm 32/64-bit).</p>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The main targets for the GNU/Linux
-ARMv7 and Aarch64 binaries are the <strong>Raspberry Pi</strong> class devices
-(RPi 2 and up; no RPi 1, being ARMv6).</div>
-
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Due to memory limitations during the build, there is no Arm 32-bit image.</div>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The main targets for the Arm binaries
+are the <strong>Raspberry Pi</strong> class devices (armv7l and aarch64;
+armv6 is not supported).</div>
 
 <h2 id="download">Download</h2>
 
-<p>The binary files are available from GitHub <a href="https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/releases/tag/v10.1.0-1.2/">Releases</a>.</p>
+<p>The binary files are available from GitHub <a href="https://github.com/xpack-dev-tools/ninja-build-xpack/releases/tag/v1.11.1-2/">Releases</a>.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
 <ul>
-  <li>Intel GNU/Linux 32/64-bit: any system with <strong>GLIBC 2.15</strong> or higher
-(like Ubuntu 12 or later, Debian 8 or later, RedHat/CentOS 7 later,
-Fedora 20 or later, etc)</li>
-  <li>Arm GNU/Linux 64-bit: any system with <strong>GLIBC 2.23</strong> or higher
-(like Ubuntu 16 or later, Debian 9 or later, RedHat/CentOS 8 or later,
-Fedora 24 or later, etc); (there is no Arm 32-bit image!);</li>
-  <li>Intel Windows 32/64-bit: Windows 7 with the Universal C Runtime
+  <li>GNU/Linux Intel 64-bit: any system with <strong>GLIBC 2.27</strong> or higher
+(like Ubuntu 18 or later, Debian 10 or later, RedHat 8 later,
+Fedora 29 or later, etc)</li>
+  <li>GNU/Linux Arm 32/64-bit: any system with <strong>GLIBC 2.27</strong> or higher
+(like Raspberry Pi OS, Ubuntu 18 or later, Debian 10 or later, RedHat 8 later,
+Fedora 29 or later, etc)</li>
+  <li>Intel Windows 64-bit: Windows 7 with the Universal C Runtime
 (<a href="https://support.microsoft.com/en-us/topic/update-for-universal-c-runtime-in-windows-c0514201-7fe6-95a3-b0a5-287930f3560c">UCRT</a>),
 Windows 8, Windows 10</li>
   <li>Intel macOS 64-bit: 10.13 or later</li>
+  <li>Apple Silicon macOS 64-bit: 11.6 or later</li>
 </ul>
 
 <h2 id="install">Install</h2>
 
-<p>The full details of installing the <strong>xPack GNU RISC-V Embedded GCC</strong> on various platforms
+<p>The full details of installing the <strong>xPack Ninja Build</strong> on various platforms
 are presented in the separate
-<a href="/riscv-none-embed-gcc/install/">Install</a> page.</p>
+<a href="/ninja-build/install/">Install</a> page.</p>
 
 <h3 id="easy-install">Easy install</h3>
 
-<p>The easiest way to install GNU RISC-V Embedded GCC is with
+<p>The easiest way to install Ninja Build is with
 <a href="/xpm/"><code class="language-plaintext highlighter-rouge">xpm</code></a>
 by using the <strong>binary xPack</strong>, available as
-<a href="https://www.npmjs.com/package/@xpack-dev-tools/riscv-none-embed-gcc"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/riscv-none-embed-gcc</code></a>
+<a href="https://www.npmjs.com/package/@xpack-dev-tools/ninja-build"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/ninja-build</code></a>
 from the <a href="https://www.npmjs.com"><code class="language-plaintext highlighter-rouge">npmjs.com</code></a> registry.</p>
 
 <p>With the <code class="language-plaintext highlighter-rouge">xpm</code> tool available, installing
@@ -430,114 +663,59 @@ a dependency for a project is quite easy:</p>
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>my-project
 xpm init <span class="c"># Only at first use.</span>
 
-xpm <span class="nb">install</span> @xpack-dev-tools/riscv-none-embed-gcc@latest
+xpm <span class="nb">install</span> @xpack-dev-tools/ninja-build@latest
 
 <span class="nb">ls</span> <span class="nt">-l</span> xpacks/.bin
 </code></pre></div></div>
 
 <p>To install this specific version, use:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> @xpack-dev-tools/riscv-none-embed-gcc@10.1.0-1.2.1
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> @xpack-dev-tools/ninja-build@1.11.1-2.1
 </code></pre></div></div>
 
-<p>For xPacks aware tools, like the <strong>Eclipse Embedded C/C++ plug-ins</strong>,
-it is also possible to install GNU RISC-V Embedded GCC globally, in the user home folder.</p>
+<p>It is also possible to install Meson Build globally, in the user home folder,
+but this requires xPack aware tools to automatically identify them and
+manage paths.</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/riscv-none-embed-gcc@latest
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/ninja-build@latest
 </code></pre></div></div>
-
-<p>Eclipse will automatically
-identify binaries installed with
-<code class="language-plaintext highlighter-rouge">xpm</code> and provide a convenient method to manage paths.</p>
 
 <h3 id="uninstall">Uninstall</h3>
 
-<p>To remove the links from the current project:</p>
+<p>To remove the links created by xpm in the current project:</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>my-project
 
-xpm uninstall @xpack-dev-tools/riscv-none-embed-gcc
+xpm uninstall @xpack-dev-tools/ninja-build
 </code></pre></div></div>
 
 <p>To completely remove the package from the global store:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm uninstall <span class="nt">--global</span> @xpack-dev-tools/riscv-none-embed-gcc
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm uninstall <span class="nt">--global</span> @xpack-dev-tools/ninja-build
 </code></pre></div></div>
 
 <h2 id="compliance">Compliance</h2>
 
-<p>The xPack GNU RISC-V Embedded GCC generally follows the official
-SiFive RISC-V GCC <a href="https://github.com/sifive/freedom-tools/releases">Releases</a>,
-with as little differences as possible.</p>
+<p>The xPack Ninja Build generally follows the official
+<a href="http://ninja-build.org">Ninja Build</a> releases.</p>
 
 <p>The current version is based on:</p>
 
 <ul>
-  <li>SiFive RISC-V GCC release <strong>v2020.08.0</strong> from December 19, 2020,
-and includes the SiFive extensions, including the RVV vector support.</li>
+  <li>Ninja Build version 1.11.1
+from 30 Aug 2022.</li>
 </ul>
 
 <h2 id="changes">Changes</h2>
 
-<p>There are no functional changes.</p>
-
-<h3 id="improvements">Improvements</h3>
-
-<p>Compared to the original SiFive version, the <strong>same architecture and API</strong>
-options are supported, and there are minimal functional changes</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">libgloss</code> was removed from the list of libraries always linked to the
-application, since it issues <code class="language-plaintext highlighter-rouge">ECALL</code>
-instructions that fail in bare metal environments</li>
-</ul>
-
-<h3 id="newlib-nano">newlib-nano</h3>
-
-<p>Support for <strong>newlib-nano</strong> is available using the
-<code class="language-plaintext highlighter-rouge">--specs=nano.specs</code> option. For better results, this option must be
-added to both compile and link time.</p>
-
-<h3 id="nosysspecs">nosys.specs</h3>
-
-<p>If no syscalls are needed, <code class="language-plaintext highlighter-rouge">--specs=nosys.specs</code> can be used at link
-time to provide empty implementations for the POSIX system calls.</p>
-
-<h3 id="compile-options">Compile options</h3>
-
-<p>The libraries are compiled with <code class="language-plaintext highlighter-rouge">-O2 -mcmodel=medany</code>. The nano version is
-compiled with <code class="language-plaintext highlighter-rouge">-Os -mcmodel=medany</code>.</p>
-
-<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important:</b> It is mandatory for the applications to
-be compiled with
-<code class="language-plaintext highlighter-rouge">-mcmodel=medany</code>, otherwise the link will fail.</div>
-
-<h3 id="python">Python</h3>
-
-<p>Support for Python scripting was added to GDB. This distribution provides
-a separate binary, <code class="language-plaintext highlighter-rouge">riscv-none-embed-gdb-py3</code> with
-support for <strong>Python 3.7</strong>.</p>
-
-<p>The Python 3 run-time is included, so GDB does not need any version of
-Python to be installed, and is insensitive to the presence of other
-versions.</p>
-
-<p>Support for Python 2 was discontinued.</p>
-
-<h3 id="text-user-interface-tui">Text User Interface (TUI)</h3>
-
-<p>Support for TUI was added to GDB. The <code class="language-plaintext highlighter-rouge">ncurses</code> library (v6.2) was added to
-the distribution.</p>
-
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> TUI is not available on Windows.</div>
+<p>Compared to the upstream version, the Windows version also supports
+spawning scripts via <code class="language-plaintext highlighter-rouge">cmd.exe /c</code>. These scripts are used by <strong>npm</strong>/<strong>xpm</strong>
+to redirect invocations to the central packages repository.</p>
 
 <h2 id="bug-fixes">Bug fixes</h2>
 
 <ul>
-  <li>[<a href="https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/issues/10">#10</a>] -
-due to a problem in the build scripts, the Windows archives did not include
-the proper multi-lib support, and the list of usable libraries was the
-default one, smaller than in the other platforms; fixed.</li>
+  <li>none</li>
 </ul>
 
 <h2 id="enhancements">Enhancements</h2>
@@ -549,12 +727,7 @@ default one, smaller than in the other platforms; fixed.</li>
 <h2 id="known-problems">Known problems</h2>
 
 <ul>
-  <li>due to the very large number of instructions added by the vector support
-(~70K), the compiler sources became too large and it was not possible to build the Arm 32-bit image
-(<a href="https://github.com/riscv/riscv-gcc/issues/229">#229</a>)</li>
-  <li>the archive size got too big for the Windows 32-bit node to handle, and
-<code class="language-plaintext highlighter-rouge">xpm install</code> may fail with <em>RangeError: Array buffer allocation failed</em>;
-the 64-bit systems are not affected.</li>
+  <li>none</li>
 </ul>
 
 <h2 id="shared-libraries">Shared libraries</h2>
@@ -581,19 +754,20 @@ is set in the environment, it should not interfere with the xPack binaries.</p>
 has a priority lower than <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code>, and does not tolerate setting
 it in the environment.</p>
 
-<h3 id="executable_path"><code class="language-plaintext highlighter-rouge">@executable_path</code></h3>
+<h3 id="rpath-and-loader_path"><code class="language-plaintext highlighter-rouge">@rpath</code> and <code class="language-plaintext highlighter-rouge">@loader_path</code></h3>
 
-<p>Similarly, on macOS, the binaries are adjusted with <code class="language-plaintext highlighter-rouge">otool</code> to use a
+<p>Similarly, on macOS, the binaries are adjusted with <code class="language-plaintext highlighter-rouge">install_name_tool</code> to use a
 relative path.</p>
 
 <h2 id="documentation">Documentation</h2>
 
-<p>The original documentation is available in the <code class="language-plaintext highlighter-rouge">share/doc</code> folder.</p>
+<p>The original documentation is available
+<a href="https://ninja-build.org/manual.html">online</a>.</p>
 
 <h2 id="build">Build</h2>
 
 <p>The binaries for all supported platforms
-(Windows, macOS and Intel &amp; Arm GNU/Linux) were built using the
+(Windows, macOS and GNU/Linux) were built using the
 <a href="https://xpack.github.io/xbb/">xPack Build Box (XBB)</a>, a set
 of build environments based on slightly older distributions, that should be
 compatible with most recent systems.</p>
@@ -605,7 +779,7 @@ compatible with most recent systems.</p>
 </ul>
 
 <p>For the prerequisites and more details on the build procedure, please see the
-<a href="https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/blob/xpack/README-BUILD.md">How to build</a> page.</p>
+<a href="https://github.com/xpack-dev-tools/ninja-build-xpack/blob/xpack/README-BUILD.md">How to build</a> page.</p>
 
 <h2 id="ci-tests">CI tests</h2>
 
@@ -613,37 +787,35 @@ compatible with most recent systems.</p>
 set of platforms. The results are available from:</p>
 
 <ul>
-  <li><a href="https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/actions/">GitHub Actions</a></li>
-  <li><a href="https://app.travis-ci.com/github/xpack-dev-tools/riscv-none-embed-gcc-xpack/builds/">Travis CI</a></li>
+  <li><a href="https://github.com/xpack-dev-tools/ninja-build-xpack/actions/">GitHub Actions</a></li>
+  <li><a href="https://app.travis-ci.com/github/xpack-dev-tools/ninja-build-xpack/builds/">Travis CI</a></li>
 </ul>
 
 <h2 id="tests">Tests</h2>
 
-<p>The binaries were tested on a variety of platforms,
-but mainly to check the integrity of the
-build, not the compiler functionality.</p>
+<p>TBD</p>
 
 <h2 id="checksums">Checksums</h2>
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">b69805483983cf5d3f2f54e8417b29b7eb95dc0981b26bff50cedfa75a7f1d03
-xpack-riscv-none-embed-gcc-10.1.0-1.2-darwin-x64.tar.gz
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">cbf57ea055028966107fa377b9e4325e4508308fcc47a238f4d678eb65c094ae
+xpack-ninja-build-1.11.1-2-darwin-arm64.tar.gz
 
-addf51c9e73f0869ce6211969f21c51ad42743db86af9d9e0c201118f417d598
-xpack-riscv-none-embed-gcc-10.1.0-1.2-linux-arm64.tar.gz
+915eeff2cb8d106804435bca654cc81b35c935f8cd00be3b84e60d42aa5e8555
+xpack-ninja-build-1.11.1-2-darwin-x64.tar.gz
 
-3f8d510a36e7a45ba60702e7fd165159967a8344d5662fe2b82e5e0cf1252f10
-xpack-riscv-none-embed-gcc-10.1.0-1.2-linux-ia32.tar.gz
+28f68d64fdcf5fbb2e816dc4ae049c689ebbac6ddb5156bf7c4cf6b36c1d0efd
+xpack-ninja-build-1.11.1-2-linux-arm.tar.gz
 
-c60de8880cea9df207b2df820d37ceab8e02b48783e739c2c8cfe1f2a06fe310
-xpack-riscv-none-embed-gcc-10.1.0-1.2-linux-x64.tar.gz
+44e0263a886a75baf4fb56e348326dfb62ae5325c38a2ba02977982ecb1818a8
+xpack-ninja-build-1.11.1-2-linux-arm64.tar.gz
 
-049336b548e33e374a27e1e8c1f63e621fc22b7140a2d5e2f5980dddafb397ed
-xpack-riscv-none-embed-gcc-10.1.0-1.2-win32-ia32.zip
+cfd4c4b815183ef513151b05aa576974fc169164d4a706ca1f1b7c350b66107b
+xpack-ninja-build-1.11.1-2-linux-x64.tar.gz
 
-e2c88c768d0ef82265bb4a2dc59c80ae6f01788080f7999afbaa415103744e62
-xpack-riscv-none-embed-gcc-10.1.0-1.2-win32-x64.zip
+da68e7157bda76cb79c9b86ae00fd1856a24f971fdeab7138ab06ab6882c9d13
+xpack-ninja-build-1.11.1-2-win32-x64.zip
 
 </span></code></pre></div></div>
 
@@ -651,32 +823,30 @@ xpack-riscv-none-embed-gcc-10.1.0-1.2-win32-x64.zip
 
 <h3 id="32-bit-support">32-bit support</h3>
 
-<p>Support for 32-bit Intel Linux and Intel Windows will most probably
-be dropped in 2022. Support for 32-bit Arm Linux will be preserved
+<p>Support for 32-bit Intel Linux and Intel Windows was
+dropped in 2022. Support for 32-bit Arm Linux (armv7l) will be preserved
 for a while, due to the large user base of 32-bit Raspberry Pi systems.</p>
 
 <h3 id="linux-minimum-requirements">Linux minimum requirements</h3>
 
-<p>Support for RedHat 7 will most probably be dropped in 2022, and the
-minimum requirement will be raised to GLIBC 2.27, available starting
-with Ubuntu 18 and RedHat 8.</p>
+<p>Support for RedHat 7 was dropped in 2022 and the
+minimum requirement was raised to GLIBC 2.27, available starting
+with Ubuntu 18, Debian 10 and RedHat 8.</p>
 
 <h2 id="download-analytics">Download analytics</h2>
 
 <ul>
-  <li>GitHub <a href="https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/">xpack-dev-tools/riscv-none-embed-gcc-xpack</a>
+  <li>GitHub <a href="https://github.com/xpack-dev-tools/ninja-build-xpack/">xpack-dev-tools/ninja-build-xpack</a>
     <ul>
-      <li>this release <a href="https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/releases/v10.1.0-1.2/"><img src="https://img.shields.io/github/downloads/xpack-dev-tools/riscv-none-embed-gcc-xpack/v10.1.0-1.2/total.svg" alt="Github All Releases" /></a></li>
-      <li>all xPack releases <a href="https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/releases/"><img src="https://img.shields.io/github/downloads/xpack-dev-tools/riscv-none-embed-gcc-xpack/total.svg" alt="Github All Releases" /></a></li>
-      <li>all GNU MCU Eclipse releases <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/"><img src="https://img.shields.io/github/downloads/gnu-mcu-eclipse/riscv-none-gcc/total.svg" alt="Github All Releases" /></a></li>
-      <li><a href="https://somsubhra.github.io/github-release-stats/?username=xpack-dev-tools&amp;repository=riscv-none-embed-gcc-xpack">individual file counters</a> (grouped per release)</li>
+      <li>this release <a href="https://github.com/xpack-dev-tools/ninja-build-xpack/releases/v1.11.1-2/"><img src="https://img.shields.io/github/downloads/xpack-dev-tools/ninja-build-xpack/v1.11.1-2/total.svg" alt="Github All Releases" /></a></li>
+      <li>all xPack releases <a href="https://github.com/xpack-dev-tools/ninja-build-xpack/releases/"><img src="https://img.shields.io/github/downloads/xpack-dev-tools/ninja-build-xpack/total.svg" alt="Github All Releases" /></a></li>
+      <li><a href="https://somsubhra.github.io/github-release-stats/?username=xpack-dev-tools&amp;repository=ninja-build-xpack">individual file counters</a> (grouped per release)</li>
     </ul>
   </li>
-  <li>npmjs.com <a href="https://www.npmjs.com/package/@xpack-dev-tools/riscv-none-embed-gcc">@xpack-dev-tools/riscv-none-embed-gcc</a>
+  <li>npmjs.com <a href="https://www.npmjs.com/package/@xpack-dev-tools/ninja-build">@xpack-dev-tools/ninja-build</a>
     <ul>
-      <li>latest releases <a href="https://www.npmjs.com/package/@xpack-dev-tools/riscv-none-embed-gcc/"><img src="https://img.shields.io/npm/dw/@xpack-dev-tools/riscv-none-embed-gcc.svg" alt="npm" /></a></li>
-      <li>all @xpack-dev-tools releases <a href="https://www.npmjs.com/package/@xpack-dev-tools/riscv-none-embed-gcc/"><img src="https://img.shields.io/npm/dt/@xpack-dev-tools/riscv-none-embed-gcc.svg" alt="npm" /></a></li>
-      <li>all @gnu-mcu-eclipse releases <a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/riscv-none-gcc/"><img src="https://img.shields.io/npm/dt/@gnu-mcu-eclipse/riscv-none-gcc.svg" alt="npm" /></a></li>
+      <li>latest releases <a href="https://www.npmjs.com/package/@xpack-dev-tools/ninja-build/"><img src="https://img.shields.io/npm/dw/@xpack-dev-tools/ninja-build.svg" alt="npm" /></a></li>
+      <li>all @xpack-dev-tools releases <a href="https://www.npmjs.com/package/@xpack-dev-tools/ninja-build/"><img src="https://img.shields.io/npm/dt/@xpack-dev-tools/ninja-build.svg" alt="npm" /></a></li>
     </ul>
   </li>
 </ul>
@@ -692,7 +862,7 @@ for the individual file counters.</p>
 </article>
 
     
-    <a target="_blank" rel="noopener" href="https://github.com/xpack/web-jekyll/blob/master/_posts/releases/riscv-none-elf-gcc/2021-11-04-riscv-none-embed-gcc-v10-1-0-1-2-released.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
+    <a target="_blank" rel="noopener" href="https://github.com/xpack/web-jekyll/blob/master/_posts/releases/ninja-build/2023-01-23-ninja-build-v1-11-1-2-released.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
 
     
 
@@ -709,7 +879,7 @@ for the individual file counters.</p>
     <script type="text/javascript">
         var disqus_config = function () {
             this.page.url = '';  // Your page's canonical URL variable
-            this.page.identifier = '/blog/2021/11/04/riscv-none-embed-gcc-v10-1-0-1-2-released/'; // Your page's unique identifier variable
+            this.page.identifier = '/blog/2023/01/23/ninja-build-v1-11-1-2-released/'; // Your page's unique identifier variable
         };
 
         (function() { // DON'T EDIT BELOW THIS LINE
