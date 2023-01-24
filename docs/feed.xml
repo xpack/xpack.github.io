@@ -5,9 +5,25 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 23 Jan 2023 23:16:43 +0000</pubDate>
-        <lastBuildDate>Mon, 23 Jan 2023 23:16:43 +0000</lastBuildDate>
+        <pubDate>Tue, 24 Jan 2023 12:01:00 +0000</pubDate>
+        <lastBuildDate>Tue, 24 Jan 2023 12:01:00 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>xPack CMake v3.23.5-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/cmake/&quot;&gt;The xPack CMake&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://cmake.org&quot;&gt;CMake&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Tue, 24 Jan 2023 11:30:43 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2023/01/24/cmake-v3-23-5-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2023/01/24/cmake-v3-23-5-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>cmake</category>
+            
+            <category>build</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Ninja Build v1.11.1-2 released</title>
@@ -149,20 +165,6 @@
             <pubDate>Tue, 27 Dec 2022 17:51:30 +0000</pubDate>
             <link>https://xpack.github.io/blog/2022/12/27/patchelf-v0-17-0-1-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2022/12/27/patchelf-v0-17-0-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>patchelf</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack NixOS PatchELF v0.16.1-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/patchelf/&quot;&gt;The xPack NixOS PatchELF&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://github.com/NixOS/patchelf/&quot;&gt;NixOS PatchELF&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Tue, 27 Dec 2022 11:55:36 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2022/12/27/patchelf-v0-16-1-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2022/12/27/patchelf-v0-16-1-1-released/</guid>
             
             <category>releases</category>
             

@@ -1819,6 +1819,16 @@
 
 
 {
+"title": "xPack CMake v3.23.5-1 released",
+"tags": "releasescmakebuild",
+"keywords": "",
+"url": "/blog/2023/01/24/cmake-v3-23-5-1-released/",
+"summary": "<p>Version <strong>3.23.5-1</strong> is a new release; it follows the upstream release.</p>"
+}
+,
+
+
+{
 "title": "xPack Ninja Build v1.11.1-2 released",
 "tags": "releasesninja-buildninjabuildspeedsmall",
 "keywords": "",
