@@ -1819,6 +1819,16 @@
 
 
 {
+"title": "xPack Meson Build v0.62.2-1 released",
+"tags": "releasesmeson-buildmesonbuildpythonninja",
+"keywords": "",
+"url": "/blog/2023/01/28/meson-build-v0-62-2-1-released/",
+"summary": "<p>Version <strong>0.62.2-1</strong> is a new release; it follows the upstream release.</p>"
+}
+,
+
+
+{
 "title": "xPack LLVM clang v15.0.7-2 released",
 "tags": "releasesclang",
 "keywords": "",
