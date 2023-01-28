@@ -5,9 +5,31 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sat, 28 Jan 2023 14:29:07 +0000</pubDate>
-        <lastBuildDate>Sat, 28 Jan 2023 14:29:07 +0000</lastBuildDate>
+        <pubDate>Sat, 28 Jan 2023 15:55:24 +0000</pubDate>
+        <lastBuildDate>Sat, 28 Jan 2023 15:55:24 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>xPack Meson Build v0.63.3-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/meson-build/&quot;&gt;The xPack Meson Build&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://mesonbuild.org&quot;&gt;Meson Build&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Sat, 28 Jan 2023 15:44:53 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2023/01/28/meson-build-v0-63-3-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2023/01/28/meson-build-v0-63-3-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>meson-build</category>
+            
+            <category>meson</category>
+            
+            <category>build</category>
+            
+            <category>python</category>
+            
+            <category>ninja</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Meson Build v0.62.2-1 released</title>
@@ -159,24 +181,6 @@
             <category>mingw</category>
             
             <category>mingw-w64</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack xpm v0.14.3 released</title>
-            <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; is a&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to orchestrate builds and to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt; dependencies.&lt;/p&gt;</description>
-            <pubDate>Tue, 03 Jan 2023 08:57:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2023/01/03/xpm-v0-14-3-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2023/01/03/xpm-v0-14-3-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>xpm</category>
-            
-            <category>package</category>
-            
-            <category>manager</category>
             
             
         </item>
