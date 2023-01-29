@@ -5,9 +5,33 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 29 Jan 2023 16:12:38 +0000</pubDate>
-        <lastBuildDate>Sun, 29 Jan 2023 16:12:38 +0000</lastBuildDate>
+        <pubDate>Sun, 29 Jan 2023 16:55:39 +0000</pubDate>
+        <lastBuildDate>Sun, 29 Jan 2023 16:55:39 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>xPack Windows Build Tools v4.4.0-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/windows-build-tools/&quot;&gt;The xPack Windows Build Tools&lt;/a&gt;is a standalone Windows binary distribution of&lt;strong&gt;GNU make&lt;/strong&gt; and a few of other tools required by the Eclipse Embedded CDT(formerly GNU MCU/ARM Eclipse) project, but the binaries can also be used ingeneric build environments.&lt;/p&gt;</description>
+            <pubDate>Sun, 29 Jan 2023 16:39:37 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2023/01/29/windows-build-tools-v4-4-0-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2023/01/29/windows-build-tools-v4-4-0-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>windows-build-tools</category>
+            
+            <category>build</category>
+            
+            <category>make</category>
+            
+            <category>rm</category>
+            
+            <category>mkdir</category>
+            
+            <category>busybox</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack GNU sed v4.9.0-2 released</title>
@@ -159,20 +183,6 @@
             <category>speed</category>
             
             <category>small</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack NixOS PatchELF v0.17.2-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/patchelf/&quot;&gt;The xPack NixOS PatchELF&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://github.com/NixOS/patchelf/&quot;&gt;NixOS PatchELF&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Mon, 23 Jan 2023 18:33:25 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2023/01/23/patchelf-v0-17-2-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2023/01/23/patchelf-v0-17-2-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>patchelf</category>
             
             
         </item>
