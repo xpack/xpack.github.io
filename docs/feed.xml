@@ -5,9 +5,25 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sat, 28 Jan 2023 15:55:24 +0000</pubDate>
-        <lastBuildDate>Sat, 28 Jan 2023 15:55:24 +0000</lastBuildDate>
+        <pubDate>Sun, 29 Jan 2023 09:34:17 +0000</pubDate>
+        <lastBuildDate>Sun, 29 Jan 2023 09:34:17 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>xPack GNU realpath v9.1.0-2 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/realpath/&quot;&gt;The xPack GNU realpath&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://realpath.org&quot;&gt;GNU realpath&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Sun, 29 Jan 2023 09:21:47 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2023/01/29/realpath-v9-1-0-2-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2023/01/29/realpath-v9-1-0-2-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>realpath</category>
+            
+            <category>readlink</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Meson Build v0.63.3-1 released</title>
@@ -163,24 +179,6 @@
             <category>wine</category>
             
             <category>build</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack MinGW-w64 GCC v12.2.0-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/mingw-w64-gcc/&quot;&gt;The xPack MinGW-w64 GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://www.mingw-w64.org&quot;&gt;Mingw-w64&lt;/a&gt;&lt;a href=&quot;http://gcc.org&quot;&gt;GCC&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Tue, 03 Jan 2023 10:45:35 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2023/01/03/mingw-w64-gcc-v12-2-0-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2023/01/03/mingw-w64-gcc-v12-2-0-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>gcc</category>
-            
-            <category>mingw</category>
-            
-            <category>mingw-w64</category>
             
             
         </item>
