@@ -1819,6 +1819,16 @@
 
 
 {
+"title": "xPack OpenOCD v0.12.0-1 released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2023/01/30/openocd-v0-12-0-1-released/",
+"summary": "<p>Version <strong>0.12.0-1</strong> is a new release; it follows the upstream release.</p>"
+}
+,
+
+
+{
 "title": "xPack Windows Build Tools v4.4.0-1 released",
 "tags": "releaseswindows-build-toolsbuildmakermmkdirbusybox",
 "keywords": "",

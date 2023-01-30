@@ -5,9 +5,23 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 29 Jan 2023 16:55:39 +0000</pubDate>
-        <lastBuildDate>Sun, 29 Jan 2023 16:55:39 +0000</lastBuildDate>
+        <pubDate>Mon, 30 Jan 2023 16:14:50 +0000</pubDate>
+        <lastBuildDate>Mon, 30 Jan 2023 16:14:50 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>xPack OpenOCD v0.12.0-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/openocd/&quot;&gt;The xPack OpenOCD&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://openocd.org&quot;&gt;OpenOCD&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Mon, 30 Jan 2023 16:00:11 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2023/01/30/openocd-v0-12-0-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2023/01/30/openocd-v0-12-0-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>openocd</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Windows Build Tools v4.4.0-1 released</title>
@@ -161,28 +175,6 @@
             <category>cmake</category>
             
             <category>build</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack Ninja Build v1.11.1-2 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/ninja-build/&quot;&gt;The xPack Ninja Build&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://ninja-build.org&quot;&gt;Ninja Build&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Mon, 23 Jan 2023 22:51:02 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2023/01/23/ninja-build-v1-11-1-2-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2023/01/23/ninja-build-v1-11-1-2-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>ninja-build</category>
-            
-            <category>ninja</category>
-            
-            <category>build</category>
-            
-            <category>speed</category>
-            
-            <category>small</category>
             
             
         </item>
