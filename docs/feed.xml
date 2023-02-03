@@ -5,9 +5,33 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 02 Feb 2023 21:02:30 +0000</pubDate>
-        <lastBuildDate>Thu, 02 Feb 2023 21:02:30 +0000</lastBuildDate>
+        <pubDate>Fri, 03 Feb 2023 07:26:34 +0000</pubDate>
+        <lastBuildDate>Fri, 03 Feb 2023 07:26:34 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
+        
+        <item>
+            <title>xPack GNU AArch64 Embedded GCC v12.2.1-1.1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/aarch64-none-elf-gcc/&quot;&gt;The xPack GNU AArch64 Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain&quot;&gt;GNU AArch64 Embedded Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Fri, 03 Feb 2023 06:59:28 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2023/02/03/aarch64-none-elf-gcc-v12-2-1-1-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2023/02/03/aarch64-none-elf-gcc-v12-2-1-1-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>arm</category>
+            
+            <category>aarch64-none-elf-gcc</category>
+            
+            <category>gcc</category>
+            
+            <category>binaries</category>
+            
+            <category>c++</category>
+            
+            <category>exceptions</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack GNU RISC-V Embedded GCC v12.2.0-2 released</title>
@@ -163,28 +187,6 @@
             <category>realpath</category>
             
             <category>readlink</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack Meson Build v0.63.3-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/meson-build/&quot;&gt;The xPack Meson Build&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://mesonbuild.org&quot;&gt;Meson Build&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Sat, 28 Jan 2023 15:44:53 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2023/01/28/meson-build-v0-63-3-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2023/01/28/meson-build-v0-63-3-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>meson-build</category>
-            
-            <category>meson</category>
-            
-            <category>build</category>
-            
-            <category>python</category>
-            
-            <category>ninja</category>
             
             
         </item>
