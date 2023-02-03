@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack prerequisites" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-03T07:02:04+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack prerequisites","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"url":"https://xpack.github.io/install/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-03T13:18:53+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack prerequisites","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"url":"https://xpack.github.io/install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -604,8 +604,8 @@ there are two Node versions, <strong>LTS</strong> (<strong>Long Term Service</st
 <p><img src="/assets/images/2019/nodejs-org.png" alt="The Node Download page" /></p>
 
 <p>The general procedure is to download the package suitable for your
-platform and install it as usual. For GNU/Linux and macOS, the recommended
-procedure is to <strong>use a version manager</strong> (see below).
+platform and install it as usual. For GNU/Linux and macOS, it is
+<strong>highly recommended</strong> to <strong>use a version manager</strong> (see below).
 The result is a binary program named <code class="language-plaintext highlighter-rouge">node</code> (that can be used to execute
 JavaScript code from the terminal), and a symbolic link named <code class="language-plaintext highlighter-rouge">npm</code>, pointing to
 the <code class="language-plaintext highlighter-rouge">npm-cli.js</code> script, which is part of the Node module that implements
@@ -616,7 +616,8 @@ the npm functionality (on Windows, where symbolic links are problematic,
 distributions offer to install Node with administrative rights;
 this is not a problem
 for Node itself, but will also require administrative rights for using
-npm and xpm;
+npm and xpm, and these tools fail in various ways when installed
+with administrative rights;
 to simplify maintenance, the preferred method is to install Node/npm
 in a custom location in the home folder, using a version
 manager or by directly unpacking the archive distributions.
@@ -780,6 +781,9 @@ are also part of Xcode, their location is not fixed, hence the Command
 Line Tools package must still be installed, for the xPack toolchains to
 find them in the expected location.</div>
 
+<p>If the <code class="language-plaintext highlighter-rouge">install-nvm-node-npm-xpm.sh</code> script was successful,
+the rest of this page is only informative and can be skipped.</p>
+
 <h2 id="install-nvm-node-version-manager">Install <code class="language-plaintext highlighter-rouge">nvm</code> (node version manager)</h2>
 
 <p>Node.js can be installed manually, but for a greater flexibility, on POSIX
@@ -942,13 +946,11 @@ use <code class="language-plaintext highlighter-rouge">nvm use &lt;version&gt;</
 <span class="nb">exit</span>
 </code></pre></div></div>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The official Node.js distribution no
-longer provides Intel 32-bit images. The version manager is still able
-to install node, by compiling it from sources, but the process takes
-quite a while.</div>
-
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Arm platforms, like the Raspberry Pi,
 are supported, currently in both 32/64-bit variants.</div>
+
+<p>If the <code class="language-plaintext highlighter-rouge">install-nvm-node-npm-xpm.sh</code> script was successful,
+the rest of this page is only informative and can be skipped.</p>
 
 <h2 id="install-nvm-node-version-manager">Install <code class="language-plaintext highlighter-rouge">nvm</code> (node version manager)</h2>
 
