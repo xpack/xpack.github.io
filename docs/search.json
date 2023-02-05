@@ -1819,6 +1819,16 @@
 
 
 {
+"title": "xPack GNU Arm Embedded GCC v12.2.1-1.2 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
+"keywords": "",
+"url": "/blog/2023/02/05/arm-none-eabi-gcc-v12-2-1-1-2-released/",
+"summary": "<p>Version <strong>12.2.1-1.2</strong> is a new release; it follows the Arm release.</p>"
+}
+,
+
+
+{
 "title": "xPack GNU Arm Embedded GCC v12.2.1-1.1 released",
 "tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
 "keywords": "",
