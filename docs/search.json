@@ -1732,6 +1732,28 @@
 "title": "",
 "tags": "",
 "keywords": "",
+"url": "/blog/2023/02/04/arm-none-eabi-gcc-v12-2-1-1-1-released/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "/blog/2023/02/03/aarch64-none-elf-gcc-v12-2-1-1-1-released/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
 "url": "/riscv-none-embed-gcc/faq/",
 "summary": ""
 }
@@ -1834,26 +1856,6 @@
 "keywords": "",
 "url": "/blog/2023/02/05/arm-none-eabi-gcc-v12-2-1-1-2-released/",
 "summary": "<p>Version <strong>12.2.1-1.2</strong> is a new release; it follows the Arm release.</p>"
-}
-,
-
-
-{
-"title": "xPack GNU Arm Embedded GCC v12.2.1-1.1 released",
-"tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
-"keywords": "",
-"url": "/blog/2023/02/04/arm-none-eabi-gcc-v12-2-1-1-1-released/",
-"summary": "<p>Version <strong>12.2.1-1.1</strong> is a new release; it follows the Arm release.</p>"
-}
-,
-
-
-{
-"title": "xPack GNU AArch64 Embedded GCC v12.2.1-1.1 released",
-"tags": "releasesarmaarch64-none-elf-gccgccbinariesc++exceptions",
-"keywords": "",
-"url": "/blog/2023/02/03/aarch64-none-elf-gcc-v12-2-1-1-1-released/",
-"summary": "<p>Version <strong>12.2.1-1.1</strong> is a new release; it follows the upstream Arm release.</p>"
 }
 ,
 
