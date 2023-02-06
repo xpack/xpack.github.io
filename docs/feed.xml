@@ -5,13 +5,13 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 06 Feb 2023 21:50:46 +0000</pubDate>
-        <lastBuildDate>Mon, 06 Feb 2023 21:50:46 +0000</lastBuildDate>
+        <pubDate>Mon, 06 Feb 2023 22:31:49 +0000</pubDate>
+        <lastBuildDate>Mon, 06 Feb 2023 22:31:49 +0000</lastBuildDate>
         <generator>Jekyll v4.2.2</generator>
         
         <item>
             <title>xPack GNU RISC-V Embedded GCC v12.2.0-3 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/riscv-none-elf-gcc/&quot;&gt;The xPack GNU RISC-V Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of the&lt;a href=&quot;https://gcc.gnu.org/releases.html&quot;&gt;GNU GCC&lt;/a&gt;.&lt;/p&gt;</description>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/riscv-none-elf-gcc/&quot;&gt;The xPack GNU RISC-V Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of the&lt;a href=&quot;https://gcc.gnu.org/releases.html&quot;&gt;GNU GCC&lt;/a&gt;.&lt;/p&gt;</description>
             <pubDate>Sun, 05 Feb 2023 21:47:30 +0000</pubDate>
             <link>https://xpack.github.io/blog/2023/02/05/riscv-none-elf-gcc-v12-2-0-3-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2023/02/05/riscv-none-elf-gcc-v12-2-0-3-released/</guid>
@@ -33,7 +33,7 @@
         
         <item>
             <title>xPack GNU AArch64 Embedded GCC v12.2.1-1.2 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/aarch64-none-elf-gcc/&quot;&gt;The xPack GNU AArch64 Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain&quot;&gt;Arm GNU Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/aarch64-none-elf-gcc/&quot;&gt;The xPack GNU AArch64 Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain&quot;&gt;Arm GNU Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
             <pubDate>Sun, 05 Feb 2023 07:50:11 +0000</pubDate>
             <link>https://xpack.github.io/blog/2023/02/05/aarch64-none-elf-gcc-v12-2-1-1-2-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2023/02/05/aarch64-none-elf-gcc-v12-2-1-1-2-released/</guid>
@@ -57,7 +57,7 @@
         
         <item>
             <title>xPack GNU Arm Embedded GCC v12.2.1-1.2 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/arm-none-eabi-gcc/&quot;&gt;The xPack GNU Arm Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain&quot;&gt;Arm GNU Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/arm-none-eabi-gcc/&quot;&gt;The xPack GNU Arm Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain&quot;&gt;Arm GNU Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
             <pubDate>Sun, 05 Feb 2023 03:17:34 +0000</pubDate>
             <link>https://xpack.github.io/blog/2023/02/05/arm-none-eabi-gcc-v12-2-1-1-2-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2023/02/05/arm-none-eabi-gcc-v12-2-1-1-2-released/</guid>
@@ -81,7 +81,7 @@
         
         <item>
             <title>xPack QEMU RISC-V v7.2.0-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/qemu-riscv/&quot;&gt;The xPack QEMU RISC-V&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://www.qemu.org&quot;&gt;QEMU&lt;/a&gt;.&lt;/p&gt;</description>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/qemu-riscv/&quot;&gt;The xPack QEMU RISC-V&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://www.qemu.org&quot;&gt;QEMU&lt;/a&gt;.&lt;/p&gt;</description>
             <pubDate>Tue, 31 Jan 2023 17:50:04 +0000</pubDate>
             <link>https://xpack.github.io/blog/2023/01/31/qemu-riscv-v7-2-0-1-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2023/01/31/qemu-riscv-v7-2-0-1-released/</guid>
@@ -99,7 +99,7 @@
         
         <item>
             <title>xPack QEMU Arm v7.2.0-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/qemu-arm/&quot;&gt;The xPack QEMU Arm&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://www.qemu.org&quot;&gt;QEMU&lt;/a&gt;, with several extensions for Arm Cortex-Mdevices.&lt;/p&gt;</description>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/qemu-arm/&quot;&gt;The xPack QEMU Arm&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://www.qemu.org&quot;&gt;QEMU&lt;/a&gt;, with several extensions for Arm Cortex-Mdevices.&lt;/p&gt;</description>
             <pubDate>Tue, 31 Jan 2023 15:26:12 +0000</pubDate>
             <link>https://xpack.github.io/blog/2023/01/31/qemu-arm-v7-2-0-1-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2023/01/31/qemu-arm-v7-2-0-1-released/</guid>
@@ -121,7 +121,7 @@
         
         <item>
             <title>xPack OpenOCD v0.12.0-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/openocd/&quot;&gt;The xPack OpenOCD&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://openocd.org&quot;&gt;OpenOCD&lt;/a&gt;.&lt;/p&gt;</description>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/openocd/&quot;&gt;The xPack OpenOCD&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://openocd.org&quot;&gt;OpenOCD&lt;/a&gt;.&lt;/p&gt;</description>
             <pubDate>Mon, 30 Jan 2023 16:00:11 +0000</pubDate>
             <link>https://xpack.github.io/blog/2023/01/30/openocd-v0-12-0-1-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2023/01/30/openocd-v0-12-0-1-released/</guid>
@@ -135,7 +135,7 @@
         
         <item>
             <title>xPack Windows Build Tools v4.4.0-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/windows-build-tools/&quot;&gt;The xPack Windows Build Tools&lt;/a&gt;is a standalone Windows binary distribution of&lt;strong&gt;GNU make&lt;/strong&gt; and a few of other tools required by the Eclipse Embedded CDT(formerly GNU MCU/ARM Eclipse) project, but the binaries can also be used ingeneric build environments.&lt;/p&gt;</description>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/windows-build-tools/&quot;&gt;The xPack Windows Build Tools&lt;/a&gt;is a standalone Windows binary distribution of&lt;strong&gt;GNU make&lt;/strong&gt; and a few of other tools required by the Eclipse Embedded CDT(formerly GNU MCU/ARM Eclipse) project, but the binaries can also be used ingeneric build environments.&lt;/p&gt;</description>
             <pubDate>Sun, 29 Jan 2023 16:39:37 +0000</pubDate>
             <link>https://xpack.github.io/blog/2023/01/29/windows-build-tools-v4-4-0-1-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2023/01/29/windows-build-tools-v4-4-0-1-released/</guid>
@@ -159,7 +159,7 @@
         
         <item>
             <title>xPack GNU sed v4.9.0-2 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/sed/&quot;&gt;The xPack GNU sed&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://www.gnu.org/software/sed/&quot;&gt;GNU sed&lt;/a&gt;.&lt;/p&gt;</description>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/sed/&quot;&gt;The xPack GNU sed&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://www.gnu.org/software/sed/&quot;&gt;GNU sed&lt;/a&gt;.&lt;/p&gt;</description>
             <pubDate>Sun, 29 Jan 2023 16:03:03 +0000</pubDate>
             <link>https://xpack.github.io/blog/2023/01/29/sed-v4-9-0-2-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2023/01/29/sed-v4-9-0-2-released/</guid>
@@ -173,7 +173,7 @@
         
         <item>
             <title>xPack GNU M4 v1.4.19-2 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/m4/&quot;&gt;The xPack GNU M4&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://www.gnu.org/software/m4/&quot;&gt;GNU M4&lt;/a&gt;.&lt;/p&gt;</description>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/m4/&quot;&gt;The xPack GNU M4&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://www.gnu.org/software/m4/&quot;&gt;GNU M4&lt;/a&gt;.&lt;/p&gt;</description>
             <pubDate>Sun, 29 Jan 2023 10:57:50 +0000</pubDate>
             <link>https://xpack.github.io/blog/2023/01/29/m4-v1-4-19-2-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2023/01/29/m4-v1-4-19-2-released/</guid>
@@ -187,7 +187,7 @@
         
         <item>
             <title>xPack pkg-config v0.29.2-2 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/pkg-config/&quot;&gt;The xPack pkg-config&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://www.freedesktop.org/wiki/Software/pkg-config/&quot;&gt;pkg-config&lt;/a&gt;.&lt;/p&gt;</description>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/pkg-config/&quot;&gt;The xPack pkg-config&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://www.freedesktop.org/wiki/Software/pkg-config/&quot;&gt;pkg-config&lt;/a&gt;.&lt;/p&gt;</description>
             <pubDate>Sun, 29 Jan 2023 10:11:22 +0000</pubDate>
             <link>https://xpack.github.io/blog/2023/01/29/pkg-config-v0-29-2-2-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2023/01/29/pkg-config-v0-29-2-2-released/</guid>

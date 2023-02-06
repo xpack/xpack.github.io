@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Node.js Tips &amp; ricks" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-06T21:49:49+00:00","datePublished":"2017-10-08T23:47:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"Node.js Tips &amp; ricks","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/node-js-tricks/"},"url":"https://xpack.github.io/develop/node-js-tricks/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-06T22:30:47+00:00","datePublished":"2017-10-08T23:47:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"Node.js Tips &amp; ricks","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/node-js-tricks/"},"url":"https://xpack.github.io/develop/node-js-tricks/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -673,51 +673,51 @@ $('#toc').on('click', 'a', function() {
 
 <p>Use <code class="language-plaintext highlighter-rouge">readdir()</code> to return an array of file names or structures.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  static async chmodRecursive ({ inputPath, readOnly, log }) {
-    assert(inputPath, 'Mandatory inputPath')
-    assert(log, 'Mandatory log')
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">static</span> <span class="k">async</span> <span class="nx">chmodRecursive</span> <span class="p">({</span> <span class="nx">inputPath</span><span class="p">,</span> <span class="nx">readOnly</span><span class="p">,</span> <span class="nx">log</span> <span class="p">})</span> <span class="p">{</span>
+    <span class="nx">assert</span><span class="p">(</span><span class="nx">inputPath</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Mandatory inputPath</span><span class="dl">'</span><span class="p">)</span>
+    <span class="nx">assert</span><span class="p">(</span><span class="nx">log</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Mandatory log</span><span class="dl">'</span><span class="p">)</span>
 
-    const Self = this
+    <span class="kd">const</span> <span class="nx">Self</span> <span class="o">=</span> <span class="k">this</span>
 
-    const stat = await fsPromises.lstat(inputPath)
-    // log.trace(util.inspect(stat))
+    <span class="kd">const</span> <span class="nx">stat</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fsPromises</span><span class="p">.</span><span class="nx">lstat</span><span class="p">(</span><span class="nx">inputPath</span><span class="p">)</span>
+    <span class="c1">// log.trace(util.inspect(stat))</span>
 
-    // The order is important, process the folder before
-    // changing it to RO.
-    if (readOnly &amp;&amp; stat.isDirectory()) {
-      log.trace(inputPath)
-      const files = await fsPromises.readdir(inputPath, { withFileTypes: true })
-      for (const file of files) {
-        await Self.chmodRecursive({
-          inputPath: path.resolve(inputPath, file.name),
-          readOnly,
-          log
-        })
-      }
-    }
+    <span class="c1">// The order is important, process the folder before</span>
+    <span class="c1">// changing it to RO.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">readOnly</span> <span class="o">&amp;&amp;</span> <span class="nx">stat</span><span class="p">.</span><span class="nx">isDirectory</span><span class="p">())</span> <span class="p">{</span>
+      <span class="nx">log</span><span class="p">.</span><span class="nx">trace</span><span class="p">(</span><span class="nx">inputPath</span><span class="p">)</span>
+      <span class="kd">const</span> <span class="nx">files</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fsPromises</span><span class="p">.</span><span class="nx">readdir</span><span class="p">(</span><span class="nx">inputPath</span><span class="p">,</span> <span class="p">{</span> <span class="na">withFileTypes</span><span class="p">:</span> <span class="kc">true</span> <span class="p">})</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">file</span> <span class="k">of</span> <span class="nx">files</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">await</span> <span class="nx">Self</span><span class="p">.</span><span class="nx">chmodRecursive</span><span class="p">({</span>
+          <span class="na">inputPath</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">inputPath</span><span class="p">,</span> <span class="nx">file</span><span class="p">.</span><span class="nx">name</span><span class="p">),</span>
+          <span class="nx">readOnly</span><span class="p">,</span>
+          <span class="nx">log</span>
+        <span class="p">})</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
 
-    const mode = stat.mode
-    // For RO, remove all W bits, for RW add only user.
-    const newMode = readOnly
-      ? mode &amp; ~(fs.constants.S_IWUSR | fs.constants.S_IWGRP |
-          fs.constants.S_IWOTH)
-      : mode | (fs.constants.S_IWUSR)
+    <span class="kd">const</span> <span class="nx">mode</span> <span class="o">=</span> <span class="nx">stat</span><span class="p">.</span><span class="nx">mode</span>
+    <span class="c1">// For RO, remove all W bits, for RW add only user.</span>
+    <span class="kd">const</span> <span class="nx">newMode</span> <span class="o">=</span> <span class="nx">readOnly</span>
+      <span class="p">?</span> <span class="nx">mode</span> <span class="o">&amp;</span> <span class="o">~</span><span class="p">(</span><span class="nx">fs</span><span class="p">.</span><span class="nx">constants</span><span class="p">.</span><span class="nx">S_IWUSR</span> <span class="o">|</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">constants</span><span class="p">.</span><span class="nx">S_IWGRP</span> <span class="o">|</span>
+          <span class="nx">fs</span><span class="p">.</span><span class="nx">constants</span><span class="p">.</span><span class="nx">S_IWOTH</span><span class="p">)</span>
+      <span class="p">:</span> <span class="nx">mode</span> <span class="o">|</span> <span class="p">(</span><span class="nx">fs</span><span class="p">.</span><span class="nx">constants</span><span class="p">.</span><span class="nx">S_IWUSR</span><span class="p">)</span>
 
-    await fsPromises.chmod(inputPath, newMode)
+    <span class="k">await</span> <span class="nx">fsPromises</span><span class="p">.</span><span class="nx">chmod</span><span class="p">(</span><span class="nx">inputPath</span><span class="p">,</span> <span class="nx">newMode</span><span class="p">)</span>
 
-    // If RW, process the folder after changing it to RW.
-    if (!readOnly &amp;&amp; stat.isDirectory()) {
-      log.trace(inputPath)
-      const files = await fsPromises.readdir(inputPath, { withFileTypes: true })
-      for (const file of files) {
-        await Self.chmodRecursive({
-          inputPath: path.resolve(inputPath, file.name),
-          readOnly,
-          log
-        })
-      }
-    }
-  }
+    <span class="c1">// If RW, process the folder after changing it to RW.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">readOnly</span> <span class="o">&amp;&amp;</span> <span class="nx">stat</span><span class="p">.</span><span class="nx">isDirectory</span><span class="p">())</span> <span class="p">{</span>
+      <span class="nx">log</span><span class="p">.</span><span class="nx">trace</span><span class="p">(</span><span class="nx">inputPath</span><span class="p">)</span>
+      <span class="kd">const</span> <span class="nx">files</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fsPromises</span><span class="p">.</span><span class="nx">readdir</span><span class="p">(</span><span class="nx">inputPath</span><span class="p">,</span> <span class="p">{</span> <span class="na">withFileTypes</span><span class="p">:</span> <span class="kc">true</span> <span class="p">})</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">file</span> <span class="k">of</span> <span class="nx">files</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">await</span> <span class="nx">Self</span><span class="p">.</span><span class="nx">chmodRecursive</span><span class="p">({</span>
+          <span class="na">inputPath</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">inputPath</span><span class="p">,</span> <span class="nx">file</span><span class="p">.</span><span class="nx">name</span><span class="p">),</span>
+          <span class="nx">readOnly</span><span class="p">,</span>
+          <span class="nx">log</span>
+        <span class="p">})</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
 </code></pre></div></div>
 
 
