@@ -672,6 +672,17 @@
 
 
 {
+"title": "xPack 3rd Party Development Tools",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/",
+"summary": "<p>Tools from 3rd party projects used during builds.</p>"
+}
+,
+
+
+
+{
 "title": "Visual Studio Code xPack C/C++ Managed Build Extension",
 "tags": "",
 "keywords": "",
@@ -760,6 +771,17 @@
 "keywords": "make",
 "url": "/xpninja/",
 "summary": "<p>A light and fast tool to build generic projects, inspired by Ninja Build but with the configuration files in JSON (in design phase).</p>"
+}
+,
+
+
+
+{
+"title": "xPack Core Tools",
+"tags": "",
+"keywords": "",
+"url": "/core/",
+"summary": "<p>Tools that implement the xPack core functionality.</p>"
 }
 ,
 
