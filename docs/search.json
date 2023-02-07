@@ -2040,6 +2040,17 @@
 "title": "",
 "tags": "",
 "keywords": "",
+"url": "/blog/2023/01/23/xpm-v0-14-4-released/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
 "url": "/arm-none-eabi-gcc/faq/",
 "summary": ""
 }
@@ -2919,6 +2930,16 @@
 
 
 {
+"title": "xPack xpm v0.14.9 released",
+"tags": "releasesxpmpackagemanager",
+"keywords": "",
+"url": "/blog/2023/02/07/xpm-v0-14-9-released/",
+"summary": "<p>Version <strong>0.14.9</strong> is a maintenance release; it fixes the download issues.</p>"
+}
+,
+
+
+{
 "title": "xPack Build Box v5.0.0 released",
 "tags": "releasesxbbbuildbox",
 "keywords": "",
@@ -3094,16 +3115,6 @@
 "keywords": "",
 "url": "/blog/2023/01/23/patchelf-v0-17-2-1-released/",
 "summary": "<p>Version <strong>0.17.2-1</strong> is a new release; it follows the upstream release.</p>"
-}
-,
-
-
-{
-"title": "xPack xpm v0.14.4 released",
-"tags": "releasesxpmpackagemanager",
-"keywords": "",
-"url": "/blog/2023/01/23/xpm-v0-14-4-released/",
-"summary": "<p>Version <strong>0.14.4</strong> is a maintenance release; it fixes the download bug.</p>"
 }
 ,
 

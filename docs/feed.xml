@@ -5,9 +5,27 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 07 Feb 2023 18:13:25 +0000</pubDate>
-        <lastBuildDate>Tue, 07 Feb 2023 18:13:25 +0000</lastBuildDate>
+        <pubDate>Tue, 07 Feb 2023 19:39:57 +0000</pubDate>
+        <lastBuildDate>Tue, 07 Feb 2023 19:39:57 +0000</lastBuildDate>
         <generator>Jekyll v3.9.3</generator>
+        
+        <item>
+            <title>xPack xpm v0.14.9 released</title>
+            <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; is a&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to orchestrate builds and to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt; dependencies.&lt;/p&gt;</description>
+            <pubDate>Tue, 07 Feb 2023 19:15:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2023/02/07/xpm-v0-14-9-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2023/02/07/xpm-v0-14-9-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>xpm</category>
+            
+            <category>package</category>
+            
+            <category>manager</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack Build Box v5.0.0 released</title>
@@ -185,20 +203,6 @@
             <category>releases</category>
             
             <category>sed</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack GNU M4 v1.4.19-2 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/m4/&quot;&gt;The xPack GNU M4&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://www.gnu.org/software/m4/&quot;&gt;GNU M4&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Sun, 29 Jan 2023 10:57:50 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2023/01/29/m4-v1-4-19-2-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2023/01/29/m4-v1-4-19-2-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>m4</category>
             
             
         </item>
