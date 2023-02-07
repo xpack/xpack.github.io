@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="The GNU MCU Eclipse QEMU command line options" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-07T09:46:36+00:00","datePublished":"2015-11-10T16:27:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"The GNU MCU Eclipse QEMU command line options","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/dev-tools/qemu-arm/options/"},"url":"https://xpack.github.io/dev-tools/qemu-arm/options/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-07T17:58:05+00:00","datePublished":"2015-11-10T16:27:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"The GNU MCU Eclipse QEMU command line options","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/dev-tools/qemu-arm/options/"},"url":"https://xpack.github.io/dev-tools/qemu-arm/options/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -371,6 +371,11 @@ $('#toc').on('click', 'a', function() {
 
     
 
+        
+    <a target="_blank" rel="noopener" href="https://github.com/xpack/web-jekyll/blob/master/pages/dev-tools/qemu-arm/options.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
+
+    
+
 
    <h2 id="for-the-impatient">For the impatient</h2>
 
@@ -549,12 +554,6 @@ Cortex-M4 r0p0 core reset.
 <h2 id="fully-semihosted-applications">Fully semihosted applications</h2>
 
 <p>When using QEMU for running unit tests, and expecting the exit code to reflect the test result, it is mandatory for the application to be compiled and linked as a <strong>fully semihosted application</strong>, in other words all system calls to be implemented using the semihosting interface. For the projects created by the Eclipse Embedded CDT wizards, this is achieved by defining <code class="language-plaintext highlighter-rouge">OS_USE_SEMIHOSTING</code>; outside Eclipse Embedded CDT it depends on the libraries used, for example newlib can be configured for semihosting by adding <code class="language-plaintext highlighter-rouge">--specs=rdimon.specs</code> to the linker options.</p>
-
-
-        
-    <a target="_blank" rel="noopener" href="https://github.com/xpack/web-jekyll/blob/master/pages/dev-tools/qemu-arm/options.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
-
-    
 
 
     <div class="tags">

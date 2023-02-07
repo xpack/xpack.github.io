@@ -343,7 +343,7 @@ a.accordion-toggle, a.accordion-collapsed {
 .nav a {
     color: #333;
     display: block;
-    outline: none;
+    /* outline: none; */
     /*-webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;*/

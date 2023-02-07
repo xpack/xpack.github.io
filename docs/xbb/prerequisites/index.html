@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Prerequisites for building xPack binaries" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-07T09:46:36+00:00","datePublished":"2017-07-06T17:55:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"Prerequisites for building xPack binaries","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/prerequisites/"},"url":"https://xpack.github.io/xbb/prerequisites/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-07T17:58:05+00:00","datePublished":"2017-07-06T17:55:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"Prerequisites for building xPack binaries","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/prerequisites/"},"url":"https://xpack.github.io/xbb/prerequisites/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -265,7 +265,7 @@
                 
 
 <ul id="mysidebar" class="nav">
-  <li class="sidebarTitle"> </li>
+  <li class="sidebarTitle">xPack Build Box </li>
   
   
   
@@ -275,310 +275,28 @@
           
           
           
-          <li><a title="Overview" href="/">Overview</a></li>
+          <li><a title="Overview" href="/xbb/">Overview</a></li>
           
           
           
           
           
           
-          <li><a title="Intro (xPack 101)" href="/intro/">Intro (xPack 101)</a></li>
+          <li class="active"><a title="Prerequisites" href="/xbb/prerequisites/">Prerequisites</a></li>
           
           
           
           
           
           
-          <li><a title="Install prerequisites" href="/install/">Install prerequisites</a></li>
+          <li><a title="Linux distro versions" href="/xbb/end-of-support/">Linux distro versions</a></li>
           
           
           
           
-      </ul>
-   </li>
-     
-      
-  
-  <li>
-      <a title="Core Tools" href="#">Core Tools</a>
-      <ul>
           
           
-          
-          <li><a title="Overview" href="/core/">Overview</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="xpm" href="/xpm/">xpm</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
-  
-  <li>
-      <a title="3rd Party Tools" href="#">3rd Party Tools</a>
-      <ul>
-          
-          
-          
-          <li><a title="Overview" href="/dev-tools/">Overview</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="aarch64-none-elf-gcc" href="/dev-tools/aarch64-none-elf-gcc/">aarch64-none-elf-gcc</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="arm-none-eabi-gcc" href="/dev-tools/arm-none-eabi-gcc/">arm-none-eabi-gcc</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="clang" href="/dev-tools/clang/">clang</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="cmake" href="/dev-tools/cmake/">cmake</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="gcc" href="/dev-tools/gcc/">gcc</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="meson-build" href="/dev-tools/meson-build/">meson-build</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="mingw-w64-gcc" href="/dev-tools/mingw-w64-gcc/">mingw-w64-gcc</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="ninja-build" href="/dev-tools/ninja-build/">ninja-build</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="openocd" href="/dev-tools/openocd/">openocd</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="qemu-arm" href="/dev-tools/qemu-arm/">qemu-arm</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="qemu-riscv" href="/dev-tools/qemu-riscv/">qemu-riscv</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="riscv-none-elf-gcc" href="/dev-tools/riscv-none-elf-gcc/">riscv-none-elf-gcc</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="windows-build-tools" href="/dev-tools/windows-build-tools/">windows-build-tools</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
-  
-  <li>
-      <a title="Other 3rd Party Tools" href="#">Other 3rd Party Tools</a>
-      <ul>
-          
-          
-          
-          <li><a title="m4" href="/dev-tools/m4/">m4</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="patchelf" href="/dev-tools/patchelf/">patchelf</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="pkg-config" href="/dev-tools/pkg-config/">pkg-config</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="realpath" href="/dev-tools/realpath/">realpath</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="sed" href="/dev-tools/sed/">sed</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="wine" href="/dev-tools/wine/">wine</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
-  
-  <li>
-      <a title="VS Code Extensions" href="#">VS Code Extensions</a>
-      <ul>
-          
-          
-          
-          <li><a title="xPack C/C++ Build Tools" href="/vscode/">xPack C/C++ Build Tools</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
-  
-  <li>
-      <a title="Support" href="#">Support</a>
-      <ul>
-          
-          
-          
-          <li><a title="Overview" href="/support/">Overview</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
-  
-  <li>
-      <a title="Developer Info" href="#">Developer Info</a>
-      <ul>
-          
-          
-          
-          <li><a title="Overview" href="/develop/">Overview</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="How to create a new xPack repo" href="/develop/how-to-new-git/">How to create a new xPack repo</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="JavaScript Style Guide" href="/develop/js-style-guide/">JavaScript Style Guide</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="Links" href="/develop/links/">Links</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
-  
-  <li>
-      <a title="Maintainer Info" href="#">Maintainer Info</a>
-      <ul>
-          
-          
-          
-          <li><a title="Overview" href="/maintain/">Overview</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
-  
-  <li>
-      <a title="Project" href="#">Project</a>
-      <ul>
-          
-          
-          
-          <li><a class="extern" title="License (MIT)" href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">License (MIT)</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="About" href="/about/">About</a></li>
+          <li><a title="Releases" href="/xbb/releases/">Releases</a></li>
           
           
           
@@ -643,6 +361,11 @@ $('#toc').on('click', 'a', function() {
 
     
 
+        
+    <a target="_blank" rel="noopener" href="https://github.com/xpack/web-jekyll/blob/master/pages/xbb/prerequisites.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
+
+    
+
 
    <p>The latest generation of the build scripts use the
 <a href="https://github.com/xpack/xpack-build-box">xPack Build Box (XBB)</a>, a set
@@ -651,11 +374,14 @@ containers (separate 32/64-bit containers) based on older
 and more conservative distributions, to avoid problems when
 attempting to run the executables on older versions.</p>
 
-<p>The XBB v3.4 uses Ubuntu 18 for both Intel and Arm GNU/Linux.</p>
+<p>The XBB v5.0.0 uses Ubuntu 18 LTS for both Intel and Arm GNU/Linux.</p>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Building Arm binaries requires
-an Arm machine. A Raspberry Pi 4 8GB equipped with a SanDisk Extreme
-USB 3 SSD are a good solution.</div>
+an Arm machine. A Raspberry Pi 4 8GB equipped with a Samsung Portable T7
+USB 3 SSD is a good solution.</div>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Although Arm 32 binaries can be build
+inside Docker containers running on AArch64 machines.</div>
 
 <p>The Windows binaries are generated on the same Docker Intel GNU/Linux
 container, using <a href="https://mingw-w64.org">mingw-w64</a>.</p>
@@ -670,8 +396,9 @@ perfectly fine. For better results, dedicate 3-4 cores and 8-12 GB of RAM.</p>
 
 <ul>
   <li>Ubuntu 18.04 LTS, running on an Intel NUC NUC8i7BEH with 32 GB of RAM</li>
-  <li>Debian 10 (buster), running on an Intel NUC NUC8i7BEH with 32 GB of RAM</li>
-  <li>Raspberry Pi OS 64-bit, running on a Raspberry Pi 4 with 4 or 8 GB of RAM</li>
+  <li>Debian 10 (buster), running on an AMD Ryzen 5600G with 32 GB of RAM</li>
+  <li>Raspberry Pi OS 64-bit, running on a Raspberry Pi 4 with 8 GB of RAM</li>
+  <li>Raspberry Pi OS 32-bit, running on a Raspberry Pi 4 with 4 GB of RAM</li>
 </ul>
 
 <p>The build scripts do most of the actual work in the Docker container, and,
@@ -750,7 +477,7 @@ Hello from Docker!
 <h3 id="macos">macOS</h3>
 
 <p>For development build, the procedure is executed on a recent macOS
-version (currently 11.6).</p>
+version (currently 12.6).</p>
 
 <p>For production builds it is recommended to use a slightly older version.
 macOS 10.13 is a good compromise.</p>
@@ -806,15 +533,9 @@ the Dockerfiles available from
 <a href="https://github.com/xpack/xpack-build-box/tree/master/">XBB (xPack Build Box)</a>.</p>
 
 <p>If not already loaded, Docker will load the images at first usage.
-The images are relatively large, around 5 GB.</p>
-
-<p>It is possible to separately load the Docker images, using the
-script <code class="language-plaintext highlighter-rouge">preload-images</code> command of each script.</p>
+The images are reasonably large, currently below 1 GB.</p>
 
 <p>More details in each script documentation page.</p>
-
-
-        
 
 
     <div class="tags">

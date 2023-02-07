@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="An elaborated environment for building binary xPacks.">
+<meta name="description" content="A reproducible environment for building binary xPacks.">
 <meta name="keywords" content=" ">
 <title>The xPack Build Box | The xPack Build Framework</title>
 <link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="The xPack Build Box" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-07T09:46:36+00:00","datePublished":"2016-03-09T09:04:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"The xPack Build Box","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/"},"url":"https://xpack.github.io/xbb/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-07T17:58:05+00:00","datePublished":"2016-03-09T09:04:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"The xPack Build Box","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/"},"url":"https://xpack.github.io/xbb/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -265,7 +265,7 @@
                 
 
 <ul id="mysidebar" class="nav">
-  <li class="sidebarTitle"> </li>
+  <li class="sidebarTitle">xPack Build Box </li>
   
   
   
@@ -275,310 +275,28 @@
           
           
           
-          <li><a title="Overview" href="/">Overview</a></li>
+          <li class="active"><a title="Overview" href="/xbb/">Overview</a></li>
           
           
           
           
           
           
-          <li><a title="Intro (xPack 101)" href="/intro/">Intro (xPack 101)</a></li>
+          <li><a title="Prerequisites" href="/xbb/prerequisites/">Prerequisites</a></li>
           
           
           
           
           
           
-          <li><a title="Install prerequisites" href="/install/">Install prerequisites</a></li>
+          <li><a title="Linux distro versions" href="/xbb/end-of-support/">Linux distro versions</a></li>
           
           
           
           
-      </ul>
-   </li>
-     
-      
-  
-  <li>
-      <a title="Core Tools" href="#">Core Tools</a>
-      <ul>
           
           
-          
-          <li><a title="Overview" href="/core/">Overview</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="xpm" href="/xpm/">xpm</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
-  
-  <li>
-      <a title="3rd Party Tools" href="#">3rd Party Tools</a>
-      <ul>
-          
-          
-          
-          <li><a title="Overview" href="/dev-tools/">Overview</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="aarch64-none-elf-gcc" href="/dev-tools/aarch64-none-elf-gcc/">aarch64-none-elf-gcc</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="arm-none-eabi-gcc" href="/dev-tools/arm-none-eabi-gcc/">arm-none-eabi-gcc</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="clang" href="/dev-tools/clang/">clang</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="cmake" href="/dev-tools/cmake/">cmake</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="gcc" href="/dev-tools/gcc/">gcc</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="meson-build" href="/dev-tools/meson-build/">meson-build</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="mingw-w64-gcc" href="/dev-tools/mingw-w64-gcc/">mingw-w64-gcc</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="ninja-build" href="/dev-tools/ninja-build/">ninja-build</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="openocd" href="/dev-tools/openocd/">openocd</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="qemu-arm" href="/dev-tools/qemu-arm/">qemu-arm</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="qemu-riscv" href="/dev-tools/qemu-riscv/">qemu-riscv</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="riscv-none-elf-gcc" href="/dev-tools/riscv-none-elf-gcc/">riscv-none-elf-gcc</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="windows-build-tools" href="/dev-tools/windows-build-tools/">windows-build-tools</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
-  
-  <li>
-      <a title="Other 3rd Party Tools" href="#">Other 3rd Party Tools</a>
-      <ul>
-          
-          
-          
-          <li><a title="m4" href="/dev-tools/m4/">m4</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="patchelf" href="/dev-tools/patchelf/">patchelf</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="pkg-config" href="/dev-tools/pkg-config/">pkg-config</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="realpath" href="/dev-tools/realpath/">realpath</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="sed" href="/dev-tools/sed/">sed</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="wine" href="/dev-tools/wine/">wine</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
-  
-  <li>
-      <a title="VS Code Extensions" href="#">VS Code Extensions</a>
-      <ul>
-          
-          
-          
-          <li><a title="xPack C/C++ Build Tools" href="/vscode/">xPack C/C++ Build Tools</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
-  
-  <li>
-      <a title="Support" href="#">Support</a>
-      <ul>
-          
-          
-          
-          <li><a title="Overview" href="/support/">Overview</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
-  
-  <li>
-      <a title="Developer Info" href="#">Developer Info</a>
-      <ul>
-          
-          
-          
-          <li><a title="Overview" href="/develop/">Overview</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="How to create a new xPack repo" href="/develop/how-to-new-git/">How to create a new xPack repo</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="JavaScript Style Guide" href="/develop/js-style-guide/">JavaScript Style Guide</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="Links" href="/develop/links/">Links</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
-  
-  <li>
-      <a title="Maintainer Info" href="#">Maintainer Info</a>
-      <ul>
-          
-          
-          
-          <li><a title="Overview" href="/maintain/">Overview</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
-  
-  <li>
-      <a title="Project" href="#">Project</a>
-      <ul>
-          
-          
-          
-          <li><a class="extern" title="License (MIT)" href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">License (MIT)</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="About" href="/about/">About</a></li>
+          <li><a title="Releases" href="/xbb/releases/">Releases</a></li>
           
           
           
@@ -617,7 +335,7 @@ and the class never gets inserted.-->
 <div class="post-content">
 
    
-    <div class="summary">An elaborated environment for building binary xPacks.
+    <div class="summary">A reproducible environment for building binary xPacks.
 </div>
    
 
@@ -646,31 +364,40 @@ $('#toc').on('click', 'a', function() {
 
     
 
+        
+    <a target="_blank" rel="noopener" href="https://github.com/xpack/web-jekyll/blob/master/pages/xbb/index.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
 
-   <p>The xPack Build Box is an elaborated build environment focused on
-obtaining <strong>reproducible builds</strong> while building <strong>cross-platform standalone
+    
+
+
+   <p>The <strong>xPack Build Box</strong> (XBB) is an elaborated build environment focused on
+obtaining <strong>reproducible</strong> runs while building <strong>cross-platform standalone
 binaries</strong> for GNU/Linux, macOS and Windows.</p>
 
 <h2 id="how-it-works">How it works?</h2>
 
-<p>XBB achieves repeatability and consistency by compiling all dependencies
-from sources.</p>
+<p>XBB achieves repeatability and consistency by:</p>
 
-<p>This applies both to the development environment and to the final
-application binaries.</p>
+<ul>
+  <li>controlling the versions of the tools used during the build</li>
+  <li>compiling most dependencies from sources.</li>
+</ul>
 
 <p>By strictly controlling the versions of the compiled sources and tools, it is
 possible to create build environments that use about the same tools
 on both GNU/Linux (Intel and Arm) and macOS, helping to obtain
 consistent results.</p>
 
-<p>On GNU/Linux, to allow the builds to run on any distribution,
-the actual development tools are packed as Docker images
+<p>On GNU/Linux, to allow the builds to be performed on any distribution,
+the actual builds run inside Docker containers
 (Intel/Arm, 32/64-bit).</p>
+
+<p>On macOS, the builds run on standard systems, without the need for
+custom tools.</p>
 
 <h2 id="types-of-builds">Types of builds</h2>
 
-<p>There are two types of builds:</p>
+<p>From the point of view of the desired result, there are two types of builds:</p>
 
 <ul>
   <li>local/native builds, intended for development and running on the local
@@ -681,6 +408,90 @@ on most modern machines</li>
 
 <p>The main use cases of XBBs are distribution builds, but they can be used
 for native builds as well.</p>
+
+<h2 id="xbb-v50">XBB v5.0</h2>
+
+<p>The latest release, v5.0 from early 2023 represents a major milestone
+for the xPack project, since it is the first self-sustained release,
+which allows to build new binary xPacks using previous xPacks,
+and does not require any custom Docker images, or other compiled tools.</p>
+
+<p>For convenience, the new build scripts are xPacks, with
+multiple build configurations, for all supported platforms,
+and all actions are defined uniformly as xPack actions.</p>
+
+<p>There are three choices to build a binary.</p>
+
+<h3 id="native-builds-with-all-tools-from-the-host-machine">Native builds with all tools from the host machine</h3>
+
+<p>In this case all build tools are expected to be available on the
+host machine.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm run <span class="nb">install
+</span>xpm run build-native
+</code></pre></div></div>
+
+<p>The first command is used to install the helper project, which is a
+source xPack (<code class="language-plaintext highlighter-rouge">@xpack-dev-tools/xbb-helper</code>).</p>
+
+<p>The second command runs the build.</p>
+
+<p>These commands run the same on both GNU/Linux and macOS.</p>
+
+<p>To generate the Windows binaries on GNU/Linux, use the separate action:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm run <span class="nb">install
+</span>xpm run build-native-win
+</code></pre></div></div>
+
+<h3 id="native-builds-with-the-major-tools-coming-from-xpacks">Native builds with the major tools coming from xPacks</h3>
+
+<p>Sometimes the native tools available on the host machine may be too old
+for building modern packages.</p>
+
+<p>A simple solution is to install the main tools as binary xPacks. The
+selection of tools depends on the target platform.</p>
+
+<p>The existing projects include separate build configurations for
+multiple platforms (darwin-x64, darwin-arm64, linux-x64, linux-arm64,
+linux-arm, win32-x64).</p>
+
+<p>For example, to build the Intel GNU/Linux binaries, use:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm run <span class="nb">install
+</span>xpm run <span class="nb">install</span> <span class="nt">--config</span> linux-x64
+xpm run build <span class="nt">--config</span> linux-x64
+</code></pre></div></div>
+
+<h3 id="docker-builds-with-tools-coming-from-xpacks">Docker builds with tools coming from xPacks</h3>
+
+<p>An even more reproducible configuration can be achieved by using
+Docker containers, with the base system tools.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm run <span class="nb">install
+</span>xpm run docker-prepare <span class="nt">--config</span> linux-x64
+xpm run docker-build <span class="nt">--config</span> linux-x64
+</code></pre></div></div>
+
+<h3 id="writable-helper-scripts">Writable helper scripts</h3>
+
+<p>For normal builds, the helper project, which is a source xPack,
+is downloaded and marked as read-only, to prevent damaging it.</p>
+
+<p>For development purposes it might be necessary to update it; the
+xPack solution (inspired by the npm solution) is to download the
+helper repository into a separate location, and link it to the
+current project.</p>
+
+<p>This is done in two steps, first a link from the central store to the
+helper repo is created. This ensures that multiple projects can
+conveniently use the writable helper.</p>
+
+<p>In the second step, a link from the build project to the central store
+is created.</p>
+
+<p>For details on the actual usage, please check the
+build projects.</p>
 
 <h2 id="supported-platforms">Supported platforms</h2>
 
@@ -737,65 +548,31 @@ drwxr-xr-x  12 root root       384 Oct 30 19:00 riscv-none-embed-gcc-8.3.0-1.1
 </span></code></pre></div></div>
 
 <p>In this simple configuration, the builds run with root permissions; with
-more elaborate configurations it is possible to start the Docker images
+more elaborate configurations it is possible to start the Docker containers
 with user rights, but they are beyond the scope of this document.</p>
 
 <h2 id="how-to-use-the-xbb-tools">How to use the XBB tools</h2>
 
-<p>Both on GNU/Linux and macOS, the XBB tools are installed in separate
-folders, and are fully distinct from the system tools.</p>
+<p>Both on GNU/Linux and macOS, the XBB tools are installed as binary
+xPack dependencies in <code class="language-plaintext highlighter-rouge">xpacks/.bin</code> and are fully distinct from
+the system tools.</p>
 
 <p>To access them, the application should update the <code class="language-plaintext highlighter-rouge">PATH</code> to prefer
-the newer XBB tools.</p>
+the <code class="language-plaintext highlighter-rouge">xpacks/.bin</code> path.</p>
 
-<p>Scripts defining some helper functions are available.</p>
+<h3 id="common-scripts">Common scripts</h3>
 
-<h3 id="gnulinux">GNU/Linux</h3>
+<p>For consistency between projects, common scripts were grouped in the
+helper project.</p>
 
-<p>The <code class="language-plaintext highlighter-rouge">xbb_activate</code> function can be called either for the entire lifespan
-of the script, or, for a better isolation, in inner shells when the new
-tools are really needed.</p>
+<p>After installing it with <code class="language-plaintext highlighter-rouge">xpm install</code>, the scripts are available
+from <code class="language-plaintext highlighter-rouge">xpacks/xpack-dev-tools-xbb-helper</code>.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> <span class="s2">"/opt/xbb/xbb-source.sh"</span>
-...
-<span class="o">(</span>
-  xbb_activate
+<p>There are many scripts in this location; the main ones are in the
+<code class="language-plaintext highlighter-rouge">scripts</code> folder. The scripts to build various dependencies are in
+the <code class="language-plaintext highlighter-rouge">dependencies</code> folder.</p>
 
-  ...
-  ./configure
-  make
-<span class="o">)</span>
-</code></pre></div></div>
-
-<h3 id="macos">macOS</h3>
-
-<p>For macOS the recommended use case is similar, except the XBB tools
-are installed in the user HOME folder:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/.local/xbb/xbb-source.sh"</span>
-...
-<span class="o">(</span>
-  xbb_activate
-
-  ...
-<span class="o">)</span>
-</code></pre></div></div>
-
-<h2 id="the-xbb-sourcesh-script">The <code class="language-plaintext highlighter-rouge">xbb-source.sh</code> script</h2>
-
-<p>The build environment includes a helper script, <code class="language-plaintext highlighter-rouge">xbb-source.sh</code>,
-which should be included
-with <code class="language-plaintext highlighter-rouge">source</code> by the build scripts, to define more bash functions to
-the shell.</p>
-
-<p>These functions are used to extend the environment with resources available
-in the XBB folders.</p>
-
-<p>The <code class="language-plaintext highlighter-rouge">xbb_activate</code> function is used to extend the <code class="language-plaintext highlighter-rouge">PATH</code> with folders
-in the XBB folders, in front of existing
-folders, so that <strong>the XBB executables are preferred over the system ones</strong>.</p>
-
-<h2 id="the-pkg-config-verbose-script">The <code class="language-plaintext highlighter-rouge">pkg-config-verbose</code> script</h2>
+<h3 id="the-pkg-config-verbose-script">The <code class="language-plaintext highlighter-rouge">pkg-config-verbose</code> script</h3>
 
 <p>While running the configuration step, it is sometimes useful to trace
 how <code class="language-plaintext highlighter-rouge">pkg-config</code> identifies resources to be used during the build.</p>
@@ -814,12 +591,10 @@ in the PATH and pass the script name via the environment.</p>
 <span class="nb">export </span><span class="nv">PKG_CONFIG</span><span class="o">=</span>pkg-config-verbose
 </code></pre></div></div>
 
-<h2 id="tex">TeX</h2>
+<h2 id="no-more-tex">No more TeX</h2>
 
-<p>All images include the TeX tools; on GNU/Linux, they are
-installed either in the system folders or in a custom global folder
-(like <code class="language-plaintext highlighter-rouge">/opt/texlive</code>); on on macOS they are installed in a custom local
-folder (like <code class="language-plaintext highlighter-rouge">${HOME}/.local/texlive</code>).</p>
+<p>Starting with v3.4, support for building the manuals was dropped,
+and the TeX tools are no longer needed.</p>
 
 <h2 id="maintainer-info">Maintainer info</h2>
 
@@ -827,18 +602,28 @@ folder (like <code class="language-plaintext highlighter-rouge">${HOME}/.local/t
   <li><a href="https://github.com/xpack/xpack-build-box/blob/master/README-MAINTAINER.md">README-MAINTAINER</a></li>
 </ul>
 
-<h2 id="future-plans">Future plans</h2>
+<h2 id="end-of-support-for-linux-distributions">End of support for Linux distributions</h2>
 
-<p>The current XBB got extremely complex due to the initial requirement to
-also support RedHat Enterprise systems.</p>
+<p>To help decide what base version to use, and how long to keep support for it,
+a list of main Linux distributions was compiled, with the GLIBC versions:</p>
+
+<ul>
+  <li><a href="/xbb/end-of-support/">end of support</a></li>
+</ul>
+
+<h2 id="upgrade-plans">Upgrade plans</h2>
 
 <p>RedHat maintenance support 1 for RHEL 7 ended in Aug. 2020, with
 maintenance support 2 to last until June. 2024. However XBB support
 for RHEL 7 is a tough requirement, and was discontinued starting with 2022.</p>
 
 <p>Compatibility was moved up to
-Ubuntu 18 (GLIBC 2.27). This also provides compatibility with
+<strong>Ubuntu 18 LTS</strong> (<strong>GLIBC 2.27</strong>), which also provides compatibility with
 RedHat 8 / Debian 10, which both use GLIBC 2.28.</p>
+
+<p>The next upgrade step will be taken when the minimum Node.js becomes 18.x,
+which requires GLIBC 2.28, when the base system will most probably be
+<strong>Debian 10</strong>.</p>
 
 <h2 id="credits">Credits</h2>
 
@@ -849,13 +634,9 @@ RedHat 8 / Debian 10, which both use GLIBC 2.28.</p>
 
 <ul>
   <li><a href="/xbb/prerequisites/">prerequisites</a> for using XBB</li>
-  <li><a href="/xbb/end-of-support/">end-of-support</a> considerations for GNU/Linux distributions</li>
   <li><a href="/xbb/releases/">releases</a></li>
-  <li><a href="https://github.com/xpack/xpack-build-box">GitHub</a></li>
+  <li><a href="https://github.com/xpack/xpack-build-box/">GitHub</a></li>
 </ul>
-
-
-        
 
 
     <div class="tags">

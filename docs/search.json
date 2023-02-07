@@ -443,7 +443,7 @@
 "tags": "",
 "keywords": "",
 "url": "/xbb/",
-"summary": "<p>An elaborated environment for building binary xPacks.</p>"
+"summary": "<p>A reproducible environment for building binary xPacks.</p>"
 }
 ,
 
@@ -2916,6 +2916,16 @@
 
 
 
+
+
+{
+"title": "xPack Build Box v5.0.0 released",
+"tags": "releasesxbbbuildbox",
+"keywords": "",
+"url": "/blog/2023/02/07/xbb-v5.0.0-released/",
+"summary": "<p>Version <strong>5.0.0</strong> is a new release; it no longer uses monolithic Docker images, but splits the dependencies amongst multiple binary xPacks.</p>"
+}
+,
 
 
 {
