@@ -1,6 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://xcdl.github.io/schemas/xpbuild-0.1.0.json",
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://xcdl.github.io/schemas/xpbuild-0.1.0.json",
   "title": "xpbuild JSON schema",
   "description": "The JSON schema definitions for the xPack basic builder files.",
   "type": "object",

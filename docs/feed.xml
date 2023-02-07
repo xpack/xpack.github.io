@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom">
     <channel>
         <title>xpack.github.io</title>
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 07 Feb 2023 08:14:45 +0000</pubDate>
-        <lastBuildDate>Tue, 07 Feb 2023 08:14:45 +0000</lastBuildDate>
+        <pubDate>Tue, 07 Feb 2023 08:48:45 +0000</pubDate>
+        <lastBuildDate>Tue, 07 Feb 2023 08:48:45 +0000</lastBuildDate>
         <generator>Jekyll v3.9.3</generator>
         
         <item>
@@ -81,7 +81,7 @@
         
         <item>
             <title>xPack QEMU RISC-V v7.2.0-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/qemu-riscv/&quot;&gt;The xPack QEMU RISC-V&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://www.qemu.org&quot;&gt;QEMU&lt;/a&gt;.&lt;/p&gt;</description>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/qemu-riscv/&quot;&gt;The xPack QEMU RISC-V&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://www.qemu.org&quot;&gt;QEMU&lt;/a&gt;.&lt;/p&gt;</description>
             <pubDate>Tue, 31 Jan 2023 17:50:04 +0000</pubDate>
             <link>https://xpack.github.io/blog/2023/01/31/qemu-riscv-v7-2-0-1-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2023/01/31/qemu-riscv-v7-2-0-1-released/</guid>
@@ -99,7 +99,7 @@
         
         <item>
             <title>xPack QEMU Arm v7.2.0-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/qemu-arm/&quot;&gt;The xPack QEMU Arm&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://www.qemu.org&quot;&gt;QEMU&lt;/a&gt;, with several extensions for Arm Cortex-Mdevices.&lt;/p&gt;</description>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/qemu-arm/&quot;&gt;The xPack QEMU Arm&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://www.qemu.org&quot;&gt;QEMU&lt;/a&gt;, with several extensions for Arm Cortex-Mdevices.&lt;/p&gt;</description>
             <pubDate>Tue, 31 Jan 2023 15:26:12 +0000</pubDate>
             <link>https://xpack.github.io/blog/2023/01/31/qemu-arm-v7-2-0-1-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2023/01/31/qemu-arm-v7-2-0-1-released/</guid>
@@ -121,7 +121,7 @@
         
         <item>
             <title>xPack OpenOCD v0.12.0-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/openocd/&quot;&gt;The xPack OpenOCD&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;http://openocd.org&quot;&gt;OpenOCD&lt;/a&gt;.&lt;/p&gt;</description>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/openocd/&quot;&gt;The xPack OpenOCD&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://openocd.org&quot;&gt;OpenOCD&lt;/a&gt;.&lt;/p&gt;</description>
             <pubDate>Mon, 30 Jan 2023 16:00:11 +0000</pubDate>
             <link>https://xpack.github.io/blog/2023/01/30/openocd-v0-12-0-1-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2023/01/30/openocd-v0-12-0-1-released/</guid>

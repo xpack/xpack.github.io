@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="CMSIS Pack remarks and criticism (outdated)" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-07T08:13:16+00:00","datePublished":"2015-10-25T10:00:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"CMSIS Pack remarks and criticism (outdated)","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xcdl/criticism/cmsis/"},"url":"https://xpack.github.io/xcdl/criticism/cmsis/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-07T08:47:38+00:00","datePublished":"2015-10-25T10:00:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"CMSIS Pack remarks and criticism (outdated)","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xcdl/criticism/cmsis/"},"url":"https://xpack.github.io/xcdl/criticism/cmsis/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -191,7 +191,7 @@
                         
                         
                         
-                        <li><a class="extern" href="http://micro-os-plus.github.io" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        <li><a class="extern" href="https://micro-os-plus.github.io" target="_blank" rel="noopener">µOS++ IIIe</a></li>
                         
                         
                     </ul>
@@ -447,11 +447,11 @@ $('#toc').on('click', 'a', function() {
 
 <p>Here is an unfortunate example from the STM32F4-Discovery board:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;book category="overview"  name="http://www.st.com/web/catalog/tools/FM116/SC959/SS1532/LN1199/PF252419" title="STM32F4-Discovery Web Page"/&gt;
-&lt;book category="setup"     name="Documents\DM00037368.pdf" title="Getting Started"/&gt;
-&lt;book category="schematic" name="Documents\stm32f4discovery_sch.zip" title="Schematics"/&gt;
-&lt;book category="manual"    name="Documents\DM00039084.pdf" title="User Manual"/&gt;
-&lt;book category="other"     name="Documents\stm32f4discovery_gerber.zip" title="Gerber Files"/&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;book</span> <span class="na">category=</span><span class="s">"overview"</span>  <span class="na">name=</span><span class="s">"https://www.st.com/web/catalog/tools/FM116/SC959/SS1532/LN1199/PF252419"</span> <span class="na">title=</span><span class="s">"STM32F4-Discovery Web Page"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;book</span> <span class="na">category=</span><span class="s">"setup"</span>     <span class="na">name=</span><span class="s">"Documents\DM00037368.pdf"</span> <span class="na">title=</span><span class="s">"Getting Started"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;book</span> <span class="na">category=</span><span class="s">"schematic"</span> <span class="na">name=</span><span class="s">"Documents\stm32f4discovery_sch.zip"</span> <span class="na">title=</span><span class="s">"Schematics"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;book</span> <span class="na">category=</span><span class="s">"manual"</span>    <span class="na">name=</span><span class="s">"Documents\DM00039084.pdf"</span> <span class="na">title=</span><span class="s">"User Manual"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;book</span> <span class="na">category=</span><span class="s">"other"</span>     <span class="na">name=</span><span class="s">"Documents\stm32f4discovery_gerber.zip"</span> <span class="na">title=</span><span class="s">"Gerber Files"</span><span class="nt">/&gt;</span>
 </code></pre></div></div>
 
 <p>First, none of the above is actually a book, all are various documentation files (web page, manuals, schematics, etc), so the name <code class="language-plaintext highlighter-rouge">&lt;books&gt;</code> is poorly chosen.</p>
@@ -462,11 +462,11 @@ $('#toc').on('click', 'a', function() {
 
 <p>Perhaps a more appropriate definitions would have been:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;document category="overview"  title="STM32F4-Discovery Web Page" url="http://www.st.com/web/catalog/tools/FM116/SC959/SS1532/LN1199/PF252419"/&gt;
-&lt;document category="setup"     title="Getting Started" file="Documents/DM00037368.pdf"/&gt;
-&lt;document category="schematic" title="Schematics" file="Documents/stm32f4discovery_sch.zip"/&gt;
-&lt;document category="manual"    title="User Manual" file="Documents/DM00039084.pdf"/&gt;
-&lt;document category="other"     title="Gerber Files" file="Documents/stm32f4discovery_gerber.zip"/&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;document</span> <span class="na">category=</span><span class="s">"overview"</span>  <span class="na">title=</span><span class="s">"STM32F4-Discovery Web Page"</span> <span class="na">url=</span><span class="s">"https://www.st.com/web/catalog/tools/FM116/SC959/SS1532/LN1199/PF252419"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;document</span> <span class="na">category=</span><span class="s">"setup"</span>     <span class="na">title=</span><span class="s">"Getting Started"</span> <span class="na">file=</span><span class="s">"Documents/DM00037368.pdf"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;document</span> <span class="na">category=</span><span class="s">"schematic"</span> <span class="na">title=</span><span class="s">"Schematics"</span> <span class="na">file=</span><span class="s">"Documents/stm32f4discovery_sch.zip"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;document</span> <span class="na">category=</span><span class="s">"manual"</span>    <span class="na">title=</span><span class="s">"User Manual"</span> <span class="na">file=</span><span class="s">"Documents/DM00039084.pdf"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;document</span> <span class="na">category=</span><span class="s">"other"</span>     <span class="na">title=</span><span class="s">"Gerber Files"</span> <span class="na">file=</span><span class="s">"Documents/stm32f4discovery_gerber.zip"</span><span class="nt">/&gt;</span>
 </code></pre></div></div>
 
 <h3 id="algorithm"><code class="language-plaintext highlighter-rouge">&lt;algorithm&gt;</code></h3>

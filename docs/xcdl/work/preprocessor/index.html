@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="XCDL templates preprocessor syntax proposal (outdated)" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-07T08:13:16+00:00","datePublished":"2015-10-25T10:00:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"XCDL templates preprocessor syntax proposal (outdated)","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xcdl/work/preprocessor/"},"url":"https://xpack.github.io/xcdl/work/preprocessor/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-07T08:47:38+00:00","datePublished":"2015-10-25T10:00:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"XCDL templates preprocessor syntax proposal (outdated)","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xcdl/work/preprocessor/"},"url":"https://xpack.github.io/xcdl/work/preprocessor/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -191,7 +191,7 @@
                         
                         
                         
-                        <li><a class="extern" href="http://micro-os-plus.github.io" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        <li><a class="extern" href="https://micro-os-plus.github.io" target="_blank" rel="noopener">µOS++ IIIe</a></li>
                         
                         
                     </ul>
@@ -402,7 +402,7 @@ $('#toc').on('click', 'a', function() {
 
 <h3 id="jinja2">Jinja2</h3>
 
-<p>The default syntax of <a href="http://jinja.pocoo.org/docs/dev/">Jinja2</a> matches Django syntax in many ways, and it also very similar to the syntax of <a href="https://shopify.github.io/liquid/">Liquid</a> metadata, so it will not be repeated here.</p>
+<p>The default syntax of <a href="https://jinja.pocoo.org/docs/dev/">Jinja2</a> matches Django syntax in many ways, and it also very similar to the syntax of <a href="https://shopify.github.io/liquid/">Liquid</a> metadata, so it will not be repeated here.</p>
 
 <h3 id="st-cubemx">ST CubeMX</h3>
 
@@ -436,7 +436,7 @@ $('#toc').on('click', 'a', function() {
 
 <h3 id="infineon-dave">Infineon DAVE</h3>
 
-<p>In DAVE 4 templates are stored as <code class="language-plaintext highlighter-rouge">.tmpl</code> files and use full <a href="http://www.groovy-lang.org">Groovy</a> scripts (which look very familiar to Java programmers).</p>
+<p>In DAVE 4 templates are stored as <code class="language-plaintext highlighter-rouge">.tmpl</code> files and use full <a href="https://www.groovy-lang.org">Groovy</a> scripts (which look very familiar to Java programmers).</p>
 
 <pre><code class="language-.java">package Model.Common;
 
@@ -606,13 +606,13 @@ uint8_t %'ModuleName'%.%RenameFile(const uint8_t *srcFileName, const uint8_t *ds
 
 <h3 id="apache-freemarker">Apache FreeMarker</h3>
 
-<p><a href="http://freemarker.org">FreeMarker</a> is another nice Apache Java project.</p>
+<p><a href="https://freemarker.org">FreeMarker</a> is another nice Apache Java project.</p>
 
 <p>The templates are written in FTL (FreeMarket Template Language), which has an XML-like syntax, for example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;#if animals.python.protected&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">&lt;</span>#if animals.python.protected&gt;
   Pythons are protected animals!
-&lt;/#if&gt;
+<span class="err">&lt;</span>/#if&gt;
 </code></pre></div></div>
 
 <p>Substitutions are encoded as <code class="language-plaintext highlighter-rouge">${...}</code> and the data comes from a data-model which is a collection of Java objects.</p>
