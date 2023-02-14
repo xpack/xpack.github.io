@@ -2930,6 +2930,16 @@
 
 
 {
+"title": "VS Code xPack extension v0.4.21 released",
+"tags": "releasesvscodevscode-xpackextensionc++",
+"keywords": "",
+"url": "/blog/2023/02/14/vscode-xpack-v0-4-21-released/",
+"summary": "<p>Version <strong>0.4.21</strong> is a new maintenance of <strong>ilg-vscode.xpack</strong>; it adds copy to clipboard for actions and fixes a bug.</p>"
+}
+,
+
+
+{
 "title": "xPack xpm v0.14.9 released",
 "tags": "releasesxpmpackagemanager",
 "keywords": "",
