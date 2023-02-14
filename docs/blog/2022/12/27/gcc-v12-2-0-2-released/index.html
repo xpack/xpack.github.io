@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack GCC v12.2.0-2 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T07:13:50+00:00","datePublished":"2022-12-27T22:03:16+00:00","description":"The xPack GCC is a standalone cross-platform binary distribution of GCC.","headline":"xPack GCC v12.2.0-2 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/12/27/gcc-v12-2-0-2-released/"},"url":"https://xpack.github.io/blog/2022/12/27/gcc-v12-2-0-2-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T10:16:51+00:00","datePublished":"2022-12-27T22:03:16+00:00","description":"The xPack GCC is a standalone cross-platform binary distribution of GCC.","headline":"xPack GCC v12.2.0-2 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/12/27/gcc-v12-2-0-2-released/"},"url":"https://xpack.github.io/blog/2022/12/27/gcc-v12-2-0-2-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -704,7 +704,7 @@ xpm <span class="nb">install</span> @xpack-dev-tools/gcc@latest
 but this requires xPack aware tools to automatically identify them and
 manage paths.</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/gcc@latest
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/gcc@latest <span class="nt">--verbose</span>
 </code></pre></div></div>
 
 <h3 id="uninstall">Uninstall</h3>
@@ -844,7 +844,7 @@ build, not the compiler functionality.</p>
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">17426e558ce6ceec1c66b96423f7aa907b20ff42da72d866abb501a718164d69
+<pre><code class="language-txt">17426e558ce6ceec1c66b96423f7aa907b20ff42da72d866abb501a718164d69
 xpack-gcc-12.2.0-2-darwin-arm64.tar.gz
 
 699a570b7d4bfdb027805f80ec8145d2c1f0b8e04950f31aa152697d878c0357
@@ -862,7 +862,7 @@ xpack-gcc-12.2.0-2-linux-x64.tar.gz
 c53862f12cc3a7334638b33b6922b017574bb7f265abfdc3dfa476bcff775ce7
 xpack-gcc-12.2.0-2-win32-x64.zip
 
-</span></code></pre></div></div>
+</code></pre>
 
 <h2 id="deprecation-notices">Deprecation notices</h2>
 

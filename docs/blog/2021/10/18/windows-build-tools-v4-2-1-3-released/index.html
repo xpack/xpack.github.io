@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack Windows Build Tools v4.2.1-3 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T07:13:50+00:00","datePublished":"2021-10-18T13:48:31+00:00","description":"Warning: This version is affected by the Windows UCRT bug, make throws Error -1073741819; please use v4.3.x or later. Thank you for your understanding.","headline":"xPack Windows Build Tools v4.2.1-3 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/10/18/windows-build-tools-v4-2-1-3-released/"},"url":"https://xpack.github.io/blog/2021/10/18/windows-build-tools-v4-2-1-3-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T10:16:51+00:00","datePublished":"2021-10-18T13:48:31+00:00","description":"Warning: This version is affected by the Windows UCRT bug, make throws Error -1073741819; please use v4.3.x or later. Thank you for your understanding.","headline":"xPack Windows Build Tools v4.2.1-3 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/10/18/windows-build-tools-v4-2-1-3-released/"},"url":"https://xpack.github.io/blog/2021/10/18/windows-build-tools-v4-2-1-3-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -438,7 +438,7 @@ xpm <span class="nb">install</span> @xpack-dev-tools/windows-build-tools@latest
 <p>For xPacks aware tools, like the <strong>Eclipse Embedded C/C++ plug-ins</strong>,
 it is also possible to install Windows Build Tools globally, in the user home folder.</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/windows-build-tools@latest
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/windows-build-tools@latest <span class="nt">--verbose</span>
 </code></pre></div></div>
 
 <p>Eclipse will automatically
@@ -550,13 +550,13 @@ set of platforms. The results are available from:</p>
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">939edfd488642693fadf564e5285cbb388bad2bd550b6b061a4b54daf58eca47
+<pre><code class="language-txt">939edfd488642693fadf564e5285cbb388bad2bd550b6b061a4b54daf58eca47
 xpack-windows-build-tools-4.2.1-3-win32-ia32.zip
 
 f3081840c0bb7df1abc4d3379546ea7286b2f0282cc148ed105a23432bbc6f9b
 xpack-windows-build-tools-4.2.1-3-win32-x64.zip
 
-</span></code></pre></div></div>
+</code></pre>
 
 <h2 id="deprecation-notices">Deprecation notices</h2>
 

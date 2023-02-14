@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack QEMU Arm v7.2.0-1 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T07:13:50+00:00","datePublished":"2023-01-31T15:26:12+00:00","description":"The xPack QEMU Arm is a standalone cross-platform binary distribution of QEMU, with several extensions for Arm Cortex-M devices.","headline":"xPack QEMU Arm v7.2.0-1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2023/01/31/qemu-arm-v7-2-0-1-released/"},"url":"https://xpack.github.io/blog/2023/01/31/qemu-arm-v7-2-0-1-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T10:16:51+00:00","datePublished":"2023-01-31T15:26:12+00:00","description":"The xPack QEMU Arm is a standalone cross-platform binary distribution of QEMU, with several extensions for Arm Cortex-M devices.","headline":"xPack QEMU Arm v7.2.0-1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2023/01/31/qemu-arm-v7-2-0-1-released/"},"url":"https://xpack.github.io/blog/2023/01/31/qemu-arm-v7-2-0-1-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -724,7 +724,7 @@ xpm <span class="nb">install</span> @xpack-dev-tools/qemu-arm@latest
 <p>For xPacks aware tools, like the <strong>Eclipse Embedded C/C++ plug-ins</strong>,
 it is also possible to install QEMU Arm globally, in the user home folder.</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/qemu-arm@latest
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/qemu-arm@latest <span class="nt">--verbose</span>
 </code></pre></div></div>
 
 <p>Eclipse will automatically
@@ -1130,7 +1130,7 @@ missing driver. To be further investigated.</p>
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">7196b37d8921d6c13c5d7e28fe35284c9b0ab7a051238b095f0838d1040eb9c7
+<pre><code class="language-txt">7196b37d8921d6c13c5d7e28fe35284c9b0ab7a051238b095f0838d1040eb9c7
 xpack-qemu-arm-7.2.0-1-darwin-arm64.tar.gz
 
 3af21ed9397ae281be15c15b3ce17f8192f236d45fe314e4db7db7c5e46d6977
@@ -1148,7 +1148,7 @@ xpack-qemu-arm-7.2.0-1-linux-x64.tar.gz
 e9342338079b05138ce9afa287b15708e9c66c65a20759c8fffa9f30f5468380
 xpack-qemu-arm-7.2.0-1-win32-x64.zip
 
-</span></code></pre></div></div>
+</code></pre>
 
 <h2 id="deprecation-notices">Deprecation notices</h2>
 

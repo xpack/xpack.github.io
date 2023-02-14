@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack XBB Bootstrap binaries" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T07:13:50+00:00","datePublished":"2022-10-04T07:32:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack XBB Bootstrap binaries","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/dev-tools/xbb-bootstrap/install/"},"url":"https://xpack.github.io/dev-tools/xbb-bootstrap/install/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T10:16:51+00:00","datePublished":"2022-10-04T07:32:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack XBB Bootstrap binaries","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/dev-tools/xbb-bootstrap/install/"},"url":"https://xpack.github.io/dev-tools/xbb-bootstrap/install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -393,7 +393,10 @@ follow the instructions from the
 <p>With xpm available, installing
 the latest version of the package is quite easy:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/xbb-bootstrap@latest <span class="nt">--verbose</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>my-project
+xpm init <span class="c"># Only at first use.</span>
+
+xpm <span class="nb">install</span> @xpack-dev-tools/xbb-bootstrap@latest <span class="nt">--verbose</span>
 </code></pre></div></div>
 
 <p>This command will always install the latest available version,
@@ -415,7 +418,14 @@ settings like <strong>Show Hidden Files</strong>.</div>
 
 <h3 id="uninstall">Uninstall</h3>
 
-<p>To remove the installed xPack, the command is similar:</p>
+<p>To remove the links from the current project:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>my-project
+
+xpm uninstall @xpack-dev-tools/xbb-bootstrap
+</code></pre></div></div>
+
+<p>To completely remove the package from the global store:</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm uninstall <span class="nt">--global</span> @xpack-dev-tools/xbb-bootstrap <span class="nt">--verbose</span>
 </code></pre></div></div>
@@ -886,7 +896,10 @@ follow the instructions from the
 <p>With xpm available, installing
 the latest version of the package is quite easy:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/xbb-bootstrap@latest <span class="nt">--verbose</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>my-project
+xpm init <span class="c"># Only at first use.</span>
+
+xpm <span class="nb">install</span> @xpack-dev-tools/xbb-bootstrap@latest <span class="nt">--verbose</span>
 </code></pre></div></div>
 
 <p>This command will always install the latest available version,
@@ -908,7 +921,14 @@ settings like <strong>Show Hidden Files</strong>.</div>
 
 <h3 id="uninstall">Uninstall</h3>
 
-<p>To remove the installed xPack, the command is similar:</p>
+<p>To remove the links from the current project:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>my-project
+
+xpm uninstall @xpack-dev-tools/xbb-bootstrap
+</code></pre></div></div>
+
+<p>To completely remove the package from the global store:</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm uninstall <span class="nt">--global</span> @xpack-dev-tools/xbb-bootstrap <span class="nt">--verbose</span>
 </code></pre></div></div>

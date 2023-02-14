@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack OpenOCD v0.10.0-14 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T07:13:50+00:00","datePublished":"2020-06-24T10:05:00+00:00","description":"The xPack OpenOCD is the xPack distribution of OpenOCD.","headline":"xPack OpenOCD v0.10.0-14 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2020/06/24/openocd-v0-10-0-14-released/"},"url":"https://xpack.github.io/blog/2020/06/24/openocd-v0-10-0-14-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T10:16:51+00:00","datePublished":"2020-06-24T10:05:00+00:00","description":"The xPack OpenOCD is the xPack distribution of OpenOCD.","headline":"xPack OpenOCD v0.10.0-14 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2020/06/24/openocd-v0-10-0-14-released/"},"url":"https://xpack.github.io/blog/2020/06/24/openocd-v0-10-0-14-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -392,7 +392,7 @@ from the <a href="https://www.npmjs.com"><code class="language-plaintext highlig
 
 <p>To install the latest version available, use:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/openocd@latest
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/openocd@latest <span class="nt">--verbose</span>
 </code></pre></div></div>
 
 <p>To install this specific version, use:</p>
@@ -416,7 +416,7 @@ from June 23, 2020</li>
 <p>To get a list of changes since the previous release, use <code class="language-plaintext highlighter-rouge">git log</code> in the
 <code class="language-plaintext highlighter-rouge">xpack-dev-tools/openocd</code> project</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log --pretty='%cd * %h %s' --date=short 'v0.10.0-13'..'v0.10.0-14'
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log <span class="nt">--pretty</span><span class="o">=</span><span class="s1">'%cd * %h %s'</span> <span class="nt">--date</span><span class="o">=</span>short <span class="s1">'v0.10.0-13'</span>..<span class="s1">'v0.10.0-14'</span>
 </code></pre></div></div>
 
 <h2 id="changes">Changes</h2>
@@ -498,7 +498,7 @@ available in the <strong>xPack GNU Arm Embedded GCC</strong> project.</p>
 <p>On Arm platforms, where Eclipse is not yet available, the binaries were
 tested on Raspberry Pi OS 10 (buster) 32/64-bit only to identify the STM32F4DISCOVERY board.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.../xpack-openocd-0.10.0-14/bin/openocd -f board/stm32f4discovery.cfg
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.../xpack-openocd-0.10.0-14/bin/openocd <span class="nt">-f</span> board/stm32f4discovery.cfg
 </code></pre></div></div>
 
 <p>In all cases, install the archive in Downloads and configure the path
@@ -508,7 +508,7 @@ in Eclipse or run manually from there.</p>
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>30917a5c6f60fcd7df82b41dcec8ab7d86f0cea3caeaf98b965b901c10a60b39
+<pre><code class="language-txt">30917a5c6f60fcd7df82b41dcec8ab7d86f0cea3caeaf98b965b901c10a60b39
 xpack-openocd-0.10.0-14-darwin-x64.tar.gz
 
 97a188ca8ba32498c80b1ca3c8831cbbaf01c6f935fb5bcb66144f1fbd432106
@@ -528,7 +528,7 @@ xpack-openocd-0.10.0-14-win32-x32.zip
 
 1fb26bbcfd65dbabe747ce3c8467a1f1cece7253bde4a95de13c2267d422ed8b
 xpack-openocd-0.10.0-14-win32-x64.zip
-</code></pre></div></div>
+</code></pre>
 
 <h2 id="download-analytics">Download analytics</h2>
 

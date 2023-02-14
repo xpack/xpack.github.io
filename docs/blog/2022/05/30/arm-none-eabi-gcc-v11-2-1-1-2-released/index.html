@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack GNU Arm Embedded GCC v11.2.1-1.2 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T07:13:50+00:00","datePublished":"2022-05-30T13:28:15+00:00","description":"The xPack GNU Arm Embedded GCC is a standalone cross-platform binary distribution of GNU Arm Embedded Toolchain.","headline":"xPack GNU Arm Embedded GCC v11.2.1-1.2 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/05/30/arm-none-eabi-gcc-v11-2-1-1-2-released/"},"url":"https://xpack.github.io/blog/2022/05/30/arm-none-eabi-gcc-v11-2-1-1-2-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T10:16:51+00:00","datePublished":"2022-05-30T13:28:15+00:00","description":"The xPack GNU Arm Embedded GCC is a standalone cross-platform binary distribution of GNU Arm Embedded Toolchain.","headline":"xPack GNU Arm Embedded GCC v11.2.1-1.2 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/05/30/arm-none-eabi-gcc-v11-2-1-1-2-released/"},"url":"https://xpack.github.io/blog/2022/05/30/arm-none-eabi-gcc-v11-2-1-1-2-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -448,7 +448,7 @@ xpm <span class="nb">install</span> @xpack-dev-tools/arm-none-eabi-gcc@latest
 <p>For xPacks aware tools, like the <strong>Eclipse Embedded C/C++ plug-ins</strong>,
 it is also possible to install Arm Embedded GCC globally, in the user home folder.</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/arm-none-eabi-gcc@latest
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/arm-none-eabi-gcc@latest <span class="nt">--verbose</span>
 </code></pre></div></div>
 
 <p>Eclipse will automatically
@@ -654,7 +654,7 @@ build, not the compiler functionality.</p>
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">85afae936d84b5ed94ad15300d2333d4b0af34b53bbf92283e558a96209d0dd7
+<pre><code class="language-txt">85afae936d84b5ed94ad15300d2333d4b0af34b53bbf92283e558a96209d0dd7
 xpack-arm-none-eabi-gcc-11.2.1-1.2-darwin-arm64.tar.gz
 
 f2910d5ec4971baee9cd9cd3efe13fc8573b2f1c8185a6f18a7bb7fb3787a60d
@@ -672,7 +672,7 @@ xpack-arm-none-eabi-gcc-11.2.1-1.2-linux-x64.tar.gz
 4a45e1df1c621f0a97a2bcb63977a3745ffcff7afc0e31ad2f3d5cc1272acf4b
 xpack-arm-none-eabi-gcc-11.2.1-1.2-win32-x64.zip
 
-</span></code></pre></div></div>
+</code></pre>
 
 <h2 id="deprecation-notices">Deprecation notices</h2>
 

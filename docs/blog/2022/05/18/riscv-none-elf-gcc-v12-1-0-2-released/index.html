@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack GNU RISC-V Embedded GCC v12.1.0-2 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T07:13:50+00:00","datePublished":"2022-05-18T07:14:19+00:00","description":"The xPack GNU RISC-V Embedded GCC is a standalone cross-platform binary distribution of the GNU GCC.","headline":"xPack GNU RISC-V Embedded GCC v12.1.0-2 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/05/18/riscv-none-elf-gcc-v12-1-0-2-released/"},"url":"https://xpack.github.io/blog/2022/05/18/riscv-none-elf-gcc-v12-1-0-2-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T10:16:51+00:00","datePublished":"2022-05-18T07:14:19+00:00","description":"The xPack GNU RISC-V Embedded GCC is a standalone cross-platform binary distribution of the GNU GCC.","headline":"xPack GNU RISC-V Embedded GCC v12.1.0-2 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/05/18/riscv-none-elf-gcc-v12-1-0-2-released/"},"url":"https://xpack.github.io/blog/2022/05/18/riscv-none-elf-gcc-v12-1-0-2-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -444,7 +444,7 @@ xpm <span class="nb">install</span> @xpack-dev-tools/riscv-none-elf-gcc@latest
 <p>For xPacks aware tools, like the <strong>Eclipse Embedded C/C++ plug-ins</strong>,
 it is also possible to install GNU RISC-V Embedded GCC globally, in the user home folder.</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/riscv-none-elf-gcc@latest
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/riscv-none-elf-gcc@latest <span class="nt">--verbose</span>
 </code></pre></div></div>
 
 <p>Eclipse will automatically
@@ -699,7 +699,7 @@ build, not the compiler functionality.</p>
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">e3532f8cc17969da85dd615108c5b2826eecacc7f003c0ba5914c03e3160af1c
+<pre><code class="language-txt">e3532f8cc17969da85dd615108c5b2826eecacc7f003c0ba5914c03e3160af1c
 xpack-riscv-none-elf-gcc-12.1.0-2-darwin-arm64.tar.gz
 
 39bd9eb7df484309fb1c725ae806b16589b8d90f273419b2a41e4017886b2176
@@ -717,7 +717,7 @@ xpack-riscv-none-elf-gcc-12.1.0-2-linux-x64.tar.gz
 ab2a596d00a4436192b80381b4b9bc1e6962de5699b4a494c4f476216963983d
 xpack-riscv-none-elf-gcc-12.1.0-2-win32-x64.zip
 
-</span></code></pre></div></div>
+</code></pre>
 
 <h2 id="deprecation-notices">Deprecation notices</h2>
 

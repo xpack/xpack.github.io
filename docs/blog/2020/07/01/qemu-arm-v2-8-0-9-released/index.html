@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack QEMU Arm v2.8.0-9 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T07:13:50+00:00","datePublished":"2020-07-01T12:34:00+00:00","description":"This is the xPack distribution of QEMU for Arm Cortex-M devices (formerly part of the GNU MCU Eclipse project).","headline":"xPack QEMU Arm v2.8.0-9 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2020/07/01/qemu-arm-v2-8-0-9-released/"},"url":"https://xpack.github.io/blog/2020/07/01/qemu-arm-v2-8-0-9-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T10:16:51+00:00","datePublished":"2020-07-01T12:34:00+00:00","description":"This is the xPack distribution of QEMU for Arm Cortex-M devices (formerly part of the GNU MCU Eclipse project).","headline":"xPack QEMU Arm v2.8.0-9 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2020/07/01/qemu-arm-v2-8-0-9-released/"},"url":"https://xpack.github.io/blog/2020/07/01/qemu-arm-v2-8-0-9-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -403,7 +403,7 @@ from the <a href="https://www.npmjs.com"><code class="language-plaintext highlig
 
 <p>To install the latest version available, use:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/qemu-arm@latest
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/qemu-arm@latest <span class="nt">--verbose</span>
 </code></pre></div></div>
 
 <p>To install this specific version, use:</p>
@@ -530,12 +530,12 @@ available in the <strong>xPack GNU Arm Embedded GCC</strong> project. Use the
 tested on Raspberry Pi OS 10 (buster) 32-bit by manually starting the
 blinky test on the emulated STM32F4DISCOVERY board.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/opt/xPacks/@xpack-dev-tools/qemu-arm/2.8.0-9.1/.content/bin/qemu-system-gnuarmeclipse --version
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">~/opt/xPacks/@xpack-dev-tools/qemu-arm/2.8.0-9.1/.content/bin/qemu-system-gnuarmeclipse --version
 
 mkdir -p ~/Downloads
-(cd ~/Downloads; curl -L --fail -o f407-disc-blink-tutorial.elf \
-https://github.com/xpack-dev-tools/qemu-eclipse-test-projects/raw/master/f407-disc-blink-tutorial/Debug/f407-disc-blink-tutorial.elf)
-
+</span><span class="gp">(cd ~/Downloads;</span><span class="w"> </span>curl <span class="nt">-L</span> <span class="nt">--fail</span> <span class="nt">-o</span> f407-disc-blink-tutorial.elf <span class="se">\</span>
+https://github.com/xpack-dev-tools/qemu-eclipse-test-projects/raw/master/f407-disc-blink-tutorial/Debug/f407-disc-blink-tutorial.elf<span class="o">)</span>
+<span class="go">
 ~/opt/xPacks/@xpack-dev-tools/qemu-arm/2.8.0-9.1/.content/bin/qemu-system-gnuarmeclipse \
 --board STM32F4-Discovery \
 -d unimp,guest_errors \
@@ -550,8 +550,7 @@ DISPLAY=:1.0 ~/opt/xPacks/@xpack-dev-tools/qemu-arm/2.8.0-9.1/.content/bin/qemu-
 --image ~/Downloads/f407-disc-blink-tutorial.elf \
 --semihosting-config enable=on,target=native \
 --semihosting-cmdline test 6
-
-</code></pre></div></div>
+</span></code></pre></div></div>
 
 <p>On Raspberry Pi OS 10 (buster) 64-bit the program was able to run in non
 graphic mode, but did not start in graphic mode due to a
@@ -561,7 +560,7 @@ missing driver. To be further investigated.</p>
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>856f8970b0a159d9a1bbf56709f3a5f32a26c2448948d51f82b4b3f7d949f7bd
+<pre><code class="language-txt">856f8970b0a159d9a1bbf56709f3a5f32a26c2448948d51f82b4b3f7d949f7bd
 xpack-qemu-arm-2.8.0-9-darwin-x64.tar.gz
 
 c8c8b3e22f2d508f60440018c48171f11d7cf0b384b5b2131017f1c1f7742a44
@@ -581,7 +580,7 @@ xpack-qemu-arm-2.8.0-9-win32-x32.zip
 
 3bc5ec953227112b45c36713083e1dbba4d3a6d3d917eb617694217e8cfc8b00
 xpack-qemu-arm-2.8.0-9-win32-x64.zip
-</code></pre></div></div>
+</code></pre>
 
 <h2 id="download-analytics">Download analytics</h2>
 

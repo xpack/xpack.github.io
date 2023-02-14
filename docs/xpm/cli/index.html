@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xpm - common options" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T07:13:50+00:00","datePublished":"2017-10-09T09:50:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"xpm - common options","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/cli/"},"url":"https://xpack.github.io/xpm/cli/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T10:16:51+00:00","datePublished":"2017-10-09T09:50:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"xpm - common options","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/cli/"},"url":"https://xpack.github.io/xpm/cli/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -443,7 +443,7 @@ $('#toc').on('click', 'a', function() {
 
    <h2 id="synopsis">Synopsis</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm &lt;command&gt; [&lt;subcommand&gt;...] [&lt;options&gt; ...] [&lt;args&gt;...]
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm &lt;<span class="nb">command</span><span class="o">&gt;</span> <span class="o">[</span>&lt;subcommand&gt;...] <span class="o">[</span>&lt;options&gt; ...] <span class="o">[</span>&lt;args&gt;...]
 </code></pre></div></div>
 
 <h2 id="description">Description</h2>
@@ -468,34 +468,34 @@ command, or set of command and subcommands.</p>
 
 <p>To get an initial glimpse on the program, ask for help:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ xpm --help
-
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xpm <span class="nt">--help</span>
+<span class="go">
 The xPack package manager command line tool
-Usage: xpm &lt;command&gt; [&lt;subcommand&gt;...] [&lt;options&gt; ...] [&lt;args&gt;...]
-
-where &lt;command&gt; is one of:
-  init, install, link, list, run, uninstall
+</span><span class="gp">Usage: xpm &lt;command&gt;</span><span class="w"> </span><span class="o">[</span>&lt;subcommand&gt;...] <span class="o">[</span>&lt;options&gt; ...] <span class="o">[</span>&lt;args&gt;...]
+<span class="go">
+</span><span class="gp">where &lt;command&gt;</span><span class="w"> </span>is one of:
+<span class="go">  init, install, link, list, run, uninstall
 
 Common options:
-  --loglevel &lt;level&gt;     Set log level (silent|warn|info|verbose|debug|trace)
-  -s|--silent            Disable all messages (--loglevel silent)
+</span><span class="gp">  --loglevel &lt;level&gt;</span><span class="w">     </span>Set log level <span class="o">(</span>silent|warn|info|verbose|debug|trace<span class="o">)</span>
+<span class="go">  -s|--silent            Disable all messages (--loglevel silent)
   -q|--quiet             Mostly quiet, warnings and errors (--loglevel warn)
   --informative          Informative (--loglevel info)
   -v|--verbose           Verbose (--loglevel verbose)
   -d|--debug             Debug messages (--loglevel debug)
   -dd|--trace            Trace messages (--loglevel trace, -d -d)
   --no-update-notifier   Skip check for a more recent version
-  -C &lt;folder&gt;            Set current folder
-
+</span><span class="gp">  -C &lt;folder&gt;</span><span class="w">            </span>Set current folder
+<span class="go">
 xpm -h|--help            Quick help
-xpm &lt;command&gt; -h|--help  Quick help on command
-xpm --version            Show version
+</span><span class="gp">xpm &lt;command&gt;</span><span class="w"> </span><span class="nt">-h</span>|--help  Quick <span class="nb">help </span>on <span class="nb">command</span>
+<span class="go">xpm --version            Show version
 xpm -i|--interactive     Enter interactive mode
 
 npm xpm@0.9.0 '/Users/ilg/.nvm/versions/node/v14.16.0/lib/node_modules/xpm'
-Home page: &lt;https://xpack.github.io/xpm/&gt;
-Bug reports: &lt;https://github.com/xpack/xpm-js/issues/&gt;
-</code></pre></div></div>
+</span><span class="gp">Home page: &lt;https://xpack.github.io/xpm/&gt;</span><span class="w">
+</span><span class="gp">Bug reports: &lt;https://github.com/xpack/xpm-js/issues/&gt;</span><span class="w">
+</span></code></pre></div></div>
 
 <p>This works both at top level and with commands/subcommands.</p>
 
@@ -507,14 +507,14 @@ amount of messages.</p>
 <p>This can be changed, from not displaying any messages at all (<code class="language-plaintext highlighter-rouge">--silent</code>)
 to displaying lots of debugging trace messages (<code class="language-plaintext highlighter-rouge">--trace</code>).</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  --loglevel &lt;level&gt;     Set log level (silent|warn|info|verbose|debug|trace)
-  -s|--silent            Disable all messages (--loglevel silent)
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">  --loglevel &lt;level&gt;</span><span class="w">     </span>Set log level <span class="o">(</span>silent|warn|info|verbose|debug|trace<span class="o">)</span>
+<span class="go">  -s|--silent            Disable all messages (--loglevel silent)
   -q|--quiet             Mostly quiet, warnings and errors (--loglevel warn)
   --informative          Informative (--loglevel info)
   -v|--verbose           Verbose (--loglevel verbose)
   -d|--debug             Debug messages (--loglevel debug)
   -dd|--trace            Trace messages (--loglevel trace, -d -d)
-</code></pre></div></div>
+</span></code></pre></div></div>
 
 <h3 id="current-folder--c">Current folder (<code class="language-plaintext highlighter-rouge">-C</code>)</h3>
 

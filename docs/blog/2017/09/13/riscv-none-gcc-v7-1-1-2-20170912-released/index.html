@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-2-20170912-* released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T07:13:50+00:00","datePublished":"2017-09-13T07:28:00+00:00","description":"Version v7.1.1-2-20170912-2255 is a new release of GNU MCU Eclipse RISC-V Embedded GCC; after the initial version of the riscv64-unknown-elf toolchain was released, it was discovered that it was intended more to applications that include a kernel-like environment, and less to bare-metal environments. This second release is intended to provide a temporary fix to this problem and make the toolchain more suitable for embedded bare-metal applications; for this it was necessary to to update to the latest newlib 2.5 release which uses ‘underscore’ syscall functions and to remove the mandatory use of libgloss. Hopefully the official toolchain distribution will follow shortly and use the same approach.","headline":"GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-2-20170912-* released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2017/09/13/riscv-none-gcc-v7-1-1-2-20170912-released/"},"url":"https://xpack.github.io/blog/2017/09/13/riscv-none-gcc-v7-1-1-2-20170912-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T10:16:51+00:00","datePublished":"2017-09-13T07:28:00+00:00","description":"Version v7.1.1-2-20170912-2255 is a new release of GNU MCU Eclipse RISC-V Embedded GCC; after the initial version of the riscv64-unknown-elf toolchain was released, it was discovered that it was intended more to applications that include a kernel-like environment, and less to bare-metal environments. This second release is intended to provide a temporary fix to this problem and make the toolchain more suitable for embedded bare-metal applications; for this it was necessary to to update to the latest newlib 2.5 release which uses ‘underscore’ syscall functions and to remove the mandatory use of libgloss. Hopefully the official toolchain distribution will follow shortly and use the same approach.","headline":"GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-2-20170912-* released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2017/09/13/riscv-none-gcc-v7-1-1-2-20170912-released/"},"url":"https://xpack.github.io/blog/2017/09/13/riscv-none-gcc-v7-1-1-2-20170912-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -403,7 +403,7 @@ and the class never gets inserted.-->
 
 <p>The supported libraries are (in parenthesis are combinations that reuse simpler libraries):</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>march=rv32i/mabi=ilp32 (march.rv32ic/mabi.ilp32)
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">march=rv32i/mabi=ilp32 (march.rv32ic/mabi.ilp32)
 march=rv32im/mabi=ilp32 (march.rv32imc/mabi.ilp32)
 march=rv32iac/mabi=ilp32
 march=rv32imac/mabi=ilp32
@@ -411,7 +411,7 @@ march=rv32imaf/mabi=ilp32f &lt;-- New
 march=rv32imafc/mabi=ilp32f (march.rv32imafdc/mabi.ilp32f, march.rv32gc/mabi.ilp32f)
 march=rv64imac/mabi=lp64
 march=rv64imafdc/mabi=lp64d (march.rv64gc/mabi.lp64d)
-</code></pre></div></div>
+</span></code></pre></div></div>
 
 <p>Please note that, although all combinations of <code class="language-plaintext highlighter-rouge">march/mabi</code> are supported by the compiler, not all of them have libraries.</p>
 
@@ -467,7 +467,7 @@ march=rv64imafdc/mabi=lp64d (march.rv64gc/mabi.lp64d)
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">424a4b7bbef59c4fa59e2103760ffc7e809f2d0fff44af80719a98c20d1cf874 ?
+<pre><code class="language-txt">424a4b7bbef59c4fa59e2103760ffc7e809f2d0fff44af80719a98c20d1cf874 ?
 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170912-2255-debian32.tgz
 
 8c4b7edcd312dbf3a3dcab975c3237e78e59d96eb5a8342bb4ac5f74a9e7cd53 ?
@@ -490,7 +490,7 @@ gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170912-2255-win64-setup.exe
 
 543bcdb133ed6ca9157377ae8bee564e385ce5ccc0e46b8b2c5946982f50e864 ?
 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170912-2255-win64.zip
-</span></code></pre></div></div>
+</code></pre>
 
     </div>
 

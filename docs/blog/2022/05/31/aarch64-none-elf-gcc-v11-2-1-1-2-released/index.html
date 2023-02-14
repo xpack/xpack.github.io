@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack GNU AArch64 Embedded GCC v11.2.1-1.2 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T07:13:50+00:00","datePublished":"2022-05-31T04:22:58+00:00","description":"The xPack GNU AArch64 Embedded GCC is a standalone cross-platform binary distribution of GNU AArch64 Embedded Toolchain.","headline":"xPack GNU AArch64 Embedded GCC v11.2.1-1.2 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/05/31/aarch64-none-elf-gcc-v11-2-1-1-2-released/"},"url":"https://xpack.github.io/blog/2022/05/31/aarch64-none-elf-gcc-v11-2-1-1-2-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T10:16:51+00:00","datePublished":"2022-05-31T04:22:58+00:00","description":"The xPack GNU AArch64 Embedded GCC is a standalone cross-platform binary distribution of GNU AArch64 Embedded Toolchain.","headline":"xPack GNU AArch64 Embedded GCC v11.2.1-1.2 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/05/31/aarch64-none-elf-gcc-v11-2-1-1-2-released/"},"url":"https://xpack.github.io/blog/2022/05/31/aarch64-none-elf-gcc-v11-2-1-1-2-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -448,7 +448,7 @@ xpm <span class="nb">install</span> @xpack-dev-tools/aarch64-none-elf-gcc@latest
 <p>For xPacks aware tools, like the <strong>Eclipse Embedded C/C++ plug-ins</strong>,
 it is also possible to install Arm Embedded GCC globally, in the user home folder.</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/aarch64-none-elf-gcc@latest
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/aarch64-none-elf-gcc@latest <span class="nt">--verbose</span>
 </code></pre></div></div>
 
 <p>Eclipse will automatically
@@ -621,7 +621,7 @@ build, not the compiler functionality.</p>
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">13790cf505cda92e12d5da01ac916fdecf4d724b8497828d446b7bc494d13a6b
+<pre><code class="language-txt">13790cf505cda92e12d5da01ac916fdecf4d724b8497828d446b7bc494d13a6b
 xpack-aarch64-none-elf-gcc-11.2.1-1.2-darwin-arm64.tar.gz
 
 d32aa91694e5fea3e721fe9269a74f05887cf94c97636f9ccd4ae3ecfd034fa5
@@ -639,7 +639,7 @@ xpack-aarch64-none-elf-gcc-11.2.1-1.2-linux-x64.tar.gz
 78deba2be085002cb31c80591792264e250aee9ae6d4d996871679781db16706
 xpack-aarch64-none-elf-gcc-11.2.1-1.2-win32-x64.zip
 
-</span></code></pre></div></div>
+</code></pre>
 
 <h2 id="deprecation-notices">Deprecation notices</h2>
 

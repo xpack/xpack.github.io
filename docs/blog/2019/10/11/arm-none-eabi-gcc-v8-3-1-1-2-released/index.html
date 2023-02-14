@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack GNU Arm Embedded GCC v8.3.1-1.2 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T07:13:50+00:00","datePublished":"2019-10-11T12:31:00+00:00","description":"Download","headline":"xPack GNU Arm Embedded GCC v8.3.1-1.2 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2019/10/11/arm-none-eabi-gcc-v8-3-1-1-2-released/"},"url":"https://xpack.github.io/blog/2019/10/11/arm-none-eabi-gcc-v8-3-1-1-2-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T10:16:51+00:00","datePublished":"2019-10-11T12:31:00+00:00","description":"Download","headline":"xPack GNU Arm Embedded GCC v8.3.1-1.2 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2019/10/11/arm-none-eabi-gcc-v8-3-1-1-2-released/"},"url":"https://xpack.github.io/blog/2019/10/11/arm-none-eabi-gcc-v8-3-1-1-2-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -394,7 +394,7 @@ from the <a href="https://www.npmjs.com"><code class="language-plaintext highlig
 
 <p>To install the latest version available, use:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/arm-none-eabi-gcc@latest
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/arm-none-eabi-gcc@latest <span class="nt">--verbose</span>
 </code></pre></div></div>
 
 <p>To install this specific version, use:</p>
@@ -462,9 +462,9 @@ a link to the <code class="language-plaintext highlighter-rouge">liblto_plugin.s
 <p>This allows the use of traditional program names, like <code class="language-plaintext highlighter-rouge">arm-none-eabi-ar</code>
 instead of the new <code class="language-plaintext highlighter-rouge">arm-none-eabi-gcc-ar</code>, without getting errors like:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>arm-none-eabi-ar -r  "libarm-static-lib.a"  ./lib.o
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>arm-none-eabi-ar <span class="nt">-r</span>  <span class="s2">"libarm-static-lib.a"</span>  ./lib.o
 arm-none-eabi-ar: creating libarm-static-lib.a
-arm-none-eabi-ar: ./lib.o: plugin needed to handle lto object &lt;---
+arm-none-eabi-ar: ./lib.o: plugin needed to handle lto object &lt;<span class="nt">---</span>
 </code></pre></div></div>
 
 <p>The issue was reported to Arm as bug <a href="https://bugs.launchpad.net/gcc-arm-embedded/+bug/1838049">1838049</a>.</p>
@@ -521,7 +521,7 @@ executed again.</p>
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>f0192ac5ec9bb5ac0c2e8590c110b0265e81ee92f8912961827cccc693827d13
+<pre><code class="language-txt">f0192ac5ec9bb5ac0c2e8590c110b0265e81ee92f8912961827cccc693827d13
 xpack-arm-none-eabi-gcc-8.3.1-1.2-darwin-x64.tgz
 
 d49ed1e2eb40c0ec73c7ea3f38216da0445d420bdfd25fef2bffaed3fe75d845
@@ -535,7 +535,7 @@ xpack-arm-none-eabi-gcc-8.3.1-1.2-win32-x32.zip
 
 5d89caf249c7f048b6549bf1a6f88d2736aacfa5e23eaa16a03fd32ab87ffbdf
 xpack-arm-none-eabi-gcc-8.3.1-1.2-win32-x64.zip
-</code></pre></div></div>
+</code></pre>
 
 <h2 id="download-analytics">Download analytics</h2>
 

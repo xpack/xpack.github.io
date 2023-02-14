@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack MinGW-w64 GCC v11.3.0-1 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T07:13:50+00:00","datePublished":"2022-09-25T18:31:38+00:00","description":"The xPack MinGW-w64 GCC is a standalone cross-platform binary distribution of Mingw-w64 GCC.","headline":"xPack MinGW-w64 GCC v11.3.0-1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/09/25/mingw-w64-gcc-v11-3-0-1-released/"},"url":"https://xpack.github.io/blog/2022/09/25/mingw-w64-gcc-v11-3-0-1-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T10:16:51+00:00","datePublished":"2022-09-25T18:31:38+00:00","description":"The xPack MinGW-w64 GCC is a standalone cross-platform binary distribution of Mingw-w64 GCC.","headline":"xPack MinGW-w64 GCC v11.3.0-1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/09/25/mingw-w64-gcc-v11-3-0-1-released/"},"url":"https://xpack.github.io/blog/2022/09/25/mingw-w64-gcc-v11-3-0-1-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -713,7 +713,7 @@ xpm <span class="nb">install</span> @xpack-dev-tools/mingw-w64-gcc@latest
 but this requires xPack aware tools to automatically identify them and
 manage paths.</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/mingw-w64-gcc@latest
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/mingw-w64-gcc@latest <span class="nt">--verbose</span>
 </code></pre></div></div>
 
 <h3 id="uninstall">Uninstall</h3>
@@ -864,7 +864,7 @@ build, not the compiler functionality.</p>
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">cc2f9cc866fdb52667b6ef8fdf94c268483c19c3810e446ebde17b30d58cdf6e
+<pre><code class="language-txt">cc2f9cc866fdb52667b6ef8fdf94c268483c19c3810e446ebde17b30d58cdf6e
 xpack-mingw-w64-gcc-11.3.0-1-darwin-arm64.tar.gz
 
 d2a0ea0079366330ed8202793a077d5e27aa58d6ebd985b4221f7027f5493ce5
@@ -882,7 +882,7 @@ xpack-mingw-w64-gcc-11.3.0-1-linux-x64.tar.gz
 2ff8e6d82a6de1a260403f6cc93bff9a5b99c036edbbc20839f913fc6c51a815
 xpack-mingw-w64-gcc-11.3.0-1-win32-x64.zip
 
-</span></code></pre></div></div>
+</code></pre>
 
 <h2 id="deprecation-notices">Deprecation notices</h2>
 

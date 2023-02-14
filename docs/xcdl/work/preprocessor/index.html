@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="XCDL templates preprocessor syntax proposal (outdated)" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T07:13:50+00:00","datePublished":"2015-10-25T10:00:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"XCDL templates preprocessor syntax proposal (outdated)","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xcdl/work/preprocessor/"},"url":"https://xpack.github.io/xcdl/work/preprocessor/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T10:16:51+00:00","datePublished":"2015-10-25T10:00:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"XCDL templates preprocessor syntax proposal (outdated)","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xcdl/work/preprocessor/"},"url":"https://xpack.github.io/xcdl/work/preprocessor/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -389,19 +389,19 @@ $('#toc').on('click', 'a', function() {
 
 <p>The <a href="https://jekyllrb.com">Jekyll</a> static web generator uses the <a href="https://shopify.github.io/liquid/">Liquid</a> metadata, which comes in two types: tags (for flow control) and object/filters (for inserting content).</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% if user %}
+<pre><code class="language-txt">{% if user %}
   hello("{{ user.name }}!");
 {% endif %}
   url="{{ url | append: ".html" }}";
-</code></pre></div></div>
+</code></pre>
 
 <p>Embedding this metadata into C/C++ comments would look like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//@XCDL {% if user %}
+<pre><code class="language-txt">//@XCDL {% if user %}
   hello("{{ user.name }}!");
 //@XCDL {% endif %}
   url="{{ url | append: ".html" }}";
-</code></pre></div></div>
+</code></pre>
 
 <p>The syntax remains relatively easy to read, but the Liquid tags still introduce a new language, that needs to be parsed and processed.</p>
 
@@ -413,7 +413,7 @@ $('#toc').on('click', 'a', function() {
 
 <p>CubeMX uses <code class="language-plaintext highlighter-rouge">.ftl</code> files with a complex script syntax, somehow inspired by xml; tags may come in pairs (<code class="language-plaintext highlighter-rouge">[if]</code>, <code class="language-plaintext highlighter-rouge">[/if]</code>), and substitutions are encoded like macros (<code class="language-plaintext highlighter-rouge">${argument.name}</code>).</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[#ftl]
+<pre><code class="language-txt">[#ftl]
 [#-- macro generateConfigModelCode --]
 
 [#macro generateConfigModelCode configModel inst nTab index]
@@ -433,7 +433,7 @@ $('#toc').on('click', 'a', function() {
 [#if configModel.comments??] #t#t/**${configModel.comments?replace("#t","#t#t")} #n#t#t*/[/#if]
 [/#if]
 ... ${argument.name} ...
-</code></pre></div></div>
+</code></pre>
 
 <p>The syntax controls the details of the expansion to the latest details, including generating tabs and new lines (<code class="language-plaintext highlighter-rouge">#t</code>, <code class="language-plaintext highlighter-rouge">#n</code>), so the template s are not really source files, and embedding the metadata as comments doesn’t make much sense.</p>
 
@@ -520,7 +520,7 @@ out.print("""
 
 <p>The templates are <code class="language-plaintext highlighter-rouge">.drv</code> files, and the syntax looks like:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%-
+<pre><code class="language-txt">%-
 %INTERFACE
 %define! Settings Common\FAT_FileSystemSettings.Inc
 %define! Abstract Common\FAT_FileSystemAbstract.Inc
@@ -591,7 +591,7 @@ uint8_t %'ModuleName'%.%RenameFile(const uint8_t *srcFileName, const uint8_t *ds
 %endif %- RenameFile
 %-BW_METHOD_END RenameFile
 %-************************************************************************************************************
-</code></pre></div></div>
+</code></pre>
 
 <p>As far as I can tell, Processor Expert implements some kind of objects, named components, described by a template. This template can be instantiated for specific devices, like USART1, USART2, etc. People I respect consider that once the components are written, using them is quite convenient. The real challenge is to write these components, and this process can be done only with Processor Expert.</p>
 
@@ -661,10 +661,10 @@ uint8_t %'ModuleName'%.%RenameFile(const uint8_t *srcFileName, const uint8_t *ds
 
 <p>For example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//@XCDL if (variable==="value") {
+<pre><code class="language-txt">//@XCDL if (variable==="value") {
 ... C/C++ lines ...
 //@XCDL }
-</code></pre></div></div>
+</code></pre>
 <p>translates into:</p>
 
 <pre><code class="language-.js">if (variable==="value") {
@@ -676,23 +676,23 @@ o("... C/C++ lines ...\n");
 
 <p>Substitutions are can be identified and processed by the JavaScript, or can be optimised by generating a JavaScript code that converts the values to strings and outputs them.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#define VARIABLE ($(value+1))
-</code></pre></div></div>
+<pre><code class="language-txt">#define VARIABLE ($(value+1))
+</code></pre>
 
 <p>can be translated to:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>o("#define VARIABLE (");o(String(value+1));o(")\n");
-</code></pre></div></div>
+<pre><code class="language-txt">o("#define VARIABLE (");o(String(value+1));o(")\n");
+</code></pre>
 
 <h2 id="examples">Examples</h2>
 
 <p>With these conventions, the first sample would look like:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//@XCDL if (defined('user')) {
+<pre><code class="language-txt">//@XCDL if (defined('user')) {
 hello ("$(user.name)!");
 //@XCDL }
 url = "$(url+'.html'))";
-</code></pre></div></div>
+</code></pre>
 
 <p>As expected, this is perfectly legal C syntax. The JavaScript code uses a function <code class="language-plaintext highlighter-rouge">defined()</code> that checks if an object is defined, and, if so, expands the <code class="language-plaintext highlighter-rouge">name</code> attribute of this object.</p>
 

@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack LLVM clang v14.0.6-2 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T07:13:50+00:00","datePublished":"2022-08-31T04:57:13+00:00","description":"The xPack LLVM clang is a standalone cross-platform binary distribution of LLVM clang.","headline":"xPack LLVM clang v14.0.6-2 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/08/31/clang-v14-0-6-2-released/"},"url":"https://xpack.github.io/blog/2022/08/31/clang-v14-0-6-2-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T10:16:51+00:00","datePublished":"2022-08-31T04:57:13+00:00","description":"The xPack LLVM clang is a standalone cross-platform binary distribution of LLVM clang.","headline":"xPack LLVM clang v14.0.6-2 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/08/31/clang-v14-0-6-2-released/"},"url":"https://xpack.github.io/blog/2022/08/31/clang-v14-0-6-2-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -704,7 +704,7 @@ xpm <span class="nb">install</span> @xpack-dev-tools/clang@latest
 but this requires xPack aware tools to automatically identify them and
 manage paths.</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/clang@latest
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/clang@latest <span class="nt">--verbose</span>
 </code></pre></div></div>
 
 <h3 id="uninstall">Uninstall</h3>
@@ -832,7 +832,7 @@ build, not the compiler functionality.</p>
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">0df12ef605a4c8928ad962113aebd25d22a932b2187bfa7b8d111160aa5a05f0
+<pre><code class="language-txt">0df12ef605a4c8928ad962113aebd25d22a932b2187bfa7b8d111160aa5a05f0
 xpack-clang-14.0.6-2-darwin-arm64.tar.gz
 
 446297cbeb8e0a51e0486041e74769443679b264ac3857ba360bc6abd1b8aebe
@@ -850,7 +850,7 @@ xpack-clang-14.0.6-2-linux-x64.tar.gz
 5b956e4d2e95d524a6c550ae049a600801e747bde410872668dc8e4a825e7fb3
 xpack-clang-14.0.6-2-win32-x64.zip
 
-</span></code></pre></div></div>
+</code></pre>
 
 <h2 id="deprecation-notices">Deprecation notices</h2>
 

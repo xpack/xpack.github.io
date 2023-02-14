@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack Windows Build Tools v4.4.0-1 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T07:13:50+00:00","datePublished":"2023-01-29T16:39:37+00:00","description":"The xPack Windows Build Tools is a standalone Windows binary distribution of GNU make and a few of other tools required by the Eclipse Embedded CDT (formerly GNU MCU/ARM Eclipse) project, but the binaries can also be used in generic build environments.","headline":"xPack Windows Build Tools v4.4.0-1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2023/01/29/windows-build-tools-v4-4-0-1-released/"},"url":"https://xpack.github.io/blog/2023/01/29/windows-build-tools-v4-4-0-1-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T10:16:51+00:00","datePublished":"2023-01-29T16:39:37+00:00","description":"The xPack Windows Build Tools is a standalone Windows binary distribution of GNU make and a few of other tools required by the Eclipse Embedded CDT (formerly GNU MCU/ARM Eclipse) project, but the binaries can also be used in generic build environments.","headline":"xPack Windows Build Tools v4.4.0-1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2023/01/29/windows-build-tools-v4-4-0-1-released/"},"url":"https://xpack.github.io/blog/2023/01/29/windows-build-tools-v4-4-0-1-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -711,7 +711,7 @@ xpm <span class="nb">install</span> @xpack-dev-tools/windows-build-tools@latest
 <p>For xPacks aware tools, like the <strong>Eclipse Embedded C/C++ plug-ins</strong>,
 it is also possible to install Windows Build Tools globally, in the user home folder.</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/windows-build-tools@latest
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/windows-build-tools@latest <span class="nt">--verbose</span>
 </code></pre></div></div>
 
 <p>Eclipse will automatically
@@ -820,10 +820,10 @@ set of platforms. The results are available from:</p>
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">f1209010daa21e040cc5bd455ea4736b28d965ab83f024d3e978c0853c192978
+<pre><code class="language-txt">f1209010daa21e040cc5bd455ea4736b28d965ab83f024d3e978c0853c192978
 xpack-windows-build-tools-4.4.0-1-win32-x64.zip
 
-</span></code></pre></div></div>
+</code></pre>
 
 <h2 id="deprecation-notices">Deprecation notices</h2>
 

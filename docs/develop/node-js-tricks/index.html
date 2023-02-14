@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Node.js Tips &amp; ricks" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T07:13:50+00:00","datePublished":"2017-10-08T23:47:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"Node.js Tips &amp; ricks","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/node-js-tricks/"},"url":"https://xpack.github.io/develop/node-js-tricks/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T10:16:51+00:00","datePublished":"2017-10-08T23:47:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"Node.js Tips &amp; ricks","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/node-js-tricks/"},"url":"https://xpack.github.io/develop/node-js-tricks/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -667,12 +667,12 @@ $('#toc').on('click', 'a', function() {
 
 <p>Use <code class="language-plaintext highlighter-rouge">stat()</code>.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    try {
-      await fsPromises.stat(aPath)
-      // It does.
-    } catch (err) {
-      // It does not.
-    }
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">try</span> <span class="p">{</span>
+      <span class="k">await</span> <span class="nx">fsPromises</span><span class="p">.</span><span class="nx">stat</span><span class="p">(</span><span class="nx">aPath</span><span class="p">)</span>
+      <span class="c1">// It does.</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// It does not.</span>
+    <span class="p">}</span>
 </code></pre></div></div>
 
 <h3 id="check-if-symbolic-link">Check if symbolic link</h3>

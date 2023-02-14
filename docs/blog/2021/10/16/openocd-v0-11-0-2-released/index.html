@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack OpenOCD v0.11.0-2 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T07:13:50+00:00","datePublished":"2021-10-16T22:27:46+00:00","description":"The xPack OpenOCD is a standalone cross-platform binary distribution of OpenOCD.","headline":"xPack OpenOCD v0.11.0-2 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/10/16/openocd-v0-11-0-2-released/"},"url":"https://xpack.github.io/blog/2021/10/16/openocd-v0-11-0-2-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-02-14T10:16:51+00:00","datePublished":"2021-10-16T22:27:46+00:00","description":"The xPack OpenOCD is a standalone cross-platform binary distribution of OpenOCD.","headline":"xPack OpenOCD v0.11.0-2 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2021/10/16/openocd-v0-11-0-2-released/"},"url":"https://xpack.github.io/blog/2021/10/16/openocd-v0-11-0-2-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -426,7 +426,7 @@ xpm <span class="nb">install</span> @xpack-dev-tools/openocd@latest
 <p>For xPacks aware tools, like the <strong>Eclipse Embedded C/C++ plug-ins</strong>,
 it is also possible to install OpenOCD globally, in the user home folder.</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/openocd@latest
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/openocd@latest <span class="nt">--verbose</span>
 </code></pre></div></div>
 
 <p>Eclipse will automatically
@@ -581,7 +581,6 @@ Info : Listening on port 3333 <span class="k">for </span>gdb connections
 target halted due to breakpoint, current mode: Thread
 xPSR: 0x21000000 pc: 0x0800113c msp: 0x2001ff78
 ^Cshutdown <span class="nb">command </span>invoked
-
 </code></pre></div></div>
 
 <p>A more complex test consist in programming and debugging a simple blinky
@@ -594,7 +593,7 @@ available in the <strong>xPack GNU Arm Embedded GCC</strong> project.</p>
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">1c02a4dbf4611b934d7a821d621d12ab8cb4ceaad4974c61a2c8bf62a9f1fa91
+<pre><code class="language-txt">1c02a4dbf4611b934d7a821d621d12ab8cb4ceaad4974c61a2c8bf62a9f1fa91
 xpack-openocd-0.11.0-2-darwin-x64.tar.gz
 
 cf5aa652177ce3ace57ae08f3d25b4159104167b57fe39db5b32b82947a61d94
@@ -615,7 +614,7 @@ xpack-openocd-0.11.0-2-win32-ia32.zip
 781a0b46d0fdcf59dfd0d0306e81d9d3e3cf57d7882899ec163a94b1244bf287
 xpack-openocd-0.11.0-2-win32-x64.zip
 
-</span></code></pre></div></div>
+</code></pre>
 
 <h2 id="deprecation-notices">Deprecation notices</h2>
 
