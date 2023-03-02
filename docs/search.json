@@ -2051,6 +2051,17 @@
 "title": "",
 "tags": "",
 "keywords": "",
+"url": "/blog/2023/01/23/xpm-v0-14-4-released/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
 "url": "/qemu-riscv/faq/",
 "summary": ""
 }
@@ -2945,6 +2956,16 @@
 "keywords": "",
 "url": "/blog/2023/02/14/vscode-xpack-v0-4-21-released/",
 "summary": "<p>Version <strong>0.4.21</strong> is a new maintenance of <strong>ilg-vscode.xpack</strong>; it adds copy to clipboard for actions and fixes a bug.</p>"
+}
+,
+
+
+{
+"title": "xPack xpm v0.15.0 released",
+"tags": "releasesxpmpackagemanager",
+"keywords": "",
+"url": "/blog/2023/02/07/xpm-v0-15-0-released/",
+"summary": "<p>Version <strong>0.15.0</strong> is a new release; it adds support for HTTP(S) proxy.</p>"
 }
 ,
 
