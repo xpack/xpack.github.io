@@ -49,8 +49,6 @@
 
 
 
-
-
 {
 "title": "The xPack Build Definitions",
 "tags": "",
@@ -59,6 +57,8 @@
 "summary": "<p>The metadata used by the build tools.</p>"
 }
 ,
+
+
 
 
 
@@ -128,10 +128,10 @@
 
 
 {
-"title": "The xPack QEMU RISC-V Frequently Asked Questions",
+"title": "FAQ",
 "tags": "",
 "keywords": "",
-"url": "/dev-tools/qemu-riscv/faq/",
+"url": "/xpbuild/faq/",
 "summary": ""
 }
 ,
@@ -139,87 +139,10 @@
 
 
 {
-"title": "The xPack GNU AArch64 Embedded GCC Frequently Asked Questions",
+"title": "FAQ",
 "tags": "",
 "keywords": "",
-"url": "/dev-tools/aarch64-none-elf-gcc/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The LLVM clang Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/dev-tools/clang/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The xPack GNU realpath Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/dev-tools/realpath/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The xPack QEMU Arm Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/dev-tools/qemu-arm/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The xPack XBB Bootstrap Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/dev-tools/xbb-bootstrap/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The xPack Ninja Build Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/dev-tools/ninja-build/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The xPack Meson Build Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/dev-tools/meson-build/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The xPack OpenOCD Frequently Asked Questions",
-"tags": "",
-"keywords": "",
-"url": "/dev-tools/openocd/faq/",
+"url": "/xpm/faq/",
 "summary": ""
 }
 ,
@@ -238,10 +161,10 @@
 
 
 {
-"title": "The xPack GNU sed Frequently Asked Questions",
+"title": "The xPack NixOS PatchELF Frequently Asked Questions",
 "tags": "",
 "keywords": "",
-"url": "/dev-tools/sed/faq/",
+"url": "/dev-tools/patchelf/faq/",
 "summary": ""
 }
 ,
@@ -249,10 +172,65 @@
 
 
 {
-"title": "The xPack CMake Frequently Asked Questions",
+"title": "The xPack GNU AArch64 Embedded GCC Frequently Asked Questions",
 "tags": "",
 "keywords": "",
-"url": "/dev-tools/cmake/faq/",
+"url": "/dev-tools/aarch64-none-elf-gcc/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack Meson Build Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/meson-build/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack QEMU Arm Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/qemu-arm/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack Ninja Build Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/ninja-build/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack QEMU RISC-V Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/qemu-riscv/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The LLVM clang Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/clang/faq/",
 "summary": ""
 }
 ,
@@ -282,10 +260,43 @@
 
 
 {
-"title": "The xPack GNU Arm Embedded GCC Frequently Asked Questions",
+"title": "The xPack GNU Compiler Collection Frequently Asked Questions",
 "tags": "",
 "keywords": "",
-"url": "/dev-tools/arm-none-eabi-gcc/faq/",
+"url": "/dev-tools/gcc/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack GNU realpath Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/realpath/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack CMake Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/cmake/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack OpenOCD Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/openocd/faq/",
 "summary": ""
 }
 ,
@@ -304,10 +315,10 @@
 
 
 {
-"title": "The xPack NixOS PatchELF Frequently Asked Questions",
+"title": "The xPack GNU Arm Embedded GCC Frequently Asked Questions",
 "tags": "",
 "keywords": "",
-"url": "/dev-tools/patchelf/faq/",
+"url": "/dev-tools/arm-none-eabi-gcc/faq/",
 "summary": ""
 }
 ,
@@ -315,10 +326,21 @@
 
 
 {
-"title": "The xPack GNU Compiler Collection Frequently Asked Questions",
+"title": "The xPack GNU sed Frequently Asked Questions",
 "tags": "",
 "keywords": "",
-"url": "/dev-tools/gcc/faq/",
+"url": "/dev-tools/sed/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The xPack XBB Bootstrap Frequently Asked Questions",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/xbb-bootstrap/faq/",
 "summary": ""
 }
 ,
@@ -352,28 +374,6 @@
 "tags": "",
 "keywords": "",
 "url": "/vscode/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "FAQ",
-"tags": "",
-"keywords": "",
-"url": "/xpm/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "FAQ",
-"tags": "",
-"keywords": "",
-"url": "/xpbuild/faq/",
 "summary": ""
 }
 ,
@@ -439,99 +439,138 @@
 
 
 {
-"title": "The xPack QEMU RISC-V",
+"title": "The xPack Metadata",
 "tags": "",
-"keywords": "qemuriscv",
-"url": "/dev-tools/qemu-riscv/",
-"summary": "<p>A binary distribution of QEMU RISC-V.</p>"
+"keywords": "",
+"url": "/metadata/",
+"summary": "<p>The metadata used by xPack tools.</p>"
 }
 ,
 
 
 
 {
-"title": "The xPack GNU AArch64 Embedded GCC",
+"title": "Maintainer info",
 "tags": "",
-"keywords": "aarch64-none-elf-gccarmgccembedded",
-"url": "/dev-tools/aarch64-none-elf-gcc/",
-"summary": "<p>A binary distribution of GNU AArch64 Embedded GCC.</p>"
+"keywords": "",
+"url": "/maintain/",
+"summary": "<p>Resources for the xPack projects maintainers.</p>"
 }
 ,
 
 
 
 {
-"title": "The LLVM clang",
+"title": "The xPack Build Box",
 "tags": "",
-"keywords": "LLVMclangc++",
-"url": "/dev-tools/clang/",
-"summary": "<p>A binary distribution of the LLVM clang.</p>"
+"keywords": "",
+"url": "/xbb/",
+"summary": "<p>A reproducible environment for building binary xPacks.</p>"
 }
 ,
 
 
 
 {
-"title": "The xPack GNU realpath",
+"title": "xPack Developer info",
 "tags": "",
-"keywords": "realpath",
-"url": "/dev-tools/realpath/",
-"summary": "<p>A binary distribution of GNU realpath.</p>"
+"keywords": "",
+"url": "/develop/",
+"summary": "<p>Resources for xPack developers.</p>"
 }
 ,
 
 
 
 {
-"title": "The xPack QEMU Arm",
+"title": "The xPack Build Configurator",
 "tags": "",
-"keywords": "qemuarmcortex-mgraphic",
-"url": "/dev-tools/qemu-arm/",
-"summary": "<p>A binary distribution of QEMU Arm.</p>"
+"keywords": "make",
+"url": "/xpcdl/",
+"summary": "<p>A tool to manage project configurations, inspired by eCos CDL, but with the configuration files in JSON (in design phase).</p>"
+}
+,
+
+
+
+
+
+{
+"title": "The xPack Basic Project Builder",
+"tags": "",
+"keywords": "",
+"url": "/xpbuild/",
+"summary": "<p>A tool to build day to day projects without having to manually write make files, with an emphasis on C/C++ and embedded applications, inspired by Eclipse CDT managed builder (work in progress).</p>"
 }
 ,
 
 
 
 {
-"title": "The xPack XBB Bootstrap",
+"title": "The xPack Build Runner",
 "tags": "",
-"keywords": "xbb-bootstrap",
-"url": "/dev-tools/xbb-bootstrap/",
-"summary": "<p>A binary distribution of XBB Bootstrap.</p>"
+"keywords": "make",
+"url": "/xpninja/",
+"summary": "<p>A light and fast tool to build generic projects, inspired by Ninja Build but with the configuration files in JSON (in design phase).</p>"
+}
+,
+
+
+
+
+
+{
+"title": "The xPack Build Generator",
+"tags": "",
+"keywords": "make",
+"url": "/xpmake/",
+"summary": "<p>An advanced tool to build complex projects, inspired by CMake, but with the configuration files in JSON and actions in JavaScript (in design phase).</p>"
 }
 ,
 
 
 
 {
-"title": "The xPack Ninja Build",
+"title": "xpm - common options",
 "tags": "",
-"keywords": "ninja-build",
-"url": "/dev-tools/ninja-build/",
-"summary": "<p>A binary distribution of Ninja Build.</p>"
+"keywords": "",
+"url": "/xpm/cli/",
+"summary": ""
 }
 ,
 
 
 
 {
-"title": "The xPack Meson Build",
+"title": "xpm files",
 "tags": "",
-"keywords": "meson-build",
-"url": "/dev-tools/meson-build/",
-"summary": "<p>A binary distribution of Meson Build.</p>"
+"keywords": "",
+"url": "/xpm/files/",
+"summary": ""
 }
 ,
 
 
 
 {
-"title": "The xPack OpenOCD",
+"title": "The xPack Project Manager",
 "tags": "",
-"keywords": "openocd",
-"url": "/dev-tools/openocd/",
-"summary": "<p>A binary distribution of OpenOCD.</p>"
+"keywords": "xPackpackagemanager",
+"url": "/xpm/",
+"summary": "<p>A tool to orchestrate builds and manage dependencies for language neutral, multi-version projects, inspired by npm.</p>"
+}
+,
+
+
+
+
+
+{
+"title": "xPack Core Tools",
+"tags": "",
+"keywords": "",
+"url": "/core/",
+"summary": "<p>Tools that implement the xPack core functionality.</p>"
 }
 ,
 
@@ -549,22 +588,77 @@
 
 
 {
-"title": "The xPack GNU sed",
+"title": "The xPack NixOS PatchELF",
 "tags": "",
-"keywords": "sed",
-"url": "/dev-tools/sed/",
-"summary": "<p>A binary distribution of GNU sed.</p>"
+"keywords": "patchelf",
+"url": "/dev-tools/patchelf/",
+"summary": "<p>A binary distribution of NixOS PatchELF.</p>"
 }
 ,
 
 
 
 {
-"title": "The xPack CMake",
+"title": "The xPack GNU AArch64 Embedded GCC",
 "tags": "",
-"keywords": "cmake",
-"url": "/dev-tools/cmake/",
-"summary": "<p>A binary distribution of CMake.</p>"
+"keywords": "aarch64-none-elf-gccarmgccembedded",
+"url": "/dev-tools/aarch64-none-elf-gcc/",
+"summary": "<p>A binary distribution of GNU AArch64 Embedded GCC.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Meson Build",
+"tags": "",
+"keywords": "meson-build",
+"url": "/dev-tools/meson-build/",
+"summary": "<p>A binary distribution of Meson Build.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack QEMU Arm",
+"tags": "",
+"keywords": "qemuarmcortex-mgraphic",
+"url": "/dev-tools/qemu-arm/",
+"summary": "<p>A binary distribution of QEMU Arm.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack Ninja Build",
+"tags": "",
+"keywords": "ninja-build",
+"url": "/dev-tools/ninja-build/",
+"summary": "<p>A binary distribution of Ninja Build.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack QEMU RISC-V",
+"tags": "",
+"keywords": "qemuriscv",
+"url": "/dev-tools/qemu-riscv/",
+"summary": "<p>A binary distribution of QEMU RISC-V.</p>"
+}
+,
+
+
+
+{
+"title": "The LLVM clang",
+"tags": "",
+"keywords": "LLVMclangc++",
+"url": "/dev-tools/clang/",
+"summary": "<p>A binary distribution of the LLVM clang.</p>"
 }
 ,
 
@@ -593,11 +687,44 @@
 
 
 {
-"title": "The xPack GNU Arm Embedded GCC",
+"title": "The xPack GNU Compiler Collection (GCC)",
 "tags": "",
-"keywords": "arm-none-eabi-gccarmgccembedded",
-"url": "/dev-tools/arm-none-eabi-gcc/",
-"summary": "<p>A binary distribution of GNU Arm Embedded GCC.</p>"
+"keywords": "gnugccc++",
+"url": "/dev-tools/gcc/",
+"summary": "<p>A binary distribution of the GNU Compiler Collection.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack GNU realpath",
+"tags": "",
+"keywords": "realpath",
+"url": "/dev-tools/realpath/",
+"summary": "<p>A binary distribution of GNU realpath.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack CMake",
+"tags": "",
+"keywords": "cmake",
+"url": "/dev-tools/cmake/",
+"summary": "<p>A binary distribution of CMake.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack OpenOCD",
+"tags": "",
+"keywords": "openocd",
+"url": "/dev-tools/openocd/",
+"summary": "<p>A binary distribution of OpenOCD.</p>"
 }
 ,
 
@@ -615,22 +742,33 @@
 
 
 {
-"title": "The xPack NixOS PatchELF",
+"title": "The xPack GNU Arm Embedded GCC",
 "tags": "",
-"keywords": "patchelf",
-"url": "/dev-tools/patchelf/",
-"summary": "<p>A binary distribution of NixOS PatchELF.</p>"
+"keywords": "arm-none-eabi-gccarmgccembedded",
+"url": "/dev-tools/arm-none-eabi-gcc/",
+"summary": "<p>A binary distribution of GNU Arm Embedded GCC.</p>"
 }
 ,
 
 
 
 {
-"title": "The xPack GNU Compiler Collection (GCC)",
+"title": "The xPack GNU sed",
 "tags": "",
-"keywords": "gnugccc++",
-"url": "/dev-tools/gcc/",
-"summary": "<p>A binary distribution of the GNU Compiler Collection.</p>"
+"keywords": "sed",
+"url": "/dev-tools/sed/",
+"summary": "<p>A binary distribution of GNU sed.</p>"
+}
+,
+
+
+
+{
+"title": "The xPack XBB Bootstrap",
+"tags": "",
+"keywords": "xbb-bootstrap",
+"url": "/dev-tools/xbb-bootstrap/",
+"summary": "<p>A binary distribution of XBB Bootstrap.</p>"
 }
 ,
 
@@ -669,15 +807,6 @@
 
 
 
-{
-"title": "Maintainer info",
-"tags": "",
-"keywords": "",
-"url": "/maintain/",
-"summary": "<p>Resources for the xPack projects maintainers.</p>"
-}
-,
-
 
 
 {
@@ -692,151 +821,11 @@
 
 
 {
-"title": "The xPack Build Box",
-"tags": "",
-"keywords": "",
-"url": "/xbb/",
-"summary": "<p>A reproducible environment for building binary xPacks.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack Build Generator",
-"tags": "",
-"keywords": "make",
-"url": "/xpmake/",
-"summary": "<p>An advanced tool to build complex projects, inspired by CMake, but with the configuration files in JSON and actions in JavaScript (in design phase).</p>"
-}
-,
-
-
-
-{
-"title": "xpm files",
-"tags": "",
-"keywords": "",
-"url": "/xpm/files/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "xpm - common options",
-"tags": "",
-"keywords": "",
-"url": "/xpm/cli/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "The xPack Project Manager",
-"tags": "",
-"keywords": "xPackpackagemanager",
-"url": "/xpm/",
-"summary": "<p>A tool to orchestrate builds and manage dependencies for language neutral, multi-version projects, inspired by npm.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack Basic Project Builder",
-"tags": "",
-"keywords": "",
-"url": "/xpbuild/",
-"summary": "<p>A tool to build day to day projects without having to manually write make files, with an emphasis on C/C++ and embedded applications, inspired by Eclipse CDT managed builder (work in progress).</p>"
-}
-,
-
-
-
-
-
-
-
-{
-"title": "The xPack Build Configurator",
-"tags": "",
-"keywords": "make",
-"url": "/xpcdl/",
-"summary": "<p>A tool to manage project configurations, inspired by eCos CDL, but with the configuration files in JSON (in design phase).</p>"
-}
-,
-
-
-
-{
-"title": "The xPack Build Runner",
-"tags": "",
-"keywords": "make",
-"url": "/xpninja/",
-"summary": "<p>A light and fast tool to build generic projects, inspired by Ninja Build but with the configuration files in JSON (in design phase).</p>"
-}
-,
-
-
-
-
-
-{
-"title": "xPack Core Tools",
-"tags": "",
-"keywords": "",
-"url": "/core/",
-"summary": "<p>Tools that implement the xPack core functionality.</p>"
-}
-,
-
-
-
-{
-"title": "The xPack Metadata",
-"tags": "",
-"keywords": "",
-"url": "/metadata/",
-"summary": "<p>The metadata used by xPack tools.</p>"
-}
-,
-
-
-
-{
-"title": "xPack Developer info",
-"tags": "",
-"keywords": "",
-"url": "/develop/",
-"summary": "<p>Resources for xPack developers.</p>"
-}
-,
-
-
-
-
-
-{
 "title": "The xPack Reproducible Build Framework",
 "tags": "",
 "keywords": "packages, code sharing, reusing, libraries, applications, c/c++, embedded",
 "url": "/",
 "summary": "<p>Tools to manage, configure and build complex, package based, multi-target projects, in a reproducible way.</p>"
-}
-,
-
-
-
-{
-"title": "xpm init",
-"tags": "",
-"keywords": "",
-"url": "/xpm/cli/init/",
-"summary": ""
 }
 ,
 
@@ -854,10 +843,65 @@
 
 
 {
-"title": "How to install the xPack QEMU RISC-V binaries",
+"title": "xpm init",
 "tags": "",
 "keywords": "",
-"url": "/dev-tools/qemu-riscv/install/",
+"url": "/xpm/cli/init/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to install xpbuild",
+"tags": "",
+"keywords": "xpbuildxpackinstall",
+"url": "/xpbuild/install/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "xpm install",
+"tags": "",
+"keywords": "",
+"url": "/xpm/cli/install/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to install xpm",
+"tags": "",
+"keywords": "xpmnpmxpackinstall",
+"url": "/xpm/install/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to install the xPack WineHQ binaries",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/wine/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "How to install the xPack NixOS PatchELF binaries",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/patchelf/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -876,21 +920,10 @@
 
 
 {
-"title": "How to install the xPack LLVM clang binaries",
+"title": "How to install the xPack Meson Build binaries",
 "tags": "",
 "keywords": "",
-"url": "/dev-tools/clang/install/",
-"summary": "<p>The recommended method is via xpm.</p>"
-}
-,
-
-
-
-{
-"title": "How to install the xPack GNU realpath binaries",
-"tags": "",
-"keywords": "",
-"url": "/dev-tools/realpath/install/",
+"url": "/dev-tools/meson-build/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -909,17 +942,6 @@
 
 
 {
-"title": "How to install the xPack XBB Bootstrap binaries",
-"tags": "",
-"keywords": "",
-"url": "/dev-tools/xbb-bootstrap/install/",
-"summary": "<p>The recommended method is via xpm.</p>"
-}
-,
-
-
-
-{
 "title": "How to install the xPack Ninja Build binaries",
 "tags": "",
 "keywords": "",
@@ -931,10 +953,10 @@
 
 
 {
-"title": "How to install the xPack Meson Build binaries",
+"title": "How to install the xPack QEMU RISC-V binaries",
 "tags": "",
 "keywords": "",
-"url": "/dev-tools/meson-build/install/",
+"url": "/dev-tools/qemu-riscv/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -942,43 +964,10 @@
 
 
 {
-"title": "How to install the xPack OpenOCD binaries",
+"title": "How to install the xPack LLVM clang binaries",
 "tags": "",
 "keywords": "",
-"url": "/dev-tools/openocd/install/",
-"summary": "<p>The recommended method is via xpm.</p>"
-}
-,
-
-
-
-{
-"title": "How to install the xPack WineHQ binaries",
-"tags": "",
-"keywords": "",
-"url": "/dev-tools/wine/install/",
-"summary": "<p>The recommended method is via xpm.</p>"
-}
-,
-
-
-
-{
-"title": "How to install the xPack GNU sed binaries",
-"tags": "",
-"keywords": "",
-"url": "/dev-tools/sed/install/",
-"summary": "<p>The recommended method is via xpm.</p>"
-}
-,
-
-
-
-{
-"title": "How to install the xPack CMake binaries",
-"tags": "",
-"keywords": "",
-"url": "/dev-tools/cmake/install/",
+"url": "/dev-tools/clang/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -1008,10 +997,43 @@
 
 
 {
-"title": "How to install the xPack GNU Arm Embedded GCC binaries",
+"title": "How to install the xPack GNU Compiler Collection binaries",
 "tags": "",
 "keywords": "",
-"url": "/dev-tools/arm-none-eabi-gcc/install/",
+"url": "/dev-tools/gcc/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "How to install the xPack GNU realpath binaries",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/realpath/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "How to install the xPack CMake binaries",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/cmake/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "How to install the xPack OpenOCD binaries",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/openocd/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -1030,10 +1052,10 @@
 
 
 {
-"title": "How to install the xPack NixOS PatchELF binaries",
+"title": "How to install the xPack GNU Arm Embedded GCC binaries",
 "tags": "",
 "keywords": "",
-"url": "/dev-tools/patchelf/install/",
+"url": "/dev-tools/arm-none-eabi-gcc/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -1041,10 +1063,21 @@
 
 
 {
-"title": "How to install the xPack GNU Compiler Collection binaries",
+"title": "How to install the xPack GNU sed binaries",
 "tags": "",
 "keywords": "",
-"url": "/dev-tools/gcc/install/",
+"url": "/dev-tools/sed/install/",
+"summary": "<p>The recommended method is via xpm.</p>"
+}
+,
+
+
+
+{
+"title": "How to install the xPack XBB Bootstrap binaries",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/xbb-bootstrap/install/",
 "summary": "<p>The recommended method is via xpm.</p>"
 }
 ,
@@ -1078,39 +1111,6 @@
 "tags": "",
 "keywords": "vscodexpackinstall",
 "url": "/vscode/install/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "xpm install",
-"tags": "",
-"keywords": "",
-"url": "/xpm/cli/install/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to install xpm",
-"tags": "",
-"keywords": "xpmnpmxpackinstall",
-"url": "/xpm/install/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to install xpbuild",
-"tags": "",
-"keywords": "xpbuildxpackinstall",
-"url": "/xpbuild/install/",
 "summary": ""
 }
 ,
@@ -1257,6 +1257,17 @@
 
 
 {
+"title": "How to get support",
+"tags": "",
+"keywords": "",
+"url": "/support/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "xpbuild - common options",
 "tags": "",
 "keywords": "",
@@ -1268,17 +1279,6 @@
 
 
 
-
-
-
-{
-"title": "How to get support",
-"tags": "",
-"keywords": "",
-"url": "/support/",
-"summary": ""
-}
-,
 
 
 
@@ -1488,10 +1488,10 @@
 
 
 {
-"title": "How to get help for xPack QEMU RISC-V",
+"title": "How to get help for xpbuild",
 "tags": "",
 "keywords": "",
-"url": "/dev-tools/qemu-riscv/support/",
+"url": "/xpbuild/support/",
 "summary": ""
 }
 ,
@@ -1499,87 +1499,10 @@
 
 
 {
-"title": "How to get help for xPack GNU AArch64 Embedded GCC",
+"title": "How to get help for xpm",
 "tags": "",
 "keywords": "",
-"url": "/dev-tools/aarch64-none-elf-gcc/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack LLVM clang",
-"tags": "",
-"keywords": "",
-"url": "/dev-tools/clang/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack GNU realpath",
-"tags": "",
-"keywords": "",
-"url": "/dev-tools/realpath/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack QEMU Arm",
-"tags": "",
-"keywords": "",
-"url": "/dev-tools/qemu-arm/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack XBB Bootstrap",
-"tags": "",
-"keywords": "",
-"url": "/dev-tools/xbb-bootstrap/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack Ninja Build",
-"tags": "",
-"keywords": "",
-"url": "/dev-tools/ninja-build/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack Meson Build",
-"tags": "",
-"keywords": "",
-"url": "/dev-tools/meson-build/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xPack OpenOCD?",
-"tags": "",
-"keywords": "",
-"url": "/dev-tools/openocd/support/",
+"url": "/xpm/support/",
 "summary": ""
 }
 ,
@@ -1598,10 +1521,10 @@
 
 
 {
-"title": "How to get help for xPack GNU sed",
+"title": "How to get help for xPack NixOS PatchELF",
 "tags": "",
 "keywords": "",
-"url": "/dev-tools/sed/support/",
+"url": "/dev-tools/patchelf/support/",
 "summary": ""
 }
 ,
@@ -1609,10 +1532,65 @@
 
 
 {
-"title": "How to get help for xPack CMake",
+"title": "How to get help for xPack GNU AArch64 Embedded GCC",
 "tags": "",
 "keywords": "",
-"url": "/dev-tools/cmake/support/",
+"url": "/dev-tools/aarch64-none-elf-gcc/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack Meson Build",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/meson-build/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack QEMU Arm",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/qemu-arm/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack Ninja Build",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/ninja-build/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack QEMU RISC-V",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/qemu-riscv/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack LLVM clang",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/clang/support/",
 "summary": ""
 }
 ,
@@ -1642,10 +1620,43 @@
 
 
 {
-"title": "How to get help for xPack GNU Arm Embedded GCC",
+"title": "How to get help for xPack GNU Compiler Collection",
 "tags": "",
 "keywords": "",
-"url": "/dev-tools/arm-none-eabi-gcc/support/",
+"url": "/dev-tools/gcc/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack GNU realpath",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/realpath/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack CMake",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/cmake/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack OpenOCD?",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/openocd/support/",
 "summary": ""
 }
 ,
@@ -1664,10 +1675,10 @@
 
 
 {
-"title": "How to get help for xPack NixOS PatchELF",
+"title": "How to get help for xPack GNU Arm Embedded GCC",
 "tags": "",
 "keywords": "",
-"url": "/dev-tools/patchelf/support/",
+"url": "/dev-tools/arm-none-eabi-gcc/support/",
 "summary": ""
 }
 ,
@@ -1675,10 +1686,21 @@
 
 
 {
-"title": "How to get help for xPack GNU Compiler Collection",
+"title": "How to get help for xPack GNU sed",
 "tags": "",
 "keywords": "",
-"url": "/dev-tools/gcc/support/",
+"url": "/dev-tools/sed/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to get help for xPack XBB Bootstrap",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/xbb-bootstrap/support/",
 "summary": ""
 }
 ,
@@ -1712,28 +1734,6 @@
 "tags": "",
 "keywords": "",
 "url": "/vscode/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xpm",
-"tags": "",
-"keywords": "",
-"url": "/xpm/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to get help for xpbuild",
-"tags": "",
-"keywords": "",
-"url": "/xpbuild/support/",
 "summary": ""
 }
 ,
@@ -2062,17 +2062,6 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/qemu-riscv/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "",
-"tags": "",
-"keywords": "",
 "url": "/aarch64-none-elf-gcc/faq/",
 "summary": ""
 }
@@ -2084,7 +2073,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/clang/faq/",
+"url": "/meson-build/faq/",
 "summary": ""
 }
 ,
@@ -2117,7 +2106,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/meson-build/faq/",
+"url": "/qemu-riscv/faq/",
 "summary": ""
 }
 ,
@@ -2128,18 +2117,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/openocd/faq/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "",
-"tags": "",
-"keywords": "",
-"url": "/cmake/faq/",
+"url": "/clang/faq/",
 "summary": ""
 }
 ,
@@ -2161,7 +2139,29 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/arm-none-eabi-gcc/faq/",
+"url": "/gcc/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "/cmake/faq/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "/openocd/faq/",
 "summary": ""
 }
 ,
@@ -2183,7 +2183,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/gcc/faq/",
+"url": "/arm-none-eabi-gcc/faq/",
 "summary": ""
 }
 ,
@@ -2238,17 +2238,6 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/qemu-riscv/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "",
-"tags": "",
-"keywords": "",
 "url": "/aarch64-none-elf-gcc/",
 "summary": ""
 }
@@ -2260,7 +2249,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/clang/",
+"url": "/meson-build/",
 "summary": ""
 }
 ,
@@ -2293,7 +2282,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/meson-build/",
+"url": "/qemu-riscv/",
 "summary": ""
 }
 ,
@@ -2304,18 +2293,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/openocd/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "",
-"tags": "",
-"keywords": "",
-"url": "/cmake/",
+"url": "/clang/",
 "summary": ""
 }
 ,
@@ -2337,7 +2315,29 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/arm-none-eabi-gcc/",
+"url": "/gcc/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "/cmake/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "/openocd/",
 "summary": ""
 }
 ,
@@ -2359,7 +2359,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/gcc/",
+"url": "/arm-none-eabi-gcc/",
 "summary": ""
 }
 ,
@@ -2392,17 +2392,6 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/qemu-riscv/install/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "",
-"tags": "",
-"keywords": "",
 "url": "/aarch64-none-elf-gcc/install/",
 "summary": ""
 }
@@ -2414,7 +2403,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/clang/install/",
+"url": "/meson-build/install/",
 "summary": ""
 }
 ,
@@ -2447,7 +2436,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/meson-build/install/",
+"url": "/qemu-riscv/install/",
 "summary": ""
 }
 ,
@@ -2458,18 +2447,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/openocd/install/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "",
-"tags": "",
-"keywords": "",
-"url": "/cmake/install/",
+"url": "/clang/install/",
 "summary": ""
 }
 ,
@@ -2491,7 +2469,29 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/arm-none-eabi-gcc/install/",
+"url": "/gcc/install/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "/cmake/install/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "/openocd/install/",
 "summary": ""
 }
 ,
@@ -2513,7 +2513,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/gcc/install/",
+"url": "/arm-none-eabi-gcc/install/",
 "summary": ""
 }
 ,
@@ -2590,17 +2590,6 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/qemu-riscv/releases/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "",
-"tags": "",
-"keywords": "",
 "url": "/aarch64-none-elf-gcc/releases/",
 "summary": ""
 }
@@ -2612,7 +2601,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/clang/releases/",
+"url": "/meson-build/releases/",
 "summary": ""
 }
 ,
@@ -2645,7 +2634,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/meson-build/releases/",
+"url": "/qemu-riscv/releases/",
 "summary": ""
 }
 ,
@@ -2656,18 +2645,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/openocd/releases/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "",
-"tags": "",
-"keywords": "",
-"url": "/cmake/releases/",
+"url": "/clang/releases/",
 "summary": ""
 }
 ,
@@ -2689,7 +2667,29 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/arm-none-eabi-gcc/releases/",
+"url": "/gcc/releases/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "/cmake/releases/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "/openocd/releases/",
 "summary": ""
 }
 ,
@@ -2711,7 +2711,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/gcc/releases/",
+"url": "/arm-none-eabi-gcc/releases/",
 "summary": ""
 }
 ,
@@ -2755,17 +2755,6 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/qemu-riscv/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "",
-"tags": "",
-"keywords": "",
 "url": "/aarch64-none-elf-gcc/support/",
 "summary": ""
 }
@@ -2777,7 +2766,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/clang/support/",
+"url": "/meson-build/support/",
 "summary": ""
 }
 ,
@@ -2810,7 +2799,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/meson-build/support/",
+"url": "/qemu-riscv/support/",
 "summary": ""
 }
 ,
@@ -2821,18 +2810,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/openocd/support/",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "",
-"tags": "",
-"keywords": "",
-"url": "/cmake/support/",
+"url": "/clang/support/",
 "summary": ""
 }
 ,
@@ -2854,7 +2832,29 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/arm-none-eabi-gcc/support/",
+"url": "/gcc/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "/cmake/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "/openocd/support/",
 "summary": ""
 }
 ,
@@ -2876,7 +2876,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/gcc/support/",
+"url": "/arm-none-eabi-gcc/support/",
 "summary": ""
 }
 ,
