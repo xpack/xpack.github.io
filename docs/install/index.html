@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack prerequisites" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-03-24T12:18:38+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack prerequisites","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"url":"https://xpack.github.io/install/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-03-24T15:11:03+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack prerequisites","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"url":"https://xpack.github.io/install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -642,36 +642,12 @@ for each supported platform are available in the next section.</p>
 </span></code></pre></div></div>
 
 <p>If this is your first encounter with <strong>npm</strong>, you need to install the
-<a href="https://nodejs.org">Node.js</a> JavaScript run-time. The process is
+<a href="https://nodejs.org">Node.js</a> ECMAScript (JavaScript) run-time. The process is
 straightforward and does not pollute the system locations significantly;
 there are two Node versions, <strong>LTS</strong> (<strong>Long Term Service</strong>) and
-<strong>Current</strong>; generally it is safer to use LTS, especially on Windows.</p>
+<strong>Current</strong>; generally it is safer to use <strong>LTS</strong>, especially on Windows.</p>
 
 <p><img src="/assets/images/2019/nodejs-org.png" alt="The Node Download page" /></p>
-
-<p>For Windows, the general procedure is to download the package
-and install it as usual.</p>
-
-<p>For GNU/Linux and macOS, it is
-<strong>highly recommended</strong> to <strong>use a version manager</strong> (see below).</p>
-
-<p>The result is a binary program named <code class="language-plaintext highlighter-rouge">node</code> (that can be used to execute
-JavaScript code from the terminal), and a symbolic link named <code class="language-plaintext highlighter-rouge">npm</code>, pointing to
-the <code class="language-plaintext highlighter-rouge">npm-cli.js</code> script, which is part of the Node module that implements
-the npm functionality (on Windows, where symbolic links are problematic,
-<code class="language-plaintext highlighter-rouge">.cmd</code> stubs are used).</p>
-
-<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Due to a misconception, some
-distributions offer to install Node with administrative rights;
-this is not a problem
-for Node itself, but will also require administrative rights for using
-npm and xpm, and these tools fail in various ways when installed
-with administrative rights (mostly with problems related to permissions);
-to simplify maintenance, the highly recommended method is to install Node.js/npm
-in a custom location in the home folder, using a version
-manager or by directly unpacking the archive distributions.
-Regardless how and where it is installed, the <code class="language-plaintext highlighter-rouge">node</code>
-executable must be in the current path.</div>
 
 <ul id="profileTabs_1" class="nav nav-tabs">
     <li class="active"><a href="#windows_1" data-toggle="tab">Windows</a></li>
@@ -681,6 +657,15 @@ executable must be in the current path.</div>
 <div class="tab-content">
 	<div role="tabpanel" class="tab-pane active" id="windows_1">
 		
+<p>For Windows, the general procedure is to download the package
+and install it as usual (see below for details).</p>
+
+<p>The result is a binary program named <code class="language-plaintext highlighter-rouge">node.exe</code>,
+that can be used to execute
+JavaScript code from the terminal, and a stub named <code class="language-plaintext highlighter-rouge">npm.cmd</code>, executing
+the <code class="language-plaintext highlighter-rouge">npm-cli.js</code> script, which is part of the Node.js module that implements
+the <code class="language-plaintext highlighter-rouge">npm</code> functionality.</p>
+
 <h2 id="manual-install">Manual install</h2>
 
 <h3 id="node-install"><code class="language-plaintext highlighter-rouge">node</code> install</h3>
@@ -702,7 +687,7 @@ v16.14.2
 
 <h2 id="npm-update"><code class="language-plaintext highlighter-rouge">npm</code> update</h2>
 
-<p>A version of <strong>npm</strong>, usually a bit older, comes packed with Node.</p>
+<p>A version of <strong>npm</strong>, usually a bit older, comes packed with Node.js.</p>
 
 <pre><code class="language-doscon">C:\&gt;where npm.cmd
 C:\Program Files\nodejs\npm.cmd
@@ -809,6 +794,24 @@ The terminal process "C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe 
 	</div>
 	<div role="tabpanel" class="tab-pane" id="macos_1">
 		
+<p>For Unix-like systems, it is
+<strong>highly recommended</strong> to <strong>use a version manager</strong> (see below).</p>
+
+<p>The result is a binary program named <code class="language-plaintext highlighter-rouge">node</code>,
+that can be used to execute
+JavaScript code from the terminal, and a symbolic link named <code class="language-plaintext highlighter-rouge">npm</code>, pointing to
+the <code class="language-plaintext highlighter-rouge">npm-cli.js</code> script, which is part of the Node.js module that implements
+the <code class="language-plaintext highlighter-rouge">npm</code> functionality.</p>
+
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Due to a misconception, some
+tutorials suggest to install Node.js with administrative rights;
+this is not a problem
+for <code class="language-plaintext highlighter-rouge">node</code> itself, but will also require administrative rights for using
+<code class="language-plaintext highlighter-rouge">npm</code> and <code class="language-plaintext highlighter-rouge">xpm</code>, and these tools fail in various ways when installed
+with administrative rights (mostly with problems related to permissions);
+to simplify maintenance, the highly recommended method is to install
+Node.js/npm in the home folder, using a version manager.</div>
+
 <h2 id="tldr">TL;DR</h2>
 
 <p>If you prefer a shortcut, copy/paste the following
@@ -840,8 +843,9 @@ are also part of Xcode, their location is not fixed, hence the Command
 Line Tools package must still be installed, for the xPack toolchains to
 find them in the expected location.</div>
 
-<p>If the <code class="language-plaintext highlighter-rouge">install-nvm-node-npm-xpm.sh</code> script was successful,
-the rest of this page is only informative and can be skipped.</p>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If the <code class="language-plaintext highlighter-rouge">install-nvm-node-npm-xpm.sh</code>
+script was successful,
+the rest of this page is only informative and can be skipped.</div>
 
 <h2 id="install-nvm-node-version-manager">Install <code class="language-plaintext highlighter-rouge">nvm</code> (node version manager)</h2>
 
@@ -1006,6 +1010,24 @@ if you already know what this is all about, issue the following command:</p>
 	</div>
 	<div role="tabpanel" class="tab-pane" id="linux_1">
 		
+<p>For Unix-like systems, it is
+<strong>highly recommended</strong> to <strong>use a version manager</strong> (see below).</p>
+
+<p>The result is a binary program named <code class="language-plaintext highlighter-rouge">node</code>,
+that can be used to execute
+JavaScript code from the terminal, and a symbolic link named <code class="language-plaintext highlighter-rouge">npm</code>, pointing to
+the <code class="language-plaintext highlighter-rouge">npm-cli.js</code> script, which is part of the Node.js module that implements
+the <code class="language-plaintext highlighter-rouge">npm</code> functionality.</p>
+
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Due to a misconception, some
+tutorials suggest to install Node.js with administrative rights;
+this is not a problem
+for <code class="language-plaintext highlighter-rouge">node</code> itself, but will also require administrative rights for using
+<code class="language-plaintext highlighter-rouge">npm</code> and <code class="language-plaintext highlighter-rouge">xpm</code>, and these tools fail in various ways when installed
+with administrative rights (mostly with problems related to permissions);
+to simplify maintenance, the highly recommended method is to install
+Node.js/npm in the home folder, using a version manager.</div>
+
 <h2 id="tldr">TL;DR</h2>
 
 <p>If you prefer a shortcut, copy/paste the following
@@ -1016,11 +1038,12 @@ if you already know what this is all about, issue the following command:</p>
 <span class="nb">exit</span>
 </code></pre></div></div>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Arm platforms, like the Raspberry Pi,
+<div class="bs-callout bs-callout-">Arm platforms, like the Raspberry Pi,
 are supported, currently in both 32/64-bit variants.</div>
 
-<p>If the <code class="language-plaintext highlighter-rouge">install-nvm-node-npm-xpm.sh</code> script was successful,
-the rest of this page is only informative and can be skipped.</p>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If the <code class="language-plaintext highlighter-rouge">install-nvm-node-npm-xpm.sh</code>
+script was successful,
+the rest of this page is only informative and can be skipped.</div>
 
 <h2 id="install-nvm-node-version-manager">Install <code class="language-plaintext highlighter-rouge">nvm</code> (node version manager)</h2>
 
@@ -1154,7 +1177,7 @@ added 3 packages from 2 contributors, removed 3 packages and updated 20 packages
 <p>At any time, to switch between any of the installed versions,
 use <code class="language-plaintext highlighter-rouge">nvm use &lt;version&gt;</code>.</p>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> These commands were tested with <code class="language-plaintext highlighter-rouge">bash</code> on
+<div class="bs-callout bs-callout-">These commands were tested with <code class="language-plaintext highlighter-rouge">bash</code> on
 Ubuntu 18 LTS and Manjaro 18; for other shells they may need small
 adjustments.</div>
 
