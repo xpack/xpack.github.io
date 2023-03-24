@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack prerequisites" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-03-17T07:14:51+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack prerequisites","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"url":"https://xpack.github.io/install/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-03-24T07:24:07+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack prerequisites","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"url":"https://xpack.github.io/install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -632,7 +632,7 @@ via <strong>npm</strong> which uses Node.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>A recent <a href="https://nodejs.org">Node.js</a> (&gt;=<strong>12.x</strong>), since
+<p>A recent <a href="https://nodejs.org">Node.js</a> (&gt;=<strong>16.14</strong>), since
 some dependencies require new features. Detailed instructions
 for each supported platform are available in the next section.</p>
 
@@ -657,13 +657,13 @@ the <code class="language-plaintext highlighter-rouge">npm-cli.js</code> script,
 the npm functionality (on Windows, where symbolic links are problematic,
 <code class="language-plaintext highlighter-rouge">.cmd</code> stubs are used).</p>
 
-<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> Due to a misconception, some
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Due to a misconception, some
 distributions offer to install Node with administrative rights;
 this is not a problem
 for Node itself, but will also require administrative rights for using
 npm and xpm, and these tools fail in various ways when installed
-with administrative rights;
-to simplify maintenance, the preferred method is to install Node/npm
+with administrative rights (mostly with problems related to permissions);
+to simplify maintenance, the highly recommended method is to install Node.js/npm
 in a custom location in the home folder, using a version
 manager or by directly unpacking the archive distributions.
 Regardless how and where it is installed, the <code class="language-plaintext highlighter-rouge">node</code>
@@ -1174,9 +1174,10 @@ builds, or to build it from sources; for more details see the
     
 
     <hr/>
-    <p>Comments <strong>on the content</strong> of this page that might be useful
-    for other readers are welcomed here. For question and general
-    support, please use <strong>GitHub Discussions</strong>.
+    <p>Comments <strong>on the content</strong> of this page that might be
+    useful for other readers are welcomed here. For
+    <strong>questions and general support</strong>, please use the project
+    <strong>GitHub Discussions</strong> pages.
     </p>
 
     <div id="disqus_thread"></div>
@@ -1206,7 +1207,7 @@ builds, or to build it from sources; for more details see the
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2023 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Mar 17, 2023<br/> Site last generated: Mar 17, 2023 <br />
+<span>Page last updated:</span> Mar 24, 2023<br/> Site last generated: Mar 24, 2023 <br />
                 </div>
             </div>
 </footer>
