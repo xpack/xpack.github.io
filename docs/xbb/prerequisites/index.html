@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Prerequisites for building xPack binaries" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-03-24T07:24:07+00:00","datePublished":"2017-07-06T17:55:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"Prerequisites for building xPack binaries","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/prerequisites/"},"url":"https://xpack.github.io/xbb/prerequisites/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-03-24T09:01:05+00:00","datePublished":"2017-07-06T17:55:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"Prerequisites for building xPack binaries","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/prerequisites/"},"url":"https://xpack.github.io/xbb/prerequisites/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -374,6 +374,21 @@ containers (separate 32/64-bit containers) based on older
 and more conservative distributions, to avoid problems when
 attempting to run the executables on older versions.</p>
 
+<p>The build scripts run on GNU/Linux and macOS.</p>
+
+<p>The Windows binaries are generated on the same Docker Intel GNU/Linux
+container, using <a href="https://mingw-w64.org">mingw-w64</a>.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>The build scripts run on GNU/Linux and macOS.</p>
+
+<h3 id="gnulinux">GNU/Linux</h3>
+
+<p>Any GNU/Linux distribution that is able to run Docker should be ok; it
+is not necessary to have a physical machine, virtual machines are
+perfectly fine. For better results, dedicate 3-4 cores and 8-12 GB of RAM.</p>
+
 <p>The XBB v5.0.0 uses Ubuntu 18 LTS for both Intel and Arm GNU/Linux.</p>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Building Arm binaries requires
@@ -385,14 +400,16 @@ inside Docker containers running on AArch64 machines,
 it is still recommended to use a 32-bit OS, to avoid issues caused
 by the differences between armv7 and armv8.</div>
 
-<p>The Windows binaries are generated on the same Docker Intel GNU/Linux
-container, using <a href="https://mingw-w64.org">mingw-w64</a>.</p>
+<p>The build scripts were tested on:</p>
 
-<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+  <li>Ubuntu 18.04 LTS, running on an Intel NUC NUC8i7BEH with 32 GB of RAM</li>
+  <li>Debian 10 (buster), running on an AMD Ryzen 5600G with 32 GB of RAM</li>
+  <li>Raspberry Pi OS 64-bit, running on a Raspberry Pi 4 with 8 GB of RAM</li>
+  <li>Raspberry Pi OS 32-bit, running on a Raspberry Pi 4 with 4 GB of RAM</li>
+</ul>
 
-<p>The build scripts run on GNU/Linux and macOS.</p>
-
-<h3 id="gnulinux-prerequisites">GNU/Linux prerequisites</h3>
+<p>The prerequisites are:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">docker</code></li>
@@ -405,19 +422,29 @@ container, using <a href="https://mingw-w64.org">mingw-w64</a>.</p>
 apart from <code class="language-plaintext highlighter-rouge">docker</code>, <code class="language-plaintext highlighter-rouge">git</code> and <code class="language-plaintext highlighter-rouge">xpm</code>, the host machine has no other special
 requirements.</p>
 
-<h3 id="macos-prerequisites">macOS prerequisites</h3>
-
-<ul>
-  <li>the Command Line Tools</li>
-  <li><code class="language-plaintext highlighter-rouge">npm</code> (shipped with Node.js; installed via nvm)</li>
-  <li><code class="language-plaintext highlighter-rouge">xpm</code> (installed via <code class="language-plaintext highlighter-rouge">npm</code>)</li>
-</ul>
+<h3 id="macos">macOS</h3>
 
 <p>With a container solution similar to Docker not available to run macOS
 containers, the macOS builds run natively on Intel and Apple Silicon
 machines, and, apart from the usual Command Line Tools (provided by
 Apple) and <code class="language-plaintext highlighter-rouge">xpm</code>, the host machine has no other special
 requirements.</p>
+
+<p>The build scripts were tested on:</p>
+
+<ul>
+  <li>macOS 12.6.3, running on an Intel MacMini</li>
+  <li>macOS 10.13, running inside a Parallels virtual machine</li>
+  <li>macOS 11.7.4, running on an Apple Silicon MacMini</li>
+</ul>
+
+<p>The prerequisites are:</p>
+
+<ul>
+  <li>the Command Line Tools</li>
+  <li><code class="language-plaintext highlighter-rouge">npm</code> (shipped with Node.js; installed via nvm)</li>
+  <li><code class="language-plaintext highlighter-rouge">xpm</code> (installed via <code class="language-plaintext highlighter-rouge">npm</code>)</li>
+</ul>
 
 <p>Some build scripts may require <strong>Python 3</strong>. If not already available in the
 standard Apple distribution, install it from Python
@@ -435,9 +462,17 @@ with administrative rights, like via a system package manager;
 use <code class="language-plaintext highlighter-rouge">nvm</code> instead, as instructed, otherwise you will run into
 troubles caused by permissions.</div>
 
+<h2 id="xpm">xpm</h2>
+
+<p><a href="https://xpack.github.io/xpm/"><code class="language-plaintext highlighter-rouge">xpm</code></a> is a portable
+<a href="https://nodejs.org/">Node.js</a> command line application.</p>
+
+<p>To install it, follow the steps in the
+<a href="/xpm/install/">xpm install</a> page.</p>
+
 <h2 id="docker">Docker</h2>
 
-<h3 id="gnulinux">GNU/Linux</h3>
+<h3 id="gnulinux-1">GNU/Linux</h3>
 
 <p>Any GNU/Linux distribution that is able to run Docker should be ok; it
 is not necessary to have a physical machine, virtual machines are
@@ -522,7 +557,7 @@ Hello from Docker!
 </span><span class="c">...
 </span></code></pre></div></div>
 
-<h3 id="macos">macOS</h3>
+<h3 id="macos-1">macOS</h3>
 
 <p>For development builds, the procedure is executed on a recent macOS
 version (currently 12.6).</p>
@@ -584,6 +619,13 @@ the Dockerfiles available from
 The images are reasonably large, currently below 1 GB.</p>
 
 <p>More details in each script documentation page.</p>
+
+<h2 id="visual-studio-code">Visual Studio Code</h2>
+
+<p>Although not mandatory, VS Code is a nice addition to the development
+environment, and with the
+<a href="https://marketplace.visualstudio.com/items?itemName=ilg-vscode.xpack">xPack extension</a>,
+some of the actions are only at a mouse click distance.</p>
 
 
     <div class="tags">
