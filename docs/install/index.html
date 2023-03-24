@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack prerequisites" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-03-24T09:01:05+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack prerequisites","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"url":"https://xpack.github.io/install/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-03-24T12:18:38+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack prerequisites","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"url":"https://xpack.github.io/install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -628,7 +628,8 @@ and the class never gets inserted.-->
 <p>All xPack Core Tools are <a href="https://nodejs.org">Node.js</a> CLI application
 available from the
 <a href="https://www.npmjs.com">npmjs.com</a> public repository and are installed
-via <strong>npm</strong> which uses Node.</p>
+via <code class="language-plaintext highlighter-rouge">npm</code> which runs on top of <code class="language-plaintext highlighter-rouge">node</code>, which is the <strong>Node.js</strong>
+(or Node in short) executable.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
@@ -648,10 +649,13 @@ there are two Node versions, <strong>LTS</strong> (<strong>Long Term Service</st
 
 <p><img src="/assets/images/2019/nodejs-org.png" alt="The Node Download page" /></p>
 
-<p>The general procedure is to download the package suitable for your
-platform and install it as usual. For GNU/Linux and macOS, it is
-<strong>highly recommended</strong> to <strong>use a version manager</strong> (see below).
-The result is a binary program named <code class="language-plaintext highlighter-rouge">node</code> (that can be used to execute
+<p>For Windows, the general procedure is to download the package
+and install it as usual.</p>
+
+<p>For GNU/Linux and macOS, it is
+<strong>highly recommended</strong> to <strong>use a version manager</strong> (see below).</p>
+
+<p>The result is a binary program named <code class="language-plaintext highlighter-rouge">node</code> (that can be used to execute
 JavaScript code from the terminal), and a symbolic link named <code class="language-plaintext highlighter-rouge">npm</code>, pointing to
 the <code class="language-plaintext highlighter-rouge">npm-cli.js</code> script, which is part of the Node module that implements
 the npm functionality (on Windows, where symbolic links are problematic,
