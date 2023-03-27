@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack prerequisites" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-03-27T04:20:05+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack prerequisites","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"url":"https://xpack.github.io/install/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-03-27T04:42:20+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack prerequisites","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"url":"https://xpack.github.io/install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -643,7 +643,7 @@ for each supported platform are available in the next section.</p>
 
 <p>If this is your first encounter with <strong>npm</strong>, you need to install the
 <a href="https://nodejs.org">Node.js</a> ECMAScript (JavaScript) run-time. The process is
-straightforward and does not pollute the system locations significantly;
+straightforward and does not pollute the system locations;
 there are two Node versions, <strong>LTS</strong> (<strong>Long Term Service</strong>) and
 <strong>Current</strong>; generally it is safer to use <strong>LTS</strong>, especially on Windows.</p>
 
@@ -814,17 +814,28 @@ Node.js/npm in the home folder, using a version manager.</div>
 
 <h2 id="tldr">TL;DR</h2>
 
-<p>If you prefer a shortcut, copy/paste the following
-<a href="https://github.com/xpack/assets/blob/master/scripts/install-nvm-node-npm-xpm.sh">script</a> into a terminal:</p>
+<p>If you know what you’re doing and prefer a shortcut, copy/paste the following
+<a href="https://github.com/xpack/assets/blob/master/scripts/install-nvm-node-npm-xpm.sh">script</a>
+into a terminal (otherwise perform the steps one by one).</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-o-</span> https://raw.githubusercontent.com/xpack/assets/master/scripts/install-nvm-node-npm-xpm.sh | bash
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> For security reasons, conscientious users
+should first check the content of the file before executing it.</div>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-pv</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Downloads/"</span>
+curl <span class="nt">--output</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Downloads/install-nvm-node-npm-xpm.sh"</span> https://raw.githubusercontent.com/xpack/assets/master/scripts/install-nvm-node-npm-xpm.sh
+<span class="nb">cat</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Downloads/install-nvm-node-npm-xpm.sh"</span>
+
+bash <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Download/install-nvm-node-npm-xpm.sh"</span>
 
 <span class="nb">exit</span>
 </code></pre></div></div>
 
-<p>This script will install nvm (the Node Version Manager), node,
-npm and xpm. To activate nvm automatically, it adds several lines
-to the shell initialisation script.</p>
+<p>This script will install <code class="language-plaintext highlighter-rouge">nvm</code> (the Node Version Manager), <code class="language-plaintext highlighter-rouge">node</code>,
+<code class="language-plaintext highlighter-rouge">npm</code> and <code class="language-plaintext highlighter-rouge">xpm</code>.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> To activate <code class="language-plaintext highlighter-rouge">nvm</code> automatically,
+the script adds several lines
+to the shell initialisation script.</div>
 
 <h2 id="command-line-tools">Command Line Tools</h2>
 
@@ -1034,17 +1045,28 @@ Node.js/npm in the home folder, using a version manager.</div>
 
 <h2 id="tldr">TL;DR</h2>
 
-<p>If you prefer a shortcut, copy/paste the following
-<a href="https://github.com/xpack/assets/blob/master/scripts/install-nvm-node-npm-xpm.sh">script</a> into a terminal:</p>
+<p>If you know what you’re doing and prefer a shortcut, copy/paste the following
+<a href="https://github.com/xpack/assets/blob/master/scripts/install-nvm-node-npm-xpm.sh">script</a>
+into a terminal (otherwise perform the steps one by one).</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-o-</span> https://raw.githubusercontent.com/xpack/assets/master/scripts/install-nvm-node-npm-xpm.sh | bash
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> For security reasons, conscientious users
+should first check the content of the file before executing it.</div>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-pv</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Downloads/"</span>
+curl <span class="nt">--output</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Downloads/install-nvm-node-npm-xpm.sh"</span> https://raw.githubusercontent.com/xpack/assets/master/scripts/install-nvm-node-npm-xpm.sh
+<span class="nb">cat</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Downloads/install-nvm-node-npm-xpm.sh"</span>
+
+bash <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Download/install-nvm-node-npm-xpm.sh"</span>
 
 <span class="nb">exit</span>
 </code></pre></div></div>
 
-<p>This script will install nvm (the Node Version Manager), node,
-npm and xpm. To activate nvm automatically, it adds several lines
-to the shell initialisation script.</p>
+<p>This script will install <code class="language-plaintext highlighter-rouge">nvm</code> (the Node Version Manager), <code class="language-plaintext highlighter-rouge">node</code>,
+<code class="language-plaintext highlighter-rouge">npm</code> and <code class="language-plaintext highlighter-rouge">xpm</code>.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> To activate <code class="language-plaintext highlighter-rouge">nvm</code> automatically,
+the script adds several lines
+to the shell initialisation script.</div>
 
 <div class="bs-callout bs-callout-">Arm platforms, like the Raspberry Pi,
 are supported, currently in both 32/64-bit variants.</div>
