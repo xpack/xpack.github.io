@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="The xPack Build Box" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-03-28T11:19:53+00:00","datePublished":"2016-03-09T09:04:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"The xPack Build Box","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/"},"url":"https://xpack.github.io/xbb/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-03-28T16:48:30+00:00","datePublished":"2016-03-09T09:04:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"The xPack Build Box","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/"},"url":"https://xpack.github.io/xbb/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -572,9 +572,15 @@ xpm <span class="nb">link</span> <span class="nt">-C</span> ~/Work/xpacks/xbb-he
 
 <p>The result is a link like:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">ls</span> <span class="nt">-lA</span> .local/xPacks/@xpack-dev-tools/xbb-helper/.link
-<span class="gp">lrwxrwxrwx 1 ilg ilg 42 Mar 27 17:16 .local/xPacks/@xpack-dev-tools/xbb-helper/.link -&gt;</span><span class="w"> </span>/home/ilg/Work/xpacks/xbb-helper-xpack.git
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">ls</span> <span class="nt">-lA</span> ~/.local/xPacks/@xpack-dev-tools/xbb-helper
+<span class="go">total 4
+dr-xr-xr-x 14 ilg ilg 4096 Mar 24 17:38 1.4.7
+</span><span class="gp">lrwxrwxrwx  1 ilg ilg   42 Mar 27 17:16 .link -&gt;</span><span class="w"> </span>/home/ilg/Work/xpacks/xbb-helper-xpack.git
 </code></pre></div></div>
+
+<p>In other words, in the folder where versioned releases are installed,
+a special hidden symbolic link is created, pointing to the location where
+the repo was cloned.</p>
 
 <p>In the second step, a link from the build project to the central store
 is created.</p>
@@ -585,12 +591,18 @@ is created.</p>
 <p>The result is a link like:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> ~/Work/xpacks/&lt;project&gt;-xpack.git
-<span class="gp">$</span><span class="w"> </span><span class="nb">ls</span> <span class="nt">-l</span> xpacks/xpack-dev-tools-xbb-helper
-<span class="gp">lrwxrwxrwx 1 ilg ilg 57 Mar 27 17:21 xpacks/xpack-dev-tools-xbb-helper -&gt;</span><span class="w"> </span>/home/ilg/.local/xPacks/@xpack-dev-tools/xbb-helper/.link
+<span class="gp">$</span><span class="w"> </span><span class="nb">ls</span> <span class="nt">-l</span> xpacks/
+<span class="go">total 0
+</span><span class="gp">lrwxrwxrwx 1 ilg ilg 57 Mar 27 17:21 xpack-dev-tools-xbb-helper -&gt;</span><span class="w"> </span>/home/ilg/.local/xPacks/@xpack-dev-tools/xbb-helper/.link
 </code></pre></div></div>
 
-<p>This double link mechanism allows multiple projects to use the writable
-folder where the helper was cloned (<code class="language-plaintext highlighter-rouge">xbb-helper-xpack.git</code>).</p>
+<p>In other words, the <code class="language-plaintext highlighter-rouge">xpack-dev-tools-xbb-helper</code> link, instead of pointing
+to a version, like <code class="language-plaintext highlighter-rouge">/home/ilg/.local/xPacks/@xpack-dev-tools/xbb-helper/1.4.7</code>,
+now points to the <code class="language-plaintext highlighter-rouge">.link</code>, which points to the cloned repo.</p>
+
+<p>This double link mechanism allows multiple projects to refer to the writable
+folder, and allow this folder to be easily moved to another location
+without having to update all projects that reference it.</p>
 
 <p>For details on the actual usage, please check the
 build projects.</p>
