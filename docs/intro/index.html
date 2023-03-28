@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack 101" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-03-28T10:49:33+00:00","datePublished":"2019-06-26T05:57:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"xPack 101","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/intro/"},"url":"https://xpack.github.io/intro/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-03-28T11:19:53+00:00","datePublished":"2019-06-26T05:57:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"xPack 101","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/intro/"},"url":"https://xpack.github.io/intro/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -685,6 +685,16 @@ versions, down to the individual library. However, by design, it uses
 links to files, which are not available (or are not reliable) on Windows,
 thus Nix is currently available only on GNU/Linux and macOS.
 Plus that the Nix language requires quite some efforts to master.</p>
+
+<h2 id="why-could-npm-not-be-used-as-is-and-why-exactly-was-it-necessary-to-invent-xpm">Why could npm not be used as-is and why exactly was it necessary to invent xpm?</h2>
+
+<p>Because each package manager implements a strategy for managing dependencies.
+npm/yarn/pnpm all implement various strategies specific to ECMAScript
+dependencies.</p>
+
+<p>Unfortunately these strategies do not work for other languages, like C/C++;
+plus that it would be very difficult and require ugly hacks to accommodate
+development dependencies to binary archives (for tools like compilers).</p>
 
 <h2 id="why-bother-to-manage-versions-when-auto-configure-can-sort-out-the-differences">Why bother to manage versions when auto-configure can sort out the differences?</h2>
 
