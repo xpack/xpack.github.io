@@ -220,7 +220,4 @@ bundle exec htmlproofer --allow-hash-href --url-swap \^/web-preview/\:/ --url-ig
 bundle exec htmlproofer --allow-hash-href ./_site_local
 
 bundle exec htmlproofer --allow-hash-href --http_status_ignore=429 ./_site_local
-
-# No longer needed, done automatically by last_modified_at.
-bash scripts/adjust-timestamps.sh
 ```
