@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack prerequisites" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-04-22T05:47:47+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack prerequisites","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"url":"https://xpack.github.io/install/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-05-17T17:38:11+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack prerequisites","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"url":"https://xpack.github.io/install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -638,7 +638,7 @@ some dependencies require new features. Detailed instructions
 for each supported platform are available in the next section.</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>node <span class="nt">--version</span>
-<span class="go">v16.14.2
+<span class="go">v18.16.0
 </span></code></pre></div></div>
 
 <p>If this is your first encounter with <strong>npm</strong>, you need to install the
@@ -682,7 +682,7 @@ system path since it includes the <code class="language-plaintext highlighter-ro
 <pre><code class="language-doscon">C:\&gt;where node.exe
 C:\Program Files\nodejs\node.exe
 C:\&gt;node --version
-v16.14.2
+v18.16.0
 </code></pre>
 
 <h2 id="npm-update"><code class="language-plaintext highlighter-rouge">npm</code> update</h2>
@@ -692,16 +692,16 @@ v16.14.2
 <pre><code class="language-doscon">C:\&gt;where npm.cmd
 C:\Program Files\nodejs\npm.cmd
 C:\&gt;npm --version
-16.14.2
+9.6.0
 </code></pre>
 
 <p>It is recommended to update it to the latest version:</p>
 
 <pre><code class="language-doscon">C:\&gt;npm install --global npm@latest
-C:\Users\ilg\AppData\Roaming\npm\npm -&gt; C:\Users\ilg\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
-C:\Users\ilg\AppData\Roaming\npm\npx -&gt; C:\Users\ilg\AppData\Roaming\npm\node_modules\npm\bin\npx-cli.js
-+ npm@8.6.0
-added 435 packages from 816 contributors in 72.64s
+removed 1 package, and changed 60 packages in 5s
+
+27 packages are looking for funding
+  run `npm fund` for details
 </code></pre>
 
 <p>Surprisingly, checking the version usually shows the old version:</p>
@@ -709,7 +709,7 @@ added 435 packages from 816 contributors in 72.64s
 <pre><code class="language-doscon">C:\&gt;where npm.cmd
 C:\Program Files\nodejs\npm.cmd
 C:\&gt;npm --version
-16.14.2
+9.6.0
 </code></pre>
 
 <p>This is because on Windows, by default, global node packages are
@@ -741,7 +741,7 @@ the syntax to match their specifics.</div>
 <p>After this, the new version of the program should be visible:</p>
 
 <pre><code class="language-doscon">C:\&gt;npm --version
-8.6.0
+9.6.6
 </code></pre>
 
 <h2 id="git">Git</h2>
@@ -1299,7 +1299,7 @@ builds, or to build it from sources; for more details see the
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2023 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Apr 22, 2023<br/> Site last generated: Apr 22, 2023 <br />
+<span>Page last updated:</span> May 17, 2023<br/> Site last generated: May 17, 2023 <br />
                 </div>
             </div>
 </footer>
