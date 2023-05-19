@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="The xPack Reproducible Build Framework" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-05-17T17:38:11+00:00","datePublished":"2019-06-20T20:11:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"The xPack Reproducible Build Framework","name":"xpack.github.io","url":"https://xpack.github.io/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-05-19T07:37:53+00:00","datePublished":"2019-06-20T20:11:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"The xPack Reproducible Build Framework","name":"xpack.github.io","url":"https://xpack.github.io/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -497,6 +497,22 @@
       
   
   <li>
+      <a title="Eclipse" href="#">Eclipse</a>
+      <ul>
+          
+          
+          
+          <li><a class="extern" title="Eclipse Embedded CDT" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
       <a title="Support" href="#">Support</a>
       <ul>
           
@@ -751,7 +767,20 @@ published as separated GitHub <em>organisations</em>
 <h2 id="visual-studio-code">Visual Studio Code</h2>
 
 <p>Support for VS Code is provided via the
-<a href="/vscode/">xPack extension</a>.</p>
+<a href="/vscode/">xPack extension</a>. This extension allows to
+navigate through the project <strong>xPack actions</strong>, and run them with a click of
+the mouse; it can also create new projects using the
+<strong>xPack project templates</strong>.</p>
+
+<h2 id="eclipse">Eclipse</h2>
+
+<p><a href="https://eclipse-embed-cdt.github.io">Eclipse Embedded CDT</a>
+can be configured to use the
+<a href="https://github.com/xpack-dev-tools/">xPack binary tools</a> during <strong>builds</strong>
+(the Arm &amp; RISC-V embedded toolchains) and during the <strong>debug sessions</strong>
+(OpenOCD and QEMU);
+it also uses some <strong>xPack project templates</strong> to create Eclipse
+<a href="https://eclipse-embed-cdt.github.io/templates/hello-world-qemu-xpack/">projects</a>.</p>
 
 <h2 id="source-xpacks">Source xPacks</h2>
 
@@ -760,55 +789,55 @@ published as separated GitHub <em>organisations</em>
 <p>Packages part of the µOS++ framework:</p>
 
 <ul>
-  <li><a href="https://github.com/micro-os-plus/architecture-aarch32-xpack/">@micro-os-plus/architecture-aarch32</a>
+  <li><a href="https://github.com/micro-os-plus/architecture-aarch32-xpack/">@micro-os-plus/architecture-aarch32</a> -
 A source xPack with the µOS++ AArch32 architecture port</li>
-  <li><a href="https://github.com/micro-os-plus/architecture-aarch64-xpack/">@micro-os-plus/architecture-aarch64</a>
+  <li><a href="https://github.com/micro-os-plus/architecture-aarch64-xpack/">@micro-os-plus/architecture-aarch64</a> -
 A source xPack with the µOS++ AArch64 architecture port</li>
-  <li><a href="https://github.com/micro-os-plus/architecture-cortexm-xpack/">@micro-os-plus/architecture-cortexm</a>
+  <li><a href="https://github.com/micro-os-plus/architecture-cortexm-xpack/">@micro-os-plus/architecture-cortexm</a> -
 A source xPack with the µOS++ Arm Cortex-M architecture port</li>
-  <li><a href="https://github.com/micro-os-plus/architecture-riscv-xpack/">@micro-os-plus/architecture-riscv</a>
+  <li><a href="https://github.com/micro-os-plus/architecture-riscv-xpack/">@micro-os-plus/architecture-riscv</a> -
 A source xPack with the µOS++ RISC-V architecture port</li>
-  <li><a href="https://github.com/micro-os-plus/architecture-synthetic-posix-xpack/">@micro-os-plus/architecture-synthetic-posix</a>
+  <li><a href="https://github.com/micro-os-plus/architecture-synthetic-posix-xpack/">@micro-os-plus/architecture-synthetic-posix</a> -
 A source xPack with the µOS++ synthetic POSIX architecture port</li>
-  <li><a href="https://github.com/micro-os-plus/build-helper-xpack/">@micro-os-plus/build-helper</a>
+  <li><a href="https://github.com/micro-os-plus/build-helper-xpack/">@micro-os-plus/build-helper</a> -
 A source xPack to assist the µOS++ builds</li>
-  <li><a href="https://github.com/micro-os-plus/cmsis-os-xpack/">@micro-os-plus/cmsis-os</a>
+  <li><a href="https://github.com/micro-os-plus/cmsis-os-xpack/">@micro-os-plus/cmsis-os</a> -
 A source xPack with the µOS++ CMSIS RTOS compatibility layer</li>
-  <li><a href="https://github.com/micro-os-plus/devices-qemu-aarch32-xpack/">@micro-os-plus/devices-qemu-aarch32</a>
+  <li><a href="https://github.com/micro-os-plus/devices-qemu-aarch32-xpack/">@micro-os-plus/devices-qemu-aarch32</a> -
 A source xPack with µOS++ QEMU AArch32 devices files</li>
-  <li><a href="https://github.com/micro-os-plus/devices-qemu-aarch64-xpack/">@micro-os-plus/devices-qemu-aarch64</a>
+  <li><a href="https://github.com/micro-os-plus/devices-qemu-aarch64-xpack/">@micro-os-plus/devices-qemu-aarch64</a> -
 A source xPack with µOS++ QEMU AArch64 devices files</li>
-  <li><a href="https://github.com/micro-os-plus/devices-qemu-cortexm-xpack/">@micro-os-plus/devices-qemu-cortexm</a>
+  <li><a href="https://github.com/micro-os-plus/devices-qemu-cortexm-xpack/">@micro-os-plus/devices-qemu-cortexm</a> -
 A source xPack with µOS++ QEMU Cortex-M devices files</li>
-  <li><a href="https://github.com/micro-os-plus/devices-qemu-riscv-xpack/">@micro-os-plus/devices-qemu-riscv</a>
+  <li><a href="https://github.com/micro-os-plus/devices-qemu-riscv-xpack/">@micro-os-plus/devices-qemu-riscv</a> -
 A source xPack with µOS++ QEMU RISC-V devices files</li>
-  <li><a href="https://github.com/micro-os-plus/devices-stm32f0-extras-xpack/">@micro-os-plus/devices-stm32f0-extras</a>
+  <li><a href="https://github.com/micro-os-plus/devices-stm32f0-extras-xpack/">@micro-os-plus/devices-stm32f0-extras</a> -
 A source xPack with µOS++ complementary STM32F0 files</li>
-  <li><a href="https://github.com/micro-os-plus/devices-stm32f4-extras-xpack/">@micro-os-plus/devices-stm32f4-extras</a>
+  <li><a href="https://github.com/micro-os-plus/devices-stm32f4-extras-xpack/">@micro-os-plus/devices-stm32f4-extras</a> -
 A source xPack with µOS++ complementary STM32F4 files</li>
-  <li><a href="https://github.com/micro-os-plus/diag-trace-xpack/">@micro-os-plus/diag-trace</a>
+  <li><a href="https://github.com/micro-os-plus/diag-trace-xpack/">@micro-os-plus/diag-trace</a> -
 A source xPack with the µOS++ trace::printf() tracing infrastructure</li>
-  <li><a href="https://github.com/micro-os-plus/libs-c-xpack/">@micro-os-plus/libs-c</a>
+  <li><a href="https://github.com/micro-os-plus/libs-c-xpack/">@micro-os-plus/libs-c</a> -
 A source xPack with µOS++ complementary C library functions</li>
-  <li><a href="https://github.com/micro-os-plus/libs-cpp-xpack/">@micro-os-plus/libs-cpp</a>
+  <li><a href="https://github.com/micro-os-plus/libs-cpp-xpack/">@micro-os-plus/libs-cpp</a> -
 A source xPack with complementary C++ library functions</li>
-  <li><a href="https://github.com/micro-os-plus/libs-cpp-estd-xpack/">@micro-os-plus/libs-cpp-estd</a>
+  <li><a href="https://github.com/micro-os-plus/libs-cpp-estd-xpack/">@micro-os-plus/libs-cpp-estd</a> -
 A source xPack with µOS++ embedded std:: support</li>
-  <li><a href="https://github.com/micro-os-plus/memory-allocators-xpack/">@micro-os-plus/memory-allocators</a>
+  <li><a href="https://github.com/micro-os-plus/memory-allocators-xpack/">@micro-os-plus/memory-allocators</a> -
 A source xPack with µOS++ memory allocators</li>
-  <li><a href="https://github.com/micro-os-plus/micro-test-plus/">@micro-os-plus/micro-test-plus</a>
+  <li><a href="https://github.com/micro-os-plus/micro-test-plus/">@micro-os-plus/micro-test-plus</a> -
 A source xPack with µTest++ testing framework</li>
-  <li><a href="https://github.com/micro-os-plus/posix-io-xpack/">@micro-os-plus/posix-io</a>
+  <li><a href="https://github.com/micro-os-plus/posix-io-xpack/">@micro-os-plus/posix-io</a> -
 A source xPack with POSIX I/O</li>
-  <li><a href="https://github.com/micro-os-plus/rtos-xpack/">@micro-os-plus/rtos</a>
+  <li><a href="https://github.com/micro-os-plus/rtos-xpack/">@micro-os-plus/rtos</a> -
 A source xPack with the µOS++ RTOS</li>
-  <li><a href="https://github.com/micro-os-plus/semihosting-xpack/">@micro-os-plus/semihosting</a>
+  <li><a href="https://github.com/micro-os-plus/semihosting-xpack/">@micro-os-plus/semihosting</a> -
 A source xPack with the portable semihosting definitions</li>
-  <li><a href="https://github.com/micro-os-plus/startup-xpack/">@micro-os-plus/startup</a>
+  <li><a href="https://github.com/micro-os-plus/startup-xpack/">@micro-os-plus/startup</a> -
 A source xPack with the µOS++ startup code for bare-metal platforms</li>
-  <li><a href="https://github.com/micro-os-plus/utils-lists-xpack/">@micro-os-plus/utils-lists</a>
+  <li><a href="https://github.com/micro-os-plus/utils-lists-xpack/">@micro-os-plus/utils-lists</a> -
 A source xPack with C++ lists support for µOS++</li>
-  <li><a href="https://github.com/micro-os-plus/version-xpack/">@micro-os-plus/version</a>
+  <li><a href="https://github.com/micro-os-plus/version-xpack/">@micro-os-plus/version</a> -
 A source xPack with the µOS++ version definitions</li>
 </ul>
 
@@ -817,13 +846,13 @@ A source xPack with the µOS++ version definitions</li>
 <p>Packages with 3rd party content:</p>
 
 <ul>
-  <li><a href="https://github.com/xpack-3rd-party/arm-cmsis-core/">@xpack-3rd-party/arm-cmsis-core</a>
+  <li><a href="https://github.com/xpack-3rd-party/arm-cmsis-core/">@xpack-3rd-party/arm-cmsis-core</a> -
 A source xPack with Arm CMSIS Core-M and Core-A files</li>
-  <li><a href="https://github.com/xpack-3rd-party/boost-ut/">@xpack-3rd-party/boost-ut</a>
+  <li><a href="https://github.com/xpack-3rd-party/boost-ut/">@xpack-3rd-party/boost-ut</a> -
 A source xPack with Boost-UT files</li>
-  <li><a href="https://github.com/xpack-3rd-party/catch2/">@xpack-3rd-party/catch2</a>
+  <li><a href="https://github.com/xpack-3rd-party/catch2/">@xpack-3rd-party/catch2</a> -
 A source xPack with Catch2 files</li>
-  <li><a href="https://github.com/xpack-3rd-party/googletest/">@xpack-3rd-party/googletest</a>
+  <li><a href="https://github.com/xpack-3rd-party/googletest/">@xpack-3rd-party/googletest</a> -
 A source xPack with Google Test files</li>
 </ul>
 
@@ -864,7 +893,7 @@ are provided <strong>free of charge</strong> under the terms of the
 
 <p>Special thanks to <strong>MacStadium</strong>, for providing the Apple Silicon
 development infrastructure as part of their
-<a href="https://www.macstadium.com/opensource">Open Source Program</a>.</p>
+<a href="https://www.macstadium.com/opensource/members">Open Source Program</a>.</p>
 
 <h2 id="let-us-know-if-you-enjoyed-using-this-project">Let us know if you enjoyed using this project</h2>
 
@@ -904,7 +933,7 @@ to get notifications on new releases.</li>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2023 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> May 17, 2023<br/> Site last generated: May 17, 2023 <br />
+<span>Page last updated:</span> May 19, 2023<br/> Site last generated: May 19, 2023 <br />
                 </div>
             </div>
 </footer>
