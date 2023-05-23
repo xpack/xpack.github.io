@@ -502,7 +502,7 @@
 "tags": "",
 "keywords": "xPackpackagemanager",
 "url": "/xpm/",
-"summary": "<p>A tool to orchestrate builds and manage dependencies for language neutral, multi-version projects, inspired by npm.</p>"
+"summary": "<p>A tool to automate builds and manage dependencies for language neutral, multi-version projects, inspired by npm.</p>"
 }
 ,
 
@@ -2062,6 +2062,17 @@
 "title": "",
 "tags": "",
 "keywords": "",
+"url": "/blog/2023/03/19/xpm-v0-15-1-released/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
 "url": "/arm-none-eabi-gcc/faq/",
 "summary": ""
 }
@@ -2952,10 +2963,20 @@
 
 
 {
+"title": "xPack xpm v0.15.2 released",
+"tags": "releasesxpmpackagemanager",
+"keywords": "",
+"url": "/blog/2023/05/23/xpm-v0-15-2-released/",
+"summary": "<p>Version <strong>0.15.2</strong> is a maintenance release, it fixes some small bugs.</p>"
+}
+,
+
+
+{
 "title": "xPack xpm v0.15.1 released",
 "tags": "releasesxpmpackagemanager",
 "keywords": "",
-"url": "/blog/2023/03/19/xpm-v0-15-1-released/",
+"url": "/blog/2023/05/19/xpm-v0-15-1-released/",
 "summary": "<p>Version <strong>0.15.1</strong> is a maintenance release, it fixes some Windows specific bugs.</p>"
 }
 ,
