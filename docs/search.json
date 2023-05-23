@@ -20,8 +20,6 @@
 
 
 
-
-
 {
 "title": "About",
 "tags": "",
@@ -30,6 +28,8 @@
 "summary": "<p>Perfekt ist nicht gut genug.</p>"
 }
 ,
+
+
 
 
 
@@ -409,6 +409,17 @@
 
 
 
+
+
+
+{
+"title": "Project History",
+"tags": "",
+"keywords": "",
+"url": "/project/history/",
+"summary": ""
+}
+,
 
 
 
@@ -2063,6 +2074,17 @@
 "tags": "",
 "keywords": "",
 "url": "/blog/2023/03/19/xpm-v0-15-1-released/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "/about/",
 "summary": ""
 }
 ,

@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Project History | The xPack Build Framework</title>
+<link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
+
+
+<link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
+<link type="application/rss+xml" rel="alternate" title="xpack.github.io" href="https://xpack.github.io/feed.xml">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Project History | xpack.github.io</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Project History" />
+<meta name="author" content="Liviu Ionescu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<meta property="og:description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<link rel="canonical" href="https://xpack.github.io/project/history/" />
+<meta property="og:url" content="https://xpack.github.io/project/history/" />
+<meta property="og:site_name" content="xpack.github.io" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-05-20T03:22:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Project History" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-05-23T11:12:41+00:00","datePublished":"2023-05-20T03:22:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"Project History","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/project/history/"},"url":"https://xpack.github.io/project/history/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?202211092358">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://xpack.github.io/css/customstyles.css?202211092358">
+<link rel="stylesheet" href="https://xpack.github.io/css/boxshadowproperties.css?202211092358">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="https://xpack.github.io/css/theme-blue.css?202211092358">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://xpack.github.io/js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="https://xpack.github.io/js/toc.js"></script>
+<script src="https://xpack.github.io/js/customscripts.js"></script>
+
+<!-- Use absolute URLs, to cover preview cases too -->
+<link rel="shortcut icon" href="https://xpack.github.io/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="https://xpack.github.io/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://xpack.github.io/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://xpack.github.io/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://xpack.github.io/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://xpack.github.io/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://xpack.github.io/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://xpack.github.io/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://xpack.github.io/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://xpack.github.io/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://xpack.github.io/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://xpack.github.io/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://xpack.github.io/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://xpack.github.io/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://xpack.github.io/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://xpack.github.io/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks" style="">
+        <div style="display: inline-block; float: left; margin-top: 8px; margin-left: auto; margin-right: 10px;"><img src="/images/company_logo.png" alt="logo" width="32px" height="32px"/></div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="/">&nbsp;<span class="projectTitle"> The xPack Project</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">News<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="/news/">Latest News</a></li>
+                        
+                        
+                        
+                        <li><a href="/news/archive/">Archive</a></li>
+                        
+                        
+                        
+                        <li><a href="/tags/">Tags</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://micro-os-plus.github.io" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Dev Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/micro-os-plus/" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-3rd-party/" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/eclipse-embed-cdt/" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '/search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Project History">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3 sticky" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle"> </li>
+  
+  
+  
+  <li>
+      <a title="Getting Started" href="#">Getting Started</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Intro (xPack 101)" href="/intro/">Intro (xPack 101)</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Install prerequisites" href="/install/">Install prerequisites</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Core Tools" href="#">Core Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/core/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm" href="/xpm/">xpm</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="3rd Party Tools" href="#">3rd Party Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/dev-tools/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="aarch64-none-elf-gcc" href="/dev-tools/aarch64-none-elf-gcc/">aarch64-none-elf-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="arm-none-eabi-gcc" href="/dev-tools/arm-none-eabi-gcc/">arm-none-eabi-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="clang" href="/dev-tools/clang/">clang</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="cmake" href="/dev-tools/cmake/">cmake</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="gcc" href="/dev-tools/gcc/">gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="meson-build" href="/dev-tools/meson-build/">meson-build</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="mingw-w64-gcc" href="/dev-tools/mingw-w64-gcc/">mingw-w64-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="ninja-build" href="/dev-tools/ninja-build/">ninja-build</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="openocd" href="/dev-tools/openocd/">openocd</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="qemu-arm" href="/dev-tools/qemu-arm/">qemu-arm</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="qemu-riscv" href="/dev-tools/qemu-riscv/">qemu-riscv</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="riscv-none-elf-gcc" href="/dev-tools/riscv-none-elf-gcc/">riscv-none-elf-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="windows-build-tools" href="/dev-tools/windows-build-tools/">windows-build-tools</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Other 3rd Party Tools" href="#">Other 3rd Party Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="m4" href="/dev-tools/m4/">m4</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="patchelf" href="/dev-tools/patchelf/">patchelf</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="pkg-config" href="/dev-tools/pkg-config/">pkg-config</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="realpath" href="/dev-tools/realpath/">realpath</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="sed" href="/dev-tools/sed/">sed</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="wine" href="/dev-tools/wine/">wine</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="VS Code Extensions" href="#">VS Code Extensions</a>
+      <ul>
+          
+          
+          
+          <li><a title="xPack C/C++ Build Tools" href="/vscode/">xPack C/C++ Build Tools</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Eclipse" href="#">Eclipse</a>
+      <ul>
+          
+          
+          
+          <li><a class="extern" title="Eclipse Embedded CDT" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Support" href="#">Support</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/support/">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Developer Info" href="#">Developer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/develop/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="How to create a new xPack repo" href="/develop/how-to-new-git/">How to create a new xPack repo</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="JavaScript Style Guide" href="/develop/js-style-guide/">JavaScript Style Guide</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Links" href="/develop/links/">Links</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Maintainer Info" href="#">Maintainer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/maintain/">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Project" href="#">Project</a>
+      <ul>
+          
+          
+          
+          <li><a title="About" href="/project/about/">About</a></li>
+          
+          
+          
+          
+          
+          
+          <li class="active"><a title="History" href="/project/history/">History</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a class="extern" title="License (MIT)" href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">License (MIT)</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise, if placed
+inside customscripts.js, the script runs before the sidebar code runs
+and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">Project History</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+        
+
+
+   <h2 id="the-early-years-and-the-tight-relation-with-µos">The early years and the tight relation with µOS++</h2>
+
+<p>The history of the xPack project was deeply intertwined with
+<a href="http://micro-os-plus.github.io/project/history/">the history of µOS++</a>
+as it was initially intended to automate building and running
+multi-platform unit tests for <a href="http://micro-os-plus.github.io">µOS++</a>.</p>
+
+<p>To avoid redundancy, the text will not be replicated here, so please
+read <a href="http://micro-os-plus.github.io/project/history/">the history of µOS++</a>
+from there; here only some of the important event will be listed
+briefly:</p>
+
+<ul>
+  <li><a href="http://ecos.sourceware.org/docs-1.3.1/cdl/language.html">eCos CDL</a>
+was the inspiration for a component based design</li>
+  <li>GNU ARM Eclipse plug-ins (later rebranded as the
+<a href="https://eclipse-embed-cdt.github.io">Eclipse Embedded CDT</a>)
+was the first attempt to avoid generating make files
+by hand, but this prevented building and running unit tests in a
+scriptable environment</li>
+  <li>the experimental <a href="http://xcdl.github.io">XCDL</a>
+(eXtended Components Definition Language) project, inspired by
+eCos CDL, but implemented in Python, validated the concept</li>
+  <li>the major weakness was the limitation introduced by
+having the build configuration metadata as a Python code:
+it could be edited only manually, and not via a GUI based
+IDE (compared, for example, to the C/C++ settings in Eclipse CDT,
+which writes back the XML configuration file)</li>
+  <li>the CMSIS Packs solution was evaluated, and an Eclipse plug-in was
+created to manage them, but the solution was later found to have
+too many design issues, and was abandoned</li>
+  <li>the <a href="https://github.com/ARMmbed/yotta">yotta</a> solution was considered,
+and in late 2015 the first XCDL packs format based on yotta was tested;
+unfortunately yotta was later abandoned by Arm</li>
+  <li>in 2017 the first release of <strong>xpm</strong> was available, and packages
+managed by it were named <strong>xPacks</strong>; <strong>xpm</strong> complements
+<a href="https://en.wikipedia.org/wiki/Npm_(software)">npm</a> as the industry
+standard package manager for JavaScript packages, and uses the same
+<a href="https://www.npmjs.com">npmjs.com</a> as the hugely popular public
+package repository</li>
+  <li><strong>xpm</strong> was extended to also support
+installing binary packages, and a new class of tools was created as
+<a href="https://github.com/xpack-dev-tools/">xPack 3rd Party Development Tools</a></li>
+  <li><strong>xpm</strong> was used to build the binary packages; this proved that
+<strong>the technology is standalone</strong> with the newer versions of the tools
+being built with existing xPacks</li>
+  <li>with most of the tools in place, a first C/C++ project
+(<a href="https://github.com/micro-os-plus/utils-lists-xpack/">@micro-os-plus/utils-lists</a>)
+was fully tested via <strong>xpm</strong>, validating again the whole concept</li>
+</ul>
+
+<h2 id="the-xpack-project-goals">The xPack project goals</h2>
+
+<p>The project came to life as a practical need to find a replacement for the
+Eclipse CDT managed build, that can also be used to run unit tests in a
+scriptable environment.</p>
+
+<p>In the beginning it looked easy, but later it proved to be quite a challenge,
+and required defining sub-goals and achieving them in sequence.</p>
+
+<p>By trial and error, the main aspects that need to be
+addressed by such a solution were identified:</p>
+
+<ul>
+  <li>the build (defining which files that enter the build, the compiler/linker
+options, etc)</li>
+  <li>the project configuration (simply said managing the values of the #define
+in a consistent way)</li>
+  <li>the tools (toolchains, debuggers, emulators, etc)</li>
+</ul>
+
+<h3 id="the-xcdl-experimental-version">The XCDL experimental version</h3>
+
+<p>The first experimental solution was <a href="http://xcdl.github.io">XCDL</a>,
+used for µOS++ Second Edition;
+basically something similar to the
+<a href="http://ecos.sourceware.org/docs-1.3.1/cdl/language.html">eCos CDL</a>
+was implemented in Python.</p>
+
+<p>The result looked like this:</p>
+
+<ul>
+  <li>https://github.com/micro-os-plus/micro-os-plus-ii/blob/master/packages/portable/core/meta/xcdl.py</li>
+</ul>
+
+<p>The implementation was quite easy, and worked pretty well.</p>
+
+<p>However several issues were identified:</p>
+
+<ul>
+  <li>using a programming for writing by hand the configuration files was
+convenient, but it had a major drawback: since parsing Python
+is not trivial, it prevented the configuration
+being edited with a GUI tool (similar to the Eclipse settings pages);
+in other words, the configuration
+files must be in a structured format, otherwise editing them by a
+machine is problematic</li>
+  <li>although the µOS++ SE was more or less modular, the project was
+basically a mono-repo, and writing unit tests for each module was
+difficult</li>
+  <li>being able to run unit tests with several toolchains, not to
+mention with different versions of the same toolchain, proved
+extremely difficult, and doing this on multiple platforms
+(macOS, windows, linux) was even more difficult</li>
+</ul>
+
+<p>The lessons learned from this experiment were:</p>
+
+<ul>
+  <li>if a configuration needs to be edited by a machine,
+it must written in a structured format; the favourite format is <strong>JSON</strong></li>
+  <li>if each module is expected to be tested, the preferred solution
+is to use <strong>multiple small repositories</strong>, each with its CI tests</li>
+  <li>if the project is split into multiple packages, a tool to automate
+installing/managing the <strong>dependencies</strong> is needed</li>
+  <li>toolchains and other tools need to be <strong>standalone &amp; relocatable</strong>,
+to allow multiple versions to be installed in different folders
+on the same machine; managing these multiple tools can also be
+automated with a tool</li>
+</ul>
+
+<p>The first binary tools prepared were <strong>arm-none-eabi-gcc</strong>, <strong>openocd</strong>,
+<strong>qemu</strong> and <strong>windows-build-tools</strong>; they were also used in Eclipse project;
+initially they were installed manually, and Eclipse was able to
+identify them in certain fixed location.</p>
+
+<p>While searching for a solution to automate installing different
+source packages, a solution that looked pretty close to the needs
+was <strong>npm</strong>, so most of the concepts were adopted, and the tool
+was extended
+to handle the C/C++ linear dependencies; this is how <strong>xpm</strong> was created.</p>
+
+<p>Later <strong>xpm</strong> was extended to automate installing the toolchains and
+other binary archives.</p>
+
+<p>As of now, there are toolchains for Arm, AArch64, RISC-V and native
+(GCC &amp; clang), that run on Windows, Linux, macOS; it is probably fair
+to say that
+the tools part of the project is covered properly, and fully automated.</p>
+
+<p>As for the build and configuration tools in the project, things are
+work in progress.</p>
+
+<p>For the build, the first idea was to rewrite the initial
+Python code in JavaScript, but later a step by step approach
+was considered.</p>
+
+<p>In the first step the existing build system generators were used,
+like CMake and meson, with several advantages:</p>
+
+<ul>
+  <li>they allow to add tests to the µOS++ projects today, without having
+to wait for any special/future tools</li>
+  <li>get a lot of experience on how to organise projects with such tools</li>
+  <li>provide the users with a way to integrate my source code libraries
+into their existing projects built with CMake/meson.</li>
+</ul>
+
+<p>To manage the multi-platform, multi-architecture, multi-version,
+multi-etc tests, a tool to manage multiple build configurations was needed,
+and since each configuration needs its own tools, with different
+versions, it became clear that the build configurations must be
+managed by the same xpm, so <strong>xpm</strong> was extended to handle multiple
+<strong>build configurations</strong> and <strong>xPack actions</strong> were added, to automate
+running sequences of commands, like cmake or meson, to build
+and run the tests.</p>
+
+<h2 id="future-plans">Future plans</h2>
+
+<p>At this moment (mid 2023), the project is pretty advanced, but
+it is not yet complete.</p>
+
+<p>In the next period all the µOS++ projects will be updated to use
+the multiple build configurations automated by <strong>xpm</strong>, and so
+have everything fully tested in µOS++.</p>
+
+<p>With the experience from this step, the next step is to finalise the
+specs for the tool that will perform the builds and project
+configurations.</p>
+
+<p>The tool will probably be called <code class="language-plaintext highlighter-rouge">xpmake</code>, and it’ll us json files,
+like this one:</p>
+
+<ul>
+  <li><a href="https://github.com/micro-os-plus/utils-lists-xpack/blob/xpack/xpack.json">https://github.com/micro-os-plus/utils-lists-xpack/blob/xpack/xpack.json</a></li>
+</ul>
+
+<p>The file defines the include folders, the source files, and some
+preprocessor definitions that might be enabled while building the project.</p>
+
+<p>This file, together with all other similar files from the packages
+that are part of the project, will provide the input data for a tree
+of ‘components’, that can be rendered in a graphical tool like VS Code,
+and so allow to configure a project in a way even more advanced than
+the Eclipse CDT settings, since the hierarchical components reflect
+the structure of the application, and allow to automatically manage
+dependencies between components, and between configuration options.</p>
+
+<p>A VS Code extension to edit the xpmake tree of components, and run
+the builds directly, without CMake/meson, is planned, and this will
+be a true xPack enabled tool, and will be an alternate solution to
+Eclipse Embedded CDT.</p>
+
+<p>But this tool should be optional, the whole functionality should also be
+available from a terminal and a plain text editor.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>As it can be seen, the xPack project started as a way to automate
+my work, more specifically running multiple tests for embedded
+projects, which are usually more complicated than the projects themselves.</p>
+
+<h3 id="to-be-continued">To be continued</h3>
+
+<p>…</p>
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2023 Liviu Ionescu. All rights reserved. <br />
+<span>Page last updated:</span> May 23, 2023<br/> Site last generated: May 23, 2023 <br />
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8WX9T80JEK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8WX9T80JEK');
+</script>
+
+
+</html>
