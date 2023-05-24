@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Project History" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-05-23T20:16:35+00:00","datePublished":"2023-05-20T03:22:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"Project History","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/project/history/"},"url":"https://xpack.github.io/project/history/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-05-24T10:35:16+00:00","datePublished":"2023-05-20T03:22:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"Project History","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/project/history/"},"url":"https://xpack.github.io/project/history/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -671,51 +671,60 @@ $('#toc').on('click', 'a', function() {
 
    <h2 id="the-early-years-and-the-tight-relation-with-µos">The early years and the tight relation with µOS++</h2>
 
-<p>The history of the xPack project was deeply intertwined with
-<a href="http://micro-os-plus.github.io/project/history/">the history of µOS++</a>
-as it was initially intended to automate building and running
-multi-platform unit tests for <a href="http://micro-os-plus.github.io">µOS++</a>.</p>
+<p>The history of the <strong>xPack</strong> project was deeply intertwined with
+<a href="http://micro-os-plus.github.io/project/history/">the history of µOS++</a>,
+as it was initially intended to <strong>automate building</strong> and running
+<strong>multi-platform unit tests</strong> for <a href="http://micro-os-plus.github.io">µOS++</a>.
+Later it was also used to build the binary xPacks, which validated the
+concept once more.</p>
 
-<p>To avoid redundancy, the text will not be replicated here, so please
+<p>To avoid redundancy, the full story is not replicated here, so please
 read <a href="http://micro-os-plus.github.io/project/history/">the history of µOS++</a>
-from there; here only some of the important event will be listed
-briefly:</p>
+before continuing; the brief list of the important events is:</p>
 
 <ul>
-  <li><a href="http://ecos.sourceware.org/docs-1.3.1/cdl/language.html">eCos CDL</a>
-was the inspiration for a component based design</li>
-  <li>GNU ARM Eclipse plug-ins (later rebranded as the
+  <li>in the early 2000s, the
+<a href="http://ecos.sourceware.org/docs-1.3.1/cdl/language.html">eCos CDL</a>
+was encountered; it was the inspiration for a component based design</li>
+  <li>in 2013, the <strong>GNU ARM Eclipse plug-ins</strong> (later rebranded as the
 <a href="https://eclipse-embed-cdt.github.io">Eclipse Embedded CDT</a>)
-was the first attempt to avoid generating make files
-by hand, but this prevented building and running unit tests in a
-scriptable environment</li>
-  <li>the experimental <a href="http://xcdl.github.io">XCDL</a>
+was the first attempt to find a solution that avoids generating <em>make</em>
+files by hand, but this prevented building and running unit tests in
+a scriptable environment</li>
+  <li>in 2013, the experimental <a href="http://xcdl.github.io">XCDL</a>
 (eXtended Components Definition Language) project, inspired by
-eCos CDL, but implemented in Python, validated the concept</li>
-  <li>the major weakness was the limitation introduced by
+eCos CDL, implemented in Python, validated the concept
+    <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The major weakness of XCDL was the
+limitation introduced by
 having the build configuration metadata as a Python code:
-it could be edited only manually, and not via a GUI based
+<strong>it could be edited only manually</strong>, and not via a GUI based
 IDE (compared, for example, to the C/C++ settings in Eclipse CDT,
-which writes back the XML configuration file)</li>
-  <li>the CMSIS Packs solution was evaluated, and an Eclipse plug-in was
+which writes back the XML configuration file)</div>
+  </li>
+  <li>in 2014, the CMSIS Packs solution was evaluated, and an Eclipse plug-in was
 created to manage them, but the solution was later found to have
 too many design issues, and was abandoned</li>
-  <li>the <a href="https://github.com/ARMmbed/yotta">yotta</a> solution was considered,
-and in late 2015 the first XCDL packs format based on yotta was tested;
-unfortunately yotta was later abandoned by Arm</li>
-  <li>in 2017 the first release of <strong>xpm</strong> was available, and packages
+  <li>in 2015, the <a href="https://github.com/ARMmbed/yotta">yotta</a> solution was
+considered, and the first XCDL packs format based on yotta were tested;
+for various reasons, <strong>yotta</strong> was later abandoned by Arm
+    <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> As yotta was
+strongly influenced by <strong>npm</strong>, the npm ecosystem was considered
+a good starting point for a future solution.</div>
+  </li>
+  <li>in 2017, the first release of <strong>xpm</strong> was available, as a complementary
+solution to <strong>npm</strong>, and packages
 managed by it were named <strong>xPacks</strong>; <strong>xpm</strong> complements
 <a href="https://en.wikipedia.org/wiki/Npm_(software)">npm</a> as the industry
 standard package manager for JavaScript packages, and uses the same
 <a href="https://www.npmjs.com">npmjs.com</a> as the hugely popular public
 package repository</li>
-  <li><strong>xpm</strong> was extended to also support
+  <li>in 2019, <strong>xpm</strong> was extended to also support
 installing binary packages, and a new class of tools was created as
 <a href="https://github.com/xpack-dev-tools/">xPack 3rd Party Development Tools</a></li>
-  <li><strong>xpm</strong> was used to build the binary packages; this proved that
-<strong>the technology is standalone</strong> with the newer versions of the tools
+  <li>in 2022, <strong>xpm</strong> was used to build the binary packages; this proved that
+<strong>the technology is standalone</strong>, with the newer versions of the tools
 being built with existing xPacks</li>
-  <li>with most of the tools in place, a first C/C++ project
+  <li>in 2023, with most of the tools in place, a first C/C++ project
 (<a href="https://github.com/micro-os-plus/utils-lists-xpack/">@micro-os-plus/utils-lists</a>)
 was fully tested via <strong>xpm</strong>, validating again the whole concept</li>
 </ul>
@@ -733,25 +742,25 @@ and required defining sub-goals and achieving them in sequence.</p>
 addressed by such a solution were identified:</p>
 
 <ul>
-  <li>the build (defining which files that enter the build, the compiler/linker
+  <li>the <strong>build</strong> (defining which files that enter the build, the compiler/linker
 options, etc)</li>
-  <li>the project configuration (simply said managing the values of the #define
+  <li>the <strong>project configuration</strong> (simply said managing the values of the #define
 in a consistent way)</li>
-  <li>the tools (toolchains, debuggers, emulators, etc)</li>
+  <li>the <strong>tools</strong> (toolchains, debuggers, emulators, etc)</li>
 </ul>
 
-<h3 id="the-xcdl-experimental-version">The XCDL experimental version</h3>
+<h2 id="the-xcdl-experimental-version">The XCDL experimental version</h2>
 
 <p>The first experimental solution was <a href="http://xcdl.github.io">XCDL</a>,
-used for µOS++ Second Edition;
-basically something similar to the
+which was used in the µOS++ Second Edition;
+basically some of the
 <a href="http://ecos.sourceware.org/docs-1.3.1/cdl/language.html">eCos CDL</a>
-was implemented in Python.</p>
+functionality was implemented in Python.</p>
 
 <p>The result looked like this:</p>
 
 <ul>
-  <li>https://github.com/micro-os-plus/micro-os-plus-ii/blob/master/packages/portable/core/meta/xcdl.py</li>
+  <li><a href="https://github.com/micro-os-plus/micro-os-plus-ii/blob/master/packages/portable/core/meta/xcdl.py">meta/xcdl.py</a></li>
 </ul>
 
 <p>The implementation was quite easy, and worked pretty well.</p>
@@ -759,17 +768,17 @@ was implemented in Python.</p>
 <p>However several issues were identified:</p>
 
 <ul>
-  <li>using a programming for writing by hand the configuration files was
+  <li>using configuration files written in a programming language was
 convenient, but it had a major drawback: since parsing Python
 is not trivial, it prevented the configuration
 being edited with a GUI tool (similar to the Eclipse settings pages);
-in other words, the configuration
-files must be in a structured format, otherwise editing them by a
+in other words, <strong>the configuration
+files must be in a structured format</strong>, otherwise editing them by a
 machine is problematic</li>
   <li>although the µOS++ SE was more or less modular, the project was
-basically a mono-repo, and writing unit tests for each module was
-difficult</li>
-  <li>being able to run unit tests with several toolchains, not to
+basically a <strong>mono-repo</strong>, and <strong>writing unit tests for each module was
+difficult</strong></li>
+  <li>running unit tests with several toolchains, not to
 mention with different versions of the same toolchain, proved
 extremely difficult, and doing this on multiple platforms
 (macOS, windows, linux) was even more difficult</li>
@@ -779,21 +788,26 @@ extremely difficult, and doing this on multiple platforms
 
 <ul>
   <li>if a configuration needs to be edited by a machine,
-it must written in a structured format; the favourite format is <strong>JSON</strong></li>
-  <li>if each module is expected to be tested, the preferred solution
-is to use <strong>multiple small repositories</strong>, each with its CI tests</li>
+it must written in a <strong>structured format</strong>;
+the favourite format is <strong>JSON</strong></li>
+  <li>if each module is expected to be tested, it is better
+to use <strong>multiple small repositories</strong>, each with its CI tests</li>
   <li>if the project is split into multiple packages, a tool to automate
-installing/managing the <strong>dependencies</strong> is needed</li>
+installing/managing the <strong>dependencies</strong> is a great addition</li>
   <li>toolchains and other tools need to be <strong>standalone &amp; relocatable</strong>,
 to allow multiple versions to be installed in different folders
 on the same machine; managing these multiple tools can also be
 automated with a tool</li>
 </ul>
 
+<h2 id="binary-xpacks">Binary xPacks</h2>
+
 <p>The first binary tools prepared were <strong>arm-none-eabi-gcc</strong>, <strong>openocd</strong>,
 <strong>qemu</strong> and <strong>windows-build-tools</strong>; they were also used in Eclipse project;
 initially they were installed manually, and Eclipse was able to
 identify them in certain fixed location.</p>
+
+<h2 id="npmxpm">npm/xpm</h2>
 
 <p>While searching for a solution to automate installing different
 source packages, a solution that looked pretty close to the needs
@@ -809,6 +823,8 @@ other binary archives.</p>
 to say that
 the tools part of the project is covered properly, and fully automated.</p>
 
+<h2 id="build-system-generators">Build system generators</h2>
+
 <p>As for the build and configuration tools in the project, things are
 work in progress.</p>
 
@@ -817,68 +833,79 @@ Python code in JavaScript, but later a step by step approach
 was considered.</p>
 
 <p>In the first step the existing build system generators were used,
-like CMake and meson, with several advantages:</p>
+like <strong>CMake</strong> and <strong>meson</strong>, with several advantages:</p>
 
 <ul>
-  <li>they allow to add tests to the µOS++ projects today, without having
-to wait for any special/future tools</li>
-  <li>get a lot of experience on how to organise projects with such tools</li>
-  <li>provide the users with a way to integrate my source code libraries
+  <li>they allow to add tests to the µOS++ projects immediately,
+without having to wait for any special/future tools</li>
+  <li>they are a good chance to get a lot of experience on how to organise
+projects with such tools</li>
+  <li>they provide the users a direct way to integrate the µOS++
+source code libraries
 into their existing projects built with CMake/meson.</li>
 </ul>
 
 <p>To manage the multi-platform, multi-architecture, multi-version,
-multi-etc tests, a tool to manage multiple build configurations was needed,
+multi-etc tests, a tool to manage <strong>multiple build configurations</strong>
+was needed,
 and since each configuration needs its own tools, with different
 versions, it became clear that the build configurations must be
-managed by the same xpm, so <strong>xpm</strong> was extended to handle multiple
-<strong>build configurations</strong> and <strong>xPack actions</strong> were added, to automate
+managed by the same tool, so <strong>xpm</strong> was extended to handle multiple
+<strong>build configurations</strong>; later, <strong>xPack actions</strong> were added, to automate
 running sequences of commands, like cmake or meson, to build
 and run the tests.</p>
 
 <h2 id="future-plans">Future plans</h2>
 
-<p>At this moment (mid 2023), the project is pretty advanced, but
-it is not yet complete.</p>
+<p>At the moment of writing this (mid 2023), the project is pretty advanced,
+but it is not yet complete.</p>
 
-<p>In the next period all the µOS++ projects will be updated to use
+<p>In the next period all the
+<a href="https://github.com/micro-os-plus">µOS++ projects</a>
+will be updated to use
 the multiple build configurations automated by <strong>xpm</strong>, and so
 have everything fully tested in µOS++.</p>
 
 <p>With the experience from this step, the next step is to finalise the
-specs for the tool that will perform the builds and project
-configurations.</p>
+specs for the <strong>xPack Project Builder</strong> that will perform the
+builds and manage the project configurations.</p>
 
-<p>The tool will probably be called <code class="language-plaintext highlighter-rouge">xpmake</code>, and it’ll us json files,
-like this one:</p>
+<p>The tool will probably be called <strong>xpmake</strong>,
+and will use json files, with a content similar to this one:</p>
 
 <ul>
-  <li><a href="https://github.com/micro-os-plus/utils-lists-xpack/blob/xpack/xpack.json">https://github.com/micro-os-plus/utils-lists-xpack/blob/xpack/xpack.json</a></li>
+  <li><a href="https://github.com/micro-os-plus/utils-lists-xpack/blob/xpack/xpack.json">xpack.json</a></li>
 </ul>
 
-<p>The file defines the include folders, the source files, and some
-preprocessor definitions that might be enabled while building the project.</p>
+<p>As it can be seen, this file defines the <strong>include folders</strong>,
+the <strong>source files</strong>, and some
+<strong>preprocessor definitions</strong> that might be enabled while
+building the project.</p>
 
 <p>This file, together with all other similar files from the packages
 that are part of the project, will provide the input data for a tree
-of ‘components’, that can be rendered in a graphical tool like VS Code,
-and so allow to configure a project in a way even more advanced than
-the Eclipse CDT settings, since the hierarchical components reflect
-the structure of the application, and allow to automatically manage
-dependencies between components, and between configuration options.</p>
+of <strong>components</strong>, that can be rendered in a graphical tool like <strong>VS Code</strong>,
+thus allowing to configure a project in a way similar,
+possibly even more advanced, than
+the <strong>Eclipse CDT</strong> settings, since the hierarchical components reflect
+the logical structure of the application, and allow to automatically
+manage dependencies between components, and between configuration
+options.</p>
 
-<p>A VS Code extension to edit the xpmake tree of components, and run
-the builds directly, without CMake/meson, is planned, and this will
+<p>Additions to the <strong>VS Code xPack extension</strong> are planned,
+to edit the tree of xPack CDL components, and run
+the builds directly, without CMake/meson; this will
 be a true xPack enabled tool, and will be an alternate solution to
 Eclipse Embedded CDT.</p>
 
-<p>But this tool should be optional, the whole functionality should also be
+<p>But the use of this tool should be <strong>optional</strong>, the whole functionality
+should also be
 available from a terminal and a plain text editor.</p>
 
 <h3 id="conclusion">Conclusion</h3>
 
-<p>As it can be seen, the xPack project started as a way to automate
-the workflow for existing open source projects,
+<p>As it can be seen, the xPack project started as <strong>a way to automate
+the workflow for existing open source projects</strong>,
 more specifically running multiple tests for embedded
 projects, which are usually more complicated than the projects themselves.</p>
 
@@ -902,7 +929,7 @@ projects, which are usually more complicated than the projects themselves.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2023 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> May 23, 2023<br/> Site last generated: May 23, 2023 <br />
+<span>Page last updated:</span> May 24, 2023<br/> Site last generated: May 24, 2023 <br />
                 </div>
             </div>
 </footer>
