@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Project History" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-05-24T10:35:16+00:00","datePublished":"2023-05-20T03:22:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"Project History","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/project/history/"},"url":"https://xpack.github.io/project/history/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-05-24T11:22:11+00:00","datePublished":"2023-05-20T03:22:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"Project History","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/project/history/"},"url":"https://xpack.github.io/project/history/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -688,7 +688,7 @@ before continuing; the brief list of the important events is:</p>
 was encountered; it was the inspiration for a component based design</li>
   <li>in 2013, the <strong>GNU ARM Eclipse plug-ins</strong> (later rebranded as the
 <a href="https://eclipse-embed-cdt.github.io">Eclipse Embedded CDT</a>)
-was the first attempt to find a solution that avoids generating <em>make</em>
+was the first attempt to find a solution that avoids generating <strong>make</strong>
 files by hand, but this prevented building and running unit tests in
 a scriptable environment</li>
   <li>in 2013, the experimental <a href="http://xcdl.github.io">XCDL</a>
@@ -701,11 +701,12 @@ having the build configuration metadata as a Python code:
 IDE (compared, for example, to the C/C++ settings in Eclipse CDT,
 which writes back the XML configuration file)</div>
   </li>
-  <li>in 2014, the CMSIS Packs solution was evaluated, and an Eclipse plug-in was
+  <li>in 2014, the <strong>CMSIS Packs</strong> solution was evaluated, and an
+Eclipse plug-in was
 created to manage them, but the solution was later found to have
 too many design issues, and was abandoned</li>
   <li>in 2015, the <a href="https://github.com/ARMmbed/yotta">yotta</a> solution was
-considered, and the first XCDL packs format based on yotta were tested;
+considered, and the first XCDL packs based on yotta were tested;
 for various reasons, <strong>yotta</strong> was later abandoned by Arm
     <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> As yotta was
 strongly influenced by <strong>npm</strong>, the npm ecosystem was considered
@@ -732,14 +733,15 @@ was fully tested via <strong>xpm</strong>, validating again the whole concept</l
 <h2 id="the-xpack-project-goals">The xPack project goals</h2>
 
 <p>The project came to life as a practical need to find a replacement for the
-Eclipse CDT managed build, that can also be used to run unit tests in a
-scriptable environment.</p>
+Eclipse CDT managed build, with the additional requirement
+to be able to run unit tests in a scriptable environment.</p>
 
-<p>In the beginning it looked easy, but later it proved to be quite a challenge,
-and required defining sub-goals and achieving them in sequence.</p>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> In the beginning it looked easy,
+but later it proved to be quite a challenge,
+and required defining sub-goals and achieving them in sequence.</div>
 
 <p>By trial and error, the main aspects that need to be
-addressed by such a solution were identified:</p>
+addressed by such a solution were identified as:</p>
 
 <ul>
   <li>the <strong>build</strong> (defining which files that enter the build, the compiler/linker
