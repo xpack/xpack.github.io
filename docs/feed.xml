@@ -5,9 +5,27 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Wed, 24 May 2023 13:25:00 +0000</pubDate>
-        <lastBuildDate>Wed, 24 May 2023 13:25:00 +0000</lastBuildDate>
+        <pubDate>Sun, 04 Jun 2023 19:08:52 +0000</pubDate>
+        <lastBuildDate>Sun, 04 Jun 2023 19:08:52 +0000</lastBuildDate>
         <generator>Jekyll v3.9.3</generator>
+        
+        <item>
+            <title>xPack xpm v0.16.1 released</title>
+            <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; is a&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to automate builds and to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt; dependencies.&lt;/p&gt;</description>
+            <pubDate>Sat, 03 Jun 2023 05:16:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2023/06/03/xpm-v0-16-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2023/06/03/xpm-v0-16-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>xpm</category>
+            
+            <category>package</category>
+            
+            <category>manager</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack xpm v0.15.2 released</title>
@@ -173,30 +191,6 @@
             <category>arm</category>
             
             <category>aarch64-none-elf-gcc</category>
-            
-            <category>gcc</category>
-            
-            <category>binaries</category>
-            
-            <category>c++</category>
-            
-            <category>exceptions</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack GNU Arm Embedded GCC v12.2.1-1.2 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/arm-none-eabi-gcc/&quot;&gt;The xPack GNU Arm Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain&quot;&gt;Arm GNU Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Sun, 05 Feb 2023 03:17:34 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2023/02/05/arm-none-eabi-gcc-v12-2-1-1-2-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2023/02/05/arm-none-eabi-gcc-v12-2-1-1-2-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>arm</category>
-            
-            <category>arm-none-eabi-gcc</category>
             
             <category>gcc</category>
             

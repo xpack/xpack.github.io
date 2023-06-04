@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Project History" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-05-24T13:23:44+00:00","datePublished":"2023-05-20T03:22:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"Project History","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/project/history/"},"url":"https://xpack.github.io/project/history/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-06-04T19:00:29+00:00","datePublished":"2023-05-20T03:22:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"Project History","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/project/history/"},"url":"https://xpack.github.io/project/history/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -675,17 +675,16 @@ $('#toc').on('click', 'a', function() {
 <a href="http://micro-os-plus.github.io/project/history/">the history of µOS++</a>,
 as it was initially intended to <strong>automate building</strong> and running
 <strong>multi-platform unit tests</strong> for <a href="http://micro-os-plus.github.io">µOS++</a>.
-Later it was also used to build the binary xPacks, which validated the
-concept once more.</p>
+Later it was also used to build the binary xPacks, which further
+validated the concept.</p>
 
 <p>To avoid redundancy, the full story is not replicated here, so please
 read <a href="http://micro-os-plus.github.io/project/history/">the history of µOS++</a>
 before continuing; the brief list of the important events is:</p>
 
 <ul>
-  <li>in the early 2000s, the
-<a href="http://ecos.sourceware.org/docs-1.3.1/cdl/language.html">eCos CDL</a>
-was encountered; it was the inspiration for a component based design</li>
+  <li><a href="http://ecos.sourceware.org/docs-1.3.1/cdl/language.html">eCos CDL</a>
+was the inspiration for a component based design (early 2000s)</li>
   <li>in 2013, the <strong>GNU ARM Eclipse plug-ins</strong> (later rebranded as the
 <a href="https://eclipse-embed-cdt.github.io">Eclipse Embedded CDT</a>)
 was the first attempt to find a solution that avoids generating <strong>make</strong>
@@ -744,9 +743,9 @@ and required defining sub-goals and achieving them in sequence.</div>
 addressed by such a solution were identified as:</p>
 
 <ul>
-  <li>the <strong>build</strong> (defining which files that enter the build, the compiler/linker
+  <li>the <strong>build</strong> (defining which files enter the build, the compiler/linker
 options, etc)</li>
-  <li>the <strong>project configuration</strong> (simply said managing the values of the #define
+  <li>the <strong>project configuration</strong> (e.g. managing the values of the #define
 in a consistent way)</li>
   <li>the <strong>tools</strong> (toolchains, debuggers, emulators, etc)</li>
 </ul>
@@ -790,8 +789,8 @@ extremely difficult, and doing this on multiple platforms
 
 <ul>
   <li>if a configuration needs to be edited by a machine,
-it must written in a <strong>structured format</strong>;
-the favourite format is <strong>JSON</strong></li>
+it must be written in a <strong>structured format</strong>,
+<strong>JSON</strong> being the favourite</li>
   <li>if each module is expected to be tested, it is better
 to use <strong>multiple small repositories</strong>, each with its CI tests</li>
   <li>if the project is split into multiple packages, a tool to automate
@@ -862,7 +861,7 @@ and run the tests.</p>
 <p>At the moment of writing this (mid 2023), the project is pretty advanced,
 but it is not yet complete.</p>
 
-<p>In the next period all the
+<p>Soon all the
 <a href="https://github.com/micro-os-plus">µOS++ projects</a>
 will be updated to use
 the multiple build configurations automated by <strong>xpm</strong>, and so
@@ -904,16 +903,15 @@ Eclipse Embedded CDT.</p>
 should also be
 available from a terminal and a plain text editor.</p>
 
-<h3 id="conclusion">Conclusion</h3>
+<h2 id="conclusions">Conclusions</h2>
 
-<p>As it can be seen, the xPack project started as <strong>a way to automate
+<p>As it can be seen, the xPack project originated from <strong>the need to automate
 the workflow for existing open source projects</strong>,
-more specifically running multiple tests for embedded
-projects, which are usually more complicated than the projects themselves.</p>
+especially the execution of multiple tests for embedded
+projects, which often poses more challenges than developing
+the projects themselves.</p>
 
-<h3 id="to-be-continued">To be continued</h3>
-
-<p>…</p>
+<h2 id="to-be-continued">To be continued…</h2>
 
 
     <div class="tags">
@@ -931,7 +929,7 @@ projects, which are usually more complicated than the projects themselves.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2023 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> May 24, 2023<br/> Site last generated: May 24, 2023 <br />
+<span>Page last updated:</span> Jun 4, 2023<br/> Site last generated: Jun 4, 2023 <br />
                 </div>
             </div>
 </footer>
