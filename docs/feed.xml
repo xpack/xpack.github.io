@@ -5,9 +5,29 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 04 Jun 2023 19:08:52 +0000</pubDate>
-        <lastBuildDate>Sun, 04 Jun 2023 19:08:52 +0000</lastBuildDate>
+        <pubDate>Fri, 16 Jun 2023 15:01:02 +0000</pubDate>
+        <lastBuildDate>Fri, 16 Jun 2023 15:01:02 +0000</lastBuildDate>
         <generator>Jekyll v3.9.3</generator>
+        
+        <item>
+            <title>VS Code xPack extension v0.5.0 released</title>
+            <description>&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;</description>
+            <pubDate>Fri, 16 Jun 2023 14:48:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2023/06/16/vscode-xpack-v0-5-0-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2023/06/16/vscode-xpack-v0-5-0-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>vscode</category>
+            
+            <category>vscode-xpack</category>
+            
+            <category>extension</category>
+            
+            <category>c++</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack xpm v0.16.1 released</title>
@@ -175,30 +195,6 @@
             <category>binaries</category>
             
             <category>c++</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack GNU AArch64 Embedded GCC v12.2.1-1.2 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/aarch64-none-elf-gcc/&quot;&gt;The xPack GNU AArch64 Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain&quot;&gt;Arm GNU Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Sun, 05 Feb 2023 07:50:11 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2023/02/05/aarch64-none-elf-gcc-v12-2-1-1-2-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2023/02/05/aarch64-none-elf-gcc-v12-2-1-1-2-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>arm</category>
-            
-            <category>aarch64-none-elf-gcc</category>
-            
-            <category>gcc</category>
-            
-            <category>binaries</category>
-            
-            <category>c++</category>
-            
-            <category>exceptions</category>
             
             
         </item>
