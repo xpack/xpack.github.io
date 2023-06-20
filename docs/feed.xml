@@ -5,9 +5,29 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Fri, 16 Jun 2023 15:01:02 +0000</pubDate>
-        <lastBuildDate>Fri, 16 Jun 2023 15:01:02 +0000</lastBuildDate>
+        <pubDate>Tue, 20 Jun 2023 08:39:07 +0000</pubDate>
+        <lastBuildDate>Tue, 20 Jun 2023 08:39:07 +0000</lastBuildDate>
         <generator>Jekyll v3.9.3</generator>
+        
+        <item>
+            <title>VS Code xPack extension v0.5.1 released</title>
+            <description>&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;</description>
+            <pubDate>Tue, 20 Jun 2023 08:23:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2023/06/20/vscode-xpack-v0-5-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2023/06/20/vscode-xpack-v0-5-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>vscode</category>
+            
+            <category>vscode-xpack</category>
+            
+            <category>extension</category>
+            
+            <category>c++</category>
+            
+            
+        </item>
         
         <item>
             <title>VS Code xPack extension v0.5.0 released</title>
@@ -173,28 +193,6 @@
             <category>build</category>
             
             <category>box</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack GNU RISC-V Embedded GCC v12.2.0-3 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/riscv-none-elf-gcc/&quot;&gt;The xPack GNU RISC-V Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of the&lt;a href=&quot;https://gcc.gnu.org/releases.html&quot;&gt;GNU GCC&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Sun, 05 Feb 2023 21:47:30 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2023/02/05/riscv-none-elf-gcc-v12-2-0-3-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2023/02/05/riscv-none-elf-gcc-v12-2-0-3-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>riscv</category>
-            
-            <category>riscv-none-elf-gcc</category>
-            
-            <category>gcc</category>
-            
-            <category>binaries</category>
-            
-            <category>c++</category>
             
             
         </item>

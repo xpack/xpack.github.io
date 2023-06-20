@@ -2985,6 +2985,16 @@
 
 
 {
+"title": "VS Code xPack extension v0.5.1 released",
+"tags": "releasesvscodevscode-xpackextensionc++",
+"keywords": "",
+"url": "/blog/2023/06/20/vscode-xpack-v0-5-1-released/",
+"summary": "<p>Version <strong>0.5.1</strong> is a maintenance release of <strong>ilg-vscode.xpack</strong>; it fixes the automatic update for <code class="language-plaintext highlighter-rouge">c_cpp_properties.json</code>.</p>"
+}
+,
+
+
+{
 "title": "VS Code xPack extension v0.5.0 released",
 "tags": "releasesvscodevscode-xpackextensionc++",
 "keywords": "",
