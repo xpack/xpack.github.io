@@ -2985,6 +2985,16 @@
 
 
 {
+"title": "xPack CMake v3.24.4-1 released",
+"tags": "releasescmakebuild",
+"keywords": "",
+"url": "/blog/2023/07/26/cmake-v3-24-4-1-released/",
+"summary": "<p>Version <strong>3.24.4-1</strong> is a new release; it follows the upstream release.</p>"
+}
+,
+
+
+{
 "title": "xPack xpm v0.16.3 released",
 "tags": "releasesxpmpackagemanager",
 "keywords": "",
