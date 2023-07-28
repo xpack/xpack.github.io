@@ -2985,6 +2985,16 @@
 
 
 {
+"title": "xPack Meson Build v0.64.1-1 released",
+"tags": "releasesmeson-buildmesonbuildpythonninja",
+"keywords": "",
+"url": "/blog/2023/07/28/meson-build-v0-64-1-1-released/",
+"summary": "<p>Version <strong>0.64.1-1</strong> is a new release; it follows the upstream release.</p>"
+}
+,
+
+
+{
 "title": "xPack CMake v3.25.3-1 released",
 "tags": "releasescmakebuild",
 "keywords": "",

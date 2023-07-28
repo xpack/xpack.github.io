@@ -5,9 +5,31 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 27 Jul 2023 09:27:26 +0000</pubDate>
-        <lastBuildDate>Thu, 27 Jul 2023 09:27:26 +0000</lastBuildDate>
+        <pubDate>Fri, 28 Jul 2023 14:31:45 +0000</pubDate>
+        <lastBuildDate>Fri, 28 Jul 2023 14:31:45 +0000</lastBuildDate>
         <generator>Jekyll v3.9.3</generator>
+        
+        <item>
+            <title>xPack Meson Build v0.64.1-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/meson-build/&quot;&gt;The xPack Meson Build&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://mesonbuild.org&quot;&gt;Meson Build&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Fri, 28 Jul 2023 14:00:58 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2023/07/28/meson-build-v0-64-1-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2023/07/28/meson-build-v0-64-1-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>meson-build</category>
+            
+            <category>meson</category>
+            
+            <category>build</category>
+            
+            <category>python</category>
+            
+            <category>ninja</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack CMake v3.25.3-1 released</title>
@@ -167,26 +189,6 @@
             <category>package</category>
             
             <category>manager</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>VS Code xPack extension v0.4.22 released</title>
-            <description>&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;</description>
-            <pubDate>Thu, 16 Feb 2023 05:33:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2023/02/16/vscode-xpack-v0-4-22-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2023/02/16/vscode-xpack-v0-4-22-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>vscode</category>
-            
-            <category>vscode-xpack</category>
-            
-            <category>extension</category>
-            
-            <category>c++</category>
             
             
         </item>
