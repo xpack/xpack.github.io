@@ -2985,6 +2985,16 @@
 
 
 {
+"title": "xPack LLVM clang v16.0.6-1 released",
+"tags": "releasesclang",
+"keywords": "",
+"url": "/blog/2023/08/06/clang-v16-0-6-1-released/",
+"summary": "<p>Version <strong>16.0.6-1</strong> is a new release; it follows the upstream release.</p>"
+}
+,
+
+
+{
 "title": "xPack LLVM clang v15.0.7-4 released",
 "tags": "releasesclang",
 "keywords": "",
