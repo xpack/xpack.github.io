@@ -5,9 +5,23 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 17 Aug 2023 19:34:00 +0000</pubDate>
-        <lastBuildDate>Thu, 17 Aug 2023 19:34:00 +0000</lastBuildDate>
+        <pubDate>Thu, 17 Aug 2023 23:46:04 +0000</pubDate>
+        <lastBuildDate>Thu, 17 Aug 2023 23:46:04 +0000</lastBuildDate>
         <generator>Jekyll v3.9.3</generator>
+        
+        <item>
+            <title>xPack GNU flex v2.6.4-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/flex/&quot;&gt;The xPack GNU flex&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://www.gnu.org/software/flex/&quot;&gt;GNU flex&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Thu, 17 Aug 2023 23:35:09 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2023/08/17/flex-v2-6-4-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2023/08/17/flex-v2-6-4-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>flex</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack GNU bison v3.8.2-1 released</title>
@@ -147,24 +161,6 @@
             <pubDate>Sun, 23 Jul 2023 09:13:00 +0000</pubDate>
             <link>https://xpack.github.io/blog/2023/07/23/xpm-v0-16-3-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2023/07/23/xpm-v0-16-3-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>xpm</category>
-            
-            <category>package</category>
-            
-            <category>manager</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack xpm v0.16.2 released</title>
-            <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; is a&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to automate builds and to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt; dependencies.&lt;/p&gt;</description>
-            <pubDate>Sun, 02 Jul 2023 16:02:00 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2023/07/02/xpm-v0-16-2-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2023/07/02/xpm-v0-16-2-released/</guid>
             
             <category>releases</category>
             
