@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to create a new xPack Git repository" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-08-06T06:47:18+00:00","datePublished":"2019-07-09T14:48:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to create a new xPack Git repository","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/how-to-new-git/"},"url":"https://xpack.github.io/develop/how-to-new-git/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-08-17T18:52:58+00:00","datePublished":"2019-07-09T14:48:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to create a new xPack Git repository","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/how-to-new-git/"},"url":"https://xpack.github.io/develop/how-to-new-git/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -977,11 +977,10 @@ from release archives.
 .vscode/c_cpp_properties.json
 
 # xpm
-node_modules/
 xpacks/
-build/
+build*/
 
-*.tgz
+/*.tgz
 
 # Windows
 Thumbs.db
@@ -1028,7 +1027,7 @@ patches/
 pkgconfig/
 scripts/
 test*/
-build/
+build*/
 ci/
 docs/
 example*/
@@ -1036,7 +1035,7 @@ example*/
 xpacks/
 node_modules/
 
-*.tgz
+/*.tgz
 
 README-*
 LICENSE-*
@@ -1367,7 +1366,7 @@ npm version major
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2023 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Aug 6, 2023<br/> Site last generated: Aug 6, 2023 <br />
+<span>Page last updated:</span> Aug 17, 2023<br/> Site last generated: Aug 17, 2023 <br />
                 </div>
             </div>
 </footer>
