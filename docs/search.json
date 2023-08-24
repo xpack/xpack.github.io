@@ -2985,6 +2985,16 @@
 
 
 {
+"title": "xPack GNU RISC-V Embedded GCC v13.2.0-1 released",
+"tags": "releasesriscvriscv-none-elf-gccgccbinariesc++",
+"keywords": "",
+"url": "/blog/2023/08/24/riscv-none-elf-gcc-v13-2-0-1-released/",
+"summary": "<p>Version <strong>13.2.0-1</strong> is a new release; it follows the GNU GCC release.</p>"
+}
+,
+
+
+{
 "title": "xPack GNU texinfo v7.0.3-1 released",
 "tags": "releasestexinfo",
 "keywords": "",
