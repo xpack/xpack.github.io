@@ -2985,6 +2985,16 @@
 
 
 {
+"title": "xPack CMake v3.26.5-1 released",
+"tags": "releasescmakebuild",
+"keywords": "",
+"url": "/blog/2023/08/25/cmake-v3-26-5-1-released/",
+"summary": "<p>Version <strong>3.26.5-1</strong> is a new release; it follows the upstream release.</p>"
+}
+,
+
+
+{
 "title": "xPack GNU RISC-V Embedded GCC v12.3.0-1 released",
 "tags": "releasesriscvriscv-none-elf-gccgccbinariesc++",
 "keywords": "",
