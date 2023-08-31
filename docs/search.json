@@ -2985,6 +2985,16 @@
 
 
 {
+"title": "xPack GCC v12.3.0-1 released",
+"tags": "releasesgcc",
+"keywords": "",
+"url": "/blog/2023/08/31/gcc-v12-3-0-1-released/",
+"summary": "<p>Version <strong>12.3.0-1</strong> is a new release; it follows the official GNU GCC release.</p>"
+}
+,
+
+
+{
 "title": "xPack CMake v3.26.5-1 released",
 "tags": "releasescmakebuild",
 "keywords": "",
