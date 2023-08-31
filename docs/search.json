@@ -2985,6 +2985,16 @@
 
 
 {
+"title": "xPack GCC v13.2.0-1 released",
+"tags": "releasesgcc",
+"keywords": "",
+"url": "/blog/2023/08/31/gcc-v13-2-0-1-released/",
+"summary": "<p>Version <strong>13.2.0-1</strong> is a new release; it follows the official GNU GCC release.</p>"
+}
+,
+
+
+{
 "title": "xPack GCC v12.3.0-1 released",
 "tags": "releasesgcc",
 "keywords": "",
