@@ -2985,6 +2985,16 @@
 
 
 {
+"title": "xPack WineHQ v8.0.2-1 released",
+"tags": "releaseswinebuild",
+"keywords": "",
+"url": "/blog/2023/09/04/wine-v8-0-2-1-released/",
+"summary": "<p>Version <strong>8.0.2-1</strong> is a new release; it follows the upstream release.</p>"
+}
+,
+
+
+{
 "title": "xPack QEMU RISC-V v7.2.5-1 released",
 "tags": "releasesqemuemulatorrisc-v",
 "keywords": "",
