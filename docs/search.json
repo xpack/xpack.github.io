@@ -2985,6 +2985,16 @@
 
 
 {
+"title": "xPack Windows Build Tools v4.4.1-1 released",
+"tags": "releaseswindows-build-toolsbuildmakermmkdirbusybox",
+"keywords": "",
+"url": "/blog/2023/09/05/windows-build-tools-v4-4-1-1-released/",
+"summary": "<p>Version <strong>4.4.1-1</strong> is a new release of the <strong>xPack Windows Build Tools</strong> package, following the make release.</p>"
+}
+,
+
+
+{
 "title": "xPack OpenOCD v0.12.0-2 released",
 "tags": "releasesopenocd",
 "keywords": "",
