@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack 101" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-09-06T12:39:54+00:00","datePublished":"2019-06-26T05:57:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"xPack 101","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/intro/"},"url":"https://xpack.github.io/intro/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-09-11T10:03:23+00:00","datePublished":"2019-06-26T05:57:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"xPack 101","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/intro/"},"url":"https://xpack.github.io/intro/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1240,11 +1240,11 @@ configuration for an xPack project may look like this:</p>
   <span class="na">ci-test</span><span class="pi">:</span>
     <span class="na">name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">CI</span><span class="nv"> </span><span class="s">tests'</span>
 
-    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">$</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">${{ matrix.os }}</span>
 
     <span class="na">strategy</span><span class="pi">:</span>
       <span class="na">matrix</span><span class="pi">:</span>
-        <span class="na">node-version</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">14</span><span class="pi">,</span> <span class="nv">16</span><span class="pi">,</span> <span class="nv">18</span><span class="pi">]</span>
+        <span class="na">node-version</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">16</span><span class="pi">,</span> <span class="nv">18</span><span class="pi">,</span> <span class="nv">20</span><span class="pi">]</span>
         <span class="c1"># https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners</span>
         <span class="na">os</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">ubuntu-22.04</span><span class="pi">,</span> <span class="nv">macos-12</span><span class="pi">,</span> <span class="nv">windows-2022</span><span class="pi">]</span>
 
@@ -1254,11 +1254,11 @@ configuration for an xPack project may look like this:</p>
       <span class="na">with</span><span class="pi">:</span>
         <span class="na">fetch-depth</span><span class="pi">:</span> <span class="m">3</span>
 
-    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Setup Node.js $ on $</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Setup Node.js ${{ matrix.node-version }} on ${{ matrix.os }}</span>
       <span class="c1"># https://github.com/actions/setup-node</span>
       <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/setup-node@v2</span>
       <span class="na">with</span><span class="pi">:</span>
-        <span class="na">node-version</span><span class="pi">:</span> <span class="s">$</span>
+        <span class="na">node-version</span><span class="pi">:</span> <span class="s">${{ matrix.node-version }}</span>
 
     <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install xpm on Linux/macOS</span>
       <span class="na">if</span><span class="pi">:</span> <span class="s">runner.os != 'Windows'</span>
@@ -1291,7 +1291,7 @@ configuration for an xPack project may look like this:</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2023 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Sep 6, 2023<br/> Site last generated: Sep 6, 2023 <br />
+<span>Page last updated:</span> Sep 11, 2023<br/> Site last generated: Sep 11, 2023 <br />
                 </div>
             </div>
 </footer>
