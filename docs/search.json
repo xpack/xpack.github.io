@@ -2996,6 +2996,16 @@
 
 
 {
+"title": "xPack xpm v0.16.4 released",
+"tags": "releasesxpmpackagemanager",
+"keywords": "",
+"url": "/blog/2023/09/12/xpm-v0-16-4-released/",
+"summary": "<p>Version <strong>0.16.4</strong> is a maintenance release, it fixes some bugs affecting list, uninstall and install with –copy.</p>"
+}
+,
+
+
+{
 "title": "xPack GNU sed v4.9.0-3 released",
 "tags": "releasessed",
 "keywords": "",
