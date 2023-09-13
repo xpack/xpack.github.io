@@ -3006,6 +3006,16 @@
 
 
 {
+"title": "xPack Build Box v5.1.1 released",
+"tags": "releasesxbbbuildbox",
+"keywords": "",
+"url": "/blog/2023/09/11/xbb-v5.1.1-released/",
+"summary": "<p>Version <strong>5.1.1</strong> is a new minor release; it upgrades Python to 3.11.4.</p>"
+}
+,
+
+
+{
 "title": "xPack GNU sed v4.9.0-3 released",
 "tags": "releasessed",
 "keywords": "",

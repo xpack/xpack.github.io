@@ -5,8 +5,8 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 12 Sep 2023 18:38:44 +0000</pubDate>
-        <lastBuildDate>Tue, 12 Sep 2023 18:38:44 +0000</lastBuildDate>
+        <pubDate>Wed, 13 Sep 2023 07:04:12 +0000</pubDate>
+        <lastBuildDate>Wed, 13 Sep 2023 07:04:12 +0000</lastBuildDate>
         <generator>Jekyll v3.9.3</generator>
         
         <item>
@@ -23,6 +23,24 @@
             <category>package</category>
             
             <category>manager</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>xPack Build Box v5.1.1 released</title>
+            <description>&lt;p&gt;The xPack Build Box (XBB) is a build environment intended for reproducible builds.&lt;/p&gt;</description>
+            <pubDate>Mon, 11 Sep 2023 12:15:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2023/09/11/xbb-v5.1.1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2023/09/11/xbb-v5.1.1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>xbb</category>
+            
+            <category>build</category>
+            
+            <category>box</category>
             
             
         </item>
@@ -155,22 +173,6 @@
             <category>releases</category>
             
             <category>openocd</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack WineHQ v8.0.2-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/dev-tools/wine/&quot;&gt;The xPack WineHQ&lt;/a&gt;is a standalone binary distribution of&lt;a href=&quot;https://www.winehq.org&quot;&gt;WineHQ&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Mon, 04 Sep 2023 11:46:05 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2023/09/04/wine-v8-0-2-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2023/09/04/wine-v8-0-2-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>wine</category>
-            
-            <category>build</category>
             
             
         </item>
