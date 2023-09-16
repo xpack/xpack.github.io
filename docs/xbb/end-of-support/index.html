@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="End-of-support schedule" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-09-13T07:02:52+00:00","datePublished":"2021-10-13T12:15:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"End-of-support schedule","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/end-of-support/"},"url":"https://xpack.github.io/xbb/end-of-support/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-09-16T10:32:00+00:00","datePublished":"2021-10-13T12:15:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"End-of-support schedule","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/end-of-support/"},"url":"https://xpack.github.io/xbb/end-of-support/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -385,7 +385,7 @@ the <code class="language-plaintext highlighter-rouge">ldd --version</code>:</p>
   <li><code class="language-plaintext highlighter-rouge">debian:7</code> - wheezy - 2013-2016, GLIBC 2.13, kernel 3.2</li>
   <li><code class="language-plaintext highlighter-rouge">debian:8</code> - jessie - 2015-2018, GLIBC 2.19, kernel 3.16</li>
   <li><code class="language-plaintext highlighter-rouge">debian:9</code> - stretch - 2017-2020, GLIBC 2.24, kernel 4.9.0-6 (first with arm64)</li>
-  <li><code class="language-plaintext highlighter-rouge">debian:10</code> - buster - 2019-2022, GLIBC 2.28, kernel 4.19.0-6 &lt;– <strong>XBB v3.4, v5.0</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">debian:10</code> - buster - 2019-2022, GLIBC <strong>2.28</strong>, kernel 4.19.0-6 &lt;– <strong>next, since mid-2024</strong></li>
   <li><code class="language-plaintext highlighter-rouge">debian:11</code> - bullseye - 2021-2026, GLIBC 2.31, kernel 5.10</li>
   <li><code class="language-plaintext highlighter-rouge">debian:12</code> - bookworm - ?</li>
 </ul>
@@ -397,7 +397,7 @@ the <code class="language-plaintext highlighter-rouge">ldd --version</code>:</p>
   <li><code class="language-plaintext highlighter-rouge">ubuntu:12.04</code> - precise - 2012-2019, GLIBC 2.15, kernel <strong>3.2</strong> &lt;— XBB v3.3 Intel Linux choice</li>
   <li><code class="language-plaintext highlighter-rouge">ubuntu:14.04</code> - trusty - 2014-2022, GLIBC 2.19, kernel 3.16</li>
   <li><code class="language-plaintext highlighter-rouge">ubuntu:16.04</code> - xenial - 2016-2024, GLIBC <strong>2.23</strong>, kernel 4.4 &lt;— XBB v3.3 Arm Linux choice</li>
-  <li><code class="language-plaintext highlighter-rouge">ubuntu:18.04</code> - bionic - 2018-2028, GLIBC <strong>2.27</strong>, kernel 4.15 &lt;– <strong>XBB v3.4, v5.0</strong> Intel &amp; Arm Linux choice</li>
+  <li><code class="language-plaintext highlighter-rouge">ubuntu:18.04</code> - bionic - 2018-2028, GLIBC <strong>2.27</strong>, kernel 4.15 &lt;– <strong>XBB v3.4 - v5.1.1</strong> Intel &amp; Arm Linux choice</li>
   <li><code class="language-plaintext highlighter-rouge">ubuntu:20.04</code> - focal - 2020-2230, GLIBC 2.31, kernel 5.4</li>
   <li><code class="language-plaintext highlighter-rouge">ubuntu:22.04</code> - jammy - 2022-2232, GLIBC 2.35, kernel 5.15</li>
 </ul>
@@ -407,15 +407,15 @@ the <code class="language-plaintext highlighter-rouge">ldd --version</code>:</p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">registry.access.redhat.com/rhel6</code> - GLIBC 2.12 (no longer supported)</li>
   <li><code class="language-plaintext highlighter-rouge">registry.access.redhat.com/rhel7</code> - GLIBC 2.17, kernel 3.10 &lt;– XBB v3.3</li>
-  <li><code class="language-plaintext highlighter-rouge">registry.access.redhat.com/ubi8</code> - GLIBC 2.28, kernel 5.10 &lt;– <strong>XBB v3.4, v5.0</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">registry.access.redhat.com/ubi8</code> - GLIBC 2.28, kernel 5.10 &lt;– XBB v3.4 - v5.1.1</li>
 </ul>
 
 <h3 id="centos"><a href="https://en.wikipedia.org/wiki/CentOS">CentOS</a></h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">centos:6</code> - 2011-2020, GLIBC 2.12 (no longer supported)</li>
-  <li><code class="language-plaintext highlighter-rouge">centos:7</code> - 2014-2024, GLIBC 2.17, kernel 3.10 &lt;— XBB v3.3</li>
-  <li><code class="language-plaintext highlighter-rouge">centos:8</code> - 2019-2029, GLIBC 2.28, kernel 4.18 &lt;– <strong>XBB v3.4, v5.0</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">centos:7</code> - 2014-2024, GLIBC 2.17, kernel 3.10 &lt;– XBB v3.3</li>
+  <li><code class="language-plaintext highlighter-rouge">centos:8</code> - 2019-2029, GLIBC 2.28, kernel 4.18 &lt;– XBB v3.4 - v5.1.1</li>
 </ul>
 
 <p>Last version was 8.4; discontinued by the end of 2021; see Rocky Linux.</p>
@@ -431,8 +431,8 @@ the <code class="language-plaintext highlighter-rouge">ldd --version</code>:</p>
   <li><code class="language-plaintext highlighter-rouge">fedora:25</code> - 2016-11, GLIBC 2.24, kernel 4.8</li>
   <li><code class="language-plaintext highlighter-rouge">fedora:26</code> - 2017-07, GLIBC 2.25, kernel 4.11</li>
   <li><code class="language-plaintext highlighter-rouge">fedora:27</code> - 2017-11, GLIBC 2.26, kernel 4.13</li>
-  <li><code class="language-plaintext highlighter-rouge">fedora:28</code> - 2018-05, GLIBC 2.27, kernel 4.16</li>
-  <li><code class="language-plaintext highlighter-rouge">fedora:29</code> - 2018-10, GLIBC 2.28, kernel 4.18 &lt;– <strong>XBB v3.4, v5.0</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">fedora:28</code> - 2018-05, GLIBC 2.27, kernel 4.16 &lt;– XBB v3.4 - v5.1.1</li>
+  <li><code class="language-plaintext highlighter-rouge">fedora:29</code> - 2018-10, GLIBC 2.28, kernel 4.18</li>
   <li><code class="language-plaintext highlighter-rouge">fedora:30</code> - 2019-05, GLIBC 2.29, kernel 5.0</li>
   <li><code class="language-plaintext highlighter-rouge">fedora:31</code> - 2019-10, GLIBC 2.30, kernel 5.3</li>
   <li><code class="language-plaintext highlighter-rouge">fedora:32</code> - 2020-04, GLIBC 2.31, kernel 5.6</li>
@@ -494,6 +494,20 @@ also run on RHEL 8 or newer, Debian 10, Fedora 29 or newer.</p>
 <p>For Arm binaries, the resulting binaries should run on all
 Raspberry Pi class machines, or larger/newer.</p>
 
+<h2 id="pre-deprecation-notice-for-ubuntu-1804">Pre-deprecation notice for Ubuntu 18.04</h2>
+
+<p>Ubuntu 18.04 LTS <em>Bionic Beaver</em> reached the end of the standard five-year
+maintenance window for Long-Term Support (LTS) release on 31 May 2023.</p>
+
+<p>As a courtesy, the xPack GNU/Linux releases will continue to be based on
+Ubuntu 18.04 for another year.</p>
+
+<p>From mid-2024 onwards, the GNU/Linux binaries will be built on <strong>Debian 10</strong>,
+(<strong>GLIBC 2.28</strong>), and are also expected to run on RedHat 8.</p>
+
+<p>Users are urged to update their build and test infrastructure to
+ensure a smooth transition to the next xPack releases.</p>
+
 
     <div class="tags">
         
@@ -510,7 +524,7 @@ Raspberry Pi class machines, or larger/newer.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2023 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Sep 13, 2023<br/> Site last generated: Sep 13, 2023 <br />
+<span>Page last updated:</span> Sep 16, 2023<br/> Site last generated: Sep 16, 2023 <br />
                 </div>
             </div>
 </footer>
