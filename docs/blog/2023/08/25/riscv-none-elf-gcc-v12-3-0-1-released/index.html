@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack GNU RISC-V Embedded GCC v12.3.0-1 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-09-17T17:32:34+00:00","datePublished":"2023-08-25T06:53:20+00:00","description":"The xPack GNU RISC-V Embedded GCC is a standalone cross-platform binary distribution of the GNU GCC.","headline":"xPack GNU RISC-V Embedded GCC v12.3.0-1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2023/08/25/riscv-none-elf-gcc-v12-3-0-1-released/"},"url":"https://xpack.github.io/blog/2023/08/25/riscv-none-elf-gcc-v12-3-0-1-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-09-20T06:56:51+00:00","datePublished":"2023-08-25T06:53:20+00:00","description":"The xPack GNU RISC-V Embedded GCC is a standalone cross-platform binary distribution of the GNU GCC.","headline":"xPack GNU RISC-V Embedded GCC v12.3.0-1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2023/08/25/riscv-none-elf-gcc-v12-3-0-1-released/"},"url":"https://xpack.github.io/blog/2023/08/25/riscv-none-elf-gcc-v12-3-0-1-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -927,6 +927,9 @@ the distribution.</p>
 <h2 id="known-problems">Known problems</h2>
 
 <ul>
+  <li>[<a href="https://github.com/xpack-dev-tools/riscv-none-elf-gcc-xpack/issues/22">#22</a>]
+due to a an issue in the build scripts, the <code class="language-plaintext highlighter-rouge">riscv-none-elf-gdb</code> was
+built without ELF support (the Windows binaries are ok); will be fixed soon</li>
   <li>due to the large number of libraries, the archive is &gt;500 MB.</li>
 </ul>
 
@@ -1096,7 +1099,7 @@ for the individual file counters.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2023 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Sep 17, 2023<br/> Site last generated: Sep 17, 2023 <br />
+<span>Page last updated:</span> Sep 20, 2023<br/> Site last generated: Sep 20, 2023 <br />
                 </div>
             </div>
 </footer>
