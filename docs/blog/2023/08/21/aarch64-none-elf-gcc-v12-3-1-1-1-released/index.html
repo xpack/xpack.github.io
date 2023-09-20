@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack GNU AArch64 Embedded GCC v12.3.1-1.1 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-09-20T06:56:51+00:00","datePublished":"2023-08-21T14:09:03+00:00","description":"The xPack GNU AArch64 Embedded GCC is a standalone cross-platform binary distribution of Arm GNU Toolchain.","headline":"xPack GNU AArch64 Embedded GCC v12.3.1-1.1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2023/08/21/aarch64-none-elf-gcc-v12-3-1-1-1-released/"},"url":"https://xpack.github.io/blog/2023/08/21/aarch64-none-elf-gcc-v12-3-1-1-1-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-09-20T21:33:10+00:00","datePublished":"2023-08-21T14:09:03+00:00","description":"The xPack GNU AArch64 Embedded GCC is a standalone cross-platform binary distribution of Arm GNU Toolchain.","headline":"xPack GNU AArch64 Embedded GCC v12.3.1-1.1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2023/08/21/aarch64-none-elf-gcc-v12-3-1-1-1-released/"},"url":"https://xpack.github.io/blog/2023/08/21/aarch64-none-elf-gcc-v12-3-1-1-1-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -853,7 +853,10 @@ platforms, support for Guile scripting in GDB is currently not available.</p>
 <h2 id="known-problems">Known problems</h2>
 
 <ul>
-  <li>none</li>
+  <li>[<a href="https://github.com/xpack-dev-tools/aarch64-none-elf-gcc-xpack/issues/2">#2</a>]
+due to a an issue in the build scripts, on GNU/Linux,
+the <code class="language-plaintext highlighter-rouge">aarch64-none-elf-gdb</code> was built without ELF support;
+fixed in 12.3.1-2.1.</li>
 </ul>
 
 <h2 id="shared-libraries">Shared libraries</h2>

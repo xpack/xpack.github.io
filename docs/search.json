@@ -2996,6 +2996,16 @@
 
 
 {
+"title": "xPack GNU AArch64 Embedded GCC v12.3.1-2.1 released",
+"tags": "releasesarmaarch64-none-elf-gccgccbinariesc++exceptions",
+"keywords": "",
+"url": "/blog/2023/09/20/aarch64-none-elf-gcc-v12-3-1-2-1-released/",
+"summary": "<p>Version <strong>12.3.1-2.1</strong> is a maintenance release; it fixes the GNU/Linux GDB issues with loading ELF files.</p>"
+}
+,
+
+
+{
 "title": "xPack xpm v0.16.4 released",
 "tags": "releasesxpmpackagemanager",
 "keywords": "",

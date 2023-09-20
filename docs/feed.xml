@@ -5,9 +5,33 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Wed, 20 Sep 2023 06:58:12 +0000</pubDate>
-        <lastBuildDate>Wed, 20 Sep 2023 06:58:12 +0000</lastBuildDate>
+        <pubDate>Wed, 20 Sep 2023 22:01:33 +0000</pubDate>
+        <lastBuildDate>Wed, 20 Sep 2023 22:01:33 +0000</lastBuildDate>
         <generator>Jekyll v3.9.3</generator>
+        
+        <item>
+            <title>xPack GNU AArch64 Embedded GCC v12.3.1-2.1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/aarch64-none-elf-gcc/&quot;&gt;The xPack GNU AArch64 Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain&quot;&gt;Arm GNU Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Wed, 20 Sep 2023 21:28:48 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2023/09/20/aarch64-none-elf-gcc-v12-3-1-2-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2023/09/20/aarch64-none-elf-gcc-v12-3-1-2-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>arm</category>
+            
+            <category>aarch64-none-elf-gcc</category>
+            
+            <category>gcc</category>
+            
+            <category>binaries</category>
+            
+            <category>c++</category>
+            
+            <category>exceptions</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack xpm v0.16.4 released</title>
@@ -159,20 +183,6 @@
             <category>mkdir</category>
             
             <category>busybox</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack OpenOCD v0.12.0-2 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/openocd/&quot;&gt;The xPack OpenOCD&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://openocd.org&quot;&gt;OpenOCD&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Mon, 04 Sep 2023 23:21:20 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2023/09/04/openocd-v0-12-0-2-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2023/09/04/openocd-v0-12-0-2-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>openocd</category>
             
             
         </item>
