@@ -2996,6 +2996,16 @@
 
 
 {
+"title": "xPack xpm v0.16.5 released",
+"tags": "releasesxpmpackagemanager",
+"keywords": "",
+"url": "/blog/2023/09/22/xpm-v0-16-5-released/",
+"summary": "<p>Version <strong>0.16.5</strong> is a maintenance release, it fixes the bug affecting xpm init without git configuration.</p>"
+}
+,
+
+
+{
 "title": "xPack GNU Arm Embedded GCC v12.3.1-1.2 released",
 "tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
 "keywords": "",

@@ -5,9 +5,27 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 21 Sep 2023 21:09:36 +0000</pubDate>
-        <lastBuildDate>Thu, 21 Sep 2023 21:09:36 +0000</lastBuildDate>
+        <pubDate>Fri, 22 Sep 2023 04:57:24 +0000</pubDate>
+        <lastBuildDate>Fri, 22 Sep 2023 04:57:24 +0000</lastBuildDate>
         <generator>Jekyll v3.9.3</generator>
+        
+        <item>
+            <title>xPack xpm v0.16.5 released</title>
+            <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; is a&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to automate builds and to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt; dependencies.&lt;/p&gt;</description>
+            <pubDate>Fri, 22 Sep 2023 04:50:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2023/09/22/xpm-v0-16-5-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2023/09/22/xpm-v0-16-5-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>xpm</category>
+            
+            <category>package</category>
+            
+            <category>manager</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack GNU Arm Embedded GCC v12.3.1-1.2 released</title>
@@ -169,20 +187,6 @@
             <category>realpath</category>
             
             <category>readlink</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack NixOS PatchELF v0.18.0-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/patchelf/&quot;&gt;The xPack NixOS PatchELF&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://github.com/NixOS/patchelf/&quot;&gt;NixOS PatchELF&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Tue, 05 Sep 2023 18:27:29 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2023/09/05/patchelf-v0-18-0-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2023/09/05/patchelf-v0-18-0-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>patchelf</category>
             
             
         </item>
