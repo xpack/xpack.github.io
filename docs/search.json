@@ -2996,6 +2996,16 @@
 
 
 {
+"title": "xPack xpm v0.17.0 released",
+"tags": "releasesxpmpackagemanager",
+"keywords": "",
+"url": "/blog/2023/09/26/xpm-v0-17-0-released/",
+"summary": "<p>Version <strong>0.17.0</strong> is a new release, it updates to node &gt;= 16.14.</p>"
+}
+,
+
+
+{
 "title": "xPack GNU RISC-V Embedded GCC v13.2.0-2 released",
 "tags": "releasesriscvriscv-none-elf-gccgccbinariesc++",
 "keywords": "",

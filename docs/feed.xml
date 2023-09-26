@@ -5,9 +5,27 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 25 Sep 2023 03:50:57 +0000</pubDate>
-        <lastBuildDate>Mon, 25 Sep 2023 03:50:57 +0000</lastBuildDate>
+        <pubDate>Tue, 26 Sep 2023 07:37:17 +0000</pubDate>
+        <lastBuildDate>Tue, 26 Sep 2023 07:37:17 +0000</lastBuildDate>
         <generator>Jekyll v3.9.3</generator>
+        
+        <item>
+            <title>xPack xpm v0.17.0 released</title>
+            <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; is a&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to automate builds and to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt; dependencies.&lt;/p&gt;</description>
+            <pubDate>Tue, 26 Sep 2023 07:25:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2023/09/26/xpm-v0-17-0-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2023/09/26/xpm-v0-17-0-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>xpm</category>
+            
+            <category>package</category>
+            
+            <category>manager</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack GNU RISC-V Embedded GCC v13.2.0-2 released</title>
@@ -179,20 +197,6 @@
             <category>releases</category>
             
             <category>m4</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack pkg-config v0.29.2-3 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/pkg-config/&quot;&gt;The xPack pkg-config&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://www.freedesktop.org/wiki/Software/pkg-config/&quot;&gt;pkg-config&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Wed, 06 Sep 2023 07:28:57 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2023/09/06/pkg-config-v0-29-2-3-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2023/09/06/pkg-config-v0-29-2-3-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>pkg-config</category>
             
             
         </item>
