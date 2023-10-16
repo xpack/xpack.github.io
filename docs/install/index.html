@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack prerequisites" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-09-26T07:35:42+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack prerequisites","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"url":"https://xpack.github.io/install/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-10-16T10:36:47+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack prerequisites","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"url":"https://xpack.github.io/install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -668,7 +668,7 @@ some dependencies require new features. Detailed instructions
 for each supported platform are available in the next section.</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>node <span class="nt">--version</span>
-<span class="go">v18.16.0
+<span class="go">v18.18.2
 </span></code></pre></div></div>
 
 <p>If this is your first encounter with <strong>npm</strong>, you need to install the
@@ -712,7 +712,7 @@ system path since it includes the <code class="language-plaintext highlighter-ro
 <pre><code class="language-doscon">C:\&gt;where node.exe
 C:\Program Files\nodejs\node.exe
 C:\&gt;node --version
-v18.16.0
+v18.18.2
 </code></pre>
 
 <h2 id="npm-update"><code class="language-plaintext highlighter-rouge">npm</code> update</h2>
@@ -722,7 +722,7 @@ v18.16.0
 <pre><code class="language-doscon">C:\&gt;where npm.cmd
 C:\Program Files\nodejs\npm.cmd
 C:\&gt;npm --version
-9.6.0
+9.8.1
 </code></pre>
 
 <p>It is recommended to update it to the latest version:</p>
@@ -739,7 +739,7 @@ removed 1 package, and changed 60 packages in 5s
 <pre><code class="language-doscon">C:\&gt;where npm.cmd
 C:\Program Files\nodejs\npm.cmd
 C:\&gt;npm --version
-9.6.0
+9.8.1
 </code></pre>
 
 <p>This is because on Windows, by default, global node packages are
@@ -771,7 +771,7 @@ the syntax to match their specifics.</div>
 <p>After this, the new version of the program should be visible:</p>
 
 <pre><code class="language-doscon">C:\&gt;npm --version
-9.6.6
+10.2.0
 </code></pre>
 
 <h2 id="git">Git</h2>
@@ -888,7 +888,7 @@ are also part of Xcode, their location is not fixed, hence the Command
 Line Tools package must still be installed, for the xPack toolchains to
 find them in the expected location.</div>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If the <code class="language-plaintext highlighter-rouge">install-nvm-node-npm-xpm.sh</code>
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> If the <code class="language-plaintext highlighter-rouge">install-nvm-node-npm-xpm.sh</code>
 script was successful,
 the rest of this page is only informative and can be skipped.</div>
 
@@ -934,53 +934,52 @@ terminal (to make use of the new environment variables) and issue the
 following:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">% nvm install --lts node
-Downloading and installing node v16.18.0...
-Downloading https://nodejs.org/dist/v16.18.0/node-v16.18.0-darwin-x64.tar.xz...
-</span><span class="gp">#</span><span class="c">############################################################################################ 100.0%</span>
+Downloading and installing node v18.18.2...
+Downloading https://nodejs.org/dist/v18.18.2/node-v18.18.2-darwin-x64.tar.xz...
+</span><span class="gp">#</span><span class="c">######################################################################## 100.0%</span>
 <span class="go">Computing checksum with shasum -a 256
 Checksums matched!
-Now using node v16.18.0 (npm v8.19.2)
-
+Now using node v18.18.2 (npm v9.8.1)
+</span><span class="gp">Creating default alias: default -&gt;</span><span class="w"> </span>lts/<span class="k">*</span> <span class="o">(</span>-&gt; v18.18.2<span class="o">)</span>
+<span class="go">
 </span><span class="gp">$</span><span class="w"> </span>nvm <span class="nb">ls</span>
-<span class="go">      v12.22.12
-</span><span class="gp">-&gt;</span><span class="w">     </span>v16.18.0
-<span class="gp">default -&gt;</span><span class="w"> </span>node <span class="o">(</span>-&gt; v16.18.0<span class="o">)</span>
+<span class="gp">-&gt;</span><span class="w">     </span>v18.18.2
+<span class="gp">default -&gt;</span><span class="w"> </span>lts/<span class="k">*</span> <span class="o">(</span>-&gt; v18.18.2<span class="o">)</span>
 <span class="gp">iojs -&gt;</span><span class="w"> </span>N/A <span class="o">(</span>default<span class="o">)</span>
 <span class="gp">unstable -&gt;</span><span class="w"> </span>N/A <span class="o">(</span>default<span class="o">)</span>
-<span class="gp">node -&gt;</span><span class="w"> </span>stable <span class="o">(</span>-&gt; v16.18.0<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
-<span class="gp">stable -&gt;</span><span class="w"> </span>16.18 <span class="o">(</span>-&gt; v16.18.0<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
-<span class="gp">lts/* -&gt;</span><span class="w"> </span>lts/gallium <span class="o">(</span>-&gt; v16.18.0<span class="o">)</span>
+<span class="gp">node -&gt;</span><span class="w"> </span>stable <span class="o">(</span>-&gt; v18.18.2<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">stable -&gt;</span><span class="w"> </span>18.18 <span class="o">(</span>-&gt; v18.18.2<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">lts/* -&gt;</span><span class="w"> </span>lts/hydrogen <span class="o">(</span>-&gt; v18.18.2<span class="o">)</span>
 <span class="gp">lts/argon -&gt;</span><span class="w"> </span>v4.9.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
 <span class="gp">lts/boron -&gt;</span><span class="w"> </span>v6.17.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
 <span class="gp">lts/carbon -&gt;</span><span class="w"> </span>v8.17.0 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
 <span class="gp">lts/dubnium -&gt;</span><span class="w"> </span>v10.24.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
-<span class="gp">lts/erbium -&gt;</span><span class="w"> </span>v12.22.12
-<span class="gp">lts/fermium -&gt;</span><span class="w"> </span>v14.20.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
-<span class="gp">lts/gallium -&gt;</span><span class="w"> </span>v16.18.0
+<span class="gp">lts/erbium -&gt;</span><span class="w"> </span>v12.22.12 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/fermium -&gt;</span><span class="w"> </span>v14.21.3 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/gallium -&gt;</span><span class="w"> </span>v16.20.2 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/hydrogen -&gt;</span><span class="w"> </span>v18.18.2
 <span class="go">
 </span><span class="gp">$</span><span class="w"> </span>nvm use node
-<span class="go">Now using node v16.18.0 (npm v8.19.2)
+<span class="go">Now using node v18.18.2 (npm v9.8.1)
 
 </span><span class="gp">$</span><span class="w"> </span>nvm <span class="nb">alias </span>default node
-<span class="gp">default -&gt;</span><span class="w"> </span>node <span class="o">(</span>-&gt; v16.18.0<span class="o">)</span>
+<span class="gp">default -&gt;</span><span class="w"> </span>node <span class="o">(</span>-&gt; v18.18.2<span class="o">)</span>
 <span class="go">
 </span><span class="gp">$</span><span class="w"> </span>node <span class="nt">--version</span>
-<span class="go">v16.18.0
+<span class="go">v18.18.2
 
 </span><span class="gp">$</span><span class="w"> </span>nvm install-latest-npm
 <span class="go">Attempting to upgrade to the latest working version of npm...
 </span><span class="gp">* Installing latest `npm`;</span><span class="w"> </span><span class="k">if </span>this does not work on your node version, please report a bug!
 <span class="go">
-changed 16 packages, and audited 212 packages in 1s
+removed 2 packages, and changed 62 packages in 2s
 
-11 packages are looking for funding
+29 packages are looking for funding
   run `npm fund` for details
-
-found 0 vulnerabilities
-* npm upgraded to: v8.19.2
+* npm upgraded to: v10.2.0
 
 </span><span class="gp">$</span><span class="w"> </span>which npm
-<span class="go">/Users/ilg/.nvm/versions/node/v16.18.0/bin/npm
+<span class="go">/Users/ilg/.nvm/versions/node/v18.18.2/bin/npm
 </span></code></pre></div></div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Please note that this will install the latest
@@ -989,52 +988,55 @@ the <code class="language-plaintext highlighter-rouge">--lts</code> option.</div
 
 <p>To explicitly install a previous version and to switch to it:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">% nvm install 12
-Downloading and installing node v12.22.12...
-Downloading https://nodejs.org/dist/v12.22.12/node-v12.22.12-darwin-x64.tar.xz...
-</span><span class="gp">#</span><span class="c">####################################################################################################### 100.0%</span>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">% nvm install 16
+Downloading and installing node v16.20.2...
+Downloading https://nodejs.org/dist/v16.20.2/node-v16.20.2-darwin-x64.tar.xz...
+</span><span class="gp">#</span><span class="c">######################################################################## 100.0%</span>
 <span class="go">Computing checksum with shasum -a 256
 Checksums matched!
+Now using node v16.20.2 (npm v8.19.4)
 
 % nvm ls
-       v10.24.1
-</span><span class="gp">-&gt;</span><span class="w">    </span>v12.22.12
-<span class="go">       v16.14.2
-       v16.16.0
-</span><span class="gp">default -&gt;</span><span class="w"> </span>12 <span class="o">(</span>-&gt; v12.22.12<span class="o">)</span>
+</span><span class="gp">-&gt;</span><span class="w">     </span>v16.20.2
+<span class="go">       v18.18.2
+</span><span class="gp">default -&gt;</span><span class="w"> </span>node <span class="o">(</span>-&gt; v18.18.2<span class="o">)</span>
 <span class="gp">iojs -&gt;</span><span class="w"> </span>N/A <span class="o">(</span>default<span class="o">)</span>
 <span class="gp">unstable -&gt;</span><span class="w"> </span>N/A <span class="o">(</span>default<span class="o">)</span>
-<span class="gp">node -&gt;</span><span class="w"> </span>stable <span class="o">(</span>-&gt; v16.16.0<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
-<span class="gp">stable -&gt;</span><span class="w"> </span>16.16 <span class="o">(</span>-&gt; v16.16.0<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
-<span class="gp">lts/* -&gt;</span><span class="w"> </span>lts/gallium <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">node -&gt;</span><span class="w"> </span>stable <span class="o">(</span>-&gt; v18.18.2<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">stable -&gt;</span><span class="w"> </span>18.18 <span class="o">(</span>-&gt; v18.18.2<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">lts/* -&gt;</span><span class="w"> </span>lts/hydrogen <span class="o">(</span>-&gt; v18.18.2<span class="o">)</span>
 <span class="gp">lts/argon -&gt;</span><span class="w"> </span>v4.9.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
 <span class="gp">lts/boron -&gt;</span><span class="w"> </span>v6.17.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
 <span class="gp">lts/carbon -&gt;</span><span class="w"> </span>v8.17.0 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
-<span class="gp">lts/dubnium -&gt;</span><span class="w"> </span>v10.24.1
-<span class="gp">lts/erbium -&gt;</span><span class="w"> </span>v12.22.12
-<span class="gp">lts/fermium -&gt;</span><span class="w"> </span>v14.20.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
-<span class="gp">lts/gallium -&gt;</span><span class="w"> </span>v16.18.0 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/dubnium -&gt;</span><span class="w"> </span>v10.24.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/erbium -&gt;</span><span class="w"> </span>v12.22.12 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/fermium -&gt;</span><span class="w"> </span>v14.21.3 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/gallium -&gt;</span><span class="w"> </span>v16.20.2
+<span class="gp">lts/hydrogen -&gt;</span><span class="w"> </span>v18.18.2
 <span class="go">
-% nvm use 12
-Now using node v12.22.12 (npm v6.14.16)
+% nvm use 16
+Now using node v16.20.2 (npm v8.19.4)
 
-% nvm alias default 12
-</span><span class="gp">default -&gt;</span><span class="w"> </span>12 <span class="o">(</span>-&gt; v12.22.12<span class="o">)</span>
+% nvm alias default 16
+</span><span class="gp">default -&gt;</span><span class="w"> </span>16 <span class="o">(</span>-&gt; v16.20.2<span class="o">)</span>
 <span class="go">
 % node --version
-v12.22.12
+v16.20.2
 
 % nvm install-latest-npm
 Attempting to upgrade to the latest working version of npm...
-</span><span class="gp">* Installing latest `npm`;</span><span class="w"> </span><span class="k">if </span>this does not work on your node version, please report a bug!
-<span class="gp">/Users/ilg/.nvm/versions/node/v12.22.12/bin/npx -&gt;</span><span class="w"> </span>/Users/ilg/.nvm/versions/node/v12.22.12/lib/node_modules/npm/bin/npx-cli.js
-<span class="gp">/Users/ilg/.nvm/versions/node/v12.22.12/bin/npm -&gt;</span><span class="w"> </span>/Users/ilg/.nvm/versions/node/v12.22.12/lib/node_modules/npm/bin/npm-cli.js
-<span class="go">+ npm@8.19.2
-added 73 packages from 21 contributors, removed 299 packages and updated 138 packages in 5.001s
-* npm upgraded to: v8.19.2
+* `npm` `v9.x` is the last version that works on `node` `&lt; v18.17`, `v19`, or `v20.0` - `v20.4`
+
+removed 17 packages, changed 101 packages, and audited 252 packages in 2s
+
+28 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+* npm upgraded to: v9.9.0
 
 </span><span class="gp">$</span><span class="w"> </span>which npm
-<span class="go">/Users/ilg/.nvm/versions/node/v12.22.12/bin/npm
+<span class="go">/Users/ilg/.nvm/versions/node/v16.20.2/bin/npm
 </span></code></pre></div></div>
 
 <p>At any time, to switch between any of the installed versions,
@@ -1106,7 +1108,7 @@ to the shell initialisation script.</div>
 <div class="bs-callout bs-callout-">Arm platforms, like the Raspberry Pi,
 are supported, currently in both 32/64-bit variants.</div>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If the <code class="language-plaintext highlighter-rouge">install-nvm-node-npm-xpm.sh</code>
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> If the <code class="language-plaintext highlighter-rouge">install-nvm-node-npm-xpm.sh</code>
 script was successful,
 the rest of this page is only informative and can be skipped.</div>
 
@@ -1149,46 +1151,53 @@ distributions.</p>
 terminal (to make use of the new environment variables) and issue the
 following:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>nvm <span class="nb">install</span> <span class="nt">--lts</span> node
-<span class="go">Downloading and installing node v12.13.0...
-Downloading https://nodejs.org/dist/v12.13.0/node-v12.13.0-linux-x64.tar.xz...
-</span><span class="gp">#</span><span class="c">###################################################################################################################### 100.0%</span>
-<span class="go">Computing checksum with sha256sum
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">% nvm install --lts node
+Downloading and installing node v18.18.2...
+Downloading https://nodejs.org/dist/v18.18.2/node-v18.18.2-darwin-x64.tar.xz...
+</span><span class="gp">#</span><span class="c">######################################################################## 100.0%</span>
+<span class="go">Computing checksum with shasum -a 256
 Checksums matched!
-</span><span class="gp">Creating default alias: default -&gt;</span><span class="w"> </span>lts/<span class="k">*</span> <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span>
+Now using node v18.18.2 (npm v9.8.1)
+</span><span class="gp">Creating default alias: default -&gt;</span><span class="w"> </span>lts/<span class="k">*</span> <span class="o">(</span>-&gt; v18.18.2<span class="o">)</span>
 <span class="go">
 </span><span class="gp">$</span><span class="w"> </span>nvm <span class="nb">ls</span>
-<span class="gp">-&gt;</span><span class="w">     </span>v12.13.0
-<span class="go">         system
-</span><span class="gp">default -&gt;</span><span class="w"> </span>lts/<span class="k">*</span> <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span>
-<span class="gp">node -&gt;</span><span class="w"> </span>stable <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
-<span class="gp">stable -&gt;</span><span class="w"> </span>12.13 <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">-&gt;</span><span class="w">     </span>v18.18.2
+<span class="gp">default -&gt;</span><span class="w"> </span>lts/<span class="k">*</span> <span class="o">(</span>-&gt; v18.18.2<span class="o">)</span>
 <span class="gp">iojs -&gt;</span><span class="w"> </span>N/A <span class="o">(</span>default<span class="o">)</span>
 <span class="gp">unstable -&gt;</span><span class="w"> </span>N/A <span class="o">(</span>default<span class="o">)</span>
-<span class="gp">lts/* -&gt;</span><span class="w"> </span>lts/erbium <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span>
+<span class="gp">node -&gt;</span><span class="w"> </span>stable <span class="o">(</span>-&gt; v18.18.2<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">stable -&gt;</span><span class="w"> </span>18.18 <span class="o">(</span>-&gt; v18.18.2<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">lts/* -&gt;</span><span class="w"> </span>lts/hydrogen <span class="o">(</span>-&gt; v18.18.2<span class="o">)</span>
 <span class="gp">lts/argon -&gt;</span><span class="w"> </span>v4.9.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
 <span class="gp">lts/boron -&gt;</span><span class="w"> </span>v6.17.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
-<span class="gp">lts/carbon -&gt;</span><span class="w"> </span>v8.16.2 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
-<span class="gp">lts/dubnium -&gt;</span><span class="w"> </span>v10.17.0 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
-<span class="gp">lts/erbium -&gt;</span><span class="w"> </span>v12.13.0
+<span class="gp">lts/carbon -&gt;</span><span class="w"> </span>v8.17.0 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/dubnium -&gt;</span><span class="w"> </span>v10.24.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/erbium -&gt;</span><span class="w"> </span>v12.22.12 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/fermium -&gt;</span><span class="w"> </span>v14.21.3 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/gallium -&gt;</span><span class="w"> </span>v16.20.2 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/hydrogen -&gt;</span><span class="w"> </span>v18.18.2
 <span class="go">
 </span><span class="gp">$</span><span class="w"> </span>nvm use node
-<span class="go">Now using node v12.13.0 (npm v6.12.0)
+<span class="go">Now using node v18.18.2 (npm v9.8.1)
 
+</span><span class="gp">$</span><span class="w"> </span>nvm <span class="nb">alias </span>default node
+<span class="gp">default -&gt;</span><span class="w"> </span>node <span class="o">(</span>-&gt; v18.18.2<span class="o">)</span>
+<span class="go">
 </span><span class="gp">$</span><span class="w"> </span>node <span class="nt">--version</span>
-<span class="go">v12.13.0
+<span class="go">v18.18.2
 
 </span><span class="gp">$</span><span class="w"> </span>nvm install-latest-npm
 <span class="go">Attempting to upgrade to the latest working version of npm...
 </span><span class="gp">* Installing latest `npm`;</span><span class="w"> </span><span class="k">if </span>this does not work on your node version, please report a bug!
-<span class="gp">/home/ilg/.nvm/versions/node/v12.13.0/bin/npm -&gt;</span><span class="w"> </span>/home/ilg/.nvm/versions/node/v12.13.0/lib/node_modules/npm/bin/npm-cli.js
-<span class="gp">/home/ilg/.nvm/versions/node/v12.13.0/bin/npx -&gt;</span><span class="w"> </span>/home/ilg/.nvm/versions/node/v12.13.0/lib/node_modules/npm/bin/npx-cli.js
-<span class="go">+ npm@6.13.0
-added 2 packages from 2 contributors, removed 2 packages and updated 15 packages in 8.68s
-* npm upgraded to: v6.13.0
+<span class="go">
+removed 2 packages, and changed 62 packages in 2s
+
+29 packages are looking for funding
+  run `npm fund` for details
+* npm upgraded to: v10.2.0
 
 </span><span class="gp">$</span><span class="w"> </span>which npm
-<span class="go">/home/ilg/.nvm/versions/node/v12.13.0/bin/npm
+<span class="go">/home/ilg/.nvm/versions/node/v18.18.2/bin/npm
 </span></code></pre></div></div>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Please note that this will install the latest
@@ -1197,46 +1206,55 @@ the <code class="language-plaintext highlighter-rouge">--lts</code> option.</div
 
 <p>To explicitly install a previous version and to switch to it:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>nvm <span class="nb">install </span>10
-<span class="go">Downloading https://nodejs.org/dist/v10.17.0/node-v10.17.0-linux-x64.tar.xz...
-</span><span class="gp">#</span><span class="c">###################################################################################################################### 100.0%</span>
-<span class="go">Computing checksum with sha256sum
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">% nvm install 16
+Downloading and installing node v16.20.2...
+Downloading https://nodejs.org/dist/v16.20.2/node-v16.20.2-darwin-x64.tar.xz...
+</span><span class="gp">#</span><span class="c">######################################################################## 100.0%</span>
+<span class="go">Computing checksum with shasum -a 256
 Checksums matched!
-Now using node v10.17.0 (npm v6.11.3)
+Now using node v16.20.2 (npm v8.19.4)
 
-</span><span class="gp">$</span><span class="w"> </span>nvm <span class="nb">ls</span>
-<span class="gp">-&gt;</span><span class="w">     </span>v10.17.0
-<span class="go">       v12.13.0
-         system
-</span><span class="gp">default -&gt;</span><span class="w"> </span>lts/<span class="k">*</span> <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span>
-<span class="gp">node -&gt;</span><span class="w"> </span>stable <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
-<span class="gp">stable -&gt;</span><span class="w"> </span>12.13 <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
+% nvm ls
+</span><span class="gp">-&gt;</span><span class="w">     </span>v16.20.2
+<span class="go">       v18.18.2
+</span><span class="gp">default -&gt;</span><span class="w"> </span>node <span class="o">(</span>-&gt; v18.18.2<span class="o">)</span>
 <span class="gp">iojs -&gt;</span><span class="w"> </span>N/A <span class="o">(</span>default<span class="o">)</span>
 <span class="gp">unstable -&gt;</span><span class="w"> </span>N/A <span class="o">(</span>default<span class="o">)</span>
-<span class="gp">lts/* -&gt;</span><span class="w"> </span>lts/erbium <span class="o">(</span>-&gt; v12.13.0<span class="o">)</span>
+<span class="gp">node -&gt;</span><span class="w"> </span>stable <span class="o">(</span>-&gt; v18.18.2<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">stable -&gt;</span><span class="w"> </span>18.18 <span class="o">(</span>-&gt; v18.18.2<span class="o">)</span> <span class="o">(</span>default<span class="o">)</span>
+<span class="gp">lts/* -&gt;</span><span class="w"> </span>lts/hydrogen <span class="o">(</span>-&gt; v18.18.2<span class="o">)</span>
 <span class="gp">lts/argon -&gt;</span><span class="w"> </span>v4.9.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
 <span class="gp">lts/boron -&gt;</span><span class="w"> </span>v6.17.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
-<span class="gp">lts/carbon -&gt;</span><span class="w"> </span>v8.16.2 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
-<span class="gp">lts/dubnium -&gt;</span><span class="w"> </span>v10.17.0
-<span class="gp">lts/erbium -&gt;</span><span class="w"> </span>v12.13.0
+<span class="gp">lts/carbon -&gt;</span><span class="w"> </span>v8.17.0 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/dubnium -&gt;</span><span class="w"> </span>v10.24.1 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/erbium -&gt;</span><span class="w"> </span>v12.22.12 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/fermium -&gt;</span><span class="w"> </span>v14.21.3 <span class="o">(</span>-&gt; N/A<span class="o">)</span>
+<span class="gp">lts/gallium -&gt;</span><span class="w"> </span>v16.20.2
+<span class="gp">lts/hydrogen -&gt;</span><span class="w"> </span>v18.18.2
 <span class="go">
-</span><span class="gp">$</span><span class="w"> </span>nvm use 10
-<span class="go">Now using node v10.17.0 (npm v6.11.3)
+% nvm use 16
+Now using node v16.20.2 (npm v8.19.4)
 
-</span><span class="gp">$</span><span class="w"> </span>node <span class="nt">--version</span>
-<span class="go">v10.17.0
+% nvm alias default 16
+</span><span class="gp">default -&gt;</span><span class="w"> </span>16 <span class="o">(</span>-&gt; v16.20.2<span class="o">)</span>
+<span class="go">
+% node --version
+v16.20.2
 
-</span><span class="gp">$</span><span class="w"> </span>nvm install-latest-npm
-<span class="go">Attempting to upgrade to the latest working version of npm...
-</span><span class="gp">* Installing latest `npm`;</span><span class="w"> </span><span class="k">if </span>this does not work on your node version, please report a bug!
-<span class="gp">/Users/ilg/.nvm/versions/node/v10.17.0/bin/npm -&gt;</span><span class="w"> </span>/Users/ilg/.nvm/versions/node/v10.17.0/lib/node_modules/npm/bin/npm-cli.js
-<span class="gp">/Users/ilg/.nvm/versions/node/v10.17.0/bin/npx -&gt;</span><span class="w"> </span>/Users/ilg/.nvm/versions/node/v10.17.0/lib/node_modules/npm/bin/npx-cli.js
-<span class="go">+ npm@6.13.0
-added 3 packages from 2 contributors, removed 3 packages and updated 20 packages in 3.081s
-* npm upgraded to: v6.13.0
+% nvm install-latest-npm
+Attempting to upgrade to the latest working version of npm...
+* `npm` `v9.x` is the last version that works on `node` `&lt; v18.17`, `v19`, or `v20.0` - `v20.4`
+
+removed 17 packages, changed 101 packages, and audited 252 packages in 2s
+
+28 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+* npm upgraded to: v9.9.0
 
 </span><span class="gp">$</span><span class="w"> </span>which npm
-<span class="go">/Users/ilg/.nvm/versions/node/v10.17.0/bin/npm
+<span class="go">/home/ilg/.nvm/versions/node/v16.20.2/bin/npm
 </span></code></pre></div></div>
 
 <p>At any time, to switch between any of the installed versions,
@@ -1329,7 +1347,7 @@ builds, or to build it from sources; for more details see the
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2023 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Sep 26, 2023<br/> Site last generated: Sep 26, 2023 <br />
+<span>Page last updated:</span> Oct 16, 2023<br/> Site last generated: Oct 16, 2023 <br />
                 </div>
             </div>
 </footer>
