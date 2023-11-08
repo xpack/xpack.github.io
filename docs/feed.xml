@@ -5,9 +5,33 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 16 Oct 2023 10:43:28 +0000</pubDate>
-        <lastBuildDate>Mon, 16 Oct 2023 10:43:28 +0000</lastBuildDate>
+        <pubDate>Wed, 08 Nov 2023 16:57:36 +0000</pubDate>
+        <lastBuildDate>Wed, 08 Nov 2023 16:57:36 +0000</lastBuildDate>
         <generator>Jekyll v3.9.3</generator>
+        
+        <item>
+            <title>xPack GNU AArch64 Embedded GCC v13.2.1-1.1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/aarch64-none-elf-gcc/&quot;&gt;The xPack GNU AArch64 Embedded GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain&quot;&gt;Arm GNU Toolchain&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Wed, 08 Nov 2023 16:37:06 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2023/11/08/aarch64-none-elf-gcc-v13-2-1-1-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2023/11/08/aarch64-none-elf-gcc-v13-2-1-1-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>arm</category>
+            
+            <category>aarch64-none-elf-gcc</category>
+            
+            <category>gcc</category>
+            
+            <category>binaries</category>
+            
+            <category>c++</category>
+            
+            <category>exceptions</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack xpm v0.17.0 released</title>
@@ -183,20 +207,6 @@
             <category>releases</category>
             
             <category>sed</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack GNU M4 v1.4.19-3 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/m4/&quot;&gt;The xPack GNU M4&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://www.gnu.org/software/m4/&quot;&gt;GNU M4&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Wed, 06 Sep 2023 11:41:31 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2023/09/06/m4-v1-4-19-3-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2023/09/06/m4-v1-4-19-3-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>m4</category>
             
             
         </item>
