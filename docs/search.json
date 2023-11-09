@@ -2996,6 +2996,16 @@
 
 
 {
+"title": "xPack GNU Arm Embedded GCC v13.2.1-1.1 released",
+"tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
+"keywords": "",
+"url": "/blog/2023/11/09/arm-none-eabi-gcc-v13-2-1-1-1-released/",
+"summary": "<p>Version <strong>13.2.1-1.1</strong> is a new release; it follows the Arm release.</p>"
+}
+,
+
+
+{
 "title": "xPack GNU AArch64 Embedded GCC v13.2.1-1.1 released",
 "tags": "releasesarmaarch64-none-elf-gccgccbinariesc++exceptions",
 "keywords": "",
