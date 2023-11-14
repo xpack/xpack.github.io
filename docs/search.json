@@ -2996,6 +2996,16 @@
 
 
 {
+"title": "xPack Windows Build Tools v4.4.1-2 released",
+"tags": "releaseswindows-build-toolsbuildmakermmkdirbusybox",
+"keywords": "",
+"url": "/blog/2023/11/14/windows-build-tools-v4-4-1-2-released/",
+"summary": "<p>Version <strong>4.4.1-2</strong> is a maintenance release of the <strong>xPack Windows Build Tools</strong> package; it disables the BusyBox <strong>make</strong> applet which interferes with the <strong>GNU make</strong>.</p>"
+}
+,
+
+
+{
 "title": "xPack GNU Arm Embedded GCC v13.2.1-1.1 released",
 "tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
 "keywords": "",
