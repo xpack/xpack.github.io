@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack QEMU Arm v7.2.5-1 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-11-14T09:27:27+00:00","datePublished":"2023-09-03T06:04:10+00:00","description":"The xPack QEMU Arm is a standalone cross-platform binary distribution of QEMU, with several extensions for Arm Cortex-M devices.","headline":"xPack QEMU Arm v7.2.5-1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2023/09/03/qemu-arm-v7-2-5-1-released/"},"url":"https://xpack.github.io/blog/2023/09/03/qemu-arm-v7-2-5-1-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-11-16T05:55:01+00:00","datePublished":"2023-09-03T06:04:10+00:00","description":"The xPack QEMU Arm is a standalone cross-platform binary distribution of QEMU, with several extensions for Arm Cortex-M devices.","headline":"xPack QEMU Arm v7.2.5-1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2023/09/03/qemu-arm-v7-2-5-1-released/"},"url":"https://xpack.github.io/blog/2023/09/03/qemu-arm-v7-2-5-1-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -802,7 +802,8 @@ compatibility reasons.</p>
 
 <h2 id="changes">Changes</h2>
 
-<p>Compared to the upstream <code class="language-plaintext highlighter-rouge">qemu-system-arm</code>, there are no major changes.</p>
+<p>Compared to the upstream <code class="language-plaintext highlighter-rouge">qemu-system-arm</code> and <code class="language-plaintext highlighter-rouge">qemu-system-aarch64</code>,
+there are no major changes.</p>
 
 <p>The supported boards and CPUs are:</p>
 
@@ -913,6 +914,7 @@ virt-7.2             QEMU 7.2 ARM Virtual Machine
 witherspoon-bmc      OpenPOWER Witherspoon BMC (ARM1176)
 xilinx-zynq-a9       Xilinx Zynq Platform Baseboard for Cortex-A9
 z2                   Zipit Z2 (PXA27x)
+
 </span><span class="gp">$</span><span class="w"> </span>.../qemu-arm/bin/qemu-system-arm <span class="nt">-cpu</span> <span class="nb">help</span>
 <span class="go">Available CPUs:
   arm1026
@@ -935,6 +937,51 @@ z2                   Zipit Z2 (PXA27x)
   cortex-r5
   cortex-r5f
   max
+  pxa250
+  pxa255
+  pxa260
+  pxa261
+  pxa262
+  pxa270-a0
+  pxa270-a1
+  pxa270
+  pxa270-b0
+  pxa270-b1
+  pxa270-c0
+  pxa270-c5
+  sa1100
+  sa1110
+  ti925t
+
+</span><span class="gp">$</span><span class="w"> </span>.../qemu-system-aarch64 <span class="nt">-cpu</span> <span class="nb">help</span>
+<span class="go">Available CPUs:
+  a64fx
+  arm1026
+  arm1136
+  arm1136-r2
+  arm1176
+  arm11mpcore
+  arm926
+  arm946
+  cortex-a15
+  cortex-a35
+  cortex-a53
+  cortex-a57
+  cortex-a7
+  cortex-a72
+  cortex-a76
+  cortex-a8
+  cortex-a9
+  cortex-m0
+  cortex-m3
+  cortex-m33
+  cortex-m4
+  cortex-m55
+  cortex-m7
+  cortex-r5
+  cortex-r5f
+  max
+  neoverse-n1
   pxa250
   pxa255
   pxa260
@@ -1247,7 +1294,7 @@ for the individual file counters.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2023 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Nov 14, 2023<br/> Site last generated: Nov 14, 2023 <br />
+<span>Page last updated:</span> Nov 16, 2023<br/> Site last generated: Nov 16, 2023 <br />
                 </div>
             </div>
 </footer>
