@@ -2996,6 +2996,16 @@
 
 
 {
+"title": "xPack xpm v0.18.0 released",
+"tags": "releasesxpmpackagemanager",
+"keywords": "",
+"url": "/blog/2023/11/17/xpm-v0-18-0-released/",
+"summary": "<p>Version <strong>0.18.0</strong> is a new release, it adds –all-configs to xpm run.</p>"
+}
+,
+
+
+{
 "title": "xPack Windows Build Tools v4.4.1-2 released",
 "tags": "releaseswindows-build-toolsbuildmakermmkdirbusybox",
 "keywords": "",
