@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install xpm" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-11-17T21:00:28+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install xpm","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/install/"},"url":"https://xpack.github.io/xpm/install/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2023-11-21T07:33:04+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install xpm","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/install/"},"url":"https://xpack.github.io/xpm/install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -689,6 +689,21 @@ extracted in a folder named <code class="language-plaintext highlighter-rouge">.
 starting with dot visible,
 using it again reverts to hiding them.</p>
 
+<h2 id="proxy">Proxy</h2>
+
+<p>If you are behind a firewall, you need to configure
+a proxy.</p>
+
+<p>xpm uses the same modules to fetch the package (<code class="language-plaintext highlighter-rouge">pacote</code>), so
+setting a proxy for npm should also work for xpm.</p>
+
+<p>In addition, xpm uses (<code class="language-plaintext highlighter-rouge">node-fetch</code>,
+<code class="language-plaintext highlighter-rouge">https-proxy-agent</code>, <code class="language-plaintext highlighter-rouge">proxy-from-env</code>) to download the binary
+archive. These packages require setting the <code class="language-plaintext highlighter-rouge">http_proxy</code> &amp; <code class="language-plaintext highlighter-rouge">https_proxy</code>
+variables in the environment.
+See <a href="https://www.npmjs.com/package/proxy-from-env">proxy-from-env</a> for
+details.</p>
+
 <h2 id="zsh-command-not-found-xpm"><code class="language-plaintext highlighter-rouge">zsh: command not found: xpm</code></h2>
 
 <p>If you recently switched to <code class="language-plaintext highlighter-rouge">zsh</code>, or updated macOS to 11.x, which does
@@ -766,7 +781,7 @@ npm xpm@0.10.2 '/Users/ilg/.nvm/versions/node/v14.16.0/lib/node_modules/xpm'
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2023 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Nov 17, 2023<br/> Site last generated: Nov 17, 2023 <br />
+<span>Page last updated:</span> Nov 21, 2023<br/> Site last generated: Nov 21, 2023 <br />
                 </div>
             </div>
 </footer>
