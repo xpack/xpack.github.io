@@ -2996,6 +2996,16 @@
 
 
 {
+"title": "xPack Meson Build v1.3.0-1 released",
+"tags": "releasesmeson-buildmesonbuildpythonninja",
+"keywords": "",
+"url": "/blog/2023/11/26/meson-build-v1-3-0-1-released/",
+"summary": "<p>Version <strong>1.3.0-1</strong> is a new release; it follows the upstream release.</p>"
+}
+,
+
+
+{
 "title": "xPack Meson Build v1.2.3-1 released",
 "tags": "releasesmeson-buildmesonbuildpythonninja",
 "keywords": "",
