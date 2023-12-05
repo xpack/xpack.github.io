@@ -2996,6 +2996,16 @@
 
 
 {
+"title": "xPack GCC v11.4.0-1 released",
+"tags": "releasesgcc",
+"keywords": "",
+"url": "/blog/2023/12/05/gcc-v11-4-0-1-released/",
+"summary": "<p>Version <strong>11.4.0-1</strong> is a new release; it follows the official GNU GCC release.</p>"
+}
+,
+
+
+{
 "title": "xPack LLVM clang v17.0.6-1 released",
 "tags": "releasesclang",
 "keywords": "",
