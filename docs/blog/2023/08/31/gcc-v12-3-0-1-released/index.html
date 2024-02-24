@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack GCC v12.3.0-1 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-02-24T07:09:26+00:00","datePublished":"2023-08-31T11:06:48+00:00","description":"The xPack GCC is a standalone cross-platform binary distribution of GCC.","headline":"xPack GCC v12.3.0-1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2023/08/31/gcc-v12-3-0-1-released/"},"url":"https://xpack.github.io/blog/2023/08/31/gcc-v12-3-0-1-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-02-24T17:08:41+00:00","datePublished":"2023-08-31T11:06:48+00:00","description":"The xPack GCC is a standalone cross-platform binary distribution of GCC.","headline":"xPack GCC v12.3.0-1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2023/08/31/gcc-v12-3-0-1-released/"},"url":"https://xpack.github.io/blog/2023/08/31/gcc-v12-3-0-1-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -803,6 +803,10 @@ Linux; it can be enabled via the <code class="language-plaintext highlighter-rou
 <ul>
   <li>the tests failed on RedHat arm 32-bit</li>
   <li>the prerequisites for OpenSUSE tumbleweed arm64 failed to install</li>
+  <li><a href="https://github.com/xpack-dev-tools/gcc-xpack/issues/8">[#8]</a> due to
+an error in the binutils build script, in certain conditions, on Linux,
+the linker complained about a dependency to <code class="language-plaintext highlighter-rouge">libpthread.so</code> and/or
+<code class="language-plaintext highlighter-rouge">libm.so</code>; fixed in 2024-02-24.</li>
 </ul>
 
 <h2 id="shared-libraries">Shared libraries</h2>
