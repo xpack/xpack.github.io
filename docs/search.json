@@ -2996,6 +2996,16 @@
 
 
 {
+"title": "xPack xpm v0.19.0 released",
+"tags": "releasesxpmpackagemanager",
+"keywords": "",
+"url": "/blog/2024/02/27/xpm-v0-19-0-released/",
+"summary": "<p>Version <strong>0.19.0</strong> is a new release, it fixes the dependencies bug and upgrades to node 18.</p>"
+}
+,
+
+
+{
 "title": "xPack GCC v13.2.0-2 released",
 "tags": "releasesgcc",
 "keywords": "",
