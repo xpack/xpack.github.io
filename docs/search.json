@@ -2996,6 +2996,16 @@
 
 
 {
+"title": "xPack CMake v3.27.9-1 released",
+"tags": "releasescmakebuild",
+"keywords": "",
+"url": "/blog/2024/04/02/cmake-v3-27-9-1-released/",
+"summary": "<p>Version <strong>3.27.9-1</strong> is a new release; it follows the upstream release.</p>"
+}
+,
+
+
+{
 "title": "xPack Meson Build v1.3.2-1 released",
 "tags": "releasesmeson-buildmesonbuildpythonninja",
 "keywords": "",
