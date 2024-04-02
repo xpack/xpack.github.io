@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Version 8.2.2-1 is a new release; it follows the upstream QEMU release.">
+<meta name="keywords" content="releasesqemuemulatorrisc-v,  ">
+<title>xPack QEMU RISC-V v8.2.2-1 released | The xPack Build Framework</title>
+<link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
+
+
+<link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
+<link type="application/rss+xml" rel="alternate" title="xpack.github.io" href="https://xpack.github.io/feed.xml">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>xPack QEMU RISC-V v8.2.2-1 released | xpack.github.io</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="xPack QEMU RISC-V v8.2.2-1 released" />
+<meta name="author" content="Liviu Ionescu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The xPack QEMU RISC-V is a standalone cross-platform binary distribution of QEMU." />
+<meta property="og:description" content="The xPack QEMU RISC-V is a standalone cross-platform binary distribution of QEMU." />
+<link rel="canonical" href="https://xpack.github.io/blog/2024/04/02/qemu-riscv-v8-2-2-1-released/" />
+<meta property="og:url" content="https://xpack.github.io/blog/2024/04/02/qemu-riscv-v8-2-2-1-released/" />
+<meta property="og:site_name" content="xpack.github.io" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-04-02T09:44:52+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="xPack QEMU RISC-V v8.2.2-1 released" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-04-02T09:45:34+00:00","datePublished":"2024-04-02T09:44:52+00:00","description":"The xPack QEMU RISC-V is a standalone cross-platform binary distribution of QEMU.","headline":"xPack QEMU RISC-V v8.2.2-1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2024/04/02/qemu-riscv-v8-2-2-1-released/"},"url":"https://xpack.github.io/blog/2024/04/02/qemu-riscv-v8-2-2-1-released/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?202211092358">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://xpack.github.io/css/customstyles.css?202211092358">
+<link rel="stylesheet" href="https://xpack.github.io/css/boxshadowproperties.css?202211092358">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="https://xpack.github.io/css/theme-blue.css?202211092358">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://xpack.github.io/js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="https://xpack.github.io/js/toc.js"></script>
+<script src="https://xpack.github.io/js/customscripts.js"></script>
+
+<!-- Use absolute URLs, to cover preview cases too -->
+<link rel="shortcut icon" href="https://xpack.github.io/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="https://xpack.github.io/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://xpack.github.io/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://xpack.github.io/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://xpack.github.io/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://xpack.github.io/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://xpack.github.io/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://xpack.github.io/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://xpack.github.io/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://xpack.github.io/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://xpack.github.io/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://xpack.github.io/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://xpack.github.io/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://xpack.github.io/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://xpack.github.io/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://xpack.github.io/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks" style="">
+        <div style="display: inline-block; float: left; margin-top: 8px; margin-left: auto; margin-right: 10px;"><img src="/images/company_logo.png" alt="logo" width="32px" height="32px"/></div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="/">&nbsp;<span class="projectTitle"> The xPack Project</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">News<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="/news/">Latest News</a></li>
+                        
+                        
+                        
+                        <li><a href="/news/archive/">Archive</a></li>
+                        
+                        
+                        
+                        <li><a href="/tags/">Tags</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://micro-os-plus.github.io" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Dev Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/micro-os-plus/" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-3rd-party/" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/eclipse-embed-cdt/" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '/search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="xPack QEMU RISC-V v8.2.2-1 released">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3 sticky" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle"> </li>
+  
+  
+  
+  <li>
+      <a title="Getting Started" href="#">Getting Started</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Intro (xPack 101)" href="/intro/">Intro (xPack 101)</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="CI/CD" href="/ci/">CI/CD</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Install prerequisites" href="/install/">Install prerequisites</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Core Tools" href="#">Core Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/core/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm" href="/xpm/">xpm</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="3rd Party Tools" href="#">3rd Party Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/dev-tools/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="aarch64-none-elf-gcc" href="/dev-tools/aarch64-none-elf-gcc/">aarch64-none-elf-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="arm-none-eabi-gcc" href="/dev-tools/arm-none-eabi-gcc/">arm-none-eabi-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="clang" href="/dev-tools/clang/">clang</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="cmake" href="/dev-tools/cmake/">cmake</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="gcc" href="/dev-tools/gcc/">gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="meson-build" href="/dev-tools/meson-build/">meson-build</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="mingw-w64-gcc" href="/dev-tools/mingw-w64-gcc/">mingw-w64-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="ninja-build" href="/dev-tools/ninja-build/">ninja-build</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="openocd" href="/dev-tools/openocd/">openocd</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="qemu-arm" href="/dev-tools/qemu-arm/">qemu-arm</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="qemu-riscv" href="/dev-tools/qemu-riscv/">qemu-riscv</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="riscv-none-elf-gcc" href="/dev-tools/riscv-none-elf-gcc/">riscv-none-elf-gcc</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="windows-build-tools" href="/dev-tools/windows-build-tools/">windows-build-tools</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Other 3rd Party Tools" href="#">Other 3rd Party Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="m4" href="/dev-tools/m4/">m4</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="patchelf" href="/dev-tools/patchelf/">patchelf</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="pkg-config" href="/dev-tools/pkg-config/">pkg-config</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="realpath" href="/dev-tools/realpath/">realpath</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="sed" href="/dev-tools/sed/">sed</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="wine" href="/dev-tools/wine/">wine</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="VS Code Extensions" href="#">VS Code Extensions</a>
+      <ul>
+          
+          
+          
+          <li><a title="xPack C/C++ Build Tools" href="/vscode/">xPack C/C++ Build Tools</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Eclipse" href="#">Eclipse</a>
+      <ul>
+          
+          
+          
+          <li><a class="extern" title="Eclipse Embedded CDT" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Support" href="#">Support</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/support/">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Developer Info" href="#">Developer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/develop/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="How to create a new xPack repo" href="/develop/how-to-new-git/">How to create a new xPack repo</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="JavaScript Style Guide" href="/develop/js-style-guide/">JavaScript Style Guide</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Links" href="/develop/links/">Links</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Maintainer Info" href="#">Maintainer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/maintain/">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Project" href="#">Project</a>
+      <ul>
+          
+          
+          
+          <li><a title="About" href="/project/about/">About</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="History" href="/project/history/">History</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a class="extern" title="License (MIT)" href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">License (MIT)</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise, if placed
+inside customscripts.js, the script runs before the sidebar code runs
+and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">xPack QEMU RISC-V v8.2.2-1 released</h1>
+        <p class="post-meta"><time datetime="2024-04-02T09:44:52+00:00" itemprop="datePublished">Apr 2, 2024</time> <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">/ Liviu Ionescu</span></span> /
+            
+            
+            
+            <a href="/tags/releases/">releases</a>, 
+            
+            
+            
+            <a href="/tags/qemu/">qemu</a>, 
+            
+            
+            
+            <a href="/tags/emulator/">emulator</a>, 
+            
+            
+            
+            <a href="/tags/risc-v/">risc-v</a>
+            
+            
+            
+
+        </p>
+
+
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+
+        
+        <div class="summary">Version <strong>8.2.2-1</strong> is a new release; it follows the upstream QEMU release.
+</div>
+        
+
+        <p><a href="https://xpack.github.io/qemu-riscv/">The xPack QEMU RISC-V</a>
+is a standalone cross-platform binary distribution of
+<a href="https://www.qemu.org">QEMU</a>.</p>
+
+<p>There are separate binaries for <strong>Windows</strong> (Intel 64-bit),
+<strong>macOS</strong> (Intel 64-bit, Apple Silicon 64-bit)
+and <strong>GNU/Linux</strong> (Intel 64-bit, Arm 32/64-bit).</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The main targets for the Arm binaries
+are the <strong>Raspberry Pi</strong> class devices (armv7l and aarch64;
+armv6 is not supported).</div>
+
+<h2 id="download">Download</h2>
+
+<p>The binary files are available from GitHub <a href="https://github.com/xpack-dev-tools/qemu-riscv-xpack/releases/tag/v8.2.2-1/">Releases</a>.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+  <li>GNU/Linux Intel 64-bit: any system with <strong>GLIBC 2.27</strong> or higher
+(like Ubuntu 18 or later, Debian 10 or later, RedHat 8 later,
+Fedora 29 or later, etc)</li>
+  <li>GNU/Linux Arm 32/64-bit: any system with <strong>GLIBC 2.27</strong> or higher
+(like Raspberry Pi OS, Ubuntu 18 or later, Debian 10 or later, RedHat 8 later,
+Fedora 29 or later, etc)</li>
+  <li>Intel Windows 64-bit: Windows 7 with the Universal C Runtime
+(<a href="https://support.microsoft.com/en-us/topic/update-for-universal-c-runtime-in-windows-c0514201-7fe6-95a3-b0a5-287930f3560c">UCRT</a>),
+Windows 8, Windows 10</li>
+  <li>macOS Intel 64-bit: 10.13 or later</li>
+  <li>macOS Apple Silicon 64-bit: 11.6 or later</li>
+</ul>
+
+<p>On GNU/Linux, QEMU requires the X11 libraries to be present. On Debian derived
+distribution they are already in the system; on RedHat &amp; Arch derived
+distributions they must be installed explicitly.</p>
+
+<h2 id="install">Install</h2>
+
+<p>The full details of installing the <strong>xPack QEMU RISC-V</strong> on various platforms
+are presented in the separate
+<a href="/dev-tools/qemu-riscv/install/">Install</a> page.</p>
+
+<h3 id="easy-install">Easy install</h3>
+
+<p>The easiest way to install QEMU RISC-V is with
+<a href="/xpm/"><code class="language-plaintext highlighter-rouge">xpm</code></a>
+by using the <strong>binary xPack</strong>, available as
+<a href="https://www.npmjs.com/package/@xpack-dev-tools/qemu-riscv"><code class="language-plaintext highlighter-rouge">@xpack-dev-tools/qemu-riscv</code></a>
+from the <a href="https://www.npmjs.com"><code class="language-plaintext highlighter-rouge">npmjs.com</code></a> registry.</p>
+
+<p>With the <code class="language-plaintext highlighter-rouge">xpm</code> tool available, installing
+the latest version of the package and adding it as
+a development dependency for a project is quite easy:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>my-project
+xpm init <span class="c"># Add a package.json if not already present</span>
+
+xpm <span class="nb">install</span> @xpack-dev-tools/qemu-riscv@latest <span class="nt">--verbose</span>
+
+<span class="nb">ls</span> <span class="nt">-l</span> xpacks/.bin
+</code></pre></div></div>
+
+<p>To install this specific version, use:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> @xpack-dev-tools/qemu-riscv@8.2.2-1.1 <span class="nt">--verbose</span>
+</code></pre></div></div>
+
+<p>For xPacks aware tools, like the <strong>Eclipse Embedded C/C++ plug-ins</strong>,
+it is also possible to install QEMU RISC-V globally, in the user home folder.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/qemu-riscv@latest <span class="nt">--verbose</span>
+</code></pre></div></div>
+
+<p>Eclipse will automatically
+identify binaries installed with
+<code class="language-plaintext highlighter-rouge">xpm</code> and provide a convenient method to manage paths.</p>
+
+<h3 id="uninstall">Uninstall</h3>
+
+<p>To remove the links created by xpm in the current project:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>my-project
+
+xpm uninstall @xpack-dev-tools/qemu-riscv
+</code></pre></div></div>
+
+<p>To completely remove the package from the central xPack store:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xpm uninstall <span class="nt">--global</span> @xpack-dev-tools/qemu-riscv
+</code></pre></div></div>
+
+<h2 id="compliance">Compliance</h2>
+
+<p>The xPack QEMU RISC-V currently is based on the official <a href="https://www.qemu.org">QEMU</a>,
+with major changes.</p>
+
+<p>The current version is based on:</p>
+
+<ul>
+  <li>QEMU version 8.2.2,
+commit <a href="https://github.com/xpack-dev-tools/qemu/commit/11aa0b1ff115b86160c4d37e7c37e6a6b13b77ea">11aa0b1f</a>
+from 4 Mar 2024.</li>
+</ul>
+
+<h2 id="changes">Changes</h2>
+
+<p>Compared to the master <code class="language-plaintext highlighter-rouge">qemu-system-riscv*</code>, there are no major changes.</p>
+
+<p>The supported boards and CPUs are:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>.../xpack-qemu-riscv-8.2.2-1/bin/qemu-system-riscv32 <span class="nt">-machine</span> <span class="nb">help</span>
+<span class="go">Supported machines are:
+none                 empty machine
+opentitan            RISC-V Board compatible with OpenTitan
+sifive_e             RISC-V Board compatible with SiFive E SDK
+sifive_u             RISC-V Board compatible with SiFive U SDK
+spike                RISC-V Spike board (default)
+virt                 RISC-V VirtIO board
+</span><span class="gp">$</span><span class="w"> </span>.../xpack-qemu-riscv-8.2.2-1/bin/qemu-system-riscv32 <span class="nt">-cpu</span> <span class="nb">help</span>
+<span class="go">any
+lowrisc-ibex
+rv32
+sifive-e31
+sifive-e34
+sifive-u34
+
+</span><span class="gp">$</span><span class="w"> </span>.../xpack-qemu-riscv-8.2.2-1/bin/qemu-system-riscv64 <span class="nt">-machine</span> <span class="nb">help</span>
+<span class="go">Supported machines are:
+microchip-icicle-kit Microchip PolarFire SoC Icicle Kit
+none                 empty machine
+shakti_c             RISC-V Board compatible with Shakti SDK
+sifive_e             RISC-V Board compatible with SiFive E SDK
+sifive_u             RISC-V Board compatible with SiFive U SDK
+spike                RISC-V Spike board (default)
+virt                 RISC-V VirtIO board
+</span><span class="gp">$</span><span class="w"> </span>.../xpack-qemu-riscv-7.0.0-1/bin/qemu-system-riscv64 <span class="nt">-cpu</span> <span class="nb">help</span>
+<span class="go">any
+rv64
+shakti-c
+sifive-e51
+sifive-u54
+x-rv128
+</span></code></pre></div></div>
+
+<h2 id="bug-fixes">Bug fixes</h2>
+
+<ul>
+  <li>none</li>
+</ul>
+
+<h2 id="enhancements">Enhancements</h2>
+
+<ul>
+  <li>none</li>
+</ul>
+
+<h2 id="known-problems">Known problems</h2>
+
+<ul>
+  <li>in order to build on macOS 10.13, the Intel macOS version has
+some functionality related to bridged virtual interfaces disabled.</li>
+</ul>
+
+<h2 id="shared-libraries">Shared libraries</h2>
+
+<p>On all platforms the packages are standalone, and expect only the standard
+runtime to be present on the host.</p>
+
+<p>All dependencies that are build as shared libraries are copied locally
+in the <code class="language-plaintext highlighter-rouge">libexec</code> folder (or in the same folder as the executable for Windows).</p>
+
+<h3 id="dt_rpath-and-ld_library_path"><code class="language-plaintext highlighter-rouge">DT_RPATH</code> and <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code></h3>
+
+<p>On GNU/Linux the binaries are adjusted to use a relative path:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>readelf <span class="nt">-d</span> library.so | <span class="nb">grep </span>runpath
+<span class="gp"> 0x000000000000001d (RPATH)            Library rpath: [$</span>ORIGIN]
+</code></pre></div></div>
+
+<p>In the GNU ld.so search strategy, the <code class="language-plaintext highlighter-rouge">DT_RPATH</code> has
+the highest priority, higher than <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code>, so if this later one
+is set in the environment, it should not interfere with the xPack binaries.</p>
+
+<p>Please note that previous versions, up to mid-2020, used <code class="language-plaintext highlighter-rouge">DT_RUNPATH</code>, which
+has a priority lower than <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code>, and does not tolerate setting
+it in the environment.</p>
+
+<h3 id="rpath-and-loader_path"><code class="language-plaintext highlighter-rouge">@rpath</code> and <code class="language-plaintext highlighter-rouge">@loader_path</code></h3>
+
+<p>Similarly, on macOS, the binaries are adjusted with <code class="language-plaintext highlighter-rouge">install_name_tool</code> to use a
+relative path.</p>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>The original documentation is available on-line:</p>
+
+<ul>
+  <li><a href="https://www.qemu.org/docs/master/">https://www.qemu.org/docs/master/</a></li>
+</ul>
+
+<h2 id="build">Build</h2>
+
+<p>The binaries for all supported platforms
+(Windows, macOS and GNU/Linux) were built using the
+<a href="https://xpack.github.io/xbb/">xPack Build Box (XBB)</a>, a set
+of build environments based on slightly older distributions, that should be
+compatible with most recent systems.</p>
+
+<p>For the prerequisites and more details on the build procedure, please see the
+<a href="https://github.com/xpack-dev-tools/qemu-riscv-xpack/blob/xpack/README-BUILD.md">How to build</a> page.</p>
+
+<h2 id="ci-tests">CI tests</h2>
+
+<p>Before publishing, a set of simple tests were performed on an exhaustive
+set of platforms. The results are available from:</p>
+
+<ul>
+  <li><a href="https://github.com/xpack-dev-tools/qemu-riscv-xpack/actions/">GitHub Actions</a></li>
+  <li><a href="https://app.travis-ci.com/github/xpack-dev-tools/qemu-riscv-xpack/builds/">Travis CI</a></li>
+</ul>
+
+<h2 id="tests">Tests</h2>
+
+<p>TBD</p>
+
+<h2 id="checksums">Checksums</h2>
+
+<p>The SHA-256 hashes for the files are:</p>
+
+<pre><code class="language-txt">bdd409d7200e1ea7852efc0ac03ac2a38892857714d9ffc8f47fc86bcc3a8730
+xpack-qemu-riscv-8.2.2-1-darwin-arm64.tar.gz
+
+d80c9abae88bcc52280b91e2d3921fa22aa6267614b6e627736ed4e02c3a91d1
+xpack-qemu-riscv-8.2.2-1-darwin-x64.tar.gz
+
+d73bf3a4904e10b485d46adcd50c877cce13f9ac8d097b67e5643108d751172e
+xpack-qemu-riscv-8.2.2-1-linux-arm.tar.gz
+
+765ac55d58adfb31e7a88baadc9a9cf46eb30e8030d437bdc076747d63f0474c
+xpack-qemu-riscv-8.2.2-1-linux-arm64.tar.gz
+
+d5b8f77cb3ad23b29421f7fdc5456866b1a10817efacb262bbda038ca1c5a5a5
+xpack-qemu-riscv-8.2.2-1-linux-x64.tar.gz
+
+c0d1febb95bb01e093dfd5d701eea825bdadc9009b5780eb5581186bd75c1f96
+xpack-qemu-riscv-8.2.2-1-win32-x64.zip
+
+</code></pre>
+
+<h2 id="deprecation-notices">Deprecation notices</h2>
+
+<h3 id="linux-minimum-requirements">Linux minimum requirements</h3>
+
+<p>The minimum requirement is GLIBC 2.27, available starting
+with Ubuntu 18, Debian 10 and RedHat 8.
+Support for RedHat 7 was dropped in 2022.</p>
+
+<h3 id="32-bit-support">32-bit support</h3>
+
+<p>Support for 32-bit Intel Linux and Intel Windows was
+dropped in 2022.</p>
+
+<h3 id="pre-deprecation-notice-for-32-bit-arm-linux">Pre-deprecation notice for 32-bit Arm Linux</h3>
+
+<p>Due to the large user base of 32-bit Raspberry Pi systems,
+support for 32-bit Arm Linux (armv7l) will be preserved
+for a little while, but expect it to be dropped by 2025,
+so it is recommended to consider an upgrade to a RPi 4 or 5 with
+at least 4 GB (preferably 8 GB) of RAM.</p>
+
+<h2 id="pre-deprecation-notice-for-ubuntu-1804">Pre-deprecation notice for Ubuntu 18.04</h2>
+
+<p>Ubuntu 18.04 LTS <em>Bionic Beaver</em> reached the end of the standard five-year
+maintenance window for Long-Term Support (LTS) release on 31 May 2023.</p>
+
+<p>As a courtesy, the xPack GNU/Linux releases will continue to be based on
+Ubuntu 18.04 for another year.</p>
+
+<p>From mid-2024 onwards, the GNU/Linux binaries will be built on <strong>Debian 10</strong>,
+(<strong>GLIBC 2.28</strong>), and are also expected to run on RedHat 8.</p>
+
+<p>Users are urged to update their build and test infrastructure to
+ensure a smooth transition to the next xPack releases.</p>
+
+<h2 id="download-analytics">Download analytics</h2>
+
+<ul>
+  <li>GitHub <a href="https://github.com/xpack-dev-tools/qemu-riscv-xpack/">xpack-dev-tools/qemu-riscv-xpack</a>
+    <ul>
+      <li>this release <a href="https://github.com/xpack-dev-tools/qemu-riscv-xpack/releases/v8.2.2-1/"><img src="https://img.shields.io/github/downloads/xpack-dev-tools/qemu-riscv-xpack/v8.2.2-1/total.svg" alt="Github All Releases" /></a></li>
+      <li>all xPack releases <a href="https://github.com/xpack-dev-tools/qemu-riscv-xpack/releases/"><img src="https://img.shields.io/github/downloads/xpack-dev-tools/qemu-riscv-xpack/total.svg" alt="Github All Releases" /></a></li>
+      <li><a href="https://somsubhra.github.io/github-release-stats/?username=xpack-dev-tools&amp;repository=qemu-riscv-xpack">individual file counters</a> (grouped per release)</li>
+    </ul>
+  </li>
+  <li>npmjs.com <a href="https://www.npmjs.com/package/@xpack-dev-tools/qemu-riscv">@xpack-dev-tools/qemu-riscv</a>
+    <ul>
+      <li>latest releases <a href="https://www.npmjs.com/package/@xpack-dev-tools/qemu-riscv/"><img src="https://img.shields.io/npm/dw/@xpack-dev-tools/qemu-riscv.svg" alt="npm" /></a></li>
+      <li>all @xpack-dev-tools releases <a href="https://www.npmjs.com/package/@xpack-dev-tools/qemu-riscv/"><img src="https://img.shields.io/npm/dt/@xpack-dev-tools/qemu-riscv.svg" alt="npm" /></a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Credit to <a href="https://shields.io">Shields IO</a> for the badges and to
+<a href="https://github.com/Somsubhra/github-release-stats">Somsubhra/github-release-stats</a>
+for the individual file counters.</p>
+
+    </div>
+
+
+
+</article>
+
+    
+    <a target="_blank" rel="noopener" href="https://github.com/xpack/web-jekyll/blob/master/_posts/releases/qemu-riscv/2024-04-02-qemu-riscv-v8-2-2-1-released.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit</a>
+
+    
+
+
+
+
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2024 Liviu Ionescu. All rights reserved. <br />
+<span>Page last updated:</span> Apr 2, 2024<br/> Site last generated: Apr 2, 2024 <br />
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8WX9T80JEK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8WX9T80JEK');
+</script>
+
+
+</html>
