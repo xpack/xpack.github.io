@@ -2996,6 +2996,16 @@
 
 
 {
+"title": "xPack OpenOCD v0.12.0-3 released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2024/04/02/openocd-v0-12-0-3-released/",
+"summary": "<p>Version <strong>0.12.0-3</strong> is a maintenance release; it updates to the latest upstream master.</p>"
+}
+,
+
+
+{
 "title": "xPack CMake v3.27.9-1 released",
 "tags": "releasescmakebuild",
 "keywords": "",
