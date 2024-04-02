@@ -2996,6 +2996,16 @@
 
 
 {
+"title": "xPack QEMU Arm v8.2.2-1 released",
+"tags": "releasesqemuemulatorarmaarch64cortex-m",
+"keywords": "",
+"url": "/blog/2024/04/02/qemu-arm-v8-2-2-1-released/",
+"summary": "<p>Version <strong>8.2.2-1</strong> is a new release; it follows the upstream QEMU release.</p>"
+}
+,
+
+
+{
 "title": "xPack QEMU RISC-V v8.2.2-1 released",
 "tags": "releasesqemuemulatorrisc-v",
 "keywords": "",
