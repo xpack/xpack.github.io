@@ -5,9 +5,23 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 28 May 2024 20:52:13 +0000</pubDate>
-        <lastBuildDate>Tue, 28 May 2024 20:52:13 +0000</lastBuildDate>
+        <pubDate>Fri, 31 May 2024 20:16:05 +0000</pubDate>
+        <lastBuildDate>Fri, 31 May 2024 20:16:05 +0000</lastBuildDate>
         <generator>Jekyll v3.9.3</generator>
+        
+        <item>
+            <title>xPack GCC v14.1.0-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/gcc/&quot;&gt;The xPack GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://gcc.gnu.org&quot;&gt;GCC&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Fri, 31 May 2024 18:49:47 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2024/05/31/gcc-v14-1-0-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2024/05/31/gcc-v14-1-0-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>gcc</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack LLVM clang v17.0.6-2 released</title>
@@ -157,20 +171,6 @@
             <pubDate>Sat, 24 Feb 2024 17:04:23 +0000</pubDate>
             <link>https://xpack.github.io/blog/2024/02/24/gcc-v13-2-0-2-released/</link>
             <guid isPermaLink="true">https://xpack.github.io/blog/2024/02/24/gcc-v13-2-0-2-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>gcc</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack GCC v12.3.0-2 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/gcc/&quot;&gt;The xPack GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://gcc.gnu.org&quot;&gt;GCC&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Sat, 24 Feb 2024 07:05:52 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2024/02/24/gcc-v12-3-0-2-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2024/02/24/gcc-v12-3-0-2-released/</guid>
             
             <category>releases</category>
             
