@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="GCC 13.3.0-1 test results" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-06-10T13:55:52+00:00","datePublished":"2024-06-10T13:35:50+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"GCC 13.3.0-1 test results","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/dev-tools/gcc/tests/13.3.0-1/"},"url":"https://xpack.github.io/dev-tools/gcc/tests/13.3.0-1/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-06-10T18:40:09+00:00","datePublished":"2024-06-10T13:35:50+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"GCC 13.3.0-1 test results","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/dev-tools/gcc/tests/13.3.0-1/"},"url":"https://xpack.github.io/dev-tools/gcc/tests/13.3.0-1/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -434,15 +434,10 @@ Verdict: tests reluctantly accepted
 
 <h3 id="failed-test-sleepy-threads-cv">Failed test sleepy-threads-cv</h3>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The full static test cases fail, the other are fine.
-
-The issue is not specific to GCC 14 or to the xPack distribution, it
-occurs even with the system g++.</div>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>g++ sleepy-threads-cv.cpp <span class="nt">-o</span> static-sleepy-threads-cv <span class="nt">-static</span> <span class="nt">-g</span> <span class="nt">-v</span> <span class="nt">-lpthread</span>
-<span class="gp">$</span><span class="w"> </span>./static-sleepy-threads-cv 4
-<span class="go">Segmentation fault
-</span></code></pre></div></div>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> This issue affects only static test cases,
+the no-static ones are fine.
+It seems to be an incompatibility with older GLIBC versions
+(https://gcc.gnu.org/bugzilla/show_bug.cgi?id=115421).</div>
 
 <ul>
   <li>sleepy-threads-cv-64 ✓</li>
@@ -631,10 +626,10 @@ Verdict: tests reluctantly accepted
 
 <h3 id="failed-test-sleepy-threads-cv-1">Failed test sleepy-threads-cv</h3>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The full static test cases fail, the other are fine.
-
-The issue is not specific to GCC 14 or to the xPack distribution, it
-occurs even with the system g++.</div>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> This issue affects only static test cases,
+the no-static ones are fine.
+It seems to be an incompatibility with older GLIBC versions
+(https://gcc.gnu.org/bugzilla/show_bug.cgi?id=115421).</div>
 
 <ul>
   <li>sleepy-threads-cv ✓</li>
@@ -759,10 +754,10 @@ Verdict: tests reluctantly accepted
 
 <h3 id="failed-test-sleepy-threads-cv-2">Failed test sleepy-threads-cv</h3>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The full static test cases fail, the other are fine.
-
-The issue is not specific to GCC 14 or to the xPack distribution, it
-occurs even with the system g++.</div>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> This issue affects only static test cases,
+the no-static ones are fine.
+It seems to be an incompatibility with older GLIBC versions
+(https://gcc.gnu.org/bugzilla/show_bug.cgi?id=115421).</div>
 
 <ul>
   <li>sleepy-threads-cv ✓</li>
