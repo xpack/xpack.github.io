@@ -25,11 +25,11 @@
 <meta property="og:url" content="https://xpack.github.io/dev-tools/gcc/tests/13.3.0-1/" />
 <meta property="og:site_name" content="xpack.github.io" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-06-06T08:17:00+00:00" />
+<meta property="article:published_time" content="2024-06-10T13:35:50+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="GCC 13.3.0-1 test results" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-06-08T15:21:06+00:00","datePublished":"2024-06-06T08:17:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"GCC 13.3.0-1 test results","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/dev-tools/gcc/tests/13.3.0-1/"},"url":"https://xpack.github.io/dev-tools/gcc/tests/13.3.0-1/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-06-10T13:55:52+00:00","datePublished":"2024-06-10T13:35:50+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"GCC 13.3.0-1 test results","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/dev-tools/gcc/tests/13.3.0-1/"},"url":"https://xpack.github.io/dev-tools/gcc/tests/13.3.0-1/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -374,122 +374,7 @@ $('#toc').on('click', 'a', function() {
     
 
 
-   <h2 id="macos-darwin-x86_64">macOS Darwin x86_64</h2>
-
-<p>On macOS there are only two test cases of the same test that fail.</p>
-
-<pre><code class="language-txt">Tests summary for gcc 13.3.0-1 on darwin-x64 (macOS 12.7.5)
-
-272 test cases passed, 2 failed:
-
-- xfail: gc-overload-new-cpp
-- xfail: gc-lto-overload-new-cpp
-
-Verdict: tests reluctantly accepted
-</code></pre>
-
-<h3 id="successful-tests">Successful tests</h3>
-
-<ul>
-  <li>adder-shared ✓</li>
-  <li>adder-static ✓</li>
-  <li>atomic ✓</li>
-  <li>cnrt-test ✓</li>
-  <li>concurrent-f ✓</li>
-  <li>exception-locale ✓</li>
-  <li>exception-reduced ✓</li>
-  <li>global-terminate ✓</li>
-  <li>hello-exception ✓</li>
-  <li>hello-f ✓</li>
-  <li>hello-weak1-c ✓</li>
-  <li>hello-weak2-cpp ✓</li>
-  <li>hello1-c ✓</li>
-  <li>hello2-cpp ✓</li>
-  <li>longjmp-cleanup ✓</li>
-  <li>normal ✓</li>
-  <li>setjmp ✓</li>
-  <li>simple-exception ✓</li>
-  <li>simple-hello1-c-one ✓</li>
-  <li>simple-hello1-c-two ✓</li>
-  <li>simple-hello2-cpp-one ✓</li>
-  <li>simple-hello2-cpp-two ✓</li>
-  <li>simple-int-exception ✓</li>
-  <li>simple-objc ✓</li>
-  <li>simple-str-exception ✓</li>
-  <li>sleepy-threads-cv ✓</li>
-  <li>throwcatch-main ✓</li>
-  <li>unwind-strong-cpp ✓</li>
-  <li>unwind-weak-cpp ✓</li>
-  <li>weak-common ✓</li>
-  <li>weak-defined-c ✓</li>
-  <li>weak-duplicate-c ✓</li>
-  <li>weak-override-c ✓</li>
-  <li>weak-undef-c ✓</li>
-  <li>weak-use-c ✓</li>
-</ul>
-
-<h3 id="failed-test-overload-new-cpp">Failed test overload-new-cpp</h3>
-
-<p>The overload-new-cpp tests fail only when gc is used and not static
-(to be investigated <a href="https://github.com/iains/gcc-darwin-arm64/issues/132">https://github.com/iains/gcc-darwin-arm64/issues/132</a>)</p>
-
-<ul>
-  <li>overload-new-cpp ✓</li>
-  <li>gc-overload-new-cpp ✗
-    <pre><code class="language-txt">[/Users/runner/work/gcc-xpack/gcc-xpack/build/darwin-x64/x86_64-apple-darwin21.6.0/tests/gcc-xpack/xpacks/.bin/g++ gc-overload-new.cpp.o -o gc-overload-new-cpp -ffunction-sections -fdata-sections -Wl,-dead_strip]
-
-[/Users/runner/work/gcc-xpack/gcc-xpack/build/darwin-x64/x86_64-apple-darwin21.6.0/tests/gcc/c-cpp/weak/gc-overload-new-cpp ]
-news: 1, deletes: 0
-
-Test "gc-overload-new-cpp " failed, got exit code: 1, expected 0 :-(
-
-xfail: gc-overload-new-cpp
-</code></pre>
-  </li>
-  <li>lto-overload-new-cpp ✓</li>
-  <li>
-    <p>gc-lto-overload-new-cpp ✗</p>
-
-    <pre><code class="language-txt">[/Users/runner/work/gcc-xpack/gcc-xpack/build/darwin-x64/x86_64-apple-darwin21.6.0/tests/gcc-xpack/xpacks/.bin/g++ gc-lto-overload-new.cpp.o -o gc-lto-overload-new-cpp -flto -ffunction-sections -fdata-sections -Wl,-dead_strip]
-
-[/Users/runner/work/gcc-xpack/gcc-xpack/build/darwin-x64/x86_64-apple-darwin21.6.0/tests/gcc/c-cpp/weak/gc-lto-overload-new-cpp ]
-news: 1, deletes: 0
-
-Test "gc-lto-overload-new-cpp " failed, got exit code: 1, expected 0 :-(
-
-xfail: gc-lto-overload-new-cpp
-</code></pre>
-  </li>
-  <li>static-lib-overload-new-cpp ✓</li>
-  <li>static-lib-gc-overload-new-cpp ✓</li>
-  <li>static-lib-lto-overload-new-cpp ✓</li>
-  <li>static-lib-gc-lto-overload-new-cpp ✓</li>
-</ul>
-
-<h2 id="macos-darwin-arm64">macOS Darwin arm64</h2>
-
-<p>Same for Apple Silicon.</p>
-
-<pre><code class="language-txt">Tests summary for gcc 13.3.0-1 on darwin-arm64 (macOS 14.5)
-
-272 test cases passed, 2 failed:
-
-- xfail: gc-overload-new-cpp
-- xfail: gc-lto-overload-new-cpp
-
-Verdict: tests reluctantly accepted
-</code></pre>
-
-<h2 id="debian-linux-x86_64">Debian Linux x86_64</h2>
-
-<p>On GNU/Linux there is only one test that fails and only in the static variant.
-The issue is not specific to GCC 14 or to the xPack distribution, it
-occurs even with the system g++:</p>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>g++ sleepy-threads-cv.cpp <span class="nt">-o</span> static-sleepy-threads-cv-64 <span class="nt">-static</span> <span class="nt">-g</span> <span class="nt">-v</span> <span class="nt">-lpthread</span>
-<span class="gp">$</span><span class="w"> </span>./static-sleepy-threads-cv 4
-<span class="go">Segmentation fault
-</span></code></pre></div></div>
+   <h2 id="debian-linux-x86_64">Debian Linux x86_64</h2>
 
 <pre><code class="language-txt">Tests summary for gcc 13.3.0-1 on linux-x64 (Debian 12)
 
@@ -507,252 +392,11 @@ occurs even with the system g++:</p>
 Verdict: tests reluctantly accepted
 </code></pre>
 
-<h3 id="successful-tests-1">Successful tests</h3>
+<h3 id="successful-tests">Successful tests</h3>
 
 <ul>
-  <li>adder-32 ✓</li>
-  <li>adder-64 ✓</li>
-  <li>adder-shared-32 ✓</li>
-  <li>adder-shared-64 ✓</li>
-  <li>atomic-32 ✓</li>
-  <li>atomic-64 ✓</li>
-  <li>cnrt-test-32 ✓</li>
-  <li>cnrt-test-64 ✓</li>
-  <li>concurrent-f-32 ✓</li>
-  <li>concurrent-f-64 ✓</li>
-  <li>exception-locale-32 ✓</li>
-  <li>exception-locale-64 ✓</li>
-  <li>exception-reduced-32 ✓</li>
-  <li>exception-reduced-64 ✓</li>
-  <li>global-terminate-32 ✓</li>
-  <li>global-terminate-64 ✓</li>
-  <li>hello-exception-32 ✓</li>
-  <li>hello-exception-64 ✓</li>
-  <li>hello-f-32 ✓</li>
-  <li>hello-f-64 ✓</li>
-  <li>hello-weak1-c-32 ✓</li>
-  <li>hello-weak1-c-64 ✓</li>
-  <li>hello-weak2-cpp-32 ✓</li>
-  <li>hello-weak2-cpp-64 ✓</li>
-  <li>hello1-c-32 ✓</li>
-  <li>hello1-c-64 ✓</li>
-  <li>hello2-cpp-32 ✓</li>
-  <li>hello2-cpp-64 ✓</li>
-  <li>longjmp-cleanup-32 ✓</li>
-  <li>longjmp-cleanup-64 ✓</li>
-  <li>normal-32 ✓</li>
-  <li>normal-64 ✓</li>
-  <li>overload-new-cpp-32 ✓</li>
-  <li>overload-new-cpp-64 ✓</li>
-  <li>setjmp-32 ✓</li>
-  <li>setjmp-64 ✓</li>
-  <li>simple-exception-32 ✓</li>
-  <li>simple-exception-64 ✓</li>
-  <li>simple-hello1-c-one-32 ✓</li>
-  <li>simple-hello1-c-one-64 ✓</li>
-  <li>simple-hello1-c-two-32 ✓</li>
-  <li>simple-hello1-c-two-64 ✓</li>
-  <li>simple-hello2-cpp-one-32 ✓</li>
-  <li>simple-hello2-cpp-one-64 ✓</li>
-  <li>simple-hello2-cpp-two-32 ✓</li>
-  <li>simple-hello2-cpp-two-64 ✓</li>
-  <li>simple-int-exception-32 ✓</li>
-  <li>simple-int-exception-64 ✓</li>
-  <li>simple-objc-32 ✓</li>
-  <li>simple-objc-64 ✓</li>
-  <li>simple-str-exception-32 ✓</li>
-  <li>simple-str-exception-64 ✓</li>
-  <li>throwcatch-main-32 ✓</li>
-  <li>throwcatch-main-64 ✓</li>
-  <li>unwind-strong-cpp-32 ✓</li>
-  <li>unwind-strong-cpp-64 ✓</li>
-  <li>unwind-weak-cpp-32 ✓</li>
-  <li>unwind-weak-cpp-64 ✓</li>
-  <li>weak-common-32 ✓</li>
-  <li>weak-common-64 ✓</li>
-  <li>weak-defined-c-32 ✓</li>
-  <li>weak-defined-c-64 ✓</li>
-  <li>weak-duplicate-c-32 ✓</li>
-  <li>weak-duplicate-c-64 ✓</li>
-  <li>weak-override-c-32 ✓</li>
-  <li>weak-override-c-64 ✓</li>
-  <li>weak-undef-c-32 ✓</li>
-  <li>weak-undef-c-64 ✓</li>
-  <li>weak-use-c-32 ✓</li>
-  <li>weak-use-c-64 ✓</li>
-</ul>
-
-<h3 id="failed-test-sleepy-threads-cv-32">Failed test sleepy-threads-cv-32</h3>
-
-<ul>
-  <li>sleepy-threads-cv-32 ✓</li>
-  <li>gc-sleepy-threads-cv-32 ✓</li>
-  <li>lto-sleepy-threads-cv-32 ✓</li>
-  <li>gc-lto-sleepy-threads-cv-32 ✓</li>
-  <li>static-lib-sleepy-threads-cv-32 ✓</li>
-  <li>static-lib-gc-sleepy-threads-cv-32 ✓</li>
-  <li>static-lib-lto-sleepy-threads-cv-32 ✓</li>
-  <li>static-lib-gc-lto-sleepy-threads-cv-32 ✓</li>
-  <li>static-sleepy-threads-cv-32 ✗
-    <pre><code class="language-txt">[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc-xpack/xpacks/.bin/g++ sleepy-threads-cv.cpp -o static-sleepy-threads-cv-32 -static -m32 -lpthread]
-
-[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc/c-cpp/static-sleepy-threads-cv-32 4]
-terminate called after throwing an instance of 'std::system_error'
-  what():  Enable multithreading to use std::thread: Operation not permitted
-
-Test "static-sleepy-threads-cv-32 4" failed :-(
-expected output 4 chars: "abcd"
-got 0 chars: ""
-
-xfail: static-sleepy-threads-cv-32
-</code></pre>
-  </li>
-  <li>
-    <p>static-gc-sleepy-threads-cv-32 ✗</p>
-
-    <pre><code class="language-txt">[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc-xpack/xpacks/.bin/g++ sleepy-threads-cv.cpp -o static-gc-sleepy-threads-cv-32 -ffunction-sections -fdata-sections -Wl,--gc-sections -static -m32 -lpthread]
-
-[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc/c-cpp/static-gc-sleepy-threads-cv-32 4]
-terminate called after throwing an instance of 'std::system_error'
-  what():  Enable multithreading to use std::thread: Operation not permitted
-
-Test "static-gc-sleepy-threads-cv-32 4" failed :-(
-expected output 4 chars: "abcd"
-got 0 chars: ""
-
-xfail: static-gc-sleepy-threads-cv-32
-</code></pre>
-  </li>
-  <li>
-    <p>static-lto-sleepy-threads-cv-32 ✗</p>
-
-    <pre><code class="language-txt">[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc-xpack/xpacks/.bin/g++ sleepy-threads-cv.cpp -o static-lto-sleepy-threads-cv-32 -flto -static -m32 -lpthread]
-
-[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc/c-cpp/static-lto-sleepy-threads-cv-32 4]
-terminate called after throwing an instance of 'std::system_error'
-  what():  Enable multithreading to use std::thread: Operation not permitted
-
-Test "static-lto-sleepy-threads-cv-32 4" failed :-(
-expected output 4 chars: "abcd"
-got 0 chars: ""
-
-xfail: static-lto-sleepy-threads-cv-32
-</code></pre>
-  </li>
-  <li>
-    <p>static-gc-lto-sleepy-threads-cv-32 ✗</p>
-
-    <pre><code class="language-txt">[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc-xpack/xpacks/.bin/g++ sleepy-threads-cv.cpp -o static-gc-lto-sleepy-threads-cv-32 -flto -ffunction-sections -fdata-sections -Wl,--gc-sections -static -m32 -lpthread]
-
-[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc/c-cpp/static-gc-lto-sleepy-threads-cv-32 4]
-terminate called after throwing an instance of 'std::system_error'
-  what():  Enable multithreading to use std::thread: Operation not permitted
-
-Test "static-gc-lto-sleepy-threads-cv-32 4" failed :-(
-expected output 4 chars: "abcd"
-got 0 chars: ""
-
-xfail: static-gc-lto-sleepy-threads-cv-32
-</code></pre>
-  </li>
-</ul>
-
-<h3 id="failed-test-sleepy-threads-cv-64">Failed test sleepy-threads-cv-64</h3>
-
-<ul>
-  <li>sleepy-threads-cv-64 ✓</li>
-  <li>gc-sleepy-threads-cv-64 ✓</li>
-  <li>lto-sleepy-threads-cv-64 ✓</li>
-  <li>gc-lto-sleepy-threads-cv-64 ✓</li>
-  <li>static-lib-sleepy-threads-cv-64 ✓</li>
-  <li>static-lib-gc-sleepy-threads-cv-64 ✓</li>
-  <li>static-lib-lto-sleepy-threads-cv-64 ✓</li>
-  <li>static-lib-gc-lto-sleepy-threads-cv-64 ✓</li>
-  <li>static-sleepy-threads-cv-64 ✗
-    <pre><code class="language-txt">[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc-xpack/xpacks/.bin/g++ sleepy-threads-cv.cpp -o static-sleepy-threads-cv-64 -static -m64 -lpthread]
-
-[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc/c-cpp/static-sleepy-threads-cv-64 4]
-terminate called after throwing an instance of 'std::system_error'
-  what():  Enable multithreading to use std::thread: Operation not permitted
-
-Test "static-sleepy-threads-cv-64 4" failed :-(
-expected output 4 chars: "abcd"
-got 0 chars: ""
-
-xfail: static-sleepy-threads-cv-64
-</code></pre>
-  </li>
-  <li>
-    <p>static-gc-sleepy-threads-cv-64 ✗</p>
-
-    <pre><code class="language-txt">[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc-xpack/xpacks/.bin/g++ sleepy-threads-cv.cpp -o static-gc-sleepy-threads-cv-64 -ffunction-sections -fdata-sections -Wl,--gc-sections -static -m64 -lpthread]
-
-[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc/c-cpp/static-gc-sleepy-threads-cv-64 4]
-terminate called after throwing an instance of 'std::system_error'
-  what():  Enable multithreading to use std::thread: Operation not permitted
-
-Test "static-gc-sleepy-threads-cv-64 4" failed :-(
-expected output 4 chars: "abcd"
-got 0 chars: ""
-
-xfail: static-gc-sleepy-threads-cv-64
-</code></pre>
-  </li>
-  <li>
-    <p>static-lto-sleepy-threads-cv-64 ✗</p>
-
-    <pre><code class="language-txt">[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc-xpack/xpacks/.bin/g++ sleepy-threads-cv.cpp -o static-lto-sleepy-threads-cv-64 -flto -static -m64 -lpthread]
-
-[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc/c-cpp/static-lto-sleepy-threads-cv-64 4]
-terminate called after throwing an instance of 'std::system_error'
-  what():  Enable multithreading to use std::thread: Operation not permitted
-
-Test "static-lto-sleepy-threads-cv-64 4" failed :-(
-expected output 4 chars: "abcd"
-got 0 chars: ""
-
-xfail: static-lto-sleepy-threads-cv-64
-</code></pre>
-  </li>
-  <li>
-    <p>static-gc-lto-sleepy-threads-cv-64 ✗</p>
-
-    <pre><code class="language-txt">[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc-xpack/xpacks/.bin/g++ sleepy-threads-cv.cpp -o static-gc-lto-sleepy-threads-cv-64 -flto -ffunction-sections -fdata-sections -Wl,--gc-sections -static -m64 -lpthread]
-
-[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc/c-cpp/static-gc-lto-sleepy-threads-cv-64 4]
-terminate called after throwing an instance of 'std::system_error'
-  what():  Enable multithreading to use std::thread: Operation not permitted
-
-Test "static-gc-lto-sleepy-threads-cv-64 4" failed :-(
-expected output 4 chars: "abcd"
-got 0 chars: ""
-
-xfail: static-gc-lto-sleepy-threads-cv-64
-</code></pre>
-  </li>
-</ul>
-
-<h2 id="debian-linux-aarch64">Debian Linux aarch64</h2>
-
-<p>Similarly for arm 64-bit.</p>
-
-<pre><code class="language-txt">Tests summary for gcc 13.3.0-1 on linux-arm64 (Debian 12)
-
-394 test cases passed, 4 failed:
-
-- xfail: static-sleepy-threads-cv
-- xfail: static-gc-sleepy-threads-cv
-- xfail: static-lto-sleepy-threads-cv
-- xfail: static-gc-lto-sleepy-threads-cv
-
-Verdict: tests reluctantly accepted
-</code></pre>
-
-<h3 id="successful-tests-2">Successful tests</h3>
-
-<ul>
+  <li>adder ✓</li>
   <li>adder-shared ✓</li>
-  <li>adder-static ✓</li>
   <li>atomic ✓</li>
   <li>cnrt-test ✓</li>
   <li>concurrent-f ✓</li>
@@ -789,6 +433,208 @@ Verdict: tests reluctantly accepted
 </ul>
 
 <h3 id="failed-test-sleepy-threads-cv">Failed test sleepy-threads-cv</h3>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The full static test cases fail, the other are fine.
+
+The issue is not specific to GCC 14 or to the xPack distribution, it
+occurs even with the system g++.</div>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>g++ sleepy-threads-cv.cpp <span class="nt">-o</span> static-sleepy-threads-cv <span class="nt">-static</span> <span class="nt">-g</span> <span class="nt">-v</span> <span class="nt">-lpthread</span>
+<span class="gp">$</span><span class="w"> </span>./static-sleepy-threads-cv 4
+<span class="go">Segmentation fault
+</span></code></pre></div></div>
+
+<ul>
+  <li>sleepy-threads-cv-64 ✓</li>
+  <li>gc-sleepy-threads-cv-64 ✓</li>
+  <li>lto-sleepy-threads-cv-64 ✓</li>
+  <li>gc-lto-sleepy-threads-cv-64 ✓</li>
+  <li>sleepy-threads-cv-32 ✓</li>
+  <li>gc-sleepy-threads-cv-32 ✓</li>
+  <li>lto-sleepy-threads-cv-32 ✓</li>
+  <li>gc-lto-sleepy-threads-cv-32 ✓</li>
+  <li>static-lib-sleepy-threads-cv-64 ✓</li>
+  <li>static-lib-gc-sleepy-threads-cv-64 ✓</li>
+  <li>static-lib-lto-sleepy-threads-cv-64 ✓</li>
+  <li>static-lib-gc-lto-sleepy-threads-cv-64 ✓</li>
+  <li>static-lib-sleepy-threads-cv-32 ✓</li>
+  <li>static-lib-gc-sleepy-threads-cv-32 ✓</li>
+  <li>static-lib-lto-sleepy-threads-cv-32 ✓</li>
+  <li>static-lib-gc-lto-sleepy-threads-cv-32 ✓</li>
+  <li>static-sleepy-threads-cv-64 ✗
+    <pre><code class="language-txt">[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc-xpack/xpacks/.bin/g++ sleepy-threads-cv.cpp -o static-sleepy-threads-cv-64 -static -m64 -lpthread]
+
+[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc/c-cpp/static-sleepy-threads-cv-64 4]
+terminate called after throwing an instance of 'std::system_error'
+  what():  Enable multithreading to use std::thread: Operation not permitted
+
+Test "static-sleepy-threads-cv-64 4" failed :-(
+expected output 4 chars: "abcd"
+got 0 chars: ""
+
+xfail: static-sleepy-threads-cv-64
+</code></pre>
+  </li>
+  <li>static-gc-sleepy-threads-cv-64 ✗
+    <pre><code class="language-txt">[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc-xpack/xpacks/.bin/g++ sleepy-threads-cv.cpp -o static-gc-sleepy-threads-cv-64 -ffunction-sections -fdata-sections -Wl,--gc-sections -static -m64 -lpthread]
+
+[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc/c-cpp/static-gc-sleepy-threads-cv-64 4]
+terminate called after throwing an instance of 'std::system_error'
+  what():  Enable multithreading to use std::thread: Operation not permitted
+
+Test "static-gc-sleepy-threads-cv-64 4" failed :-(
+expected output 4 chars: "abcd"
+got 0 chars: ""
+
+xfail: static-gc-sleepy-threads-cv-64
+</code></pre>
+  </li>
+  <li>static-lto-sleepy-threads-cv-64 ✗
+    <pre><code class="language-txt">[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc-xpack/xpacks/.bin/g++ sleepy-threads-cv.cpp -o static-lto-sleepy-threads-cv-64 -flto -static -m64 -lpthread]
+
+[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc/c-cpp/static-lto-sleepy-threads-cv-64 4]
+terminate called after throwing an instance of 'std::system_error'
+  what():  Enable multithreading to use std::thread: Operation not permitted
+
+Test "static-lto-sleepy-threads-cv-64 4" failed :-(
+expected output 4 chars: "abcd"
+got 0 chars: ""
+
+xfail: static-lto-sleepy-threads-cv-64
+</code></pre>
+  </li>
+  <li>static-gc-lto-sleepy-threads-cv-64 ✗
+    <pre><code class="language-txt">[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc-xpack/xpacks/.bin/g++ sleepy-threads-cv.cpp -o static-gc-lto-sleepy-threads-cv-64 -flto -ffunction-sections -fdata-sections -Wl,--gc-sections -static -m64 -lpthread]
+
+[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc/c-cpp/static-gc-lto-sleepy-threads-cv-64 4]
+terminate called after throwing an instance of 'std::system_error'
+  what():  Enable multithreading to use std::thread: Operation not permitted
+
+Test "static-gc-lto-sleepy-threads-cv-64 4" failed :-(
+expected output 4 chars: "abcd"
+got 0 chars: ""
+
+xfail: static-gc-lto-sleepy-threads-cv-64
+</code></pre>
+  </li>
+  <li>static-sleepy-threads-cv-32 ✗
+    <pre><code class="language-txt">[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc-xpack/xpacks/.bin/g++ sleepy-threads-cv.cpp -o static-sleepy-threads-cv-32 -static -m32 -lpthread]
+
+[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc/c-cpp/static-sleepy-threads-cv-32 4]
+terminate called after throwing an instance of 'std::system_error'
+  what():  Enable multithreading to use std::thread: Operation not permitted
+
+Test "static-sleepy-threads-cv-32 4" failed :-(
+expected output 4 chars: "abcd"
+got 0 chars: ""
+
+xfail: static-sleepy-threads-cv-32
+</code></pre>
+  </li>
+  <li>static-gc-sleepy-threads-cv-32 ✗
+    <pre><code class="language-txt">[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc-xpack/xpacks/.bin/g++ sleepy-threads-cv.cpp -o static-gc-sleepy-threads-cv-32 -ffunction-sections -fdata-sections -Wl,--gc-sections -static -m32 -lpthread]
+
+[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc/c-cpp/static-gc-sleepy-threads-cv-32 4]
+terminate called after throwing an instance of 'std::system_error'
+  what():  Enable multithreading to use std::thread: Operation not permitted
+
+Test "static-gc-sleepy-threads-cv-32 4" failed :-(
+expected output 4 chars: "abcd"
+got 0 chars: ""
+
+xfail: static-gc-sleepy-threads-cv-32
+</code></pre>
+  </li>
+  <li>static-lto-sleepy-threads-cv-32 ✗
+    <pre><code class="language-txt">[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc-xpack/xpacks/.bin/g++ sleepy-threads-cv.cpp -o static-lto-sleepy-threads-cv-32 -flto -static -m32 -lpthread]
+
+[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc/c-cpp/static-lto-sleepy-threads-cv-32 4]
+terminate called after throwing an instance of 'std::system_error'
+  what():  Enable multithreading to use std::thread: Operation not permitted
+
+Test "static-lto-sleepy-threads-cv-32 4" failed :-(
+expected output 4 chars: "abcd"
+got 0 chars: ""
+
+xfail: static-lto-sleepy-threads-cv-32
+</code></pre>
+  </li>
+  <li>static-gc-lto-sleepy-threads-cv-32 ✗
+    <pre><code class="language-txt">[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc-xpack/xpacks/.bin/g++ sleepy-threads-cv.cpp -o static-gc-lto-sleepy-threads-cv-32 -flto -ffunction-sections -fdata-sections -Wl,--gc-sections -static -m32 -lpthread]
+
+[/github/workspace/build/linux-x64/x86_64-pc-linux-gnu/tests/gcc/c-cpp/static-gc-lto-sleepy-threads-cv-32 4]
+terminate called after throwing an instance of 'std::system_error'
+  what():  Enable multithreading to use std::thread: Operation not permitted
+
+Test "static-gc-lto-sleepy-threads-cv-32 4" failed :-(
+expected output 4 chars: "abcd"
+got 0 chars: ""
+
+xfail: static-gc-lto-sleepy-threads-cv-32
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="debian-linux-aarch64">Debian Linux aarch64</h2>
+
+<pre><code class="language-txt">Tests summary for gcc 13.3.0-1 on linux-arm64 (Debian 12)
+
+394 test cases passed, 4 failed:
+
+- xfail: static-sleepy-threads-cv
+- xfail: static-gc-sleepy-threads-cv
+- xfail: static-lto-sleepy-threads-cv
+- xfail: static-gc-lto-sleepy-threads-cv
+
+Verdict: tests reluctantly accepted
+</code></pre>
+
+<h3 id="successful-tests-1">Successful tests</h3>
+
+<ul>
+  <li>adder-shared ✓</li>
+  <li>adder-static ✓</li>
+  <li>atomic ✓</li>
+  <li>cnrt-test ✓</li>
+  <li>concurrent-f ✓</li>
+  <li>exception-locale ✓</li>
+  <li>exception-reduced ✓</li>
+  <li>global-terminate ✓</li>
+  <li>hello-exception ✓</li>
+  <li>hello-f ✓</li>
+  <li>hello-weak1-c ✓</li>
+  <li>hello-weak2-cpp ✓</li>
+  <li>hello1-c ✓</li>
+  <li>hello2-cpp ✓</li>
+  <li>longjmp-cleanup ✓</li>
+  <li>normal ✓</li>
+  <li>overload-new-cpp ✓</li>
+  <li>setjmp ✓</li>
+  <li>simple-exception ✓</li>
+  <li>simple-hello1-c-one ✓</li>
+  <li>simple-hello1-c-two ✓</li>
+  <li>simple-hello2-cpp-one ✓</li>
+  <li>simple-hello2-cpp-two ✓</li>
+  <li>simple-int-exception ✓</li>
+  <li>simple-objc ✓</li>
+  <li>simple-str-exception ✓</li>
+  <li>throwcatch-main ✓</li>
+  <li>unwind-strong-cpp ✓</li>
+  <li>unwind-weak-cpp ✓</li>
+  <li>weak-common ✓</li>
+  <li>weak-defined-c ✓</li>
+  <li>weak-duplicate-c ✓</li>
+  <li>weak-override-c ✓</li>
+  <li>weak-undef-c ✓</li>
+  <li>weak-use-c ✓</li>
+</ul>
+
+<h3 id="failed-test-sleepy-threads-cv-1">Failed test sleepy-threads-cv</h3>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The full static test cases fail, the other are fine.
+
+The issue is not specific to GCC 14 or to the xPack distribution, it
+occurs even with the system g++.</div>
 
 <ul>
   <li>sleepy-threads-cv ✓</li>
@@ -859,8 +705,6 @@ xfail: static-gc-lto-sleepy-threads-cv
 
 <h2 id="debian-linux-armv7l">Debian Linux armv7l</h2>
 
-<p>Similarly for arm 32-bit.</p>
-
 <pre><code class="language-txt">Tests summary for gcc 13.3.0-1 on linux-arm (Debian 12)
 
 394 test cases passed, 4 failed:
@@ -873,7 +717,7 @@ xfail: static-gc-lto-sleepy-threads-cv
 Verdict: tests reluctantly accepted
 </code></pre>
 
-<h3 id="successful-tests-3">Successful tests</h3>
+<h3 id="successful-tests-2">Successful tests</h3>
 
 <ul>
   <li>adder-shared ✓</li>
@@ -913,7 +757,12 @@ Verdict: tests reluctantly accepted
   <li>weak-use-c ✓</li>
 </ul>
 
-<h3 id="failed-test-sleepy-threads-cv-1">Failed test sleepy-threads-cv</h3>
+<h3 id="failed-test-sleepy-threads-cv-2">Failed test sleepy-threads-cv</h3>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The full static test cases fail, the other are fine.
+
+The issue is not specific to GCC 14 or to the xPack distribution, it
+occurs even with the system g++.</div>
 
 <ul>
   <li>sleepy-threads-cv ✓</li>
@@ -982,6 +831,184 @@ xfail: static-gc-lto-sleepy-threads-cv
   </li>
 </ul>
 
+<h2 id="macos-darwin-x86_64">macOS Darwin x86_64</h2>
+
+<pre><code class="language-txt">Tests summary for gcc 13.3.0-1 on darwin-x64 (macOS 12.7.5)
+
+272 test cases passed, 2 failed:
+
+- xfail: gc-overload-new-cpp
+- xfail: gc-lto-overload-new-cpp
+
+Verdict: tests reluctantly accepted
+</code></pre>
+
+<h3 id="successful-tests-3">Successful tests</h3>
+
+<ul>
+  <li>adder-shared ✓</li>
+  <li>adder-static ✓</li>
+  <li>atomic ✓</li>
+  <li>cnrt-test ✓</li>
+  <li>concurrent-f ✓</li>
+  <li>exception-locale ✓</li>
+  <li>exception-reduced ✓</li>
+  <li>global-terminate ✓</li>
+  <li>hello-exception ✓</li>
+  <li>hello-f ✓</li>
+  <li>hello-weak1-c ✓</li>
+  <li>hello-weak2-cpp ✓</li>
+  <li>hello1-c ✓</li>
+  <li>hello2-cpp ✓</li>
+  <li>longjmp-cleanup ✓</li>
+  <li>normal ✓</li>
+  <li>setjmp ✓</li>
+  <li>simple-exception ✓</li>
+  <li>simple-hello1-c-one ✓</li>
+  <li>simple-hello1-c-two ✓</li>
+  <li>simple-hello2-cpp-one ✓</li>
+  <li>simple-hello2-cpp-two ✓</li>
+  <li>simple-int-exception ✓</li>
+  <li>simple-objc ✓</li>
+  <li>simple-str-exception ✓</li>
+  <li>sleepy-threads-cv ✓</li>
+  <li>throwcatch-main ✓</li>
+  <li>unwind-strong-cpp ✓</li>
+  <li>unwind-weak-cpp ✓</li>
+  <li>weak-common ✓</li>
+  <li>weak-defined-c ✓</li>
+  <li>weak-duplicate-c ✓</li>
+  <li>weak-override-c ✓</li>
+  <li>weak-undef-c ✓</li>
+  <li>weak-use-c ✓</li>
+</ul>
+
+<h3 id="failed-test-overload-new-cpp">Failed test overload-new-cpp</h3>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The two test cases fail only when garbage
+collected sections are is used and not static (to be investigated, see
+<a href="https://github.com/iains/gcc-darwin-arm64/issues/132">https://github.com/iains/gcc-darwin-arm64/issues/132</a>).</div>
+
+<ul>
+  <li>overload-new-cpp ✓</li>
+  <li>gc-overload-new-cpp ✗
+    <pre><code class="language-txt">[/Users/runner/work/gcc-xpack/gcc-xpack/build/darwin-x64/x86_64-apple-darwin21.6.0/tests/gcc-xpack/xpacks/.bin/g++ gc-overload-new.cpp.o -o gc-overload-new-cpp -ffunction-sections -fdata-sections -Wl,-dead_strip]
+
+[/Users/runner/work/gcc-xpack/gcc-xpack/build/darwin-x64/x86_64-apple-darwin21.6.0/tests/gcc/c-cpp/weak/gc-overload-new-cpp ]
+news: 1, deletes: 0
+
+Test "gc-overload-new-cpp " failed, got exit code: 1, expected 0 :-(
+
+xfail: gc-overload-new-cpp
+</code></pre>
+  </li>
+  <li>lto-overload-new-cpp ✓</li>
+  <li>gc-lto-overload-new-cpp ✗
+    <pre><code class="language-txt">[/Users/runner/work/gcc-xpack/gcc-xpack/build/darwin-x64/x86_64-apple-darwin21.6.0/tests/gcc-xpack/xpacks/.bin/g++ gc-lto-overload-new.cpp.o -o gc-lto-overload-new-cpp -flto -ffunction-sections -fdata-sections -Wl,-dead_strip]
+
+[/Users/runner/work/gcc-xpack/gcc-xpack/build/darwin-x64/x86_64-apple-darwin21.6.0/tests/gcc/c-cpp/weak/gc-lto-overload-new-cpp ]
+news: 1, deletes: 0
+
+Test "gc-lto-overload-new-cpp " failed, got exit code: 1, expected 0 :-(
+
+xfail: gc-lto-overload-new-cpp
+</code></pre>
+  </li>
+  <li>static-lib-overload-new-cpp ✓</li>
+  <li>static-lib-gc-overload-new-cpp ✓</li>
+  <li>static-lib-lto-overload-new-cpp ✓</li>
+  <li>static-lib-gc-lto-overload-new-cpp ✓</li>
+</ul>
+
+<h2 id="macos-darwin-arm64">macOS Darwin arm64</h2>
+
+<pre><code class="language-txt">Tests summary for gcc 13.3.0-1 on darwin-arm64 (macOS 14.5)
+
+272 test cases passed, 2 failed:
+
+- xfail: gc-overload-new-cpp
+- xfail: gc-lto-overload-new-cpp
+
+Verdict: tests reluctantly accepted
+</code></pre>
+
+<h3 id="successful-tests-4">Successful tests</h3>
+
+<ul>
+  <li>adder-shared ✓</li>
+  <li>adder-static ✓</li>
+  <li>atomic ✓</li>
+  <li>cnrt-test ✓</li>
+  <li>concurrent-f ✓</li>
+  <li>exception-locale ✓</li>
+  <li>exception-reduced ✓</li>
+  <li>global-terminate ✓</li>
+  <li>hello-exception ✓</li>
+  <li>hello-f ✓</li>
+  <li>hello-weak1-c ✓</li>
+  <li>hello-weak2-cpp ✓</li>
+  <li>hello1-c ✓</li>
+  <li>hello2-cpp ✓</li>
+  <li>longjmp-cleanup ✓</li>
+  <li>normal ✓</li>
+  <li>setjmp ✓</li>
+  <li>simple-exception ✓</li>
+  <li>simple-hello1-c-one ✓</li>
+  <li>simple-hello1-c-two ✓</li>
+  <li>simple-hello2-cpp-one ✓</li>
+  <li>simple-hello2-cpp-two ✓</li>
+  <li>simple-int-exception ✓</li>
+  <li>simple-objc ✓</li>
+  <li>simple-str-exception ✓</li>
+  <li>sleepy-threads-cv ✓</li>
+  <li>throwcatch-main ✓</li>
+  <li>unwind-strong-cpp ✓</li>
+  <li>unwind-weak-cpp ✓</li>
+  <li>weak-common ✓</li>
+  <li>weak-defined-c ✓</li>
+  <li>weak-duplicate-c ✓</li>
+  <li>weak-override-c ✓</li>
+  <li>weak-undef-c ✓</li>
+  <li>weak-use-c ✓</li>
+</ul>
+
+<h3 id="failed-test-overload-new-cpp-1">Failed test overload-new-cpp</h3>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The two test cases fail only when garbage
+collected sections are is used and not static (to be investigated, see
+<a href="https://github.com/iains/gcc-darwin-arm64/issues/132">https://github.com/iains/gcc-darwin-arm64/issues/132</a>).</div>
+
+<ul>
+  <li>overload-new-cpp ✓</li>
+  <li>gc-overload-new-cpp ✗
+    <pre><code class="language-txt">[/Users/runner/work/gcc-xpack/gcc-xpack/build/darwin-arm64/aarch64-apple-darwin23.5.0/tests/gcc-xpack/xpacks/.bin/g++ gc-overload-new.cpp.o -o gc-overload-new-cpp -ffunction-sections -fdata-sections -Wl,-dead_strip]
+
+[/Users/runner/work/gcc-xpack/gcc-xpack/build/darwin-arm64/aarch64-apple-darwin23.5.0/tests/gcc/c-cpp/weak/gc-overload-new-cpp ]
+news: 1, deletes: 0
+
+Test "gc-overload-new-cpp " failed, got exit code: 1, expected 0 :-(
+
+xfail: gc-overload-new-cpp
+</code></pre>
+  </li>
+  <li>lto-overload-new-cpp ✓</li>
+  <li>gc-lto-overload-new-cpp ✗
+    <pre><code class="language-txt">[/Users/runner/work/gcc-xpack/gcc-xpack/build/darwin-arm64/aarch64-apple-darwin23.5.0/tests/gcc-xpack/xpacks/.bin/g++ gc-lto-overload-new.cpp.o -o gc-lto-overload-new-cpp -flto -ffunction-sections -fdata-sections -Wl,-dead_strip]
+
+[/Users/runner/work/gcc-xpack/gcc-xpack/build/darwin-arm64/aarch64-apple-darwin23.5.0/tests/gcc/c-cpp/weak/gc-lto-overload-new-cpp ]
+news: 1, deletes: 0
+
+Test "gc-lto-overload-new-cpp " failed, got exit code: 1, expected 0 :-(
+
+xfail: gc-lto-overload-new-cpp
+</code></pre>
+  </li>
+  <li>static-lib-overload-new-cpp ✓</li>
+  <li>static-lib-gc-overload-new-cpp ✓</li>
+  <li>static-lib-lto-overload-new-cpp ✓</li>
+  <li>static-lib-gc-lto-overload-new-cpp ✓</li>
+</ul>
+
 <h2 id="msys-windows-x86_64">Msys Windows x86_64</h2>
 
 <pre><code class="language-txt">Tests summary for gcc 13.3.0-1 on win32-x64 (Msys 3.4.10)
@@ -1034,7 +1061,7 @@ xfail: static-gc-lto-sleepy-threads-cv
 Verdict: tests reluctantly accepted
 </code></pre>
 
-<h3 id="successful-tests-4">Successful tests</h3>
+<h3 id="successful-tests-5">Successful tests</h3>
 
 <ul>
   <li>adder-shared ✓</li>
@@ -1072,6 +1099,9 @@ Verdict: tests reluctantly accepted
 
 <h3 id="failed-test-autoimport-main">Failed test autoimport-main</h3>
 
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> This problem reported by the Mingw-w64 runtime
+seems to be related to LTO, the other test cases are fine.</div>
+
 <ul>
   <li>autoimport-main ✓</li>
   <li>gc-autoimport-main ✓</li>
@@ -1082,7 +1112,7 @@ Verdict: tests reluctantly accepted
 
 [/d/a/gcc-xpack/gcc-xpack/build/win32-x64/x86_64-pc-mingw64/tests/gcc/c-cpp/lto-autoimport-main.exe ]
 Mingw-w64 runtime failure:
-32 bit pseudo relocation at 00007FF6F23F144A out of range, targeting 00007FFD6D29136C, yielding the value 000000067AE9FF1E.
+32 bit pseudo relocation at 00007FF6D942144A out of range, targeting 00007FFBF78C136C, yielding the value 000000051E49FF1E.
 
 Test "lto-autoimport-main.exe " failed, got exit code: 127, expected 0 :-(
 
@@ -1096,7 +1126,7 @@ xfail: lto-autoimport-main
 
 [/d/a/gcc-xpack/gcc-xpack/build/win32-x64/x86_64-pc-mingw64/tests/gcc/c-cpp/gc-lto-autoimport-main.exe ]
 Mingw-w64 runtime failure:
-32 bit pseudo relocation at 00007FF6A022293A out of range, targeting 00007FFD6D292570, yielding the value 00000006CD06FC32.
+32 bit pseudo relocation at 00007FF60DFC293A out of range, targeting 00007FFBF78C2570, yielding the value 00000005E98FFC32.
 
 Test "gc-lto-autoimport-main.exe " failed, got exit code: 127, expected 0 :-(
 
@@ -1112,7 +1142,7 @@ xfail: gc-lto-autoimport-main
 
 [/d/a/gcc-xpack/gcc-xpack/build/win32-x64/x86_64-pc-mingw64/tests/gcc/c-cpp/static-lib-lto-autoimport-main.exe ]
 Mingw-w64 runtime failure:
-32 bit pseudo relocation at 00007FF6365E144A out of range, targeting 00007FFD6D29136C, yielding the value 0000000736CAFF1E.
+32 bit pseudo relocation at 00007FF7EAB4144A out of range, targeting 00007FFBF78C136C, yielding the value 000000040CD7FF1E.
 
 Test "static-lib-lto-autoimport-main.exe " failed, got exit code: 127, expected 0 :-(
 
@@ -1126,7 +1156,7 @@ xfail: static-lib-lto-autoimport-main
 
 [/d/a/gcc-xpack/gcc-xpack/build/win32-x64/x86_64-pc-mingw64/tests/gcc/c-cpp/static-lib-gc-lto-autoimport-main.exe ]
 Mingw-w64 runtime failure:
-32 bit pseudo relocation at 00007FF78726293A out of range, targeting 00007FFD6D292570, yielding the value 00000005E602FC32.
+32 bit pseudo relocation at 00007FF6095A293A out of range, targeting 00007FFBF78C2570, yielding the value 00000005EE31FC32.
 
 Test "static-lib-gc-lto-autoimport-main.exe " failed, got exit code: 127, expected 0 :-(
 
@@ -1136,6 +1166,9 @@ xfail: static-lib-gc-lto-autoimport-main
 </ul>
 
 <h3 id="failed-test-hello-weak1-c">Failed test hello-weak1-c</h3>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Weak symbols seem not supported, probably
+the LTO test cases pass because the weak symbols are resolved.</div>
 
 <ul>
   <li>hello-weak1-c ✗
@@ -1220,6 +1253,9 @@ xfail: static-gc-hello-weak1-c
 
 <h3 id="failed-test-hello-weak2-cpp">Failed test hello-weak2-cpp</h3>
 
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Weak symbols seem not supported, probably
+the LTO test cases pass because the weak symbols are resolved.</div>
+
 <ul>
   <li>hello-weak2-cpp ✗
     <pre><code class="language-txt">[/d/a/gcc-xpack/gcc-xpack/build/win32-x64/x86_64-pc-mingw64/tests/gcc-xpack/xpacks/.bin/g++ -c hello-weak2.cpp -o hello-weak2.cpp.o]
@@ -1301,7 +1337,9 @@ xfail: static-gc-hello-weak2-cpp
   <li>static-gc-lto-hello-weak2-cpp ✓</li>
 </ul>
 
-<h3 id="failed-test-overload-new-cpp-1">Failed test overload-new-cpp</h3>
+<h3 id="failed-test-overload-new-cpp-2">Failed test overload-new-cpp</h3>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> All non-static test cases fail, all static pass.</div>
 
 <ul>
   <li>overload-new-cpp ✗
@@ -1360,6 +1398,9 @@ xfail: gc-lto-overload-new-cpp
 
 <h3 id="failed-test-throwcatch-main">Failed test throwcatch-main</h3>
 
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> This problem reported by the Mingw-w64 runtime
+seems to be related to LTO, the other test cases are fine.</div>
+
 <ul>
   <li>throwcatch-main ✓</li>
   <li>gc-throwcatch-main ✓</li>
@@ -1370,7 +1411,7 @@ xfail: gc-lto-overload-new-cpp
 
 [/d/a/gcc-xpack/gcc-xpack/build/win32-x64/x86_64-pc-mingw64/tests/gcc/c-cpp/lto-throwcatch-main.exe ]
 Mingw-w64 runtime failure:
-32 bit pseudo relocation at 00007FF7CF6E14A7 out of range, targeting 00007FFD6D291660, yielding the value 000000059DBB01B5.
+32 bit pseudo relocation at 00007FF7E8FF14A7 out of range, targeting 00007FFBE9AE1660, yielding the value 0000000400AF01B5.
 
 Test "lto-throwcatch-main.exe " failed, got exit code: 127, expected 0 :-(
 
@@ -1384,7 +1425,7 @@ xfail: lto-throwcatch-main
 
 [/d/a/gcc-xpack/gcc-xpack/build/win32-x64/x86_64-pc-mingw64/tests/gcc/c-cpp/gc-lto-throwcatch-main.exe ]
 Mingw-w64 runtime failure:
-32 bit pseudo relocation at 00007FF7F8E07954 out of range, targeting 00007FFD6D297570, yielding the value 000000057448FC18.
+32 bit pseudo relocation at 00007FF7C7BD7954 out of range, targeting 00007FFBE9AE7570, yielding the value 0000000421F0FC18.
 
 Test "gc-lto-throwcatch-main.exe " failed, got exit code: 127, expected 0 :-(
 
@@ -1400,7 +1441,7 @@ xfail: gc-lto-throwcatch-main
 
 [/d/a/gcc-xpack/gcc-xpack/build/win32-x64/x86_64-pc-mingw64/tests/gcc/c-cpp/static-lib-lto-throwcatch-main.exe ]
 Mingw-w64 runtime failure:
-32 bit pseudo relocation at 00007FF6629D14A7 out of range, targeting 00007FFD6D261660, yielding the value 000000070A8901B5.
+32 bit pseudo relocation at 00007FF747EE14A7 out of range, targeting 00007FFBE74C1660, yielding the value 000000049F5E01B5.
 
 Test "static-lib-lto-throwcatch-main.exe " failed, got exit code: 127, expected 0 :-(
 
@@ -1414,7 +1455,7 @@ xfail: static-lib-lto-throwcatch-main
 
 [/d/a/gcc-xpack/gcc-xpack/build/win32-x64/x86_64-pc-mingw64/tests/gcc/c-cpp/static-lib-gc-lto-throwcatch-main.exe ]
 Mingw-w64 runtime failure:
-32 bit pseudo relocation at 00007FF676FF3C74 out of range, targeting 00007FFD6D267CD0, yielding the value 00000006F6274058.
+32 bit pseudo relocation at 00007FF697883C74 out of range, targeting 00007FFBE74C7CD0, yielding the value 000000054FC44058.
 
 Test "static-lib-gc-lto-throwcatch-main.exe " failed, got exit code: 127, expected 0 :-(
 
@@ -1424,6 +1465,8 @@ xfail: static-lib-gc-lto-throwcatch-main
 </ul>
 
 <h3 id="failed-test-unwind-weak-cpp">Failed test unwind-weak-cpp</h3>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Possibly related to the weak symbols issues.</div>
 
 <ul>
   <li>unwind-weak-cpp ✗
@@ -1483,6 +1526,9 @@ xfail: static-gc-unwind-weak-cpp
 </ul>
 
 <h3 id="failed-test-weak-duplicate-c">Failed test weak-duplicate-c</h3>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Weak symbols seem not supported, probably
+the LTO test cases pass because the weak symbols are resolved.</div>
 
 <ul>
   <li>weak-duplicate-c ✗
@@ -1548,6 +1594,9 @@ xfail: static-gc-weak-duplicate-c
 </ul>
 
 <h3 id="failed-test-weak-use-c">Failed test weak-use-c</h3>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Weak symbols seem not supported, probably
+the LTO test cases pass because the weak symbols are resolved.</div>
 
 <ul>
   <li>weak-use-c ✗
@@ -1628,7 +1677,7 @@ xfail: static-gc-weak-use-c
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2024 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jun 8, 2024<br/> Site last generated: Jun 8, 2024 <br />
+<span>Page last updated:</span> Jun 10, 2024<br/> Site last generated: Jun 10, 2024 <br />
                 </div>
             </div>
 </footer>
