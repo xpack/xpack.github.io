@@ -67,6 +67,17 @@
 
 
 
+{
+"title": "LLVM clang 18.1.8-1 test results",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/clang/tests/18.1.8-1/",
+"summary": ""
+}
+,
+
+
+
 
 
 
@@ -3048,6 +3059,16 @@
 
 
 
+
+
+{
+"title": "xPack LLVM clang v18.1.8-1 released",
+"tags": "releasesclang",
+"keywords": "",
+"url": "/blog/2024/06/25/clang-v18-1-8-1-released/",
+"summary": "<p>Version <strong>18.1.8-1</strong> is a new release; it follows the upstream release.</p>"
+}
+,
 
 
 {
