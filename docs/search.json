@@ -13,6 +13,17 @@
 
 
 {
+"title": "GCC 12.4.0-1 test results",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/gcc/tests/12.4.0-1/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "GCC 13.3.0-1 test results",
 "tags": "",
 "keywords": "",
@@ -3059,6 +3070,16 @@
 
 
 
+
+
+{
+"title": "xPack GCC v12.4.0-1 released",
+"tags": "releasesgcc",
+"keywords": "",
+"url": "/blog/2024/06/26/gcc-v12-4-0-1-released/",
+"summary": ""
+}
+,
 
 
 {

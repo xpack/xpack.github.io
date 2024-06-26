@@ -5,9 +5,23 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 25 Jun 2024 15:18:24 +0000</pubDate>
-        <lastBuildDate>Tue, 25 Jun 2024 15:18:24 +0000</lastBuildDate>
+        <pubDate>Wed, 26 Jun 2024 07:12:23 +0000</pubDate>
+        <lastBuildDate>Wed, 26 Jun 2024 07:12:23 +0000</lastBuildDate>
         <generator>Jekyll v3.9.3</generator>
+        
+        <item>
+            <title>xPack GCC v12.4.0-1 released</title>
+            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/gcc/&quot;&gt;The xPack GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://gcc.gnu.org&quot;&gt;GCC&lt;/a&gt;.&lt;/p&gt;</description>
+            <pubDate>Wed, 26 Jun 2024 06:39:40 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2024/06/26/gcc-v12-4-0-1-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2024/06/26/gcc-v12-4-0-1-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>gcc</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack LLVM clang v18.1.8-1 released</title>
@@ -145,28 +159,6 @@
             <category>cmake</category>
             
             <category>build</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack Meson Build v1.3.2-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/meson-build/&quot;&gt;The xPack Meson Build&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://mesonbuild.org&quot;&gt;Meson Build&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Mon, 01 Apr 2024 08:57:25 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2024/04/01/meson-build-v1-3-2-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2024/04/01/meson-build-v1-3-2-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>meson-build</category>
-            
-            <category>meson</category>
-            
-            <category>build</category>
-            
-            <category>python</category>
-            
-            <category>ninja</category>
             
             
         </item>
