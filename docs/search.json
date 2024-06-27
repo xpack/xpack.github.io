@@ -46,6 +46,17 @@
 
 
 {
+"title": "MinGW-w64 GCC 14.1.0-1 test results",
+"tags": "",
+"keywords": "",
+"url": "/dev-tools/mingw-w64-gcc/tests/14.1.0-1/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "LLVM clang 16.0.6-1 test results",
 "tags": "",
 "keywords": "",
