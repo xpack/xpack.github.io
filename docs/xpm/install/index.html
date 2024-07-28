@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install xpm" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-07-28T14:12:49+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install xpm","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/install/"},"url":"https://xpack.github.io/xpm/install/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-07-28T22:08:21+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install xpm","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/install/"},"url":"https://xpack.github.io/xpm/install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -531,6 +531,17 @@ at least for files in the
 <code class="language-plaintext highlighter-rouge">AppData\Roaming\xPacks</code> and <code class="language-plaintext highlighter-rouge">AppData\Local\Caches\xPacks</code> folders.</p>
 
 <p>If this is not possible, temporarily disable the antivirus program.</p>
+
+<h3 id="xpm-clean-ups">xpm clean-ups</h3>
+
+<p>To remove all global packages installed by <strong>xpm</strong>, there are only two folders:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">%APPDATA%\Roaming\xPacks</code></li>
+  <li><code class="language-plaintext highlighter-rouge">%APPDATA%\Local\Caches\xPacks</code></li>
+</ul>
+
+<p>They can be removed at any time, and <strong>xpm</strong> will recreate them on new installs.</p>
 
 
 	</div>

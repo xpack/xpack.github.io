@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack OpenOCD v0.11.0-4 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-07-28T14:12:49+00:00","datePublished":"2022-03-25T18:16:20+00:00","description":"The xPack OpenOCD is a standalone cross-platform binary distribution of OpenOCD.","headline":"xPack OpenOCD v0.11.0-4 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/03/25/openocd-v0-11-0-4-released/"},"url":"https://xpack.github.io/blog/2022/03/25/openocd-v0-11-0-4-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-07-28T22:08:21+00:00","datePublished":"2022-03-25T18:16:20+00:00","description":"The xPack OpenOCD is a standalone cross-platform binary distribution of OpenOCD.","headline":"xPack OpenOCD v0.11.0-4 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/03/25/openocd-v0-11-0-4-released/"},"url":"https://xpack.github.io/blog/2022/03/25/openocd-v0-11-0-4-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -451,15 +451,13 @@ xpm uninstall @xpack-dev-tools/openocd
 
 <h2 id="compliance">Compliance</h2>
 
-<p>The xPack OpenOCD generally follows the official
+<p>The <strong>xPack OpenOCD</strong> generally follows the official
 <a href="https://openocd.org">OpenOCD</a> releases.</p>
 
 <p>The current version is based on:</p>
 
 <ul>
-  <li>OpenOCD version 0.11.0, the development commit
-<a href="https://github.com/xpack-dev-tools/openocd/commit/92c4e634d7bb9d3fb27d9a0ca332925c7318a574/">92c4e634d7bb9d3fb27d9a0ca332925c7318a574</a>
-from Mar 19th, 2022.</li>
+  <li>OpenOCD version 0.11.0, the development commit <a href="https://github.com/openocd-org/openocd/commit/92c4e634d7bb9d3fb27d9a0ca332925c7318a574/">92c4e634d7bb9d3fb27d9a0ca332925c7318a574</a> from Mar 19th, 2022.</li>
 </ul>
 
 <h2 id="changes">Changes</h2>
@@ -559,15 +557,15 @@ set of platforms. The results are available from:</p>
 
 <h2 id="tests">Tests</h2>
 
-<p>The binaries were testes on Windows 10 Pro 32/64-bit, Intel Ubuntu 18
-LTS 64-bit, Intel Xubuntu 18 LTS 32-bit and macOS 10.15.</p>
+<p>The binaries were testes on Windows 11 Pro, Intel Ubuntu 22
+LTS and macOS 14.5.</p>
 
 <p>Install the package with xpm.</p>
 
 <p>The simple test, consists in starting the binaries
 only to identify the STM32F4DISCOVERY board.</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.../xpack-openocd-0.11.0-4/bin/openocd <span class="nt">-f</span> board/stm32f4discovery.cfg
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/Library/xPacks/@xpack-dev-tools/openocd/0.11.0-4.1/.content/bin/openocd <span class="nt">-f</span> board/stm32f4discovery.cfg
 </code></pre></div></div>
 
 <p>A more complex test consist in programming and debugging a simple blinky
