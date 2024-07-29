@@ -5,9 +5,27 @@
         <description>Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</description>
         <link>https://xpack.github.io/</link>
         <atom:link href="https://xpack.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 29 Jul 2024 06:10:04 +0000</pubDate>
-        <lastBuildDate>Mon, 29 Jul 2024 06:10:04 +0000</lastBuildDate>
+        <pubDate>Mon, 29 Jul 2024 13:21:32 +0000</pubDate>
+        <lastBuildDate>Mon, 29 Jul 2024 13:21:32 +0000</lastBuildDate>
         <generator>Jekyll v3.9.3</generator>
+        
+        <item>
+            <title>xPack xpm v0.19.2 released</title>
+            <description>&lt;p&gt;&lt;strong&gt;xpm&lt;/strong&gt; is a&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; CLIapplication to automate builds and to manage&lt;a href=&quot;https://xpack.github.io/intro/#but-what-are-xpacks&quot;&gt;xPacks&lt;/a&gt; dependencies.&lt;/p&gt;</description>
+            <pubDate>Mon, 29 Jul 2024 13:07:00 +0000</pubDate>
+            <link>https://xpack.github.io/blog/2024/07/29/xpm-v0-19-2-released/</link>
+            <guid isPermaLink="true">https://xpack.github.io/blog/2024/07/29/xpm-v0-19-2-released/</guid>
+            
+            <category>releases</category>
+            
+            <category>xpm</category>
+            
+            <category>package</category>
+            
+            <category>manager</category>
+            
+            
+        </item>
         
         <item>
             <title>xPack MinGW-w64 GCC v11.5.0-1 released</title>
@@ -179,20 +197,6 @@
             <category>mingw</category>
             
             <category>mingw-w64</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>xPack GCC v12.4.0-1 released</title>
-            <description>&lt;p&gt;&lt;a href=&quot;https://xpack.github.io/gcc/&quot;&gt;The xPack GCC&lt;/a&gt;is a standalone cross-platform binary distribution of&lt;a href=&quot;https://gcc.gnu.org&quot;&gt;GCC&lt;/a&gt;.&lt;/p&gt;</description>
-            <pubDate>Wed, 26 Jun 2024 06:39:40 +0000</pubDate>
-            <link>https://xpack.github.io/blog/2024/06/26/gcc-v12-4-0-1-released/</link>
-            <guid isPermaLink="true">https://xpack.github.io/blog/2024/06/26/gcc-v12-4-0-1-released/</guid>
-            
-            <category>releases</category>
-            
-            <category>gcc</category>
             
             
         </item>
