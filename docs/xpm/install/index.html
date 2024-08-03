@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install xpm" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-07-29T13:16:33+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install xpm","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/install/"},"url":"https://xpack.github.io/xpm/install/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-08-03T03:25:57+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install xpm","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xpm/install/"},"url":"https://xpack.github.io/xpm/install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -462,8 +462,8 @@ added 1 package in 7s
 
 <p>The result is a set of three files in the <code class="language-plaintext highlighter-rouge">%APPDATA%\npm</code> folder:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">C:\&gt;</span><span class="nb">dir</span> <span class="s2">"%APPDATA%"</span><span class="se">\n</span>pm<span class="se">\x</span>pm<span class="k">*</span>
-<span class="go"> Volume in drive C has no label.
+<pre><code class="language-txt">C:\&gt;dir "%APPDATA%"\npm\xpm*
+ Volume in drive C has no label.
  Volume Serial Number is B02D-925C
 
  Directory of C:\Users\ilg\AppData\Roaming\npm
@@ -473,7 +473,7 @@ added 1 package in 7s
 29/07/2024  07:24               821 xpm.ps1
                3 File(s)          1,547 bytes
                0 Dir(s)  39,088,439,296 bytes free
-</span></code></pre></div></div>
+</code></pre>
 
 <p>If you followed the instructions in the
 <a href="/install/">prerequisites</a> page, you should
@@ -533,7 +533,8 @@ error: Cannot read property 'path' of null
 at least for files in the
 <code class="language-plaintext highlighter-rouge">AppData\Roaming\xPacks</code> and <code class="language-plaintext highlighter-rouge">AppData\Local\Caches\xPacks</code> folders.</p>
 
-<p>If this is not possible, temporarily disable the antivirus program.</p>
+<p>If this is not possible, temporarily disable the antivirus program. Or switch
+to a better operating system.</p>
 
 <h2 id="uninstall">Uninstall</h2>
 
@@ -596,7 +597,7 @@ already have configured npm to use a location in the home folder.</p>
 
 <p>They can be removed at any time, and <strong>xpm</strong> will recreate them on new installs.</p>
 
-<h3 id="macos-specifics">macOS specifics</h3>
+<h3 id="show-macos-hidden-files">Show macOS hidden files</h3>
 
 <p>The default location used to install the global packages is
 in <code class="language-plaintext highlighter-rouge">~/Library</code>, a folder that, due to an unfortunate Apple decision,
@@ -626,6 +627,12 @@ extracted in a folder named <code class="language-plaintext highlighter-rouge">.
 <p>This keyboard shortcut works like a toggle, using it once makes files
 starting with dot visible,
 using it again reverts to hiding them.</p>
+
+<h3 id="zsh-command-not-found-xpm"><code class="language-plaintext highlighter-rouge">zsh: command not found: xpm</code></h3>
+
+<p>If you recently switched to <code class="language-plaintext highlighter-rouge">zsh</code>, or updated macOS to 11.x, which does
+this automatically, you need to copy the <code class="language-plaintext highlighter-rouge">PATH</code> setting from your previous shell startup file to <code class="language-plaintext highlighter-rouge">.zprofile</code>, otherwise the location
+where npm installs global modules is not in the path.</p>
 
 
 	</div>
@@ -760,12 +767,6 @@ variables in the environment.
 See <a href="https://www.npmjs.com/package/proxy-from-env">proxy-from-env</a> for
 details.</p>
 
-<h2 id="zsh-command-not-found-xpm"><code class="language-plaintext highlighter-rouge">zsh: command not found: xpm</code></h2>
-
-<p>If you recently switched to <code class="language-plaintext highlighter-rouge">zsh</code>, or updated macOS to 11.x, which does
-this automatically, you need to copy the <code class="language-plaintext highlighter-rouge">PATH</code> setting from your previous shell startup file to <code class="language-plaintext highlighter-rouge">.zprofile</code>, otherwise the location
-where npm installs global modules is not in the path.</p>
-
 <h2 id="cannot-find-module-ilgcli-start-options"><code class="language-plaintext highlighter-rouge">Cannot find module '@ilg/cli-start-options'</code></h2>
 
 <p>In certain conditions, npm may fail when installing
@@ -837,7 +838,7 @@ npm xpm@0.19.1 '/Users/ilg/.nvm/versions/node/v18.18.2/lib/node_modules/xpm'
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2024 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jul 29, 2024<br/> Site last generated: Jul 29, 2024 <br />
+<span>Page last updated:</span> Aug 3, 2024<br/> Site last generated: Aug 3, 2024 <br />
                 </div>
             </div>
 </footer>

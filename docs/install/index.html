@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack prerequisites" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-07-29T13:16:33+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack prerequisites","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"url":"https://xpack.github.io/install/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-08-03T03:25:57+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack prerequisites","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"url":"https://xpack.github.io/install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -709,7 +709,7 @@ with administrative rights.</p>
 <p>The result is a folder like <code class="language-plaintext highlighter-rouge">C:\Program Files\nodejs</code>, added to the
 system path since it includes the <code class="language-plaintext highlighter-rouge">node.exe</code> binary.</p>
 
-<pre><code class="language-doscon">C:\&gt;where node.exe
+<pre><code class="language-txt">C:\&gt;where node.exe
 C:\Program Files\nodejs\node.exe
 C:\&gt;node --version
 v18.18.2
@@ -719,7 +719,7 @@ v18.18.2
 
 <p>A version of <strong>npm</strong>, usually a bit older, comes packed with Node.js.</p>
 
-<pre><code class="language-doscon">C:\&gt;where npm.cmd
+<pre><code class="language-txt">C:\&gt;where npm.cmd
 C:\Program Files\nodejs\npm.cmd
 C:\&gt;npm --version
 9.8.1
@@ -727,7 +727,7 @@ C:\&gt;npm --version
 
 <p>It is recommended to update it to the latest version:</p>
 
-<pre><code class="language-doscon">C:\&gt;npm install -location=global npm@latest
+<pre><code class="language-txt">C:\&gt;npm install -location=global npm@latest
 removed 1 package, and changed 60 packages in 5s
 
 27 packages are looking for funding
@@ -736,7 +736,7 @@ removed 1 package, and changed 60 packages in 5s
 
 <p>Surprisingly, checking the version usually shows the old version:</p>
 
-<pre><code class="language-doscon">C:\&gt;where npm.cmd
+<pre><code class="language-txt">C:\&gt;where npm.cmd
 C:\Program Files\nodejs\npm.cmd
 C:\&gt;npm --version
 9.8.1
@@ -748,17 +748,17 @@ user home folder, in <code class="language-plaintext highlighter-rouge">%APPDATA
 (like <code class="language-plaintext highlighter-rouge">C:\Users\ilg\AppData\Roaming\npm</code>);
 and this path <strong>is not</strong> in the default environment.</p>
 
-<pre><code class="language-doscon">C:\&gt;echo %Path%
+<pre><code class="language-txt">C:\&gt;echo %Path%
 </code></pre>
 
 <p>It must be added manually <strong>in front</strong> of the current path:</p>
 
-<pre><code class="language-doscon">C:\&gt;set Path=%APPDATA%\npm;%Path%
+<pre><code class="language-txt">C:\&gt;set Path=%APPDATA%\npm;%Path%
 </code></pre>
 
 <p>To make this setting <strong>persistent</strong>, also issue the following:</p>
 
-<pre><code class="language-doscon">C:\&gt;setx Path "%APPDATA%\npm;%Path%"
+<pre><code class="language-txt">C:\&gt;setx Path "%APPDATA%\npm;%Path%"
 </code></pre>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Please note the syntax differences, no equal
@@ -770,7 +770,7 @@ the syntax to match their specifics.</div>
 
 <p>After this, the new version of the program should be visible:</p>
 
-<pre><code class="language-doscon">C:\&gt;npm --version
+<pre><code class="language-txt">C:\&gt;npm --version
 10.2.0
 </code></pre>
 
@@ -792,7 +792,7 @@ the execution of node.js applications.</p>
 
 <p>If you get a message in the console as the one below:</p>
 
-<pre><code class="language-doscon">xpm : File C:\Users\...\AppData\Roaming\npm\xpm.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at
+<pre><code class="language-txt">xpm : File C:\Users\...\AppData\Roaming\npm\xpm.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at
 https:/go.microsoft.com/fwlink/?LinkID=135170.
 At line:1 char:1
 + xpm init --template @xpack/hello-world-template@latest --property lan ...
@@ -804,7 +804,7 @@ The terminal process "C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe 
 
 <p>then run the following command in a PowerShell terminal:</p>
 
-<pre><code class="language-doscon">Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser
+<pre><code class="language-txt">Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser
 </code></pre>
 
 <p>For more details please read the Microsoft
@@ -1399,7 +1399,7 @@ builds, or to build it from sources; for more details see the
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2024 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Jul 29, 2024<br/> Site last generated: Jul 29, 2024 <br />
+<span>Page last updated:</span> Aug 3, 2024<br/> Site last generated: Aug 3, 2024 <br />
                 </div>
             </div>
 </footer>
