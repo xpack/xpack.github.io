@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack 101" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-08-03T13:47:55+00:00","datePublished":"2019-06-26T05:57:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"xPack 101","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/intro/"},"url":"https://xpack.github.io/intro/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-09-19T19:18:19+00:00","datePublished":"2019-06-26T05:57:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"xPack 101","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/intro/"},"url":"https://xpack.github.io/intro/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -320,164 +320,6 @@
           
           
           <li><a title="xpm" href="/xpm/">xpm</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
-  
-  <li>
-      <a title="3rd Party Tools" href="#">3rd Party Tools</a>
-      <ul>
-          
-          
-          
-          <li><a title="Overview" href="/dev-tools/">Overview</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="aarch64-none-elf-gcc" href="/dev-tools/aarch64-none-elf-gcc/">aarch64-none-elf-gcc</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="arm-none-eabi-gcc" href="/dev-tools/arm-none-eabi-gcc/">arm-none-eabi-gcc</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="clang" href="/dev-tools/clang/">clang</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="cmake" href="/dev-tools/cmake/">cmake</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="gcc" href="/dev-tools/gcc/">gcc</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="meson-build" href="/dev-tools/meson-build/">meson-build</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="mingw-w64-gcc" href="/dev-tools/mingw-w64-gcc/">mingw-w64-gcc</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="ninja-build" href="/dev-tools/ninja-build/">ninja-build</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="openocd" href="/dev-tools/openocd/">openocd</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="qemu-arm" href="/dev-tools/qemu-arm/">qemu-arm</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="qemu-riscv" href="/dev-tools/qemu-riscv/">qemu-riscv</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="riscv-none-elf-gcc" href="/dev-tools/riscv-none-elf-gcc/">riscv-none-elf-gcc</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="windows-build-tools" href="/dev-tools/windows-build-tools/">windows-build-tools</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
-  
-  <li>
-      <a title="Other 3rd Party Tools" href="#">Other 3rd Party Tools</a>
-      <ul>
-          
-          
-          
-          <li><a title="m4" href="/dev-tools/m4/">m4</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="patchelf" href="/dev-tools/patchelf/">patchelf</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="pkg-config" href="/dev-tools/pkg-config/">pkg-config</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="realpath" href="/dev-tools/realpath/">realpath</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="sed" href="/dev-tools/sed/">sed</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="wine" href="/dev-tools/wine/">wine</a></li>
           
           
           
@@ -1046,7 +888,7 @@ to that folders created in the local <code class="language-plaintext highlighter
 individual programs added in <code class="language-plaintext highlighter-rouge">xpacks/.bin</code> (or <code class="language-plaintext highlighter-rouge">.cmd</code> stubs on Windows).</p>
 
 <p>Similarly for liquidjs, which is a Node.js CLI npm module, after
-installing the module, npm will
+installing the module, npm will
 add a folder <code class="language-plaintext highlighter-rouge">node_modules/.bin</code> where links to the executables
 will be created (or <code class="language-plaintext highlighter-rouge">.cmd</code> stubs on Windows).</p>
 
@@ -1054,66 +896,66 @@ will be created (or <code class="language-plaintext highlighter-rouge">.cmd</cod
 <span class="c">.
 </span><span class="go">├── LICENSE
 ├── node_modules
-│   ├── .bin
-</span><span class="gp">│   │   ├── liquid -&gt;</span><span class="w"> </span>../liquidjs/bin/liquid.js
-<span class="gp">│   │   └── liquidjs -&gt;</span><span class="w"> </span>../liquidjs/bin/liquid.js
-<span class="go">│   ├── .package-lock.json
-│   ├── commander
-│   │   ├── LICENSE
-│   │   ├── Readme.md
-│   │   ├── esm.mjs
-│   │   ├── index.js
-│   │   ├── lib
-│   │   ├── package-support.json
-│   │   ├── package.json
-│   │   └── typings
-│   └── liquidjs
-│       ├── LICENSE
-│       ├── README.md
-│       ├── bin
-│       ├── dist
-│       └── package.json
+│   ├── .bin
+</span><span class="gp">│   │   ├── liquid -&gt;</span><span class="w"> </span>../liquidjs/bin/liquid.js
+<span class="gp">│   │   └── liquidjs -&gt;</span><span class="w"> </span>../liquidjs/bin/liquid.js
+<span class="go">│   ├── .package-lock.json
+│   ├── commander
+│   │   ├── LICENSE
+│   │   ├── Readme.md
+│   │   ├── esm.mjs
+│   │   ├── index.js
+│   │   ├── lib
+│   │   ├── package-support.json
+│   │   ├── package.json
+│   │   └── typings
+│   └── liquidjs
+│       ├── LICENSE
+│       ├── README.md
+│       ├── bin
+│       ├── dist
+│       └── package.json
 ├── package-lock.json
 ├── package.json
 └── xpacks
     ├── .bin
-</span><span class="gp">    │   ├── arm-none-eabi-addr2line -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-addr2line
-<span class="gp">    │   ├── arm-none-eabi-ar -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-ar
-<span class="gp">    │   ├── arm-none-eabi-as -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-as
-<span class="gp">    │   ├── arm-none-eabi-c++ -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-c++
-<span class="gp">    │   ├── arm-none-eabi-c++filt -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-c++filt
-<span class="gp">    │   ├── arm-none-eabi-cpp -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-cpp
-<span class="gp">    │   ├── arm-none-eabi-elfedit -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-elfedit
-<span class="gp">    │   ├── arm-none-eabi-g++ -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-g++
-<span class="gp">    │   ├── arm-none-eabi-gcc -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc
-<span class="gp">    │   ├── arm-none-eabi-gcc-ar -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc-ar
-<span class="gp">    │   ├── arm-none-eabi-gcc-nm -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc-nm
-<span class="gp">    │   ├── arm-none-eabi-gcc-ranlib -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc-ranlib
-<span class="gp">    │   ├── arm-none-eabi-gcov -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcov
-<span class="gp">    │   ├── arm-none-eabi-gcov-dump -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcov-dump
-<span class="gp">    │   ├── arm-none-eabi-gcov-tool -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcov-tool
-<span class="gp">    │   ├── arm-none-eabi-gdb -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb
-<span class="gp">    │   ├── arm-none-eabi-gdb-add-index -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb-add-index
-<span class="gp">    │   ├── arm-none-eabi-gdb-add-index-py3 -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb-add-index-py3
-<span class="gp">    │   ├── arm-none-eabi-gdb-py3 -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb-py3
-<span class="gp">    │   ├── arm-none-eabi-gfortran -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gfortran
-<span class="gp">    │   ├── arm-none-eabi-gprof -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gprof
-<span class="gp">    │   ├── arm-none-eabi-ld -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-ld
-<span class="gp">    │   ├── arm-none-eabi-ld.bfd -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-ld.bfd
-<span class="gp">    │   ├── arm-none-eabi-lto-dump -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-lto-dump
-<span class="gp">    │   ├── arm-none-eabi-nm -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-nm
-<span class="gp">    │   ├── arm-none-eabi-objcopy -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-objcopy
-<span class="gp">    │   ├── arm-none-eabi-objdump -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-objdump
-<span class="gp">    │   ├── arm-none-eabi-ranlib -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-ranlib
-<span class="gp">    │   ├── arm-none-eabi-readelf -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-readelf
-<span class="gp">    │   ├── arm-none-eabi-size -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-size
-<span class="gp">    │   ├── arm-none-eabi-strings -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-strings
-<span class="gp">    │   ├── arm-none-eabi-strip -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-strip
-<span class="gp">    │   ├── ccmake -&gt;</span><span class="w"> </span>../@xpack-dev-tools/cmake/.content/bin/ccmake
-<span class="gp">    │   ├── cmake -&gt;</span><span class="w"> </span>../@xpack-dev-tools/cmake/.content/bin/cmake
-<span class="gp">    │   ├── cpack -&gt;</span><span class="w"> </span>../@xpack-dev-tools/cmake/.content/bin/cpack
-<span class="gp">    │   ├── ctest -&gt;</span><span class="w"> </span>../@xpack-dev-tools/cmake/.content/bin/ctest
-<span class="gp">    │   └── ninja -&gt;</span><span class="w"> </span>../@xpack-dev-tools/ninja-build/.content/bin/ninja
+</span><span class="gp">    │   ├── arm-none-eabi-addr2line -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-addr2line
+<span class="gp">    │   ├── arm-none-eabi-ar -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-ar
+<span class="gp">    │   ├── arm-none-eabi-as -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-as
+<span class="gp">    │   ├── arm-none-eabi-c++ -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-c++
+<span class="gp">    │   ├── arm-none-eabi-c++filt -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-c++filt
+<span class="gp">    │   ├── arm-none-eabi-cpp -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-cpp
+<span class="gp">    │   ├── arm-none-eabi-elfedit -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-elfedit
+<span class="gp">    │   ├── arm-none-eabi-g++ -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-g++
+<span class="gp">    │   ├── arm-none-eabi-gcc -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc
+<span class="gp">    │   ├── arm-none-eabi-gcc-ar -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc-ar
+<span class="gp">    │   ├── arm-none-eabi-gcc-nm -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc-nm
+<span class="gp">    │   ├── arm-none-eabi-gcc-ranlib -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc-ranlib
+<span class="gp">    │   ├── arm-none-eabi-gcov -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcov
+<span class="gp">    │   ├── arm-none-eabi-gcov-dump -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcov-dump
+<span class="gp">    │   ├── arm-none-eabi-gcov-tool -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcov-tool
+<span class="gp">    │   ├── arm-none-eabi-gdb -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb
+<span class="gp">    │   ├── arm-none-eabi-gdb-add-index -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb-add-index
+<span class="gp">    │   ├── arm-none-eabi-gdb-add-index-py3 -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb-add-index-py3
+<span class="gp">    │   ├── arm-none-eabi-gdb-py3 -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb-py3
+<span class="gp">    │   ├── arm-none-eabi-gfortran -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gfortran
+<span class="gp">    │   ├── arm-none-eabi-gprof -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gprof
+<span class="gp">    │   ├── arm-none-eabi-ld -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-ld
+<span class="gp">    │   ├── arm-none-eabi-ld.bfd -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-ld.bfd
+<span class="gp">    │   ├── arm-none-eabi-lto-dump -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-lto-dump
+<span class="gp">    │   ├── arm-none-eabi-nm -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-nm
+<span class="gp">    │   ├── arm-none-eabi-objcopy -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-objcopy
+<span class="gp">    │   ├── arm-none-eabi-objdump -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-objdump
+<span class="gp">    │   ├── arm-none-eabi-ranlib -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-ranlib
+<span class="gp">    │   ├── arm-none-eabi-readelf -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-readelf
+<span class="gp">    │   ├── arm-none-eabi-size -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-size
+<span class="gp">    │   ├── arm-none-eabi-strings -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-strings
+<span class="gp">    │   ├── arm-none-eabi-strip -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-strip
+<span class="gp">    │   ├── ccmake -&gt;</span><span class="w"> </span>../@xpack-dev-tools/cmake/.content/bin/ccmake
+<span class="gp">    │   ├── cmake -&gt;</span><span class="w"> </span>../@xpack-dev-tools/cmake/.content/bin/cmake
+<span class="gp">    │   ├── cpack -&gt;</span><span class="w"> </span>../@xpack-dev-tools/cmake/.content/bin/cpack
+<span class="gp">    │   ├── ctest -&gt;</span><span class="w"> </span>../@xpack-dev-tools/cmake/.content/bin/ctest
+<span class="gp">    │   └── ninja -&gt;</span><span class="w"> </span>../@xpack-dev-tools/ninja-build/.content/bin/ninja
 <span class="go">    └── @xpack-dev-tools
 </span><span class="gp">        ├── arm-none-eabi-gcc -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@xpack-dev-tools/arm-none-eabi-gcc/12.2.1-1.2.1
 <span class="gp">        ├── cmake -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@xpack-dev-tools/cmake/3.26.5-1.1
@@ -1154,7 +996,7 @@ Adding '@micro-os-plus/diag-trace' to 'dependencies'...
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">xpacks
 ├── @micro-os-plus
-</span><span class="gp">│   └── diag-trace -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@micro-os-plus/diag-trace/4.2.0
+</span><span class="gp">│   └── diag-trace -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@micro-os-plus/diag-trace/4.2.0
 <span class="go">└── @xpack-dev-tools
 </span><span class="gp">    ├── arm-none-eabi-gcc -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@xpack-dev-tools/arm-none-eabi-gcc/12.2.1-1.2.1
 <span class="gp">    ├── cmake -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@xpack-dev-tools/cmake/3.26.5-1.1
@@ -1168,13 +1010,13 @@ xpacks/@micro-os-plus/diag-trace
 ├── LICENSE
 ├── README.md
 ├── include
-│   └── micro-os-plus
-│       └── diag
-│           └── trace.h
+│   └── micro-os-plus
+│       └── diag
+│           └── trace.h
 ├── meson.build
 ├── package.json
 ├── src
-│   └── trace.cpp
+│   └── trace.cpp
 └── xpack.json
 
 5 directories, 9 files
@@ -1708,7 +1550,7 @@ ilg@wksi my-project %
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2024 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Aug 3, 2024<br/> Site last generated: Aug 3, 2024 <br />
+<span>Page last updated:</span> Sep 19, 2024<br/> Site last generated: Sep 19, 2024 <br />
                 </div>
             </div>
 </footer>

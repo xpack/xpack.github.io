@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="xPack QEMU Arm v7.0.0-1 released" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-08-03T13:47:55+00:00","datePublished":"2022-05-04T22:26:07+00:00","description":"The xPack QEMU Arm is a standalone cross-platform binary distribution of QEMU, with several extensions for Arm Cortex-M devices.","headline":"xPack QEMU Arm v7.0.0-1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/05/04/qemu-arm-v7-0-0-1-released/"},"url":"https://xpack.github.io/blog/2022/05/04/qemu-arm-v7-0-0-1-released/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-09-19T19:18:19+00:00","datePublished":"2022-05-04T22:26:07+00:00","description":"The xPack QEMU Arm is a standalone cross-platform binary distribution of QEMU, with several extensions for Arm Cortex-M devices.","headline":"xPack QEMU Arm v7.0.0-1 released","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/blog/2022/05/04/qemu-arm-v7-0-0-1-released/"},"url":"https://xpack.github.io/blog/2022/05/04/qemu-arm-v7-0-0-1-released/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -265,54 +265,8 @@
                 
 
 <ul id="mysidebar" class="nav">
-  <li class="sidebarTitle">QEMU Arm </li>
+  <li class="sidebarTitle"> </li>
   
-  
-  
-  <li>
-      <a title="Getting Started" href="#">Getting Started</a>
-      <ul>
-          
-          
-          
-          <li><a title="Overview" href="/dev-tools/qemu-arm/">Overview</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="Install" href="/dev-tools/qemu-arm/install/">Install</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="Support" href="/dev-tools/qemu-arm/support/">Support</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="FAQ" href="/dev-tools/qemu-arm/faq/">FAQ</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="Releases" href="/dev-tools/qemu-arm/releases/">Releases</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
-      
       <!-- if you aren't using the accordion, uncomment this block:
          <p class="external">
              <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
@@ -378,7 +332,7 @@ and the class never gets inserted.-->
 </div>
         
 
-        <p><a href="https://xpack.github.io/dev-tools/qemu-arm/">The xPack QEMU Arm</a>
+        <p>The <a href="https://xpack.github.io/dev-tools/qemu-arm/">xPack QEMU Arm</a>
 is a standalone cross-platform binary distribution of
 <a href="https://www.qemu.org">QEMU</a>, with several extensions for Arm Cortex-M
 devices.</p>
@@ -398,17 +352,17 @@ armv6 is not supported).</div>
 <h2 id="prerequisites">Prerequisites</h2>
 
 <ul>
-  <li>GNU/Linux Intel 64-bit: any system with <strong>GLIBC 2.27</strong> or higher
+  <li>x64 GNU/Linux: any system with <strong>GLIBC 2.27</strong> or higher
 (like Ubuntu 18 or later, Debian 10 or later, RedHat 8 or later,
 Fedora 29 or later, etc)</li>
-  <li>GNU/Linux Arm 32/64-bit: any system with <strong>GLIBC 2.27</strong> or higher
+  <li>arm64/arm GNU/Linux: any system with <strong>GLIBC 2.27</strong> or higher
 (like Raspberry Pi OS, Ubuntu 18 or later, Debian 10 or later, RedHat 8 or later,
 Fedora 29 or later, etc)</li>
-  <li>Intel Windows 64-bit: Windows 7 with the Universal C Runtime
+  <li>x64 Windows: Windows 7 with the Universal C Runtime
 (<a href="https://support.microsoft.com/en-us/topic/update-for-universal-c-runtime-in-windows-c0514201-7fe6-95a3-b0a5-287930f3560c">UCRT</a>),
 Windows 8, Windows 10</li>
-  <li>macOS Intel 64-bit: 10.13 or later; graphical mode available on 10.14 or later</li>
-  <li>macOS Apple Silicon 64-bit: 11.6 or later</li>
+  <li>x64 macOS: 10.13 or later; graphical mode available on 10.14 or later</li>
+  <li>arm64 macOS: 11.6 or later</li>
 </ul>
 
 <p>On GNU/Linux, QEMU requires the X11 libraries to be present. On Debian derived
@@ -417,7 +371,7 @@ distributions they must be installed explicitly.</p>
 
 <h2 id="install">Install</h2>
 
-<p>The full details of installing the <strong>xPack QEMU Arm</strong> on various platforms
+<p>The full details of installing the <strong>xPack QEMU Arm</strong> on various platforms
 are presented in the separate <a href="/dev-tools/qemu-arm/install/">Install</a> page.</p>
 
 <h3 id="easy-install">Easy install</h3>
@@ -834,9 +788,7 @@ Supported MCUs:
 </span><span class="gp">  STM32F429ZITx &lt;- new&gt;</span><span class="w">
 </span></code></pre></div></div>
 
-<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> In this old release,
-support for hardware floating point on
-Cortex-M4 devices is not available.</div>
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> In this old release, support for hardware floating point on Cortex-M4 devices is not available.</div>
 
 <h2 id="bug-fixes">Bug fixes</h2>
 
@@ -1074,7 +1026,7 @@ for the individual file counters.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2024 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Aug 3, 2024<br/> Site last generated: Aug 3, 2024 <br />
+<span>Page last updated:</span> Sep 19, 2024<br/> Site last generated: Sep 19, 2024 <br />
                 </div>
             </div>
 </footer>
