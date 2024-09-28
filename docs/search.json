@@ -1430,7 +1430,7 @@
 "tags": "releasesgcc",
 "keywords": "",
 "url": "/blog/2024/02/24/gcc-v13-2-0-2-released/",
-"summary": "<p>Version <strong>13.2.0-2</strong> is a maintenance release; it fixes the linker path issue on Linux.</p>"
+"summary": "<p>Version <strong>13.2.0-2</strong> is a maintenance release; it fixes the linker path issue on GNU/Linux.</p>"
 }
 ,
 
@@ -1440,7 +1440,7 @@
 "tags": "releasesgcc",
 "keywords": "",
 "url": "/blog/2024/02/24/gcc-v12-3-0-2-released/",
-"summary": "<p>Version <strong>12.3.0-2</strong> is a maintenance release; it fixes the linker path issue on Linux.</p>"
+"summary": "<p>Version <strong>12.3.0-2</strong> is a maintenance release; it fixes the linker path issue on GNU/Linux.</p>"
 }
 ,
 
@@ -1450,7 +1450,7 @@
 "tags": "releasesgcc",
 "keywords": "",
 "url": "/blog/2024/02/23/gcc-v11-4-0-2-released/",
-"summary": "<p>Version <strong>11.4.0-2</strong> is a maintenance release; it fixes the linker path issue on Linux.</p>"
+"summary": "<p>Version <strong>11.4.0-2</strong> is a maintenance release; it fixes the linker path issue on GNU/Linux.</p>"
 }
 ,
 
@@ -2270,7 +2270,7 @@
 "tags": "releasesgcc",
 "keywords": "",
 "url": "/blog/2022/12/27/gcc-v12-2-0-2-released/",
-"summary": "<p>Version <strong>12.2.0-2</strong> is a maintenance release;  it add support for 32-bit on Intel Linux and upgrades to binutils 2.39.</p>"
+"summary": "<p>Version <strong>12.2.0-2</strong> is a maintenance release;  it add support for 32-bit on x86 GNU/Linux and upgrades to binutils 2.39.</p>"
 }
 ,
 
