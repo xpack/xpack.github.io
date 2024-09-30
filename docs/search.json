@@ -931,6 +931,28 @@
 
 
 {
+"title": "DEPRECATED &gt; ARM toolchain support",
+"tags": "",
+"keywords": "",
+"url": "/arm-none-eabi-gcc/support/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "DEPRECATED &gt; RISC-V toolchain support",
+"tags": "",
+"keywords": "",
+"url": "/riscv-none-embed-gcc/support/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "How to get help for xpbuild",
 "tags": "",
 "keywords": "",
