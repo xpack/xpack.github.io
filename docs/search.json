@@ -274,6 +274,61 @@
 
 
 {
+"title": "DEPRECATED &gt; The GNU MCU Eclipse QEMU",
+"tags": "",
+"keywords": "",
+"url": "/qemu-arm/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "DEPRECATED &gt; The RISC-V Embedded GCC",
+"tags": "",
+"keywords": "",
+"url": "/riscv-none-embed-gcc/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "The GNU MCU Eclipse Windows Build Tools",
+"tags": "",
+"keywords": "",
+"url": "/windows-build-tools/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "DEPRECATED &gt; The ARM Embedded GCC",
+"tags": "",
+"keywords": "",
+"url": "/arm-none-eabi-gcc/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "DEPRECATED &gt; The GNU MCU Eclipse OpenOCD",
+"tags": "",
+"keywords": "",
+"url": "/openocd/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "The xPack Build Configurator",
 "tags": "",
 "keywords": "make",
@@ -418,6 +473,61 @@
 "tags": "",
 "keywords": "",
 "url": "/xpm/cli/init/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "DEPRECATED &gt; How to install the QEMU binaries?",
+"tags": "",
+"keywords": "",
+"url": "/qemu-arm/install/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "DEPRECATED &gt; How to install the RISC-V toolchain?",
+"tags": "",
+"keywords": "",
+"url": "/riscv-none-embed-gcc/install/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "How to install the Windows Build Tools?",
+"tags": "",
+"keywords": "",
+"url": "/windows-build-tools/install/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "DEPRECATED &gt; How to install the ARM toolchain?",
+"tags": "",
+"keywords": "",
+"url": "/arm-none-eabi-gcc/install/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "DEPRECATED &gt; How to install the OpenOCD binaries?",
+"tags": "",
+"keywords": "",
+"url": "/openocd/install/",
 "summary": ""
 }
 ,
@@ -597,6 +707,17 @@
 
 
 {
+"title": "The GNU MCU Eclipse QEMU command line options",
+"tags": "",
+"keywords": "",
+"url": "/qemu-arm/options/",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "How to get support",
 "tags": "",
 "keywords": "",
@@ -687,6 +808,61 @@
 
 
 
+
+
+
+{
+"title": "DEPRECATED &gt; GNU MCU Eclipse QEMU releases",
+"tags": "",
+"keywords": "",
+"url": "/qemu-arm/releases/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "DEPRECATED &gt; GNU MCU Eclipse RISC-V Embedded GCC releases",
+"tags": "",
+"keywords": "",
+"url": "/riscv-none-embed-gcc/releases/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "GNU ARM Eclipse Windows Build Tools releases",
+"tags": "",
+"keywords": "",
+"url": "/windows-build-tools/releases/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "DEPRECATED &gt; GNU MCU Eclipse ARM Embedded GCC releases",
+"tags": "",
+"keywords": "",
+"url": "/arm-none-eabi-gcc/releases/",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "DEPRECATED &gt; GNU MCU Eclipse OpenOCD releases",
+"tags": "",
+"keywords": "",
+"url": "/openocd/releases/",
+"summary": ""
+}
+,
 
 
 
