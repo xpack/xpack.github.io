@@ -1397,7 +1397,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/blog/2024/10/13/2015-03-24-openocd-v0.9.0-20150324-dev-released/",
+"url": "/blog/2024/10/15/2015-04-04-qemu-v2-2-92-20150404-released/",
 "summary": ""
 }
 ,
@@ -1407,7 +1407,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/blog/2024/10/13/2015-03-24-openocd-v0.8.0-20150324-released/",
+"url": "/blog/2024/10/15/2015-05-19-openocd-v0.9.0-20150519-released/",
 "summary": ""
 }
 ,
@@ -1417,7 +1417,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/blog/2024/10/13/2015-03-20-openocd-v0.8.0-20150320-released/",
+"url": "/blog/2024/10/15/2015-03-24-openocd-v0.9.0-20150324-dev-released/",
 "summary": ""
 }
 ,
@@ -1427,7 +1427,47 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "/blog/2024/10/13/2015-01-19-openocd-v0.8.0-20150119-released/",
+"url": "/blog/2024/10/15/2015-03-24-openocd-v0.8.0-20150324-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "/blog/2024/10/15/2015-03-20-openocd-v0.9.0-20150320-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "/blog/2024/10/15/2015-03-20-openocd-v0.8.0-20150320-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "/blog/2024/10/15/2015-01-31-openocd-v0.8.0-20150131-released/",
+"summary": ""
+}
+,
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "/blog/2024/10/15/2015-01-19-openocd-v0.8.0-20150119-released/",
 "summary": ""
 }
 ,
@@ -3398,7 +3438,7 @@
 "tags": "releasesmeson-buildmesonbuildpythonninja",
 "keywords": "",
 "url": "/blog/2021/05/26/meson-build-v0-57-2-1-released/",
-"summary": "<p>Version 0.57.2-1 is a new release of the <strong>xPack Meson Build</strong> package, following the Meson release.</p>"
+"summary": "<p>Version <strong>0.57.2-1</strong> is a new release of the <strong>xPack Meson Build</strong> package, following the Meson release.</p>"
 }
 ,
 
@@ -3408,7 +3448,7 @@
 "tags": "releasesgccbinariesc++",
 "keywords": "",
 "url": "/blog/2021/05/24/gcc-v8-5-0-1-released/",
-"summary": "<p>Version 8.5.0-1 is the first release of <strong>xPack GCC</strong>.</p>"
+"summary": "<p>Version <strong>8.5.0-1</strong> is the first release of <strong>xPack GCC</strong>.</p>"
 }
 ,
 
@@ -3428,7 +3468,7 @@
 "tags": "releasescmakebuild",
 "keywords": "",
 "url": "/blog/2021/05/19/cmake-v3-19-8-1-released/",
-"summary": "<p>Version 3.19.8-1 is a new release of the <strong>xPack CMake</strong> package, following the CMake release.</p>"
+"summary": "<p>Version <strong>3.19.8-1</strong> is a new release of the <strong>xPack CMake</strong> package, following the CMake release.</p>"
 }
 ,
 
@@ -3478,7 +3518,7 @@
 "tags": "releasesninja-buildninjabuildspeedsmall",
 "keywords": "",
 "url": "/blog/2021/04/28/ninja-build-v1-10-2-3-released/",
-"summary": "<p>Version 1.10.2-3 is a maintenance release of the <strong>xPack Ninja Build</strong> package, fixing the spawning of cmd.exe scripts on Windows.</p>"
+"summary": "<p>Version <strong>1.10.2-3</strong> is a maintenance release of the <strong>xPack Ninja Build</strong> package, fixing the spawning of cmd.exe scripts on Windows.</p>"
 }
 ,
 
@@ -3498,7 +3538,7 @@
 "tags": "releasesmeson-buildmesonbuildpythonninja",
 "keywords": "",
 "url": "/blog/2021/04/27/meson-build-v0-56-2-2-released/",
-"summary": "<p>Version 0.56.2-2 is a maintenance release of the <strong>xPack Meson Build</strong> package, intended to fix the macOS starting bug.</p>"
+"summary": "<p>Version <strong>0.56.2-2</strong> is a maintenance release of the <strong>xPack Meson Build</strong> package, intended to fix the macOS starting bug.</p>"
 }
 ,
 
@@ -3578,7 +3618,7 @@
 "tags": "releasescmakebuild",
 "keywords": "",
 "url": "/blog/2021/03/16/cmake-v3-19-2-2-released/",
-"summary": "<p>Version 3.19.2-2 is a maintenance release of the <strong>xPack CMake</strong> package, fixing the spawning of cmd.exe scripts on Windows.</p>"
+"summary": "<p>Version <strong>3.19.2-2</strong> is a maintenance release of the <strong>xPack CMake</strong> package, fixing the spawning of cmd.exe scripts on Windows.</p>"
 }
 ,
 
@@ -3588,7 +3628,7 @@
 "tags": "releasescmakebuild",
 "keywords": "",
 "url": "/blog/2021/03/16/cmake-v3-18-6-1-released/",
-"summary": "<p>Version 3.18.6-1 is a new release of the <strong>xPack CMake</strong> package, following the CMake release.</p>"
+"summary": "<p>Version <strong>3.18.6-1</strong> is a new release of the <strong>xPack CMake</strong> package, following the CMake release.</p>"
 }
 ,
 
@@ -3598,7 +3638,7 @@
 "tags": "releasesninja-buildninjabuildspeedsmall",
 "keywords": "",
 "url": "/blog/2021/03/16/ninja-build-v1-10-2-2-released/",
-"summary": "<p>Version 1.10.2-2 is a maintenance release of the <strong>xPack Ninja Build</strong> package, fixing the spawning of cmd.exe scripts on Windows.</p>"
+"summary": "<p>Version <strong>1.10.2-2</strong> is a maintenance release of the <strong>xPack Ninja Build</strong> package, fixing the spawning of cmd.exe scripts on Windows.</p>"
 }
 ,
 
@@ -3618,7 +3658,7 @@
 "tags": "releasesmeson-buildmesonbuildpythonninja",
 "keywords": "",
 "url": "/blog/2021/02/02/meson-build-v0-56-2-1-released/",
-"summary": "<p>Version 0.56.2-1 is a new release of the <strong>xPack Meson Build</strong> package, following the Meson release.</p>"
+"summary": "<p>Version <strong>0.56.2-1</strong> is a new release of the <strong>xPack Meson Build</strong> package, following the Meson release.</p>"
 }
 ,
 
@@ -3628,7 +3668,7 @@
 "tags": "releasesqemuemulatorarmcortex-m",
 "keywords": "",
 "url": "/blog/2021/02/02/qemu-arm-v2-8-0-12-released/",
-"summary": "<p>Version 2.8.0-12 is a maintenance release; it fixes the macOS startup via links and enables Thumb2 for Arm v6.</p>"
+"summary": "<p>Version <strong>2.8.0-12</strong> is a maintenance release; it fixes the macOS startup via links and enables Thumb2 for Arm v6.</p>"
 }
 ,
 
@@ -3648,7 +3688,7 @@
 "tags": "releasescmakebuild",
 "keywords": "",
 "url": "/blog/2021/01/06/cmake-v3-19-2-1-released/",
-"summary": "<p>Version 3.19.2-1 is a new release of the <strong>xPack CMake</strong> package, following the CMake release.</p>"
+"summary": "<p>Version <strong>3.19.2-1</strong> is a new release of the <strong>xPack CMake</strong> package, following the CMake release.</p>"
 }
 ,
 
@@ -3668,7 +3708,7 @@
 "tags": "releaseswindows-build-toolsbuildmakermmkdirbusybox",
 "keywords": "",
 "url": "/blog/2020/12/28/windows-build-tools-v4-2-1-2-released/",
-"summary": "<p>Version 4.2.1-2 is maintenance release; it adds the <code class="language-plaintext highlighter-rouge">cp.exe</code> binary.</p>"
+"summary": "<p>Version <strong>4.2.1-2</strong> is maintenance release; it adds the <code class="language-plaintext highlighter-rouge">cp.exe</code> binary.</p>"
 }
 ,
 
@@ -3678,7 +3718,7 @@
 "tags": "releaseswindows-build-toolsbuildmakermmkdirbusybox",
 "keywords": "",
 "url": "/blog/2020/12/27/windows-build-tools-v4-2-1-1-released/",
-"summary": "<p>Version 4.2.1-1 is maintenance release; it updates to the latest BusyBox.</p>"
+"summary": "<p>Version <strong>4.2.1-1</strong> is maintenance release; it updates to the latest BusyBox.</p>"
 }
 ,
 
@@ -3688,7 +3728,7 @@
 "tags": "releasesqemuemulatorarmcortex-m",
 "keywords": "",
 "url": "/blog/2020/12/20/qemu-arm-v2-8-0-11-released/",
-"summary": "<p>Version 2.8.0-11 is a maintenance release; it add support for STM32F407VGTx and STM32F429ZITx.</p>"
+"summary": "<p>Version <strong>2.8.0-11</strong> is a maintenance release; it add support for STM32F407VGTx and STM32F429ZITx.</p>"
 }
 ,
 
@@ -3698,7 +3738,7 @@
 "tags": "releasesninja-buildninjabuildspeedsmall",
 "keywords": "",
 "url": "/blog/2020/12/19/ninja-build-v1-10-2-1-released/",
-"summary": "<p>Version 1.10.2-1 is a new release of the <strong>xPack Ninja Build</strong> package.</p>"
+"summary": "<p>Version <strong>1.10.2-1</strong> is a new release of the <strong>xPack Ninja Build</strong> package.</p>"
 }
 ,
 
@@ -3708,7 +3748,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
 "keywords": "",
 "url": "/blog/2020/12/19/arm-none-eabi-gcc-v10-2-1-1-1-released/",
-"summary": "<p>Version 10.2.1-1.1 is a new release of <strong>xPack GNU Arm Embedded GCC</strong>, following Arm release from Dec 11, 2020 (version <strong>10-2020-q4-major</strong>).</p>"
+"summary": "<p>Version <strong>10.2.1-1.1</strong> is a new release of <strong>xPack GNU Arm Embedded GCC</strong>, following Arm release from Dec 11, 2020 (version <strong>10-2020-q4-major</strong>).</p>"
 }
 ,
 
@@ -3718,7 +3758,7 @@
 "tags": "releasescmakebuild",
 "keywords": "",
 "url": "/blog/2020/12/15/cmake-v3-19-1-1-released/",
-"summary": "<p>Version 3.19.1-1 is a new release of the <strong>xPack CMake</strong> package, following the CMake release.</p>"
+"summary": "<p>Version <strong>3.19.1-1</strong> is a new release of the <strong>xPack CMake</strong> package, following the CMake release.</p>"
 }
 ,
 
@@ -3728,7 +3768,7 @@
 "tags": "releasescmakebuild",
 "keywords": "",
 "url": "/blog/2020/12/10/cmake-v3-18-5-1-released/",
-"summary": "<p>Version 3.18.5-1 is a new release of the <strong>xPack CMake</strong> package, following the CMake release.</p>"
+"summary": "<p>Version <strong>3.18.5-1</strong> is a new release of the <strong>xPack CMake</strong> package, following the CMake release.</p>"
 }
 ,
 
@@ -3748,7 +3788,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
 "keywords": "",
 "url": "/blog/2020/10/23/arm-none-eabi-gcc-v9-3-1-1-4-released/",
-"summary": "<p>Version 9.3.1-1.4 is a maintenance release of <strong>xPack GNU Arm Embedded GCC</strong>; it adds an embedded Python 3 instance, to make <code class="language-plaintext highlighter-rouge">arm-none-eabi-gdb-py3</code> standalone and run on any system.</p>"
+"summary": "<p>Version <strong>9.3.1-1.4</strong> is a maintenance release of <strong>xPack GNU Arm Embedded GCC</strong>; it adds an embedded Python 3 instance, to make <code class="language-plaintext highlighter-rouge">arm-none-eabi-gdb-py3</code> standalone and run on any system.</p>"
 }
 ,
 
@@ -3758,7 +3798,7 @@
 "tags": "releasesmeson-buildmesonbuildpythonninja",
 "keywords": "",
 "url": "/blog/2020/10/16/meson-build-v0-55-3-2-released/",
-"summary": "<p>Version 0.55.3-2 is a maintenance release of the <strong>xPack Meson Build</strong> package; it fixes two bugs and updates to the new, more robust, build scripts.</p>"
+"summary": "<p>Version <strong>0.55.3-2</strong> is a maintenance release of the <strong>xPack Meson Build</strong> package; it fixes two bugs and updates to the new, more robust, build scripts.</p>"
 }
 ,
 
@@ -3768,7 +3808,7 @@
 "tags": "releasesqemuemulatorarmcortex-m",
 "keywords": "",
 "url": "/blog/2020/10/14/qemu-arm-v2-8-0-10-released/",
-"summary": "<p>Version 2.8.0-10 is a maintenance release; it fixes one bug and updates to the new, more robust, build scripts.</p>"
+"summary": "<p>Version <strong>2.8.0-10</strong> is a maintenance release; it fixes one bug and updates to the new, more robust, build scripts.</p>"
 }
 ,
 
@@ -3798,7 +3838,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
 "keywords": "",
 "url": "/blog/2020/10/12/arm-none-eabi-gcc-v9-3-1-1-3-released/",
-"summary": "<p>Version 9.3.1-1.3 is a maintenance release of <strong>xPack GNU Arm Embedded GCC</strong>, created with the new, more robust, build scripts.</p>"
+"summary": "<p>Version <strong>9.3.1-1.3</strong> is a maintenance release of <strong>xPack GNU Arm Embedded GCC</strong>, created with the new, more robust, build scripts.</p>"
 }
 ,
 
@@ -3818,7 +3858,7 @@
 "tags": "releasesmeson-buildmesonbuildpythonninja",
 "keywords": "",
 "url": "/blog/2020/09/30/meson-build-v0-55-3-1-released/",
-"summary": "<p>Version 0.55.3-1 is the first release of the <strong>xPack Meson Build</strong> package.</p>"
+"summary": "<p>Version <strong>0.55.3-1</strong> is the first release of the <strong>xPack Meson Build</strong> package.</p>"
 }
 ,
 
@@ -3828,7 +3868,7 @@
 "tags": "releasescmakebuild",
 "keywords": "",
 "url": "/blog/2020/09/29/cmake-v3-18-3-1-released/",
-"summary": "<p>Version 3.18.3-1 is the first release of the <strong>xPack CMake</strong> package.</p>"
+"summary": "<p>Version <strong>3.18.3-1</strong> is the first release of the <strong>xPack CMake</strong> package.</p>"
 }
 ,
 
@@ -3838,7 +3878,7 @@
 "tags": "releasesninja-buildninjabuildspeedsmall",
 "keywords": "",
 "url": "/blog/2020/09/28/ninja-build-v1-10-1-1-released/",
-"summary": "<p>Version 1.10.1-1 is a new release of the <strong>xPack Ninja Build</strong> package.</p>"
+"summary": "<p>Version <strong>1.10.1-1</strong> is a new release of the <strong>xPack Ninja Build</strong> package.</p>"
 }
 ,
 
@@ -3848,7 +3888,7 @@
 "tags": "releasesninja-buildninjabuildspeedsmall",
 "keywords": "",
 "url": "/blog/2020/09/28/ninja-build-v1-10-0-1-released/",
-"summary": "<p>Version 1.10.0-1 is the first release of the <strong>xPack Ninja Build</strong> package.</p>"
+"summary": "<p>Version <strong>1.10.0-1</strong> is the first release of the <strong>xPack Ninja Build</strong> package.</p>"
 }
 ,
 
@@ -3858,7 +3898,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinariesc++exceptions",
 "keywords": "",
 "url": "/blog/2020/07/27/arm-none-eabi-gcc-v9-3-1-1-2-released/",
-"summary": "<p>Version 9.3.1-1.2 is a maintenance release of <strong>xPack GNU Arm Embedded GCC</strong>, intended to <strong>fix C++ exceptions</strong> support for non-nano libraries, and to use <strong>DT_RPATH</strong> to make the binaries immune to custom LD_LIBRARY_PATH.</p>"
+"summary": "<p>Version <strong>9.3.1-1.2</strong> is a maintenance release of <strong>xPack GNU Arm Embedded GCC</strong>, intended to <strong>fix C++ exceptions</strong> support for non-nano libraries, and to use <strong>DT_RPATH</strong> to make the binaries immune to custom LD_LIBRARY_PATH.</p>"
 }
 ,
 
@@ -3868,7 +3908,7 @@
 "tags": "releaseswindows-build-toolsbuildmakermmkdirbusybox",
 "keywords": "",
 "url": "/blog/2020/07/14/windows-build-tools-v2-12-2-released/",
-"summary": "<p>Version 2.12.2 is a maintenance release; it repacks the same tools from the previous release, but built with the new XBB v3.2 tools.</p>"
+"summary": "<p>Version <strong>2.12.2</strong> is a maintenance release; it repacks the same tools from the previous release, but built with the new XBB v3.2 tools.</p>"
 }
 ,
 
@@ -3888,7 +3928,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinaries",
 "keywords": "",
 "url": "/blog/2020/07/03/arm-none-eabi-gcc-v9-3-1-1-1-released/",
-"summary": "<p>Version 9.3.1-1.1 is a new release of <strong>xPack GNU Arm Embedded GCC</strong>, following Arm release from June 01, 2020 (version <strong>9-2020-q2-update</strong>). This is also the first release that <strong>adds support for running on Arm platforms</strong>, like <strong>Raspberry Pi</strong>.</p>"
+"summary": "<p>Version <strong>9.3.1-1.1</strong> is a new release of <strong>xPack GNU Arm Embedded GCC</strong>, following Arm release from June 01, 2020 (version <strong>9-2020-q2-update</strong>). This is also the first release that <strong>adds support for running on Arm platforms</strong>, like <strong>Raspberry Pi</strong>.</p>"
 }
 ,
 
@@ -3898,7 +3938,7 @@
 "tags": "releasesqemuemulatorarmcortex-m",
 "keywords": "",
 "url": "/blog/2020/07/01/qemu-arm-v2-8-0-9-released/",
-"summary": "<p>Version 2.8.0-9 is a maintenance release; it <strong>adds support for running on Arm platforms</strong>, like <strong>Raspberry Pi</strong>.</p>"
+"summary": "<p>Version <strong>2.8.0-9</strong> is a maintenance release; it <strong>adds support for running on Arm platforms</strong>, like <strong>Raspberry Pi</strong>.</p>"
 }
 ,
 
@@ -3918,7 +3958,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinaries",
 "keywords": "",
 "url": "/blog/2019/12/06/arm-none-eabi-gcc-v9-2-1-1-1-released/",
-"summary": "<p>Version 9.2.1-1.1 is a new release of <strong>xPack GNU Arm Embedded GCC</strong>, following Arm release from November 06, 2019 (version <strong>9-2019-q4-major</strong>).</p>"
+"summary": "<p>Version <strong>9.2.1-1.1</strong> is a new release of <strong>xPack GNU Arm Embedded GCC</strong>, following Arm release from November 06, 2019 (version <strong>9-2019-q4-major</strong>).</p>"
 }
 ,
 
@@ -3928,7 +3968,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinaries",
 "keywords": "",
 "url": "/blog/2019/12/06/arm-none-eabi-gcc-v8-3-1-1-4-released/",
-"summary": "<p>Version 8.3.1-1.4 is a maintenance release of xPack GNU Arm Embedded GCC repacking the files from the previous 8.3.1-1.3 release in archives with a simpler structure and more standard names.</p>"
+"summary": "<p>Version <strong>8.3.1-1.4</strong> is a maintenance release of xPack GNU Arm Embedded GCC repacking the files from the previous 8.3.1-1.3 release in archives with a simpler structure and more standard names.</p>"
 }
 ,
 
@@ -3938,7 +3978,7 @@
 "tags": "releasesqemuemulatorarmcortex-m",
 "keywords": "",
 "url": "/blog/2019/11/05/qemu-arm-v2-8-0-8-released/",
-"summary": "<p>Version 2.8.0-8 is a maintenance release, to fix a bug affecting STM32F1 GPIOs.</p>"
+"summary": "<p>Version <strong>2.8.0-8</strong> is a maintenance release, to fix a bug affecting STM32F1 GPIOs.</p>"
 }
 ,
 
@@ -3948,7 +3988,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinaries",
 "keywords": "",
 "url": "/blog/2019/11/02/arm-none-eabi-gcc-v8-3-1-1-3-released/",
-"summary": "<p>Version 8.3.1-1.3 is  a maintenance release of xPack GNU Arm Embedded GCC to partly fix the build for GDB with Python support.</p>"
+"summary": "<p>Version <strong>8.3.1-1.3</strong> is  a maintenance release of xPack GNU Arm Embedded GCC to partly fix the build for GDB with Python support.</p>"
 }
 ,
 
@@ -3968,7 +4008,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinaries",
 "keywords": "",
 "url": "/blog/2019/10/11/arm-none-eabi-gcc-v8-3-1-1-2-released/",
-"summary": "<p>Version 8.3.1-1.2 is  a maintenance release of xPack GNU Arm Embedded GCC to fix the <strong>libgcov</strong> build bug.</p>"
+"summary": "<p>Version <strong>8.3.1-1.2</strong> is  a maintenance release of xPack GNU Arm Embedded GCC to fix the <strong>libgcov</strong> build bug.</p>"
 }
 ,
 
@@ -3988,7 +4028,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinaries",
 "keywords": "",
 "url": "/blog/2019/07/29/arm-none-eabi-gcc-v8-3-1-1-1-released/",
-"summary": "<p>Version 8.3.1-1.1 is a new release of <strong>xPack GNU Arm Embedded GCC</strong>, following Arm release from July 10, 2019 (version <strong>8-2019-q3-update</strong>).</p>"
+"summary": "<p>Version <strong>8.3.1-1.1</strong> is a new release of <strong>xPack GNU Arm Embedded GCC</strong>, following Arm release from July 10, 2019 (version <strong>8-2019-q3-update</strong>).</p>"
 }
 ,
 
@@ -3998,7 +4038,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinaries",
 "keywords": "",
 "url": "/blog/2019/07/26/arm-none-eabi-gcc-v7-3-1-1-2-released/",
-"summary": "<p>Version 7.3.1-1.2 is a maintenance release; it repacks the GNU MCU Eclipse Arm Embedded GCC v7.3.1-1.1 using the new build scripts.</p>"
+"summary": "<p>Version <strong>7.3.1-1.2</strong> is a maintenance release; it repacks the GNU MCU Eclipse Arm Embedded GCC v7.3.1-1.1 using the new build scripts.</p>"
 }
 ,
 
@@ -4008,7 +4048,7 @@
 "tags": "releasesqemuemulatorarmcortex-m",
 "keywords": "",
 "url": "/blog/2019/07/22/qemu-arm-v2-8-0-7-released/",
-"summary": "<p>Version 2.8.0-7 is a maintenance release, to fix a bug affecting Windows.</p>"
+"summary": "<p>Version <strong>2.8.0-7</strong> is a maintenance release, to fix a bug affecting Windows.</p>"
 }
 ,
 
@@ -4038,7 +4078,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinarieslto",
 "keywords": "",
 "url": "/blog/2019/05/24/arm-none-eabi-gcc-v8-2-1-1-7-released/",
-"summary": "<p>Version <strong>8.2.1-1.7</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>8.2.1-1.7</strong> is a maintenance release of <strong>GNU MCU Eclipse ARM Embedded GCC</strong> that that removes the illegal links present in the previous releases.</p>"
 }
 ,
 
@@ -4048,7 +4088,7 @@
 "tags": "releasesriscvriscv-none-embed-gcc",
 "keywords": "",
 "url": "/blog/2019/05/21/riscv-none-gcc-v8-2-0-2-2-20190521-released/",
-"summary": "<p>Version <strong>8.2.0-2.2-20190521</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>8.2.0-2.2-20190521</strong> is a maintenance release of <strong>GNU MCU Eclipse RISC-V Embedded GCC</strong>, that fixes the previous bug affecting GDB on macOS.</p>"
 }
 ,
 
@@ -4058,7 +4098,7 @@
 "tags": "releasesqemuemulatorarmcortex-m",
 "keywords": "",
 "url": "/blog/2019/05/17/qemu-v2-8-0-6-20190517-released/",
-"summary": "<p>Version 2.8.0-6 20190517 is a maintenance release.</p>"
+"summary": "<p>Version <strong>2.8.0-6 20190517</strong> is a maintenance release, to fix the bug affecting the graphical mode in GNU/Linux, introduced in the previous release.</p>"
 }
 ,
 
@@ -4068,7 +4108,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinarieslto",
 "keywords": "",
 "url": "/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/",
-"summary": "<p>Version <strong>8.2.1-1.6</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>8.2.1-1.6</strong> is a maintenance release of <strong>GNU MCU Eclipse ARM Embedded GCC</strong> that (finally) fixes the bugs affecting Windows LTO builds, present in the previous release.</p>"
 }
 ,
 
@@ -4078,7 +4118,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinarieslto",
 "keywords": "",
 "url": "/blog/2019/04/26/arm-none-eabi-gcc-v8-2-1-1-5-released/",
-"summary": "<p>Version <strong>8.2.1-1.5</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>8.2.1-1.5</strong> is a maintenance release of <strong>GNU MCU Eclipse ARM Embedded GCC</strong> that fixes the bugs affecting Windows LTO builds, present in the previous release.</p>"
 }
 ,
 
@@ -4088,7 +4128,7 @@
 "tags": "releasesriscvriscv-none-embed-gcc",
 "keywords": "",
 "url": "/blog/2019/04/25/riscv-none-gcc-v8-2-0-2-1-20190425-released/",
-"summary": "<p>Version <strong>8.2.0-2.1-20190425</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>8.2.0-2.1-20190425</strong> is a maintenance release of <strong>GNU MCU Eclipse RISC-V Embedded GCC</strong>.</p>"
 }
 ,
 
@@ -4098,7 +4138,7 @@
 "tags": "releasesqemuemulatorarmcortex-m",
 "keywords": "",
 "url": "/blog/2019/04/24/qemu-v2-8-0-5-20190424-released/",
-"summary": "<p>Version 2.8.0-5 20190424 is a maintenance release.</p>"
+"summary": "<p>Version <strong>2.8.0-5 20190424</strong> is a maintenance release, to fix several bugs.</p>"
 }
 ,
 
@@ -4108,7 +4148,7 @@
 "tags": "releasesopenocd",
 "keywords": "",
 "url": "/blog/2019/04/22/openocd-v0-10-0-12-20190422-released/",
-"summary": "<p>Version <strong>0.10.0-12-20190422</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>0.10.0-12-20190422</strong> is a maintenance release; it updates to the latest upstream master.</p>"
 }
 ,
 
@@ -4118,7 +4158,7 @@
 "tags": "releaseswindows-build-toolswindowsbuildmakermmkdirbusybox",
 "keywords": "",
 "url": "/blog/2019/04/22/windows-build-tools-v2-12-20190422-released/",
-"summary": "<p>Version 2.12 20190422 is a maintenance release.</p>"
+"summary": "<p>Version <strong>2.12 20190422</strong> is a maintenance release of the GNU MCU Eclipse Windows Build Tools.</p>"
 }
 ,
 
@@ -4128,7 +4168,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinarieslto",
 "keywords": "",
 "url": "/blog/2019/02/14/arm-none-eabi-gcc-v8-2-1-1-4-released/",
-"summary": "<p>Version <strong>8.2.1-1.4</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>8.2.1-1.4</strong> is a maintenance release of <strong>GNU MCU Eclipse ARM Embedded GCC</strong> that fixes the bugs affecting Windows LTO builds, present in the previous release.</p>"
 }
 ,
 
@@ -4138,7 +4178,7 @@
 "tags": "releasesqemuemulatorarmcortex-m",
 "keywords": "",
 "url": "/blog/2019/02/11/qemu-v2-8-0-4-20190211-released/",
-"summary": "<p>Version 2.8.0-4-20190211 is a maintenance release.</p>"
+"summary": "<p>Version <strong>2.8.0-4-20190211</strong> is a maintenance release, to fix a bug in the STM32F GPIO emulation.</p>"
 }
 ,
 
@@ -4148,7 +4188,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinarieslto",
 "keywords": "",
 "url": "/blog/2019/02/02/arm-none-eabi-gcc-v8-2-1-1-3-released/",
-"summary": "<p>Version <strong>8.2.1-1.3</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>8.2.1-1.3</strong> is a maintenance release of <strong>GNU MCU Eclipse ARM Embedded GCC</strong> that fixes the GDB and liblto_plugin bugs present in the previous release.</p>"
 }
 ,
 
@@ -4158,7 +4198,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinaries",
 "keywords": "",
 "url": "/blog/2019/01/19/arm-none-eabi-gcc-v8-2-1-1-2-released/",
-"summary": "<p>Version <strong>8.2.1-1.2</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>8.2.1-1.2</strong> is a maintenance release of <strong>GNU MCU Eclipse ARM Embedded GCC</strong> that fixes the 32-bit objcopy bug present in the previous release.</p>"
 }
 ,
 
@@ -4168,7 +4208,7 @@
 "tags": "releasesopenocd",
 "keywords": "",
 "url": "/blog/2019/01/18/openocd-v0-10-0-11-20190118-released/",
-"summary": "<p>Version <strong>0.10.0-11-20190118</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>0.10.0-11-20190118</strong> is a maintenance release; it updates to the latest master and removes the RISC-V patches.</p>"
 }
 ,
 
@@ -4178,7 +4218,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinaries",
 "keywords": "",
 "url": "/blog/2019/01/03/arm-none-eabi-gcc-v8-2-1-1-1-released/",
-"summary": "<p>Version <strong>8.2.1-1.1</strong> is a new release.</p>"
+"summary": "<p>Version <strong>8.2.1-1.1</strong> is a new release of <strong>GNU MCU Eclipse ARM Embedded GCC</strong>.</p>"
 }
 ,
 
@@ -4188,7 +4228,7 @@
 "tags": "releasesopenocdsemihosting",
 "keywords": "",
 "url": "/blog/2018/10/20/openocd-v0-10-0-10-20181020-released/",
-"summary": "<p>Version <strong>0.10.0-10-20181020</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>0.10.0-10-20181020</strong> is a maintenance release; it fixes a small build problem which affected the macOS binaries in the previous release.</p>"
 }
 ,
 
@@ -4198,7 +4238,7 @@
 "tags": "releasesriscvriscv-none-embed-gcc",
 "keywords": "",
 "url": "/blog/2018/10/19/riscv-none-gcc-v8-1-0-2-20181019-released/",
-"summary": "<p>Version <strong>8.1.0-2-20181019</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>8.1.0-2-20181019</strong> is a maintenance release of <strong>GNU MCU Eclipse RISC-V Embedded GCC</strong>.</p>"
 }
 ,
 
@@ -4208,7 +4248,7 @@
 "tags": "releasesopenocdsemihosting",
 "keywords": "",
 "url": "/blog/2018/10/16/openocd-v0-10-0-9-20181016-released/",
-"summary": "<p>Version <strong>0.10.0-9-20181016</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>0.10.0-9-20181016</strong> is a maintenance release; it updates to the latest commits.</p>"
 }
 ,
 
@@ -4218,7 +4258,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinaries",
 "keywords": "",
 "url": "/blog/2018/07/24/arm-none-eabi-gcc-v7-3-1-1-1-released/",
-"summary": "<p>Version <strong>7.3.1-1.1</strong> is a new release.</p>"
+"summary": "<p>Version <strong>7.3.1-1.1</strong> is a new release of <strong>GNU MCU Eclipse ARM Embedded GCC</strong>.</p>"
 }
 ,
 
@@ -4228,7 +4268,7 @@
 "tags": "releasesriscvriscv-none-embed-gcc",
 "keywords": "",
 "url": "/blog/2018/06/07/riscv-none-gcc-v7-2-0-4-20180606-released/",
-"summary": "<p>Version <strong>7.2.0-4-20180606</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>7.2.0-4-20180606</strong> is a maintenance release of <strong>GNU MCU Eclipse RISC-V Embedded GCC</strong>; it builds the libraries with <code class="language-plaintext highlighter-rouge">-mcmodel=medany</code>.</p>"
 }
 ,
 
@@ -4238,7 +4278,7 @@
 "tags": "releasesqemuemulatorarmcortex-m",
 "keywords": "",
 "url": "/blog/2018/05/23/qemu-v2-8-0-3-20180523-released/",
-"summary": "<p>Version 2.8.0-3-20180523 is a maintenance release.</p>"
+"summary": "<p>Version <strong>2.8.0-3-20180523</strong> is a maintenance release, created using the new build scripts.</p>"
 }
 ,
 
@@ -4248,7 +4288,7 @@
 "tags": "releasesopenocdsemihosting",
 "keywords": "",
 "url": "/blog/2018/05/13/openocd-v0-10-0-8-20180512-released/",
-"summary": "<p>Version <strong>0.10.0-8-20180512</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>0.10.0-8-20180512</strong> is a maintenance release; it updates to the latest commits.</p>"
 }
 ,
 
@@ -4258,7 +4298,7 @@
 "tags": "releasesriscvriscv-none-embed-gcc",
 "keywords": "",
 "url": "/blog/2018/05/06/riscv-none-gcc-v7-2-0-3-20180506-released/",
-"summary": "<p>Version <strong>7.2.0-3-20180506</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>7.2.0-3-20180506</strong> is a maintenance release of <strong>GNU MCU Eclipse RISC-V Embedded GCC</strong>; it updates to the latest RISC-V sources and the build process was improved, to add <code class="language-plaintext highlighter-rouge">gdb-py</code> and to support even older GNU/Linux machines and processors.</p>"
 }
 ,
 
@@ -4268,7 +4308,7 @@
 "tags": "releaseswindows-build-toolswindowsbuildmakermmkdirbusybox",
 "keywords": "",
 "url": "/blog/2018/04/28/windows-build-tools-v2-11-20180428-released/",
-"summary": "<p>Version 2.11-20180428 is a maintenance release.</p>"
+"summary": "<p>Version <strong>2.11-20180428</strong> is a maintenance release of the GNU MCU Eclipse Windows Build Tools.</p>"
 }
 ,
 
@@ -4278,7 +4318,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinaries",
 "keywords": "",
 "url": "/blog/2018/04/01/arm-none-eabi-gcc-v7-2-1-1-1-released/",
-"summary": "<p>Version <strong>7.2.1-1.1</strong> is a new release.</p>"
+"summary": "<p>Version <strong>7.2.1-1.1</strong> is a new release of <strong>GNU MCU Eclipse ARM Embedded GCC</strong>.</p>"
 }
 ,
 
@@ -4288,7 +4328,7 @@
 "tags": "releasesarmarm-none-eabi-gccgccbinaries",
 "keywords": "",
 "url": "/blog/2018/03/31/arm-none-eabi-gcc-v6-3-1-1-1-released/",
-"summary": "<p>Version <strong>6.3.1-1.1</strong> is the first release.</p>"
+"summary": "<p>Version <strong>6.3.1-1.1</strong> is the first release of <strong>GNU MCU Eclipse ARM Embedded GCC</strong>.</p>"
 }
 ,
 
@@ -4298,7 +4338,7 @@
 "tags": "releasesopenocdsemihosting",
 "keywords": "",
 "url": "/blog/2018/01/23/openocd-v0-10-0-7-20180123-released/",
-"summary": "<p>Version <strong>0.10.0-7-20180123</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>0.10.0-7-20180123</strong> is a maintenance release; the main change was to <strong>add semihosting support for RISC-V targets</strong>.</p>"
 }
 ,
 
@@ -4308,7 +4348,7 @@
 "tags": "releasesriscvriscv-none-embed-gcc",
 "keywords": "",
 "url": "/blog/2018/01/13/riscv-none-gcc-v7-2-0-2-20180111-released/",
-"summary": "<p>Version <strong>7.2.0-2-20180111</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>7.2.0-2-20180111</strong> is a maintenance release of <strong>GNU MCU Eclipse RISC-V Embedded GCC</strong>; it updates to the latest RISC-V sources and the build process was improved, to support even older GNU/Linux machines and processors.</p>"
 }
 ,
 
@@ -4318,7 +4358,7 @@
 "tags": "releasesopenocd",
 "keywords": "",
 "url": "/blog/2018/01/12/openocd-v0-10-0-6-20180112-released/",
-"summary": "<p>Version <strong>0.10.0-6-20180112</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>0.10.0-6-20180112</strong> is a maintenance release; the main change was to update to the latest commits.</p>"
 }
 ,
 
@@ -4328,7 +4368,7 @@
 "tags": "releaseswindows-build-toolswindowsbuildmakermmkdirbusybox",
 "keywords": "",
 "url": "/blog/2018/01/03/windows-build-tools-v2-10-20180103-released/",
-"summary": "<p>Version 2.10-20180103 is a maintenance release.</p>"
+"summary": "<p>Version <strong>2.10-20180103</strong> is a maintenance release of the GNU MCU Eclipse Windows Build Tools.</p>"
 }
 ,
 
@@ -4338,7 +4378,7 @@
 "tags": "releasesopenocd",
 "keywords": "",
 "url": "/blog/2017/11/10/openocd-v0-10-0-5-20171110-released/",
-"summary": "<p>Version <strong>0.10.0-5-20171110</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>0.10.0-5-20171110</strong> is a maintenance release; the main change was to patch the RISC-V code to <strong>no longer print the 4096 CSRs</strong>.</p>"
 }
 ,
 
@@ -4348,7 +4388,7 @@
 "tags": "releasesriscvriscv-none-embed-gcc",
 "keywords": "",
 "url": "/blog/2017/11/09/riscv-none-gcc-v7-2-0-1-20171109-released/",
-"summary": "<p>Version <strong>7.2.0-1-20171109</strong> is a new release.</p>"
+"summary": "<p>Version <strong>7.2.0-1-20171109</strong> is a new release of <strong>GNU MCU Eclipse RISC-V Embedded GCC</strong>.</p>"
 }
 ,
 
@@ -4358,7 +4398,7 @@
 "tags": "releasesopenocd",
 "keywords": "",
 "url": "/blog/2017/10/04/openocd-v0-10-0-4-20171004-dev-released/",
-"summary": "<p>Version <strong>0.10.0-4-20171004-0812-dev</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>0.10.0-4-20171004-0812-dev</strong> is a maintenance release; the main change was to revert some of the RISC-V patches that caused problems for other targets.</p>"
 }
 ,
 
@@ -4368,7 +4408,7 @@
 "tags": "releasesriscvriscv-none-embed-gcc",
 "keywords": "",
 "url": "/blog/2017/09/13/riscv-none-gcc-v7-1-1-2-20170912-released/",
-"summary": "<p>Version <strong>7.1.1-2-20170912-2255</strong> is a new release.</p>"
+"summary": "<p>Version <strong>7.1.1-2-20170912-2255</strong> is a new release of <strong>GNU MCU Eclipse RISC-V Embedded GCC</strong>.</p>"
 }
 ,
 
@@ -4378,7 +4418,7 @@
 "tags": "releasesopenocd",
 "keywords": "",
 "url": "/blog/2017/08/26/openocd-v0-10-0-3-20170826-dev-released/",
-"summary": "<p>Version <strong>0.10.0-3-20170826-1813-dev</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>0.10.0-3-20170826-1813-dev</strong> is a maintenance release; it updates to the latest RISC-V <a href="https://github.com/riscv/riscv-openocd/releases/tag/v20170818">v20170818</a> release and to the original <a href="https://github.com/gnu-mcu-eclipse/openocd/commit/1025be363e2bf42f1613083223a2322cc3a9bd4c">1025be3</a> commit from June 2nd, 2017.</p>"
 }
 ,
 
@@ -4388,7 +4428,7 @@
 "tags": "releasesriscvriscv-none-embed-gcc",
 "keywords": "",
 "url": "/blog/2017/07/02/riscv-none-gcc-v7-1-1-1-20170702-released/",
-"summary": "<p>Version <strong>7.1.1-1-20170702-0625</strong> is the first release.</p>"
+"summary": "<p>Version <strong>7.1.1-1-20170702-0625</strong> is the first release of <strong>GNU MCU Eclipse RISC-V Embedded GCC</strong>. It includes binaries for Windows, macOS and GNU/Linux.</p>"
 }
 ,
 
@@ -4398,7 +4438,7 @@
 "tags": "releaseswindows-build-toolswindowssetupbuildmakemakedirrmbusybox",
 "keywords": "",
 "url": "/blog/2017/06/29/windows-build-tools-v2-9-20170629-released/",
-"summary": "<p>Version 2.9-20170629 is a maintenance release.</p>"
+"summary": "<p>Version <strong>2.9-20170629</strong> is a maintenance release of the GNU MCU Eclipse Windows Build Tools.</p>"
 }
 ,
 
@@ -4408,7 +4448,7 @@
 "tags": "releasesopenocd",
 "keywords": "",
 "url": "/blog/2017/04/19/openocd-v0-10-0-20170418-released/",
-"summary": "<p>Version <strong>0.10.0-201704182147</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>0.10.0-201704182147</strong> is a maintenance release. It updates <code class="language-plaintext highlighter-rouge">libhid.a</code> to the latest available version, 0.8.0-rc1. It includes binaries for Windows, macOS and GNU/Linux.</p>"
 }
 ,
 
@@ -4418,7 +4458,7 @@
 "tags": "releasesopenocd",
 "keywords": "",
 "url": "/blog/2017/01/24/openocd-v0-10-0-20170124-released/",
-"summary": "<p>Version <strong>0.10.0-201701241841</strong> is a major stable release.</p>"
+"summary": "<p>Version <strong>0.10.0-201701241841</strong> is a major stable release. It includes binaries for Windows, macOS and GNU/Linux.</p>"
 }
 ,
 
@@ -4428,7 +4468,7 @@
 "tags": "releasesqemuemulatorarmcortex-mgraphicbuttonled",
 "keywords": "",
 "url": "/blog/2016/12/27/qemu-v2-8-0-20161227-released/",
-"summary": "<p>Version 2.8.0-201612271623 is a new release.</p>"
+"summary": "<p>Version <strong>2.8.0-201612271623</strong> is a new release, adding support for active graphical buttons to all supported boards.</p>"
 }
 ,
 
@@ -4438,7 +4478,7 @@
 "tags": "releasesqemuemulatorarmcortex-mgraphicbuttonled",
 "keywords": "",
 "url": "/blog/2016/11/28/qemu-v2-7-0-20161128-released/",
-"summary": "<p>Version 2.7.0-201611282115 is a new release.</p>"
+"summary": "<p>Version <strong>2.7.0-201611282115</strong> is a new release, adding support for active graphical buttons.</p>"
 }
 ,
 
@@ -4448,7 +4488,7 @@
 "tags": "releaseswindows-build-toolswindowssetupbuildmakemakedirrmbusybox",
 "keywords": "",
 "url": "/blog/2016/11/22/windows-build-tools-v2-8-20161122-released/",
-"summary": "<p>Version 2.8-201611221915 is a maintenance release.</p>"
+"summary": "<p>Version <strong>2.8-201611221915</strong> is a maintenance release of the GNU ARM Eclipse Windows Build Tools.</p>"
 }
 ,
 
@@ -4458,7 +4498,7 @@
 "tags": "releasesqemuemulatorarmcortex-m",
 "keywords": "",
 "url": "/blog/2016/10/29/qemu-v2-7-0-20161029-released/",
-"summary": "<p>Version 2.7.0-201610290751 is a new stable release.</p>"
+"summary": "<p>Version <strong>2.7.0-201610290751</strong> is a new stable release, following the official QEMU releases.</p>"
 }
 ,
 
@@ -4468,7 +4508,7 @@
 "tags": "releasesopenocd",
 "keywords": "",
 "url": "/blog/2016/10/28/openocd-v0-10-0-20161028-dev-released/",
-"summary": "<p>Version <strong>0.10.0-201610281609-dev</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>0.10.0-201610281609-dev</strong> is a maintenance release. It includes binaries for Windows, macOS and GNU/Linux.</p>"
 }
 ,
 
@@ -4478,7 +4518,7 @@
 "tags": "releaseswindows-build-toolswindowssetupbuildmakermbusybox",
 "keywords": "",
 "url": "/blog/2016/10/28/windows-build-tools-v2.7-20161028-released/",
-"summary": "<p>Version 2.7-201610281058 is a maintenance release.</p>"
+"summary": "<p>Version <strong>2.7-201610281058</strong> is a maintenance release of the GNU ARM Eclipse Windows Build Tools.</p>"
 }
 ,
 
@@ -4488,7 +4528,7 @@
 "tags": "releasesqemuemulatorarmcortex-mbasepridhcsrbkpt",
 "keywords": "",
 "url": "/blog/2016/07/28/qemu-v2-6-0-20160728-released/",
-"summary": "<p>Version 2.6.0-201607280535 is a stable release.</p>"
+"summary": "<p>Version <strong>2.6.0-201607280535</strong> is a stable release, adding support for BASEPRI, in order for RTOSes (like FreeRTOS, <a href="https://micro-os-plus.github.io">µOS++ IIIe / CMSIS++</a>) to properly implement critical sections.</p>"
 }
 ,
 
@@ -4498,7 +4538,7 @@
 "tags": "releasesopenocd",
 "keywords": "",
 "url": "/blog/2016/01/11/openocd-v0.10.0-201601101000-dev-released/",
-"summary": "<p>Version <strong>0.10.0-201601101000-dev</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>0.10.0-201601101000-dev</strong> is a maintenance release. It includes binaries for Windows, macOS and GNU/Linux.</p>"
 }
 ,
 
@@ -4508,7 +4548,7 @@
 "tags": "releasesqemuemulatorarmcortex-m",
 "keywords": "",
 "url": "/blog/2015/10/29/qemu-v2-4-50-20151029-released/",
-"summary": "<p>Version 2.4.50-201510290935 is a maintenance release.</p>"
+"summary": "<p>Version <strong>2.4.50-201510290935</strong> is a maintenance release, fixing the graphical rendering on macOS 10.11 and the typo related to the name of the Maple board.</p>"
 }
 ,
 
@@ -4518,7 +4558,7 @@
 "tags": "releasesopenocd",
 "keywords": "",
 "url": "/blog/2015/10/28/openocd-v0.10.0-20151028-dev-released/",
-"summary": "<p>Version <strong>0.10.0-201510281129-dev</strong> is a maintenance release.</p>"
+"summary": "<p>Version <strong>0.10.0-201510281129-dev</strong> is a maintenance release. It includes binaries for Windows, macOS and GNU/Linux.</p>"
 }
 ,
 
@@ -4528,7 +4568,7 @@
 "tags": "releasesqemuemulatorarmcortex-mrpath",
 "keywords": "",
 "url": "/blog/2015/08/16/qemu-v2-3-50-20150816-released/",
-"summary": "<p>Version 2.3.50-201508161112 is a maintenance partial release.</p>"
+"summary": "<p>Version <strong>2.3.50-201508161112</strong> is a maintenance partial release, fixing the GNU/Linux distribution.</p>"
 }
 ,
 
@@ -4538,7 +4578,7 @@
 "tags": "releasesqemuemulatorarmcortex-m64-bitsigsetjmp",
 "keywords": "",
 "url": "/blog/2015/08/05/qemu-v2-3-50-20150805-released/",
-"summary": "<p>Version 2.3.50-201508051820 is a maintenance partial release.</p>"
+"summary": "<p>Version** 2.3.50-201508051820** is a maintenance partial release, adding support for Windows 64-bit.</p>"
 }
 ,
 
@@ -4548,7 +4588,7 @@
 "tags": "releasesqemuemulatorarmcortex-m411renucleo",
 "keywords": "",
 "url": "/blog/2015/08/04/qemu-v2-3-50-20150804-released/",
-"summary": "<p>Version 2.3.50-201508041609 is a maintenance release.</p>"
+"summary": "<p>Version <strong>2.3.50-201508041609</strong> is a maintenance release, fixing the graphical rendering on Windows and adding support for NUCLEO-F411RE.</p>"
 }
 ,
 
@@ -4558,7 +4598,7 @@
 "tags": "releasesqemuemulatorarmcortex-mgpioledstmsystick",
 "keywords": "",
 "url": "/blog/2015/08/02/qemu-v2-3-50-20150801-released/",
-"summary": "<p>Version 2.3.50-201508012214 is the first production release.</p>"
+"summary": "<p>Version <strong>2.3.50-201508012214</strong> is the first production release of the <a href="{{ site.baseurl }}/dev-tools/qemu-arm/">GNU ARM Eclipse QEMU</a>. It supports a range of STM boards, and fully implements the user LEDs available on these boards, presenting them graphically, in real time animation, over the board picture.</p>"
 }
 ,
 
@@ -4568,27 +4608,7 @@
 "tags": "releaseswindows-build-toolswindowssetupbuildmakermbusybox",
 "keywords": "",
 "url": "/blog/2015/07/15/windows-build-tools-v2.6-20150715-released/",
-"summary": "<p>Version 2.6-201507152002 is a new release.</p>"
-}
-,
-
-
-{
-"title": "GNU ARM Eclipse OpenOCD v0.9.0-20150519* released",
-"tags": "releasesopenocd",
-"keywords": "",
-"url": "/blog/2015/05/19/openocd-v0.9.0-20150519-released/",
-"summary": "<p>Version 0.9.0-20150519* is a new release.</p>"
-}
-,
-
-
-{
-"title": "GNU ARM Eclipse QEMU v2.2.92-20150404*-dev released",
-"tags": "releasesqemuemulatorarmcortex-meclipsegdbsemihosting",
-"keywords": "",
-"url": "/blog/2015/04/04/qemu-v2-2-92-20150404-released/",
-"summary": "<p>Version 2.2.92-20150404*-dev is the initial release.</p>"
+"summary": "<p>Version <strong>v2.6-201507152002</strong> is a new release of the GNU ARM Eclipse Windows Build Tools, adding support for Windows 64-bit.</p>"
 }
 ,
 
@@ -4598,7 +4618,7 @@
 "tags": "releaseswindows-build-toolswindowssetupbuildmakermbusybox",
 "keywords": "",
 "url": "/blog/2015/03/24/windows-build-tools-v2.4-20150324-released/",
-"summary": "<p>Version 2.4-201503242026 is a maintenance release.</p>"
+"summary": "<p>Version <strong>2.4-201503242026</strong> is a maintenance release, fixing the uninstall procedure.</p>"
 }
 ,
 
@@ -4608,27 +4628,7 @@
 "tags": "releaseswindows-build-toolswindowssetupbuildmakermbusybox",
 "keywords": "",
 "url": "/blog/2015/03/21/windows-build-tools-v2.4-20150321-released/",
-"summary": "<p>Version 2.4-201503212005 is a new release.</p>"
-}
-,
-
-
-{
-"title": "GNU ARM Eclipse OpenOCD v0.9.0-20150320*-dev released",
-"tags": "releasesopenocd",
-"keywords": "",
-"url": "/blog/2015/03/20/openocd-v0.9.0-20150320-released/",
-"summary": "<p>Version 0.9.0-20150320* is a new release.</p>"
-}
-,
-
-
-{
-"title": "GNU ARM Eclipse OpenOCD v0.8.0-20150131* released",
-"tags": "releasesopenocd",
-"keywords": "",
-"url": "/blog/2015/01/31/openocd-v0.8.0-20150131-released/",
-"summary": "<p>Version 0.8.0-20150131* is a maintenance release.</p>"
+"summary": "<p>Version <strong>2.4-201503212005</strong> is a new release of the GNU ARM Eclipse Windows Build Tools.</p>"
 }
 ,
 
@@ -4638,7 +4638,7 @@
 "tags": "releaseswindows-build-toolswindowssetupbuildmakerm",
 "keywords": "",
 "url": "/blog/2015/01/24/windows-build-tools-v2.3-20150124-released/",
-"summary": "<p>Version 2.3-201501242223 is a new release.</p>"
+"summary": "<p>Version <strong>2.3-201501242223</strong> is a new release.</p>"
 }
 ,
 
@@ -4648,7 +4648,7 @@
 "tags": "releaseswindows-build-toolswindowssetupbuildmakerm",
 "keywords": "",
 "url": "/blog/2015/01/23/windows-build-tools-v2.2-20150123-released/",
-"summary": "<p>Version 2.2-201501232303 is a maintenance release.</p>"
+"summary": "<p>Version <strong>2.2-201501232303</strong> is a maintenance release.</p>"
 }
 ,
 
@@ -4658,7 +4658,7 @@
 "tags": "releaseswindows-build-toolswindowssetupbuildmakerm",
 "keywords": "",
 "url": "/blog/2015/01/21/windows-build-tools-v2.1-20150121-released/",
-"summary": "<p>Version 2.1-201501221704 is a maintenance release.</p>"
+"summary": "<p>Version <strong>2.1-201501221704</strong> is a maintenance release. It is a repack of the previous version.</p>"
 }
 ,
 
@@ -4668,7 +4668,7 @@
 "tags": "releaseswindows-build-toolswindowssetupbuildmakerm",
 "keywords": "",
 "url": "/blog/2014/12/02/windows-build-tools-v2.0-20141202-released/",
-"summary": "<p>Version 2.0 is a new release.</p>"
+"summary": "<p>Version <strong>2.0</strong> is a new release. For your convenience, the <a href="{{ site.baseurl }}/dev-tools/windows-build-tools/">Windows Build Tools</a> were repacked as a Windows setup.</p>"
 }
 
 
