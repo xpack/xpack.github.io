@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to install the xPack prerequisites" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-10-15T16:34:28+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack prerequisites","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"url":"https://xpack.github.io/install/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-10-17T17:23:57+00:00","datePublished":"2017-10-09T11:14:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"How to install the xPack prerequisites","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/install/"},"url":"https://xpack.github.io/install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -552,8 +552,15 @@ with administrative rights.</p>
 
 <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> If you are using a 64-bit machine, download the <code class="language-plaintext highlighter-rouge">node-v*-x64.msi</code> file.</div>
 
-<p>The result is a folder like <code class="language-plaintext highlighter-rouge">C:\Program Files\nodejs</code>, added to the
-system path since it includes the <code class="language-plaintext highlighter-rouge">node.exe</code> binary.</p>
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> If you are not developing native modules,
+<strong>avoid</strong> selecting the <strong>Tools for Native Modules</strong> during installation.
+Otherwise, you may end up with Visual Studio and other large packages
+unnecessarily installed.</div>
+
+<p><img src="/assets/images/2024/nodejs-setup-tools-for-native-modules.png" alt="The Node.js Tools for Native Modules" /></p>
+
+<p>The result of the setup is a folder like <code class="language-plaintext highlighter-rouge">C:\Program Files\nodejs</code>, already
+added to the system path since it includes the <code class="language-plaintext highlighter-rouge">node.exe</code> binary.</p>
 
 <pre><code class="language-txt">C:\&gt;where node.exe
 C:\Program Files\nodejs\node.exe
@@ -658,7 +665,10 @@ The terminal process "C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe 
 
 <h2 id="nodenpm-clean-ups">node/npm clean-ups</h2>
 
-<p>For a thorough clean-up, please note that <strong>npm</strong> uses only two folders
+<p>If installed as recommended via setup, <strong>node</strong> can be uninstalled via the
+Microsoft specific mechanisms.</p>
+
+<p>For a thorough clean-up, please note that <strong>npm</strong> uses the following two folders
 to install global packages:</p>
 
 <ul>
@@ -1245,7 +1255,7 @@ builds, or to build it from sources; for more details see the
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2024 Liviu Ionescu. All rights reserved. <br />
-<span>Page last updated:</span> Oct 15, 2024<br/> Site last generated: Oct 15, 2024 <br />
+<span>Page last updated:</span> Oct 17, 2024<br/> Site last generated: Oct 17, 2024 <br />
                 </div>
             </div>
 </footer>

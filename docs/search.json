@@ -1394,86 +1394,6 @@
 
 
 {
-"title": "",
-"tags": "",
-"keywords": "",
-"url": "/blog/2024/10/15/2015-04-04-qemu-v2-2-92-20150404-released/",
-"summary": ""
-}
-,
-
-
-{
-"title": "",
-"tags": "",
-"keywords": "",
-"url": "/blog/2024/10/15/2015-05-19-openocd-v0.9.0-20150519-released/",
-"summary": ""
-}
-,
-
-
-{
-"title": "",
-"tags": "",
-"keywords": "",
-"url": "/blog/2024/10/15/2015-03-24-openocd-v0.9.0-20150324-dev-released/",
-"summary": ""
-}
-,
-
-
-{
-"title": "",
-"tags": "",
-"keywords": "",
-"url": "/blog/2024/10/15/2015-03-24-openocd-v0.8.0-20150324-released/",
-"summary": ""
-}
-,
-
-
-{
-"title": "",
-"tags": "",
-"keywords": "",
-"url": "/blog/2024/10/15/2015-03-20-openocd-v0.9.0-20150320-released/",
-"summary": ""
-}
-,
-
-
-{
-"title": "",
-"tags": "",
-"keywords": "",
-"url": "/blog/2024/10/15/2015-03-20-openocd-v0.8.0-20150320-released/",
-"summary": ""
-}
-,
-
-
-{
-"title": "",
-"tags": "",
-"keywords": "",
-"url": "/blog/2024/10/15/2015-01-31-openocd-v0.8.0-20150131-released/",
-"summary": ""
-}
-,
-
-
-{
-"title": "",
-"tags": "",
-"keywords": "",
-"url": "/blog/2024/10/15/2015-01-19-openocd-v0.8.0-20150119-released/",
-"summary": ""
-}
-,
-
-
-{
 "title": "xPack xpm v0.19.2 released",
 "tags": "releasesxpmpackagemanager",
 "keywords": "",
@@ -4614,6 +4534,26 @@
 
 
 {
+"title": "GNU ARM Eclipse OpenOCD v0.9.0-20150519* released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2015/05/19/openocd-v0.9.0-20150519-released/",
+"summary": "<p>Version <strong>0.9.0-20150519</strong>* is a new release; the just released stable version of OpenOCD (<strong>0.9.0</strong>) is now also available as ready to install, platform specific, binary files.</p>"
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse QEMU v2.2.92-20150404*-dev released",
+"tags": "releasesqemuemulatorarmcortex-meclipsegdbsemihosting",
+"keywords": "",
+"url": "/blog/2015/04/04/qemu-v2-2-92-20150404-released/",
+"summary": "<p>Version <strong>2.2.92-20150404*-dev</strong> is the initial release of the <a href="{{ site.baseurl }}/dev-tools/qemu-arm/">GNU ARM Eclipse QEMU</a>. It is mainly a technology preview (most of the supported boards are present, but functionality is limited and only projects created with the generic Cortex-M3 template are supported).</p>"
+}
+,
+
+
+{
 "title": "GNU ARM Eclipse Windows Build Tools v2.4-20150324* released",
 "tags": "releaseswindows-build-toolswindowssetupbuildmakermbusybox",
 "keywords": "",
@@ -4624,11 +4564,61 @@
 
 
 {
+"title": "GNU ARM Eclipse OpenOCD v0.9.0-20150324*-dev released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2015/03/24/openocd-v0.9.0-20150324-dev-released/",
+"summary": "<p>Version <strong>0.9.0-20150324*-dev</strong> is a maintenance release.</p>"
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse OpenOCD v0.8.0-20150324* released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2015/03/24/openocd-v0.8.0-20150324-released/",
+"summary": "<p>Version <strong>0.8.0-20150324</strong>* is a maintenance release.</p>"
+}
+,
+
+
+{
 "title": "GNU ARM Eclipse Windows Build Tools v2.4-20150321* released",
 "tags": "releaseswindows-build-toolswindowssetupbuildmakermbusybox",
 "keywords": "",
 "url": "/blog/2015/03/21/windows-build-tools-v2.4-20150321-released/",
 "summary": "<p>Version <strong>2.4-201503212005</strong> is a new release of the GNU ARM Eclipse Windows Build Tools.</p>"
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse OpenOCD v0.9.0-20150320*-dev released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2015/03/20/openocd-v0.9.0-20150320-released/",
+"summary": "<p>Version <strong>0.9.0-20150320</strong>* is a new release; the latest development version of OpenOCD (<strong>0.9.0-dev</strong>) is now available as multiple platform specific binary packages.</p>"
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse OpenOCD v0.8.0-20150320* released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2015/03/20/openocd-v0.8.0-20150320-released/",
+"summary": "<p>Version <strong>0.8.0-20150320</strong>* is a maintenance release.</p>"
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse OpenOCD v0.8.0-20150131* released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2015/01/31/openocd-v0.8.0-20150131-released/",
+"summary": "<p>Version <strong>0.8.0-20150131</strong>* is a maintenance release; for a better integrations with the GNU ARM Eclipse debug plug-ins, the new distribution of OpenOCD was moved to a subproject named <strong>GNU ARM Eclipse OpenOCD</strong>.</p>"
 }
 ,
 
@@ -4659,6 +4649,16 @@
 "keywords": "",
 "url": "/blog/2015/01/21/windows-build-tools-v2.1-20150121-released/",
 "summary": "<p>Version <strong>2.1-201501221704</strong> is a maintenance release. It is a repack of the previous version.</p>"
+}
+,
+
+
+{
+"title": "GNU ARM Eclipse OpenOCD v0.8.0-20150119* released",
+"tags": "releasesopenocd",
+"keywords": "",
+"url": "/blog/2015/01/19/openocd-v0.8.0-20150119-released/",
+"summary": "<p>Version <strong>0.8.0-20150119</strong>* is a maintenance release.</p>"
 }
 ,
 
