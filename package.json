@@ -1,0 +1,33 @@
+{
+  "name": "web-preview-docusaurus",
+  "version": "1.0.0",
+  "description": "A preview of the next web site",
+  "main": "",
+  "scripts": {
+    "generate-top-commons": "bash node_modules/@xpack/node-modules-helper/maintenance-scripts/generate-top-commons.sh --init",
+    "create-website": "bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/generate-commons.sh --init"
+  },
+  "author": {
+    "name": "Liviu Ionescu",
+    "email": "ilg@livius.net",
+    "url": "https://github.com/ilg-ul"
+  },
+  "bugs": {
+    "url": "https://github.com/xpack/web-preview-docusaurus/issues"
+  },
+  "homepage": "https://xpack.github.io/web-preview-docusaurus/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xpack/web-preview-docusaurus.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "json": "^11.0.0",
+    "liquidjs": "^10.18.0"
+  },
+  "bundledDependencies": [],
+  "config": {
+    "isOrganizationWeb": "true"
+  }
+}
