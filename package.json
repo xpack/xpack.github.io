@@ -1,11 +1,10 @@
 {
   "name": "web-preview-docusaurus",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A preview of the next web site",
   "main": "",
   "scripts": {
-    "generate-top-commons": "bash node_modules/@xpack/node-modules-helper/maintenance-scripts/generate-top-commons.sh --init",
-    "create-website": "bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/generate-commons.sh --init"
+    "generate-top-commons": "bash node_modules/@xpack/npm-packages-helper/maintenance-scripts/generate-top-commons.sh"
   },
   "author": {
     "name": "Liviu Ionescu",
@@ -23,6 +22,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "del-cli": "^6.0.0",
     "json": "^11.0.0",
     "liquidjs": "^10.18.0"
   },
