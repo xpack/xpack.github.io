@@ -59,7 +59,8 @@ logger.info(customFields);
 // ----------------------------------------------------------------------------
 
 const config: Config = {
-  title: 'The xPack Reproducible Build Framework',
+  title: 'The xPack Reproducible Build Framework' +
+    ((process.env.DOCUSAURUS_IS_PREVIEW === 'true') ? ' (preview)' : ''),
   tagline: 'Tools to manage, configure and build complex, package based, multi-target projects, in a reproducible way.',
   favicon: 'img/favicon.ico',
 
@@ -67,7 +68,8 @@ const config: Config = {
   url: 'https://xpack.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/web-preview-docusaurus/',
+  baseUrl: process.env.DOCUSAURUS_BASEURL ??
+    '/web-preview-docusaurus/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
