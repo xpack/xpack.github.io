@@ -26,8 +26,11 @@
     "json": "^11.0.0",
     "liquidjs": "^10.18.0"
   },
-  "bundledDependencies": [],
+  "bundleDependencies": [],
   "config": {
     "isOrganizationWeb": "true"
+  },
+  "engines": {
+    "node": " >=18.0.0"
   }
 }
