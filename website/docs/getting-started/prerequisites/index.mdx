@@ -1,0 +1,556 @@
+---
+title: How to install the xPack prerequisites
+
+keywords:
+  - node
+  - npm
+  - xpack
+  - install
+  - prerequisites
+
+# https://nodejs.org/en/download/prebuilt-installer
+node_version: 20.18.0
+node_version_major: 20
+npm_version: 10.8.2
+npm_latest_version: 10.9.0
+
+date: 2017-10-09 14:14:00 +0300
+
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Heading from '@theme/Heading';
+
+import customField from '@site/src/libs/customField';
+
+import AfterNvm from './_after-nvm.mdx'
+import NvmLatest from './_nvm-latest.mdx'
+import UseNvm from './_use-nvm.mdx';
+import VersionManager from './_version-manager.mdx';
+
+{/* ------------------------------------------------------------------------ */}
+
+# How to install the xPack prerequisites
+
+## Overview
+
+All xPack Core Tools are [Node.js](https://nodejs.org) CLI application
+available from the
+[npmjs.com](https://www.npmjs.com) public repository. They are installed
+via `npm` which runs on top of **Node.js**.
+
+## Install Node.js & npm
+
+The only xPack prerequisite is a recent
+[Node.js](https://nodejs.org) (>=**{customField('enginesNodeVersion')}**), as
+some dependencies require new features. Detailed instructions
+for each supported platform are provided in the next sections.
+
+<CodeBlock language="console"> {
+`$ node --version
+v${frontMatter.node_version}
+`} </CodeBlock>
+
+If this is your first time using **npm**, you'll need to install the
+[Node.js](https://nodejs.org) ECMAScript (JavaScript) runtime.
+The installation process is
+straightforward and does not clutter system locations.
+There are two versions of Node.js: **LTS** (**Long Term Service**) and
+**Current**. Generally, it is safer to use the **LTS** version,
+especially on Windows.
+
+![The Node Download page](./img/nodejs-org.png)
+
+<Tabs groupId="operating-systems">
+
+<TabItem value="windows" label="Windows" default>
+
+For Windows, the general procedure is to download the package
+and run the setup as usual (see below for details).
+
+The result is a binary program named `node.exe`,
+that can be used to execute
+JavaScript code from the terminal, and a stub named `npm.cmd`, executing
+the `npm-cli.js` script, which is part of the Node.js module that implements
+the `npm` functionality.
+
+<Heading as="h3"><code>node</code> setup</Heading>
+
+Download the Windows **Prebuilt Installer** from the Node.js
+[download](https://nodejs.org/en/download/prebuilt-installer)
+page (a `node-v*-x64.msi` file,
+only x64 is supported) and run the Windows setup as usual,
+with administrative rights.
+
+:::tip
+
+If you are not developing native modules, it's best to **skip** selecting
+the **Tools for Native Modules** during installation. This will help you
+avoid installing Visual Studio and other large packages that you don't need.
+
+:::
+
+![The Node.js Tools for Native Modules](./img/nodejs-setup-tools-for-native-modules.png)
+
+The setup process creates a folder, such as `C:\Program Files\nodejs`,
+which is automatically added to the system path because it contains
+the `node.exe` binary.
+
+<CodeBlock language="txt"> {
+`C:\\>where node.exe
+C:\\Program Files\\nodejs\\node.exe
+C:\\>node --version
+v${frontMatter.node_version}
+`} </CodeBlock>
+
+<Heading as ="h2"><code>npm</code> update</Heading>
+
+Node.js comes bundled with a version of **npm**, which is typically
+slightly older.
+
+<CodeBlock language="txt"> {
+`C:\\>where npm.cmd
+C:\\Program Files\\nodejs\\npm.cmd
+C:\\>npm --version
+${frontMatter.npm_version}
+`} </CodeBlock>
+
+It is advisable to update it to the latest version:
+
+```txt
+C:\>npm install -location=global npm@latest
+removed 1 package, and changed 60 packages in 5s
+
+27 packages are looking for funding
+  run `npm fund` for details
+```
+
+Surprisingly, checking the version often reveals the older version:
+
+<CodeBlock language="txt"> {
+`C:\\>where npm.cmd
+C:\\Program Files\\nodejs\\npm.cmd
+C:\\>npm --version
+${frontMatter.npm_version}
+`} </CodeBlock>
+
+This happens because, by default, global Node.js packages on Windows
+are installed in the user home folder, specifically in `%APPDATA%\npm`
+(e.g., `C:\Users\ilg\AppData\Roaming\npm`). This path is not included
+in the system or user path.
+
+```txt
+C:\>echo %Path%
+```
+
+It must be manually added **before** the current path:
+
+```txt
+C:\>set Path=%APPDATA%\npm;%Path%
+```
+
+To make this setting **persistent**, execute the following command:
+
+```txt
+C:\>setx Path "%APPDATA%\npm;%Path%"
+```
+
+:::info
+
+Please note the syntax differences: `setx` does not use an equal
+sign but uses double quotes, which can be problematic if used with `set`.
+
+:::
+
+:::info
+
+These commands are valid for the `cmd.exe` shell. For PowerShell or
+other shells, please adjust the syntax accordingly.
+
+:::
+
+After this, the new version of the program should be visible:
+
+<CodeBlock language="txt"> {
+`C:\\>npm --version
+${frontMatter.npm_latest_version}
+`} </CodeBlock>
+
+<Heading as="h2">Git</Heading>
+
+While not mandatory for using the xPack tools alone, it is recommended
+to install the [Git for Windows](https://git-scm.com/download/win) package too.
+
+This also installs a `bash` shell.
+The xPack Core Tools can run either in either the Windows shells or in the Git `bash` shell.
+
+<Heading as="h2">PowerShell Execution Policies</Heading>
+
+Recent Windows versions use PowerShell, which has a more restrictive
+execution policy designed to prevent the execution of malicious scripts.
+Unfortunately, this also prevents the execution of Node.js applications.
+
+If you get a message in the console as the one below:
+
+```txt
+xpm : File C:\Users\...\AppData\Roaming\npm\xpm.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at
+https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ xpm init --template @xpack/hello-world-template@latest --property lan ...
++ ~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+The terminal process "C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -Command xpm init --template @xpack/hello-world-template@latest --property language
+```
+
+then run the following command in a PowerShell terminal:
+
+```txt
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser
+```
+
+For more details please read the Microsoft
+[about_Execution_Policies](https://docs.microsoft.com/en-gb/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.1) page.
+
+</TabItem>
+
+<TabItem value="macos" label="macOS">
+
+For macOS, it is
+**strongly recommended** to **use a version manager** (see below).
+
+<UseNvm />
+
+<Heading as="h2">Command Line Tools</Heading>
+
+On macOS, the system C/C++ headers and most development tools are
+not included in the standard macOS distribution and need to be
+installed separately. Apple provides these tools as a separate
+**Command Line Tools** package.
+
+If you followed the _Quick instructions_, the `install-nvm-node-npm-xpm.sh`
+script already installed it. Otherwise,
+to install the Command Line Tools only if they are not already in the
+expected location, use:
+
+```sh
+if [ ! -d "/Library/Developer/CommandLineTools/" ]
+then
+  xcode-select --install
+fi
+```
+
+:::info
+
+Please note that although the C/C++ headers
+are also part of Xcode, their location is not fixed. Therefore, the
+Command Line Tools package must still be installed for the xPack
+toolchains to find them in the expected location.
+
+:::
+
+<VersionManager />
+
+In short, [nvm](https://github.com/nvm-sh/nvm) changes the installation
+location to `~/.nvm` and allows multiple versions of node to be installed
+in the `~/.nvm/versions/node` folder.
+
+If you have a previous version of **npm** installed with a local prefix,
+please remove it:
+
+```sh
+npm config delete prefix
+sudo rm -rf /usr/local/lib/node-modules /usr/local/bin/node /usr/local/bin/npm /usr/local/bin/npm
+rm -rf ~/Library/npm ~/opt/npm
+```
+
+Also remove `${HOME}/Library/npm/bin` or `${HOME}/opt/npm/bin` from the `PATH`.
+
+When everything is clean, run the install script:
+
+```sh
+touch ~/.zshrc
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | ${SHELL}
+```
+
+This will install the version manager in `~/.nvm`, and add a few lines to
+the shell configuration file (`.zshrc`, which must be present).
+
+<NvmLatest />
+
+```console
+% nvm install 20 --lts node
+Downloading and installing node v20.18.0...
+Downloading https://nodejs.org/dist/v20.18.0/node-v20.18.0-darwin-x64.tar.xz...
+######################################################################### 100.0%
+Computing checksum with shasum -a 256
+Checksums matched!
+Now using node v20.18.0 (npm v10.8.2)
+
+% nvm ls
+       v18.20.4
+->     v20.18.0
+default -> node (-> v18.20.4)
+iojs -> N/A (default)
+unstable -> N/A (default)
+node -> stable (-> v18.20.4) (default)
+stable -> 22.11 (-> v18.20.4) (default)
+lts/* -> lts/jod (-> v18.20.4)
+lts/argon -> v4.9.1 (-> N/A)
+lts/boron -> v6.17.1 (-> N/A)
+lts/carbon -> v8.17.0 (-> N/A)
+lts/dubnium -> v10.24.1 (-> N/A)
+lts/erbium -> v12.22.12 (-> N/A)
+lts/fermium -> v14.21.3 (-> N/A)
+lts/gallium -> v16.20.2
+lts/hydrogen -> v18.20.5 (-> N/A)
+lts/iron -> v20.18.0
+lts/jod -> v22.11.0
+
+% nvm use node 20
+Now using node v20.18.0 (npm v10.8.2)
+
+% node --version
+v20.18.0
+
+% nvm install-latest-npm
+Attempting to upgrade to the latest working version of npm...
+* Installing latest `npm`; if this does not work on your node version, please report a bug!
+
+changed 78 packages in 2s
+
+25 packages are looking for funding
+  run `npm fund` for details
+* npm upgraded to: v10.9.0
+
+% which npm
+/Users/ilg/.nvm/versions/node/v20.18.0/bin/npm
+
+% npm --version
+10.9.0
+
+% nvm alias default 20
+default -> 20 (-> v20.18.0)
+```
+
+<AfterNvm />
+
+</TabItem>
+
+<TabItem value="linux" label="GNU/Linux">
+
+For GNU/Linux, it is
+**strongly recommended** to **use a version manager** (see below).
+
+<UseNvm />
+
+:::info
+
+Arm platforms, like the Raspberry Pi,
+are supported, currently in both 32/64-bit variants.
+
+:::
+
+<VersionManager />
+
+In short, [nvm](https://github.com/nvm-sh/nvm) changes the installation
+location to `~/.nvm` and allows multiple versions of node to be installed
+in the `~/.nvm/versions/node` folder.
+
+If you have a previous version of **npm** installed with a local prefix,
+please remove it:
+
+```sh
+sudo rm -rf /usr/local/lib/nodejs
+rm -rf ~/opt/npm
+npm config delete prefix
+```
+
+Also remove `${HOME}/opt/npm/bin` from the `PATH`.
+
+When everything is clean, run the install script:
+
+```sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | ${SHELL}
+```
+
+This will install the version manager in `~/.nvm`, and add a few lines to
+the shell profile, for example to `.bash_profile` on most
+distributions.
+
+<NvmLatest />
+
+```console
+$ nvm install 20 --lts node
+Downloading and installing node v20.18.0...
+Downloading https://nodejs.org/dist/v20.18.0/node-v20.18.0-linux-arm64.tar.xz...
+################################################################################################################### 100.0%
+Computing checksum with sha256sum
+Checksums matched!
+Now using node v20.18.0 (npm v10.8.2)
+
+$ nvm ls
+       v18.20.5
+->     v20.18.0
+default -> 18 (-> v18.20.5)
+iojs -> N/A (default)
+unstable -> N/A (default)
+node -> stable (-> v20.18.0) (default)
+stable -> 20.18 (-> v20.18.0) (default)
+lts/* -> lts/jod (-> N/A)
+lts/argon -> v4.9.1 (-> N/A)
+lts/boron -> v6.17.1 (-> N/A)
+lts/carbon -> v8.17.0 (-> N/A)
+lts/dubnium -> v10.24.1 (-> N/A)
+lts/erbium -> v12.22.12 (-> N/A)
+lts/fermium -> v14.21.3 (-> N/A)
+lts/gallium -> v16.20.2 (-> N/A)
+lts/hydrogen -> v18.20.5
+lts/iron -> v20.18.0
+lts/jod -> v22.11.0 (-> N/A)
+
+$ nvm use node 20
+Now using node v20.18.0 (npm v10.8.2)
+
+$ node --version
+v20.18.0
+
+$ nvm install-latest-npm
+Attempting to upgrade to the latest working version of npm...
+* Installing latest `npm`; if this does not work on your node version, please report a bug!
+
+changed 78 packages in 3s
+
+25 packages are looking for funding
+  run `npm fund` for details
+* npm upgraded to: v10.9.0
+
+$ which npm
+/home/ilg/.nvm/versions/node/v20.18.0/bin/npm
+
+$ npm --version
+10.9.0
+
+$ nvm alias default 20
+default -> 20 (-> v20.18.0)
+```
+
+<AfterNvm />
+
+:::info
+
+These commands were tested with `bash` on
+Ubuntu, Manjaro and Raspberry Pi OS; for other environments
+they may need small adjustments.
+
+:::
+
+<Heading as="h2">git & curl</Heading>
+
+Although not a requirement for the node/npm/xpm tools themselves,
+it is recommended to have these tools installed, especially `git`,
+since all examples begin with cloning projects.
+
+Install them according to your distribution specifics.
+
+For example on Ubuntu and Debian-based distributions, use:
+
+```sh
+sudo apt-get install --yes git curl
+```
+
+<Heading as="h2">The GCC development headers and libraries</Heading>
+
+While the node/npm/xpm tools themselves do not require it, if you
+use the xPack native toolchains for software development, including for
+running tests natively, you will need the **system C/C++ headers and libraries**.
+
+The commands to install them are distribution specifics. For
+example on Ubuntu and Debian-based distributions, use:
+
+```sh
+sudo apt-get install --yes g++ libc6-dev libstdc++6
+```
+
+To compile 32-bit application on 64-bit Intel systems, the **multilib**
+package is necessary:
+
+```sh
+sudo apt-get install --yes g++-multilib
+```
+
+For some applications, the kernel headers are also necessary:
+
+```sh
+sudo apt-get install --yes linux-headers-generic
+```
+
+</TabItem>
+
+</Tabs>
+
+
+## Cleanups (node/npm)
+
+<Tabs groupId="operating-systems">
+
+<TabItem value="windows" label="Windows" default>
+
+If installed as recommended via setup, **node** can be uninstalled via the
+Microsoft specific mechanisms.
+
+For a thorough cleanup, please note that **npm** uses the following two folders
+to install global packages:
+
+- `%APPDATA%\Roaming\npm`
+- `%APPDATA%\Local\npm-cache`
+
+</TabItem>
+
+<TabItem value="macos" label="macOS">
+
+For a thorough cleanup, please note that **nvm/node/npm** use only two folders:
+
+- `$HOME/.nvm`
+- `$HOME/.cache/node`
+
+</TabItem>
+
+<TabItem value="linux" label="GNU/Linux">
+
+For a thorough cleanup, please note that **nvm/node/npm** use only two folders:
+
+- `$HOME/.nvm`
+- `$HOME/.npm`
+
+</TabItem>
+
+</Tabs>
+
+## Install xpm
+
+[`xpm`](https://xpack.github.io/xpm/) is also a portable
+[Node.js](https://nodejs.org/) command line application.
+
+On macOS and GNU/Linux, if you followed the _Quick instructions_,
+it is already installed. Otherwise, to install it, follow the steps in the
+[xpm install](https://xpack.github.io/xpm/install/) page.
+
+If you're confident and prefer a shortcut,
+run the following command:
+
+```sh
+npm install -location=global xpm@latest
+```
+
+## Miscellaneous
+
+The official page explaining how to install **npm** in a custom folder is
+[Resolving EACCES permissions errors when installing packages globally](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally).
+
+For less common platforms, you can install from unofficial
+builds, or to compile it from sources. For more details, see the
+[Node.js downloads](https://nodejs.org/en/download/) page.

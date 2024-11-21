@@ -1,0 +1,27 @@
+
+{/* ------------------------------------------------------------------------ */}
+
+:::info
+
+Please note that this will install the latest
+**LTS** version; to install the very latest **Current** version, remove
+the `--lts` option.
+
+:::
+
+To explicitly install a previous version and to switch to it, use the same
+commands, but replace `20` with your desired version (for example `18`).
+
+```sh
+nvm install 18 --lts node
+nvm use node 18
+nvm install-latest-npm
+nvm alias default 18
+```
+
+At any time, to switch between any of the installed versions, use:
+
+```sh
+nvm use <version>
+nvm alias default <version>
+```

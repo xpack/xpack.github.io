@@ -36,7 +36,12 @@ function getCustomFields() {
 
   logger.info(`package version: ${topPackageJson.version}`);
 
-  const customFields = {}
+  const enginesNodeVersion = topPackageJson.engines.node.replace(/[^0-9]*/, '') || '';
+  const enginesNodeVersionMajor = enginesNodeVersion.replace(/[.].*/, '');
+  const customFields = {
+    enginesNodeVersion,
+    enginesNodeVersionMajor
+  }
 
   return {
     releaseVersion,

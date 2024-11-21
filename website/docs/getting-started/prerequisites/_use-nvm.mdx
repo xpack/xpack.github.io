@@ -1,0 +1,72 @@
+import Heading from '@theme/Heading';
+
+{/* ------------------------------------------------------------------------ */}
+
+The result is an executable named `node`,
+which can be used to execute
+JavaScript code from a shell, and a symbolic link named `npm` that points to
+the `npm-cli.js` script. This script is part of the Node.js module that
+provides the `npm` functionality.
+
+:::caution
+
+Some tutorials mistakenly suggest installing Node.js with administrative
+rights. While this isn't an issue for Node.js itself, it will require
+administrative rights for using `npm` and `xpm`, which can lead to various
+permission-related problems. To simplify maintenance, it is highly
+recommended to install Node.js and `npm` in the home folder using a
+version manager.
+
+:::
+
+<Heading as="h2">Quick instructions</Heading>
+
+If you're confident in what you're doing and prefer a shortcut, copy and
+paste the following
+[script](https://github.com/xpack/assets/blob/master/scripts/install-nvm-node-npm-xpm.sh)
+into a terminal.
+Otherwise, follow the steps one by one.
+
+:::caution
+
+For security reasons, conscientious users
+should review the content of the file before executing it.
+
+:::
+
+If you trust the script, you can use the following shortcut:
+
+```sh
+curl https://raw.githubusercontent.com/xpack/assets/master/scripts/install-nvm-node-npm-xpm.sh | ${SHELL}
+
+export NVM_DIR="${HOME}/.nvm"
+source "${NVM_DIR}/nvm.sh"
+```
+
+Otherwise download and check the script:
+
+```sh
+mkdir -pv "${HOME}/Downloads/"
+curl --output "${HOME}/Downloads/install-nvm-node-npm-xpm.sh" https://raw.githubusercontent.com/xpack/assets/master/scripts/install-nvm-node-npm-xpm.sh
+cat "${HOME}/Downloads/install-nvm-node-npm-xpm.sh"
+```
+
+When confident, run it:
+
+```sh
+${SHELL} "${HOME}/Downloads/install-nvm-node-npm-xpm.sh"
+
+exit
+```
+
+This script will install `nvm` (the Node Version Manager), `node`,
+`npm` and `xpm`.
+
+:::info
+
+To automatically activate `nvm`, the script adds several lines
+to the shell initialization script. Therefore, it is necessary
+to restart the shell to apply these changes.
+
+:::
+

@@ -11,9 +11,25 @@
 
 export const customDocsSidebar = [
   {
-    type: 'doc',
-    id: 'getting-started/index',
-    label: 'Getting Started'
+    type: 'category',
+    label: 'Getting Started',
+    link: {
+      type: 'doc',
+      id: 'getting-started/index'
+    },
+    collapsed: false,
+    items: [
+      {
+        type: 'doc',
+        id: 'getting-started/prerequisites/index',
+        label: 'Prerequisites'
+      },
+      {
+        type: 'doc',
+        id: 'getting-started/glossary/index',
+        label: 'Glossary'
+      },
+    ]
   },
   {
     type: 'doc',
@@ -53,7 +69,7 @@ export const customDocsSidebar = [
       {
         type: 'doc',
         id: 'developer/new-xpack-git/index',
-        label: 'How to create new xPacks'
+        label: 'How to create new projects'
       },
       {
         type: 'doc',
@@ -63,7 +79,7 @@ export const customDocsSidebar = [
       {
         type: 'doc',
         id: 'developer/node-js-tricks/index',
-        label: 'Node.Js Tips & Tricks'
+        label: 'Node.js Tips & Tricks'
       },
       {
         type: 'doc',

@@ -14,7 +14,7 @@ date: 2017-10-09 02:47:00 +0300
 
 ### Display objects
 
-To display all the embers of an object, use:
+To display all the members of an object, use:
 
 ```js
 const util = require('util')

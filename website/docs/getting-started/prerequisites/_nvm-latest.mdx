@@ -1,0 +1,24 @@
+
+{/* ------------------------------------------------------------------------ */}
+
+:::caution
+
+Please note that **nvm** requires `NVM_DIR` to be set in the environment
+and the `nvm.sh` script to be executed; without these, **nvm** will not
+function.
+
+:::
+
+To install the latest LTS version of Node.js (like 20),
+open a new terminal (to apply the new environment variables), and then run
+the following commands:
+
+```sh
+nvm install 20 --lts node
+nvm use node 20
+nvm install-latest-npm
+nvm alias default 20
+```
+
+You can also execute the commands individually and verify the results,
+for example:

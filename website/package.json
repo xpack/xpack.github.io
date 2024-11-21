@@ -57,14 +57,13 @@
     "node": ">=18.0"
   },
   "websiteConfig": {
-    "name": "xPack",
     "longName": "xPack Project",
     "title": "The xPack Reproducible Build Framework",
     "tagline": "Tools to manage, configure and build complex, package based, multi-target projects, in a reproducible way.",
-    "metadataDescription": "The xPack Reproducible Build Framework",
+    "metadataDescription": "The xPack Framework",
     "metadataKeywords": "xpack, project, manage, build, test, dependencies, xpm, npm, reproducibility",
     "nodeVersion": "18.20.4",
-    "hasTopHomepageFeatures": "true",
+    "hasCustomHomepageFeatures": "true",
     "hasCustomSidebar": "true",
     "hasCustomDocsNavbarItem": "true",
     "hasCustomDeveloper": "true",
