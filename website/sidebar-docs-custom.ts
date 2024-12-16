@@ -33,7 +33,7 @@ export const customDocsSidebar = [
   },
   {
     type: 'category',
-    label: 'Contributor\'s Guide',
+    label: 'Contributor\'s Guides',
     link: {
       type: 'doc',
       id: 'developer/index',
@@ -65,7 +65,7 @@ export const customDocsSidebar = [
   {
     type: 'doc',
     id: 'maintainer/index',
-    label: 'Maintainer\‘s Guide'
+    label: 'Maintainer\‘s Guides'
   },
   {
     type: 'doc',

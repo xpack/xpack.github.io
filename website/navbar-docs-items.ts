@@ -20,6 +20,14 @@ export const customDocsNavbarItem = {
             to: '/docs/getting-started'
         },
         {
+            label: 'Contributor\'s Guides',
+            to: '/docs/developer'
+        },
+        {
+            label: 'Maintainer\'s Guides',
+            to: '/docs/maintainer'
+        },
+        {
             label: 'Help Centre',
             to: '/docs/support'
         },
