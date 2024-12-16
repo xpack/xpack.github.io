@@ -63,3 +63,7 @@ For an exhaustive list see [Wikipedia](https://en.wikipedia.org/wiki/Comparison_
 - [npm](https://www.npmjs.com/)
 - [Felix Geisendörfer's Node.js Style Guide](https://github.com/felixge/node-style-guide)
 - [Docker and Node.js Best Practices](https://github.com/nodejs/docker-node/blob/main/docs/BestPractices.md)
+
+## Patents
+
+- [Data driven embedded application building and configuration](https://patents.google.com/patent/US10466977)
