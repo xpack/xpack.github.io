@@ -19,6 +19,8 @@ const sidebars: SidebarsConfig = {
   
   docsSidebar: customDocsSidebar,
   
+  
+  
 };
 
 export default sidebars;

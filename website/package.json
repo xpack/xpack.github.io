@@ -18,27 +18,31 @@
     "npm-install": "npm install",
     "npm-link-helper": "npm link @xpack/docusaurus-template-liquid @xpack/npm-packages-helper",
     "generate-website-commons": "bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/generate-commons.sh",
-    "generate-website-blog-post": "bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/generate-blog-post.sh"
+    "generate-website-blog-post": "bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/generate-blog-post.sh",
+    "npm-ci": "npm ci",
+    "import-website-releases": "bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/website-import-releases.sh",
+    "deep-clean": "del-cli .docusaurus build node_modules package-lock.json"
   },
   "dependencies": {
-    "@docusaurus/core": "3.5.2",
-    "@docusaurus/plugin-client-redirects": "3.5.2",
-    "@docusaurus/plugin-ideal-image": "3.5.2",
-    "@docusaurus/preset-classic": "3.5.2",
-    "@mdx-js/react": "^3.0.0",
-    "clsx": "^2.0.0",
-    "prism-react-renderer": "^2.3.0",
+    "@docusaurus/core": "3.6.3",
+    "@docusaurus/plugin-client-redirects": "3.6.3",
+    "@docusaurus/plugin-ideal-image": "3.6.3",
+    "@docusaurus/preset-classic": "3.6.3",
+    "@mdx-js/react": "^3.1.0",
+    "clsx": "^2.1.1",
+    "prism-react-renderer": "^2.4.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "del-cli": "^6.0.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.5.2",
-    "@docusaurus/tsconfig": "3.5.2",
-    "@docusaurus/types": "3.5.2",
-    "docusaurus-plugin-typedoc": "^1.0.5",
+    "@docusaurus/module-type-aliases": "3.6.3",
+    "@docusaurus/tsconfig": "3.6.3",
+    "@docusaurus/types": "3.6.3",
+    "docusaurus-plugin-typedoc": "^1.1.1",
     "json": "^11.0.0",
-    "typedoc": "^0.26.11",
-    "typedoc-plugin-markdown": "^4.2.10",
+    "typedoc": "^0.27.3",
+    "typedoc-plugin-markdown": "^4.3.2",
     "typescript": "~5.6.3"
   },
   "browserslist": {
@@ -63,12 +67,13 @@
     "metadataDescription": "The xPack Framework",
     "metadataKeywords": "xpack, project, manage, build, test, dependencies, xpm, npm, reproducibility",
     "nodeVersion": "18.20.4",
-    "hasTopHomepageFeatures": "true",
     "hasCustomSidebar": "true",
     "hasCustomDocsNavbarItem": "true",
     "hasCustomDeveloper": "true",
     "hasCustomGettingStarted": "true",
     "hasCustomMaintainer": "true",
-    "hasCustomAbout": "true"
+    "hasCustomAbout": "true",
+    "skipInstallCommand": "true",
+    "hasCustomHomepageFeatures": "true"
   }
 }
