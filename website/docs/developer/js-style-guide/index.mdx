@@ -12,42 +12,39 @@ date: 2017-10-09 02:47:00 +0300
 
 :::info
 
-Given the positive experience with
-TypeScript while writing the VS Code xPack extension, starting with 2021,
-existing JavaScript projects will be migrated to TypeScript.
+Given the positive experience with TypeScript while writing the
+VS Code xPack extension, starting in 2021, existing JavaScript
+projects will be migrated to TypeScript.
 
 :::
 
 ## Standard TS/JS
 
-After many years dealing with style guides for various languages,
-the conclusion is that the style itself is less important than applying
-it consistently.
+After many years of working with style guides for various languages,
+the conclusion is that the specific style is of lesser importance;
+what matters more is its consistent application.
 
-So, for the xPack JavaScript source files to be consistent, the first
-requirement is to pass the [Standard JS](https://standardjs.com)
+To ensure consistency in the xPack JavaScript source files, the
+primary requirement is to pass the [Standard JS](https://standardjs.com)
 validation tools, which also have a TypeScript variant
-([ts-standard](https://www.npmjs.com/package/ts-standard))
+([ts-standard](https://www.npmjs.com/package/ts-standard)).
 
-After this, the main recommendations are:
+Following this, the main recommendations are:
 
-- use the **ECMAScript 6** specifications (ES 6),
-- if the module does something reasonably complex, the module public
-functions **must be asynchronous**,
-- asynchronous functions must **use promises** (and definitely
-**avoid callbacks**),
-- **reentrancy** should be seriously considered (avoid module-global variables).
+- Utilise the ECMAScript 6 specifications (ES 6).
+- If the module performs reasonably complex tasks, its public functions **must be asynchronous**.
+- Asynchronous functions should **use promises** (and definitely **avoid callbacks**).
+- **Reentrancy** should be carefully considered (avoid module-global variables).
 
 ## The xPack project preferences
 
-### Prefer TypeScript to JavaScript
+### Prefer TypeScript over JavaScript
 
-This is Rule no. 1, that overrides all other rules.
+This is Rule No. 1, which overrides all other rules.
 
-If JavaScript code must be
-still used in some places, prefer ES6 solution.
+If JavaScript code must still be used in some instances, prefer ES6 solutions.
 
-Definitely **avoid using old style code**.
+Definitely **avoid using old-style code**.
 
 ### Use classes as much as possible
 

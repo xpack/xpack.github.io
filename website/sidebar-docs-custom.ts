@@ -21,15 +21,51 @@ export const customDocsSidebar = [
     items: [
       {
         type: 'doc',
-        id: 'getting-started/prerequisites/index',
-        label: 'Prerequisites'
-      },
-      {
-        type: 'doc',
         id: 'getting-started/glossary/index',
         label: 'Glossary'
       },
+      {
+        type: 'doc',
+        id: 'getting-started/prerequisites/index',
+        label: 'Prerequisites'
+      },
     ]
+  },
+  {
+    type: 'category',
+    label: 'Contributor\'s Guide',
+    link: {
+      type: 'doc',
+      id: 'developer/index',
+    },
+    collapsed: true,
+    items: [
+      {
+        type: 'doc',
+        id: 'developer/js-style-guide/index',
+        label: 'JS Style Guide'
+      },
+      {
+        type: 'doc',
+        id: 'developer/node-js-tricks/index',
+        label: 'Node.js Tips & Tricks'
+      },
+      {
+        type: 'doc',
+        id: 'developer/vs-code-settings/index',
+        label: 'VS Code Settings'
+      },
+      {
+        type: 'doc',
+        id: 'developer/links/index',
+        label: 'Links'
+      },
+    ]
+  },
+  {
+    type: 'doc',
+    id: 'maintainer/index',
+    label: 'Maintainer\‘s Guide'
   },
   {
     type: 'doc',
@@ -56,46 +92,5 @@ export const customDocsSidebar = [
         label: 'History'
       },
     ]
-  },
-  {
-    type: 'category',
-    label: 'Developer Information',
-    link: {
-      type: 'doc',
-      id: 'developer/index',
-    },
-    collapsed: true,
-    items: [
-      {
-        type: 'doc',
-        id: 'developer/new-xpack-git/index',
-        label: 'How to create new projects'
-      },
-      {
-        type: 'doc',
-        id: 'developer/js-style-guide/index',
-        label: 'JS Style Guide'
-      },
-      {
-        type: 'doc',
-        id: 'developer/node-js-tricks/index',
-        label: 'Node.js Tips & Tricks'
-      },
-      {
-        type: 'doc',
-        id: 'developer/vs-code-settings/index',
-        label: 'VS Code Settings'
-      },
-      {
-        type: 'doc',
-        id: 'developer/links/index',
-        label: 'Links'
-      },
-    ]
-  },
-  {
-    type: 'doc',
-    id: 'maintainer/index',
-    label: 'Maintainer Information'
   },
 ]
