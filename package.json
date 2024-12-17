@@ -28,7 +28,9 @@
   },
   "bundleDependencies": [],
   "config": {
-    "isOrganizationWeb": "true"
+    "isOrganizationWeb": "true",
+    "isNotNpmModule": "true",
+    "skipTests": "true"
   },
   "engines": {
     "node": " >=18.0.0"
