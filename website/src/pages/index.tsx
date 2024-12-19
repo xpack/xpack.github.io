@@ -49,6 +49,8 @@ export default function Home(): JSX.Element {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+        <hr className="hero__hr"/>
+        <HomepageTools />
       </main>
     </Layout>
   );
