@@ -53,7 +53,6 @@ export const redirects = {
     { from: '/openocd', to: 'https://xpack-dev-tools.github.io/openocd-xpack/' },
     { from: '/openocd/install', to: 'https://xpack-dev-tools.github.io/openocd-xpack/docs/install/' },
     { from: '/openocd/releases', to: 'https://xpack-dev-tools.github.io/openocd-xpack/docs/releases/' },
-    { from: '/about', to: '/docs/project/about' },
     { from: '/history', to: '/docs/project/history' },
     { from: '/qemu-arm', to: 'https://xpack-dev-tools.github.io/qemu-arm-xpack/' },
     { from: '/qemu-arm/install', to: 'https://xpack-dev-tools.github.io/qemu-arm-xpack/docs/install/' },
