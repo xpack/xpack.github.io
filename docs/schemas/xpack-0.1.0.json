@@ -1,0 +1,752 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://xcdl.github.io/schemas/xpack-0.1.0.json",
+  "title": "xPack JSON schema",
+  "description": "The JSON schema definitions for xPack metadata files.",
+  "type": "object",
+  "$defs": {
+    "nonEmptyStringType": {
+      "type": "string",
+      "minLength": 1
+    },
+    "semverType": {
+      "description": "A string representing a version that follows the semver requirements.",
+      "type": "string",
+      "pattern": "[0-9]+[.][0-9]+[.][0-9]+",
+      "minLength": 5,
+      "examples": [
+        "1.2.3"
+      ],
+      "$comment": "See https://semver.org; non negative integers, no leading zeroes."
+    },
+    "arrayOfPathsType": {
+      "description": "An array of string representing POSIX paths.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/nonEmptyStringType"
+      }
+    },
+    "arrayOfSymbolsType": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/nonEmptyStringType"
+      }
+    },
+    "arrayOfOptionsType": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/nonEmptyStringType"
+      }
+    },
+    "buildType": {
+      "description": "An object with definitions specific to the xPack build generator.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "builder": {
+          "$ref": "#/$defs/builderType"
+        },
+        "artefact": {
+          "$ref": "#/$defs/artefactType"
+        },
+        "artifact": {
+          "$ref": "#/$defs/artefactType",
+          "$comment": "Alias of artefact, with american spelling."
+        },
+        "addSourceFolders": {
+          "description": "An array of strings with source folders to be added to all configurations.",
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "addIncludeFolders": {
+          "description": "An array of strings with include folders to be added to all configurations.",
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "addSymbols": {
+          "description": "An array of strings with preprocessor symbols to be added to all configurations.",
+          "$ref": "#/$defs/arrayOfSymbolsType"
+        },
+        "toolsSets": {
+          "$ref": "#/$defs/toolsSetsType"
+        },
+        "profiles": {
+          "$ref": "#/$defs/profilesType"
+        },
+        "language": {
+          "$ref": "#/$defs/languageType"
+        },
+        "configurations": {
+          "$ref": "#/$defs/buildConfigurationsType"
+        }
+      }
+    },
+    "builderType": {
+      "description": "A string identifying the builder.",
+      "type": "string",
+      "enum": [
+        "ninja",
+        "make",
+        "internal"
+      ],
+      "default": "internal"
+    },
+    "artefactType": {
+      "description": "An object with the project artefact details.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "executable",
+            "staticLib",
+            "sharedLib"
+          ]
+        },
+        "name": {
+          "description": "A string with the artefact name.",
+          "$ref": "#/$defs/nonEmptyStringType",
+          "default": "{{ build.name }}"
+        },
+        "outputPrefix": {
+          "description": "A string with the artefact name prefix.",
+          "type": "string",
+          "default": ""
+        },
+        "outputSuffix": {
+          "description": "A string with the artefact name suffix.",
+          "type": "string",
+          "default": ""
+        },
+        "extension": {
+          "description": "A string with the artefact name extension, like .a for static libraries, or .exe for executables on Windows.",
+          "type": "string"
+        }
+      }
+    },
+    "languageType": {
+      "description": "An array of strings with the language identifier.",
+      "type": "string",
+      "enum": [
+        "c",
+        "c++"
+      ]
+    },
+    "toolsSetsType": {
+      "description": "A map of tools sets definitions.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/toolchainType"
+      }
+    },
+    "toolchainType": {
+      "description": "An object with the toolchain definition.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "parent": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "commandPrefix": {
+          "type": "string"
+        },
+        "commandSuffix": {
+          "type": "string"
+        },
+        "descriptionPrefix": {
+          "type": "string"
+        },
+        "objectExtension": {
+          "type": "string"
+        },
+        "makeObjectsVariable": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "tools": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/toolType"
+          }
+        }
+      }
+    },
+    "toolType": {
+      "type": "object",
+      "properties": {
+        "commandName": {
+          "type": "string"
+        },
+        "options": {
+          "type": "string"
+        },
+        "deps": {
+          "type": "string"
+        },
+        "outputFlag": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "fileExtensions": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/toolFileExtensionType"
+          }
+        }
+      }
+    },
+    "toolFileExtensionType": {
+      "type": "object",
+      "properties": {
+        "prefix": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        }
+      }
+    },
+    "profilesType": {
+      "description": "A map of profiles settings.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/profileType"
+      }
+    },
+    "profileType": {
+      "type": "object",
+      "properties": {
+        "artefact": {
+          "$ref": "#/$defs/artefactType"
+        },
+        "excludedSourcePaths": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "removeSourceFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "addSourceFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "removeIncludeFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "addIncludeFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "removeSymbols": {
+          "$ref": "#/$defs/arrayOfSymbolsType"
+        },
+        "addSymbols": {
+          "$ref": "#/$defs/arrayOfSymbolsType"
+        },
+        "toolsSetsSettings": {
+          "$ref": "#/$defs/toolsSetsSettingsType"
+        },
+        "toolsSettings": {
+          "$ref": "#/$defs/toolsSettingsType"
+        }
+      }
+    },
+    "toolsSetsSettingsType": {
+      "description": "A map with settings specific to multiple toolsSets.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/toolSettingType"
+      }
+    },
+    "toolchainSettingsType": {
+      "description": "An object with settings specific to a toolchain.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/toolsSettingType"
+      }
+    },
+    "toolsSettingsType": {
+      "description": "A map with settings specific to multiple tools.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/toolSettingType"
+      }
+    },
+    "toolSettingType": {
+      "description": "An object with settings specific to a tool.",
+      "type": "object",
+      "properties": {
+        "removeDebugging": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "addDebugging": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "removeOptimizations": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "addOptimizations": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "removeWarnings": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "addWarnings": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "removeMiscellaneous": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "addMiscellaneous": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        }
+      }
+    },
+    "buildConfigurationsType": {
+      "description": "A map of build configurations.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/buildConfigurationType"
+      }
+    },
+    "buildConfigurationType": {
+      "description": "An object with a build configuration.",
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "targetPlatform": {
+            "$ref": "#/$defs/nonEmptyStringType"
+          },
+          "toolsSets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/nonEmptyStringType"
+            }
+          },
+          "language": {
+            "$ref": "#/$defs/languageType"
+          },
+          "profiles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/nonEmptyStringType"
+            }
+          },
+          "excludedSourcePaths": {
+            "$ref": "#/$defs/arrayOfPathsType"
+          },
+          "removeIncludeFolders": {
+            "$ref": "#/$defs/arrayOfPathsType"
+          },
+          "addIncludeFolders": {
+            "$ref": "#/$defs/arrayOfPathsType"
+          },
+          "removeSymbols": {
+            "$ref": "#/$defs/arrayOfSymbolsType"
+          },
+          "addSymbols": {
+            "$ref": "#/$defs/arrayOfSymbolsType"
+          },
+          "sourceFoldersSettings": {
+            "$ref": "#/$defs/configurationSourceFoldersSettingsType"
+          },
+          "sourceFilesSettings": {
+            "$ref": "#/$defs/configurationSourceFilesSettingsType"
+          }
+        }
+      }
+    },
+    "configurationSourceFoldersSettingsType": {
+      "description": "An object with settings specific to multiple folders, defined inside the configuration.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/configurationSourceFolderSettingsType"
+      }
+    },
+    "configurationSourceFolderSettingsType": {
+      "description": "An object with settings specific to a folder defined inside the configuration.",
+      "type": "object",
+      "properties": {
+        "excludedSourcePaths": {
+          "description": "An array of strings, with path relative to the current folder.",
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "removeIncludeFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "addIncludeFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "removeSymbols": {
+          "$ref": "#/$defs/arrayOfSymbolsType"
+        },
+        "addSymbols": {
+          "$ref": "#/$defs/arrayOfSymbolsType"
+        },
+        "toolsSettings": {
+          "$ref": "#/$defs/toolsSettingsType"
+        }
+      }
+    },
+    "configurationSourceFilesSettingsType": {
+      "description": "A map with settings specific to multiple files, defined inside the configuration.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/configurationSourceFileSettingsType"
+      }
+    },
+    "configurationSourceFileSettingsType": {
+      "description": "An object with settings specific to a folder defined inside the configuration.",
+      "type": "object",
+      "properties": {
+        "removeIncludeFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "addIncludeFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "removeSymbols": {
+          "$ref": "#/$defs/arrayOfSymbolsType"
+        },
+        "addSymbols": {
+          "$ref": "#/$defs/arrayOfSymbolsType"
+        },
+        "toolsSettings": {
+          "$ref": "#/$defs/toolsSettingsType"
+        }
+      }
+    },
+    "cpusType": {
+      "description": "A map of CPU/MCU families.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "families": {
+          "$ref": "#/$defs/familiesType"
+        }
+      },
+      "required": [
+        "families"
+      ]
+    },
+    "familiesType": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/familyType"
+      }
+    },
+    "familyType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "displayName": {
+          "$ref": "#/$defs/displayNameType"
+        },
+        "description": {
+          "$ref": "#/$defs/descriptionType"
+        },
+        "supplier": {
+          "$ref": "#/$defs/supplierType"
+        },
+        "devices": {
+          "$ref": "#/$defs/devicesType"
+        }
+      }
+    },
+    "devicesType": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/deviceType"
+      }
+    },
+    "deviceType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "displayName": {
+          "$ref": "#/$defs/displayNameType"
+        },
+        "description": {
+          "$ref": "#/$defs/descriptionType"
+        },
+        "url": {
+          "$ref": "#/$defs/urlType"
+        },
+        "compiler": {
+          "$ref": "#/$defs/compilerType"
+        },
+        "features": {
+          "$ref": "#/$defs/deviceFeaturesType"
+        },
+        "memoryRegions": {
+          "$ref": "#/$defs/memoryRegionsType"
+        },
+        "debug": {
+          "$ref": "#/$defs/debugType"
+        },
+        "variants": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/variantType"
+          }
+        }
+      }
+    },
+    "deviceFeaturesType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "arch": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "width": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "hfosc": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "lfosc": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "maxClock": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "package": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "leads": {
+          "$ref": "#/$defs/positiveIntegerStringType"
+        },
+        "vcc": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/vccType"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/vccType"
+              },
+              "uniqueItems": true
+            }
+          ]
+        }
+      }
+    },
+    "vccType": {
+      "$ref": "#/$defs/nonEmptyStringType"
+    },
+    "memoryRegionsType": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/memoryRegionType"
+      }
+    },
+    "memoryRegionType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "onChip": {
+          "$ref": "#/$defs/booleanStringType"
+        },
+        "address": {
+          "$ref": "#/$defs/hexStringType"
+        },
+        "size": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "maxSize": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "access": {
+          "$ref": "#/$defs/memoryAccessStringType"
+        },
+        "description": {
+          "$ref": "#/$defs/descriptionType"
+        }
+      }
+    },
+    "debugType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "jtag": {
+          "$ref": "#/$defs/jtagType"
+        },
+        "xsvd": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        }
+      }
+    },
+    "jtagType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tapindex": {
+          "$ref": "#/$defs/nonNegativeIntegerStringType"
+        },
+        "idcode": {
+          "$ref": "#/$defs/hexStringType"
+        },
+        "irlen": {
+          "$ref": "#/$defs/nonNegativeIntegerStringType"
+        }
+      }
+    },
+    "platformFeaturesType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "flash": {
+          "$ref": "#/$defs/platformFlashType"
+        },
+        "hfxtal": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "lfxtal": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        }
+      }
+    },
+    "platformFlashType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "size": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "interface": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "memoryRegion": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        }
+      }
+    },
+    "platformDebugType": {
+      "interface": {
+        "$ref": "#/$defs/debugInterfaceType"
+      },
+      "connector": {
+        "$ref": "#/$defs/nonEmptyStringType"
+      },
+      "openocd": {
+        "oneOf": [
+          {
+            "$ref": "#/$defs/nonEmptyStringType"
+          },
+          {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/nonEmptyStringType"
+            }
+          }
+        ]
+      },
+      "jlink": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "device": {
+            "$ref": "#/$defs/nonEmptyStringType"
+          }
+        }
+      },
+      "compiler": {
+        "$ref": "#/$defs/compilerType"
+      }
+    },
+    "debugInterfaceType": {
+      "type": "string",
+      "enum": [
+        "jtag",
+        "swd"
+      ]
+    },
+    "variantType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "displayName": {
+          "$ref": "#/$defs/displayNameType"
+        },
+        "description": {
+          "$ref": "#/$defs/descriptionType"
+        }
+      }
+    },
+    "platformsType": {
+      "type": "object",
+      "description": "A map of platforms/boards.",
+      "additionalProperties": {
+        "$ref": "#/$defs/platformType"
+      }
+    },
+    "platformType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "displayName": {
+          "$ref": "#/$defs/displayNameType"
+        },
+        "description": {
+          "$ref": "#/$defs/descriptionType"
+        },
+        "supplier": {
+          "$ref": "#/$defs/supplierType"
+        },
+        "revision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "$ref": "#/$defs/urlType"
+        },
+        "orderForm": {
+          "$ref": "#/$defs/urlType"
+        },
+        "installedDevice": {
+          "$ref": "#/$defs/installedDeviceType"
+        },
+        "compatibleDevices": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/installedDeviceType"
+          }
+        },
+        "features": {
+          "$ref": "#/$defs/platformFeaturesType"
+        },
+        "debug": {
+          "$ref": "#/$defs/platformDebugType"
+        },
+        "compiler": {
+          "$ref": "#/$defs/compilerType"
+        }
+      }
+    }
+  },
+  "properties": {
+    "schemaVersion": {
+      "$ref": "#/$defs/semverType"
+    },
+    "license": {
+      "type": "string",
+      "minLength": 1
+    },
+    "copyright": {
+      "type": "string",
+      "minLength": 1
+    },
+    "build": {
+      "$ref": "#/$defs/buildType"
+    },
+    "cpus": {
+      "$ref": "#/$defs/cpusType"
+    },
+    "platforms": {
+      "$ref": "#/$defs/platformsType"
+    }
+  }
+}

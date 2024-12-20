@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>XCDL packages (outdated) | The xPack Build Framework (DEPRECATED)</title>
+<link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
+
+
+<link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
+<link type="application/rss+xml" rel="alternate" title="web-archive-jekyll" href="https://xpack.github.io/feed.xml">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>XCDL packages (outdated) | web-archive-jekyll</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="XCDL packages (outdated)" />
+<meta name="author" content="Liviu Ionescu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<meta property="og:description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<link rel="canonical" href="https://xpack.github.io/xcdl/guide/packages/" />
+<meta property="og:url" content="https://xpack.github.io/xcdl/guide/packages/" />
+<meta property="og:site_name" content="web-archive-jekyll" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-10-25T10:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="XCDL packages (outdated)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-12-20T19:13:52+00:00","datePublished":"2015-10-25T10:00:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"XCDL packages (outdated)","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xcdl/guide/packages/"},"url":"https://xpack.github.io/xcdl/guide/packages/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?202412202113">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://xpack.github.io/css/customstyles.css?202412202113">
+<link rel="stylesheet" href="https://xpack.github.io/css/boxshadowproperties.css?202412202113">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="https://xpack.github.io/css/theme-blue.css?202412202113">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://xpack.github.io/js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="https://xpack.github.io/js/toc.js"></script>
+<script src="https://xpack.github.io/js/customscripts.js"></script>
+
+<!-- Use absolute URLs, to cover preview cases too -->
+<link rel="shortcut icon" href="https://xpack.github.io/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="https://xpack.github.io/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://xpack.github.io/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://xpack.github.io/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://xpack.github.io/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://xpack.github.io/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://xpack.github.io/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://xpack.github.io/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://xpack.github.io/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://xpack.github.io/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://xpack.github.io/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://xpack.github.io/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://xpack.github.io/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://xpack.github.io/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://xpack.github.io/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://xpack.github.io/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks" style="">
+        <div style="display: inline-block; float: left; margin-top: 8px; margin-left: auto; margin-right: 10px;"><img src="/images/company_logo.png" alt="logo" width="32px" height="32px"/></div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="/">&nbsp;<span class="projectTitle"> The xPack Project</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">News<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="/news/">Latest News</a></li>
+                        
+                        
+                        
+                        <li><a href="/news/archive/">Archive</a></li>
+                        
+                        
+                        
+                        <li><a href="/tags/">Tags</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://xpack-dev-tools.github.io" target="_blank" rel="noopener">xPack Binary Development Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://micro-os-plus.github.io" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Dev Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/micro-os-plus/" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-3rd-party/" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/eclipse-embed-cdt/" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '/search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="XCDL packages (outdated)">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3 sticky" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle">xcdl </li>
+  
+  
+  
+      
+  
+  <li>
+      <a title="Getting Started" href="#">Getting Started</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/xcdl/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Old home page" href="/xcdl/outdated/">Old home page</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise, if placed
+inside customscripts.js, the script runs before the sidebar code runs
+and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">XCDL packages (outdated)</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+        
+
+
+   <p>For a package to be usable in the XCDL component framework it must conform to certain rules imposed by the framework. Packages must be distributed in a form that is understood by the component repository administration tool. For each package there must be a top-level XCDL metadata file which describes the package to the component framework. There are certain portability requirements related to how a package gets built, so that the package can be used in a variety of host environments. In addition to these rules, the component framework provides a number of guidelines. It is not mandatory for the packages to strictly conform to all guidelines, but sticking to them can simplify certain operations.</p>
+
+<h2 id="packages">Packages</h2>
+
+<h3 id="what-is-a-package">What is a package?</h3>
+
+<p>An XCDL/xPack package is:</p>
+
+<ol>
+  <li>a folder containing a valid <code class="language-plaintext highlighter-rouge">.xpack.json</code> file;</li>
+  <li>a gzipped tarball containing 1);</li>
+  <li>a URL that resolves to 2);</li>
+  <li>a Git URL that, when cloned, results in 1).</li>
+</ol>
+
+<p>The definition is inspired from the <a href="https://docs.npmjs.com/misc/developers#what-is-a-package">NPM</a> package definition, and is intentionally Git and JavaScript centric, as these technologies are considered mature and worth considering.</p>
+
+<p>Since the external representation of the XCDL metadata will probably remain based on JSON, the documentation will use this syntax.</p>
+
+<h3 id="package-contents">Package contents</h3>
+
+<p>In addition to the <code class="language-plaintext highlighter-rouge">.xpack.json</code> metadata file, a typical package contains the following:</p>
+
+<ul>
+  <li>some number of source files (.c/.cpp) and header files (.h). The project artefact (library or executable) will be created using these files. Some source files may serve other purposes, for example to provide a linker script;</li>
+  <li>exported header files which define the interface provided by the package;</li>
+  <li>online documentation, for example reference pages for each exported function;</li>
+  <li>some number of test cases, shipped in source format, allowing users to check that the package is working as expected on their particular hardware and in their specific configuration;</li>
+  <li>other XCDL metadata files describing the package to the component framework.</li>
+</ul>
+
+<p>It is also conventional to have a per-package <code class="language-plaintext highlighter-rouge">ChangeLog</code> file used to keep track of changes to that package. This is especially valuable to end users of the package who may not have convenient access to the source code control system used to manage the master copy of the package, and hence cannot find out easily what has changed. Often it can be very useful to the main developers as well.</p>
+
+<p>Any given packages need not contain all of these.</p>
+
+<p>Some packages may not have any source code: it is possible to have a package that merely defines a common interface which can then be implemented by several other packages, especially in the context of device drivers; however it is still common to have some code in such packages to avoid replicating shareable code in all of the implementation packages. Similarly it is possible to have a package with no exported header files, just source code that implements an existing interface: for example an ethernet device driver might just implement a standard interface and not provide any additional functionality. Packages do not need to come with any on-line documentation, although this may affect how many people will want to use the package. Much the same applies to per-package test cases.</p>
+
+<h3 id="package-layout">Package layout</h3>
+
+<p>The component framework has a recommended per-package folder layout which splits the package contents on a functional basis:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Packages/ilg/xyzw/current
+├── .xpack.json
+├── .xcdl.json
+├── ChangeLog
+├── README.md
+├── doc
+├── include
+├── src
+└── tests
+</code></pre></div></div>
+
+<p>For example, if a package has an <code class="language-plaintext highlighter-rouge">include</code> sub-folder then the component framework will assume that all header files in and below that folder are <strong>exported header files</strong> and will do the right thing at build time. Similarly if there is <em>doc</em> property indicating the location of online documentation then the component framework will first look in the <code class="language-plaintext highlighter-rouge">doc</code> subfolder.</p>
+
+<p>Except for the name and location of the <code class="language-plaintext highlighter-rouge">.xpack.json</code> file, this folder layout is just a guideline, it is not enforced by the component framework. For simple packages it often makes sense to have all of the files in just one directory. For example a package could just contain the files hello.cpp, hello.h, hello.html. By default hello.h will be treated as an exported header file, although this can be overridden with the includeFiles property. Assuming there is a doc property referring to hello.html and there is no doc sub-directory then the tools will search for this file relative to the package’s top-level and everything will just work. Much the same applies to hello.cpp.</p>
+
+<h2 id="the-xpackjson-file">The <code class="language-plaintext highlighter-rouge">.xpack.json</code> file</h2>
+
+<h3 id="schema"><code class="language-plaintext highlighter-rouge">$schema</code></h3>
+
+<p>To facilitate versioning and validation, all XCDL .json files are fully defined by a schema file.</p>
+
+<p>The current schema for the <code class="language-plaintext highlighter-rouge">.xpack.json</code> file is:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"$schema": "https://xcdl.github.io/schemas/xpack-1-1.json",
+</code></pre></div></div>
+
+<p>The full and up-to-date definition of this schema is available from the separate <a href="https://xcdl.github.io/schemas/">Schemas</a> repository.</p>
+
+<h3 id="name"><code class="language-plaintext highlighter-rouge">name</code></h3>
+
+<p>A string that must uniquely identify the project node in the local repository hierarchy. It does not need to match the GitHub repository name, although usually it is closely related.</p>
+
+<p>The parent path must have at least one level, and generally defines the originator of the package (user or organization).</p>
+
+<p>Syntax (string):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"name": "string"
+</code></pre></div></div>
+
+<p>Example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"name": "/ilg/ARM/CMSIS"
+</code></pre></div></div>
+
+<h3 id="description"><code class="language-plaintext highlighter-rouge">description</code></h3>
+
+<p>A paragraph with a reasonably detailed description of the package. As a regular paragraph, it must end with dot.</p>
+
+<p>Syntax (string):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"description": "long string"
+</code></pre></div></div>
+
+<p>Example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"description": "CMSIS (Cortex Microcontroller Software Interface Standard)."
+</code></pre></div></div>
+
+<h3 id="repository"><code class="language-plaintext highlighter-rouge">repository</code></h3>
+
+<p>The place where the package repository is located. This is helpful for people who want to contribute.</p>
+
+<p>Syntax (array of objects):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"repository":
+{
+  "type": "string",
+  "url": "string"
+}
+</code></pre></div></div>
+
+<p>Support for the <code class="language-plaintext highlighter-rouge">git</code> type is mandatory. Other types, like <code class="language-plaintext highlighter-rouge">svn</code>, might be added later.</p>
+
+<p>Example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"repository":
+{
+    "type": "git",
+    "url": "https://github.com/xpacks/arm-cmsis.git"
+}
+</code></pre></div></div>
+
+<h3 id="releases"><code class="language-plaintext highlighter-rouge">releases</code></h3>
+
+<p>The list, in reverse order, of all versions of the package publicly released.</p>
+
+<p>Syntax (array of objects):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"releases": [
+  {
+    "version": "semver",
+    "description": "long string",
+    "date": "iso-date",
+    "archives": [
+        "url": "string"
+    ],
+
+    "repository":
+    {
+        "type": "git",
+        "url": "string",
+        "tag": "string"
+    }
+  },
+  {
+      ...
+  }
+]
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">archives</code> array define an ordered list of locations where the binary package can be downloaded from.</p>
+
+<p>The inner <code class="language-plaintext highlighter-rouge">repository</code> object defines the location where the release sources are available; only the <code class="language-plaintext highlighter-rouge">tag</code> property is mandatory; if this location is identical with the top definition, the <code class="language-plaintext highlighter-rouge">type</code> and <code class="language-plaintext highlighter-rouge">url</code> properties may be omitted.</p>
+
+<p>Example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"releases": [
+    {
+        "version": "4.5.0",
+        "description": "- CMSIS-Core     4.30.0  ...",
+        "date": "2015-11-12",
+        "archives": [
+            "http://gnuarmeclipse.sourceforge.net/xpacks/arm-cmsis/4.5.0.zip",
+            "https://github.com/xpacks/arm-cmsis/archive/4.5.0.zip"
+        ],
+
+        "repository":
+        {
+            "tag": "4.5.0"
+        }
+    }
+],
+</code></pre></div></div>
+
+<h3 id="keywords"><code class="language-plaintext highlighter-rouge">keywords</code></h3>
+
+<p>An array of strings, intended to help searches identify a package.</p>
+
+<p>Syntax (array of strings):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"keywords": [
+  "string1",
+  "string2",
+  ...
+]
+</code></pre></div></div>
+
+<p>Example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"keywords": [
+    "ARM",
+    "CMSIS",
+    "Cortex-M"
+],
+</code></pre></div></div>
+
+<h3 id="homepage"><code class="language-plaintext highlighter-rouge">homepage</code></h3>
+
+<p>The full URL to the project home page, either a separate web or a GitHub/SourceForge/etc project page.</p>
+
+<p>Syntax (string):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"homepage": "string"
+</code></pre></div></div>
+
+<p>Example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"homepage": "https://github.com/xpacks/arm-cmsis",
+</code></pre></div></div>
+
+<h3 id="bugs"><code class="language-plaintext highlighter-rouge">bugs</code></h3>
+
+<p>The full URL to the project’s issue tracker and / or the email address to which issues should be reported. These are helpful for people who encounter issues with your package.</p>
+
+<p>Syntax (object):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"bugs": [
+    {
+        "description": "string"
+        "url": "string",
+        "email": "string"
+    }
+]
+</code></pre></div></div>
+
+<p>Example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"bugs": [
+    {
+        "description": "All issues."
+        "url": "https://github.com/xpacks/arm-cmsis/issues"
+    }
+],
+</code></pre></div></div>
+
+<h3 id="license"><code class="language-plaintext highlighter-rouge">license</code></h3>
+
+<p>A string identifying the license for the package, so that people know how they are permitted to use it.</p>
+
+<p>Syntax (string):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"license": "string"
+</code></pre></div></div>
+
+<p>The license is identified by a short ID, selected from the list of <a href="https://spdx.org/licenses/">SPDX license IDs</a>, ideally one that is <a href="https://opensource.org/licenses/alphabetical">OSI</a> approved.</p>
+
+<p>If the package is licensed under multiple common licenses, use an <a href="https://npmjs.com/package/spdx">SPDX license expression syntax version 2.0</a> string, like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"license": "(ISC OR GPL-3.0)"
+</code></pre></div></div>
+
+<p>If the license hasn’t been assigned an SPDX identifier, or if it is a custom license, use the following valid SPDX expression:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"license": "SEE LICENSE IN filename"
+</code></pre></div></div>
+
+<p>Then include a file named <code class="language-plaintext highlighter-rouge">filename</code> at the <strong>top</strong> level of the package.</p>
+
+<p>Finally, if you do not wish to grant others the right to use a private or unpublished package under any terms, use:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"license": "UNLICENSED"
+</code></pre></div></div>
+
+<h3 id="maintainers"><code class="language-plaintext highlighter-rouge">maintainers</code></h3>
+
+<p>The maintainers are the persons who maintain the package (may be different from the persons who created the source files packaged in the package). The first maintainer is the person who created the package. The array extends at the bottom.</p>
+
+<p>Syntax (array of objects):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"maintainers": [
+  {
+    "name": "string",
+    "email": "string",
+    "url": "string"
+  }
+]
+</code></pre></div></div>
+
+<p>Example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"maintainers": [
+    {
+        "name": "Liviu Ionescu",
+        "email": "ilg@livius.net",
+        "url": "https://github.com/ilg-ul/"
+    }
+],
+</code></pre></div></div>
+
+<h3 id="contributors"><code class="language-plaintext highlighter-rouge">contributors</code></h3>
+
+<p>The contributors are the persons/organisations who contributed to the content of the package. The first contributor is the person who created the source files available in the package. The array extends at the bottom.</p>
+
+<p>Syntax (array of objects):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"contributors": [
+  {
+    "name": "string",
+    "email": "string",
+    "url": "string"
+  }
+]
+</code></pre></div></div>
+
+<p>Example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"contributors": [
+    {
+        "name": "ARM"
+    },
+
+    {
+        "name": "Liviu Ionescu",
+        "email": "ilg@livius.net",
+        "url": "https://github.com/ilg-ul/"
+    }
+],
+</code></pre></div></div>
+
+<h3 id="dependencies"><code class="language-plaintext highlighter-rouge">dependencies</code></h3>
+
+<p>Dependencies are specified in an array of objects that maps a package name to a version range. The version range is a string which has one or more space-separated descriptors. Dependencies can also be identified with a tarball or git URL.</p>
+
+<p>Syntax (array of objects):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"dependencies": [
+    {
+        "name": "string",
+        "version": "string"
+    },
+  ...
+]
+</code></pre></div></div>
+
+<p>The syntax for the version string is based on <a href="https://semver.org/">semver</a>, with the following expressions (inspired from NPM):</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">version</code> Must match version exactly</li>
+  <li><code class="language-plaintext highlighter-rouge">&gt;version</code> Must be greater than version</li>
+  <li><code class="language-plaintext highlighter-rouge">&gt;=version</code> etc</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;version</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;=version</code></li>
+  <li><code class="language-plaintext highlighter-rouge">~version</code> “Approximately equivalent to version” See semver(7)</li>
+  <li><code class="language-plaintext highlighter-rouge">^version</code> “Compatible with version” See semver(7)</li>
+  <li><code class="language-plaintext highlighter-rouge">1.2.x</code> 1.2.0, 1.2.1, etc., but not 1.3.0</li>
+  <li><code class="language-plaintext highlighter-rouge">*</code> Matches any version</li>
+  <li><code class="language-plaintext highlighter-rouge">""</code> (just an empty string) Same as *</li>
+  <li><code class="language-plaintext highlighter-rouge">version1 - version2</code> Same as &gt;=version1 &lt;=version2</li>
+  <li><code class="language-plaintext highlighter-rouge">range1 || range2</code> Passes if either range1 or range2 are satisfied.</li>
+</ul>
+
+<p>Future versions may also support:</p>
+
+<ul>
+  <li>https://…/file.tgz</li>
+  <li>git://…</li>
+  <li>github://user/repo</li>
+  <li>tag</li>
+  <li>path/path/path (???)</li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"dependencies": [
+    {
+        "name": "ilg/STM32",
+        "version": "&gt;=1.1.1"
+    },
+
+    {
+        "name": "ilg/ARM/CMSIS",
+        "version": "&gt;=4.4.0"
+    }
+]
+</code></pre></div></div>
+
+<h2 id="the-xpackignore-file">The <code class="language-plaintext highlighter-rouge">.xpackignore</code> file</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">.xpackignore</code> file is used to keep stuff out of the binary package. Unlike <code class="language-plaintext highlighter-rouge">git</code>, the XCDL tools look for this file only in the package root folder.</p>
+
+<p>The syntax follow the same pattern rules as .gitignore files:</p>
+
+<ul>
+  <li>blank lines or lines starting with # are ignored;</li>
+  <li>standard glob patterns work;</li>
+  <li>patterns ending with a forward slash / specify a directory;</li>
+  <li>patterns starting it with an exclamation point ! specify a negation.</li>
+</ul>
+
+<h2 id="making-a-package-binary-distribution">Making a package binary distribution</h2>
+
+<p>Developers of XCDL packages are advised to distribute their packages in the form of XCDL binary files. Packages distributed in this format may be added to existing XCDL component repositories in a robust manner using the package administration tools. This chapter describes the format of package distribution files and details how to prepare an XCDL package for distribution in this format.</p>
+
+<h3 id="the-binary-distribution-format">The binary distribution format</h3>
+
+<p>XCDL package distribution files are zipped archives which contain both the source code and metadata. The distribution files are subject to the following rules:</p>
+
+<ol>
+  <li>A metadata file must be named <code class="language-plaintext highlighter-rouge">.xpack.json</code> and must be located in the root of the archive.</li>
+  <li>The package source code must be placed in one or more folders.</li>
+  <li>An optional license agreement file named LICENSE.txt, or LICENSE may be placed in the root of the archive.</li>
+  <li>Files in the archive must use LF line endings.</li>
+  <li>Binary files may be placed in the archive, but the distribution of object code is not recommended.</li>
+</ol>
+
+<h3 id="preparing-packages-for-distribution">Preparing packages for distribution</h3>
+
+<p>TODO: define the procedure to pack the content of a package folder to an archive.</p>
+
+<h2 id="credits">Credits</h2>
+
+<p>The initial content of this page was based on <em>Chapter 2. Package Organization</em> of <em>The eCos Component Writer’s Guide</em>, by Bart Veer and John Dallaway, published in 2001.</p>
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2024 Liviu Ionescu. All rights reserved. <br />
+<span>Page last updated:</span> Dec 20, 2024<br/> Site last generated: Dec 20, 2024 <br />
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8WX9T80JEK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8WX9T80JEK');
+</script>
+
+
+</html>

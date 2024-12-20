@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://xcdl.github.io/schemas/xsvd-0.1.0.json",
+  "title": "xPack SVD JSON schema",
+  "description": "The JSON schema definitions for xPack SVD files.",
+  "type": "object",
+  "$defs": {},
+  "properties": {}
+}

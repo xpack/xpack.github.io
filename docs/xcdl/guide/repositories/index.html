@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>XCDL component repositories (outdated) | The xPack Build Framework (DEPRECATED)</title>
+<link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
+
+
+<link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
+<link type="application/rss+xml" rel="alternate" title="web-archive-jekyll" href="https://xpack.github.io/feed.xml">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>XCDL component repositories (outdated) | web-archive-jekyll</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="XCDL component repositories (outdated)" />
+<meta name="author" content="Liviu Ionescu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<meta property="og:description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<link rel="canonical" href="https://xpack.github.io/xcdl/guide/repositories/" />
+<meta property="og:url" content="https://xpack.github.io/xcdl/guide/repositories/" />
+<meta property="og:site_name" content="web-archive-jekyll" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-11-16T10:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="XCDL component repositories (outdated)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-12-20T19:13:52+00:00","datePublished":"2015-11-16T10:00:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"XCDL component repositories (outdated)","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xcdl/guide/repositories/"},"url":"https://xpack.github.io/xcdl/guide/repositories/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?202412202113">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://xpack.github.io/css/customstyles.css?202412202113">
+<link rel="stylesheet" href="https://xpack.github.io/css/boxshadowproperties.css?202412202113">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="https://xpack.github.io/css/theme-blue.css?202412202113">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://xpack.github.io/js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="https://xpack.github.io/js/toc.js"></script>
+<script src="https://xpack.github.io/js/customscripts.js"></script>
+
+<!-- Use absolute URLs, to cover preview cases too -->
+<link rel="shortcut icon" href="https://xpack.github.io/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="https://xpack.github.io/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://xpack.github.io/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://xpack.github.io/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://xpack.github.io/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://xpack.github.io/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://xpack.github.io/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://xpack.github.io/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://xpack.github.io/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://xpack.github.io/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://xpack.github.io/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://xpack.github.io/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://xpack.github.io/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://xpack.github.io/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://xpack.github.io/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://xpack.github.io/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks" style="">
+        <div style="display: inline-block; float: left; margin-top: 8px; margin-left: auto; margin-right: 10px;"><img src="/images/company_logo.png" alt="logo" width="32px" height="32px"/></div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="/">&nbsp;<span class="projectTitle"> The xPack Project</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">News<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="/news/">Latest News</a></li>
+                        
+                        
+                        
+                        <li><a href="/news/archive/">Archive</a></li>
+                        
+                        
+                        
+                        <li><a href="/tags/">Tags</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://xpack-dev-tools.github.io" target="_blank" rel="noopener">xPack Binary Development Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://micro-os-plus.github.io" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Dev Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/micro-os-plus/" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-3rd-party/" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/eclipse-embed-cdt/" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '/search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="XCDL component repositories (outdated)">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3 sticky" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle">xcdl </li>
+  
+  
+  
+      
+  
+  <li>
+      <a title="Getting Started" href="#">Getting Started</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/xcdl/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Old home page" href="/xcdl/outdated/">Old home page</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise, if placed
+inside customscripts.js, the script runs before the sidebar code runs
+and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">XCDL component repositories (outdated)</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+        
+
+
+   <p>Generally a component repository is a collection of packages managed by the component framework.</p>
+
+<h2 id="the-local-component-repository">The local component repository</h2>
+
+<p>All development tools using XCDL packages include a local component repository. Similarly to the CMSIS Pack repository, this is a local folder structure where all installed packages are located. The component framework comes with an administration tool that allows new packages or new versions of a package to be installed, old packages to be removed, and so on. Each package has its own folder hierarchy within the component repository. Keeping several packages in a single folder is illegal.</p>
+
+<p>To better accommodate the package separation for multi-vendor cases, the local folder hierarchy start with a folder with the vendor/originator name.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Packages/
+├── ARM
+├── ilg
+├── Keil
+├── Nuvoton
+├── lwIP
+└── wolfSSL
+</code></pre></div></div>
+
+<p>Below each vendor there are hierarchies of packages. Unrelated packages are all stored just below the vendor folder.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Packages
+├── ARM
+│   └── CMSIS
+├── Keil
+│   ├── ARMCortex_DFP
+│   ├── MDK-Middleware
+│   ├── STM32F0xx_DFP
+│   ├── STM32F1xx_DFP
+│   ├── STM32F2xx_DFP
+│   ├── STM32F3xx_DFP
+│   ├── STM32F4xx_DFP
+│   ├── STM32L0xx_DFP
+│   ├── STM32L1xx_DFP
+│   ├── STM32NUCLEO_BSP
+│   ├── STM32W1xx_DFP
+│   └── V2M-MPS2_CMx_BSP
+├── lwIP
+│   └── lwIP
+└── wolfSSL
+    └── CyaSSL
+</code></pre></div></div>
+
+<h3 id="read-only">Read-only</h3>
+
+<p>Unless explicitly requested for development reasons, after unpacking, the administrative tools change the protection bits of the component files to read-only, to prevent inadvertent changes while using the components.</p>
+
+<h2 id="binary-packages">Binary packages</h2>
+
+<p>To save space and to simplify management, each XCDL package may be packed into a ZIP archive and distributed via a web server, with each archive having its own URL.</p>
+
+<p>The component framework should be able to download these archives, unpack them and add their content to the local component repository.</p>
+
+<h2 id="source-packages">Source packages</h2>
+
+<p>To simplify package development, the component framework should be able to add to the local component repository the original development folders, exactly as they are stored in their revision control systems (like Git).</p>
+
+<h3 id="read-write">Read-write</h3>
+
+<p>Contrary to the other files in the local repository, these files installed via source packages are not set to read-only.</p>
+
+<h2 id="local-versioning">Local versioning</h2>
+
+<p>Below each package directory there can be one or more subfolders, named after the package versions. This is a requirement of the component framework: it must be possible for users to install multiple versions of a package and select which one to use for any given application. This has a number of advantages to users: most importantly it allows a single component repository to be shared between multiple users and multiple projects, as required; also it facilitates experiments, for example it is relatively easy to try out the latest version of some package and see if it makes any difference. There is a potential disadvantage in terms of disk space. However since XCDL packages generally consist of source code intended for small embedded systems, and given typical modern disk sizes, keeping a number of different versions of a package installed will usually be acceptable. The administration tool can be used to remove versions that are no longer required.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Packages/ilg
+└── xyzw
+    ├── 3.20.3
+    ├── 3.20.4
+    ├── 4.1.0
+    └── current
+</code></pre></div></div>
+
+<p>The version <em>current</em> is special. Typically it corresponds to the very latest version of the package when using Git like source packages, i.e. versions that were not frozen in a release.</p>
+
+<p>All other subfolders of a package correspond to specific releases of that package. The component framework allows users to select the particular version of a package they want to use, but by default the most recent one will be used (by convention, this is the top-most version defined in the package XCDL metadata file).</p>
+
+<h2 id="remote-repositories">Remote repositories</h2>
+
+<p>Remote repositories are actually table of contents, listing all package available in a repository, with their full URLs and just enough information to build a brief outline of the package.</p>
+
+<p>These files, currently named <em>content.xml</em> are managed by the administration tool. The various configuration tools read in these files when they start-up to obtain information about the various packages that have been installed.</p>
+
+<p>For repositories of other types, like CMSIS Pack, which do not provide a <em>content.xml</em> file, the component framework provides a specific way of browsing the repository definition files and composing an equivalent <em>content.xml</em>, later cached locally.</p>
+
+<p>An example of such file is presented below:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;root version="1.1"&gt;
+  &lt;repository name="Keil"&gt;
+    &lt;description&gt;Keil CMSIS packs repository&lt;/description&gt;
+    &lt;properties&gt;
+      &lt;property name="type"&gt;cmsis.repo&lt;/property&gt;
+      &lt;property name="repo.url"&gt;http://www.keil.com/pack/index.idx&lt;/property&gt;
+      &lt;property name="generator"&gt;GNU ARM Eclipse Plug-ins&lt;/property&gt;
+      &lt;property name="date"&gt;20140620141046&lt;/property&gt;
+    &lt;/properties&gt;
+    &lt;packages&gt;
+      &lt;package name="CMSIS"&gt;
+        &lt;description&gt;CMSIS (Cortex Microcontroller Software Interface Standard)&lt;/description&gt;
+        &lt;versions&gt;
+          &lt;version name="4.1.0"&gt;
+            &lt;description&gt;- CMSIS-Driver   2.02  (incompatible update)&lt;/description&gt;
+            &lt;properties&gt;
+              &lt;property name="type"&gt;cmsis.pack&lt;/property&gt;
+              &lt;property name="vendor.name"&gt;ARM&lt;/property&gt;
+              &lt;property name="pack.name"&gt;CMSIS&lt;/property&gt;
+              &lt;property name="version.name"&gt;4.1.0&lt;/property&gt;
+              &lt;property name="archive.url"&gt;http://www.keil.com/pack/ARM.CMSIS.4.1.0.pack&lt;/property&gt;
+              &lt;property name="archive.name"&gt;ARM.CMSIS.4.1.0.pack&lt;/property&gt;
+              &lt;property name="archive.size"&gt;62260982&lt;/property&gt;
+              &lt;property name="dest.folder"&gt;ARM/CMSIS/4.1.0&lt;/property&gt;
+              &lt;property name="pdsc.name"&gt;ARM.CMSIS.pdsc&lt;/property&gt;
+              &lt;property name="date"&gt;2014-06-12&lt;/property&gt;
+            &lt;/properties&gt;
+            &lt;outline&gt;
+              &lt;devicefamily name="ARM Cortex M0"&gt;
+                &lt;property name="vendor.name"&gt;ARM&lt;/property&gt;
+                &lt;property name="vendor.id"&gt;82&lt;/property&gt;
+              &lt;/devicefamily&gt;
+              &lt;devicefamily name="ARM Cortex M0 plus"&gt;
+                &lt;property name="vendor.name"&gt;ARM&lt;/property&gt;
+                &lt;property name="vendor.id"&gt;82&lt;/property&gt;
+              &lt;/devicefamily&gt;
+              &lt;devicefamily name="ARM Cortex M3"&gt;
+                &lt;property name="vendor.name"&gt;ARM&lt;/property&gt;
+                &lt;property name="vendor.id"&gt;82&lt;/property&gt;
+              &lt;/devicefamily&gt;
+              &lt;devicefamily name="ARM Cortex M4"&gt;
+                &lt;property name="vendor.name"&gt;ARM&lt;/property&gt;
+                &lt;property name="vendor.id"&gt;82&lt;/property&gt;
+              &lt;/devicefamily&gt;
+              ...
+              &lt;board name="uVision Simulator"&gt;
+                &lt;description&gt;uVision Simulator&lt;/description&gt;
+                &lt;property name="vendor.name"&gt;Keil&lt;/property&gt;
+              &lt;/board&gt;
+              &lt;component name="CMSIS / CORE"&gt;
+                &lt;description&gt;CMSIS-CORE for Cortex-M, SC000, and SC300&lt;/description&gt;
+              &lt;/component&gt;
+              &lt;component name="Device / Startup"&gt;
+                &lt;description&gt;System and Startup for Generic ARM Cortex-M0 device&lt;/description&gt;
+              &lt;/component&gt;
+              &lt;component name="Device / Startup / C Startup"&gt;
+                &lt;description&gt;System and Startup for Generic ARM Cortex-M0 device&lt;/description&gt;
+              &lt;/component&gt;
+              ...
+              &lt;example name="DSP_Lib Class Marks example (uVision Simulator)"&gt;
+                &lt;description&gt;DSP_Lib Class Marks example&lt;/description&gt;
+                &lt;property name="example.name"&gt;DSP_Lib Class Marks example&lt;/property&gt;
+              &lt;/example&gt;
+              &lt;example name="DSP_Lib Convolution example (uVision Simulator)"&gt;
+                &lt;description&gt;DSP_Lib Convolution example&lt;/description&gt;
+                &lt;property name="example.name"&gt;DSP_Lib Convolution example&lt;/property&gt;
+              &lt;/example&gt;
+              ...
+            &lt;/outline&gt;
+            &lt;external&gt;
+              &lt;board name="uVision Simulator"&gt;
+                &lt;property name="vendor.name"&gt;Keil&lt;/property&gt;
+              &lt;/board&gt;
+            &lt;/external&gt;
+          &lt;/version&gt;
+          &lt;version name="4.0.0"&gt;
+            &lt;description&gt;- CMSIS-Driver   2.00  Preliminary (incompatible update) ...&lt;/description&gt;
+            &lt;properties&gt;
+              &lt;property name="type"&gt;cmsis.pack&lt;/property&gt;
+              &lt;property name="vendor.name"&gt;ARM&lt;/property&gt;
+              &lt;property name="pack.name"&gt;CMSIS&lt;/property&gt;
+              &lt;property name="version.name"&gt;4.0.0&lt;/property&gt;
+              &lt;property name="archive.url"&gt;http://www.keil.com/pack/ARM.CMSIS.4.0.0.pack&lt;/property&gt;
+              &lt;property name="archive.name"&gt;ARM.CMSIS.4.0.0.pack&lt;/property&gt;
+              &lt;property name="archive.size"&gt;0&lt;/property&gt;
+              &lt;property name="dest.folder"&gt;ARM/CMSIS/4.0.0&lt;/property&gt;
+              &lt;property name="pdsc.name"&gt;ARM.CMSIS.pdsc&lt;/property&gt;
+            &lt;/properties&gt;
+          &lt;/version&gt;
+          &lt;version name="3.20.4"&gt;
+            &lt;description&gt;- CMSIS-RTOS 4.74 (see revision history for details) ...&lt;/description&gt;
+            &lt;properties&gt;
+              &lt;property name="type"&gt;cmsis.pack&lt;/property&gt;
+              &lt;property name="vendor.name"&gt;ARM&lt;/property&gt;
+              &lt;property name="pack.name"&gt;CMSIS&lt;/property&gt;
+              &lt;property name="version.name"&gt;3.20.4&lt;/property&gt;
+              &lt;property name="archive.url"&gt;http://www.keil.com/pack/ARM.CMSIS.3.20.4.pack&lt;/property&gt;
+              &lt;property name="archive.name"&gt;ARM.CMSIS.3.20.4.pack&lt;/property&gt;
+              &lt;property name="archive.size"&gt;52095025&lt;/property&gt;
+              &lt;property name="dest.folder"&gt;ARM/CMSIS/3.20.4&lt;/property&gt;
+              &lt;property name="pdsc.name"&gt;ARM.CMSIS.pdsc&lt;/property&gt;
+            &lt;/properties&gt;
+          &lt;/version&gt;
+          ...
+        &lt;/versions&gt;
+      &lt;/package&gt;
+    &lt;/packages&gt;
+  &lt;/repository&gt;
+&lt;/root&gt;
+</code></pre></div></div>
+
+<h2 id="credits">Credits</h2>
+
+<p>The initial content of this page was based on <em>Chapter 2. Package Organization</em> of <em>The eCos Component Writer’s Guide</em>, by Bart Veer and John Dallaway, published in 2001.</p>
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2024 Liviu Ionescu. All rights reserved. <br />
+<span>Page last updated:</span> Dec 20, 2024<br/> Site last generated: Dec 20, 2024 <br />
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8WX9T80JEK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8WX9T80JEK');
+</script>
+
+
+</html>

@@ -1,0 +1,354 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://xcdl.github.io/schemas/xpack-0.3.0.json",
+  "title": "xPack JSON schema",
+  "description": "The JSON schema definitions for xPack metadata files.",
+  "$comments": "Do not add top properties that cannot be used for tests, which are just like different build configurations.",
+  "type": "object",
+  "$defs": {
+    "nonEmptyStringType": {
+      "type": "string",
+      "minLength": 1
+    },
+    "semverType": {
+      "description": "A string representing a version that follows the semver requirements.",
+      "type": "string",
+      "pattern": "[0-9]+[.][0-9]+[.][0-9]+",
+      "minLength": 5,
+      "examples": [
+        "1.2.3"
+      ],
+      "$comments": "See https://semver.org; non negative integers, no leading zeroes."
+    },
+    "arrayOfPathsType": {
+      "description": "An array of string representing POSIX paths.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/nonEmptyStringType"
+      }
+    },
+    "arrayOfSymbolsType": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/nonEmptyStringType"
+      }
+    },
+    "arrayOfOptionsType": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/nonEmptyStringType"
+      }
+    },
+    "includeMetadataType": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/nonEmptyStringType"
+      }
+    },
+    "builderType": {
+      "description": "A string identifying the builder.",
+      "type": "string",
+      "enum": [
+        "ninja",
+        "make",
+        "internal"
+      ],
+      "default": "internal"
+    },
+    "artefactType": {
+      "description": "An object with the project artefact details.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "executable",
+            "staticLib",
+            "sharedLib"
+          ]
+        },
+        "name": {
+          "description": "A string with the artefact name.",
+          "$ref": "#/$defs/nonEmptyStringType",
+          "default": "{{ build.name }}"
+        },
+        "outputPrefix": {
+          "description": "A string with the artefact name prefix.",
+          "type": "string",
+          "default": ""
+        },
+        "outputSuffix": {
+          "description": "A string with the artefact name suffix.",
+          "type": "string",
+          "default": ""
+        },
+        "extension": {
+          "description": "A string with the artefact name extension, like .a for static libraries, or .exe for executables on Windows.",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "languageType": {
+      "description": "An array of strings with the language identifier.",
+      "type": "string",
+      "enum": [
+        "c",
+        "c++"
+      ]
+    },
+    "toolsCollectionsType": {
+      "description": "A map of tools collections definitions.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/toolsCollectionType"
+      }
+    },
+    "toolsCollectionType": {
+      "description": "An object with the tools collections definition.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "parent": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "commandPrefix": {
+          "type": "string"
+        },
+        "commandSuffix": {
+          "type": "string"
+        },
+        "descriptionPrefix": {
+          "type": "string"
+        },
+        "objectExtension": {
+          "type": "string"
+        },
+        "makeObjectsVariable": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "tools": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/toolType"
+          }
+        }
+      }
+    },
+    "toolType": {
+      "type": "object",
+      "properties": {
+        "commandName": {
+          "type": "string"
+        },
+        "options": {
+          "type": "string"
+        },
+        "deps": {
+          "type": "string"
+        },
+        "outputFlag": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "fileExtensions": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/toolFileExtensionType"
+          }
+        }
+      }
+    },
+    "toolFileExtensionType": {
+      "type": "object",
+      "properties": {
+        "prefix": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        }
+      }
+    },
+    "toolsSettingsType": {
+      "description": "A map with settings specific to multiple tools; key are like '*gcc:(*-compiler|*-linker)'.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/toolSettingType"
+      }
+    },
+    "toolSettingType": {
+      "description": "An object with settings specific to a tool.",
+      "$comments": "TODO: validate additional to addXyz, removeXyz",
+      "type": "object",
+      "properties": {
+        "addOptions": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        }
+      },
+      "additionalProperties": true
+    },
+    "buildConfigurationsType": {
+      "description": "A map of build configurations.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/buildConfigurationType"
+      }
+    },
+    "buildConfigurationType": {
+      "description": "An object with a build configuration.",
+      "type": "object",
+      "properties": {
+        "target": {
+          "$ref": "#/$defs/targetType"
+        },
+        "language": {
+          "$ref": "#/$defs/languageType"
+        },
+        "artefact": {
+          "$ref": "#/$defs/artefactType"
+        },
+        "artifact": {
+          "$ref": "#/$defs/artefactType"
+        },
+        "builder": {
+          "$ref": "#/$defs/builderType"
+        },
+        "toolsCollections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nonEmptyStringType"
+          }
+        },
+        "addSourcePaths": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "removeSourcePaths": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "toolsSettings": {
+          "$ref": "#/$defs/toolsSettingsType"
+        },
+        "sourceFoldersSettings": {
+          "$ref": "#/$defs/configurationSourceFoldersSettingsType"
+        },
+        "sourceFilesSettings": {
+          "$ref": "#/$defs/configurationSourceFilesSettingsType"
+        }
+      },
+      "additionalProperties": false
+    },
+    "targetType": {
+      "description": "An object with target specific definitions.",
+      "type": "object",
+      "properties": {
+        "platform": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "cpu": {
+          "$ref": "#/$defs/cpuType"
+        }
+      }
+    },
+    "cpuType": {
+      "description": "An object with CPU specific definitions.",
+      "type": "object",
+      "properties": {
+        "family": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "subFamily": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "device": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "variant": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        }
+      }
+    },
+    "configurationSourceFoldersSettingsType": {
+      "description": "An object with settings specific to multiple folders, defined inside the configuration.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/configurationSourceFolderSettingsType"
+      }
+    },
+    "configurationSourceFolderSettingsType": {
+      "description": "An object with settings specific to a folder defined inside the configuration.",
+      "type": "object",
+      "properties": {
+        "removeSourcePaths": {
+          "description": "An array of strings, with path relative to the current folder.",
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "toolsSettings": {
+          "$ref": "#/$defs/toolsSettingsType"
+        }
+      },
+      "additionalProperties": false
+    },
+    "configurationSourceFilesSettingsType": {
+      "description": "A map with settings specific to multiple files, defined inside the configuration.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/configurationSourceFileSettingsType"
+      }
+    },
+    "configurationSourceFileSettingsType": {
+      "description": "An object with settings specific to a folder defined inside the configuration.",
+      "type": "object",
+      "properties": {
+        "toolsSettings": {
+          "$ref": "#/$defs/toolsSettingsType"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "properties": {
+    "schemaVersion": {
+      "$ref": "#/$defs/semverType"
+    },
+    "license": {
+      "$ref": "#/$defs/nonEmptyStringType"
+    },
+    "copyright": {
+      "$ref": "#/$defs/nonEmptyStringType"
+    },
+    "includeMetadata": {
+      "$ref": "#/$defs/includeMetadataType"
+    },
+    "description": {
+      "$ref": "#/$defs/nonEmptyStringType"
+    },
+    "$comments": {
+      "type": "string"
+    },
+    "name": {
+      "$ref": "#/$defs/nonEmptyStringType"
+    },
+    "language": {
+      "$ref": "#/$defs/languageType"
+    },
+    "artefact": {
+      "$ref": "#/$defs/artefactType"
+    },
+    "artifact": {
+      "$ref": "#/$defs/artefactType"
+    },
+    "builder": {
+      "$ref": "#/$defs/builderType"
+    },
+    "buildConfigurations": {
+      "$ref": "#/$defs/buildConfigurationsType"
+    },
+    "toolsCollections": {
+      "$ref": "#/$defs/toolsCollectionsType"
+    }
+  },
+  "additionalProperties": false
+}

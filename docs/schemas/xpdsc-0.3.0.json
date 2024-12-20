@@ -1,0 +1,393 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://xcdl.github.io/schemas/xpack-0.1.0.json",
+  "title": "xPack JSON schema",
+  "description": "The JSON schema definitions for xPack metadata files.",
+  "type": "object",
+  "$defs": {
+    "nonEmptyStringType": {
+      "type": "string",
+      "minLength": 1
+    },
+    "semverType": {
+      "description": "A string representing a version that follows the semver requirements.",
+      "type": "string",
+      "pattern": "[0-9]+[.][0-9]+[.][0-9]+",
+      "minLength": 5,
+      "examples": [
+        "1.2.3"
+      ],
+      "$comment": "See https://semver.org; non negative integers, no leading zeroes."
+    },
+    "displayNameType": {
+      "description": "A short string to be displayed in the UI to identify the object.",
+      "$ref": "#/$defs/nonEmptyStringType"
+    },
+    "descriptionType": {
+      "description": "A longer string to be displayed in the UI to explain the purpose of the object.",
+      "$ref": "#/$defs/nonEmptyStringType"
+    },
+    "nonNegativeIntegerStringType": {
+      "description": "A string representing a non negative integer.",
+      "type": "string",
+      "pattern": "[+]?(0x|0X)?[0-9a-fA-F]+"
+    },
+    "positiveIntegerStringType": {
+      "description": "A string representing a positive integer.",
+      "type": "string",
+      "pattern": "[+]?(0x|0X)?[0-9a-fA-F]*[0-9a-fA-F]",
+      "$comment": "TODO: fix the regexp"
+    },
+    "preprocessorStringType": {
+      "description": "A preprocessor string valid as macro name.",
+      "type": "string",
+      "pattern": "[_$A-Za-z0-9]+",
+      "minLength": 1
+    },
+    "unsignedIntType": {
+      "description": "A non negative integer number.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "booleanStringType": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "hexStringType": {
+      "type": "string",
+      "pattern": "(0x|0X)[0-9a-fA-F]+",
+      "minLength": 3
+    },
+    "cpusType": {
+      "description": "A map of CPU/MCU families.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "families": {
+          "$ref": "#/$defs/familiesType"
+        }
+      },
+      "required": [
+        "families"
+      ]
+    },
+    "familiesType": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/familyType"
+      }
+    },
+    "familyType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "displayName": {
+          "$ref": "#/$defs/displayNameType"
+        },
+        "description": {
+          "$ref": "#/$defs/descriptionType"
+        },
+        "supplier": {
+          "$ref": "#/$defs/supplierType"
+        },
+        "devices": {
+          "$ref": "#/$defs/devicesType"
+        }
+      }
+    },
+    "devicesType": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/deviceType"
+      }
+    },
+    "deviceType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "displayName": {
+          "$ref": "#/$defs/displayNameType"
+        },
+        "description": {
+          "$ref": "#/$defs/descriptionType"
+        },
+        "url": {
+          "$ref": "#/$defs/urlType"
+        },
+        "compiler": {
+          "$ref": "#/$defs/compilerType"
+        },
+        "features": {
+          "$ref": "#/$defs/deviceFeaturesType"
+        },
+        "memoryRegions": {
+          "$ref": "#/$defs/memoryRegionsType"
+        },
+        "debug": {
+          "$ref": "#/$defs/debugType"
+        },
+        "variants": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/variantType"
+          }
+        }
+      }
+    },
+    "deviceFeaturesType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "arch": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "width": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "hfosc": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "lfosc": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "maxClock": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "package": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "leads": {
+          "$ref": "#/$defs/positiveIntegerStringType"
+        },
+        "vcc": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/vccType"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/vccType"
+              },
+              "uniqueItems": true
+            }
+          ]
+        }
+      }
+    },
+    "vccType": {
+      "$ref": "#/$defs/nonEmptyStringType"
+    },
+    "memoryRegionsType": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/memoryRegionType"
+      }
+    },
+    "memoryRegionType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "onChip": {
+          "$ref": "#/$defs/booleanStringType"
+        },
+        "address": {
+          "$ref": "#/$defs/hexStringType"
+        },
+        "size": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "maxSize": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "access": {
+          "$ref": "#/$defs/memoryAccessStringType"
+        },
+        "description": {
+          "$ref": "#/$defs/descriptionType"
+        }
+      }
+    },
+    "debugType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "jtag": {
+          "$ref": "#/$defs/jtagType"
+        },
+        "xsvd": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        }
+      }
+    },
+    "jtagType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tapindex": {
+          "$ref": "#/$defs/nonNegativeIntegerStringType"
+        },
+        "idcode": {
+          "$ref": "#/$defs/hexStringType"
+        },
+        "irlen": {
+          "$ref": "#/$defs/nonNegativeIntegerStringType"
+        }
+      }
+    },
+    "platformFeaturesType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "flash": {
+          "$ref": "#/$defs/platformFlashType"
+        },
+        "hfxtal": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "lfxtal": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        }
+      }
+    },
+    "platformFlashType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "size": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "interface": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "memoryRegion": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        }
+      }
+    },
+    "platformDebugType": {
+      "interface": {
+        "$ref": "#/$defs/debugInterfaceType"
+      },
+      "connector": {
+        "$ref": "#/$defs/nonEmptyStringType"
+      },
+      "openocd": {
+        "oneOf": [
+          {
+            "$ref": "#/$defs/nonEmptyStringType"
+          },
+          {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/nonEmptyStringType"
+            }
+          }
+        ]
+      },
+      "jlink": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "device": {
+            "$ref": "#/$defs/nonEmptyStringType"
+          }
+        }
+      },
+      "compiler": {
+        "$ref": "#/$defs/compilerType"
+      }
+    },
+    "debugInterfaceType": {
+      "type": "string",
+      "enum": [
+        "jtag",
+        "swd"
+      ]
+    },
+    "variantType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "displayName": {
+          "$ref": "#/$defs/displayNameType"
+        },
+        "description": {
+          "$ref": "#/$defs/descriptionType"
+        }
+      }
+    },
+    "platformsType": {
+      "type": "object",
+      "description": "A map of platforms/boards.",
+      "additionalProperties": {
+        "$ref": "#/$defs/platformType"
+      }
+    },
+    "platformType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "displayName": {
+          "$ref": "#/$defs/displayNameType"
+        },
+        "description": {
+          "$ref": "#/$defs/descriptionType"
+        },
+        "supplier": {
+          "$ref": "#/$defs/supplierType"
+        },
+        "revision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "$ref": "#/$defs/urlType"
+        },
+        "orderForm": {
+          "$ref": "#/$defs/urlType"
+        },
+        "installedDevice": {
+          "$ref": "#/$defs/installedDeviceType"
+        },
+        "compatibleDevices": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/installedDeviceType"
+          }
+        },
+        "features": {
+          "$ref": "#/$defs/platformFeaturesType"
+        },
+        "debug": {
+          "$ref": "#/$defs/platformDebugType"
+        },
+        "compiler": {
+          "$ref": "#/$defs/compilerType"
+        }
+      }
+    }
+  },
+  "properties": {
+    "schemaVersion": {
+      "$ref": "#/$defs/semverType"
+    },
+    "license": {
+      "type": "string",
+      "minLength": 1
+    },
+    "copyright": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cpus": {
+      "$ref": "#/$defs/cpusType"
+    },
+    "platforms": {
+      "$ref": "#/$defs/platformsType"
+    }
+  }
+}
