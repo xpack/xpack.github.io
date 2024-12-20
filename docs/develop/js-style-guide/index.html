@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="For consistency, use the Standard JS/TS validation tools.">
+<meta name="keywords" content=" ">
+<title>JavaScript Style Guide | The xPack Build Framework (DEPRECATED)</title>
+<link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
+
+
+<link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
+<link type="application/rss+xml" rel="alternate" title="web-archive-jekyll" href="https://xpack.github.io/feed.xml">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>JavaScript Style Guide | web-archive-jekyll</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="JavaScript Style Guide" />
+<meta name="author" content="Liviu Ionescu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<meta property="og:description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<link rel="canonical" href="https://xpack.github.io/develop/js-style-guide/" />
+<meta property="og:url" content="https://xpack.github.io/develop/js-style-guide/" />
+<meta property="og:site_name" content="web-archive-jekyll" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-10-08T23:47:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="JavaScript Style Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-12-20T19:13:52+00:00","datePublished":"2017-10-08T23:47:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"JavaScript Style Guide","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/develop/js-style-guide/"},"url":"https://xpack.github.io/develop/js-style-guide/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?202412202113">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://xpack.github.io/css/customstyles.css?202412202113">
+<link rel="stylesheet" href="https://xpack.github.io/css/boxshadowproperties.css?202412202113">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="https://xpack.github.io/css/theme-blue.css?202412202113">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://xpack.github.io/js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="https://xpack.github.io/js/toc.js"></script>
+<script src="https://xpack.github.io/js/customscripts.js"></script>
+
+<!-- Use absolute URLs, to cover preview cases too -->
+<link rel="shortcut icon" href="https://xpack.github.io/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="https://xpack.github.io/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://xpack.github.io/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://xpack.github.io/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://xpack.github.io/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://xpack.github.io/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://xpack.github.io/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://xpack.github.io/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://xpack.github.io/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://xpack.github.io/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://xpack.github.io/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://xpack.github.io/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://xpack.github.io/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://xpack.github.io/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://xpack.github.io/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://xpack.github.io/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks" style="">
+        <div style="display: inline-block; float: left; margin-top: 8px; margin-left: auto; margin-right: 10px;"><img src="/images/company_logo.png" alt="logo" width="32px" height="32px"/></div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="/">&nbsp;<span class="projectTitle"> The xPack Project</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">News<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="/news/">Latest News</a></li>
+                        
+                        
+                        
+                        <li><a href="/news/archive/">Archive</a></li>
+                        
+                        
+                        
+                        <li><a href="/tags/">Tags</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://xpack-dev-tools.github.io" target="_blank" rel="noopener">xPack Binary Development Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://micro-os-plus.github.io" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Dev Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/micro-os-plus/" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-3rd-party/" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/eclipse-embed-cdt/" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '/search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="JavaScript Style Guide">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3 sticky" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle"> </li>
+  
+  
+  
+  <li>
+      <a title="Getting Started" href="#">Getting Started</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Intro (xPack 101)" href="/intro/">Intro (xPack 101)</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="CI/CD" href="/ci/">CI/CD</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Install prerequisites" href="/install/">Install prerequisites</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Core Tools" href="#">Core Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/core/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm" href="/xpm/">xpm</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="VS Code Extensions" href="#">VS Code Extensions</a>
+      <ul>
+          
+          
+          
+          <li><a title="xPack C/C++ Build Tools" href="/vscode/">xPack C/C++ Build Tools</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Eclipse" href="#">Eclipse</a>
+      <ul>
+          
+          
+          
+          <li><a class="extern" title="Eclipse Embedded CDT" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Support" href="#">Support</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/support/">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Developer Info" href="#">Developer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/develop/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="How to create a new xPack repo" href="/develop/how-to-new-git/">How to create a new xPack repo</a></li>
+          
+          
+          
+          
+          
+          
+          <li class="active"><a title="JavaScript Style Guide" href="/develop/js-style-guide/">JavaScript Style Guide</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Links" href="/develop/links/">Links</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Maintainer Info" href="#">Maintainer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/maintain/">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Project" href="#">Project</a>
+      <ul>
+          
+          
+          
+          <li><a title="About" href="/project/about/">About</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="History" href="/project/history/">History</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a class="extern" title="License (MIT)" href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">License (MIT)</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise, if placed
+inside customscripts.js, the script runs before the sidebar code runs
+and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">JavaScript Style Guide</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">For consistency, use the Standard JS/TS validation tools.
+</div>
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+        
+
+
+   <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Given the positive experience with
+TypeScript while writing the VS Code xPack extension, starting with 2021,
+existing JavaScript projects will be migrated to TypeScript.</div>
+
+<h2 id="standard-tsjs">Standard TS/JS</h2>
+
+<p>After many years dealing with style guides for various languages,
+the conclusion is that the style itself is less important than applying
+it consistently.</p>
+
+<p>So, for the xPack JavaScript source files to be consistent, the first
+requirement is to pass the <a href="https://standardjs.com">Standard JS</a>
+validation tools, which also have a TypeScript variant
+(<a href="https://www.npmjs.com/package/ts-standard">ts-standard</a>)</p>
+
+<p>After this, the main recommendations are:</p>
+
+<ul>
+  <li>use the <strong>ECMAScript 6</strong> specifications (ES 6),</li>
+  <li>if the module does something reasonably complex, the module public
+functions <strong>must be asynchronous</strong>,</li>
+  <li>asynchronous functions must <strong>use promises</strong> (and definitely
+<strong>avoid callbacks</strong>),</li>
+  <li><strong>reentrancy</strong> should be seriously considered (avoid module-global variables).</li>
+</ul>
+
+<div style="clear: both;"></div>
+
+<h2 id="the-xpack-project-preferences">The xPack project preferences</h2>
+
+<h3 id="prefer-typescript-to-javascript">Prefer TypeScript to JavaScript</h3>
+
+<p>This is Rule no. 1, that overrides all other rules.</p>
+
+<p>If JavaScript code must be
+still used in some places, prefer ES6 solution.</p>
+
+<p>Definitely <strong>avoid using old style code</strong>.</p>
+
+<h3 id="use-classes-as-much-as-possible">Use classes as much as possible</h3>
+
+<p>Even if the new syntax is mostly syntactic sugar, and internally things
+behave as strangely as they did in the first JavaScript versions,
+still <strong>use the new class syntax</strong> at large; it is much cleaner and
+improves readability.</p>
+
+<h3 id="use-promises-instead-of-callbacks">Use promises instead of callbacks</h3>
+
+<p>Really. No callbacks at all. Use promises. Actually use <code class="language-plaintext highlighter-rouge">async</code>/<code class="language-plaintext highlighter-rouge">await</code>.</p>
+
+<h3 id="use-asyncawait-for-asynchronous-calls">Use async/await for asynchronous calls</h3>
+
+<p>Once <code class="language-plaintext highlighter-rouge">async</code>/<code class="language-plaintext highlighter-rouge">await</code> became standard, and the V8 engine added support
+for them, there is no reason for not using <code class="language-plaintext highlighter-rouge">async</code>/<code class="language-plaintext highlighter-rouge">await</code>.</p>
+
+<p><strong>Wrap old legacy code using callbacks into promises</strong> and execute
+them with <code class="language-plaintext highlighter-rouge">await</code>.</p>
+
+<h3 id="use-static-class-members-for-sharing">Use static class members for sharing</h3>
+
+<p>Modules are singletons; using module variables is like using static
+variables in a multi-threaded environment; they may provide a way
+of sharing common data between multiple instances of objects created
+inside the same module, but if not handled correctly this may have
+unexpected results.</p>
+
+<p>The general recommendation is to <strong>make the modules re-entrant</strong>.
+In practical terms, <strong>do not use module-global variables</strong> at all;
+make the module <strong>export a class, and create instances of it</strong>
+whenever needed; for sharing data between instances,
+<strong>use static class members</strong>.</p>
+
+<h3 id="do-not-restrict-export-to-a-single-function-or-class">Do not restrict export to a single function or class</h3>
+
+<p>Bad style:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="sr">/</span><span class="se">[\u</span><span class="sr">001b</span><span class="se">\u</span><span class="sr">009b</span><span class="se">][</span><span class="sr">[()#;?</span><span class="se">]</span><span class="sr">*</span><span class="se">(?:[</span><span class="sr">0-9</span><span class="se">]{1,4}(?:</span><span class="sr">;</span><span class="se">[</span><span class="sr">0-9</span><span class="se">]{0,4})</span><span class="sr">*</span><span class="se">)?[</span><span class="sr">0-9A-ORZcf-nqry=&gt;&lt;</span><span class="se">]</span><span class="sr">/g</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="p">...</span>
+<span class="kd">const</span> <span class="nx">func</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">name</span><span class="dl">'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Apart from being unnamed, returning a single function prevents future
+extensions, for example exporting a second function from the same module
+would mandate all modules that use the first function via <code class="language-plaintext highlighter-rouge">require()</code> to
+be updated to <code class="language-plaintext highlighter-rouge">require().func1</code>, which may cause many headaches to developers.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">.</span><span class="nx">func1</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="sr">/</span><span class="se">[\u</span><span class="sr">001b</span><span class="se">\u</span><span class="sr">009b</span><span class="se">][</span><span class="sr">[()#;?</span><span class="se">]</span><span class="sr">*</span><span class="se">(?:[</span><span class="sr">0-9</span><span class="se">]{1,4}(?:</span><span class="sr">;</span><span class="se">[</span><span class="sr">0-9</span><span class="se">]{0,4})</span><span class="sr">*</span><span class="se">)?[</span><span class="sr">0-9A-ORZcf-nqry=&gt;&lt;</span><span class="se">]</span><span class="sr">/g</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">.</span><span class="nx">func2</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+<span class="p">...</span>
+<span class="kd">const</span> <span class="p">{</span> <span class="nx">func1</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">name</span><span class="dl">'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The recommendation is to always return functions or preferably classes
+as properties of the <code class="language-plaintext highlighter-rouge">module.exports</code> object, and get them individually by name.</p>
+
+<h3 id="prefer-static-classes-to-group-methods">Prefer static classes to group methods</h3>
+
+<p>Prepare your module to export multiple functions; group them (by
+functionality) either below a parent object, or, even better, in
+classes with static members.</p>
+
+<p>The main advantage of this scheme is that adding new exports will
+only change the interface incrementally, minimising the risk to
+break backward compatibility.</p>
+
+<h3 id="use-the-spread-operator">Use the spread operator</h3>
+
+<p>Th spread operator expands an iterable into its member objects. It also works
+with arrays and objects</p>
+
+<ul>
+  <li>Create array copies</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">]</span>
+<span class="kd">const</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">arr1</span><span class="p">]</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Concatenate arrays</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">]</span>
+<span class="kd">const</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="mi">6</span><span class="p">]</span>
+<span class="kd">const</span> <span class="nx">arr3</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">arr1</span><span class="p">,</span> <span class="p">...</span><span class="nx">arr2</span><span class="p">]</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Enumerate object properties</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Base</span> <span class="p">{</span>
+  <span class="kd">constructor</span> <span class="p">(</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">({</span>
+      <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">tree</span><span class="dl">'</span><span class="p">,</span>
+      <span class="na">parent</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="p">...</span><span class="nx">args</span>
+    <span class="p">})</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="iterate-over-an-array">Iterate over an Array</h3>
+
+<p>For very simple loops, (one-two lines), use <code class="language-plaintext highlighter-rouge">forEach()</code>:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">iterable</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">];</span>
+
+<span class="nx">iterable</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">value</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<p>Debug note: Visual Studio Code is able to step into the lambda function.</p>
+
+<p>For more complex loops, use <code class="language-plaintext highlighter-rouge">for ... of</code>.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">iterable</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">value</span> <span class="k">of</span> <span class="nx">iterable</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// 10</span>
+<span class="c1">// 20</span>
+<span class="c1">// 30</span>
+</code></pre></div></div>
+
+<p>If the value needs to be changed, use <code class="language-plaintext highlighter-rouge">let</code>:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">iterable</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">];</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">value</span> <span class="k">of</span> <span class="nx">iterable</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">value</span> <span class="o">+=</span> <span class="mi">1</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// 11</span>
+<span class="c1">// 21</span>
+<span class="c1">// 31</span>
+</code></pre></div></div>
+
+<p>If the last value of the variable is needed outside the loop, define the
+variable before the loop:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">value</span>
+<span class="k">for</span> <span class="p">(</span><span class="nx">value</span> <span class="k">of</span> <span class="nx">iterable</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>Do not</strong> use <code class="language-plaintext highlighter-rouge">for ... in</code> since it iterates over the enumerable
+properties, which include inherited properties (use <code class="language-plaintext highlighter-rouge">.hasOwnProperty()</code>
+to filter them out).</p>
+
+<h3 id="iterate-over-the-keys-of-an-object">Iterate over the keys of an Object</h3>
+
+<p>If the order is not important, iterate over the keys or the entries:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// array like object with random key ordering</span>
+<span class="kd">var</span> <span class="nx">anObj</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">100</span><span class="p">:</span> <span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="dl">'</span><span class="s1">b</span><span class="dl">'</span><span class="p">,</span> <span class="mi">7</span><span class="p">:</span> <span class="dl">'</span><span class="s1">c</span><span class="dl">'</span> <span class="p">};</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">anObj</span><span class="p">));</span> <span class="c1">// ['2', '7', '100']</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">entries</span><span class="p">(</span><span class="nx">anObj</span><span class="p">));</span> <span class="c1">// [ ['2', 'b'], ['7', 'c'], ['100', 'a'] ]</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="p">[</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">]</span> <span class="k">of</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">entries</span><span class="p">(</span><span class="nx">anObj</span><span class="p">))</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// 2 b</span>
+<span class="c1">// 7 c</span>
+<span class="c1">// 100 a</span>
+</code></pre></div></div>
+
+<h3 id="check-if-object-is-array">Check if object is Array</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]);</span>  <span class="c1">// true</span>
+</code></pre></div></div>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray">MDN</a></p>
+
+<h3 id="check-if-object-is-string">Check if object is String</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">isString</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toString</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">[object String]</span><span class="dl">'</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="check-if-object">Check if object</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">isObject</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">typeof</span> <span class="nx">x</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">object</span><span class="dl">'</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Please note that <code class="language-plaintext highlighter-rouge">null</code> is also an object, and everything created with
+<code class="language-plaintext highlighter-rouge">new</code> is also an object, including:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">new Boolean(true)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">new Number(1)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">new String('abc')</code></li>
+</ul>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof">MDN</a></p>
+
+<h3 id="use-map-to-guarantee-the-order-of-the-values">Use Map to guarantee the order of the values</h3>
+
+<p>Although maps can be conveniently implemented with regular objects,
+the specs do not guarantee the insert order to be preserved.</p>
+
+<p>If the order is important, or if the object need to store other
+properties too, use a <code class="language-plaintext highlighter-rouge">Map</code>.</p>
+
+<h3 id="make-node-exportsimports-look-like-es6-exportsimports">Make node exports/imports look like ES6 exports/imports</h3>
+
+<p>Assuming classes are preferred, the EC6 syntax for export/import would look like:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">class</span> <span class="nx">WscriptAvoider</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+<span class="p">...</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">WscriptAvoider</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">wscript-avoider.js</span><span class="dl">'</span>
+</code></pre></div></div>
+
+<p>So, to stay close to this syntax, the recommendation is to preserve the
+original <code class="language-plaintext highlighter-rouge">module.exports</code> object, and add properties to it, preferably
+classes, even if they have only static members.</p>
+
+<p>To import them, the syntax uses the explicit class name:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">WscriptAvoider</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">wscript-avoider</span><span class="dl">'</span><span class="p">).</span><span class="nx">WscriptAvoider</span>
+<span class="nx">WscriptAvoider</span><span class="p">.</span><span class="nx">quitIfWscript</span><span class="p">(</span><span class="nx">appName</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Cases like <code class="language-plaintext highlighter-rouge">import { WscriptAvoider as Xyz } from 'wscript-avoider.js'</code> would
+be naturally represented as:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">Xyz</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">wscript-avoider</span><span class="dl">'</span><span class="p">).</span><span class="nx">WscriptAvoider</span>
+<span class="nx">Xyz</span><span class="p">.</span><span class="nx">quitIfWscript</span><span class="p">(</span><span class="nx">appName</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>In case the class is not static, instantiate it as usual.</p>
+
+<h3 id="call-exactly-the-class-method">Call exactly the class method</h3>
+
+<p>If a method of a class is overridden, calling it from the base class
+actually calls the derived method (run-time polymorphism).</p>
+
+<p>To ensure the local function, use the function prototype:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Base</span> <span class="p">{</span>
+  <span class="kd">constructor</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">Base</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">clear</span><span class="p">()</span>
+  <span class="p">}</span>
+
+  <span class="nx">clear</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="pack-function-parameters-as-objects">Pack function parameters as objects</h3>
+
+<p>For functions with more than 1 parameter, pack them in an object:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Base</span> <span class="p">{</span>
+  <span class="cm">/**
+   * @param {Object} params The generic parameters object.
+   */</span>
+  <span class="nx">f1</span> <span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">assert</span><span class="p">(</span><span class="nx">params</span><span class="p">,</span> <span class="dl">'</span><span class="s1">There must be params.</span><span class="dl">'</span><span class="p">)</span>
+
+    <span class="nx">assert</span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span>
+  <span class="p">}</span>
+
+  <span class="nx">f2</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">f1</span> <span class="p">({</span>
+      <span class="na">name</span><span class="p">:</span> <span class="nx">value1</span><span class="p">,</span>
+      <span class="na">type</span><span class="p">:</span> <span class="nx">value2</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="use-copymove-constructors--support-methods">Use copy/move constructors &amp; support methods</h3>
+
+<p>Make the constructor accept a <code class="language-plaintext highlighter-rouge">from</code> parameter, to use it as a source
+when creating the object.</p>
+
+<p>The default behaviour is to make a copy of the original object.</p>
+
+<p>Add a <code class="language-plaintext highlighter-rouge">doMoveAll: true</code> to instruct a move operation; be sure original
+references are cleared (set to undefined).</p>
+
+<p>Alternatively use <code class="language-plaintext highlighter-rouge">copyFrom(from)</code> and possibly <code class="language-plaintext highlighter-rouge">appendFrom(from)</code>.</p>
+
+<p>Use a <code class="language-plaintext highlighter-rouge">clear()</code> method to clear the object content (it might be
+useful during tests).</p>
+
+<h3 id="use-a-separate-location-for-private-variables">Use a separate location for private variables</h3>
+
+<p>To reduce clutter, group the private variables below a <code class="language-plaintext highlighter-rouge">_private</code> object.</p>
+
+<p>No need to end the name of the variables with <code class="language-plaintext highlighter-rouge">_</code>.</p>
+
+<h3 id="use-a-separate-location-for-cached-variables">Use a separate location for cached variables</h3>
+
+<p>If the object uses local cached objects, group them below a <code class="language-plaintext highlighter-rouge">_cache</code> object.
+Initialise it to an empty object in the constructor an in the <code class="language-plaintext highlighter-rouge">clear()</code> method.</p>
+
+<p>No need to end the name of the variables with <code class="language-plaintext highlighter-rouge">_</code>.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Base</span> <span class="p">{</span>
+  <span class="kd">constructor</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">_cache</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="p">}</span>
+
+  <span class="nx">clear</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">_cache</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="self">Self</h3>
+
+<p>When a reference to the static methods or variables is needed, to make
+things explicit, prefer to define a <code class="language-plaintext highlighter-rouge">Self</code> variable.</p>
+
+<p>From within regular methods, use:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Explicit uppercase, to be obvious when a static property/method is used.</span>
+<span class="kd">const</span> <span class="nx">Self</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="kd">constructor</span>
+</code></pre></div></div>
+
+<p>From within other static methods, use:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Explicit uppercase, to be obvious when a static property/method is used.</span>
+<span class="kd">const</span> <span class="nx">Self</span> <span class="o">=</span> <span class="k">this</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="from-understanding-ecmascript-6">From <em>Understanding ECMAScript 6</em></h2>
+
+<p>The main specifications to be followed are those of ES 6; they override all other older specifications and style guides.</p>
+
+<h3 id="block-bindings">Block bindings</h3>
+
+<p>Use <code class="language-plaintext highlighter-rouge">const</code> by default, and only use <code class="language-plaintext highlighter-rouge">let</code> when you know a variable’s value needs to change</p>
+
+<h3 id="functions">Functions</h3>
+
+<p>Use default parameters.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">makeRequest</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">timeout</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">,</span> <span class="nx">callback</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{})</span> <span class="p">{</span>
+  <span class="c1">// the rest of the function</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">first</span><span class="p">,</span> <span class="nx">second</span> <span class="o">=</span> <span class="nx">getValue</span><span class="p">(</span><span class="nx">first</span><span class="p">))</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">first</span> <span class="o">+</span> <span class="nx">second</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Use <em>rest</em> parameters.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">pick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">object</span><span class="p">,</span> <span class="p">...</span><span class="nx">keys</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">keys</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">result</span><span class="p">[</span><span class="nx">keys</span><span class="p">[</span><span class="nx">i</span><span class="p">]]</span> <span class="o">=</span> <span class="nx">object</span><span class="p">[</span><span class="nx">keys</span><span class="p">[</span><span class="nx">i</span><span class="p">]]</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">result</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">Function</code> constructor.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Function</span><span class="p">(</span><span class="dl">"</span><span class="s2">first</span><span class="dl">"</span><span class="p">,</span> <span class="dl">'</span><span class="s1">second = first</span><span class="dl">'</span><span class="p">,</span>
+                 <span class="dl">'</span><span class="s1">return first + second</span><span class="dl">'</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>     <span class="c1">// 2</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>        <span class="c1">// 2</span>
+</code></pre></div></div>
+
+<p>JavaScript has two different internal-only methods for functions: <code class="language-plaintext highlighter-rouge">[[Call]]</code> and <code class="language-plaintext highlighter-rouge">[[Construct]]</code>. When a function is called without new, the <code class="language-plaintext highlighter-rouge">[[Call]]</code> method is executed, which executes the body of the function as it appears in the code. When a function is called with new, that’s when the <code class="language-plaintext highlighter-rouge">[[Construct]]</code> method
+is called. The <code class="language-plaintext highlighter-rouge">[[Construct]]</code> method is responsible for creating a new object, called the instance, and then executing the function body with this set to the instance. Functions that have a <code class="language-plaintext highlighter-rouge">[[Construct]]</code> method are called constructors.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">Person</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="k">this</span> <span class="k">instanceof</span> <span class="nx">Person</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="dl">'</span><span class="s1">You must use new with Person.</span><span class="dl">'</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="dl">'</span><span class="s1">Nicholas</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">notAPerson</span> <span class="o">=</span> <span class="nx">Person</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">person</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Michael</span><span class="dl">'</span><span class="p">)</span>    <span class="c1">// works!</span>
+</code></pre></div></div>
+
+<p>Block-level functions</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">'</span><span class="s1">use strict</span><span class="dl">'</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">doSomething</span><span class="p">)</span> <span class="c1">// throws an error</span>
+  <span class="kd">let</span> <span class="nx">doSomething</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// empty</span>
+  <span class="p">}</span>
+  <span class="nx">doSomething</span><span class="p">()</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">doSomething</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Arrow functions are functions defined with a new syntax that uses an arrow (<code class="language-plaintext highlighter-rouge">=&gt;</code>)</p>
+
+<ul>
+  <li><strong>No this, super, arguments, and new.target bindings</strong> The values of <code class="language-plaintext highlighter-rouge">this</code>, <code class="language-plaintext highlighter-rouge">super</code>, arguments, and new.target inside the function are defined by the closest containing non-arrow function</li>
+  <li><strong>Cannot be called with new</strong> Arrow functions do not have a [[Construct]] method and therefore cannot be used as constructors. Arrow functions throw an error when used with new.</li>
+  <li><strong>No prototype</strong> Because you can’t use new on an arrow function, there’s no need for a prototype. The prototype property of an arrow function doesn’t exist.</li>
+  <li><strong>Can’t change this</strong> The value of this inside the function can’t be changed. It remains the same throughout the entire life cycle of the function.</li>
+  <li><strong>No arguments object</strong> Because arrow functions have no arguments binding, you must rely on named and rest parameters to access function arguments.</li>
+  <li><strong>No duplicate named parameters</strong> Arrow functions cannot have duplicate named parameters in strict or non-strict mode, as opposed to non-arrow functions, which cannot have duplicate named parameters only in strict mode.</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">sum</span> <span class="o">=</span> <span class="p">(</span><span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">num1</span> <span class="o">+</span> <span class="nx">num2</span>
+<span class="c1">// effectively equivalent to:</span>
+<span class="kd">let</span> <span class="nx">sum</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">num1</span> <span class="o">+</span> <span class="nx">num2</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h3 id="enhanced-object-functionality">Enhanced Object Functionality</h3>
+
+<p>It is now possible to modify an object’s prototype after it has been created thanks to ECMAScript 6’s <code class="language-plaintext highlighter-rouge">Object.setPrototypeOf()</code> method.</p>
+
+<p>In addition, you can use the <code class="language-plaintext highlighter-rouge">super</code> keyword to call methods on an object’s prototype. The <code class="language-plaintext highlighter-rouge">this</code> binding inside a method invoked using <code class="language-plaintext highlighter-rouge">super</code> is set up to automatically work with the current value of <code class="language-plaintext highlighter-rouge">this</code>.</p>
+
+<h2 id="from-npms-funny-coding-style">From <a href="https://doc.codingdict.com/npm-ref/misc/coding-style.html"><em>npm’s “funny” coding style</em></a></h2>
+
+<p>As the name implies, some of them are <em>funny</em>, but some are still useful.</p>
+
+<h3 id="line-length">Line length</h3>
+
+<p>Keep lines shorter than <strong>80</strong> characters</p>
+
+<h3 id="indentation">Indentation</h3>
+
+<p>Indentation is <strong>two spaces</strong></p>
+
+<h3 id="curly-braces">Curly braces</h3>
+
+<p>Curly braces belong on the same line</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">f</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">foo</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">bar</span><span class="p">()</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="semicolons">Semicolons</h3>
+
+<p>Don’t use semicolons, except when required; for example to prevent the expression from being interpreted as a function call or property access, respectively.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">;(</span><span class="nx">x</span> <span class="o">||</span> <span class="nx">y</span><span class="p">).</span><span class="nx">doSomething</span><span class="p">()</span>
+<span class="p">;[</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">].</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">doSomething</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="comma-first">Comma first</h3>
+
+<p>Put the <strong>comma at the start</strong> of the next line, directly below the token that starts the list</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">magicWords</span> <span class="o">=</span> <span class="p">[</span> <span class="dl">'</span><span class="s1">abracadabra</span><span class="dl">'</span>
+                 <span class="p">,</span> <span class="dl">'</span><span class="s1">gesundheit</span><span class="dl">'</span>
+                 <span class="p">,</span> <span class="dl">'</span><span class="s1">ventrilo</span><span class="dl">'</span>
+                 <span class="p">]</span>
+  <span class="p">,</span> <span class="nx">spells</span> <span class="o">=</span> <span class="p">{</span> <span class="dl">'</span><span class="s1">fireball</span><span class="dl">'</span> <span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="nx">setOnFire</span><span class="p">()</span> <span class="p">}</span>
+             <span class="p">,</span> <span class="dl">'</span><span class="s1">water</span><span class="dl">'</span> <span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="nx">putOut</span><span class="p">()</span> <span class="p">}</span>
+             <span class="p">}</span>
+  <span class="p">,</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="p">,</span> <span class="nx">b</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">abc</span><span class="dl">'</span>
+  <span class="p">,</span> <span class="nx">etc</span>
+  <span class="p">,</span> <span class="nx">somethingElse</span>
+</code></pre></div></div>
+
+<h3 id="quotes">Quotes</h3>
+
+<p>Use single quotes for strings except to avoid escaping</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">ok</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">String contains "double" quotes</span><span class="dl">'</span>
+<span class="kd">const</span> <span class="nx">alsoOk</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">String contains 'single' quotes or apostrophe</span><span class="dl">"</span>
+<span class="kd">const</span> <span class="nx">paramOk</span> <span class="o">=</span> <span class="s2">`Back quotes string with </span><span class="p">${</span><span class="nx">parameter</span><span class="p">}</span><span class="s2">`</span>
+</code></pre></div></div>
+
+<h3 id="white-spaces">White spaces</h3>
+
+<p>Put a single space in front of <code class="language-plaintext highlighter-rouge">(</code> for anything other than a function call</p>
+
+<h3 id="functions-1">Functions</h3>
+
+<p>Use named functions.</p>
+
+<ul>
+  <li>always create a new <code class="language-plaintext highlighter-rouge">Error</code> object with your message (<code class="language-plaintext highlighter-rouge">new Error('msg')</code>)</li>
+  <li>logging is done using the <a href="https://github.com/npm/npmlog"><code class="language-plaintext highlighter-rouge">npmlog</code></a> utility</li>
+</ul>
+
+<h3 id="case-naming-etc">Case, naming, etc</h3>
+
+<ul>
+  <li>use <code class="language-plaintext highlighter-rouge">lowerCamelCase</code> for multi-word identifiers when they refer to objects, functions, methods, properties, or anything not specified in this section</li>
+  <li>use <code class="language-plaintext highlighter-rouge">UpperCamelCase</code> for class names (things that you’d pass to “new”)</li>
+  <li>use <code class="language-plaintext highlighter-rouge">all-lower-hyphen-css-case</code> for multi-word filenames and config keys</li>
+  <li>use named functions, they make stack traces easier to follow</li>
+  <li>use <code class="language-plaintext highlighter-rouge">CAPS_SNAKE_CASE</code> for constants, things that should never change and are rarely used</li>
+</ul>
+
+<h3 id="null-undefined-false">null, undefined, false</h3>
+
+<ul>
+  <li>boolean variables and functions should always be either <code class="language-plaintext highlighter-rouge">true</code> or <code class="language-plaintext highlighter-rouge">false</code></li>
+  <li>when something is intentionally missing or removed, set it to <code class="language-plaintext highlighter-rouge">null</code></li>
+  <li>don’t set things to <code class="language-plaintext highlighter-rouge">undefined</code></li>
+  <li>boolean objects are verboten</li>
+</ul>
+
+<h3 id="exceptions">Exceptions</h3>
+
+<p>For the native Node.js callback usage, never to ever ever throw anything. It’s worse than useless. Just send the error message back as the first argument to the callback.</p>
+
+<p>But for the modern ES 6 promise usage, exceptions are fine.</p>
+
+<h2 id="from-nodejs-modules">From <a href="https://nodejs.org/dist/latest-v6.x/docs/api/modules.html">Node.js modules</a></h2>
+
+<h3 id="modules">Modules</h3>
+
+<p>Modules are a way of preventing multiple JavaScript units to pollute the global namespace.</p>
+
+<p>Objects defined at root level in a module are not global, but belong to the module; the usual name for this is <em>module-global</em>.</p>
+
+<h3 id="caching">Caching</h3>
+
+<p>Modules are cached after the first time they are loaded. This means (among other things) that every call to require(‘foo’) will get exactly the same object returned, if it would resolve to the same file. Multiple calls to <code class="language-plaintext highlighter-rouge">require('foo')</code> will not cause the module code to be executed multiple times.</p>
+
+<p>From this point of view, modules behave like <a href="https://en.wikipedia.org/wiki/Singleton_pattern">singletons</a>; they can also be compared to static classes in C++.</p>
+
+<p>Leaving status at the module level can be either a blessing or a curse, depending on the environment used to run the module. In server environments, using module-global variables is like using static variables in a multi-threaded environment, if not handled correctly it may have unexpected results.</p>
+
+<h3 id="exports">Exports</h3>
+
+<p>To make some functions and objects visible outside the module, you can add them as properties to the special <code class="language-plaintext highlighter-rouge">modules.exports</code> object:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">PI</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">.</span><span class="nx">area</span> <span class="o">=</span> <span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">PI</span> <span class="o">*</span> <span class="nx">r</span> <span class="o">*</span> <span class="nx">r</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">.</span><span class="nx">circumference</span> <span class="o">=</span> <span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="nx">PI</span> <span class="o">*</span> <span class="nx">r</span>
+</code></pre></div></div>
+
+<p>Although you can rewrite the <code class="language-plaintext highlighter-rouge">module.export</code> to be a single function (such as a constructor), still prefer to add them as properties to the object and refer to them explicitly in the <code class="language-plaintext highlighter-rouge">require()</code> line:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">square</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./square.js</span><span class="dl">'</span><span class="p">).</span><span class="nx">square</span>
+<span class="kd">const</span> <span class="nx">mySquare</span> <span class="o">=</span> <span class="nx">square</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`The area of my square is </span><span class="p">${</span><span class="nx">mySquare</span><span class="p">.</span><span class="nx">area</span><span class="p">()}</span><span class="s2">`</span><span class="p">)</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">.</span><span class="nx">area</span> <span class="o">=</span> <span class="p">(</span><span class="nx">width</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="na">area</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">width</span> <span class="o">*</span> <span class="nx">width</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>If you want to export a complete object in one assignment instead of building it one property at a time, assign it to <code class="language-plaintext highlighter-rouge">module.exports</code>.</p>
+
+<h3 id="accessing-the-main-module">Accessing the main module</h3>
+
+<p>When a file is run directly from Node.js, <code class="language-plaintext highlighter-rouge">require.main</code> is set to its module. That means that you can determine whether a file has been run directly by testing</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">require</span><span class="p">.</span><span class="nx">main</span> <span class="o">===</span> <span class="nx">module</span>
+</code></pre></div></div>
+
+<h3 id="the-module-wrapper">The module wrapper</h3>
+
+<p>Before a module’s code is executed, Node.js will wrap it with a function wrapper that looks like the following:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span> <span class="o">=</span> <span class="p">...</span> <span class="c1">// an object for the current module</span>
+<span class="nx">module</span><span class="p">.</span><span class="k">export</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">// an empty object</span>
+<span class="nx">exports</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="k">export</span> <span class="c1">// a reference to the exports; avoid using it</span>
+<span class="nx">__filename</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">/x/y/z/abc.js</span><span class="dl">'</span>
+<span class="nx">__dirname</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">/x/y/z</span><span class="dl">'</span>
+<span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">exports</span><span class="p">,</span> <span class="nx">require</span><span class="p">,</span> <span class="nx">module</span><span class="p">,</span> <span class="nx">__filename</span><span class="p">,</span> <span class="nx">__dirname</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Your module code actually lives in here</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>In each module, the <code class="language-plaintext highlighter-rouge">module</code> variable is a reference to the object representing the current module. <code class="language-plaintext highlighter-rouge">module</code> isn’t actually a global but rather local to each module.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">module.exports</code> object is created by the Module system. Sometimes this is not acceptable; many want their module to be an object of their own. To do this, assign the desired export object to <code class="language-plaintext highlighter-rouge">module.exports</code>.</p>
+
+<p>For convenience, <code class="language-plaintext highlighter-rouge">module.exports</code> is also accessible via the <code class="language-plaintext highlighter-rouge">exports</code> module-global. Note that assigning a value to <code class="language-plaintext highlighter-rouge">exports</code> will simply rebind the local exports variable, which is probably not what you want to do; if the relationship between <code class="language-plaintext highlighter-rouge">exports</code> and <code class="language-plaintext highlighter-rouge">module.exports</code> seems like magic to you, ignore <code class="language-plaintext highlighter-rouge">exports</code> and only use <code class="language-plaintext highlighter-rouge">module.exports</code>.</p>
+
+<p>Note that assignment to <code class="language-plaintext highlighter-rouge">module.exports</code> must be done immediately. It cannot be done in any callbacks.</p>
+
+<h3 id="global-objects">Global objects</h3>
+
+<p>These are really objects, available in all modules. (see Node.js <a href="https://nodejs.org/api/globals.html">Globals</a>)</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">global</code></li>
+  <li><code class="language-plaintext highlighter-rouge">process</code></li>
+  <li><code class="language-plaintext highlighter-rouge">console</code>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">console.log('msg')</code> - writes ‘msg’ to stdout</li>
+      <li><code class="language-plaintext highlighter-rouge">console.warn('msg')</code> - writes ‘msg’ to stderr</li>
+      <li><code class="language-plaintext highlighter-rouge">console.error('msg')</code> - writes ‘Error: msg’ to stderr</li>
+      <li><code class="language-plaintext highlighter-rouge">console.assert(value, 'msg')</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="the-spread-syntax">The Spread syntax</h2>
+
+<p>According to <a href="https://codeburst.io/javascript-es6-the-spread-syntax-f5c35525f754">JavaScript ES6— The Spread Syntax (…)</a>:</p>
+
+<ul>
+  <li>The spread syntax is simply three dots: <code class="language-plaintext highlighter-rouge">...</code></li>
+  <li>It allows an iterable to expand in places where 0+ arguments are expected.</li>
+</ul>
+
+<p>Useful cases:</p>
+
+<ul>
+  <li>inserting Arrays</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">mid</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">...</span><span class="nx">mid</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">];</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Math</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">max</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(...</span><span class="nx">arr</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">max</span><span class="p">);</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Copy an Array</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">b</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">c</span><span class="dl">'</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">arr</span><span class="p">];</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr2</span><span class="p">);</span>
+</code></pre></div></div>
+
+<ul>
+  <li>String to Array</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">hello</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">chars</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">str</span><span class="p">];</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">chars</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="links-to-other-style-guides">Links to other style guides</h2>
+
+<p>Preferred:</p>
+
+<ul>
+  <li><a href="https://standardjs.com">JavaScript “Standard” Style</a></li>
+</ul>
+
+<p>Other links:</p>
+
+<ul>
+  <li><a href="https://noeticforce.com/best-javascript-style-guide-for-maintainable-code">10 Best JavaScript Style Guides</a></li>
+  <li><a href="https://github.com/airbnb/javascript">airbnb JavaScript Style Guide</a></li>
+  <li><a href="https://github.com/rwaldron/idiomatic.js/">Idiomatic.js JavaScript Style Guide</a></li>
+  <li><a href="https://google.github.io/styleguide/jsguide.html">Google ES6 Style Guide</a></li>
+  <li><a href="https://javascript.crockford.com/code.html">Crockford Code Conventions for the JavaScript Programming Language</a></li>
+  <li><a href="https://github.com/felixge/node-style-guide">felixge/node-style-guide</a></li>
+  <li><a href="https://github.com/RisingStack/node-style-guide">RisingStack/node-style-guide</a></li>
+  <li><a href="https://github.com/kettanaito/naming-cheatsheet">kettanaito/naming-cheatsheet</a></li>
+</ul>
+
+<h2 id="linting-tools">Linting Tools</h2>
+
+<p>Preferred (used automatically by Standard):</p>
+
+<ul>
+  <li><a href="https://eslint.org/">ESLint</a>, but indirectly via the ‘Standard JS’ tools.</li>
+</ul>
+
+<p>Other links:</p>
+
+<ul>
+  <li><a href="https://www.sitepoint.com/comparison-javascript-linting-tools/">A Comparison of JavaScript Linting Tools</a></li>
+  <li><a href="https://www.jshint.com/">JSHint</a></li>
+</ul>
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2024 Liviu Ionescu. All rights reserved. <br />
+<span>Page last updated:</span> Dec 20, 2024<br/> Site last generated: Dec 20, 2024 <br />
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8WX9T80JEK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8WX9T80JEK');
+</script>
+
+
+</html>

@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A npm module with an extra xpack property.">
+<meta name="keywords" content=" ">
+<title>xPack 101 | The xPack Build Framework (DEPRECATED)</title>
+<link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
+
+
+<link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
+<link type="application/rss+xml" rel="alternate" title="web-archive-jekyll" href="https://xpack.github.io/feed.xml">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>xPack 101 | web-archive-jekyll</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="xPack 101" />
+<meta name="author" content="Liviu Ionescu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<meta property="og:description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<link rel="canonical" href="https://xpack.github.io/intro/" />
+<meta property="og:url" content="https://xpack.github.io/intro/" />
+<meta property="og:site_name" content="web-archive-jekyll" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-06-26T05:57:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="xPack 101" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-12-20T19:13:52+00:00","datePublished":"2019-06-26T05:57:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"xPack 101","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/intro/"},"url":"https://xpack.github.io/intro/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?202412202113">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://xpack.github.io/css/customstyles.css?202412202113">
+<link rel="stylesheet" href="https://xpack.github.io/css/boxshadowproperties.css?202412202113">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="https://xpack.github.io/css/theme-blue.css?202412202113">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://xpack.github.io/js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="https://xpack.github.io/js/toc.js"></script>
+<script src="https://xpack.github.io/js/customscripts.js"></script>
+
+<!-- Use absolute URLs, to cover preview cases too -->
+<link rel="shortcut icon" href="https://xpack.github.io/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="https://xpack.github.io/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://xpack.github.io/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://xpack.github.io/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://xpack.github.io/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://xpack.github.io/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://xpack.github.io/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://xpack.github.io/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://xpack.github.io/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://xpack.github.io/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://xpack.github.io/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://xpack.github.io/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://xpack.github.io/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://xpack.github.io/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://xpack.github.io/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://xpack.github.io/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks" style="">
+        <div style="display: inline-block; float: left; margin-top: 8px; margin-left: auto; margin-right: 10px;"><img src="/images/company_logo.png" alt="logo" width="32px" height="32px"/></div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="/">&nbsp;<span class="projectTitle"> The xPack Project</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">News<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="/news/">Latest News</a></li>
+                        
+                        
+                        
+                        <li><a href="/news/archive/">Archive</a></li>
+                        
+                        
+                        
+                        <li><a href="/tags/">Tags</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://xpack-dev-tools.github.io" target="_blank" rel="noopener">xPack Binary Development Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://micro-os-plus.github.io" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Dev Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/micro-os-plus/" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-3rd-party/" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/eclipse-embed-cdt/" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '/search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="xPack 101">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3 sticky" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle"> </li>
+  
+  
+  
+  <li>
+      <a title="Getting Started" href="#">Getting Started</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li class="active"><a title="Intro (xPack 101)" href="/intro/">Intro (xPack 101)</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="CI/CD" href="/ci/">CI/CD</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Install prerequisites" href="/install/">Install prerequisites</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Core Tools" href="#">Core Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/core/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm" href="/xpm/">xpm</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="VS Code Extensions" href="#">VS Code Extensions</a>
+      <ul>
+          
+          
+          
+          <li><a title="xPack C/C++ Build Tools" href="/vscode/">xPack C/C++ Build Tools</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Eclipse" href="#">Eclipse</a>
+      <ul>
+          
+          
+          
+          <li><a class="extern" title="Eclipse Embedded CDT" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Support" href="#">Support</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/support/">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Developer Info" href="#">Developer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/develop/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="How to create a new xPack repo" href="/develop/how-to-new-git/">How to create a new xPack repo</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="JavaScript Style Guide" href="/develop/js-style-guide/">JavaScript Style Guide</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Links" href="/develop/links/">Links</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Maintainer Info" href="#">Maintainer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/maintain/">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Project" href="#">Project</a>
+      <ul>
+          
+          
+          
+          <li><a title="About" href="/project/about/">About</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="History" href="/project/history/">History</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a class="extern" title="License (MIT)" href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">License (MIT)</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise, if placed
+inside customscripts.js, the script runs before the sidebar code runs
+and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">xPack 101</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">A npm module with an extra xpack property.
+</div>
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+        
+
+
+   <h2 id="oh-no-not-another-package-format">Oh, no, not another package format!</h2>
+
+<p>This is probably the first thought many people might have when hearing about
+xPacks. There are enough package formats and package managers,
+why would we need yet another one?</p>
+
+<p>Well, first, the xPacks project <strong>does not introduce a new package format</strong>,
+but uses exactly the same format as <strong>npm</strong>,
+and xPacks can be stored in the same repositories, public or private.</p>
+
+<p>And <strong>xpm</strong>, the project manager, is built on top of <strong>npm</strong>, the very
+popular JavaScript package manager, extending it with new language
+neutral features,
+so things are not that scary as they seemed initially.</p>
+
+<h2 id="im-perfectly-happy-with-my-development-environment-why-would-i-bother-with-xpacks">I’m perfectly happy with my development environment, why would I bother with xPacks?</h2>
+
+<p>The current development environments are indeed great, and rolling
+distributions like <em>Arch</em> and <em>Homebrew</em> do a tremendous job in keeping the
+systems up-to-date, but not rarely the latest and greatest available versions
+break older applications and various complex processes, like build
+scripts, that depend on older versions.</p>
+
+<p>The <strong>xPacks</strong> dependency mechanism is intended to solve exactly this problem,
+by providing a simple and uniform solution of
+installing different versions of the same package in different
+folders, and managing dependencies.</p>
+
+<h2 id="nix-also-provides-reproducible-builds-plus-lots-of-packages-why-bother-with-xpacks">Nix also provides reproducible builds, plus lots of packages, why bother with xPacks?</h2>
+
+<p><a href="https://nixos.org">Nix</a> is a great project, and takes a very strict path
+in controlling the
+versions, down to the individual library. However, by design, it uses
+links to files, which are not available (or are not reliable) on Windows,
+thus Nix is currently available only on GNU/Linux and macOS.
+Plus that the Nix language requires quite some efforts to master.</p>
+
+<h2 id="why-npm-could-not-be-used-as-is-and-why-exactly-was-it-necessary-to-invent-xpm">Why npm could not be used as-is and why exactly was it necessary to invent xpm?</h2>
+
+<p>Because each package manager implements a strategy for managing dependencies.
+npm/yarn/pnpm all implement various strategies specific to ECMAScript
+dependencies.</p>
+
+<p>Unfortunately these strategies do not work for other languages, like C/C++;
+plus that it would be very difficult and require ugly hacks to accommodate
+development dependencies to binary archives (for tools like compilers).</p>
+
+<h2 id="why-bother-to-manage-versions-when-auto-configure-can-sort-out-the-differences">Why bother to manage versions when auto-configure can sort out the differences?</h2>
+
+<p>The traditional way of dealing with different versions and variations between
+systems is to add a complex auto-configure mechanism that is able to detect
+which tools/components are present, which versions, and with
+this input do its best to parametrise the process (for example a project build),
+to accommodate for all these differences.</p>
+
+<p>This approach started with GNU <em>configure</em>, and today use even more complex
+solutions, like <em>CMake</em> or <em>meson</em> scripts.</p>
+
+<p>Well, instead of permanently wondering how to make use of the new versions,
+and making the auto-configure scripts more and more complex with every day,
+why not allow the application to ask for the exact versions that are known
+to be compatible, and let an automated tool handle the dependencies?</p>
+
+<p>The <strong>xPacks</strong> project manager can do just this, bring in the project
+exactly the versions needed, thus making the auto-configure step superfluous.</p>
+
+<h2 id="but-what-are-xpacks">But what are xPacks?</h2>
+
+<p>In brief, <strong>xPacks</strong> are general purpose multi-version software packages.</p>
+
+<p>By <strong>multi-version</strong> it is understood not only that packages can have
+multiple versions, but they <strong>can be installed in parallel</strong>, allowing each
+project to have its own set of dependencies.</p>
+
+<p>Based on the installed content, there are currently two
+types of xPacks: <strong>source</strong> and <strong>binary</strong>:</p>
+
+<ul>
+  <li><strong>source xPacks</strong> are packages that install source files,
+generally libraries used by the project</li>
+  <li><strong>binary xPacks</strong> are packages that install standalone relocatable
+executables/binary
+files, generally tools used during the build process, like toolchains,
+builders, etc; standalone means they are self-contained and do not
+depend on other shared libraries or tools; relocatable means they
+can be installed in any location.</li>
+</ul>
+
+<h2 id="where-does-the-name-come-from">Where does the name come from?</h2>
+
+<p><strong>xPack</strong>, pronounced <em><strong>ɛks-pæk</strong></em>, can be understood as <em>Universal Package</em>,
+or <em>Any Type Package</em>, and tries to suggest that, when compared to
+npm packages (which are basically JavaScript packages), xPacks are more
+general, and not linked/limited to a specific programming language.</p>
+
+<p>Initially the <em>x</em> came from <em>eXtended</em>, so <em>eXtended Packages</em> can
+be another choice.</p>
+
+<h2 id="what-exactly-is-an-xpack">What exactly is an xPack?</h2>
+
+<p>The full definition is:</p>
+
+<div class="bs-callout bs-callout-primary">An xPack is a folder which includes a
+<code class="language-plaintext highlighter-rouge">package.json</code> file, defining at least
+the package <code class="language-plaintext highlighter-rouge">name</code>, the package <code class="language-plaintext highlighter-rouge">version</code>, and an <code class="language-plaintext highlighter-rouge">xpack</code> property,
+even empty.</div>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The name and version are mandatory
+only when publishing the package or
+installing it as a dependency. However it is recommended to
+define them in all packages.</div>
+
+<p>Given the direct inheritance from npm packages, a canonical
+definition might be:</p>
+
+<div class="bs-callout bs-callout-primary">An xPack is a npm package with
+an additional <code class="language-plaintext highlighter-rouge">xpack</code> property defined in <code class="language-plaintext highlighter-rouge">package.json</code>.</div>
+
+<div class="bs-callout bs-callout-primary">A binary xPack is an xPack with
+two additional <code class="language-plaintext highlighter-rouge">xpack.binaries</code> and <code class="language-plaintext highlighter-rouge">xpack.bin</code> properties defined in
+<code class="language-plaintext highlighter-rouge">package.json</code>.</div>
+
+<h3 id="package-formats">Package formats</h3>
+
+<p>As for npm, a package is any of the following:</p>
+
+<ol>
+  <li>A folder containing a <code class="language-plaintext highlighter-rouge">package.json</code> file.</li>
+  <li>A gzipped tarball containing (1).</li>
+  <li>A URL that resolves to (2).</li>
+  <li>A <code class="language-plaintext highlighter-rouge">&lt;name&gt;@&lt;version&gt;</code> that is published on the registry with (3).</li>
+  <li>A <code class="language-plaintext highlighter-rouge">&lt;name&gt;@&lt;tag&gt;</code> that points to (4).</li>
+  <li>A <code class="language-plaintext highlighter-rouge">&lt;name&gt;</code> that has a <code class="language-plaintext highlighter-rouge">latest</code> tag satisfying (5).</li>
+  <li>A <code class="language-plaintext highlighter-rouge">git</code> url that, when cloned, results in (1).</li>
+</ol>
+
+<h2 id="how-to-convert-my-project-to-an-xpack">How to convert my project to an xPack?</h2>
+
+<p>Create a <code class="language-plaintext highlighter-rouge">package.json</code> file in the root folder of your project with at
+least the following definitions:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-awesome-project"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"xpack"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The npm <code class="language-plaintext highlighter-rouge">package.json</code> has a few more
+fields, please read
+<a href="https://docs.npmjs.com/creating-a-package-json-file">Creating a package.json file</a>
+for details.</div>
+
+<p>A more automated method is to use <code class="language-plaintext highlighter-rouge">xpm init</code>:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">% mkdir demo &amp;&amp; cd demo
+% xpm init --verbose
+xPack manager - create an xPack, empty or from a template
+Creating project 'demo'...
+File 'package.json' generated.
+File 'LICENSE' generated.
+
+'xpm init' completed in 167 ms.
+% ls -l
+total 16
+-rw-r--r--  1 ilg  staff  1070 Sep 11 13:22 LICENSE
+-rw-r--r--  1 ilg  staff   822 Sep 11 13:22 package.json
+% cat package.json
+{
+</span><span class="gp">  "name": "@&lt;scope&gt;</span>/demo<span class="s2">",
+</span><span class="go">  "version": "0.1.0",
+</span><span class="gp">  "description": "A source xPack with &lt;your-description-here&gt;</span><span class="s2">",
+</span><span class="go">  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
+  },
+  "repository": {
+    "type": "git",
+</span><span class="gp">    "url": "https://github.com/&lt;user-id&gt;</span>/demo.git<span class="s2">"
+</span><span class="go">  },
+</span><span class="gp">  "homepage": "https://github.com/&lt;user-id&gt;</span>/demo/<span class="s2">",
+</span><span class="go">  "bugs": {
+</span><span class="gp">    "url": "https://github.com/&lt;user-id&gt;</span>/demo/issues/<span class="s2">"
+</span><span class="go">  },
+  "keywords": [
+    "xpack"
+  ],
+  "author": {
+</span><span class="gp">    "name": "&lt;author-name&gt;</span><span class="s2">",
+</span><span class="gp">    "email": "&lt;author-email&gt;</span><span class="s2">"</span>,
+<span class="gp">    "url": "&lt;author-url&gt;</span><span class="s2">"
+</span><span class="go">  },
+  "license": "MIT",
+  "config": {},
+  "dependencies": {},
+  "devDependencies": {},
+  "xpack": {
+    "minimumXpmRequired": "0.16.3",
+    "dependencies": {},
+    "devDependencies": {},
+    "properties": {},
+    "actions": {},
+    "buildConfigurations": {}
+  }
+}
+</span></code></pre></div></div>
+
+<h2 id="why-would-i-convert-my-project-to-an-xpack">Why would I convert my project to an xPack?</h2>
+
+<p>The top reasons are:</p>
+
+<ul>
+  <li>to automate dependencies management</li>
+  <li>to automate path management for dependent tools</li>
+  <li>to manage multi-configuration builds</li>
+</ul>
+
+<p>These are both simple and complicated things. To better understand
+them, please continue to read how binary and source xPacks work.</p>
+
+<h2 id="how-do-binary-xpacks-work">How do binary xPacks work?</h2>
+
+<p>Let’s assume that ‘my-awesome-project’ needs the <code class="language-plaintext highlighter-rouge">arm-none-eabi-gcc</code>
+toolchain to build,
+and not any version but a specific one, like <code class="language-plaintext highlighter-rouge">12.2.1</code>; it also needs
+the latest CMake, ninja and the liquidjs npm module.</p>
+
+<p>For this, in the project folder, issue the following command, which
+will install the required tools in a global xPacks store location, and add links
+to them.</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">% xpm install @xpack-dev-tools/arm-none-eabi-gcc@12.2.1-1.2.1 @xpack-dev-tools/cmake@latest @xpack-dev-tools/ninja-build@latest --verbose
+xPack manager - install package(s)
+
+Processing @xpack-dev-tools/arm-none-eabi-gcc@12.2.1-1.2.1...
+Folder 'xpacks/@xpack-dev-tools/arm-none-eabi-gcc' linked to global '@xpack-dev-tools/arm-none-eabi-gcc/12.2.1-1.2.1'.
+File 'xpacks/.bin/arm-none-eabi-addr2line' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-addr2line'.
+File 'xpacks/.bin/arm-none-eabi-ar' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-ar'.
+File 'xpacks/.bin/arm-none-eabi-as' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-as'.
+File 'xpacks/.bin/arm-none-eabi-c++' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-c++'.
+File 'xpacks/.bin/arm-none-eabi-c++filt' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-c++filt'.
+File 'xpacks/.bin/arm-none-eabi-cpp' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-cpp'.
+File 'xpacks/.bin/arm-none-eabi-elfedit' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-elfedit'.
+File 'xpacks/.bin/arm-none-eabi-g++' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-g++'.
+File 'xpacks/.bin/arm-none-eabi-gcc' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc'.
+File 'xpacks/.bin/arm-none-eabi-gcc-ar' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc-ar'.
+File 'xpacks/.bin/arm-none-eabi-gcc-nm' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc-nm'.
+File 'xpacks/.bin/arm-none-eabi-gcc-ranlib' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc-ranlib'.
+File 'xpacks/.bin/arm-none-eabi-gcov' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcov'.
+File 'xpacks/.bin/arm-none-eabi-gcov-dump' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcov-dump'.
+File 'xpacks/.bin/arm-none-eabi-gcov-tool' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcov-tool'.
+File 'xpacks/.bin/arm-none-eabi-gdb' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb'.
+File 'xpacks/.bin/arm-none-eabi-gdb-add-index' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb-add-index'.
+File 'xpacks/.bin/arm-none-eabi-gdb-add-index-py3' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb-add-index-py3'.
+File 'xpacks/.bin/arm-none-eabi-gdb-py3' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb-py3'.
+File 'xpacks/.bin/arm-none-eabi-gfortran' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gfortran'.
+File 'xpacks/.bin/arm-none-eabi-gprof' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gprof'.
+File 'xpacks/.bin/arm-none-eabi-ld' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-ld'.
+File 'xpacks/.bin/arm-none-eabi-ld.bfd' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-ld.bfd'.
+File 'xpacks/.bin/arm-none-eabi-lto-dump' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-lto-dump'.
+File 'xpacks/.bin/arm-none-eabi-nm' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-nm'.
+File 'xpacks/.bin/arm-none-eabi-objcopy' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-objcopy'.
+File 'xpacks/.bin/arm-none-eabi-objdump' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-objdump'.
+File 'xpacks/.bin/arm-none-eabi-ranlib' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-ranlib'.
+File 'xpacks/.bin/arm-none-eabi-readelf' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-readelf'.
+File 'xpacks/.bin/arm-none-eabi-size' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-size'.
+File 'xpacks/.bin/arm-none-eabi-strings' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-strings'.
+File 'xpacks/.bin/arm-none-eabi-strip' linked to '../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-strip'.
+Adding '@xpack-dev-tools/arm-none-eabi-gcc' to 'devDependencies'...
+
+Processing @xpack-dev-tools/cmake@3.26.5-1.1...
+Folder 'xpacks/@xpack-dev-tools/cmake' linked to global '@xpack-dev-tools/cmake/3.26.5-1.1'.
+File 'xpacks/.bin/ccmake' linked to '../@xpack-dev-tools/cmake/.content/bin/ccmake'.
+File 'xpacks/.bin/cmake' linked to '../@xpack-dev-tools/cmake/.content/bin/cmake'.
+File 'xpacks/.bin/cpack' linked to '../@xpack-dev-tools/cmake/.content/bin/cpack'.
+File 'xpacks/.bin/ctest' linked to '../@xpack-dev-tools/cmake/.content/bin/ctest'.
+Adding '@xpack-dev-tools/cmake' to 'devDependencies'...
+
+Processing @xpack-dev-tools/ninja-build@1.11.1-3.1...
+Folder 'xpacks/@xpack-dev-tools/ninja-build' linked to global '@xpack-dev-tools/ninja-build/1.11.1-3.1'.
+File 'xpacks/.bin/ninja' linked to '../@xpack-dev-tools/ninja-build/.content/bin/ninja'.
+Adding '@xpack-dev-tools/ninja-build' to 'devDependencies'...
+
+'xpm install' completed in 5.760 sec.
+% npm install liquidjs --save-dev
+
+added 2 packages, and audited 3 packages in 2s
+
+1 package is looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+%
+</span></code></pre></div></div>
+
+<p>This will also update the <code class="language-plaintext highlighter-rouge">package.json</code> with details about the dependencies:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@&lt;scope&gt;/demo"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A source xPack with &lt;your-description-here&gt;"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"main"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"echo </span><span class="se">\"</span><span class="s2">Error: no test specified</span><span class="se">\"</span><span class="s2"> &amp;&amp; exit 1"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"repository"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"git"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/&lt;user-id&gt;/demo.git"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"homepage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/&lt;user-id&gt;/demo/"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"bugs"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/&lt;user-id&gt;/demo/issues/"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"keywords"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"xpack"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;author-name&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;author-email&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;author-url&gt;"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MIT"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"config"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="nl">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"liquidjs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^10.9.2"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"xpack"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"minimumXpmRequired"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.16.3"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+    </span><span class="nl">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@xpack-dev-tools/arm-none-eabi-gcc"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"specifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12.2.1-1.2.1"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"local"</span><span class="p">:</span><span class="w"> </span><span class="s2">"link"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"platforms"</span><span class="p">:</span><span class="w"> </span><span class="s2">"all"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"@xpack-dev-tools/cmake"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"specifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.26.5-1.1"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"local"</span><span class="p">:</span><span class="w"> </span><span class="s2">"link"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"platforms"</span><span class="p">:</span><span class="w"> </span><span class="s2">"all"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"@xpack-dev-tools/ninja-build"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"specifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.11.1-3.1"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"local"</span><span class="p">:</span><span class="w"> </span><span class="s2">"link"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"platforms"</span><span class="p">:</span><span class="w"> </span><span class="s2">"all"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+    </span><span class="nl">"actions"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+    </span><span class="nl">"buildConfigurations"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The <code class="language-plaintext highlighter-rouge">^</code> used in the version field is
+a npm/semver convention that means <em>compatible</em>, in other words the
+highest version that does not change the major number, if available.</div>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The lack of <code class="language-plaintext highlighter-rouge">^</code> means <em>exact</em> version.
+Use this syntax for binary xPacks with longer version numbers,
+which generally do not abide by the semver requirements.</div>
+
+<p>The result is the tools being downloaded and installed in the global
+xPack store (a folder in user’s home) and links from the project
+to that folders created in the local <code class="language-plaintext highlighter-rouge">xpacks</code> folder, with links to
+individual programs added in <code class="language-plaintext highlighter-rouge">xpacks/.bin</code> (or <code class="language-plaintext highlighter-rouge">.cmd</code> stubs on Windows).</p>
+
+<p>Similarly for liquidjs, which is a Node.js CLI npm module, after
+installing the module, npm will
+add a folder <code class="language-plaintext highlighter-rouge">node_modules/.bin</code> where links to the executables
+will be created (or <code class="language-plaintext highlighter-rouge">.cmd</code> stubs on Windows).</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>tree <span class="nt">-a</span> <span class="nt">-L</span> 3
+<span class="c">.
+</span><span class="go">├── LICENSE
+├── node_modules
+│   ├── .bin
+</span><span class="gp">│   │   ├── liquid -&gt;</span><span class="w"> </span>../liquidjs/bin/liquid.js
+<span class="gp">│   │   └── liquidjs -&gt;</span><span class="w"> </span>../liquidjs/bin/liquid.js
+<span class="go">│   ├── .package-lock.json
+│   ├── commander
+│   │   ├── LICENSE
+│   │   ├── Readme.md
+│   │   ├── esm.mjs
+│   │   ├── index.js
+│   │   ├── lib
+│   │   ├── package-support.json
+│   │   ├── package.json
+│   │   └── typings
+│   └── liquidjs
+│       ├── LICENSE
+│       ├── README.md
+│       ├── bin
+│       ├── dist
+│       └── package.json
+├── package-lock.json
+├── package.json
+└── xpacks
+    ├── .bin
+</span><span class="gp">    │   ├── arm-none-eabi-addr2line -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-addr2line
+<span class="gp">    │   ├── arm-none-eabi-ar -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-ar
+<span class="gp">    │   ├── arm-none-eabi-as -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-as
+<span class="gp">    │   ├── arm-none-eabi-c++ -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-c++
+<span class="gp">    │   ├── arm-none-eabi-c++filt -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-c++filt
+<span class="gp">    │   ├── arm-none-eabi-cpp -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-cpp
+<span class="gp">    │   ├── arm-none-eabi-elfedit -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-elfedit
+<span class="gp">    │   ├── arm-none-eabi-g++ -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-g++
+<span class="gp">    │   ├── arm-none-eabi-gcc -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc
+<span class="gp">    │   ├── arm-none-eabi-gcc-ar -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc-ar
+<span class="gp">    │   ├── arm-none-eabi-gcc-nm -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc-nm
+<span class="gp">    │   ├── arm-none-eabi-gcc-ranlib -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc-ranlib
+<span class="gp">    │   ├── arm-none-eabi-gcov -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcov
+<span class="gp">    │   ├── arm-none-eabi-gcov-dump -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcov-dump
+<span class="gp">    │   ├── arm-none-eabi-gcov-tool -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcov-tool
+<span class="gp">    │   ├── arm-none-eabi-gdb -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb
+<span class="gp">    │   ├── arm-none-eabi-gdb-add-index -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb-add-index
+<span class="gp">    │   ├── arm-none-eabi-gdb-add-index-py3 -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb-add-index-py3
+<span class="gp">    │   ├── arm-none-eabi-gdb-py3 -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb-py3
+<span class="gp">    │   ├── arm-none-eabi-gfortran -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gfortran
+<span class="gp">    │   ├── arm-none-eabi-gprof -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-gprof
+<span class="gp">    │   ├── arm-none-eabi-ld -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-ld
+<span class="gp">    │   ├── arm-none-eabi-ld.bfd -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-ld.bfd
+<span class="gp">    │   ├── arm-none-eabi-lto-dump -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-lto-dump
+<span class="gp">    │   ├── arm-none-eabi-nm -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-nm
+<span class="gp">    │   ├── arm-none-eabi-objcopy -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-objcopy
+<span class="gp">    │   ├── arm-none-eabi-objdump -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-objdump
+<span class="gp">    │   ├── arm-none-eabi-ranlib -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-ranlib
+<span class="gp">    │   ├── arm-none-eabi-readelf -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-readelf
+<span class="gp">    │   ├── arm-none-eabi-size -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-size
+<span class="gp">    │   ├── arm-none-eabi-strings -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-strings
+<span class="gp">    │   ├── arm-none-eabi-strip -&gt;</span><span class="w"> </span>../@xpack-dev-tools/arm-none-eabi-gcc/.content/bin/arm-none-eabi-strip
+<span class="gp">    │   ├── ccmake -&gt;</span><span class="w"> </span>../@xpack-dev-tools/cmake/.content/bin/ccmake
+<span class="gp">    │   ├── cmake -&gt;</span><span class="w"> </span>../@xpack-dev-tools/cmake/.content/bin/cmake
+<span class="gp">    │   ├── cpack -&gt;</span><span class="w"> </span>../@xpack-dev-tools/cmake/.content/bin/cpack
+<span class="gp">    │   ├── ctest -&gt;</span><span class="w"> </span>../@xpack-dev-tools/cmake/.content/bin/ctest
+<span class="gp">    │   └── ninja -&gt;</span><span class="w"> </span>../@xpack-dev-tools/ninja-build/.content/bin/ninja
+<span class="go">    └── @xpack-dev-tools
+</span><span class="gp">        ├── arm-none-eabi-gcc -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@xpack-dev-tools/arm-none-eabi-gcc/12.2.1-1.2.1
+<span class="gp">        ├── cmake -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@xpack-dev-tools/cmake/3.26.5-1.1
+<span class="gp">        └── ninja-build -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@xpack-dev-tools/ninja-build/1.11.1-3.1
+<span class="go">
+15 directories, 52 files
+</span></code></pre></div></div>
+
+<p>When later running actions like <code class="language-plaintext highlighter-rouge">xpm run build</code>, the <code class="language-plaintext highlighter-rouge">PATH</code> is automatically
+adjusted to <code class="language-plaintext highlighter-rouge">xpacks/.bin:node_modules/.bin:$PATH</code>, so the exact versions
+of the tools required in the dependencies list will be preferred over any
+existing tools with the same names that might be present in the <code class="language-plaintext highlighter-rouge">PATH</code>.</p>
+
+<h3 id="binary-xpacks-are-probably-huge-arent-they">Binary xPacks are probably huge, aren’t they?</h3>
+
+<p>Not at all; on the contrary, binary xPacks are very small, just a
+<code class="language-plaintext highlighter-rouge">package.json</code> file, since they include only the URLs where the binaries
+are actually stored (for example links to GitHub Releases), not the
+binaries themselves.</p>
+
+<h2 id="how-do-source-xpacks-work">How do source xPacks work?</h2>
+
+<p>Even simpler. Let’s assume that the ‘xyz project’ also needs the
+µOS++ trace support, which is available as the source xPack
+<code class="language-plaintext highlighter-rouge">@micro-os-plus/diag-trace</code>.</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">% xpm install @micro-os-plus/diag-trace --verbose
+xPack manager - install package(s)
+
+Processing @micro-os-plus/diag-trace@4.2.0...
+Folder 'xpacks/@micro-os-plus/diag-trace' linked to global '@micro-os-plus/diag-trace/4.2.0'.
+Adding '@micro-os-plus/diag-trace' to 'dependencies'...
+
+'xpm install' completed in 2.129 sec.
+</span></code></pre></div></div>
+
+<p>This results in another link in the <code class="language-plaintext highlighter-rouge">xpacks</code> folder:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">xpacks
+├── @micro-os-plus
+</span><span class="gp">│   └── diag-trace -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@micro-os-plus/diag-trace/4.2.0
+<span class="go">└── @xpack-dev-tools
+</span><span class="gp">    ├── arm-none-eabi-gcc -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@xpack-dev-tools/arm-none-eabi-gcc/12.2.1-1.2.1
+<span class="gp">    ├── cmake -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@xpack-dev-tools/cmake/3.26.5-1.1
+<span class="gp">    └── ninja-build -&gt;</span><span class="w"> </span>/Users/ilg/Library/xPacks/@xpack-dev-tools/ninja-build/1.11.1-3.1
+<span class="go">
+7 directories, 0 files
+% tree xpacks/@micro-os-plus/diag-trace
+xpacks/@micro-os-plus/diag-trace
+├── CHANGELOG.md
+├── CMakeLists.txt
+├── LICENSE
+├── README.md
+├── include
+│   └── micro-os-plus
+│       └── diag
+│           └── trace.h
+├── meson.build
+├── package.json
+├── src
+│   └── trace.cpp
+└── xpack.json
+
+5 directories, 9 files
+</span></code></pre></div></div>
+
+<p>and the addition of a new dependency in <code class="language-plaintext highlighter-rouge">package.json</code>:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@&lt;scope&gt;/demo"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A source xPack with &lt;your-description-here&gt;"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"main"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"echo </span><span class="se">\"</span><span class="s2">Error: no test specified</span><span class="se">\"</span><span class="s2"> &amp;&amp; exit 1"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"repository"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"git"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/&lt;user-id&gt;/demo.git"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"homepage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/&lt;user-id&gt;/demo/"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"bugs"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/&lt;user-id&gt;/demo/issues/"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"keywords"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"xpack"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;author-name&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;author-email&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;author-url&gt;"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MIT"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"config"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="nl">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"liquidjs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^10.9.2"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"xpack"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"minimumXpmRequired"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.16.3"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@micro-os-plus/diag-trace"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"specifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^4.2.0"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"local"</span><span class="p">:</span><span class="w"> </span><span class="s2">"link"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"platforms"</span><span class="p">:</span><span class="w"> </span><span class="s2">"all"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@xpack-dev-tools/arm-none-eabi-gcc"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"specifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12.2.1-1.2.1"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"local"</span><span class="p">:</span><span class="w"> </span><span class="s2">"link"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"platforms"</span><span class="p">:</span><span class="w"> </span><span class="s2">"all"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"@xpack-dev-tools/cmake"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"specifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.26.5-1.1"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"local"</span><span class="p">:</span><span class="w"> </span><span class="s2">"link"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"platforms"</span><span class="p">:</span><span class="w"> </span><span class="s2">"all"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"@xpack-dev-tools/ninja-build"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"specifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.11.1-3.1"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"local"</span><span class="p">:</span><span class="w"> </span><span class="s2">"link"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"platforms"</span><span class="p">:</span><span class="w"> </span><span class="s2">"all"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+    </span><span class="nl">"actions"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+    </span><span class="nl">"buildConfigurations"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="example">Example</h2>
+
+<p>A real example is an embedded Cortex-M7 project that prints a <em>Hello World</em>
+message via semihosting:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ilg@wksi tmp % mkdir -p my-project &amp;&amp; cd my-project
+ilg@wksi my-project % xpm init --template @micro-os-plus/hello-world-qemu-template@latest --property target=cortex-m7f
+
+Checking package @micro-os-plus/hello-world-qemu-template@latest metadata...
+Processing @micro-os-plus/hello-world-qemu-template@1.4.1...
+
+Creating the C++ project 'my-project'...
+- target=cortex-m7f
+- buildGenerator=cmake
+
+Folder 'cmake' copied.
+File 'CMakeLists.txt' generated.
+File 'src/main.cpp' generated.
+Folder 'include' copied.
+Folder 'platform-qemu-cortex-m7f' copied.
+File '.vscode/tasks.json' copied.
+File '.vscode/settings.json' copied.
+File '.clang-format' copied.
+File 'README.md' generated.
+File 'LICENSE' generated.
+File 'package.json' generated.
+ilg@wksi my-project %
+</code></pre></div></div>
+
+<p>The resulting project has the following <code class="language-plaintext highlighter-rouge">package.json</code>:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@my-scope/my-project"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A source xPack with a semihosted Hello World application running on QEMU"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"main"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"echo </span><span class="se">\"</span><span class="s2">Error: no test specified</span><span class="se">\"</span><span class="s2"> &amp;&amp; exit 1"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"repository"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"git"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/ilg-ul/my-project.git"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"bugs"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/ilg-ul/my-project/issues/"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"homepage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/ilg-ul/my-project/"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"keywords"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"xpack"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Liviu Ionescu"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ilg@livius.net"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/ilg-ul/"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MIT"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"config"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="nl">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="nl">"bundledDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+  </span><span class="nl">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="nl">"xpack"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"minimumXpmRequired"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.14.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@micro-os-plus/architecture-cortexm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.2.0"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@micro-os-plus/devices-qemu-cortexm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^4.1.1"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@xpack-3rd-party/arm-cmsis-core"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5.4.0-6"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@micro-os-plus/build-helper"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^2.11.0"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@micro-os-plus/diag-trace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^4.1.1"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@micro-os-plus/semihosting"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^8.0.0"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@micro-os-plus/startup"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^5.2.0"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@xpack-dev-tools/cmake"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.21.6-1.1"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@xpack-dev-tools/ninja-build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.11.0-1.1"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@xpack-dev-tools/arm-none-eabi-gcc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11.2.1-1.2.2"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@xpack-dev-tools/qemu-arm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7.0.0-1.1"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"buildFolderRelativePath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{{ 'build' | path_join: configuration.name | to_filename | downcase }}"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"buildFolderRelativePathPosix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{{ 'build' | path_posix_join: configuration.name | downcase }}"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"commandCMakePrepare"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{{ properties.commandCMakeReconfigure }} --log-level=VERBOSE"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"commandCMakePrepareWithToolchain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{{ properties.commandCMakePrepare }} -D CMAKE_TOOLCHAIN_FILE=xpacks/micro-os-plus-build-helper/cmake/toolchains/{{ properties.toolchainFileName }}"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"commandCMakeReconfigure"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cmake -S . -B {{ properties.buildFolderRelativePathPosix }} -G Ninja -D CMAKE_BUILD_TYPE={{ properties.buildType }} -D PLATFORM_NAME={{ properties.platformName }} -D CMAKE_EXPORT_COMPILE_COMMANDS=ON"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"commandCMakeBuild"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cmake --build {{ properties.buildFolderRelativePathPosix }}"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"commandCMakeBuildVerbose"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cmake --build {{ properties.buildFolderRelativePathPosix }} --verbose"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"commandCMakeClean"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cmake --build  --target clean"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"commandCMakePerformTests"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cd {{ properties.buildFolderRelativePath }} &amp;&amp; ctest -V"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"actions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"test-qemu-cortex-m7f-cmake-debug"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"xpm run prepare --config qemu-cortex-m7f-cmake-debug"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"xpm run build --config qemu-cortex-m7f-cmake-debug"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"xpm run test --config qemu-cortex-m7f-cmake-debug"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"test-qemu-cortex-m7f-cmake-release"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"xpm run prepare --config qemu-cortex-m7f-cmake-release"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"xpm run build --config qemu-cortex-m7f-cmake-release"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"xpm run test --config qemu-cortex-m7f-cmake-release"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"test-all"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"xpm run test-qemu-cortex-m7f-cmake-debug"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"xpm run test-qemu-cortex-m7f-cmake-release"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"clean-all"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"xpm run clean --config qemu-cortex-m7f-cmake-debug"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"xpm run clean --config qemu-cortex-m7f-cmake-release"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"link-deps"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"xpm link @xpack-3rd-party/arm-cmsis-core --quiet"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"xpm link @micro-os-plus/architecture-cortexm --quiet"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"xpm link @micro-os-plus/devices-qemu-cortexm --quiet"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"xpm link @micro-os-plus/startup --quiet"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"xpm link @micro-os-plus/build-helper --quiet"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"xpm link @micro-os-plus/diag-trace --quiet"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"xpm link @micro-os-plus/semihosting --quiet"</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"buildConfigurations"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"qemu-cortex-m7f-cmake-debug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"buildType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Debug"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"platformName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qemu-cortex-m7f"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"toolchainFileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arm-none-eabi-gcc.cmake"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"actions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"prepare"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{{ properties.commandCMakePrepareWithToolchain }}"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"build"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"{{ properties.commandCMakeReconfigure }}"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"{{ properties.commandCMakeBuild }}"</span><span class="w">
+          </span><span class="p">],</span><span class="w">
+          </span><span class="nl">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{{ properties.commandCMakePerformTests }}"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"clean"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{{ properties.commandCMakeClean }}"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"qemu-cortex-m7f-cmake-release"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"inherit"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"qemu-cortex-m7f-cmake-debug"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"buildType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Release"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The next step is to install dependencies:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ilg@wksi my-project % xpm install
+@my-scope/my-project...
++ @micro-os-plus/startup@5.2.0
++ @micro-os-plus/semihosting@8.0.0
++ @micro-os-plus/diag-trace@4.1.1
++ @micro-os-plus/architecture-cortexm@6.2.0
++ @xpack-3rd-party/arm-cmsis-core@5.4.0-6
++ @micro-os-plus/build-helper@2.11.0
++ @micro-os-plus/devices-qemu-cortexm@4.1.1
++ @xpack-dev-tools/ninja-build@1.11.0-1.1
++ @xpack-dev-tools/cmake@3.21.6-1.1
++ @xpack-dev-tools/arm-none-eabi-gcc@11.2.1-1.2.2
++ @xpack-dev-tools/qemu-arm@7.0.0-1.1
+'xpacks/micro-os-plus-semihosting' -&gt; '/Users/ilg/Library/xPacks/@micro-os-plus/semihosting/8.0.0'
+'xpacks/micro-os-plus-diag-trace' -&gt; '/Users/ilg/Library/xPacks/@micro-os-plus/diag-trace/4.1.1'
+'xpacks/xpack-3rd-party-arm-cmsis-core' -&gt; '/Users/ilg/Library/xPacks/@xpack-3rd-party/arm-cmsis-core/5.4.0-6'
+'xpacks/micro-os-plus-startup' -&gt; '/Users/ilg/Library/xPacks/@micro-os-plus/startup/5.2.0'
+'xpacks/micro-os-plus-architecture-cortexm' -&gt; '/Users/ilg/Library/xPacks/@micro-os-plus/architecture-cortexm/6.2.0'
+'xpacks/micro-os-plus-devices-qemu-cortexm' -&gt; '/Users/ilg/Library/xPacks/@micro-os-plus/devices-qemu-cortexm/4.1.1'
+'xpacks/xpack-dev-tools-ninja-build' -&gt; '/Users/ilg/Library/xPacks/@xpack-dev-tools/ninja-build/1.11.0-1.1'
+'xpacks/xpack-dev-tools-arm-none-eabi-gcc' -&gt; '/Users/ilg/Library/xPacks/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2'
+'xpacks/micro-os-plus-build-helper' -&gt; '/Users/ilg/Library/xPacks/@micro-os-plus/build-helper/2.11.0'
+'xpacks/xpack-dev-tools-cmake' -&gt; '/Users/ilg/Library/xPacks/@xpack-dev-tools/cmake/3.21.6-1.1'
+'xpacks/xpack-dev-tools-qemu-arm' -&gt; '/Users/ilg/Library/xPacks/@xpack-dev-tools/qemu-arm/7.0.0-1.1'
+'xpacks/.bin/ninja' -&gt; '../xpack-dev-tools-ninja-build/.content/bin/ninja'
+'xpacks/.bin/arm-none-eabi-addr2line' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-addr2line'
+'xpacks/.bin/ccmake' -&gt; '../xpack-dev-tools-cmake/.content/bin/ccmake'
+'xpacks/.bin/qemu-system-arm' -&gt; '../xpack-dev-tools-qemu-arm/.content/bin/qemu-system-arm'
+'xpacks/.bin/arm-none-eabi-ar' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-ar'
+'xpacks/.bin/cmake' -&gt; '../xpack-dev-tools-cmake/.content/bin/cmake'
+'xpacks/.bin/qemu-system-aarch64' -&gt; '../xpack-dev-tools-qemu-arm/.content/bin/qemu-system-aarch64'
+'xpacks/.bin/arm-none-eabi-as' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-as'
+'xpacks/.bin/cpack' -&gt; '../xpack-dev-tools-cmake/.content/bin/cpack'
+'xpacks/.bin/qemu-system-gnuarmeclipse' -&gt; '../xpack-dev-tools-qemu-arm/.content/bin/qemu-system-gnuarmeclipse'
+'xpacks/.bin/arm-none-eabi-as-py3' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-as-py3'
+'xpacks/.bin/ctest' -&gt; '../xpack-dev-tools-cmake/.content/bin/ctest'
+'xpacks/.bin/arm-none-eabi-c++' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-c++'
+'xpacks/.bin/arm-none-eabi-c++filt' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-c++filt'
+'xpacks/.bin/arm-none-eabi-cpp' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-cpp'
+'xpacks/.bin/arm-none-eabi-elfedit' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-elfedit'
+'xpacks/.bin/arm-none-eabi-g++' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-g++'
+'xpacks/.bin/arm-none-eabi-gcc' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc'
+'xpacks/.bin/arm-none-eabi-gcc-ar' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc-ar'
+'xpacks/.bin/arm-none-eabi-gcc-nm' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc-nm'
+'xpacks/.bin/arm-none-eabi-gcc-ranlib' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcc-ranlib'
+'xpacks/.bin/arm-none-eabi-gcov' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcov'
+'xpacks/.bin/arm-none-eabi-gcov-dump' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcov-dump'
+'xpacks/.bin/arm-none-eabi-gcov-tool' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gcov-tool'
+'xpacks/.bin/arm-none-eabi-gdb' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb'
+'xpacks/.bin/arm-none-eabi-gdb-add-index' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb-add-index'
+'xpacks/.bin/arm-none-eabi-gdb-add-index-py3' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb-add-index-py3'
+'xpacks/.bin/arm-none-eabi-gdb-py3' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gdb-py3'
+'xpacks/.bin/arm-none-eabi-gfortran' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gfortran'
+'xpacks/.bin/arm-none-eabi-gprof' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gprof'
+'xpacks/.bin/arm-none-eabi-gprof-py3' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-gprof-py3'
+'xpacks/.bin/arm-none-eabi-ld' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-ld'
+'xpacks/.bin/arm-none-eabi-ld.bfd' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-ld.bfd'
+'xpacks/.bin/arm-none-eabi-lto-dump' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-lto-dump'
+'xpacks/.bin/arm-none-eabi-nm' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-nm'
+'xpacks/.bin/arm-none-eabi-objcopy' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-objcopy'
+'xpacks/.bin/arm-none-eabi-objdump' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-objdump'
+'xpacks/.bin/arm-none-eabi-ranlib' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-ranlib'
+'xpacks/.bin/arm-none-eabi-readelf' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-readelf'
+'xpacks/.bin/arm-none-eabi-size' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-size'
+'xpacks/.bin/arm-none-eabi-strings' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-strings'
+'xpacks/.bin/arm-none-eabi-strip' -&gt; '../xpack-dev-tools-arm-none-eabi-gcc/.content/bin/arm-none-eabi-strip'
+ilg@wksi my-project %
+</code></pre></div></div>
+
+<p>Finally, build and run the test:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">ilg@wksi my-project % xpm run test-qemu-cortex-m7f-cmake-debug
+</span><span class="gp">&gt;</span><span class="w"> </span>xpm run prepare <span class="nt">--config</span> qemu-cortex-m7f-cmake-debug
+<span class="gp">&gt;</span><span class="w"> </span>cmake <span class="nt">-S</span> <span class="nb">.</span> <span class="nt">-B</span> build/qemu-cortex-m7f-cmake-debug <span class="nt">-G</span> Ninja <span class="nt">-D</span> <span class="nv">CMAKE_BUILD_TYPE</span><span class="o">=</span>Debug <span class="nt">-D</span> <span class="nv">PLATFORM_NAME</span><span class="o">=</span>qemu-cortex-m7f <span class="nt">-D</span> <span class="nv">CMAKE_EXPORT_COMPILE_COMMANDS</span><span class="o">=</span>ON <span class="nt">--log-level</span><span class="o">=</span>VERBOSE <span class="nt">-D</span> <span class="nv">CMAKE_TOOLCHAIN_FILE</span><span class="o">=</span>xpacks/micro-os-plus-build-helper/cmake/toolchains/arm-none-eabi-gcc.cmake
+<span class="go">-- The C compiler identification is GNU 11.2.1
+-- The CXX compiler identification is GNU 11.2.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/ilg/tmp/my-project/xpacks/.bin/arm-none-eabi-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/ilg/tmp/my-project/xpacks/.bin/arm-none-eabi-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- The ASM compiler identification is GNU
+-- Found assembler: /Users/ilg/tmp/my-project/xpacks/.bin/arm-none-eabi-gcc
+-- Including micro-os-plus-build-helper module...
+-- CMake version: 3.21.6
+-- Compiler: GNU 11.2.1
+-- package.name: @my-scope/my-project
+-- package.version: 0.1.0
+-- Platform name: qemu-cortex-m7f
+-- Build type: Debug
+-- Project path: /Users/ilg/tmp/my-project
+-- Build path: /Users/ilg/tmp/my-project/build/qemu-cortex-m7f-cmake-debug
+-- Module path: /Users/ilg/tmp/my-project/xpacks/micro-os-plus-build-helper/cmake
+-- CMAKE_C_COMPILER_ID: GNU
+-- CMAKE_SYSTEM_NAME: Generic
+-- CMAKE_SYSTEM_PROCESSOR: arm
+-- Including global definitions...
+-- Adding GCC warnings...
+-- Including platform-qemu-cortex-m7f globals...
+-- .G+ -I platform-qemu-cortex-m7f/include-config
+</span><span class="gp">-- .G+ -D $</span>&lt;<span class="nv">$&lt;</span>CONFIG:Debug&gt;:MICRO_OS_PLUS_DEBUG&gt;
+<span class="gp">-- .G+ -D $</span>&lt;<span class="nv">$&lt;</span>CONFIG:Debug&gt;:MICRO_OS_PLUS_TRACE&gt;
+<span class="go">-- .G+ -D MICRO_OS_PLUS_INCLUDE_CONFIG_H
+-- .G+ -D _POSIX_C_SOURCE=200809L
+-- .G+ -fmessage-length=0
+-- .G+ -fsigned-char
+-- .G+ -ffunction-sections
+-- .G+ -fdata-sections
+-- .G+ -fdiagnostics-color=always
+-- .G+ -Wall
+-- .G+ -Waggregate-return
+-- .G+ -Wcast-align
+-- .G+ -Wcast-qual
+-- .G+ -Wconversion
+-- .G+ -Wdouble-promotion
+-- .G+ -Wduplicated-branches
+-- .G+ -Wduplicated-cond
+-- .G+ -Wextra
+-- .G+ -Wfloat-conversion
+-- .G+ -Wfloat-equal
+-- .G+ -Wformat-nonliteral
+-- .G+ -Wformat-overflow=2
+-- .G+ -Wformat-security
+-- .G+ -Wformat-signedness
+-- .G+ -Wformat-truncation=2
+-- .G+ -Wformat-y2k
+-- .G+ -Wformat=2
+-- .G+ -Wlogical-op
+-- .G+ -Wmissing-declarations
+-- .G+ -Wmissing-include-dirs
+-- .G+ -Wnull-dereference
+-- .G+ -Wpacked
+-- .G+ -Wpadded
+-- .G+ -Wpointer-arith
+-- .G+ -Wredundant-decls
+-- .G+ -Wshadow
+-- .G+ -Wshift-overflow=2
+-- .G+ -Wsign-conversion
+-- .G+ -Wswitch-default
+-- .G+ -Wswitch-enum
+-- .G+ -Wundef
+-- .G+ -Wuninitialized
+-- .G+ -Wvla
+</span><span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:C&gt;:-Wbad-function-cast&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:C&gt;:-Wc++-compat&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:C&gt;:-Wduplicate-decl-specifier&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:C&gt;:-Wmissing-prototypes&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:C&gt;:-Wnested-externs&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:C&gt;:-Wold-style-definition&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:C&gt;:-Wstrict-prototypes&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:CXX&gt;:-Wctor-dtor-privacy&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:CXX&gt;:-Wnoexcept&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:CXX&gt;:-Wnon-virtual-dtor&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:CXX&gt;:-Wold-style-cast&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:CXX&gt;:-Woverloaded-virtual&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:CXX&gt;:-Wplacement-new<span class="o">=</span>2&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:CXX&gt;:-Wregister&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:CXX&gt;:-Wsign-promo&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:CXX&gt;:-Wstrict-null-sentinel&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:CXX&gt;:-Wsuggest-final-methods&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:CXX&gt;:-Wsuggest-final-types&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:CXX&gt;:-Wsuggest-override&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:CXX&gt;:-Wuseless-cast&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:CXX&gt;:-Wzero-as-null-pointer-constant&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:CXX&gt;:-Wextra-semi&gt;
+<span class="go">-- .G+ -Warith-conversion
+</span><span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:CXX&gt;:-Wcomma-subscript&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:CXX&gt;:-Wredundant-tags&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:CXX&gt;:-Wvolatile&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:CXX&gt;:-Wmismatched-tags&gt;
+<span class="go">-- .G+ -mcpu=cortex-m7
+-- .G+ -mthumb
+-- .G+ -mfloat-abi=hard
+-- .G+ -Werror
+</span><span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>CONFIG:Debug&gt;:-fno-omit-frame-pointer&gt;
+<span class="gp">-- .G+ $</span>&lt;<span class="nv">$&lt;</span>COMPILE_LANGUAGE:CXX&gt;:-fno-threadsafe-statics&gt;
+<span class="go">-- Adding 'xpacks/micro-os-plus-architecture-cortexm'...
+-- Processing xPack @micro-os-plus/architecture-cortexm@6.2.0...
+</span><span class="gp">-- &gt;</span><span class="w"> </span>micro-os-plus-architecture-cortexm-interface
+<span class="go">-- + -I include
+</span><span class="gp">-- &gt;</span><span class="w"> </span>micro-os-plus::architecture-cortexm -&gt; micro-os-plus-architecture-cortexm-interface
+<span class="gp">-- &gt;</span><span class="w"> </span>micro-os-plus::architecture -&gt; micro-os-plus-architecture-cortexm-interface
+<span class="go">-- Adding 'xpacks/micro-os-plus-devices-qemu-cortexm'...
+-- Processing xPack @micro-os-plus/devices-qemu-cortexm@4.1.1...
+</span><span class="gp">-- &gt;</span><span class="w"> </span>micro-os-plus-devices-qemu-cortexm-interface
+<span class="go">-- + -I include
+-- + src/reset-handler.c
+-- + src/system-cortexm.c
+-- + src/vectors-cortexm.c
+-- + src/exception-handlers.cpp
+-- + -D DEVICE_QEMU_CORTEX_M7
+-- + xpack-3rd-party::arm-cmsis-core-m
+</span><span class="gp">-- &gt;</span><span class="w"> </span>micro-os-plus::devices-qemu-cortexm -&gt; micro-os-plus-devices-qemu-cortexm-interface
+<span class="gp">-- &gt;</span><span class="w"> </span>micro-os-plus::device -&gt; micro-os-plus-devices-qemu-cortexm-interface
+<span class="go">-- Adding 'xpacks/micro-os-plus-diag-trace'...
+-- Processing xPack @micro-os-plus/diag-trace@4.1.1...
+</span><span class="gp">-- &gt;</span><span class="w"> </span>micro-os-plus-diag-trace-interface
+<span class="go">-- + -I include
+-- + src/trace.cpp
+</span><span class="gp">-- &gt;</span><span class="w"> </span>micro-os-plus::diag-trace -&gt; micro-os-plus-diag-trace-interface
+<span class="go">-- Adding 'xpacks/micro-os-plus-semihosting'...
+-- Processing xPack @micro-os-plus/semihosting@8.0.0...
+</span><span class="gp">-- &gt;</span><span class="w"> </span>micro-os-plus-semihosting-interface
+<span class="go">-- + -I include
+-- + src/semihosting-startup.cpp
+-- + src/semihosting-syscalls.cpp
+-- + src/semihosting-trace.cpp
+-- + micro-os-plus::diag-trace
+-- + micro-os-plus::architecture
+</span><span class="gp">-- &gt;</span><span class="w"> </span>micro-os-plus::semihosting -&gt; micro-os-plus-semihosting-interface
+<span class="go">-- Adding 'xpacks/micro-os-plus-startup'...
+-- Processing xPack @micro-os-plus/startup@5.2.0...
+</span><span class="gp">-- &gt;</span><span class="w"> </span>micro-os-plus-startup-interface
+<span class="go">-- + -I include
+-- + src/startup.cpp
+-- + src/exit.c
+-- + src/_sbrk.c
+-- + micro-os-plus::diag-trace
+-- + micro-os-plus::architecture
+</span><span class="gp">-- &gt;</span><span class="w"> </span>micro-os-plus::startup -&gt; micro-os-plus-startup-interface
+<span class="go">-- Adding 'xpacks/xpack-3rd-party-arm-cmsis-core'...
+-- Processing xPack @xpack-3rd-party/arm-cmsis-core@5.4.0-6...
+</span><span class="gp">-- &gt;</span><span class="w"> </span>xpack-3rd-party-arm-cmsis-core-m-interface
+<span class="go">-- + -I CMSIS/Core/Include
+-- + -D __PROGRAM_START
+</span><span class="gp">-- &gt;</span><span class="w"> </span>xpack-3rd-party::arm-cmsis-core-m -&gt; xpack-3rd-party-arm-cmsis-core-m-interface
+<span class="gp">-- &gt;</span><span class="w"> </span>xpack-3rd-party-arm-cmsis-core-a-interface
+<span class="go">-- + -I CMSIS/Core_A/Include
+-- + -D __PROGRAM_START
+</span><span class="gp">-- &gt;</span><span class="w"> </span>xpack-3rd-party::arm-cmsis-core-a -&gt; xpack-3rd-party-arm-cmsis-core-a-interface
+<span class="gp">-- &gt;</span><span class="w"> </span>hello-world-interface
+<span class="go">-- + -I include
+-- + src/main.cpp
+</span><span class="gp">-- &gt;</span><span class="w"> </span>app::hello-world -&gt; hello-world-interface
+<span class="go">-- Processing 'platform-qemu-cortex-m7f'...
+</span><span class="gp">-- &gt;</span><span class="w"> </span>platform-qemu-cortex-m7f-interface
+<span class="go">-- + -I include-platform
+-- + -D PLATFORM_QEMU_CORTEX_M7F
+-- + micro-os-plus::devices-qemu-cortexm
+</span><span class="gp">-- &gt;</span><span class="w"> </span>micro-os-plus::platform -&gt; platform-qemu-cortex-m7f-interface
+<span class="gp">-- A&gt;</span><span class="w"> </span>hello-world
+<span class="go">-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/ilg/tmp/my-project/build/qemu-cortex-m7f-cmake-debug
+</span><span class="gp">&gt;</span><span class="w"> </span>xpm run build <span class="nt">--config</span> qemu-cortex-m7f-cmake-debug
+<span class="gp">&gt;</span><span class="w"> </span>cmake <span class="nt">-S</span> <span class="nb">.</span> <span class="nt">-B</span> build/qemu-cortex-m7f-cmake-debug <span class="nt">-G</span> Ninja <span class="nt">-D</span> <span class="nv">CMAKE_BUILD_TYPE</span><span class="o">=</span>Debug <span class="nt">-D</span> <span class="nv">PLATFORM_NAME</span><span class="o">=</span>qemu-cortex-m7f <span class="nt">-D</span> <span class="nv">CMAKE_EXPORT_COMPILE_COMMANDS</span><span class="o">=</span>ON
+<span class="go">-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/ilg/tmp/my-project/build/qemu-cortex-m7f-cmake-debug
+</span><span class="gp">&gt;</span><span class="w"> </span>cmake <span class="nt">--build</span> build/qemu-cortex-m7f-cmake-debug
+<span class="go">[13/13] Linking CXX executable platform-bin/hello-world.elf
+   text	   data	    bss	    dec	    hex	filename
+ 355436	   4744	   8856	 369036	  5a18c	/Users/ilg/tmp/my-project/build/qemu-cortex-m7f-cmake-debug/platform-bin/hello-world.elf
+</span><span class="gp">&gt;</span><span class="w"> </span>xpm run <span class="nb">test</span> <span class="nt">--config</span> qemu-cortex-m7f-cmake-debug
+<span class="gp">&gt;</span><span class="w"> </span><span class="nb">cd </span>build/qemu-cortex-m7f-cmake-debug <span class="o">&amp;&amp;</span> ctest <span class="nt">-V</span>
+<span class="go">UpdateCTestConfiguration  from :/Users/ilg/tmp/my-project/build/qemu-cortex-m7f-cmake-debug/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/Users/ilg/tmp/my-project/build/qemu-cortex-m7f-cmake-debug/DartConfiguration.tcl
+Test project /Users/ilg/tmp/my-project/build/qemu-cortex-m7f-cmake-debug
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: hello-world
+
+1: Test command: /Users/ilg/tmp/my-project/xpacks/.bin/qemu-system-arm "--machine" "mps2-an500" "--cpu" "cortex-m7" "--kernel" "hello-world.elf" "--nographic" "-d" "unimp,guest_errors" "--semihosting-config" "enable=on,target=native,arg=hello-world,arg=M7"
+1: Test timeout computed to be: 10000000
+1:
+1: µOS++ IIIe version 7.x
+1: Copyright (c) 2007-2022 Liviu Ionescu
+1: Built with GCC 11.2.1 20220111, with FP, with exceptions, with MICRO_OS_PLUS_DEBUG
+1:
+1: Heap: @0x20002CB0 (8178 KiB)
+1: micro_os_plus_run_init_array()
+1: main(argc=2, argv=["hello-world", "M7"])
+1:
+1: Hello M7 World!
+1: (in debug mode)
+1:
+1: exit(0)
+1: micro_os_plus_run_fini_array()
+1: _Exit(0)
+1:
+1: Hasta la vista!
+</span><span class="gp">1/1 Test #</span>1: hello-world ......................   Passed    0.75 sec
+<span class="go">
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.75 sec
+ilg@wksi my-project %
+</span></code></pre></div></div>
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2024 Liviu Ionescu. All rights reserved. <br />
+<span>Page last updated:</span> Dec 20, 2024<br/> Site last generated: Dec 20, 2024 <br />
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8WX9T80JEK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8WX9T80JEK');
+</script>
+
+
+</html>

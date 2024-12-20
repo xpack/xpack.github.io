@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The metadata used to describe peripheral registers.">
+<meta name="keywords" content=" ">
+<title>The xPack SVD Definitions | The xPack Build Framework (DEPRECATED)</title>
+<link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
+
+
+<link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
+<link type="application/rss+xml" rel="alternate" title="web-archive-jekyll" href="https://xpack.github.io/feed.xml">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The xPack SVD Definitions | web-archive-jekyll</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="The xPack SVD Definitions" />
+<meta name="author" content="Liviu Ionescu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<meta property="og:description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<link rel="canonical" href="https://xpack.github.io/metadata/xsvd/" />
+<meta property="og:url" content="https://xpack.github.io/metadata/xsvd/" />
+<meta property="og:site_name" content="web-archive-jekyll" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-10-10T17:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The xPack SVD Definitions" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-12-20T19:13:52+00:00","datePublished":"2017-10-10T17:00:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"The xPack SVD Definitions","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/metadata/xsvd/"},"url":"https://xpack.github.io/metadata/xsvd/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?202412202113">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://xpack.github.io/css/customstyles.css?202412202113">
+<link rel="stylesheet" href="https://xpack.github.io/css/boxshadowproperties.css?202412202113">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="https://xpack.github.io/css/theme-blue.css?202412202113">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://xpack.github.io/js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="https://xpack.github.io/js/toc.js"></script>
+<script src="https://xpack.github.io/js/customscripts.js"></script>
+
+<!-- Use absolute URLs, to cover preview cases too -->
+<link rel="shortcut icon" href="https://xpack.github.io/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="https://xpack.github.io/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://xpack.github.io/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://xpack.github.io/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://xpack.github.io/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://xpack.github.io/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://xpack.github.io/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://xpack.github.io/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://xpack.github.io/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://xpack.github.io/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://xpack.github.io/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://xpack.github.io/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://xpack.github.io/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://xpack.github.io/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://xpack.github.io/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://xpack.github.io/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks" style="">
+        <div style="display: inline-block; float: left; margin-top: 8px; margin-left: auto; margin-right: 10px;"><img src="/images/company_logo.png" alt="logo" width="32px" height="32px"/></div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="/">&nbsp;<span class="projectTitle"> The xPack Project</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">News<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="/news/">Latest News</a></li>
+                        
+                        
+                        
+                        <li><a href="/news/archive/">Archive</a></li>
+                        
+                        
+                        
+                        <li><a href="/tags/">Tags</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://xpack-dev-tools.github.io" target="_blank" rel="noopener">xPack Binary Development Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://micro-os-plus.github.io" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Dev Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/micro-os-plus/" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-3rd-party/" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/eclipse-embed-cdt/" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '/search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="The xPack SVD Definitions">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3 sticky" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle"> </li>
+  
+  
+  
+  <li>
+      <a title="Getting Started" href="#">Getting Started</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Intro (xPack 101)" href="/intro/">Intro (xPack 101)</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="CI/CD" href="/ci/">CI/CD</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Install prerequisites" href="/install/">Install prerequisites</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Core Tools" href="#">Core Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/core/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm" href="/xpm/">xpm</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="VS Code Extensions" href="#">VS Code Extensions</a>
+      <ul>
+          
+          
+          
+          <li><a title="xPack C/C++ Build Tools" href="/vscode/">xPack C/C++ Build Tools</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Eclipse" href="#">Eclipse</a>
+      <ul>
+          
+          
+          
+          <li><a class="extern" title="Eclipse Embedded CDT" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Support" href="#">Support</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/support/">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Developer Info" href="#">Developer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/develop/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="How to create a new xPack repo" href="/develop/how-to-new-git/">How to create a new xPack repo</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="JavaScript Style Guide" href="/develop/js-style-guide/">JavaScript Style Guide</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Links" href="/develop/links/">Links</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Maintainer Info" href="#">Maintainer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/maintain/">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Project" href="#">Project</a>
+      <ul>
+          
+          
+          
+          <li><a title="About" href="/project/about/">About</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="History" href="/project/history/">History</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a class="extern" title="License (MIT)" href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">License (MIT)</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise, if placed
+inside customscripts.js, the script runs before the sidebar code runs
+and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">The xPack SVD Definitions</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">The metadata used to describe peripheral registers.
+</div>
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+        
+
+
+   <h2 id="overview">Overview</h2>
+
+<p>The <strong>XSVD</strong> format is a rework of the Arm
+<a href="https://www.keil.com/cmsis/svd">CMSIS SVD</a>, but cleaned, extended and
+rewritten in JSON instead of XML.</p>
+
+<h2 id="file-conventions">File conventions</h2>
+
+<h3 id="json-properties">JSON Properties</h3>
+
+<p>As with any JSON file, the content is basically an object with several properties, represented as <code class="language-plaintext highlighter-rouge">"name": &lt;value&gt;</code>. The values may be strings, objects or arrays of other values.</p>
+
+<h3 id="collections">Collections</h3>
+
+<p>Traditionally, collections are stored in JSON as arrays, which impose no restrictions on the content or uniqueness.</p>
+
+<p>If object names must be unique, collections of named children can be stored as objects (implemented as maps) with names as properties and children objects as values.</p>
+
+<p>To simplify usage, except named children, collections cannot have other properties.</p>
+
+<h3 id="names">Names</h3>
+
+<p>Since some XSVD definitions may be used to support the generation of C/C++ code files (object names may be used to compose type and macro definitions), the names must comply with ANSI C naming restrictions. In particular, they must not contain any spaces or special characters. Hyphens are allowed, but, when used to compose definitions, will be converted to underscores.</p>
+
+<h3 id="values">Values</h3>
+
+<p>All scalar values, even those representing numeric values, should be encoded as strings.</p>
+
+<p>Number constants shall be entered as hex or non-negative decimal integers:</p>
+
+<ul>
+  <li>hexadecimal (<code class="language-plaintext highlighter-rouge">"0x..."</code>)</li>
+  <li>decimal (<code class="language-plaintext highlighter-rouge">"123"</code>)</li>
+</ul>
+
+<h3 id="measuring-units">Measuring units</h3>
+
+<p>Numeric values that may represent values with different units may have the unit explicitly added to the value, after a space separator:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">"width": "32 bits"</code></li>
+  <li><code class="language-plaintext highlighter-rouge">"hfosc": "13800 kHz"</code></li>
+  <li><code class="language-plaintext highlighter-rouge">"lfosc": "32768 Hz"</code></li>
+</ul>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Currently not used.</div>
+
+<h3 id="reset-masks">Reset masks</h3>
+
+<p>In addition to hex values, the strings <code class="language-plaintext highlighter-rouge">all</code> and <code class="language-plaintext highlighter-rouge">none</code> can be used, with the meaning of <code class="language-plaintext highlighter-rouge">0xFF..FF</code> and <code class="language-plaintext highlighter-rouge">0x0</code>.</p>
+
+<h2 id="arrays-and-repetitions">Arrays and repetitions</h2>
+
+<p>Although the original SVD specs treat them together, these are distinct notions.</p>
+
+<h3 id="arrays">Arrays</h3>
+
+<p>Arrays are groups of identical objects that are addressed by a numeric index, starting as zero, as in most programming languages.</p>
+
+<p>An object is considered an array if it has the <code class="language-plaintext highlighter-rouge">arraySize</code> property.</p>
+
+<p>Only register and cluster objects can be grouped in arrays.</p>
+
+<p>When used to generate device peripheral headers, register arrays generate C arrays of integers and cluster arrays generate C arrays os structures.</p>
+
+<p>When used to display the peripheral registers in a debugger, the recommended way to preset arrays is as a group with the object name suffixed by <code class="language-plaintext highlighter-rouge">[]</code>, and below it all array elements, with the names suffixed by the index, like <code class="language-plaintext highlighter-rouge">[0]</code>, <code class="language-plaintext highlighter-rouge">[1]</code>, etc.</p>
+
+<h3 id="repetitions">Repetitions</h3>
+
+<p>Repetitions are a shortcuts to define sequences of similar objects; instead of defining a long list of similar objects, only a generic one is defined, plus a rule how each individual one is named.</p>
+
+<p>An object is considered a repetition if it has the <code class="language-plaintext highlighter-rouge">repeatGenerator</code> property (and it is not an array, so the <code class="language-plaintext highlighter-rouge">repeatGenerator</code> property is ignored for arrays).</p>
+
+<p>By default, the strings defined by the <code class="language-plaintext highlighter-rouge">repeatGenerator</code> are added at the end of the name; if more elaborate names must be generated, the <code class="language-plaintext highlighter-rouge">%s</code> must be used in the desired position in the object name.</p>
+
+<p>The typical <code class="language-plaintext highlighter-rouge">repeatGenerator</code> defines a list of comma separated strings (like <code class="language-plaintext highlighter-rouge">a,b,c</code> or <code class="language-plaintext highlighter-rouge">0,1,2</code>). For numerical values, ranges are also supported (like <code class="language-plaintext highlighter-rouge">0-31</code>).</p>
+
+<p>Only cluster, register and field objects can use repetitions.</p>
+
+<p>Both when used to generate device peripheral headers and when used to display the peripheral registers in a debugger, repetitions generate a sequence of objects, with the names in the order given by the <code class="language-plaintext highlighter-rouge">repeatGenerator</code> property.</p>
+
+<h2 id="differences-from-svd">Differences from SVD</h2>
+
+<p>Although inspired from SVD, the XSVD format is slightly different, taking full advantage of the JSON specifics; as such, XSVD files should be shorter, easier to read and less error prone.</p>
+
+<ul>
+  <li>accept repetitions for fields (benefits: similar fields are easier to read)</li>
+  <li>has explicit separate definitions for repetitions and arrays (benefits: improved readability)</li>
+  <li>has simplified definitions for arrays, no explicit <code class="language-plaintext highlighter-rouge">[%s]</code> needed, added automatically (benefits: simplified definitions, improved readability)</li>
+  <li>has simplified definitions for repetitions, no explicit <code class="language-plaintext highlighter-rouge">%s</code> if at the end, added automatically (benefits: simplified definitions, improved readability)</li>
+  <li>accept <code class="language-plaintext highlighter-rouge">resetValue</code> and <code class="language-plaintext highlighter-rouge">resetMask</code> for fields (benefits: less error prone, improved readability)</li>
+  <li>the <code class="language-plaintext highlighter-rouge">access</code> property was simplified to <code class="language-plaintext highlighter-rouge">["r","w","rw"]</code> (benefits: improved readability)</li>
+  <li>use <code class="language-plaintext highlighter-rouge">busWidth</code> (instead of <code class="language-plaintext highlighter-rouge">&lt;width&gt;</code>) (benefits: less ambiguity)</li>
+  <li>use <code class="language-plaintext highlighter-rouge">regWidth</code> (instead of <code class="language-plaintext highlighter-rouge">&lt;size&gt;</code>) (benefits: less ambiguity)</li>
+  <li>use <code class="language-plaintext highlighter-rouge">repeatIncrement</code> (instead of <code class="language-plaintext highlighter-rouge">&lt;dimIncrement&gt;</code>) (benefits: less ambiguity)</li>
+  <li>use <code class="language-plaintext highlighter-rouge">repeatGenerator</code> (instead of <code class="language-plaintext highlighter-rouge">&lt;dimIndex&gt;</code>) (benefits: less ambiguity)</li>
+  <li>use <code class="language-plaintext highlighter-rouge">arraySize</code> (instead of <code class="language-plaintext highlighter-rouge">&lt;dim&gt;</code>) (benefits: less ambiguity)</li>
+  <li>use <code class="language-plaintext highlighter-rouge">supplier</code> (instead of <code class="language-plaintext highlighter-rouge">&lt;vendor&gt;</code>) (benefits: more generic)</li>
+</ul>
+
+<hr />
+
+<h2 id="objects">Objects</h2>
+
+<p>The XSVD file is a hierarchy of objects, with the JSON root on top.</p>
+
+<h3 id="the-root-object">The root object</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">schemaVersion</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The version is used by the parser to identify different file formats.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">contentVersion</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The content version; increase it with each change.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">headerVersion</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The version to be used in the generated header; it generally follows <code class="language-plaintext highlighter-rouge">contentVersion</code>, but may change if the header is regenerated with a new version of <code class="language-plaintext highlighter-rouge">xsvd</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">devices</code></td>
+      <td style="text-align: left">collection</td>
+      <td style="text-align: left">A map of device objects. Device names are internal IDs used to refer to the device; externally use the device <code class="language-plaintext highlighter-rouge">displayName</code>; must be unique among all files.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">generators</code></td>
+      <td style="text-align: left">array</td>
+      <td style="text-align: left">Array of generator objects describing the tools that generated/modified the current file.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Example</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"schemaVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.2.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"devices"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"fe310-g000"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="the-device-object">The <em>device</em> object</h3>
+
+<p>The device is the top-most object, and contains one or more peripherals.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">The <code class="language-plaintext highlighter-rouge">devices</code> collection, a property of the root object.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">revision</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The silicon revision, usually in <code class="language-plaintext highlighter-rouge">r0p0</code> format.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">displayName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A short string to externally identify the device. Must be unique among all files. If missing, the internal name (the map key) is used.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">headerName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A short string to be used when referring to the device in a header file. Must be unique among all files. If missing, the <code class="language-plaintext highlighter-rouge">displayName</code> or the internal name (the map key) is used.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">description</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A long string to describe the main features of the device.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">supplier</code></td>
+      <td style="text-align: left">object</td>
+      <td style="text-align: left">The device supplier.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">busWidth</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The width of the maximum single data transfer supported by the bus infrastructure, in bits. This information is relevant for debuggers when accessing registers, because it might be required to issue multiple accesses for resources of a bigger size.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">regWidth</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">Default width of any register contained in the device, in bits.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">access</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">Default access rights for all registers. Values: <code class="language-plaintext highlighter-rouge">["r","w","rw"]</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">resetMask</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The register bits that have a defined reset value.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">resetValue</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">Default value for all registers at RESET.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">headerGuardPrefix</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The prefix to be used in the header guard macro.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">headerTypePrefix</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The prefix to be used in type definitions.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">headerInterruptPrefix</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The prefix to be used in interrupt definitions.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">headerInterruptEnumPrefix</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The prefix to be used in the name of the interrupt enum.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">numInterrupts</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The total number of interrupts. Some platforms, like RISC-V start the count at 1.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">priorityBits</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The number of bits available in the Interrupt Controller for configuring priorities.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">cores</code></td>
+      <td style="text-align: left">collection</td>
+      <td style="text-align: left">A map of core objects. The keys are internal IDs used to refer to the cores.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">peripherals</code></td>
+      <td style="text-align: left">collection</td>
+      <td style="text-align: left">A map of peripheral objects. The keys are internal IDs used to refer to the peripherals; externally use the <code class="language-plaintext highlighter-rouge">displayName</code>; must be unique among devices.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Example</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"devices"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"fe310-g000"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Freedom E310-G000"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The FE310-G000 is the first Freedom E300 SoC, ..."</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"busWidth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"regWidth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"resetValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x00000000"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"resetMask"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xFFFFFFFF"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"access"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rw"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"peripherals"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="the-supplier-object">The <em>supplier</em> object</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">A <strong>device</strong> object.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The device supplier.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">name</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The supplier short name; a single word that uses only legal variable characters.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">id</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The supplier numeric id; should not change over time.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">displayName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A short string to externally identify the supplier.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">fullName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A longer string to externally identify the supplier, like official company name.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">contact</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">Contact information.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="the-cores-object">The <em>cores</em> object</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">A <strong>device</strong> object.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Most of the properties are descriptive, and currently do not participate in code generation.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">harts</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The number of hardware threads per core. The default is 1.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">isa</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A short string to define the Instruction Set Architecture.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">isaVersion</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A short string to define the Instruction Set Architecture.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">mpu</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A string that indicate whether the core is equipped with a memory protection unit (MPU). Accepted values are <code class="language-plaintext highlighter-rouge">true/false</code> or custom names, for example, for RISC-V use ‘pmp’. If no MPU is present, <code class="language-plaintext highlighter-rouge">none</code> is also accepted.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">mmu</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A string that indicate whether the core is equipped with a memory management unit (MMU). Accepted values are <code class="language-plaintext highlighter-rouge">true/false</code> or custom names, for example, for RISC-V use ‘sv32/sv39/sv48’. If no MMU is present, <code class="language-plaintext highlighter-rouge">none</code> is also accepted.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">numLocalInterrupts</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The total number of local interrupts (specific to a core). Some platforms, like RISC-V always have at least 16 interrupts.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">localInterrupts</code></td>
+      <td style="text-align: left">collection</td>
+      <td style="text-align: left">A map of interrupt objects.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="the-peripheral-object">The <em>peripheral</em> object</h3>
+
+<p>At least one peripheral must be defined.</p>
+
+<p>Each peripheral describes all registers belonging to that peripheral.
+Each peripheral has a memory block where the registers are allocated, defined as a base address and a size.
+Register addresses are specified relative to the base address of a peripheral.</p>
+
+<p>Multiple similar peripherals sharing a common name can be defined as repetitions using the <code class="language-plaintext highlighter-rouge">repeatGenerator</code> property; for example instead of defining <code class="language-plaintext highlighter-rouge">GPIOA</code>, <code class="language-plaintext highlighter-rouge">GPIOB</code>, <code class="language-plaintext highlighter-rouge">GPIOC</code>, use <code class="language-plaintext highlighter-rouge">GPIO%s</code> (or simply <code class="language-plaintext highlighter-rouge">GPIO</code>, since <code class="language-plaintext highlighter-rouge">%s</code> at the end is default) and define separate generators like <code class="language-plaintext highlighter-rouge">A,B,C</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">repeatIncrement</code> property specifies the address offset between two peripherals.</p>
+
+<p>To create copies of a peripheral using different names, use the <code class="language-plaintext highlighter-rouge">derivedFrom</code> property.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">The <code class="language-plaintext highlighter-rouge">peripherals</code> property of a <strong>device</strong> object.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">derivedFrom</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The peripheral name from which to inherit properties. Subsequent properties override inherited values.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">displayName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A short string to externally identify the peripheral. Must be unique among the device. If missing, the internal name (the map key) is used.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">headerName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A short string to be used when referring to the peripheral in a header file. Must be unique among the device. If missing, the <code class="language-plaintext highlighter-rouge">displayName</code> or the internal name (the map key) is used.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">description</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A long string to describe the peripheral.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">groupName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">Define a name for several related peripherals; used when generating types.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">baseAddress</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The lowest address of the memory block used by the peripheral.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">size</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The size in bytes of the memory block used by the peripheral.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">regWidth</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">Default width of any register contained in the peripheral, in bits.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">access</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">Default access rights for all peripheral registers. Values: <code class="language-plaintext highlighter-rouge">["r","w","rw"]</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">resetMask</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The register bits that have a defined reset value.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">resetValue</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">Default value for all peripheral registers at RESET.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">repeatIncrement</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The address increment, in bytes, between two neighbouring peripherals in a repetition or an array.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">repeatGenerator</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A generator of strings that substitute the placeholder <code class="language-plaintext highlighter-rouge">%s</code> within the <code class="language-plaintext highlighter-rouge">displayName</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">groupName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">Define a name under which the Peripheral Registers Viewer is showing this peripheral.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">headerStructName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">Specify the base name of C structures. The header file generator uses the peripheral <code class="language-plaintext highlighter-rouge">displayName</code> as the base name for the C structure type. If <code class="language-plaintext highlighter-rouge">headerStructName</code> is specified, then this string is used instead of the peripheral name; useful when multiple peripherals get derived and a generic type name should be used.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">clusters</code></td>
+      <td style="text-align: left">collection</td>
+      <td style="text-align: left">A map of cluster objects. The keys are internal IDs used to refer to the clusters; externally use the cluster name.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">registers</code></td>
+      <td style="text-align: left">collection</td>
+      <td style="text-align: left">A map of register objects. The keys are internal IDs used to refer to the registers; externally use the <code class="language-plaintext highlighter-rouge">displayName</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">interrupts</code></td>
+      <td style="text-align: left">collection</td>
+      <td style="text-align: left">A peripheral can have multiple associated interrupts. This entry allows the debugger to show interrupt names instead of interrupt numbers.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"peripherals"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"clint"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Coreplex-Local Interruptor (CLINT)"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"baseAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x02000000"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x10000"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"registers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="the-cluster-object">The <em>cluster</em> object</h3>
+
+<p>A cluster describes a sequence of neighbouring registers within a peripheral. A cluster specifies the <code class="language-plaintext highlighter-rouge">addressOffset</code> relative to the <code class="language-plaintext highlighter-rouge">baseAddress</code> of the grouping element. All register objects within a cluster specify their <code class="language-plaintext highlighter-rouge">addressOffset</code> relative to the cluster base address (peripheral.baseAddress + cluster.addressOffset).</p>
+
+<p>Nested clusters express hierarchical structures of registers. It is targeted at the generation of device header files to create a C-data structure within the peripheral structure instead of a flat list of registers. It is also possible to specify an array of a clusters using the <code class="language-plaintext highlighter-rouge">arraySize</code> property.</p>
+
+<p>Multiple identical clusters can be grouped in arrays. The size of the array is specified by the <code class="language-plaintext highlighter-rouge">arraySize</code> property.</p>
+
+<p>Multiple similar clusters sharing a common name can be defined as repetitions using the <code class="language-plaintext highlighter-rouge">repeatGenerator</code> property.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">repeatIncrement</code> property specifies the offset in bytes between two clusters. If not specified, the cluster size is used.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">The <code class="language-plaintext highlighter-rouge">clusters</code> property of a <strong>cluster</strong> or <strong>peripheral</strong> object.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">derivedFrom</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The cluster name from which to inherit properties. Subsequent properties override inherited values.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">displayName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A short string to externally identify the cluster. Must be unique among the parent object. If missing, the internal name (the map key) is used. For repetitions, use the placeholder <code class="language-plaintext highlighter-rouge">%s</code>, which is replaced by strings from <code class="language-plaintext highlighter-rouge">repeatGenerator</code>; if missing, <code class="language-plaintext highlighter-rouge">%s</code> will be added at the end. For arrays, the placeholder <code class="language-plaintext highlighter-rouge">[%s]</code> will be automatically added at the end.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">headerName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A short string to be used when referring to the cluster in a header file. Must be unique among the parent object. If missing, the <code class="language-plaintext highlighter-rouge">displayName</code> or the internal name (the map key) is used. Same rules for <code class="language-plaintext highlighter-rouge">%s</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">description</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A long string to describe the register.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">addressOffset</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The address offset relative to the enclosing element (peripheral or cluster).</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">regWidth</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The width of the register, in bits.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">access</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">Default access rights for the register. Values: <code class="language-plaintext highlighter-rouge">["r","w","rw"]</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">resetMask</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The register bits that have a defined reset value.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">resetValue</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">Default value for the register at RESET.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">repeatIncrement</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The address increment, in bytes, between two neighbouring clusters in a repetition or an array.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">repeatGenerator</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A generator of strings that substitute the placeholder <code class="language-plaintext highlighter-rouge">%s</code> within the <code class="language-plaintext highlighter-rouge">displayName</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">arraySize</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The size of the array of clusters.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">clusters</code></td>
+      <td style="text-align: left">collection</td>
+      <td style="text-align: left">A map of cluster objects. The keys are internal IDs used to refer to the clusters; externally use the cluster name.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">registers</code></td>
+      <td style="text-align: left">collection</td>
+      <td style="text-align: left">A map of register objects. The keys are internal IDs used to refer to the registers; externally use the <code class="language-plaintext highlighter-rouge">displayName</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"clusters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"target-enables"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"target-enables[%s]"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"arraySize"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hart M-Mode interrupt enable bits"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"addressOffset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x0C002000"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"repeatIncrement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x20"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"registers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"targets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"targets[%s]"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"arraySize"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hart M-Mode interrupt thresholds"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"addressOffset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x0C200000"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"repeatIncrement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x8"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"registers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+   </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="the-register-object">The <em>register</em> object</h3>
+
+<p>The description of registers is the most important part of this file format. If the properties <code class="language-plaintext highlighter-rouge">regWidth</code>, <code class="language-plaintext highlighter-rouge">access</code>, <code class="language-plaintext highlighter-rouge">resetValue</code>, and <code class="language-plaintext highlighter-rouge">resetMask</code> have not been specified on a higher level, then these properties are mandatory on register level.</p>
+
+<p>A register can represent a single value or can be subdivided into individual bit-fields of specific functionality and semantics. From a schema perspective, the property <code class="language-plaintext highlighter-rouge">fields</code> is optional, however, from a specification perspective, <code class="language-plaintext highlighter-rouge">fields</code> are mandatory when they are described in the device documentation.</p>
+
+<p>Multiple identical registers can be grouped in arrays. The size of the array is specified by the <code class="language-plaintext highlighter-rouge">arraySize</code> property.</p>
+
+<p>Multiple similar registers sharing a common name can be defined as repetitions using the <code class="language-plaintext highlighter-rouge">repeatGenerator</code> property.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">repeatIncrement</code> property specifies the offset in bytes between two registers. If not specified, the register width is used.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">The <code class="language-plaintext highlighter-rouge">registers</code> property of a <strong>cluster</strong> or <strong>peripheral</strong> object.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">derivedFrom</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The register name from which to inherit properties. Subsequent properties override inherited values.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">displayName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A short string to externally identify the register. Must be unique among the parent. If missing, the internal name (the map key) is used. For repetitions, use the placeholder <code class="language-plaintext highlighter-rouge">%s</code>, which is replaced by strings from <code class="language-plaintext highlighter-rouge">repeatGenerator</code>; if missing, <code class="language-plaintext highlighter-rouge">%s</code> will be added at the end. For arrays, the placeholder <code class="language-plaintext highlighter-rouge">[%s]</code> will be automatically added at the end.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">headerName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A short string to be used when referring to the register in a header file. Must be unique among the parent object. If missing, the <code class="language-plaintext highlighter-rouge">displayName</code> or the internal name (the map key) is used. Same rules for <code class="language-plaintext highlighter-rouge">%s</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">description</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A long string to describe the register.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">addressOffset</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The address offset relative to the enclosing element (peripheral or cluster).</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">regWidth</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The width of the register, in bits.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">access</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">Default access rights for the register. Values: <code class="language-plaintext highlighter-rouge">["r","w","rw"]</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">resetMask</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The register bits that have a defined reset value.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">resetValue</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">Default value for the register at RESET.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">repeatGenerator</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A generator of strings that substitute the placeholder <code class="language-plaintext highlighter-rouge">%s</code> within the <code class="language-plaintext highlighter-rouge">displayName</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">arraySize</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The size of the array of registers.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">fields</code></td>
+      <td style="text-align: left">collection</td>
+      <td style="text-align: left">A map of field objects. The keys are internal IDs used to refer to the fields; externally use the <code class="language-plaintext highlighter-rouge">displayName</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+   </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"registers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"msip0"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MSIP for hart 0"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"addressOffset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x0000"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"mtimecmp0"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Timer compare register for hart 0"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"addressOffset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x4000"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"regWidth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"64"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"mtime"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Timer register"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"addressOffset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xBFF8"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"access"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ro"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"regWidth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"64"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+   </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="the-field-object">The <em>field</em> object</h3>
+
+<p>A bit-field has a name that is unique within the register. The position and size within the register can be described as
+the lsb and the bit-width of the field.</p>
+
+<p>Multiple similar fields sharing a common name can be defined as repetitions using the <code class="language-plaintext highlighter-rouge">repeatGenerator</code> property.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">repeatIncrement</code> property specifies the offset in bits between two bit-fields. If not specified, the bit-field width is used.</p>
+
+<p>A field may define an enumeration in order to make the display more intuitive to read.</p>
+
+<p>The field names <code class="language-plaintext highlighter-rouge">mask</code>, <code class="language-plaintext highlighter-rouge">position</code> and <code class="language-plaintext highlighter-rouge">offset</code> are reserved.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Array of fields are currently not implemented.</div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">The <code class="language-plaintext highlighter-rouge">fields</code> property of a  <strong>cluster</strong> or <strong>peripheral</strong> object.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">parent</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">A cluster object or a peripheral object</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">derivedFrom</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The field name from which to inherit properties. Subsequent properties override inherited values.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">displayName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A short string to externally identify the field. Must be unique among the register. If missing, the internal name (the map key) is used. For repetitions, use the placeholder <code class="language-plaintext highlighter-rouge">%s</code>, which is replaced by strings from <code class="language-plaintext highlighter-rouge">repeatGenerator</code>; if missing, <code class="language-plaintext highlighter-rouge">%s</code> will be added at the end.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">headerName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A short string to be used when referring to the field in a header file. Must be unique among the parent object. If missing, the <code class="language-plaintext highlighter-rouge">displayName</code> or the internal name (the map key) is used. Same rules for <code class="language-plaintext highlighter-rouge">%s</code>. If empty, the header lines associated with this field will not be generated.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">description</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A long string to describe the field.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">bitOffset</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The position of the least significant bit of the field within the register.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">bitWidth</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The bit-width of the field within the register.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">access</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">Default access rights for the register. Values: <code class="language-plaintext highlighter-rouge">["r","w","rw"]</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">resetMask</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The field bits that have a defined reset value.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">resetValue</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">Default value for the field at RESET.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">repeatIncrement</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The offset increment, in bits, between two neighbouring fields in a repetition.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">repeatGenerator</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A generator of strings that substitute the placeholder <code class="language-plaintext highlighter-rouge">%s</code> within the <code class="language-plaintext highlighter-rouge">displayName</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">enumerations</code></td>
+      <td style="text-align: left">collection</td>
+      <td style="text-align: left">A map of enumeration objects. The key is the enumeration name. In the current version, only the first object is used, all the other are ignored.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Example</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"fields"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Transmit data"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"bitOffset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"bitWidth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"full"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Transmit FIFO full"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"bitOffset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"31"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"bitWidth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="the-enumeration-object">The <em>enumeration</em> object</h3>
+
+<p>The concept of enumerated values creates a map between unsigned integers and an identifier string. In addition, a description string can be associated with each entry in the map.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">0</code> ↔︎ disabled → “The clock source clk0 is turned off.”</li>
+  <li><code class="language-plaintext highlighter-rouge">1</code> ↔︎ enabled  → “The clock source clk1 is running.”</li>
+  <li><code class="language-plaintext highlighter-rouge">*</code> ↔︎ reserved → “Reserved values. Do not use.”</li>
+</ul>
+
+<p>This information generates an enum in the device header file. The debugger may use this information to display the identifier string as well as the description. Just like symbolic constants making source code more readable, the system view in the debugger becomes more instructive. The detailed description can provide reference manual level details within the debugger.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">The <code class="language-plaintext highlighter-rouge">enumerations</code> property of a <strong>field</strong> object.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">derivedFrom</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The enumeration name from which to inherit properties. Subsequent properties override inherited values.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">displayName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A short string to externally identify the enumeration. Must be unique among the enumerations. If missing, the internal name (the map key) is used.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">headerName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A short string to be used when referring to the enumeration in a header file. Must be unique among the parent object. If missing, the <code class="language-plaintext highlighter-rouge">displayName</code> or the internal name (the map key) is used.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">description</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A long string to describe the enumeration.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">headerEnumName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">An alternate identifier for the enumeration section when used to generate the device header. The default is the hierarchical enumeration type in the device header file. The user is responsible for the uniqueness across the device.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">values</code></td>
+      <td style="text-align: left">collection</td>
+      <td style="text-align: left">A map of enumerated values objects. The map keys are the enumeration numeric values (unsigned integers).</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> <code class="language-plaintext highlighter-rouge">derivedFrom</code> is not yet implemented.</div>
+
+<p>Example</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"enumerations"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"clk-src-enum"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Clock source"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Values to select the clock source."</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"0"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"disabled"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The clock source clk0 is turned off."</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="nl">"1"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"enabled"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The clock source clk1 is running."</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="nl">"*"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reserved"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reserved values. Do not use."</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="the-enumerated-value-object">The <em>enumerated value</em> object</h3>
+
+<p>An enumerated value defines a map between an unsigned integer (the map key) and a string.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">The <code class="language-plaintext highlighter-rouge">values</code> property of an <strong>enumeration</strong> object.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">displayName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A short string to externally describe the semantics of the value. Usually displayed together with the value.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">headerName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A short string to be used when referring to the enumeration value in a header file. Must be unique among the parent object. If missing, the <code class="language-plaintext highlighter-rouge">displayName</code> or the internal name (the map key) is used.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">description</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A long string to describe the value.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="the-interrupt-object">The <em>interrupt</em> object</h3>
+
+<p>A peripheral can have multiple interrupts. This object allows the debugger to show interrupt names instead of interrupt numbers.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">The <code class="language-plaintext highlighter-rouge">interrupts</code> property of a <strong>peripheral</strong> object.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">displayName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A short string to externally identify the interrupt. Must be unique among all interrupts. If missing, the internal name (the map key) is used.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">headerName</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A short string to be used when referring to the interrupt in a header file. Must be unique among the parent object. If missing, the <code class="language-plaintext highlighter-rouge">displayName</code> or the internal name (the map key) is used.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">description</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A long string to describe the interrupt.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">value</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The enumeration index value associated to the interrupt.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Example</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"interrupts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"uart0"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UART0 global interrupt"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"headerName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"riscv_interrupt_global_handle_uart0"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="the-generator-object">The <em>generator</em> object</h3>
+
+<p>This is an informative object, used to trace which tools generated or modified the XSVD file.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">The root object.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Properties</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">tool</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A string describing the tool.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">version</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">The tool version, as returned by <code class="language-plaintext highlighter-rouge">--version</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">command</code></td>
+      <td style="text-align: left">string[]</td>
+      <td style="text-align: left">Array of strings, the full command with all parameters.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">date</code></td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">A string with the date, in ISO format.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Example</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"generators"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"tool"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xcdl"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.6.2"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"svd-convert"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"--file"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"/Users/ilg/Library/xPacks/Keil/STM32F0xx_DFP/1.5.0/SVD/STM32F0x1.svd"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"--output"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"STM32F0x1-xsvd.json"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-12-14T22:50:48.956Z"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="revision-history">Revision history</h2>
+
+<p>The format version is reflected in the <code class="language-plaintext highlighter-rouge">schemaVersion</code> property, present in the root object. The value of this property follows the semantic versioning requirements (<a href="https://semver.org">semver</a>).</p>
+
+<p>Versions are listed in reverse chronological order.</p>
+
+<h4 id="v024-2017-12-06">v0.2.4 (2017-12-06)</h4>
+
+<ul>
+  <li>use <code class="language-plaintext highlighter-rouge">enumerations</code> (plural); deprecate <code class="language-plaintext highlighter-rouge">enumeration</code></li>
+  <li>add <code class="language-plaintext highlighter-rouge">headerName</code> to differentiate from <code class="language-plaintext highlighter-rouge">displayName</code>; empty means <em>do not generate header line</em></li>
+  <li>deprecate <code class="language-plaintext highlighter-rouge">headerIrqName</code> in interrupts</li>
+  <li>use <code class="language-plaintext highlighter-rouge">supplier</code> instead of <code class="language-plaintext highlighter-rouge">vendor</code> (rename object)</li>
+  <li>add <code class="language-plaintext highlighter-rouge">fullName</code> to the supplier object</li>
+</ul>
+
+<h4 id="v023-2017-10-27">v0.2.3 (2017-10-27)</h4>
+
+<ul>
+  <li>add <code class="language-plaintext highlighter-rouge">headerGuardPrefix</code> to <code class="language-plaintext highlighter-rouge">device</code></li>
+</ul>
+
+<h4 id="v022-2017-10-23">v0.2.2 (2017-10-23)</h4>
+
+<ul>
+  <li>increase <code class="language-plaintext highlighter-rouge">schemaVersion</code> to 0.2.2</li>
+  <li>add top <code class="language-plaintext highlighter-rouge">headerVersion</code></li>
+  <li>add <code class="language-plaintext highlighter-rouge">headerInterruptPrefix</code> to <code class="language-plaintext highlighter-rouge">device</code></li>
+  <li>add <code class="language-plaintext highlighter-rouge">headerInterruptEnumPrefix</code> to <code class="language-plaintext highlighter-rouge">device</code></li>
+  <li>add <code class="language-plaintext highlighter-rouge">numInterrupts</code> to <code class="language-plaintext highlighter-rouge">device</code></li>
+  <li>add <code class="language-plaintext highlighter-rouge">priorityBits</code> to <code class="language-plaintext highlighter-rouge">device</code></li>
+  <li>remove unused <code class="language-plaintext highlighter-rouge">cpu</code> from <code class="language-plaintext highlighter-rouge">device</code></li>
+  <li>add <code class="language-plaintext highlighter-rouge">cores</code> to <code class="language-plaintext highlighter-rouge">device</code></li>
+  <li>remove <code class="language-plaintext highlighter-rouge">type</code> from <code class="language-plaintext highlighter-rouge">interrupt</code>; local interrupts are now defined per core</li>
+</ul>
+
+<h4 id="v021-2017-10-18">v0.2.1 (2017-10-18)</h4>
+
+<ul>
+  <li>increase <code class="language-plaintext highlighter-rouge">schemaVersion</code> to 0.2.1</li>
+  <li>rename top <code class="language-plaintext highlighter-rouge">version</code> to <code class="language-plaintext highlighter-rouge">contentVersion</code></li>
+  <li>rename device <code class="language-plaintext highlighter-rouge">version</code> to <code class="language-plaintext highlighter-rouge">siliconVersion</code></li>
+  <li>add <code class="language-plaintext highlighter-rouge">groupName</code> to peripheral</li>
+  <li>the content of <code class="language-plaintext highlighter-rouge">access</code> was changed to [“r”,”w”,”rw”]</li>
+  <li><code class="language-plaintext highlighter-rouge">repeatIncrement</code> ignored for register</li>
+  <li>add <code class="language-plaintext highlighter-rouge">headerTypePrefix</code> to device</li>
+  <li>add <code class="language-plaintext highlighter-rouge">vendor</code> to device</li>
+</ul>
+
+<h4 id="v020-2017-10-11">v0.2.0 (2017-10-11)</h4>
+
+<p>First formal specifications defined. Used to define the SiFive devices (like the FE310-G000, the first RISC-V physical device).</p>
+
+<h4 id="v010-2016-12-14">v0.1.0 (2016-12-14)</h4>
+
+<p>Initial version, a direct correspondence to the Arm SVD format. Firstly implemented by the xcdl program used by GNU Arm Eclipse QEMU.</p>
+
+<h2 id="todo">TODO</h2>
+
+<ul>
+  <li>clarify how multi-core devices can be described</li>
+  <li>clarify if the <code class="language-plaintext highlighter-rouge">cpu</code> object is needed, since most of its definitions are already in the <code class="language-plaintext highlighter-rouge">device-xcdl.json</code> file</li>
+  <li>define where the interrupt names are added</li>
+  <li>define the QEMU mode bits, that define if unaligned or smaller size accesses are allowed.</li>
+</ul>
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2024 Liviu Ionescu. All rights reserved. <br />
+<span>Page last updated:</span> Dec 20, 2024<br/> Site last generated: Dec 20, 2024 <br />
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8WX9T80JEK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8WX9T80JEK');
+</script>
+
+
+</html>

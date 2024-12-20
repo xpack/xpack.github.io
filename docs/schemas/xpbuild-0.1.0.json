@@ -1,0 +1,461 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://xcdl.github.io/schemas/xpbuild-0.1.0.json",
+  "title": "xpbuild JSON schema",
+  "description": "The JSON schema definitions for the xPack basic builder files.",
+  "type": "object",
+  "$defs": {
+    "nonEmptyStringType": {
+      "type": "string",
+      "minLength": 1
+    },
+    "descriptionType": {
+      "description": "A longer string to be displayed in the UI to explain the purpose of the object.",
+      "$ref": "#/$defs/nonEmptyStringType"
+    },
+    "semverType": {
+      "description": "A string representing a version that follows the semver requirements.",
+      "type": "string",
+      "pattern": "[0-9]+[.][0-9]+[.][0-9]+",
+      "minLength": 5,
+      "examples": [
+        "1.2.3"
+      ],
+      "$comment": "See https://semver.org; non negative integers, no leading zeroes."
+    },
+    "artefactType": {
+      "description": "An object with the project artefact details.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "executable",
+            "staticLib",
+            "sharedLib"
+          ]
+        },
+        "name": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "outputPrefix": {
+          "type": "string"
+        },
+        "outputSuffix": {
+          "type": "string"
+        },
+        "extension": {
+          "type": "string"
+        }
+      }
+    },
+    "commandType": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/nonEmptyStringType"
+      }
+    },
+    "arrayOfOptionsType": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/nonEmptyStringType"
+      }
+    },
+    "arrayOfPathsType": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/nonEmptyStringType"
+      }
+    },
+    "arrayOfSymbolsType": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/nonEmptyStringType"
+      }
+    },
+    "toolchainType": {
+      "description": "An object with the toolcahin definition.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "parent": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "commandPrefix": {
+          "type": "string"
+        },
+        "commandSuffix": {
+          "type": "string"
+        },
+        "descriptionPrefix": {
+          "type": "string"
+        },
+        "objectExtension": {
+          "type": "string"
+        },
+        "makeObjectsVariable": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        },
+        "tools": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/toolType"
+          }
+        }
+      }
+    },
+    "optionsType": {
+      "type": "object",
+      "properties": {
+        "addArchitecture": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "removeArchitecture": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "addDebugging": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "removeDebugging": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "addOptimizations": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "removeOptimizations": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "addWarnings": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "removeWarnings": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "addMiscellaneous": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "removeMiscellaneous": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        }
+      }
+    },
+    "toolType": {
+      "type": "object",
+      "properties": {
+        "addSourceFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "removeSourceFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "addIncludeFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "removeIncludeFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "addDiscoveryFolders": {
+          "$ref": "#/$defs/arrayOfPathsType",
+          "$comment": "???"
+        },
+        "removeDiscoveryFolders": {
+          "$ref": "#/$defs/arrayOfPathsType",
+          "$comment": "???"
+        },
+        "addSymbols": {
+          "$ref": "#/$defs/arrayOfSymbolsType"
+        },
+        "removeSymbols": {
+          "$ref": "#/$defs/arrayOfSymbolsType"
+        },
+        "addDebugging": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "removeDebugging": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "addOptimizations": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "removeOptimizations": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "addWarnings": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "removeWarnings": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "addMiscellaneous": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "removeMiscellaneous": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "commandName": {
+          "type": "string"
+        },
+        "options": {
+          "type": "string"
+        },
+        "deps": {
+          "type": "string"
+        },
+        "outputFlag": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "fileExtensions": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/fileExtensionType"
+          }
+        }
+      }
+    },
+    "fileExtensionType": {
+      "type": "object",
+      "properties": {
+        "prefix": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        }
+      }
+    },
+    "targetPlatformType": {
+      "type": "object",
+      "properties": {
+        "crossBuildPlatforms": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nonEmptyStringType"
+          }
+        },
+        "artefact": {
+          "$ref": "#/$defs/artefactType"
+        },
+        "excludedSourcePaths": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "addSourceFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "removeSourceFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "addIncludeFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "removeIncludeFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "addSymbols": {
+          "$ref": "#/$defs/arrayOfSymbolsType"
+        },
+        "removeSymbols": {
+          "$ref": "#/$defs/arrayOfSymbolsType"
+        },
+        "options": {
+          "$ref": "#/$defs/optionsType"
+        },
+        "language": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        }
+      }
+    },
+    "profileType": {
+      "type": "object",
+      "properties": {
+        "artefact": {
+          "$ref": "#/$defs/artefactType"
+        },
+        "excludedSourcePaths": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "addSourceFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "removeSourceFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "addIncludeFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "removeIncludeFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "addSymbols": {
+          "$ref": "#/$defs/arrayOfSymbolsType"
+        },
+        "removeSymbols": {
+          "$ref": "#/$defs/arrayOfSymbolsType"
+        },
+        "options": {
+          "$ref": "#/$defs/optionsType"
+        },
+        "language": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        }
+      }
+    },
+    "sourceFoldersExtrasType": {
+      "type": "object",
+      "properties": {
+        "excludedSourcePaths": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "addIncludeFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "removeIncludeFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "addSymbols": {
+          "$ref": "#/$defs/arrayOfSymbolsType"
+        },
+        "removeSymbols": {
+          "$ref": "#/$defs/arrayOfSymbolsType"
+        },
+        "buildConfigurations": {
+          "$ref": "#/$defs/buildConfigurationsType"
+        }
+      }
+    },
+    "buildConfigurationsType": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/deviceType"
+      }
+    },
+    "buildConfigurationType": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "excludedSourcePaths": {
+            "$ref": "#/$defs/arrayOfPathsType"
+          },
+          "addIncludeFolders": {
+            "$ref": "#/$defs/arrayOfPathsType"
+          },
+          "removeIncludeFolders": {
+            "$ref": "#/$defs/arrayOfPathsType"
+          },
+          "addSymbols": {
+            "$ref": "#/$defs/arrayOfSymbolsType"
+          },
+          "removeSymbols": {
+            "$ref": "#/$defs/arrayOfSymbolsType"
+          }
+        }
+      }
+    },
+    "sourceFilesType": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "addIncludeFolders": {
+            "$ref": "#/$defs/arrayOfPathsType"
+          },
+          "removeIncludeFolders": {
+            "$ref": "#/$defs/arrayOfPathsType"
+          },
+          "addSymbols": {
+            "$ref": "#/$defs/arrayOfSymbolsType"
+          },
+          "removeSymbols": {
+            "$ref": "#/$defs/arrayOfSymbolsType"
+          },
+          "buildConfigurations": {
+            "$ref": "#/$defs/buildConfigurationsType"
+          }
+        }
+      }
+    }
+  },
+  "properties": {
+    "schemaVersion": {
+      "$ref": "#/$defs/semverType"
+    },
+    "name": {
+      "$ref": "#/$defs/nonEmptyStringType"
+    },
+    "artefact": {
+      "$ref": "#/$defs/artefactType"
+    },
+    "artifact": {
+      "$ref": "#/$defs/artefactType",
+      "$comment": "Alias of artefact, with american spelling."
+    },
+    "defaultBuilder": {
+      "$ref": "#/$defs/nonEmptyStringType"
+    },
+    "targetPlatforms": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/targetPlatformType"
+      }
+    },
+    "toolchains": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/toolchainType"
+      }
+    },
+    "profiles": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/profileType"
+      }
+    },
+    "buildConfigurations": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/buildConfigurationType"
+      }
+    },
+    "commands": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/commandsType"
+      }
+    },
+    "addSourceFolders": {
+      "$ref": "#/$defs/arrayOfPathsType"
+    },
+    "removeSourceFolders": {
+      "$ref": "#/$defs/arrayOfPathsType"
+    },
+    "addIncludeFolders": {
+      "$ref": "#/$defs/arrayOfPathsType"
+    },
+    "removeIncludeFolders": {
+      "$ref": "#/$defs/arrayOfPathsType"
+    },
+    "addSymbols": {
+      "$ref": "#/$defs/arrayOfSymbolsType"
+    },
+    "removeSymbols": {
+      "$ref": "#/$defs/arrayOfSymbolsType"
+    },
+    "sourceFolder": {
+      "type": "boolean"
+    },
+    "sourceFolderSettings": {
+      "$ref": "#/$defs/sourceFoldersExtrasType"
+    },
+    "sourceFilesSettings": {
+      "$ref": "#/$defs/sourceFilesExtrasType"
+    },
+    "excludedSourcePaths": {
+      "$ref": "#/$defs/arrayOfPathsType"
+    },
+    "additionalProperties": false
+  }
+}

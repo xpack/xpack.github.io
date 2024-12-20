@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Prerequisites for building xPack binaries | The xPack Build Framework (DEPRECATED)</title>
+<link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
+
+
+<link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
+<link type="application/rss+xml" rel="alternate" title="web-archive-jekyll" href="https://xpack.github.io/feed.xml">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Prerequisites for building xPack binaries | web-archive-jekyll</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Prerequisites for building xPack binaries" />
+<meta name="author" content="Liviu Ionescu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<meta property="og:description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<link rel="canonical" href="https://xpack.github.io/xbb/prerequisites/" />
+<meta property="og:url" content="https://xpack.github.io/xbb/prerequisites/" />
+<meta property="og:site_name" content="web-archive-jekyll" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-07-06T17:55:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Prerequisites for building xPack binaries" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-12-20T19:13:52+00:00","datePublished":"2017-07-06T17:55:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"Prerequisites for building xPack binaries","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/xbb/prerequisites/"},"url":"https://xpack.github.io/xbb/prerequisites/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?202412202113">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://xpack.github.io/css/customstyles.css?202412202113">
+<link rel="stylesheet" href="https://xpack.github.io/css/boxshadowproperties.css?202412202113">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="https://xpack.github.io/css/theme-blue.css?202412202113">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://xpack.github.io/js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="https://xpack.github.io/js/toc.js"></script>
+<script src="https://xpack.github.io/js/customscripts.js"></script>
+
+<!-- Use absolute URLs, to cover preview cases too -->
+<link rel="shortcut icon" href="https://xpack.github.io/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="https://xpack.github.io/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://xpack.github.io/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://xpack.github.io/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://xpack.github.io/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://xpack.github.io/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://xpack.github.io/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://xpack.github.io/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://xpack.github.io/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://xpack.github.io/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://xpack.github.io/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://xpack.github.io/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://xpack.github.io/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://xpack.github.io/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://xpack.github.io/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://xpack.github.io/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks" style="">
+        <div style="display: inline-block; float: left; margin-top: 8px; margin-left: auto; margin-right: 10px;"><img src="/images/company_logo.png" alt="logo" width="32px" height="32px"/></div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="/">&nbsp;<span class="projectTitle"> The xPack Project</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">News<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="/news/">Latest News</a></li>
+                        
+                        
+                        
+                        <li><a href="/news/archive/">Archive</a></li>
+                        
+                        
+                        
+                        <li><a href="/tags/">Tags</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://xpack-dev-tools.github.io" target="_blank" rel="noopener">xPack Binary Development Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://micro-os-plus.github.io" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Dev Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/micro-os-plus/" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-3rd-party/" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/eclipse-embed-cdt/" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '/search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Prerequisites for building xPack binaries">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3 sticky" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle">xPack Build Box </li>
+  
+  
+  
+  <li>
+      <a title="Getting Started" href="#">Getting Started</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/xbb/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li class="active"><a title="Prerequisites" href="/xbb/prerequisites/">Prerequisites</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Linux distro versions" href="/xbb/end-of-support/">Linux distro versions</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Releases" href="/xbb/releases/">Releases</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise, if placed
+inside customscripts.js, the script runs before the sidebar code runs
+and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">Prerequisites for building xPack binaries</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+
+        
+
+
+   <p>The scripts used to build the
+<a href="https://github.com/xpack-dev-tools/">xPack 3rd Party Development Tools</a>
+are based on the
+<a href="https://github.com/xpack/xpack-build-box">xPack Build Box (XBB)</a> v5.1.0.</p>
+
+<p>The build scripts run on <strong>GNU/Linux</strong> and <strong>macOS</strong>.</p>
+
+<p>The <strong>Windows</strong> binaries are generated on Intel GNU/Linux,
+using <a href="https://mingw-w64.org">mingw-w64</a>.</p>
+
+<ul id="profileTabs_1" class="nav nav-tabs">
+    <li class="active"><a href="#macos_1" data-toggle="tab">macOS</a></li>
+    <li><a href="#linux_1" data-toggle="tab">GNU/Linux</a></li>
+</ul>
+<div class="tab-content">
+	<div role="tabpanel" class="tab-pane active" id="macos_1">
+		
+<p>The macOS builds run natively on Intel and Apple Silicon
+machines, and, apart from the usual <strong>Command Line Tools</strong> (provided by
+Apple) and <code class="language-plaintext highlighter-rouge">xpm</code>, the host machine has no other special
+requirements.</p>
+
+<p>The prerequisites are:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">npm</code> (shipped with Node.js; installed via nvm)</li>
+  <li><code class="language-plaintext highlighter-rouge">xpm</code> (installed via <code class="language-plaintext highlighter-rouge">npm</code>)</li>
+  <li>the <strong>Command Line Tools</strong> from Apple</li>
+</ul>
+
+<p>Some build scripts may require <strong>Python 3</strong>. If not already available in the
+standard Apple distribution, install it from Python
+<a href="https://www.python.org/downloads/macos/">downloads</a>.</p>
+
+<p>For development builds, the procedure can be executed on a recent macOS
+version (currently tested up to 12.6).</p>
+
+<p>For production builds it is recommended to use a slightly older version,
+for example <strong>macOS 10.13</strong> is a good compromise.</p>
+
+<p>It is not mandatory to have a physical macOS 10.13 machine, a virtual
+machine is also perfectly fine. Both Parallels and VirtualBox were
+checked and were functional (although VirtualBox was not as stable
+as Parallels).</p>
+
+<p>The build scripts were tested on:</p>
+
+<ul>
+  <li>macOS 12.6.8, running on an Intel MacMini</li>
+  <li>macOS 10.14, running on a Intel NUC NUC8i7BEH</li>
+  <li>macOS 10.13, running inside a Parallels virtual machine</li>
+  <li>macOS 11.7.4, running on an Apple Silicon MacMini</li>
+</ul>
+
+<h2 id="npmxpm">npm/xpm</h2>
+
+<h3 id="quick-instructions">Quick instructions</h3>
+
+<p>If you know what you’re doing and prefer a shortcut, copy/paste the following
+<a href="https://github.com/xpack/assets/blob/master/scripts/install-nvm-node-npm-xpm.sh">script</a>
+into a terminal (otherwise perform the steps one by one).</p>
+
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> For security reasons, conscientious users
+should first check the content of the file before executing it.</div>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-pv</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Downloads/"</span>
+curl <span class="nt">--output</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Downloads/install-nvm-node-npm-xpm.sh"</span> https://raw.githubusercontent.com/xpack/assets/master/scripts/install-nvm-node-npm-xpm.sh
+<span class="nb">cat</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Downloads/install-nvm-node-npm-xpm.sh"</span>
+
+bash <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Downloads/install-nvm-node-npm-xpm.sh"</span>
+
+<span class="nb">exit</span>
+</code></pre></div></div>
+
+<p>This script will install <code class="language-plaintext highlighter-rouge">nvm</code> (the Node Version Manager), <code class="language-plaintext highlighter-rouge">node</code>,
+<code class="language-plaintext highlighter-rouge">npm</code> and <code class="language-plaintext highlighter-rouge">xpm</code>.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> To activate <code class="language-plaintext highlighter-rouge">nvm</code> automatically,
+the script adds several lines
+to the shell initialisation script.</div>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> When running on macOS this script also installs
+the Command Line Tools.</div>
+
+<h3 id="nodenpm">node/npm</h3>
+
+<p><code class="language-plaintext highlighter-rouge">npm</code> is shipped with Node.js, and is required to install <code class="language-plaintext highlighter-rouge">xpm</code>.</p>
+
+<p>For full details on installing Node.js, please see the
+<a href="/install/">xPack prerequisites</a> page.</p>
+
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Be sure you <strong>do not</strong> install npm
+with administrative rights, like via a system package manager;
+use <code class="language-plaintext highlighter-rouge">nvm</code> instead, as instructed, otherwise you will run into
+troubles caused by permissions.</div>
+
+<h3 id="xpm">xpm</h3>
+
+<p><a href="https://xpack.github.io/xpm/"><code class="language-plaintext highlighter-rouge">xpm</code></a> is a portable
+<a href="https://nodejs.org/">Node.js</a> command line application.</p>
+
+<p>If you followed the <em>Quick instructions</em>, it is already installed.</p>
+
+<p>Otherwise, to install it, follow the steps in the
+<a href="/xpm/install/">xpm install</a> page.</p>
+
+<p>If you know what you’re doing and prefer a shortcut,
+issue the following command:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">--global</span> xpm@latest
+</code></pre></div></div>
+
+<h2 id="the-command-line-tools">The Command Line Tools</h2>
+
+<p>The macOS compiler and other development tools are packed in a
+separate Xcode add-on. The best place to get it is from the
+<a href="https://developer.apple.com/xcode/downloads/">Developer</a> site,
+although this might require enrolling to the developer program
+(free of charge).</p>
+
+<p>If you followed the <em>Quick instructions</em>, it is already installed.</p>
+
+<p>Otherwise, the recommended way is to install the Command Line Tools separately
+via a command line:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xcode-select <span class="nt">--install</span>
+<span class="gp">$</span><span class="w"> </span>xcode-select <span class="nt">-p</span>
+<span class="go">/Library/Developer/CommandLineTools
+</span><span class="gp">$</span><span class="w"> </span>gcc <span class="nt">--version</span>
+<span class="go">Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/4.2.1
+Apple clang version 13.0.0 (clang-1300.0.29.3)
+Target: x86_64-apple-darwin20.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+</span></code></pre></div></div>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Xcode alone includes the compiler
+in the Xcode.app folder, which may vary in different versions;
+for a stable configuration it is
+required to install the CommandLineTools package.</div>
+
+<h2 id="no-macos-docker">No macOS Docker</h2>
+
+<p>Due to the specifics of macOS, Docker cannot run natively; instead,
+it uses a GNU/Linux virtual machine running in Apple HyperKit
+(Apple’s virtualization framework), and a file system compatibility
+layer.</p>
+
+<p>The end result is that Docker runs slowly, consumes a lot of memory,
+and is not reliable, so it is not recommended to run the
+Linux/Windows builds on macOS.</p>
+
+
+	</div>
+	<div role="tabpanel" class="tab-pane" id="linux_1">
+		
+<p>The GNU/Linux build scripts use a set
+of <a href="https://www.docker.com">Docker</a>
+images based on older
+and more conservative distributions, to avoid problems when
+attempting to run the executables on older systems.</p>
+
+<p><strong>Any x86_64/aarch64/armhf GNU/Linux distribution that is
+able to run Docker should be fine</strong>; it
+is not necessary to have a physical machine, virtual machines are
+perfectly fine. For better results, dedicate 3-4 cores and 8-12 GB of RAM.</p>
+
+<p>The XBB v5.0.0 Docker images are built on top of <strong>Ubuntu 18 LTS</strong> for both
+Intel and Arm GNU/Linux, which should allow the resulting binaries to
+run on any system based on <strong>GLIBC &gt;= 2.27</strong>.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Building Arm binaries requires
+an Arm machine. A Raspberry Pi 4 8GB equipped with a Samsung Portable T7
+USB 3 SSD is a good solution.</div>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Although Arm 32 binaries can be build
+inside Docker containers running on AArch64 machines,
+it is still recommended to use a 32-bit OS, to avoid issues caused
+by the differences between armv7 and armv8.</div>
+
+<p>The prerequisites are:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">curl</code> (installed via the system package manager)</li>
+  <li><code class="language-plaintext highlighter-rouge">git</code> (installed via the system package manager)</li>
+  <li><code class="language-plaintext highlighter-rouge">docker</code> (preferably a recent one, installed from <strong>docker.com</strong>)</li>
+  <li><code class="language-plaintext highlighter-rouge">npm</code> (shipped with Node.js; installed via <strong>nvm</strong>,
+<strong>not</strong> the system package manager)</li>
+  <li><code class="language-plaintext highlighter-rouge">xpm</code> (installed via <code class="language-plaintext highlighter-rouge">npm</code>)</li>
+</ul>
+
+<p>The build scripts do most of the actual work in a Docker container, and,
+apart from <code class="language-plaintext highlighter-rouge">curl</code>, <code class="language-plaintext highlighter-rouge">git</code> <code class="language-plaintext highlighter-rouge">docker</code> and <code class="language-plaintext highlighter-rouge">xpm</code>, the host machine has no other
+special requirements.</p>
+
+<p>The build scripts were tested on:</p>
+
+<ul>
+  <li>Ubuntu 18.04 LTS, running on an Intel NUC NUC8i7BEH (i7) with 32 GB of RAM</li>
+  <li>Debian 10 (buster), running on an AMD Ryzen 5600G with 32 GB of RAM</li>
+  <li>Raspberry Pi OS 64-bit, running on a Raspberry Pi 4 with 8 GB of RAM</li>
+  <li>Raspberry Pi OS 32-bit, running on a Raspberry Pi 4 with 4 GB of RAM</li>
+</ul>
+
+<h2 id="curl--git">curl &amp; git</h2>
+
+<p>Install <code class="language-plaintext highlighter-rouge">curl</code> &amp; <code class="language-plaintext highlighter-rouge">git</code> using the system package manager.</p>
+
+<p>For example on Ubuntu and Debian derived distributions, use:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">--yes</span> curl git
+</code></pre></div></div>
+
+<h2 id="docker">Docker</h2>
+
+<p>A <strong>recent Docker</strong> is necessary. If your distribution has one,
+probably it can be used,
+but generally it is recommended to update to the latest stable available
+directly from docker.com.</p>
+
+<p>For <strong>any GNU/Linux</strong> distribution, follow the
+<a href="https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#install-using-the-repository">specific instructions</a>.</p>
+
+<p>For example, the steps to install Docker on a modern <strong>Ubuntu</strong> system
+are basically:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get update <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="se">\</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>ca-certificates curl gnupg <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="se">\</span>
+<span class="nb">sudo mkdir</span> <span class="nt">-m</span> 0755 <span class="nt">-p</span> /etc/apt/keyrings <span class="o">&amp;&amp;</span> <span class="se">\</span>
+curl <span class="nt">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg | <span class="nb">sudo </span>gpg <span class="nt">--dearmor</span> <span class="nt">-o</span> /etc/apt/keyrings/docker.gpg <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="se">\</span>
+<span class="nb">echo</span> <span class="se">\</span>
+  <span class="s2">"deb [arch="</span><span class="si">$(</span>dpkg <span class="nt">--print-architecture</span><span class="si">)</span><span class="s2">" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu </span><span class="se">\</span><span class="s2">
+  "</span><span class="si">$(</span><span class="nb">.</span> /etc/os-release <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$VERSION_CODENAME</span><span class="s2">"</span><span class="si">)</span><span class="s2">" stable"</span> | <span class="se">\</span>
+  <span class="nb">sudo tee</span> /etc/apt/sources.list.d/docker.list <span class="o">&gt;</span> /dev/null <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="se">\</span>
+<span class="nb">sudo </span>apt-get update <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+</code></pre></div></div>
+
+<p>To check if the install is functional, run the <em>Hello World</em> image,
+for the moment as <code class="language-plaintext highlighter-rouge">sudo</code>:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>docker run hello-world
+<span class="go">Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+b04784fba78d: Pull complete
+Digest: sha256:f3b3b28a45160805bb16542c9531888519430e9e6d6ffc09d72261b0d26ff74f
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+</span><span class="c">...
+</span></code></pre></div></div>
+
+<h3 id="configure-docker-to-run-as-a-regular-user">Configure Docker to run as a regular user</h3>
+
+<p>To allow Docker to run as a regular user, you need to be a member of
+the <code class="language-plaintext highlighter-rouge">docker</code> group.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>groupadd docker
+<span class="nb">sudo </span>gpasswd <span class="nt">-a</span> <span class="k">${</span><span class="nv">USER</span><span class="k">}</span> docker
+<span class="nb">sudo </span>service docker restart
+</code></pre></div></div>
+
+<p>The above script are for Ubuntu and the Debian family. For other
+distributions, the last line may differ, for example for Arch Linux use:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl restart docker
+</code></pre></div></div>
+
+<p>To make these changes effective, preferably <strong>reboot</strong> the machine.</p>
+
+<p>To check if the configuration change is functional, run the same
+<em>Hello World</em> image without sudo:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>docker run hello-world
+<span class="go">
+Hello from Docker!
+</span><span class="c">...
+</span></code></pre></div></div>
+
+<h3 id="docker-images">Docker images</h3>
+
+<p>The Docker images are available from
+<a href="https://hub.docker.com/u/ilegeul/">Docker Hub</a>. They were build using
+the Dockerfiles available from
+<a href="https://github.com/xpack/xpack-build-box/tree/master/">XBB (xPack Build Box)</a>.</p>
+
+<p>If not already loaded, Docker will load the images at first usage.
+The images are reasonably large, currently below 1 GB.</p>
+
+<p>More details in each script documentation page.</p>
+
+<h2 id="npmxpm">npm/xpm</h2>
+
+<h3 id="quick-instructions">Quick instructions</h3>
+
+<p>If you know what you’re doing and prefer a shortcut, copy/paste the following
+<a href="https://github.com/xpack/assets/blob/master/scripts/install-nvm-node-npm-xpm.sh">script</a>
+into a terminal (otherwise perform the steps one by one).</p>
+
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> For security reasons, conscientious users
+should first check the content of the file before executing it.</div>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-pv</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Downloads/"</span>
+curl <span class="nt">--output</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Downloads/install-nvm-node-npm-xpm.sh"</span> https://raw.githubusercontent.com/xpack/assets/master/scripts/install-nvm-node-npm-xpm.sh
+<span class="nb">cat</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Downloads/install-nvm-node-npm-xpm.sh"</span>
+
+bash <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/Downloads/install-nvm-node-npm-xpm.sh"</span>
+
+<span class="nb">exit</span>
+</code></pre></div></div>
+
+<p>This script will install <code class="language-plaintext highlighter-rouge">nvm</code> (the Node Version Manager), <code class="language-plaintext highlighter-rouge">node</code>,
+<code class="language-plaintext highlighter-rouge">npm</code> and <code class="language-plaintext highlighter-rouge">xpm</code>.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> To activate <code class="language-plaintext highlighter-rouge">nvm</code> automatically,
+the script adds several lines
+to the shell initialisation script.</div>
+
+<h3 id="nodenpm">node/npm</h3>
+
+<p><code class="language-plaintext highlighter-rouge">npm</code> is shipped with Node.js, and is required to install <code class="language-plaintext highlighter-rouge">xpm</code>.</p>
+
+<p>For full details on installing Node.js, please see the
+<a href="/install/">xPack prerequisites</a> page.</p>
+
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Be sure you <strong>do not</strong> install npm
+with administrative rights, like via a system package manager;
+use <code class="language-plaintext highlighter-rouge">nvm</code> instead, as instructed, otherwise you will run into
+troubles caused by permissions.</div>
+
+<h3 id="xpm">xpm</h3>
+
+<p><a href="https://xpack.github.io/xpm/"><code class="language-plaintext highlighter-rouge">xpm</code></a> is a portable
+<a href="https://nodejs.org/">Node.js</a> command line application.</p>
+
+<p>If you followed the <em>Quick instructions</em>, it is already installed.</p>
+
+<p>Otherwise, to install it, follow the steps in the
+<a href="/xpm/install/">xpm install</a> page.</p>
+
+<p>If you know what you’re doing and prefer a shortcut,
+issue the following command:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">--global</span> xpm@latest
+</code></pre></div></div>
+
+
+	</div>
+</div>
+
+<h2 id="visual-studio-code">Visual Studio Code</h2>
+
+<p>Although not mandatory, VS Code is a nice addition to the development
+environment, and with the
+<a href="https://marketplace.visualstudio.com/items?itemName=ilg-vscode.xpack">xPack extension</a>,
+some of the actions are only a mouse click away.</p>
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2024 Liviu Ionescu. All rights reserved. <br />
+<span>Page last updated:</span> Dec 20, 2024<br/> Site last generated: Dec 20, 2024 <br />
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8WX9T80JEK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8WX9T80JEK');
+</script>
+
+
+</html>

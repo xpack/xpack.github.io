@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://xcdl.github.io/schemas/xpack-0.1.0.json",
+  "title": "xPack JSON schema",
+  "description": "The JSON schema definitions for xPack metadata files.",
+  "type": "object",
+  "$defs": {
+    "targetPlatformsType": {
+      "description": "An map of settings specific to a target platform.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/targetPlatformType"
+      }
+    },
+    "targetPlatformType": {
+      "description": "?",
+      "type": "object",
+      "properties": {
+        "crossBuildPlatforms": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nonEmptyStringType"
+          }
+        },
+        "artefact": {
+          "$ref": "#/$defs/artefactType"
+        },
+        "excludedSourcePaths": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "removeSourceFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "addSourceFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "removeIncludeFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "addIncludeFolders": {
+          "$ref": "#/$defs/arrayOfPathsType"
+        },
+        "removeSymbols": {
+          "$ref": "#/$defs/arrayOfSymbolsType"
+        },
+        "addSymbols": {
+          "$ref": "#/$defs/arrayOfSymbolsType"
+        },
+        "options": {
+          "$ref": "#/$defs/optionsType"
+        },
+        "language": {
+          "$ref": "#/$defs/nonEmptyStringType"
+        }
+      }
+    },
+    "optionsType": {
+      "type": "object",
+      "properties": {
+        "removeArchitecture": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "addArchitecture": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "removeDebugging": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "addDebugging": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "removeOptimizations": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "addOptimizations": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "removeWarnings": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "addWarnings": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "removeMiscellaneous": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "addMiscellaneous": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        }
+      }
+    },
+    "commonToolOptions": {
+      "type": "object",
+      "properties": {
+        "removeDebugging": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "addDebugging": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "removeOptimizations": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "addOptimizations": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "removeWarnings": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "addWarnings": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "removeMiscellaneous": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        },
+        "addMiscellaneous": {
+          "$ref": "#/$defs/arrayOfOptionsType"
+        }
+      }
+    }
+  }
+}

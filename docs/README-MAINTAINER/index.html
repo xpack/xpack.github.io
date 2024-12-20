@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title> | The xPack Build Framework (DEPRECATED)</title>
+<link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
+
+
+<link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
+<link type="application/rss+xml" rel="alternate" title="web-archive-jekyll" href="https://xpack.github.io/feed.xml">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>web-archive-jekyll | Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="web-archive-jekyll" />
+<meta name="author" content="Liviu Ionescu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<meta property="og:description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<link rel="canonical" href="https://xpack.github.io/README-MAINTAINER/" />
+<meta property="og:url" content="https://xpack.github.io/README-MAINTAINER/" />
+<meta property="og:site_name" content="web-archive-jekyll" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="web-archive-jekyll" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-12-20T19:13:52+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"web-archive-jekyll","url":"https://xpack.github.io/README-MAINTAINER/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?202412202113">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://xpack.github.io/css/customstyles.css?202412202113">
+<link rel="stylesheet" href="https://xpack.github.io/css/boxshadowproperties.css?202412202113">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="https://xpack.github.io/css/theme-blue.css?202412202113">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://xpack.github.io/js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="https://xpack.github.io/js/toc.js"></script>
+<script src="https://xpack.github.io/js/customscripts.js"></script>
+
+<!-- Use absolute URLs, to cover preview cases too -->
+<link rel="shortcut icon" href="https://xpack.github.io/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="https://xpack.github.io/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://xpack.github.io/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://xpack.github.io/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://xpack.github.io/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://xpack.github.io/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://xpack.github.io/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://xpack.github.io/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://xpack.github.io/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://xpack.github.io/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://xpack.github.io/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://xpack.github.io/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://xpack.github.io/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://xpack.github.io/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://xpack.github.io/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://xpack.github.io/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks" style="">
+        <div style="display: inline-block; float: left; margin-top: 8px; margin-left: auto; margin-right: 10px;"><img src="/images/company_logo.png" alt="logo" width="32px" height="32px"/></div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="/">&nbsp;<span class="projectTitle"> The xPack Project</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">News<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="/news/">Latest News</a></li>
+                        
+                        
+                        
+                        <li><a href="/news/archive/">Archive</a></li>
+                        
+                        
+                        
+                        <li><a href="/tags/">Tags</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://xpack-dev-tools.github.io" target="_blank" rel="noopener">xPack Binary Development Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://micro-os-plus.github.io" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Dev Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/micro-os-plus/" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-3rd-party/" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/eclipse-embed-cdt/" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '/search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3 sticky" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle"> </li>
+  
+  
+  
+  <li>
+      <a title="Getting Started" href="#">Getting Started</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Intro (xPack 101)" href="/intro/">Intro (xPack 101)</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="CI/CD" href="/ci/">CI/CD</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Install prerequisites" href="/install/">Install prerequisites</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Core Tools" href="#">Core Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/core/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="xpm" href="/xpm/">xpm</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="VS Code Extensions" href="#">VS Code Extensions</a>
+      <ul>
+          
+          
+          
+          <li><a title="xPack C/C++ Build Tools" href="/vscode/">xPack C/C++ Build Tools</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Eclipse" href="#">Eclipse</a>
+      <ul>
+          
+          
+          
+          <li><a class="extern" title="Eclipse Embedded CDT" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Support" href="#">Support</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/support/">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Developer Info" href="#">Developer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/develop/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="How to create a new xPack repo" href="/develop/how-to-new-git/">How to create a new xPack repo</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="JavaScript Style Guide" href="/develop/js-style-guide/">JavaScript Style Guide</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Links" href="/develop/links/">Links</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Maintainer Info" href="#">Maintainer Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/maintain/">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Project" href="#">Project</a>
+      <ul>
+          
+          
+          
+          <li><a title="About" href="/project/about/">About</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="History" href="/project/history/">History</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a class="extern" title="License (MIT)" href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">License (MIT)</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise, if placed
+inside customscripts.js, the script runs before the sidebar code runs
+and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main"></h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+        
+
+
+   <p><a href="https://github.com/xpack/web-jekyll/actions?query=workflow%3A%22Jekyll+site+CI%22"><img src="https://github.com/xpack/web-jekyll/workflows/Jekyll%20site%20CI/badge.svg" alt="Jekyll site CI" /></a></p>
+
+<h1 id="maintainer-info">Maintainer info</h1>
+
+<p>This page documents how to maintain this site and update the web pages.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>To be able to run the Jekyll build process, the <code class="language-plaintext highlighter-rouge">ruby</code> interpreter
+and the <code class="language-plaintext highlighter-rouge">gem</code> tool are required. In latest macOS these tools are
+pre-installed, at least when Xcode or the <strong>Developer Command Line</strong>
+tools are present.</p>
+
+<h3 id="install-separate-homebrew">Install separate Homebrew</h3>
+
+<p>If you are like me and prefer really separated things, install a separate
+Homebrew instance, only for the jekyll builds.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/opt"</span>
+git clone https://github.com/ilg-ul/opt-install-scripts <span class="se">\</span>
+    <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/.local/install-scripts.git"</span>
+
+caffeinate bash
+<span class="nb">exec </span>bash <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">/.local/install-scripts.git/install-homebrew-jekyll.sh"</span>
+</code></pre></div></div>
+
+<p>Add a new alias to your <code class="language-plaintext highlighter-rouge">.profile</code>:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">alias </span><span class="nv">ajkl</span><span class="o">=</span><span class="s1">'export PATH=/Users/ilg/.local/homebrew/jekyll/bin:${PATH}'</span>
+</code></pre></div></div>
+
+<p>Then, in a new terminal:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>ajkl
+<span class="gp">$</span><span class="w"> </span>which ruby
+<span class="go">/Users/ilg/.local/homebrew/jekyll/bin/ruby
+</span><span class="gp">$</span><span class="w"> </span>ruby <span class="nt">--version</span>
+<span class="go">ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-darwin17]
+</span><span class="gp">$</span><span class="w"> </span>gem <span class="nt">--version</span>
+<span class="go">3.0.3
+</span><span class="gp">$</span><span class="w"> </span>bundler <span class="nt">--version</span>
+<span class="go">Bundler version 2.0.1
+</span></code></pre></div></div>
+
+<p>Alternately it is possible to link the desired bundle version locally,
+and run the npm scripts from VS Code:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-pv</span> node_modules/.bin <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">rm</span> <span class="nt">-f</span> node_modules/.bin/bundle <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">ln</span> <span class="nt">-sv</span>  <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/.local/homebrew/jekyll/bin/bundle node_modules/.bin/bundle
+</code></pre></div></div>
+
+<h2 id="clone-git">Clone Git</h2>
+
+<p>To manage the web site, a local copy of this repository is required.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/xpack/web-jekyll.git web-jekyll.git
+</code></pre></div></div>
+
+<h2 id="install-jekyll--gems">Install jekyll &amp; gems</h2>
+
+<p>Install jekyll and all gems referred in <code class="language-plaintext highlighter-rouge">Gemfile</code>. Probably usually there
+is no need to run bundler as root, it can ask for sudo if needed, but in
+my setup it looks necessary.</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">cd </span>web-jekyll.git
+<span class="gp">$</span><span class="w"> </span>bundle <span class="nb">install</span>
+<span class="gp">$</span><span class="w"> </span>bundle <span class="nb">exec </span>jekyll <span class="nt">--version</span>
+<span class="go">jekyll 4.4.2
+</span></code></pre></div></div>
+
+<h2 id="development">Development</h2>
+
+<p>The current development cycle is edit-save-build-view.</p>
+
+<p>The build can be performed automatically by Jekyll when started in server mode.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>web-jekyll.git
+bundle <span class="nb">exec </span>jekyll serve <span class="nt">--trace</span> <span class="nt">--safe</span> <span class="nt">--baseurl</span> <span class="s2">"/web-preview"</span>
+</code></pre></div></div>
+
+<p>To view the result, point the browser to <code class="language-plaintext highlighter-rouge">http://localhost:4002/web-preview/</code>.</p>
+
+<p>To test links:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll build
+bundle <span class="nb">exec </span>htmlproofer <span class="nt">--allow-hash-href</span> <span class="nt">--url-swap</span> <span class="se">\^</span>/web-preview/<span class="se">\:</span>/ ./_site
+bundle <span class="nb">exec </span>htmlproofer <span class="nt">--allow-hash-href</span> <span class="nt">--url-swap</span> <span class="se">\^</span>/web-preview/<span class="se">\:</span>/ <span class="se">\</span>
+  <span class="nt">--url-ignore</span> /github.com/xpack/xpack.github.io/blob/master/ ./_site
+</code></pre></div></div>
+
+<h2 id="publish">Publish</h2>
+
+<p>To publish, commit this Git and the new site will be automatically
+generated by GitHub Pages using Jekyll.</p>
+
+<h2 id="updates">Updates</h2>
+
+<p>When new versions of Jekyll, or of gems, are available, activate the Jekyll
+environment (<code class="language-plaintext highlighter-rouge">ajkl</code>) run <code class="language-plaintext highlighter-rouge">bundle update</code>
+and be sure the <code class="language-plaintext highlighter-rouge">Gemfile.lock</code> file is committed.</p>
+
+<p>Alternately use the npm script <code class="language-plaintext highlighter-rouge">bundle-update</code>.</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">cd </span>web-preview.git
+<span class="gp">$</span><span class="w"> </span>bundle update
+<span class="go">Fetching gem metadata from https://rubygems.org/..........
+Fetching gem metadata from https://rubygems.org/.
+Resolving dependencies...
+Fetching public_suffix 4.0.6 (was 3.1.1)
+Installing public_suffix 4.0.6 (was 3.1.1)
+Fetching addressable 2.7.0 (was 2.6.0)
+Installing addressable 2.7.0 (was 2.6.0)
+Using bundler 2.0.1
+Using colorator 1.1.0
+Fetching concurrent-ruby 1.1.7 (was 1.1.5)
+Installing concurrent-ruby 1.1.7 (was 1.1.5)
+Using eventmachine 1.2.7
+Using http_parser.rb 0.6.0
+Using em-websocket 0.5.1
+Fetching ffi 1.13.1 (was 1.11.1)
+Installing ffi 1.13.1 (was 1.11.1) with native extensions
+Using ethon 0.12.0
+Using forwardable-extended 2.6.0
+Using mercenary 0.3.6
+Using mini_portile2 2.4.0
+Fetching nokogiri 1.10.10 (was 1.10.4)
+Installing nokogiri 1.10.10 (was 1.10.4) with native extensions
+Fetching nokogumbo 2.0.2
+Installing nokogumbo 2.0.2 with native extensions
+Fetching parallel 1.19.2 (was 1.17.0)
+Installing parallel 1.19.2 (was 1.17.0)
+Using rainbow 3.0.0
+Fetching typhoeus 1.4.0 (was 1.3.1)
+Installing typhoeus 1.4.0 (was 1.3.1)
+Fetching yell 2.2.2 (was 2.2.0)
+Installing yell 2.2.2 (was 2.2.0)
+Fetching html-proofer 3.15.3 (was 3.11.1)
+Installing html-proofer 3.15.3 (was 3.11.1)
+Using i18n 0.9.5
+Using rb-fsevent 0.10.4 (was 0.10.3)
+Using rb-inotify 0.10.1 (was 0.10.0)
+Using sass-listen 4.0.0
+Using sass 3.7.4
+Using jekyll-sass-converter 1.5.2
+Using listen 3.2.1 (was 3.1.5)
+Using jekyll-watch 2.2.1
+Using rexml 3.2.4
+Using kramdown 2.3.0 (was 1.17.0)
+Using liquid 4.0.3 (was 4.0.0)
+Using pathutil 0.16.2
+Using rouge 3.23.0 (was 2.2.1)
+Using safe_yaml 1.0.5
+Using jekyll 3.9.0 (was 3.8.5)
+Using jekyll-feed 0.15.0 (was 0.11.0)
+Using posix-spawn 0.3.15
+Using jekyll-last-modified-at 1.3.0
+Using jekyll-redirect-from 0.16.0 (was 0.14.0)
+Using jekyll-seo-tag 2.6.1 (was 2.5.0)
+Using jekyll-sitemap 1.4.0 (was 1.2.0)
+Using kramdown-parser-gfm 1.1.0
+Bundle updated!
+</span></code></pre></div></div>
+
+<p>People using forked repositories must run <code class="language-plaintext highlighter-rouge">bundle install</code> to be sure the
+required versions are properly installed.</p>
+
+<h2 id="add-tags">Add tags</h2>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash scripts/createtag.sh XXX
+</code></pre></div></div>
+
+<h2 id="redirect">Redirect</h2>
+
+<p>If pages are moved to a different URL, leave a redirect behind:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">redirect_from</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">/blog/2022/04/17/xpm-v0-13-0-released/</span>
+</code></pre></div></div>
+
+<h2 id="links">Links</h2>
+
+<ul>
+  <li><a href="https://xpack.github.io/">Web</a></li>
+  <li><a href="https://xpack.github.io/web-preview/">Web preview</a></li>
+  <li><a href="https://github.com/xpack/web-jekyll/actions/">GitHub Actions</a></li>
+</ul>
+
+<p>Other:</p>
+
+<ul>
+  <li><a href="https://shopify.github.io/liquid/">Liquid</a></li>
+  <li><a href="https://idratherbewriting.com/documentation-theme-jekyll/">Jekyll Doc Theme 6.0</a></li>
+  <li><a href="https://kramdown.gettalong.org">kramdown</a></li>
+  <li><a href="https://about.gitlab.com/2016/07/19/markdown-kramdown-tips-and-tricks/">Markdown Kramdown Tips &amp; Tricks</a></li>
+  <li><a href="https://pages.github.com">GitHub Pages</a>.</li>
+  <li><a href="https://pages.github.com/versions/">List of GP plugins</a></li>
+</ul>
+
+<h2 id="quick-copypaste">Quick copy/paste</h2>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve <span class="nt">--trace</span> <span class="nt">--safe</span> <span class="nt">--baseurl</span> <span class="s2">"/web-preview"</span>
+
+bundle <span class="nb">exec </span>jekyll serve <span class="nt">--trace</span> <span class="nt">--safe</span>
+
+bundle <span class="nb">exec </span>jekyll build
+
+bundle <span class="nb">exec </span>htmlproofer <span class="nt">--allow-hash-href</span> <span class="nt">--url-swap</span> <span class="se">\^</span>/web-preview/<span class="se">\:</span>/ ./_site_local
+
+bundle <span class="nb">exec </span>htmlproofer <span class="nt">--allow-hash-href</span> <span class="nt">--url-swap</span> <span class="se">\^</span>/web-preview/<span class="se">\:</span>/ <span class="nt">--url-ignore</span> /github.com/xpack/xpack.github.io/blob/master/ ./_site_local
+
+bundle <span class="nb">exec </span>htmlproofer <span class="nt">--allow-hash-href</span> ./_site_local
+
+bundle <span class="nb">exec </span>htmlproofer <span class="nt">--allow-hash-href</span> <span class="nt">--http_status_ignore</span><span class="o">=</span>429 ./_site_local
+</code></pre></div></div>
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2024 Liviu Ionescu. All rights reserved. <br />
+<span>Page last updated:</span> Dec 20, 2024<br/> Site last generated: Dec 20, 2024 <br />
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8WX9T80JEK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8WX9T80JEK');
+</script>
+
+
+</html>

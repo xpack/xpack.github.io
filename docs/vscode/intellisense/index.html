@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="IntelliSense is a general term for various code editing features including: code completion, parameter info, quick info, and member lists.">
+<meta name="keywords" content=" ">
+<title>IntelliSense (the project indexer) | The xPack Build Framework (DEPRECATED)</title>
+<link rel="stylesheet" href="https://xpack.github.io/css/syntax.css">
+
+
+<link type="application/atom+xml" rel="alternate" href="https://xpack.github.io/feed.xml"/>
+<link type="application/rss+xml" rel="alternate" title="web-archive-jekyll" href="https://xpack.github.io/feed.xml">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>IntelliSense (the project indexer) | web-archive-jekyll</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="IntelliSense (the project indexer)" />
+<meta name="author" content="Liviu Ionescu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<meta property="og:description" content="Tools to manage, configure and build complex, package based, multi-target, C/C++ projects." />
+<link rel="canonical" href="https://xpack.github.io/vscode/intellisense/" />
+<meta property="og:url" content="https://xpack.github.io/vscode/intellisense/" />
+<meta property="og:site_name" content="web-archive-jekyll" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-04-25T11:34:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="IntelliSense (the project indexer)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Liviu Ionescu"},"dateModified":"2024-12-20T19:13:52+00:00","datePublished":"2021-04-25T11:34:00+00:00","description":"Tools to manage, configure and build complex, package based, multi-target, C/C++ projects.","headline":"IntelliSense (the project indexer)","mainEntityOfPage":{"@type":"WebPage","@id":"https://xpack.github.io/vscode/intellisense/"},"url":"https://xpack.github.io/vscode/intellisense/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://xpack.github.io/css/modern-business.css?202412202113">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://xpack.github.io/css/customstyles.css?202412202113">
+<link rel="stylesheet" href="https://xpack.github.io/css/boxshadowproperties.css?202412202113">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="https://xpack.github.io/css/theme-blue.css?202412202113">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://xpack.github.io/js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="https://xpack.github.io/js/toc.js"></script>
+<script src="https://xpack.github.io/js/customscripts.js"></script>
+
+<!-- Use absolute URLs, to cover preview cases too -->
+<link rel="shortcut icon" href="https://xpack.github.io/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="https://xpack.github.io/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://xpack.github.io/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://xpack.github.io/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://xpack.github.io/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://xpack.github.io/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://xpack.github.io/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://xpack.github.io/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://xpack.github.io/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://xpack.github.io/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://xpack.github.io/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://xpack.github.io/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://xpack.github.io/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://xpack.github.io/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://xpack.github.io/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://xpack.github.io/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks" style="">
+        <div style="display: inline-block; float: left; margin-top: 8px; margin-left: auto; margin-right: 10px;"><img src="/images/company_logo.png" alt="logo" width="32px" height="32px"/></div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="/">&nbsp;<span class="projectTitle"> The xPack Project</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">News<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="/news/">Latest News</a></li>
+                        
+                        
+                        
+                        <li><a href="/news/archive/">Archive</a></li>
+                        
+                        
+                        
+                        <li><a href="/tags/">Tags</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://xpack-dev-tools.github.io" target="_blank" rel="noopener">xPack Binary Development Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://eclipse-embed-cdt.github.io" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://micro-os-plus.github.io" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack/" target="_blank" rel="noopener">xPack</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-dev-tools/" target="_blank" rel="noopener">3rd Party xPack Dev Tools</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/micro-os-plus/" target="_blank" rel="noopener">µOS++ IIIe</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/xpack-3rd-party/" target="_blank" rel="noopener">3rd Party xPacks</a></li>
+                        
+                        
+                        
+                        <li><a class="extern" href="https://github.com/eclipse-embed-cdt/" target="_blank" rel="noopener">Eclipse Embedded CDT</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '/search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="IntelliSense (the project indexer)">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3 sticky" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle">VS Code xPack C/C++ Build Extension </li>
+  
+  
+  
+  <li>
+      <a title="Getting Started" href="#">Getting Started</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/vscode/">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Install" href="/vscode/install/">Install</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Quick Start" href="/vscode/quick-start/">Quick Start</a></li>
+          
+          
+          
+          
+          
+          
+          <li class="active"><a title="IntelliSense" href="/vscode/intellisense/">IntelliSense</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Support" href="/vscode/support/">Support</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="FAQ" href="/vscode/faq/">FAQ</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Releases" href="/vscode/releases/">Releases</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise, if placed
+inside customscripts.js, the script runs before the sidebar code runs
+and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">IntelliSense (the project indexer)</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">IntelliSense is a general term for various code editing features including: code completion, parameter info, quick info, and member lists.
+</div>
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+        
+
+
+   <h2 id="the-vs-code-indexer">The VS Code indexer</h2>
+
+<p>VS Code provides a very elaborate code indexer, called
+<a href="https://code.visualstudio.com/docs/editor/intellisense">IntelliSense</a>.</p>
+
+<p>It works by parsing the source files and creating an internal representation
+of the code.</p>
+
+<p>With C/C++, for this process to be accurate, it needs to know <strong>exactly</strong> how
+the compiler is invoked for each source file, more specifically it
+needs to know:</p>
+
+<ul>
+  <li>the include folders</li>
+  <li>the preprocessor definitions</li>
+  <li>the compile options</li>
+</ul>
+
+<p>Managed build systems, like the <a href="https://www.eclipse.org/cdt/">Eclipse CDT</a>,
+having a good control over the
+entire project settings, can pass accurate configuration to the internal
+indexer.</p>
+
+<p>When using external builders, which store the project settings in
+custom text files not parseable by editors/IDEs (<code class="language-plaintext highlighter-rouge">make</code> files
+being the common example), the users must provide the
+indexer details again, which is not only redundant, but also difficult
+to keep consistent.</p>
+
+<p>To avoid this, more advanced external system build generators
+(like CMake/meson) can automatically provide the indexer configuration
+in a file called <code class="language-plaintext highlighter-rouge">compile_commands.json</code>.</p>
+
+<h2 id="compile_commandsjson"><code class="language-plaintext highlighter-rouge">compile_commands.json</code></h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">compile_commands.json</code> files are created by the system build generator
+for each build, and list the full command lines required to compile
+all project files.</p>
+
+<p>For the simple Hello World project, with a single source file,
+it may look like:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"directory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/Users/ilg/tmp/hello/build/debug"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/Library/Developer/CommandLineTools/usr/bin/c++ -DDEBUG -I/Users/ilg/tmp/hello/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -std=gnu++17 -o CMakeFiles/application.dir/Users/ilg/tmp/hello/src/hello-world.cpp.o -c /Users/ilg/tmp/hello/src/hello-world.cpp"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/Users/ilg/tmp/hello/src/hello-world.cpp"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The VS Code C/C++ extension knows how to parse these files to extract the
+list of include folders, preprocessor definitions
+and everything else needed to configure IntelliSense properly.</p>
+
+<p>There must be one such file in each build folder,
+for each build configuration.</p>
+
+<p>These files are created by the system build generator during the
+setup/configure/prepare step, when the project configuration is
+processed, and usually remain unchanged during subsequent builds.</p>
+
+<p>If the project structure changes, for example when files are
+added/removed/moved
+around, this step must be repeated, not only to update the builder
+specific files, but also to update the indexer configuration.</p>
+
+<h2 id="c_cpp_propertiesjson"><code class="language-plaintext highlighter-rouge">c_cpp_properties.json</code></h2>
+
+<p>These files are used by the VS Code C/C++ extension to store the IntelliSense
+configuration. There must be one such file in each workspace folder.</p>
+
+<p>The exact location is <code class="language-plaintext highlighter-rouge">${workspaceFolder}/.vscode/c_cpp_properties.json</code>.</p>
+
+<p>For simple projects, such a file looks like:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"configurations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Debug"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"configurationProvider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ms-vscode.cmake-tools"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"compileCommands"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${workspaceFolder}/build/debug/compile_commands.json"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Release"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"configurationProvider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ms-vscode.cmake-tools"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"compileCommands"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${workspaceFolder}/build/release/compile_commands.json"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The current version of the xPack
+extension uses the CMake configuration provider. Future
+versions may switch to a different provider.</div>
+
+<p>The xPack extension generates/updates these files to match the
+existing build configurations defined in all projects.</p>
+
+<h2 id="use-separate-workspace-folders-for-projects">Use separate workspace folders for projects</h2>
+
+<p>Since VS Code distinguishes only between workspace folders, and does
+not distinguish between multiple project folders,
+it is recommended to avoid opening parent folders with multiple projects.</p>
+
+<p>Instead, for multi-project cases, create a workspace and add all
+projects to it (via menu <strong>File</strong> → <strong>Add Folder to Workspace…</strong>),
+then save the entire
+set of folders as a <code class="language-plaintext highlighter-rouge">&lt;project&gt;-code.workspace</code> file
+(via menu <strong>File</strong> → <strong>Save Workspace As…</strong>); VS Code can later open
+all projects at once.</p>
+
+<p>The workspace file is a JSON with the paths to workspace folders. If all
+those folders are children of the workspace, all paths are relative, and
+the file is portable, which means it can be stored in repositories.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The xPack extension does its best to cope with
+multiple projects in a folder, but, for IntelliSense to work, it needs
+to create a <code class="language-plaintext highlighter-rouge">.vscode/c_cpp_properties.json</code> file in the top
+workspace folder. This file contains absolute paths and <strong>should not</strong> be
+stored in repositories.</div>
+
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2024 Liviu Ionescu. All rights reserved. <br />
+<span>Page last updated:</span> Dec 20, 2024<br/> Site last generated: Dec 20, 2024 <br />
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8WX9T80JEK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8WX9T80JEK');
+</script>
+
+
+</html>
