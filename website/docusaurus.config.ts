@@ -70,12 +70,12 @@ const config: Config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: process.env.DOCUSAURUS_BASEURL ??
-    '/web-preview-docusaurus/',
+    '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'xpack', // Usually your GitHub org/user name.
-  projectName: 'web-preview-docusaurus', // Usually your repo name.
+  projectName: 'xpack.github.io', // Usually your repo name.
 
   onBrokenAnchors: 'throw',
   onBrokenLinks: 'throw',
@@ -103,7 +103,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/xpack/web-preview-docusaurus/edit/master/website/',
+          editUrl: 'https://github.com/xpack/xpack.github.io/edit/master/website/',
           // showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
@@ -115,7 +115,7 @@ const config: Config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/xpack/web-preview-docusaurus/edit/master/website/',
+          editUrl: 'https://github.com/xpack/xpack.github.io/edit/master/website/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -173,7 +173,7 @@ const config: Config = {
       attributes: {
         rel: 'icon',
         type: 'image/png',
-        href: '/web-preview-docusaurus/favicons/favicon-48x48.png',
+        href: '/favicons/favicon-48x48.png',
         sizes: '48x48'
       }
     },
@@ -182,14 +182,14 @@ const config: Config = {
       attributes: {
         rel: 'icon',
         type: 'image/svg+xml',
-        href: '/web-preview-docusaurus/favicons/favicon.svg'
+        href: '/favicons/favicon.svg'
       }
     },
     {
       tagName: 'link',
       attributes: {
         rel: 'shortcut icon',
-        href: '/web-preview-docusaurus/favicons/favicon.ico'
+        href: '/favicons/favicon.ico'
       }
     },
     {
@@ -204,7 +204,7 @@ const config: Config = {
       tagName: 'link',
       attributes: {
         rel: 'manifest',
-        href: '/web-preview-docusaurus/favicons/site.webmanifest'
+        href: '/favicons/site.webmanifest'
       }
     }
   ],
@@ -258,7 +258,7 @@ const config: Config = {
           ]
         },
         {
-          href: 'https://github.com/xpack/web-preview-docusaurus/',
+          href: 'https://github.com/xpack/xpack.github.io/',
           position: 'right',
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
@@ -300,7 +300,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub Discussions',
-              href: 'https://github.com/xpack/web-preview-docusaurus/discussions',
+              href: 'https://github.com/xpack/xpack.github.io/discussions',
             },
             {
               label: 'Stack Overflow',
@@ -324,8 +324,8 @@ const config: Config = {
               href: 'https://www.paypal.com/donate/?hosted_button_id=5MFRG9ZRBETQ8',
             },
             {
-              label: 'GitHub web-preview-docusaurus',
-              href: 'https://github.com/xpack/web-preview-docusaurus/',
+              label: 'GitHub xpack.github.io',
+              href: 'https://github.com/xpack/xpack.github.io/',
             },
             {
               label: 'GitHub xpack',

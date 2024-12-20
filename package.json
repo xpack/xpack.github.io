@@ -1,9 +1,14 @@
 {
-  "name": "web-preview-docusaurus",
+  "name": "xpack.github.io",
   "version": "0.0.0",
-  "description": "A preview of the next web site",
+  "description": "The website for the xPack project",
   "main": "",
   "scripts": {
+    "npm-install": "npm install",
+    "npm-link-helpers": "npm link @xpack/npm-packages-helper @xpack/docusaurus-template-liquid",
+    "npm-link": "npm link",
+    "npm-outdated": "npm outdated",
+    "npm-update": "npm update",
     "generate-top-commons": "bash node_modules/@xpack/npm-packages-helper/maintenance-scripts/generate-top-commons.sh"
   },
   "author": {
@@ -12,13 +17,13 @@
     "url": "https://github.com/ilg-ul"
   },
   "bugs": {
-    "url": "https://github.com/xpack/web-preview-docusaurus/issues"
+    "url": "https://github.com/xpack/xpack.github.io/issues"
   },
-  "homepage": "https://xpack.github.io/web-preview-docusaurus/",
+  "homepage": "https://xpack.github.io/",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xpack/web-preview-docusaurus.git"
+    "url": "git+https://github.com/xpack/xpack.github.io.git"
   },
   "dependencies": {},
   "devDependencies": {

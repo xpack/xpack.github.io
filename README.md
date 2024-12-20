@@ -1,5 +1,5 @@
 
-[![license](https://img.shields.io/github/license/xpack/web-preview-docusaurus)](https://github.com/xpack/web-preview-docusaurus/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/xpack/xpack.github.io)](https://github.com/xpack/xpack.github.io/blob/master/LICENSE)
 
 # The xPack Project web site source
 
@@ -8,7 +8,7 @@ The Docusaurus source code for the xPack Project web site.
 ## Project source
 
 The source code is available on
-[GitHub](https://github.com/xpack/web-preview-docusaurus/).
+[GitHub](https://github.com/xpack/xpack.github.io/).
 
 ## License
 
