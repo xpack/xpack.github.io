@@ -362,86 +362,86 @@ $ grep 'https://xpack' sitemap.xml | sed -e 's|    <loc>|- |' -e 's|</loc>||' | 
 - https://xpack.github.io/
 - https://xpack.github.io/README-MAINTAINER/
 - https://xpack.github.io/TODO/
-- https://xpack.github.io/about/
-- https://xpack.github.io/arm-none-eabi-gcc/
-- https://xpack.github.io/arm-none-eabi-gcc/install/
-- https://xpack.github.io/arm-none-eabi-gcc/releases/
-- https://xpack.github.io/arm-none-eabi-gcc/support/
+- https://xpack.github.io/about/ ✓
+- https://xpack.github.io/arm-none-eabi-gcc/ ✓
+- https://xpack.github.io/arm-none-eabi-gcc/install/ ✓
+- https://xpack.github.io/arm-none-eabi-gcc/releases/ ✓
+- https://xpack.github.io/arm-none-eabi-gcc/support/ ✓
 - https://xpack.github.io/assets/css/
 - https://xpack.github.io/assets/css/style.css
-- https://xpack.github.io/ci/
-- https://xpack.github.io/core/
-- https://xpack.github.io/dev-tools/
-- https://xpack.github.io/develop/
-- https://xpack.github.io/develop/how-to-new-git/
-- https://xpack.github.io/develop/js-style-guide/
-- https://xpack.github.io/develop/links/
-- https://xpack.github.io/develop/node-js-tricks/
-- https://xpack.github.io/develop/schemas/
-- https://xpack.github.io/develop/vs-code-settings/
-- https://xpack.github.io/install/
-- https://xpack.github.io/intro/
-- https://xpack.github.io/maintain/
-- https://xpack.github.io/maintain/how-to-release-web/
-- https://xpack.github.io/metadata/
-- https://xpack.github.io/metadata/build/
-- https://xpack.github.io/metadata/components/
-- https://xpack.github.io/metadata/devices/
-- https://xpack.github.io/metadata/tools-collections/
-- https://xpack.github.io/metadata/xsvd/
-- https://xpack.github.io/openocd/
-- https://xpack.github.io/openocd/install/
-- https://xpack.github.io/openocd/releases/
-- https://xpack.github.io/project/about/
-- https://xpack.github.io/project/history/
-- https://xpack.github.io/qemu-arm/
-- https://xpack.github.io/qemu-arm/install/
-- https://xpack.github.io/qemu-arm/options/
-- https://xpack.github.io/qemu-arm/releases/
-- https://xpack.github.io/riscv-none-embed-gcc/
-- https://xpack.github.io/riscv-none-embed-gcc/install/
-- https://xpack.github.io/riscv-none-embed-gcc/releases/
-- https://xpack.github.io/riscv-none-embed-gcc/support/
-- https://xpack.github.io/support/
-- https://xpack.github.io/test/
-- https://xpack.github.io/vscode/
-- https://xpack.github.io/vscode/faq/
-- https://xpack.github.io/vscode/install/
-- https://xpack.github.io/vscode/intellisense/
-- https://xpack.github.io/vscode/quick-start/
-- https://xpack.github.io/vscode/support/
-- https://xpack.github.io/windows-build-tools/
-- https://xpack.github.io/windows-build-tools/install/
-- https://xpack.github.io/windows-build-tools/releases/
-- https://xpack.github.io/xbb/
-- https://xpack.github.io/xbb/end-of-support/
-- https://xpack.github.io/xbb/prerequisites/
-- https://xpack.github.io/xpbuild/
-- https://xpack.github.io/xpbuild/cli/
-- https://xpack.github.io/xpbuild/cli/init/
-- https://xpack.github.io/xpbuild/faq/
-- https://xpack.github.io/xpbuild/install/
-- https://xpack.github.io/xpbuild/support/
-- https://xpack.github.io/xpcdl/
-- https://xpack.github.io/xpm/
-- https://xpack.github.io/xpm/cli/
-- https://xpack.github.io/xpm/cli/init/
-- https://xpack.github.io/xpm/cli/install/
-- https://xpack.github.io/xpm/cli/link/
-- https://xpack.github.io/xpm/cli/list/
-- https://xpack.github.io/xpm/cli/run-script/
-- https://xpack.github.io/xpm/cli/run/
-- https://xpack.github.io/xpm/cli/uninstall/
-- https://xpack.github.io/xpm/faq/
-- https://xpack.github.io/xpm/files/
-- https://xpack.github.io/xpm/files/folders/
-- https://xpack.github.io/xpm/files/package.json/
-- https://xpack.github.io/xpm/folders/
-- https://xpack.github.io/xpm/install/
-- https://xpack.github.io/xpm/policies/
-- https://xpack.github.io/xpm/policies/0001/
-- https://xpack.github.io/xpm/support/
-- https://xpack.github.io/xpmake/
-- https://xpack.github.io/xpninja/
-- https://xpack.github.io/xsvd/files/xsvd-json/
+- https://xpack.github.io/ci/ ✓
+- https://xpack.github.io/core/ ✓
+- https://xpack.github.io/dev-tools/ . separate redirector
+- https://xpack.github.io/develop/ ✓
+- https://xpack.github.io/develop/how-to-new-git/ ✓
+- https://xpack.github.io/develop/js-style-guide/ ✓
+- https://xpack.github.io/develop/links/ ✓
+- https://xpack.github.io/develop/node-js-tricks/ ✓
+- https://xpack.github.io/develop/schemas/ ✓
+- https://xpack.github.io/develop/vs-code-settings/ ✓
+- https://xpack.github.io/install/ ✓
+- https://xpack.github.io/intro/ ✓ ? How to use?
+- https://xpack.github.io/maintain/ ✓
+- https://xpack.github.io/maintain/how-to-release-web/ . ???
+- https://xpack.github.io/metadata/ ✓
+- https://xpack.github.io/metadata/build/ ✓
+- https://xpack.github.io/metadata/components/ ✓
+- https://xpack.github.io/metadata/devices/ ✓
+- https://xpack.github.io/metadata/tools-collections/ ✓
+- https://xpack.github.io/metadata/xsvd/ ✓
+- https://xpack.github.io/openocd/ ✓
+- https://xpack.github.io/openocd/install/ ✓
+- https://xpack.github.io/openocd/releases/ ✓
+- https://xpack.github.io/project/about/ ✓
+- https://xpack.github.io/project/history/ ✓
+- https://xpack.github.io/qemu-arm/ ✓
+- https://xpack.github.io/qemu-arm/install/ ✓
+- https://xpack.github.io/qemu-arm/options/ ✓ ?
+- https://xpack.github.io/qemu-arm/releases/ ✓
+- https://xpack.github.io/riscv-none-embed-gcc/ ✓
+- https://xpack.github.io/riscv-none-embed-gcc/install/ ✓
+- https://xpack.github.io/riscv-none-embed-gcc/releases/ ✓
+- https://xpack.github.io/riscv-none-embed-gcc/support/ ✓
+- https://xpack.github.io/support/ ✓
+- https://xpack.github.io/test/ ✓
+- https://xpack.github.io/vscode/ ✓
+- https://xpack.github.io/vscode/faq/ ✓
+- https://xpack.github.io/vscode/install/ ✓
+- https://xpack.github.io/vscode/intellisense/ ✓
+- https://xpack.github.io/vscode/quick-start/ ✓
+- https://xpack.github.io/vscode/support/ ✓
+- https://xpack.github.io/windows-build-tools/ ✓
+- https://xpack.github.io/windows-build-tools/install/ ✓
+- https://xpack.github.io/windows-build-tools/releases/ ✓
+- https://xpack.github.io/xbb/ ✓
+- https://xpack.github.io/xbb/end-of-support/ ✓
+- https://xpack.github.io/xbb/prerequisites/ ✓ ?
+- https://xpack.github.io/xpbuild/ ✓
+- https://xpack.github.io/xpbuild/cli/ ✓
+- https://xpack.github.io/xpbuild/cli/init/ ✓
+- https://xpack.github.io/xpbuild/faq/ ✓
+- https://xpack.github.io/xpbuild/install/ ✓
+- https://xpack.github.io/xpbuild/support/ ✓
+- https://xpack.github.io/xpcdl/ ✓
+- https://xpack.github.io/xpm/ ✓
+- https://xpack.github.io/xpm/cli/ ✓
+- https://xpack.github.io/xpm/cli/init/ ✓
+- https://xpack.github.io/xpm/cli/install/ ✓
+- https://xpack.github.io/xpm/cli/link/ ✓
+- https://xpack.github.io/xpm/cli/list/ ✓
+- https://xpack.github.io/xpm/cli/run-script/ ✓
+- https://xpack.github.io/xpm/cli/run/ ✓
+- https://xpack.github.io/xpm/cli/uninstall/ ✓
+- https://xpack.github.io/xpm/faq/ ✓
+- https://xpack.github.io/xpm/files/ ✓
+- https://xpack.github.io/xpm/files/folders/ ✓
+- https://xpack.github.io/xpm/files/package.json/ ✓
+- https://xpack.github.io/xpm/folders/ ✓
+- https://xpack.github.io/xpm/install/ ✓
+- https://xpack.github.io/xpm/policies/ ✓
+- https://xpack.github.io/xpm/policies/0001/ ✓
+- https://xpack.github.io/xpm/support/ ✓
+- https://xpack.github.io/xpmake/ ✓
+- https://xpack.github.io/xpninja/ ✓
+- https://xpack.github.io/xsvd/files/xsvd-json/ ✓
 ```
