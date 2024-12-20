@@ -44,7 +44,7 @@ export const redirects = {
     { from: '/install', to: '/docs/getting-started/prerequisites' },
     { from: '/intro', to: 'https://xpack.github.io/xpm/docs/user/' },
     { from: '/maintain', to: '/docs/maintainer' },
-    // { from: '/maintain/how-to-release-web', to: 'https://xpack.github.io/xpm/docs/guide/new-github-project/' },
+    { from: '/maintain/how-to-release-web', to: 'https://xpack.github.io/web-archive-jekyll//maintain/how-to-release-web/' },
     { from: '/metadata', to: 'https://xpack.github.io/web-archive-jekyll/metadata/' },
     { from: '/metadata/build', to: 'https://xpack.github.io/web-archive-jekyll/metadata/build/' },
     { from: '/metadata/components', to: 'https://xpack.github.io/web-archive-jekyll/metadata/components/' },
