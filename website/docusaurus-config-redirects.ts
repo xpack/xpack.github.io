@@ -461,6 +461,7 @@ export const redirects = {
     { from: '/blog/2021/03/28/xpm-v0-9-1-released/', to: 'https://xpack.github.io/xpm/blog/2021/03/28/xpm-v0-9-1-released/' },
 
     // /dev-tools/ posts.
+    { from: '/dev-tools/', to: 'https://xpack.github.io/web-archive-jekyll/dev-tools/' }, // Archive
     { from: '/dev-tools/aarch64-none-elf-gcc/', to: 'https://xpack-dev-tools.github.io/aarch64-none-elf-gcc-xpack/' },
     { from: '/dev-tools/aarch64-none-elf-gcc/faq/', to: 'https://xpack-dev-tools.github.io/aarch64-none-elf-gcc-xpack/docs/faq/' },
     { from: '/dev-tools/aarch64-none-elf-gcc/install/', to: 'https://xpack-dev-tools.github.io/aarch64-none-elf-gcc-xpack/docs/install/' },
@@ -528,7 +529,7 @@ export const redirects = {
     { from: '/dev-tools/qemu-arm/faq/', to: 'https://xpack-dev-tools.github.io/qemu-arm-xpack/docs/faq/' },
     { from: '/dev-tools/qemu-arm/gnuarmeclipse/', to: 'https://xpack.github.io/web-archive-jekyll/dev-tools/qemu-arm/gnuarmeclipse/' }, // Archive
     { from: '/dev-tools/qemu-arm/install/', to: 'https://xpack-dev-tools.github.io/qemu-arm-xpack/docs/install/' },
-    { from: '/dev-tools/qemu-arm/options/', to: 'https://xpack-dev-tools.github.io/qemu-arm-xpack/docs/options/' }, // ?
+    { from: '/dev-tools/qemu-arm/options/', to: 'https://xpack.github.io/web-archive-jekyll/dev-tools/qemu-arm/options/' }, // Archive
     { from: '/dev-tools/qemu-arm/support/', to: 'https://xpack-dev-tools.github.io/qemu-arm-xpack/docs/support/' },
     { from: '/dev-tools/qemu-riscv/', to: 'https://xpack-dev-tools.github.io/qemu-riscv-xpack/' },
     { from: '/dev-tools/qemu-riscv/faq/', to: 'https://xpack-dev-tools.github.io/qemu-riscv-xpack/docs/faq/' },
