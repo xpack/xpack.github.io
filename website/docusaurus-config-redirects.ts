@@ -73,6 +73,7 @@ export const redirects = {
 
     { from: '/qemu-arm/releases', to: 'https://xpack-dev-tools.github.io/qemu-arm-xpack/docs/releases/' },
     { from: '/riscv-none-embed-gcc', to: 'https://xpack-dev-tools.github.io/riscv-none-elf-gcc-xpack/' },
+    { from: '/riscv-none-embed-gcc/faq', to: 'https://xpack-dev-tools.github.io/riscv-none-elf-gcc-xpack/docs/faq/' },
     { from: '/riscv-none-embed-gcc/install', to: 'https://xpack-dev-tools.github.io/riscv-none-elf-gcc-xpack/docs/install/' },
     { from: '/riscv-none-embed-gcc/releases', to: 'https://xpack-dev-tools.github.io/riscv-none-elf-gcc-xpack/docs/releases/' },
     { from: '/riscv-none-embed-gcc/support', to: 'https://xpack-dev-tools.github.io/riscv-none-elf-gcc-xpack/docs/support' },
@@ -377,7 +378,6 @@ export const redirects = {
     { from: '/blog/2021/04/22/vscode-xpack-v0-4-4-released/', to: 'https://xpack.github.io/web-archive-jekyll/blog/2021/04/22/vscode-xpack-v0-4-4-released/' },
     { from: '/blog/2021/04/24/vscode-xpack-v0-4-7-released/', to: 'https://xpack.github.io/web-archive-jekyll/blog/2021/04/24/vscode-xpack-v0-4-7-released/' },
     { from: '/blog/2021/04/27/vscode-xpack-v0-4-8-released/', to: 'https://xpack.github.io/web-archive-jekyll/blog/2021/04/27/vscode-xpack-v0-4-8-released/' },
-    { from: '/blog/2021/04/27/vscode-xpack-v0-4-9-released/', to: 'https://xpack.github.io/web-archive-jekyll/blog/2021/04/27/vscode-xpack-v0-4-9-released/' },
     { from: '/blog/2021/04/28/vscode-xpack-v0-4-9-released/', to: 'https://xpack.github.io/web-archive-jekyll/blog/2021/04/28/vscode-xpack-v0-4-9-released/' },
     { from: '/blog/2023/06/16/vscode-xpack-v0-5-0-released/', to: 'https://xpack.github.io/web-archive-jekyll/blog/2023/06/16/vscode-xpack-v0-5-0-released/' },
     { from: '/blog/2023/06/20/vscode-xpack-v0-5-1-released/', to: 'https://xpack.github.io/web-archive-jekyll/blog/2023/06/20/vscode-xpack-v0-5-1-released/' },
