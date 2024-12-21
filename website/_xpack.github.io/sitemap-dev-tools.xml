@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/mingw-w64-gcc/tests/11.5.0-1/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/gcc/tests/11.5.0-1/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/mingw-w64-gcc/tests/12.4.0-1/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/gcc/tests/12.4.0-1/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/mingw-w64-gcc/tests/13.3.0-1/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/gcc/tests/13.3.0-1/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/mingw-w64-gcc/tests/14.1.0-1/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/gcc/tests/14.1.0-1/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/clang/tests/16.0.6-1/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/clang/tests/17.0.6-2/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/clang/tests/17.0.6-3/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/clang/tests/18.1.8-1/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/pkg-config/faq/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/qemu-arm/faq/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/wine/faq/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/m4/faq/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/riscv-none-elf-gcc/faq/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/xbb-bootstrap/faq/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/cmake/faq/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/mingw-w64-gcc/faq/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/gcc/faq/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/aarch64-none-elf-gcc/faq/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/windows-build-tools/faq/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/realpath/faq/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/arm-none-eabi-gcc/faq/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/sed/faq/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/meson-build/faq/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/openocd/faq/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/qemu-riscv/faq/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/patchelf/faq/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/clang/faq/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/ninja-build/faq/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/qemu-arm/gnuarmeclipse/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/pkg-config/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/qemu-arm/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/wine/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/m4/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/riscv-none-elf-gcc/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/xbb-bootstrap/</loc>
+    <lastmod>2024-09-19T18:35:30+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/cmake/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/mingw-w64-gcc/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/gcc/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/aarch64-none-elf-gcc/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/windows-build-tools/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/realpath/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/arm-none-eabi-gcc/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/sed/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/meson-build/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/openocd/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/qemu-riscv/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/patchelf/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/clang/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/ninja-build/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/</loc>
+    <lastmod>2024-09-19T18:38:42+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/pkg-config/install/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/qemu-arm/install/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/wine/install/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/m4/install/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/riscv-none-elf-gcc/install/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/xbb-bootstrap/install/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/cmake/install/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/mingw-w64-gcc/install/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/gcc/install/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/aarch64-none-elf-gcc/install/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/windows-build-tools/install/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/realpath/install/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/arm-none-eabi-gcc/install/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/sed/install/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/meson-build/install/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/openocd/install/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/qemu-riscv/install/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/patchelf/install/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/clang/install/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/ninja-build/install/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/qemu-arm/options/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/gcc/predefined-macros/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/clang/predefined-macros/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/arm-none-eabi-gcc/python/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/pkg-config/support/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/qemu-arm/support/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/wine/support/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/m4/support/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/riscv-none-elf-gcc/support/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/xbb-bootstrap/support/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/cmake/support/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/mingw-w64-gcc/support/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/gcc/support/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/aarch64-none-elf-gcc/support/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/windows-build-tools/support/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/realpath/support/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/arm-none-eabi-gcc/support/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/sed/support/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/meson-build/support/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/openocd/support/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/qemu-riscv/support/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/patchelf/support/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/clang/support/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/ninja-build/support/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/assets/css/style.css</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/riscv-none-embed-gcc/faq/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/riscv-none-embed-gcc/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/riscv-none-embed-gcc/install/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/riscv-none-embed-gcc/releases/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/riscv-none-embed-gcc/support/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/README-MAINTAINER/</loc>
+    <lastmod>2024-09-18T18:51:44+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://xpack.github.io/dev-tools/assets/css/</loc>
+    <lastmod>2024-09-18T18:47:09+00:00</lastmod>
+  </url>
+  
+  
+</urlset>
