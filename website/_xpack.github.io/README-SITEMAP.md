@@ -468,7 +468,7 @@ $ grep 'https://xpack' sitemap.xml | sed -e 's|    <loc>|- |' -e 's|</loc>||' | 
 - https://xpack.github.io/dev-tools/clang/ ✓
 - https://xpack.github.io/dev-tools/clang/faq/ ✓
 - https://xpack.github.io/dev-tools/clang/install/ ✓
-- https://xpack.github.io/dev-tools/clang/predefined-macros/ ✓ Archive
+- https://xpack.github.io/dev-tools/clang/predefined-macros/ ✓
 - https://xpack.github.io/dev-tools/clang/support/ ✓
 - https://xpack.github.io/dev-tools/clang/tests/16.0.6-1/ ✓
 - https://xpack.github.io/dev-tools/clang/tests/17.0.6-2/ ✓
@@ -481,7 +481,7 @@ $ grep 'https://xpack' sitemap.xml | sed -e 's|    <loc>|- |' -e 's|</loc>||' | 
 - https://xpack.github.io/dev-tools/gcc/ ✓
 - https://xpack.github.io/dev-tools/gcc/faq/ ✓
 - https://xpack.github.io/dev-tools/gcc/install/ ✓
-- https://xpack.github.io/dev-tools/gcc/predefined-macros/ ✓ Archive
+- https://xpack.github.io/dev-tools/gcc/predefined-macros/ ✓
 - https://xpack.github.io/dev-tools/gcc/support/ ✓
 - https://xpack.github.io/dev-tools/gcc/tests/11.5.0-1/ ✓
 - https://xpack.github.io/dev-tools/gcc/tests/12.4.0-1/ ✓

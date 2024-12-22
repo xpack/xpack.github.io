@@ -102,7 +102,7 @@ export const redirects = {
     { from: '/xpbuild/faq', to: 'https://xpack.github.io/web-archive-jekyll/xpbuild/faq/' }, // Archive
     { from: '/xpbuild/install', to: 'https://xpack.github.io/web-archive-jekyll/xpbuild/install/' }, // Archive
     { from: '/xpbuild/support', to: 'https://xpack.github.io/web-archive-jekyll/xpbuild/support/' }, // Archive
-    
+
     { from: '/xpcdl', to: 'https://xpack.github.io/web-archive-jekyll/xpcdl/' }, // Archive
     { from: '/xpmake', to: 'https://xpack.github.io/web-archive-jekyll/xpmake/' }, // Archive
     { from: '/xpninja', to: 'https://xpack.github.io/web-archive-jekyll/xpninja/' }, // Archive
@@ -497,7 +497,7 @@ export const redirects = {
     { from: '/dev-tools/clang/', to: 'https://xpack-dev-tools.github.io/clang-xpack/' },
     { from: '/dev-tools/clang/faq/', to: 'https://xpack-dev-tools.github.io/clang-xpack/docs/faq/' },
     { from: '/dev-tools/clang/install/', to: 'https://xpack-dev-tools.github.io/clang-xpack/docs/install/' },
-    { from: '/dev-tools/clang/predefined-macros/', to: 'https://xpack.github.io/web-archive-jekyll/dev-tools/clang/predefined-macros/' }, // Archive
+    { from: '/dev-tools/clang/predefined-macros/', to: 'https://xpack-dev-tools.github.io/clang-xpack/docs/user/predefined-macros/' },
     { from: '/dev-tools/clang/support/', to: 'https://xpack-dev-tools.github.io/clang-xpack/docs/support/' },
     { from: '/dev-tools/clang/tests/16.0.6-1/', to: 'https://xpack-dev-tools.github.io/clang-xpack/docs/tests/16.0.6-1/' },
     { from: '/dev-tools/clang/tests/17.0.6-2/', to: 'https://xpack-dev-tools.github.io/clang-xpack/docs/tests/17.0.6-2/' },
@@ -510,7 +510,7 @@ export const redirects = {
     { from: '/dev-tools/gcc/', to: 'https://xpack-dev-tools.github.io/gcc-xpack/' },
     { from: '/dev-tools/gcc/faq/', to: 'https://xpack-dev-tools.github.io/gcc-xpack/docs/faq/' },
     { from: '/dev-tools/gcc/install/', to: 'https://xpack-dev-tools.github.io/gcc-xpack/docs/install/' },
-    { from: '/dev-tools/gcc/predefined-macros/', to: 'https://xpack.github.io/web-archive-jekyll/dev-tools/gcc/predefined-macros/' }, // Archive
+    { from: '/dev-tools/gcc/predefined-macros/', to: 'https://xpack-dev-tools.github.io/gcc-xpack/docs/user/predefined-macros/' },
     { from: '/dev-tools/gcc/support/', to: 'https://xpack-dev-tools.github.io/gcc-xpack/docs/support/' },
     { from: '/dev-tools/gcc/tests/11.5.0-1/', to: 'https://xpack-dev-tools.github.io/gcc-xpack/docs/tests/11.5.0-1/' },
     { from: '/dev-tools/gcc/tests/12.4.0-1/', to: 'https://xpack-dev-tools.github.io/gcc-xpack/docs/tests/12.4.0-1/' },
