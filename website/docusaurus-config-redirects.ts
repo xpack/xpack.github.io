@@ -28,6 +28,7 @@ export const redirects = {
 
     // Redirects for the pages in the old Jekyll site.
     { from: '/about', to: '/docs/project/about' },
+
     { from: '/arm-none-eabi-gcc', to: 'https://xpack-dev-tools.github.io/arm-none-eabi-gcc-xpack/' },
     { from: '/arm-none-eabi-gcc/install', to: 'https://xpack-dev-tools.github.io/arm-none-eabi-gcc-xpack/docs/install/' },
     { from: '/arm-none-eabi-gcc/releases', to: 'https://xpack-dev-tools.github.io/arm-none-eabi-gcc-xpack/docs/releases/' },
@@ -90,16 +91,18 @@ export const redirects = {
     { from: '/windows-build-tools', to: 'https://xpack-dev-tools.github.io/windows-build-tools-xpack/' },
     { from: '/windows-build-tools/install', to: 'https://xpack-dev-tools.github.io/windows-build-tools-xpack/docs/install/' },
     { from: '/windows-build-tools/releases', to: 'https://xpack-dev-tools.github.io/windows-build-tools-xpack/docs/releases/' },
+
     { from: '/xbb', to: 'https://xpack-dev-tools.github.io/xpack-build-box/' },
     { from: '/xbb/end-of-support', to: 'https://xpack-dev-tools.github.io/xpack-build-box/docs/end-of-support/' },
-
     { from: '/xbb/prerequisites', to: 'https://xpack.github.io/web-archive-jekyll/xbb/prerequisites/' }, // Archive
+
     { from: '/xpbuild', to: 'https://xpack.github.io/web-archive-jekyll/xpbuild/' }, // Archive
     { from: '/xpbuild/cli', to: 'https://xpack.github.io/web-archive-jekyll/xpbuild/cli/' }, // Archive
     { from: '/xpbuild/cli/init', to: 'https://xpack.github.io/web-archive-jekyll/xpbuild/cli/init/' }, // Archive
     { from: '/xpbuild/faq', to: 'https://xpack.github.io/web-archive-jekyll/xpbuild/faq/' }, // Archive
     { from: '/xpbuild/install', to: 'https://xpack.github.io/web-archive-jekyll/xpbuild/install/' }, // Archive
     { from: '/xpbuild/support', to: 'https://xpack.github.io/web-archive-jekyll/xpbuild/support/' }, // Archive
+    
     { from: '/xpcdl', to: 'https://xpack.github.io/web-archive-jekyll/xpcdl/' }, // Archive
     { from: '/xpmake', to: 'https://xpack.github.io/web-archive-jekyll/xpmake/' }, // Archive
     { from: '/xpninja', to: 'https://xpack.github.io/web-archive-jekyll/xpninja/' }, // Archive
@@ -176,7 +179,7 @@ export const redirects = {
     { from: '/blog/2021/03/16/cmake-v3-18-6-1-released/', to: 'https://xpack-dev-tools.github.io/cmake-xpack/blog/2021/03/16/cmake-v3-18-6-1-released/' },
     { from: '/blog/2020/12/15/cmake-v3-19-1-1-released/', to: 'https://xpack-dev-tools.github.io/cmake-xpack/blog/2020/12/15/cmake-v3-19-1-1-released/' },
     { from: '/blog/2021/01/06/cmake-v3-19-2-1-released/', to: 'https://xpack-dev-tools.github.io/cmake-xpack/blog/2021/01/06/cmake-v3-19-2-1-released/' },
-    { from: '/blog/2021/03/16/cmake-v3-19-2-2-released/', to: 'https://xpack-dev-tools.github.io/cmake-xpack/blog/2021/03/16/cmake-v3-19-2-2-released/' }, // ?
+    { from: '/blog/2021/03/16/cmake-v3-19-2-2-released/', to: 'https://xpack-dev-tools.github.io/cmake-xpack/blog/2021/03/16/cmake-v3-19-2-2-released/' }, // R
     { from: '/blog/2021/05/19/cmake-v3-19-8-1-released/', to: 'https://xpack-dev-tools.github.io/cmake-xpack/blog/2021/05/19/cmake-v3-19-8-1-released/' },
     { from: '/blog/2021/10/18/cmake-v3-20-6-1-released/', to: 'https://xpack-dev-tools.github.io/cmake-xpack/blog/2021/10/18/cmake-v3-20-6-1-released/' },
     { from: '/blog/2021/10/19/cmake-v3-20-6-1-released/', to: 'https://xpack-dev-tools.github.io/cmake-xpack/blog/2021/10/18/cmake-v3-20-6-1-released/' }, // R
@@ -256,17 +259,17 @@ export const redirects = {
     { from: '/blog/2019/01/18/openocd-v0-10-0-11-20190118-released/', to: 'https://xpack-dev-tools.github.io/openocd-xpack/blog/2019/01/18/openocd-v0-10-0-11-20190118-released/' },
     { from: '/blog/2019/04/22/openocd-v0-10-0-12-20190422-released/', to: 'https://xpack-dev-tools.github.io/openocd-xpack/blog/2019/04/22/openocd-v0-10-0-12-20190422-released/' },
     { from: '/blog/2019/07/17/openocd-v0-10-0-13-released/', to: 'https://xpack-dev-tools.github.io/openocd-xpack/blog/2019/07/17/openocd-v0-10-0-13-released/' },
-    { from: '/blog/2020/06/24/openocd-v0-10-0-14-released/', to: 'https://xpack-dev-tools.github.io/openocd-xpack/blog/2020/06/24/openocd-v0-10-0-14-released/' }, // ?
+    { from: '/blog/2020/06/24/openocd-v0-10-0-14-released/', to: 'https://xpack-dev-tools.github.io/openocd-xpack/blog/2020/06/24/openocd-v0-10-0-14-released/' }, // R
     { from: '/blog/2020/10/13/openocd-v0-10-0-15-released/', to: 'https://xpack-dev-tools.github.io/openocd-xpack/blog/2020/10/13/openocd-v0-10-0-15-released/' },
     { from: '/blog/2016/10/28/openocd-v0-10-0-20161028-dev-released/', to: 'https://xpack-dev-tools.github.io/openocd-xpack/blog/2016/10/28/openocd-v0-10-0-20161028-dev-released/' },
     { from: '/blog/2017/01/24/openocd-v0-10-0-20170124-released/', to: 'https://xpack-dev-tools.github.io/openocd-xpack/blog/2017/01/24/openocd-v0-10-0-20170124-released/' },
-    { from: '/blog/2017/04/19/openocd-v0-10-0-20170418-released/', to: 'https://xpack-dev-tools.github.io/openocd-xpack/blog/2017/04/19/openocd-v0-10-0-20170418-released/' }, // ?
+    { from: '/blog/2017/04/19/openocd-v0-10-0-20170418-released/', to: 'https://xpack-dev-tools.github.io/openocd-xpack/blog/2017/04/19/openocd-v0-10-0-20170418-released/' }, // R
     { from: '/blog/2017/08/26/openocd-v0-10-0-3-20170826-dev-released/', to: 'https://xpack-dev-tools.github.io/openocd-xpack/blog/2017/08/26/openocd-v0-10-0-3-20170826-dev-released/' },
     { from: '/blog/2017/10/04/openocd-v0-10-0-4-20171004-dev-released/', to: 'https://xpack-dev-tools.github.io/openocd-xpack/blog/2017/10/04/openocd-v0-10-0-4-20171004-dev-released/' },
     { from: '/blog/2017/11/10/openocd-v0-10-0-5-20171110-released/', to: 'https://xpack-dev-tools.github.io/openocd-xpack/blog/2017/11/10/openocd-v0-10-0-5-20171110-released/' },
     { from: '/blog/2018/01/12/openocd-v0-10-0-6-20180112-released/', to: 'https://xpack-dev-tools.github.io/openocd-xpack/blog/2018/01/12/openocd-v0-10-0-6-20180112-released/' },
     { from: '/blog/2018/01/23/openocd-v0-10-0-7-20180123-released/', to: 'https://xpack-dev-tools.github.io/openocd-xpack/blog/2018/01/23/openocd-v0-10-0-7-20180123-released/' },
-    { from: '/blog/2018/05/13/openocd-v0-10-0-8-20180512-released/', to: 'https://xpack-dev-tools.github.io/openocd-xpack/blog/2018/05/13/openocd-v0-10-0-8-20180512-released/' }, // ?
+    { from: '/blog/2018/05/13/openocd-v0-10-0-8-20180512-released/', to: 'https://xpack-dev-tools.github.io/openocd-xpack/blog/2018/05/13/openocd-v0-10-0-8-20180512-released/' }, // R
     { from: '/blog/2018/10/16/openocd-v0-10-0-9-20181016-released/', to: 'https://xpack-dev-tools.github.io/openocd-xpack/blog/2018/10/16/openocd-v0-10-0-9-20181016-released/' },
     { from: '/blog/2021/03/15/openocd-v0-11-0-1-released/', to: 'https://xpack-dev-tools.github.io/openocd-xpack/blog/2021/03/15/openocd-v0-11-0-1-released/' },
     { from: '/blog/2021/10/16/openocd-v0-11-0-2-released/', to: 'https://xpack-dev-tools.github.io/openocd-xpack/blog/2021/10/16/openocd-v0-11-0-2-released/' },
@@ -302,7 +305,7 @@ export const redirects = {
     { from: '/blog/2021/02/02/qemu-arm-v2-8-0-12-released/', to: 'https://xpack-dev-tools.github.io/qemu-arm-xpack/blog/2021/02/02/qemu-arm-v2-8-0-12-released/' },
     { from: '/blog/2021/10/17/qemu-arm-v2-8-0-13-released/', to: 'https://xpack-dev-tools.github.io/qemu-arm-xpack/blog/2021/10/17/qemu-arm-v2-8-0-13-released/' },
     { from: '/blog/2019/07/22/qemu-arm-v2-8-0-7-released/', to: 'https://xpack-dev-tools.github.io/qemu-arm-xpack/blog/2019/07/22/qemu-arm-v2-8-0-7-released/' },
-    { from: '/blog/2019/11/05/qemu-arm-v2-8-0-8-released/', to: 'https://xpack-dev-tools.github.io/qemu-arm-xpack/blog/2019/11/05/qemu-arm-v2-8-0-8-released/' }, // ?
+    { from: '/blog/2019/11/05/qemu-arm-v2-8-0-8-released/', to: 'https://xpack-dev-tools.github.io/qemu-arm-xpack/blog/2019/11/05/qemu-arm-v2-8-0-8-released/' }, // R
     { from: '/blog/2020/07/01/qemu-arm-v2-8-0-9-released/', to: 'https://xpack-dev-tools.github.io/qemu-arm-xpack/blog/2020/07/01/qemu-arm-v2-8-0-9-released/' },
     { from: '/blog/2022/01/13/qemu-arm-v6-2-0-1-released/', to: 'https://xpack-dev-tools.github.io/qemu-arm-xpack/blog/2022/01/13/qemu-arm-v6-2-0-1-released/' },
     { from: '/blog/2022/01/19/qemu-arm-v6-2-0-2-released/', to: 'https://xpack-dev-tools.github.io/qemu-arm-xpack/blog/2022/01/19/qemu-arm-v6-2-0-2-released/' },
@@ -365,7 +368,7 @@ export const redirects = {
     { from: '/blog/2017/11/09/riscv-none-gcc-v7-2-0-1-20171109-released/', to: 'https://xpack-dev-tools.github.io/riscv-none-elf-gcc-xpack/blog/2017/11/09/riscv-none-gcc-v7-2-0-1-20171109-released/' },
     { from: '/blog/2018/01/13/riscv-none-gcc-v7-2-0-2-20180111-released/', to: 'https://xpack-dev-tools.github.io/riscv-none-elf-gcc-xpack/blog/2018/01/13/riscv-none-gcc-v7-2-0-2-20180111-released/' },
     { from: '/blog/2018/05/06/riscv-none-gcc-v7-2-0-3-20180506-released/', to: 'https://xpack-dev-tools.github.io/riscv-none-elf-gcc-xpack/blog/2018/05/06/riscv-none-gcc-v7-2-0-3-20180506-released/' },
-    { from: '/blog/2018/06/07/riscv-none-gcc-v7-2-0-4-20180606-released/', to: 'https://xpack-dev-tools.github.io/riscv-none-elf-gcc-xpack/blog/2018/06/06/riscv-none-gcc-v7-2-0-4-20180606-released/' }, // ?
+    { from: '/blog/2018/06/07/riscv-none-gcc-v7-2-0-4-20180606-released/', to: 'https://xpack-dev-tools.github.io/riscv-none-elf-gcc-xpack/blog/2018/06/06/riscv-none-gcc-v7-2-0-4-20180606-released/' }, // R
     { from: '/blog/2018/10/19/riscv-none-gcc-v8-1-0-2-20181019-released/', to: 'https://xpack-dev-tools.github.io/riscv-none-elf-gcc-xpack/blog/2018/10/19/riscv-none-gcc-v8-1-0-2-20181019-released/' },
     { from: '/blog/2019/04/25/riscv-none-gcc-v8-2-0-2-1-20190425-released/', to: 'https://xpack-dev-tools.github.io/riscv-none-elf-gcc-xpack/blog/2019/04/25/riscv-none-gcc-v8-2-0-2-1-20190425-released/' },
     { from: '/blog/2019/05/21/riscv-none-gcc-v8-2-0-2-2-20190521-released/', to: 'https://xpack-dev-tools.github.io/riscv-none-elf-gcc-xpack/blog/2019/05/21/riscv-none-gcc-v8-2-0-2-2-20190521-released/' },
