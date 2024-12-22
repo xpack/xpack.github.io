@@ -32,11 +32,11 @@ $ grep 'https://xpack' sitemap.xml | sed -e 's|    <loc>|- |' -e 's|</loc>||' | 
 - https://xpack.github.io/blog/2018/07/24/arm-none-eabi-gcc-v7-3-1-1-1-released/ ✓
 - https://xpack.github.io/blog/2019/07/26/arm-none-eabi-gcc-v7-3-1-1-2-released/ ✓
 - https://xpack.github.io/blog/2019/01/03/arm-none-eabi-gcc-v8-2-1-1-1-released/ ✓
-- https://xpack.github.io/blog/2019/01/19/arm-none-eabi-gcc-v8-2-1-1-2-released/
+- https://xpack.github.io/blog/2019/01/19/arm-none-eabi-gcc-v8-2-1-1-2-released/ ✓ +redirect
 - https://xpack.github.io/blog/2019/02/02/arm-none-eabi-gcc-v8-2-1-1-3-released/ ✓
 - https://xpack.github.io/blog/2019/02/14/arm-none-eabi-gcc-v8-2-1-1-4-released/ ✓
 - https://xpack.github.io/blog/2019/04/26/arm-none-eabi-gcc-v8-2-1-1-5-released/ ✓
-- https://xpack.github.io/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/
+- https://xpack.github.io/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/ ✓ +redirect
 - https://xpack.github.io/blog/2019/05/24/arm-none-eabi-gcc-v8-2-1-1-7-released/ ✓
 - https://xpack.github.io/blog/2019/07/29/arm-none-eabi-gcc-v8-3-1-1-1-released/ ✓
 - https://xpack.github.io/blog/2019/10/11/arm-none-eabi-gcc-v8-3-1-1-2-released/ ✓
@@ -68,7 +68,7 @@ $ grep 'https://xpack' sitemap.xml | sed -e 's|    <loc>|- |' -e 's|</loc>||' | 
 - https://xpack.github.io/blog/2021/03/16/cmake-v3-18-6-1-released/ ✓
 - https://xpack.github.io/blog/2020/12/15/cmake-v3-19-1-1-released/ ✓
 - https://xpack.github.io/blog/2021/01/06/cmake-v3-19-2-1-released/ ✓
-- https://xpack.github.io/blog/2021/03/16/cmake-v3-19-2-2-released/
+- https://xpack.github.io/blog/2021/03/16/cmake-v3-19-2-2-released/ ✓ +redirect
 - https://xpack.github.io/blog/2021/05/19/cmake-v3-19-8-1-released/ ✓
 - https://xpack.github.io/blog/2021/10/18/cmake-v3-20-6-1-released/ ✓
 - https://xpack.github.io/blog/2021/10/19/cmake-v3-20-6-1-released/ ✓
@@ -142,17 +142,17 @@ $ grep 'https://xpack' sitemap.xml | sed -e 's|    <loc>|- |' -e 's|</loc>||' | 
 - https://xpack.github.io/blog/2019/01/18/openocd-v0-10-0-11-20190118-released/ ✓
 - https://xpack.github.io/blog/2019/04/22/openocd-v0-10-0-12-20190422-released/ ✓
 - https://xpack.github.io/blog/2019/07/17/openocd-v0-10-0-13-released/ ✓
-- https://xpack.github.io/blog/2020/06/24/openocd-v0-10-0-14-released/
+- https://xpack.github.io/blog/2020/06/24/openocd-v0-10-0-14-released/ ✓ +redirect
 - https://xpack.github.io/blog/2020/10/13/openocd-v0-10-0-15-released/ ✓
 - https://xpack.github.io/blog/2016/10/28/openocd-v0-10-0-20161028-dev-released/ ✓
 - https://xpack.github.io/blog/2017/01/24/openocd-v0-10-0-20170124-released/ ✓
-- https://xpack.github.io/blog/2017/04/19/openocd-v0-10-0-20170418-released/
+- https://xpack.github.io/blog/2017/04/19/openocd-v0-10-0-20170418-released/ ✓ +redirect
 - https://xpack.github.io/blog/2017/08/26/openocd-v0-10-0-3-20170826-dev-released/ ✓
 - https://xpack.github.io/blog/2017/10/04/openocd-v0-10-0-4-20171004-dev-released/ ✓
 - https://xpack.github.io/blog/2017/11/10/openocd-v0-10-0-5-20171110-released/ ✓
 - https://xpack.github.io/blog/2018/01/12/openocd-v0-10-0-6-20180112-released/ ✓
 - https://xpack.github.io/blog/2018/01/23/openocd-v0-10-0-7-20180123-released/ ✓
-- https://xpack.github.io/blog/2018/05/13/openocd-v0-10-0-8-20180512-released/
+- https://xpack.github.io/blog/2018/05/13/openocd-v0-10-0-8-20180512-released/ ✓ +redirect
 - https://xpack.github.io/blog/2018/10/16/openocd-v0-10-0-9-20181016-released/ ✓
 - https://xpack.github.io/blog/2021/03/15/openocd-v0-11-0-1-released/ ✓
 - https://xpack.github.io/blog/2021/10/16/openocd-v0-11-0-2-released/ ✓
@@ -185,7 +185,7 @@ $ grep 'https://xpack' sitemap.xml | sed -e 's|    <loc>|- |' -e 's|</loc>||' | 
 - https://xpack.github.io/blog/2021/02/02/qemu-arm-v2-8-0-12-released/ ✓
 - https://xpack.github.io/blog/2021/10/17/qemu-arm-v2-8-0-13-released/ ✓
 - https://xpack.github.io/blog/2019/07/22/qemu-arm-v2-8-0-7-released/ ✓
-- https://xpack.github.io/blog/2019/11/05/qemu-arm-v2-8-0-8-released/
+- https://xpack.github.io/blog/2019/11/05/qemu-arm-v2-8-0-8-released/ ✓ +redirect
 - https://xpack.github.io/blog/2020/07/01/qemu-arm-v2-8-0-9-released/ ✓
 - https://xpack.github.io/blog/2022/01/13/qemu-arm-v6-2-0-1-released/ ✓
 - https://xpack.github.io/blog/2022/01/19/qemu-arm-v6-2-0-2-released/ ✓
@@ -303,11 +303,11 @@ $ grep 'https://xpack' sitemap.xml | sed -e 's|    <loc>|- |' -e 's|</loc>||' | 
 - https://xpack.github.io/blog/2022/09/26/wine-v6-17-0-1-released/ ✓
 - https://xpack.github.io/blog/2023/01/03/wine-v7-22-0-1-released/ ✓
 - https://xpack.github.io/blog/2023/09/04/wine-v8-0-2-1-released/ ✓
-- https://xpack.github.io/blog/2022/10/03/xbb-bootstrap-v4-0-released/
-- https://xpack.github.io/blog/2021/10/13/xbb-v3.3-released/
-- https://xpack.github.io/blog/2021/12/16/xbb-v3.4-released/
-- https://xpack.github.io/blog/2023/02/07/xbb-v5.0.0-released/
-- https://xpack.github.io/blog/2023/09/11/xbb-v5.1.1-released/
+- https://xpack.github.io/blog/2022/10/03/xbb-bootstrap-v4-0-released/ ✓ Archive
+- https://xpack.github.io/blog/2021/10/13/xbb-v3.3-released/ ✓
+- https://xpack.github.io/blog/2021/12/16/xbb-v3.4-released/ ✓
+- https://xpack.github.io/blog/2023/02/07/xbb-v5.0.0-released/ ✓
+- https://xpack.github.io/blog/2023/09/11/xbb-v5.1.1-released/ ✓
 - https://xpack.github.io/blog/2021/05/12/xpm-v0-10-1-released/ ✓
 - https://xpack.github.io/blog/2021/05/19/xpm-v0-10-2-released/ ✓
 - https://xpack.github.io/blog/2021/05/26/xpm-v0-10-3-released/ ✓
