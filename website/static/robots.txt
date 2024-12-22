@@ -1,0 +1,15 @@
+Sitemap: https://xpack.github.io/sitemap.xml
+Sitemap: https://xpack.github.io/xpm/sitemap.xml
+Sitemap: https://xpack.github.io/xcdl/sitemap.xml
+Sitemap: https://xpack.github.io/logger-ts/sitemap.xml
+Sitemap: https://xpack.github.io/mock-console-ts/sitemap.xml
+
+User-agent: *
+Disallow: /blog/archive/
+Disallow: /blog/authors/
+Disallow: /blog/page/
+Disallow: /blog/tags/
+Disallow: */blog/archive/
+Disallow: */blog/authors/
+Disallow: */blog/page/
+Disallow: */blog/tags/
