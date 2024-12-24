@@ -1,4 +1,7 @@
 /*
+ * DO NOT EDIT!
+ * Automatically generated from xbb-helper/templates/docusaurus/common.
+ *
  * This file is part of the xPack project (http://xpack.github.io).
  * Copyright (c) 2024 Liviu Ionescu. All rights reserved.
  *
@@ -75,10 +78,10 @@ function NpmModule({ gitHubBaseUrl, webBaseUrl, npmName, appLcName, appName }) {
         </div>
         <div className="padding-top--xs">
           {/* <Link to={'https://github.com/' + gitHubBaseUrl + '/blob/master/package.json'}><img alt="GitHub package.json version" src={'https://img.shields.io/github/package-json/v/' + gitHubBaseUrl + '?&color=YellowGreen'} /></Link>
-          &nbsp; */}<Link to={'https://www.npmjs.com/package/' + npmName + '/'}><img alt="npm (scoped)" src={'https://img.shields.io/npm/v/' + npmName + '.svg?color=blue)'} /></Link>
-          &nbsp;<Link to={'https://www.npmjs.com/package/' + npmName + '/'}><img alt="NPM Weekly Downloads" src={'https://img.shields.io/npm/dw/' + npmName} /></Link>
-          &nbsp;<Link to={'https://www.npmjs.com/package/' + npmName + '/'}><img alt="NPM Downloads" src={'https://img.shields.io/npm/d18m/' + npmName} /></Link>
-          &nbsp;<Link to={'https://github.com/' + gitHubBaseUrl + '/'}><img alt="GitHub Repo stars" src={'https://img.shields.io/github/stars/' + gitHubBaseUrl + '/'} /></Link>
+          &nbsp; */}<Link to={'https://www.npmjs.com/package/'+npmName+'/'}><img alt="npm (scoped)" src={'https://img.shields.io/npm/v/'+npmName+'.svg?color=blue)'} /></Link>
+          &nbsp;<Link to={'https://www.npmjs.com/package/'+npmName+'/'}><img alt="NPM Weekly Downloads" src={'https://img.shields.io/npm/dw/'+npmName} /></Link>
+          &nbsp;<Link to={'https://www.npmjs.com/package/'+npmName+'/'}><img alt="NPM Downloads" src={'https://img.shields.io/npm/d18m/'+npmName} /></Link>
+          &nbsp;<Link to={'https://github.com/' + gitHubBaseUrl + '/'}><img alt="GitHub Repo stars" src={'https://img.shields.io/github/stars/' + gitHubBaseUrl} /></Link>
         </div>
       </div>
     </>
