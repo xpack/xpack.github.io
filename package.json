@@ -29,7 +29,7 @@
   "devDependencies": {
     "del-cli": "^6.0.0",
     "json": "^11.0.0",
-    "liquidjs": "^10.18.0"
+    "liquidjs": "^10.19.1"
   },
   "bundleDependencies": [],
   "config": {
