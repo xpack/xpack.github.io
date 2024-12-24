@@ -13,3 +13,6 @@ Disallow: */blog/archive/
 Disallow: */blog/authors/
 Disallow: */blog/page/
 Disallow: */blog/tags/
+Disallow: /xcdl-cli-ts/
+Disallow: /xpm-js/
+Disallow: /xpm-cli-ts/
