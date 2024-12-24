@@ -74,7 +74,7 @@ function NpmModule({ gitHubBaseUrl, webBaseUrl, npmName, appLcName, appName }) {
     <>
       <div className="padding-vert--sm">
         <div>
-          <b><Link to={'https://xpack.github.io/' + webBaseUrl}>{appLcName}</Link></b> - <b>{appName}</b>
+          <b><Link to={'https://xpack.github.io/' + webBaseUrl + '/'}>{appLcName}</Link></b> - <b>{appName}</b>
         </div>
         <div className="padding-top--xs">
           {/* <Link to={'https://github.com/' + gitHubBaseUrl + '/blob/master/package.json'}><img alt="GitHub package.json version" src={'https://img.shields.io/github/package-json/v/' + gitHubBaseUrl + '?&color=YellowGreen'} /></Link>
