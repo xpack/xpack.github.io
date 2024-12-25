@@ -1,7 +1,4 @@
 /*
- * DO NOT EDIT!
- * Automatically generated from docusaurus-template-liquid/templates/docusaurus.
- *
  * This file is part of the xPack project (http://xpack.github.io).
  * Copyright (c) 2024 Liviu Ionescu. All rights reserved.
  *
@@ -40,7 +37,7 @@ export const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/globe.svg').default,
     description: (
       <>
-        The <b><Link to="https://xpack.github.io/xpm/">xpm</Link></b> CLI tool complements <b><Link to="https://docs.npmjs.com/cli/">npm</Link></b> with several extra features specific to <b>C/C++ projects</b>. This enables source libraries and binary packages to nicely integrate into the Node.js ecosystem, while still allowing them to be installed manually.
+        The <b><Link to="https://xpack.github.io/xpm/">xpm</Link></b> CLI tool complements <b><Link to="https://docs.npmjs.com/about-npm">npm</Link></b> with several extra features specific to <b>C/C++ projects</b>. This enables source libraries and binary packages to nicely integrate into the Node.js ecosystem, while still allowing them to be installed manually.
       </>
     ),
   },
