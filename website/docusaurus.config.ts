@@ -62,7 +62,7 @@ console.log('customFields: ' + util.inspect(customFields));
 const config: Config = {
   title: 'The xPack Reproducible Build Framework' +
     ((process.env.DOCUSAURUS_IS_PREVIEW === 'true') ? ' (preview)' : ''),
-  tagline: 'Tools to manage, configure and build complex, package based, multi-target projects, in a reproducible way.',
+  tagline: 'Tools to manage, configure and build complex, package based, multi-target projects, in a reproducible way',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
