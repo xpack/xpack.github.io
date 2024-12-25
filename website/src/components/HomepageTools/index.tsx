@@ -30,7 +30,7 @@ const coreTools = [
   },
   {
     gitHubBaseUrl: 'xpack/xcdl-cli-ts',
-    webBaseUrl: 'xpm',
+    webBaseUrl: 'xcdl',
     npmName: 'xcdl',
     appLcName: 'xcdl',
     appName: 'xCDL Component Manager (work in progress)'
