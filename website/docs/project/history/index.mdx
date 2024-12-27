@@ -181,7 +181,7 @@ For the build, the initial idea was to rewrite the Python code
 in JavaScript, but a step-by-step approach was later considered.
 
 In the first step, existing build system generators like **CMake**
-and **meson** were used, offering several advantages:
+and **Meson** were used, offering several advantages:
 
 
 - They allow tests to be added to the µOS++ projects immediately,
@@ -199,7 +199,7 @@ different versions, it became clear that the build configurations
 must be managed by the same tool. Therefore, **xpm** was extended
 to handle multiple **build configurations**. Later, **xpm actions**
 were added to automate running sequences of commands, such as CMake
-or meson, to build and run the tests.
+or Meson, to build and run the tests.
 
 ## Future plans
 
@@ -240,7 +240,7 @@ between components and configuration options.
 
 Additions to the **VS Code xPack extension** are planned with features
 to edit the tree of xPack CDL components and run the builds directly,
-without CMake/meson. This will be a true xPack-enabled tool and an
+without CMake/Meson. This will be a true xPack-enabled tool and an
 alternative solution to Eclipse Embedded CDT.
 
 However, the use of this tool should be **optional**. The entire
