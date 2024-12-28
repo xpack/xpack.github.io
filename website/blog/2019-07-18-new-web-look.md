@@ -1,6 +1,6 @@
 ---
 
-title:  The xPack project web has a new look!
+title:  The xPack Project web has a new look!
 
 date: 2019-07-18 17:36:00 +0300
 
@@ -11,7 +11,7 @@ tags:
 
 ---
 
-After several re-branding iterations, the xPack project, available from
+After several re-branding iterations, the xPack Project, available from
 [GitHub](https://github.com/xpack/), has a new web site.
 
 <!--truncate-->
