@@ -23,6 +23,7 @@ import styles from './index.module.css';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import HomepageTools from '@site/src/components/HomepageTools';
 import InstallWithCopy from '@site/src/components/InstallWithCopy';
+import customField from '@site/src/libs/customField';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
