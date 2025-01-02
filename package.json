@@ -9,7 +9,7 @@
     "npm-link": "npm link",
     "npm-outdated": "npm outdated",
     "npm-update": "npm update",
-    "generate-top-commons": "bash node_modules/@xpack/npm-packages-helper/maintenance-scripts/generate-top-commons.sh"
+    "generate-top-commons": "bash node_modules/@xpack/npm-packages-helper/maintenance-scripts/generate-top-commons.sh --xpack"
   },
   "author": {
     "name": "Liviu Ionescu",
