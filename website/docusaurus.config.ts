@@ -357,6 +357,7 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    // https://docusaurus.io/docs/search#using-algolia-docsearch
     algolia: {
       // https://docsearch.algolia.com/docs/docsearch-v3/
       appId: "KIDD7R4CL1",
@@ -365,7 +366,7 @@ const config: Config = {
 
       // It ensures that search results are relevant to the current
       // language and version. Enabled by default.
-      contextualSearch: false, // true,
+      contextualSearch: true,
       // Optional: Replace parts of the item URLs from Algolia.
       // Useful when using the same search index for multiple deployments
       // using a different baseUrl. You can use regexp or string in the
@@ -374,7 +375,9 @@ const config: Config = {
       // Optional: Algolia search parameters
       searchParameters: {},
       // Optional: path for search page that enabled by default (`false` to disable it)
-      searchPagePath: false, // 'search',
+      searchPagePath: 'search',
+      // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
+      insights: false,
     },
   } satisfies Preset.ThemeConfig,
 
