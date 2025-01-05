@@ -20,6 +20,7 @@
     "url": "https://github.com/xpack/xpack.github.io/issues"
   },
   "homepage": "https://xpack.github.io/",
+  "homepagePreview": "https://xpack.github.io/web-preview/",
   "license": "MIT",
   "repository": {
     "type": "git",
