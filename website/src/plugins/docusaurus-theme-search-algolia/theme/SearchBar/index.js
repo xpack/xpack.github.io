@@ -1,3 +1,9 @@
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 import React, {useCallback, useMemo, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 import {DocSearchButton, useDocSearchKeyboardEvents} from '@docsearch/react';
@@ -36,7 +42,6 @@ function mergeFacetFilters(f1, f2) {
   return [...normalize(f1), ...normalize(f2)];
 }
 function DocSearch({contextualSearch, externalUrlRegex, ...props}) {
-  console.log('my DocSearch')
   const {siteMetadata} = useDocusaurusContext();
   const processSearchResultUrl = useSearchResultUrlProcessor();
   const contextualSearchFacetFilters = useAlgoliaContextualFacetFilters();
@@ -98,7 +103,6 @@ function DocSearch({contextualSearch, externalUrlRegex, ...props}) {
   );
   const navigator = useRef({
     navigate({itemUrl}) {
-      console.log(`navigate ${itemUrl}`)
       // Algolia results could contain URL's from other domains which cannot
       // be served through history and should navigate with window.location
       if (isRegexpStringMatch(externalUrlRegex, itemUrl)) {
@@ -108,17 +112,15 @@ function DocSearch({contextualSearch, externalUrlRegex, ...props}) {
       }
     },
   }).current;
-  const transformItems = useRef((items) => {
-    // console.log('my transformItems');
-    // items.forEach((item)=>{console.log(item.url)})
-    return props.transformItems
+  const transformItems = useRef((items) =>
+    props.transformItems
       ? // Custom transformItems
         props.transformItems(items)
       : // Default transformItems
         items.map((item) => ({
           ...item,
           url: processSearchResultUrl(item.url),
-        }))},
+        })),
   ).current;
   const resultsFooterComponent = useMemo(
     () =>
@@ -192,7 +194,6 @@ function DocSearch({contextualSearch, externalUrlRegex, ...props}) {
   );
 }
 export default function SearchBar() {
-  console.log('my SearchBar')
   const {siteConfig} = useDocusaurusContext();
   return <DocSearch {...siteConfig.themeConfig.algolia} />;
 }

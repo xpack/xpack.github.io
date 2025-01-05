@@ -99,6 +99,7 @@ const config: Config = {
     [
       'classic',
       {
+        debug: true,
         docs: {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
@@ -163,6 +164,7 @@ const config: Config = {
 
     // Local plugins.
     './src/plugins/SelectReleasesPlugin',
+    './src/plugins/docusaurus-theme-search-algolia/index',
   ],
 
 
@@ -239,7 +241,7 @@ const config: Config = {
           position: 'left'
         },
         customDocsNavbarItem,
-        
+
         {
           type: 'dropdown',
           to: '/blog',
@@ -392,7 +394,7 @@ const config: Config = {
 
       // Optional: path for search page that enabled by default (`false` to disable it)
       searchPagePath: 'search',
-      
+
       // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
       insights: false,
     },
