@@ -101,6 +101,29 @@ h2[class*="title"]
     no-repeat;
 }
 
+
+.sub-web-home-link::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  vertical-align: top;
+  padding-right: 0.5em;
+  background: url("/img/web.svg")
+    no-repeat;
+}
+
+[data-theme='dark'] .sub-web-home-link::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  vertical-align: top;
+  padding-right: 0.5em;
+  background: url("/img/web-dark.svg")
+    no-repeat;
+}
+
 /* --- */
 
 .header-github-link:hover {
