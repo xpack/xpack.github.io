@@ -115,18 +115,18 @@ function ToolsRight() {
       <hr className="hero__hr2 hero__hr2_margin" />
       <div className="text--center padding-horiz--md padding-vert--md">
         <Heading as="h2">Project Templates</Heading>
-        <div><b><Link to={'https://github.com/xpack/hello-world-template-xpack/'}><span className="sub-web-home-link">@xpack/hello-world-template</span></Link></b> - <b>A Hello World template</b></div>
+        <div><b><Link to={'https://github.com/xpack/hello-world-template-xpack/'}><span className="sub-web-github-link">@xpack/hello-world-template</span></Link></b> - <b>A Hello World template</b></div>
       </div>
       <hr className="hero__hr2 hero__hr2_margin" />
       <div className="text--center padding-horiz--md padding-vert--md">
         <Heading as="h2">Visual Studio Code Extensions</Heading>
-        <div><b><Link to={'https://github.com/xpack/vscode-xpack-extension-ts/'}><span className="sub-web-home-link">ilg-vscode.xpack</span></Link></b> - <b>xPack C/C++ Managed Build</b></div>
+        <div><b><Link to={'https://github.com/xpack/vscode-xpack-extension-ts/'}><span className="sub-web-github-link">ilg-vscode.xpack</span></Link></b> - <b>xPack C/C++ Managed Build</b></div>
       </div>
       <hr className="hero__hr2 hero__hr2_margin" />
       <div className="text--center padding-horiz--md padding-vert--md">
         <Heading as="h2">Other</Heading>
-        <div><b><Link to={'https://github.com/xpack/npm-packages-helper'}><span className="sub-web-home-link">npm-packages-helper</span></Link></b> - <b>npm Packages Helper</b></div>
-        <div><b><Link to={'https://github.com/xpack/docusaurus-template-liquid'}><span className="sub-web-home-link">docusaurus-template-liquid</span></Link></b> - <b>Docusaurus LiquidJS Template</b></div>
+        <div><b><Link to={'https://github.com/xpack/npm-packages-helper'}><span className="sub-web-github-link">npm-packages-helper</span></Link></b> - <b>npm Packages Helper</b></div>
+        <div><b><Link to={'https://github.com/xpack/docusaurus-template-liquid'}><span className="sub-web-github-link">docusaurus-template-liquid</span></Link></b> - <b>Docusaurus LiquidJS Template</b></div>
       </div>
     </div>
   );
