@@ -37,7 +37,8 @@
     "isOrganizationWeb": "true",
     "isNotNpmModule": "true",
     "skipTests": "true",
-    "hasTriggerPublishPreview": "true"
+    "hasTriggerPublishPreview": "true",
+    "hasEmptyMaster": "true"
   },
   "engines": {
     "node": " >=18.0.0"
