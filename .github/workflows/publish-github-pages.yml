@@ -9,7 +9,7 @@ on:
   push:
     # ... on the website branch ...
     branches:
-      - 'master'
+      - 'website'
     # ... skip tags only ...
     tags-ignore:
       - '**'

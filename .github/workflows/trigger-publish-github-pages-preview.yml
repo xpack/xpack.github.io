@@ -9,7 +9,7 @@ on:
   push:
     # ... on the website branch ...
     branches:
-      - 'development'
+      - 'webpreview'
     # ... skip tags only ...
     tags-ignore:
       - '**'
