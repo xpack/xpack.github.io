@@ -36,7 +36,8 @@
   "config": {
     "isOrganizationWeb": "true",
     "isNotNpmModule": "true",
-    "skipTests": "true"
+    "skipTests": "true",
+    "hasTriggerPublishPreview": "true"
   },
   "engines": {
     "node": " >=18.0.0"
