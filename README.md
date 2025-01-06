@@ -10,10 +10,11 @@ The Docusaurus source code for the xPack Project web site.
 The source code is available on
 [GitHub](https://github.com/xpack/xpack.github.io/).
 
-The code is in the `website` branch. Code in the `webpreview` branch
-is published on the preview site:
+There are three branches:
 
-- <https://xpack.github.io/web-preview/>
+- `master`: not actively used
+- `website`: the stable content, published on <https://xpack.github.io/>
+- `webpreview`: the preview content, published on <https://xpack.github.io/web-preview/>
 
 ## License
 
