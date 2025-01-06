@@ -34,13 +34,13 @@
     "clsx": "^2.1.1",
     "prism-react-renderer": "^2.4.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "del-cli": "^6.0.0"
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.6.3",
     "@docusaurus/tsconfig": "3.6.3",
     "@docusaurus/types": "3.6.3",
+    "del-cli": "^6.0.0",
     "docusaurus-plugin-typedoc": "^1.1.1",
     "json": "^11.0.0",
     "typedoc": "^0.27.5",
