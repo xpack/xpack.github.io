@@ -99,6 +99,7 @@ const config: Config = {
     [
       'classic',
       {
+        debug: true, // This will enable the plugin in production
         docs: {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
