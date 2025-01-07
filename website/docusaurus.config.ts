@@ -135,6 +135,10 @@ const config: Config = {
       redirects,
     ],
     [
+      '@docusaurus/plugin-debug',
+      {}
+    ],
+    [
       // https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-google-gtag
       // https://tagassistant.google.com
       '@docusaurus/plugin-google-gtag',
