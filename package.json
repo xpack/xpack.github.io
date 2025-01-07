@@ -35,8 +35,6 @@
   "bundleDependencies": [],
   "config": {
     "isOrganizationWeb": "true",
-    "isNotNpmModule": "true",
-    "skipTests": "true",
     "hasTriggerPublishPreview": "true",
     "hasEmptyMaster": "true"
   },
