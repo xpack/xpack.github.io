@@ -34,7 +34,7 @@
     "liquidjs": "^10.19.1"
   },
   "bundleDependencies": [],
-  "xConfig": {
+  "topConfig": {
     "isOrganizationWeb": "true",
     "hasTriggerPublishPreview": "true",
     "hasEmptyMaster": "true"
