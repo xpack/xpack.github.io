@@ -257,6 +257,7 @@ const config: Config = {
       items: [
         {
           to: '/',
+          label: 'xpack',
           className: 'header-home-link',
           position: 'left'
         },
