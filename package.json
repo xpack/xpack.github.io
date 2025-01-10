@@ -17,16 +17,19 @@
     "email": "ilg@livius.net",
     "url": "https://github.com/ilg-ul"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xpack/xpack.github.io.git"
+  },
   "bugs": {
     "url": "https://github.com/xpack/xpack.github.io/issues"
   },
   "homepage": "https://xpack.github.io/",
   "homepagePreview": "https://xpack.github.io/web-preview/",
+  "keywords": [
+    "www"
+  ],
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/xpack/xpack.github.io.git"
-  },
   "dependencies": {},
   "devDependencies": {
     "del-cli": "^6.0.0",
