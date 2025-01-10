@@ -257,7 +257,6 @@ const config: Config = {
       items: [
         {
           to: '/',
-          // label: 'Home',
           className: 'header-home-link',
           position: 'left'
         },
