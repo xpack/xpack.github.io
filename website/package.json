@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "generate-website-commons": "bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/generate-commons.sh --xpack",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
@@ -19,7 +20,6 @@
     "npm-ci": "npm ci",
     "npm-link-helpers": "npm link @xpack/docusaurus-template-liquid @xpack/npm-packages-helper",
     "deep-clean": "del-cli .docusaurus build node_modules package-lock.json",
-    "generate-website-commons": "bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/generate-commons.sh --xpack",
     "generate-website-blog-post": "bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/generate-blog-post.sh",
     "import-website-releases": "bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/website-import-releases.sh",
     "generate-dependencies-details": "bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/generate-dependencies-details.sh"
@@ -52,10 +52,10 @@
     "@docusaurus/tsconfig": "3.6.3",
     "@docusaurus/types": "3.6.3",
     "del-cli": "^6.0.0",
-    "docusaurus-plugin-typedoc": "^1.1.1",
+    "docusaurus-plugin-typedoc": "^1.2.1",
     "json": "^11.0.0",
-    "typedoc": "^0.27.5",
-    "typedoc-plugin-markdown": "^4.3.2",
+    "liquidjs": "^10.20.1",
+    "typedoc": "^0.27.6",
     "typescript": "~5.6.3"
   },
   "browserslist": {
@@ -87,5 +87,11 @@
     "hasCustomAbout": "true",
     "skipInstallCommand": "true",
     "hasCustomHomepageFeatures": "true"
-  }
+  },
+  "$dependenciesUrls": [
+    "https://www.npmjs.com/package/docusaurus-plugin-typedoc",
+    "https://www.npmjs.com/package/liquidjs",
+    "https://www.npmjs.com/package/typedoc",
+    "https://www.npmjs.com/package/typescript"
+  ]
 }
