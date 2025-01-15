@@ -74,7 +74,6 @@
     "node": ">=18.0"
   },
   "websiteConfig": {
-    "longName": "xPack Project",
     "title": "The xPack Reproducible Build Framework",
     "tagline": "Tools to manage, configure and build complex, package based, multi-target projects, in a reproducible way",
     "metadataDescription": "The xPack Framework",
