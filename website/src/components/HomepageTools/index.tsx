@@ -22,15 +22,15 @@ const coreTools = [
     gitHubBaseUrl: 'xpack/xpm-js',
     webBaseUrl: 'xpm',
     npmName: 'xpm',
-    appLcName: 'xpm',
-    appName: 'xPack Project Manager'
+    shortName: 'xpm',
+    longName: 'xPack Project Manager'
   },
   {
     gitHubBaseUrl: 'xpack/xcdl-cli-ts',
     webBaseUrl: 'xcdl',
     npmName: 'xcdl',
-    appLcName: 'xcdl',
-    appName: 'xCDL Component Manager (work in progress)'
+    shortName: 'xcdl',
+    longName: 'xCDL Component Manager (work in progress)'
   },
 ]
 
@@ -39,39 +39,39 @@ const npmModules = [
     gitHubBaseUrl: 'xpack/logger-ts',
     webBaseUrl: 'logger-ts',
     npmName: '@xpack/logger',
-    appLcName: '@xpack/logger',
-    appName: 'The xPack Logger'
+    shortName: '@xpack/logger',
+    longName: 'The xPack Logger'
   },
   {
     gitHubBaseUrl: 'xpack/mock-console-ts',
     webBaseUrl: 'mock-console-ts',
     npmName: '@xpack/mock-console',
-    appLcName: '@xpack/mock-console',
-    appName: 'The xPack Mock Console'
+    shortName: '@xpack/mock-console',
+    longName: 'The xPack Mock Console'
   },
   {
     gitHubBaseUrl: 'xpack/xpm-liquid-ts',
     webBaseUrl: 'xpm-liquid-ts',
     npmName: '@xpack/xpm-liquid',
-    appLcName: '@xpack/xpm-liquid',
-    appName: 'The xPack Liquid Substitutions'
+    shortName: '@xpack/xpm-liquid',
+    longName: 'The xPack Liquid Substitutions'
   },
   {
     gitHubBaseUrl: 'xpack/update-checker-ts',
     webBaseUrl: 'update-checker-ts',
     npmName: '@xpack/update-checker',
-    appLcName: '@xpack/update-checker',
-    appName: 'The xPack Update Checker'
+    shortName: '@xpack/update-checker',
+    longName: 'The xPack Update Checker'
   },
 ]
 
 
-function NpmModule({ gitHubBaseUrl, webBaseUrl, npmName, appLcName, appName }) {
+function NpmModule({ gitHubBaseUrl, webBaseUrl, npmName, shortName, longName }) {
   return (
     <>
       <div className="padding-vert--sm">
         <div>
-          <b><Link to={'https://xpack.github.io/' + webBaseUrl + '/'}><span className="sub-web-home-link">{appLcName}</span></Link></b> - <b>{appName}</b>
+          <b><Link to={'https://xpack.github.io/' + webBaseUrl + '/'}><span className="sub-web-home-link">{shortName}</span></Link></b> - <b>{longName}</b>
         </div>
         <div className="padding-top--xs">
           {/* <Link to={'https://github.com/' + gitHubBaseUrl + '/blob/master/package.json'}><img alt="GitHub package.json version" src={'https://img.shields.io/github/package-json/v/' + gitHubBaseUrl + '?&color=YellowGreen'} /></Link>
