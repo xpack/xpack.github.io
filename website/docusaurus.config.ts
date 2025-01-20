@@ -149,7 +149,6 @@ const config: Config = {
     ],
     [
       // https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-sitemap
-      // https://cronica-it.github.io/sitemap.xml
       '@docusaurus/plugin-sitemap',
       {
         // https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-sitemap
