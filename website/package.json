@@ -58,6 +58,12 @@
     "typedoc": "^0.27.6",
     "typescript": "~5.6.3"
   },
+  "$devDependenciesUrls": [
+    "https://www.npmjs.com/package/docusaurus-plugin-typedoc",
+    "https://www.npmjs.com/package/liquidjs",
+    "https://www.npmjs.com/package/typedoc",
+    "https://www.npmjs.com/package/typescript"
+  ],
   "browserslist": {
     "production": [
       ">0.5%",
@@ -69,9 +75,6 @@
       "last 3 firefox version",
       "last 5 safari version"
     ]
-  },
-  "engines": {
-    "node": ">=18.0"
   },
   "websiteConfig": {
     "title": "The xPack Reproducible Build Framework",
@@ -88,10 +91,7 @@
     "skipInstallCommand": "true",
     "hasCustomHomepageFeatures": "true"
   },
-  "$dependenciesUrls": [
-    "https://www.npmjs.com/package/docusaurus-plugin-typedoc",
-    "https://www.npmjs.com/package/liquidjs",
-    "https://www.npmjs.com/package/typedoc",
-    "https://www.npmjs.com/package/typescript"
-  ]
+  "engines": {
+    "node": ">=18.0"
+  }
 }
