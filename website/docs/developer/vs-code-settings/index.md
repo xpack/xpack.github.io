@@ -1,11 +1,12 @@
 ---
-# title: VS Code Settings
-# permalink: /develop/vs-code-settings/
 
-# summary: VS Code settings useful in xPack projects.
-
-comments: true
-
+title: VS Code Settings
+description: VS Code settings useful in xPack projects.
+keywords:
+  - xpack
+  - vscode
+  - settings
+  
 date: 2022-08-07 09:51:00 +0300
 
 ---

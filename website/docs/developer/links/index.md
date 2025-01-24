@@ -1,6 +1,11 @@
 ---
-# title: Links
 
+title: Links
+description: Useful links to various resources
+keywords:
+  - xpack
+  - links
+  
 date: 2016-03-09 12:04:00 +0300
 
 ---

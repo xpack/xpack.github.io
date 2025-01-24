@@ -7,8 +7,6 @@ import type * as Preset from '@docusaurus/preset-classic';
 // import logger from '@docusaurus/logger';
 import util from 'node:util';
 
-import {customDocsNavbarItem} from './navbar-docs-items'
-
 
 import {redirects} from './docusaurus-config-redirects'
 import {getCustomFields} from './customFields'
@@ -225,8 +223,38 @@ const config: Config = {
           className: 'header-home-link',
           position: 'left'
         },
-        customDocsNavbarItem,
-        
+        {
+          type: 'dropdown',
+          label: 'Documentation',
+          to: 'docs/getting-started',
+          position: 'left',
+          items: [
+            {
+              label: 'Getting Started',
+              to: '/docs/getting-started'
+            },
+            {
+              label: 'User\'s Guides',
+              to: '/docs/user'
+            },
+            {
+              label: 'Contributor\'s Guides',
+              to: '/docs/developer'
+            },
+            {
+              label: 'Maintainer\'s Guides',
+              to: '/docs/maintainer'
+            },
+            {
+              label: 'Help Centre',
+              to: '/docs/support'
+            },
+            {
+              label: 'About',
+              to: '/docs/project/about'
+            }
+          ],
+        },
         {
           type: 'dropdown',
           to: '/blog',

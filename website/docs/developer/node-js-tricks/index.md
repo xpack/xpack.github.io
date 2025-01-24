@@ -1,6 +1,12 @@
 ---
-#title: Node.js Tips & Tricks
-#summary: Examples of calling Node.js functions.
+
+title: Node.js Tips & Tricks
+description: Examples of calling Node.js functions.
+keywords:
+  - xpack
+  - node.js
+  - tips
+  - tricks
 
 date: 2017-10-09 02:47:00 +0300
 

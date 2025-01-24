@@ -32,6 +32,11 @@ export const customDocsSidebar = [
     ]
   },
   {
+    type: 'doc',
+    id: 'user/index',
+    label: 'User\'s Guides'
+  },
+  {
     type: 'category',
     label: 'Contributor\'s Guides',
     link: {
@@ -66,11 +71,6 @@ export const customDocsSidebar = [
     type: 'doc',
     id: 'maintainer/index',
     label: 'Maintainer\‘s Guides'
-  },
-  {
-    type: 'doc',
-    id: 'user/index',
-    label: 'User\'s Guides'
   },
   {
     type: 'doc',
