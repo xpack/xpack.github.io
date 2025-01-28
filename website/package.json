@@ -92,6 +92,7 @@
     "hasCustomAbout": "true",
     "customAboutTitle": "About the xPack Project",
     "hasCustomUser": "true",
+    "hasHomepageTools": "true",
     "usePluralGuides": "true",
     "skipInstallCommand": "true",
     "skipReleases": "true",
