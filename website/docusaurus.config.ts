@@ -20,12 +20,16 @@ import {getCustomFields} from './customFields';
 const customFields = getCustomFields();
 console.log('customFields: ' + util.inspect(customFields));
 
+const actualBaseUrl = process.env.DOCUSAURUS_BASEURL ??
+    '/';
+
 // ----------------------------------------------------------------------------
 
 const config: Config = {
   title: 'The xPack Reproducible Build Framework' +
     ((process.env.DOCUSAURUS_IS_PREVIEW === 'true') ? ' (preview)' : ''),
   tagline: 'Tools to manage, configure and build complex, package based, multi-target projects, in a reproducible way',
+
   // Explicitly set in headTags.
   // favicon: '/img/favicon.ico',
 
@@ -33,8 +37,7 @@ const config: Config = {
   url: 'https://xpack.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: process.env.DOCUSAURUS_BASEURL ??
-    '/',
+  baseUrl: actualBaseUrl,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -66,7 +69,7 @@ const config: Config = {
         sidebarPath: './sidebars.ts',
         // Please change this to your repo.
         // Remove this to remove the "edit this page" links.
-        editUrl: 'https://github.com/xpack/xpack.github.io/edit/master/website/',
+        editUrl: 'https://github.com/xpack/xpack.github.io/edit/website/website/',
         // showLastUpdateAuthor: true,
         showLastUpdateTime: true,
       },
@@ -76,13 +79,14 @@ const config: Config = {
       '@docusaurus/plugin-content-blog',
       {
         showReadingTime: true,
+        blogSidebarCount: 8,
         feedOptions: {
           type: ['rss', 'atom'],
           xslt: true,
         },
         // Please change this to your repo.
         // Remove this to remove the "edit this page" links.
-        editUrl: 'https://github.com/xpack/xpack.github.io/edit/master/website/',
+        editUrl: 'https://github.com/xpack/xpack.github.io/edit/website/website/',
         // Useful options to enforce blogging best practices
         onInlineTags: 'warn',
         onInlineAuthors: 'warn',
@@ -115,10 +119,14 @@ const config: Config = {
       // https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-sitemap
       '@docusaurus/plugin-sitemap',
       {
-        // https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-sitemap
+        lastmod: 'date',
         changefreq: 'weekly',
         priority: 0.5,
-        // ignorePatterns: ['/tags/**'],
+        ignorePatterns: [
+          actualBaseUrl + 'blog/archive/**',
+          actualBaseUrl + 'blog/authors/**',
+          actualBaseUrl + 'blog/tags/**'
+        ],
         filename: 'sitemap.xml',
       }
     ],
@@ -145,6 +153,7 @@ const config: Config = {
       }
     ],
     [
+      // Explicitly required when not using `preset-classic`.
       // https://docusaurus.io/docs/search#using-algolia-docsearch
       '@docusaurus/theme-search-algolia',
       {
@@ -159,7 +168,7 @@ const config: Config = {
       attributes: {
         rel: 'icon',
         type: 'image/png',
-        href: '/favicons/favicon-48x48.png',
+        href: actualBaseUrl + 'favicons/favicon-48x48.png',
         sizes: '48x48'
       }
     },
@@ -168,14 +177,14 @@ const config: Config = {
       attributes: {
         rel: 'icon',
         type: 'image/svg+xml',
-        href: '/favicons/favicon.svg'
+        href: actualBaseUrl + 'favicons/favicon.svg'
       }
     },
     {
       tagName: 'link',
       attributes: {
         rel: 'shortcut icon',
-        href: '/favicons/favicon.ico'
+        href: actualBaseUrl + 'favicons/favicon.ico'
       }
     },
     {
@@ -190,14 +199,12 @@ const config: Config = {
       tagName: 'link',
       attributes: {
         rel: 'manifest',
-        href: '/favicons/site.webmanifest'
+        href: actualBaseUrl + 'favicons/site.webmanifest'
       }
     }
   ],
 
-  // No longer needed.
-  // themes: [ '@docusaurus/theme-search-algolia' ],
-
+  // https://docusaurus.io/docs/seo
   themeConfig: {
     // The project's social card, og:image, twitter:image, 1200x630
     image: 'img/sunrise-og-image.jpg',
@@ -214,7 +221,7 @@ const config: Config = {
       logo: {
         alt: 'xPack Logo',
         src: 'img/components-256.png',
-        href: 'https://xpack.github.io/',
+        href: 'https://xpack.github.io/'
       },
       items: [
         {
@@ -252,7 +259,7 @@ const config: Config = {
             {
               label: 'About',
               to: '/docs/project/about'
-            }
+            },
           ],
         },
         {
@@ -312,6 +319,10 @@ const config: Config = {
             {
               label: 'Getting Started',
               to: '/docs/getting-started',
+            },
+            {
+              label: 'Support',
+              to: '/docs/support',
             },
             {
               label: 'About',
