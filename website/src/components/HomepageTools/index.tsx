@@ -21,6 +21,7 @@ const coreTools = [
   {
     gitHubBaseUrl: 'xpack/xpm-js',
     webBaseUrl: 'xpm',
+    npmScope: '',
     npmName: 'xpm',
     shortName: 'xpm',
     longName: 'xPack Project Manager'
@@ -28,6 +29,7 @@ const coreTools = [
   {
     gitHubBaseUrl: 'xpack/xcdl-cli-ts',
     webBaseUrl: 'xcdl',
+    npmScope: '',
     npmName: 'xcdl',
     shortName: 'xcdl',
     longName: 'xCDL Component Manager (work in progress)'
@@ -38,35 +40,41 @@ const npmModules = [
   {
     gitHubBaseUrl: 'xpack/logger-ts',
     webBaseUrl: 'logger-ts',
-    npmName: '@xpack/logger',
+    npmScope: 'xpack',
+    npmName: 'logger',
     shortName: '@xpack/logger',
     longName: 'The xPack Logger'
   },
   {
     gitHubBaseUrl: 'xpack/mock-console-ts',
     webBaseUrl: 'mock-console-ts',
-    npmName: '@xpack/mock-console',
+    npmScope: 'xpack',
+    npmName: 'mock-console',
     shortName: '@xpack/mock-console',
     longName: 'The xPack Mock Console'
   },
   {
     gitHubBaseUrl: 'xpack/xpm-liquid-ts',
     webBaseUrl: 'xpm-liquid-ts',
-    npmName: '@xpack/xpm-liquid',
+    npmScope: 'xpack',
+    npmName: 'xpm-liquid',
     shortName: '@xpack/xpm-liquid',
     longName: 'The xPack Liquid Substitutions'
   },
   {
     gitHubBaseUrl: 'xpack/update-checker-ts',
     webBaseUrl: 'update-checker-ts',
-    npmName: '@xpack/update-checker',
+    npmScope: 'xpack',
+    npmName: 'update-checker',
     shortName: '@xpack/update-checker',
     longName: 'The xPack Update Checker'
   },
 ]
 
 
-function NpmModule({ gitHubBaseUrl, webBaseUrl, npmName, shortName, longName }) {
+function NpmModule({ gitHubBaseUrl, webBaseUrl, npmScope, npmName, shortName, longName }) {
+  const badgeName=(npmScope ? `%40${npmScope}%2F${npmName}` : npmName);
+  const npmScopedName=(npmScope ? `@${npmScope}/${npmName}` : npmName);
   return (
     <>
       <div className="padding-vert--sm">
@@ -75,9 +83,9 @@ function NpmModule({ gitHubBaseUrl, webBaseUrl, npmName, shortName, longName }) 
         </div>
         <div className="padding-top--xs">
           {/* <Link to={'https://github.com/' + gitHubBaseUrl + '/blob/master/package.json'}><img alt="GitHub package.json version" src={'https://img.shields.io/github/package-json/v/' + gitHubBaseUrl + '?&color=YellowGreen'} /></Link>
-          &nbsp; */}<Link to={'https://www.npmjs.com/package/'+npmName+'/'}><img alt="npm (scoped)" src={'https://img.shields.io/npm/v/'+npmName+'.svg?color=blue)'} /></Link>
-          &nbsp;<Link to={'https://www.npmjs.com/package/'+npmName+'/'}><img alt="NPM Weekly Downloads" src={'https://img.shields.io/npm/dw/'+npmName} /></Link>
-          &nbsp;<Link to={'https://www.npmjs.com/package/'+npmName+'/'}><img alt="NPM Downloads" src={'https://img.shields.io/npm/d18m/'+npmName} /></Link>
+          &nbsp; */}<Link to={'https://www.npmjs.com/package/'+npmScopedName+'/'}><img alt="NPM Version" src={'https://img.shields.io/npm/v/'+badgeName+'?color=green)'} /></Link>
+          &nbsp;<Link to={'https://www.npmjs.com/package/'+npmScopedName+'/'}><img alt="NPM Weekly Downloads" src={'https://img.shields.io/npm/dw/'+npmScopedName} /></Link>
+          &nbsp;<Link to={'https://www.npmjs.com/package/'+npmScopedName+'/'}><img alt="NPM Downloads" src={'https://img.shields.io/npm/d18m/'+npmScopedName} /></Link>
           &nbsp;<Link to={'https://github.com/' + gitHubBaseUrl + '/'}><img alt="GitHub Repo stars" src={'https://img.shields.io/github/stars/' + gitHubBaseUrl} /></Link>
         </div>
       </div>
