@@ -24,7 +24,10 @@ const coreTools = [
     npmScope: '',
     npmName: 'xpm',
     shortName: 'xpm',
-    longName: 'xPack Project Manager'
+    longName: 'xPack Project Manager',
+    isWindows: true,
+    isMacOS: true,
+    isLinux: true,
   },
   {
     gitHubBaseUrl: 'xpack/xcdl-cli-ts',
@@ -32,7 +35,10 @@ const coreTools = [
     npmScope: '',
     npmName: 'xcdl',
     shortName: 'xcdl',
-    longName: 'xCDL Component Manager (work in progress)'
+    longName: 'xCDL Component Manager (work in progress)',
+    isWindows: true,
+    isMacOS: true,
+    isLinux: true,
   },
 ]
 
@@ -72,7 +78,7 @@ const npmModules = [
 ]
 
 
-function NpmModule({ gitHubBaseUrl, webBaseUrl, npmScope, npmName, shortName, longName }) {
+function NpmModule({ gitHubBaseUrl, webBaseUrl, npmScope, npmName, shortName, longName, isWindows, isMacOS, isLinux }) {
   const badgeName=(npmScope ? `%40${npmScope}%2F${npmName}` : npmName);
   const npmScopedName=(npmScope ? `@${npmScope}/${npmName}` : npmName);
   return (
@@ -80,6 +86,11 @@ function NpmModule({ gitHubBaseUrl, webBaseUrl, npmScope, npmName, shortName, lo
       <div className="padding-vert--sm">
         <div>
           <b><Link to={'https://xpack.github.io/' + webBaseUrl + '/'}><span className="sub-web-home-link">{shortName}</span></Link></b> - <b>{longName}</b>
+          <span className="margin-left-platforms">
+            {isWindows ? (<span className="platform-windows"></span>) : (<></>)}
+            {isMacOS ? (<span className="platform-apple"></span>) : (<></>)}
+            {isLinux ? (<span className="platform-linux"></span>) : (<></>)}
+          </span>
         </div>
         <div className="padding-top--xs">
           {/* <Link to={'https://github.com/' + gitHubBaseUrl + '/blob/master/package.json'}><img alt="GitHub package.json version" src={'https://img.shields.io/github/package-json/v/' + gitHubBaseUrl + '?&color=YellowGreen'} /></Link>
