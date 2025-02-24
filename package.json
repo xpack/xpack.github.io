@@ -38,7 +38,7 @@
   },
   "bundleDependencies": [],
   "topConfig": {
-    "longName": "xPack Project",
+    "descriptiveName": "xPack Project",
     "isOrganizationWeb": "true",
     "hasTriggerPublishPreview": "true",
     "hasEmptyMaster": "true"
