@@ -37,7 +37,7 @@ should review the content of the file before executing it.
 If you trust the script, you can use the following shortcut:
 
 ```sh
-curl https://raw.githubusercontent.com/xpack/assets/master/scripts/install-nvm-node-npm-xpm.sh | ${SHELL}
+curl https://raw.githubusercontent.com/xpack/assets/master/scripts/install-nvm-node-npm-xpm.sh | bash
 
 export NVM_DIR="${HOME}/.nvm"
 source "${NVM_DIR}/nvm.sh"
@@ -54,7 +54,7 @@ cat "${HOME}/Downloads/install-nvm-node-npm-xpm.sh"
 When confident, run it:
 
 ```sh
-${SHELL} "${HOME}/Downloads/install-nvm-node-npm-xpm.sh"
+bash "${HOME}/Downloads/install-nvm-node-npm-xpm.sh"
 
 exit
 ```
