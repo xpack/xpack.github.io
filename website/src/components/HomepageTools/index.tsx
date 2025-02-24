@@ -23,8 +23,8 @@ const coreTools = [
     webBaseUrl: 'xpm',
     npmScope: '',
     npmName: 'xpm',
-    shortName: 'xpm',
-    longName: 'xPack Project Manager',
+    permalinkName: 'xpm',
+    descriptiveName: 'xPack Project Manager',
     isWindows: true,
     isMacOS: true,
     isLinux: true,
@@ -34,8 +34,8 @@ const coreTools = [
     webBaseUrl: 'xcdl',
     npmScope: '',
     npmName: 'xcdl',
-    shortName: 'xcdl',
-    longName: 'xCDL Component Manager (work in progress)',
+    permalinkName: 'xcdl',
+    descriptiveName: 'xCDL Component Manager (work in progress)',
     isWindows: true,
     isMacOS: true,
     isLinux: true,
@@ -48,44 +48,44 @@ const npmModules = [
     webBaseUrl: 'logger-ts',
     npmScope: 'xpack',
     npmName: 'logger',
-    shortName: '@xpack/logger',
-    longName: 'The xPack Logger'
+    permalinkName: '@xpack/logger',
+    descriptiveName: 'The xPack Logger'
   },
   {
     gitHubBaseUrl: 'xpack/mock-console-ts',
     webBaseUrl: 'mock-console-ts',
     npmScope: 'xpack',
     npmName: 'mock-console',
-    shortName: '@xpack/mock-console',
-    longName: 'The xPack Mock Console'
+    permalinkName: '@xpack/mock-console',
+    descriptiveName: 'The xPack Mock Console'
   },
   {
     gitHubBaseUrl: 'xpack/xpm-liquid-ts',
     webBaseUrl: 'xpm-liquid-ts',
     npmScope: 'xpack',
     npmName: 'xpm-liquid',
-    shortName: '@xpack/xpm-liquid',
-    longName: 'The xPack Liquid Substitutions'
+    permalinkName: '@xpack/xpm-liquid',
+    descriptiveName: 'The xPack Liquid Substitutions'
   },
   {
     gitHubBaseUrl: 'xpack/update-checker-ts',
     webBaseUrl: 'update-checker-ts',
     npmScope: 'xpack',
     npmName: 'update-checker',
-    shortName: '@xpack/update-checker',
-    longName: 'The xPack Update Checker'
+    permalinkName: '@xpack/update-checker',
+    descriptiveName: 'The xPack Update Checker'
   },
 ]
 
 
-function NpmModule({ gitHubBaseUrl, webBaseUrl, npmScope, npmName, shortName, longName, isWindows, isMacOS, isLinux }) {
+function NpmModule({ gitHubBaseUrl, webBaseUrl, npmScope, npmName, permalinkName, descriptiveName, isWindows, isMacOS, isLinux }) {
   const badgeName=(npmScope ? `%40${npmScope}%2F${npmName}` : npmName);
   const npmScopedName=(npmScope ? `@${npmScope}/${npmName}` : npmName);
   return (
     <>
       <div className="padding-vert--sm">
         <div>
-          <b><Link to={'https://xpack.github.io/' + webBaseUrl + '/'}><span className="sub-web-home-link">{shortName}</span></Link></b> - <b>{longName}</b>
+          <b><Link to={'https://xpack.github.io/' + webBaseUrl + '/'}><span className="sub-web-home-link">{permalinkName}</span></Link></b> - <b>{descriptiveName}</b>
           <span className="margin-left-platforms">
             {isWindows ? (<span className="platform-windows"></span>) : (<></>)}
             {isMacOS ? (<span className="platform-apple"></span>) : (<></>)}
