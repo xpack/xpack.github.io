@@ -128,7 +128,21 @@ removed 1 package, and changed 60 packages in 5s
   run `npm fund` for details
 ```
 
-Surprisingly, checking the version often reveals the older version:
+The next step is to check the version:
+
+<CodeBlock language="txt"> {
+`C:\\>where npm.cmd
+C:\\>where npm.cmd
+C:\Program Files\nodejs\npm.cmd
+C:\Users\ilg\AppData\Roaming\npm\npm.cmd
+C:\\>npm --version
+${frontMatter.npm_latest_version}
+`} </CodeBlock>
+
+<details>
+<summary>What to do if the update is not effective?</summary>
+
+Surprisingly, checking the version may reveal the old version:
 
 <CodeBlock language="txt"> {
 `C:\\>where npm.cmd
@@ -139,14 +153,15 @@ ${frontMatter.npm_version}
 
 This happens because, by default, global Node.js packages on Windows
 are installed in the user home folder, specifically in `%APPDATA%\npm`
-(e.g., `C:\Users\ilg\AppData\Roaming\npm`). This path is not included
+(e.g., `C:\Users\ilg\AppData\Roaming\npm`). In older releases,
+this path was not included
 in the system or user path.
 
 ```txt
 C:\>echo %Path%
 ```
 
-It must be manually added **before** the current path:
+If this is the case, it must be manually added **before** the current path:
 
 ```txt
 C:\>set Path=%APPDATA%\npm;%Path%
@@ -178,6 +193,8 @@ After this, the new version of the program should be visible:
 `C:\\>npm --version
 ${frontMatter.npm_latest_version}
 `} </CodeBlock>
+
+<details>
 
 <Heading as="h2">Git</Heading>
 
@@ -493,6 +510,21 @@ sudo apt-get install --yes linux-headers-generic
 
 </Tabs>
 
+## Install xpm
+
+[`xpm`](https://xpack.github.io/xpm/) is also a portable
+[Node.js](https://nodejs.org/) command line application.
+
+On macOS and GNU/Linux, if you followed the _Quick instructions_,
+it is already installed. Otherwise, to install it, follow the steps in the
+[xpm install](https://xpack.github.io/xpm/install/) page.
+
+If you're confident and prefer a shortcut,
+run the following command:
+
+```sh
+npm install -location=global xpm@latest
+```
 
 ## Cleanups (node/npm)
 
@@ -509,6 +541,11 @@ following two folders to install global packages:
 - `%APPDATA%\Roaming\npm`
 - `%APPDATA%\Local\npm-cache`
 
+And **xpm** uses the following two folders:
+
+- `%APPDATA%\Roaming\xPacks`
+- `%APPDATA%\Local\Caches\xPacks`
+
 </TabItem>
 
 <TabItem value="macos" label="macOS">
@@ -518,6 +555,11 @@ and **npm** utilise only two folders:
 
 - `$HOME/.nvm`
 - `$HOME/.cache/node`
+
+And **xpm** uses the following two folders:
+
+- `${HOME}/Library/xPacks`
+- `${HOME}/Library/Caches/xPacks`
 
 </TabItem>
 
@@ -529,25 +571,15 @@ and **npm** utilise only two folders:
 - `$HOME/.nvm`
 - `$HOME/.npm`
 
+And **xpm** uses the following two folders:
+
+- `${HOME}/.local/xPacks`
+- `${HOME}/.cache/xPacks`
+
 </TabItem>
 
 </Tabs>
 
-## Install xpm
-
-[`xpm`](https://xpack.github.io/xpm/) is also a portable
-[Node.js](https://nodejs.org/) command line application.
-
-On macOS and GNU/Linux, if you followed the _Quick instructions_,
-it is already installed. Otherwise, to install it, follow the steps in the
-[xpm install](https://xpack.github.io/xpm/install/) page.
-
-If you're confident and prefer a shortcut,
-run the following command:
-
-```sh
-npm install -location=global xpm@latest
-```
 
 ## Miscellaneous
 
