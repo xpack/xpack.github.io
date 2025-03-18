@@ -204,11 +204,30 @@ to install the [Git for Windows](https://git-scm.com/download/win) package too.
 This also installs a `bash` shell.
 The xPack Core Tools can run either in either the Windows shells or in the Git `bash` shell.
 
+<Heading as="h2">Visual C++ Redistributable Files</Heading>
+
+According to Microsoft, some libraries cannot be distributed
+with the xPack tools and must be installed separately.
+
+For example, the `msvcp140.dll` and `vcruntime140.dll` files are part of the
+[Visual C++ Redistributable for Visual Studio](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist).
+
+Download the latest version of `vc_redist.x64.exe` and install it as usual.
+
+:::caution
+
+The binaries in the **xPack Meson Build** package use `vcruntime140.dll`;
+without these redistributables
+installed, the `meson` command will fail.
+
+:::
+
 <Heading as="h2">PowerShell Execution Policies</Heading>
 
 Recent Windows versions use PowerShell, which has a more restrictive
 execution policy designed to prevent the execution of malicious scripts.
-Unfortunately, this also prevents the execution of Node.js applications.
+Unfortunately, this also prevents the execution of some
+scripting applications, like Node.js or Python.
 
 If you get a message in the console as the one below:
 
@@ -231,6 +250,18 @@ Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser
 
 For more details please read the Microsoft
 [about_Execution_Policies](https://docs.microsoft.com/en-gb/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.1) page.
+
+<Heading as="h2">Long file names</Heading>
+
+Due to historical reasons, Windows restricted file paths to a maximum
+length of 260 characters.
+
+This can present challenges for projects created on other platforms,
+where lengthy file names are more commonplace.
+
+On Windows 10 and newer versions, the **Long Paths** feature can be enabled manually.
+For further information, please refer to the Microsoft documentation, such as the page on
+[Maximum Path Length Limitation](https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation).
 
 </TabItem>
 
