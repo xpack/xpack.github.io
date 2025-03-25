@@ -557,55 +557,59 @@ run the following command:
 npm install -location=global xpm@latest
 ```
 
-## Cleanups (node/npm)
+## Clean-ups (node/npm/xpm)
 
 <Tabs groupId="operating-systems">
 
 <TabItem value="windows" label="Windows" default>
 
-If installed as recommended via setup, **node** can be uninstalled via the
-Microsoft specific mechanisms.
+Should **xpm** no longer be required, you may undertake a thorough
+clean-up by removing the following folders:
 
-For a comprehensive cleanup, please be aware that **npm** utilises the
-following two folders to install global packages:
+- `%APPDATA%\Roaming\xPacks`
+- `%APPDATA%\Local\Caches\xPacks`
+
+Should **npm** no longer be required, the following folders may be
+removed to ensure a thorough clean-up:
 
 - `%APPDATA%\Roaming\npm`
 - `%APPDATA%\Local\npm-cache`
 
-And **xpm** uses the following two folders:
-
-- `%APPDATA%\Roaming\xPacks`
-- `%APPDATA%\Local\Caches\xPacks`
+If installed as recommended through the setup process, **node**
+can be uninstalled using Microsoft-specific mechanisms.
 
 </TabItem>
 
 <TabItem value="macos" label="macOS">
 
-For a comprehensive cleanup, please be aware that **nvm**, **node**,
-and **npm** utilise only two folders:
+Should **xpm** no longer be required, you may undertake a thorough
+clean-up by removing the following folders:
+
+- `${HOME}/Library/xPacks`
+- `${HOME}/Library/Caches/xPacks`
+
+Should **npm** no longer be required, the following folders may be
+removed to ensure a thorough clean-up:
 
 - `$HOME/.nvm`
 - `$HOME/.cache/node`
 
-And **xpm** uses the following two folders:
-
-- `${HOME}/Library/xPacks`
-- `${HOME}/Library/Caches/xPacks`
 
 </TabItem>
 
 <TabItem value="linux" label="GNU/Linux">
 
-For a comprehensive cleanup, please be aware that **nvm**, **node**,
-and **npm** utilise only two folders:
-
-- `$HOME/.nvm`
-- `$HOME/.npm`
-
-And **xpm** uses the following two folders:
+Should **xpm** no longer be required, you may undertake a thorough
+clean-up by removing the following folders:
 
 - `${HOME}/.local/xPacks`
 - `${HOME}/.cache/xPacks`
+
+Should **npm** no longer be required, the following folders may be
+removed to ensure a thorough clean-up:
+
+- `$HOME/.nvm`
+- `$HOME/.npm`
 
 </TabItem>
 
