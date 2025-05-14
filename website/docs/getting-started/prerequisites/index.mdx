@@ -26,6 +26,8 @@ import Heading from '@theme/Heading';
 
 import customField from '@site/src/libs/customField';
 
+import CommonSymbolicLinksNtfs from '@site/docs/_common/_symbolic-links-require-ntfs.mdx';
+
 import AfterNvm from './_after-nvm.mdx';
 import NvmLatest from './_nvm-latest.mdx';
 import UseNvm from './_use-nvm.mdx';
@@ -265,16 +267,7 @@ For further information, please refer to the Microsoft documentation, such as th
 
 <Heading as="h2">Symbolic links</Heading>
 
-By design, xpm utilises symbolic links to folders (junction points on
-NTFS) to facilitate the sharing of common packages across projects. Any
-attempt to install packages on a drive that does not support symbolic
-links will result in an error:
-
-```
-error: volume X: does not support links, it might not be NTFS, or it might be a remote resource
-```
-
-Use a recent version of Windows and format the drive as NTFS.
+<CommonSymbolicLinksNtfs />
 
 </TabItem>
 
