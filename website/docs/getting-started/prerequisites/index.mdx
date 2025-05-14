@@ -263,6 +263,17 @@ On Windows 10 and newer versions, the **Long Paths** feature can be enabled manu
 For further information, please refer to the Microsoft documentation, such as the page on
 [Maximum Path Length Limitation](https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation).
 
+<Heading as="h2">Symbolic links</Heading>
+
+By design, xpm utilises symbolic links to folders (junction points on
+NTFS) to facilitate the sharing of common packages across projects. Any
+attempt to install packages on a drive that does not support symbolic
+links will result in an error:
+
+```
+error: volume X: does not support links, it might not be NTFS, or it might be a remote resource
+```
+
 </TabItem>
 
 <TabItem value="macos" label="macOS">
