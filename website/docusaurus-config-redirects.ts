@@ -87,6 +87,7 @@ export const redirects = {
     { from: '/vscode/intellisense', to: 'https://xpack.github.io/web-archive-jekyll/vscode/intellisense/' }, // Archive
     { from: '/vscode/quick-start', to: 'https://xpack.github.io/web-archive-jekyll/vscode/quick-start/' }, // Archive
     { from: '/vscode/support', to: 'https://xpack.github.io/web-archive-jekyll/vscode/support/' }, // Archive
+    { from: '/vscode/releases', to: 'https://xpack.github.io/web-archive-jekyll/vscode/releases/' }, // Archive
 
     { from: '/windows-build-tools', to: 'https://xpack-dev-tools.github.io/windows-build-tools-xpack/' },
     { from: '/windows-build-tools/install', to: 'https://xpack-dev-tools.github.io/windows-build-tools-xpack/docs/install/' },
