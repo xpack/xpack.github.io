@@ -60,12 +60,12 @@ const npmModules = [
     descriptiveName: 'The xPack Mock Console'
   },
   {
-    gitHubBaseUrl: 'xpack/xpm-liquid-ts',
-    webBaseUrl: 'xpm-liquid-ts',
+    gitHubBaseUrl: 'xpack/xpm-lib-ts',
+    webBaseUrl: 'xpm-lib-ts',
     npmScope: 'xpack',
-    npmName: 'xpm-liquid',
-    permalinkName: '@xpack/xpm-liquid',
-    descriptiveName: 'The xPack Liquid Substitutions'
+    npmName: 'xpm-lib',
+    permalinkName: '@xpack/xpm-lib',
+    descriptiveName: 'The xpm core library'
   },
   {
     gitHubBaseUrl: 'xpack/update-checker-ts',
