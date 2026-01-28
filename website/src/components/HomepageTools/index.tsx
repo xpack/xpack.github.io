@@ -60,20 +60,20 @@ const npmModules = [
     descriptiveName: 'The xPack Mock Console'
   },
   {
-    gitHubBaseUrl: 'xpack/xpm-lib-ts',
-    webBaseUrl: 'xpm-lib-ts',
-    npmScope: 'xpack',
-    npmName: 'xpm-lib',
-    permalinkName: '@xpack/xpm-lib',
-    descriptiveName: 'The xpm core library'
-  },
-  {
     gitHubBaseUrl: 'xpack/update-checker-ts',
     webBaseUrl: 'update-checker-ts',
     npmScope: 'xpack',
     npmName: 'update-checker',
     permalinkName: '@xpack/update-checker',
     descriptiveName: 'The xPack Update Checker'
+  },
+  {
+    gitHubBaseUrl: 'xpack/xpm-lib-ts',
+    webBaseUrl: 'xpm-lib-ts',
+    npmScope: 'xpack',
+    npmName: 'xpm-lib',
+    permalinkName: '@xpack/xpm-lib',
+    descriptiveName: 'The xpm core library'
   },
 ]
 
@@ -134,7 +134,7 @@ function ToolsRight() {
       <hr className="hero__hr2 hero__hr2_margin" />
       <div className="text--center padding-horiz--md padding-vert--md">
         <Heading as="h2">Project Templates</Heading>
-        <div><b><Link to={'https://github.com/xpack/hello-world-template-xpack/'}><span className="sub-web-github-link">@xpack/hello-world-template</span></Link></b> - <b>A Hello World template</b></div>
+        <div><b><Link to={'https://github.com/xpack/hello-world-template-xpack/'}><span className="sub-web-github-link">@xpack/hello-world-template</span></Link></b> - <b>A Hello World C/C++ template</b></div>
       </div>
       <hr className="hero__hr2 hero__hr2_margin" />
       <div className="text--center padding-horiz--md padding-vert--md">
