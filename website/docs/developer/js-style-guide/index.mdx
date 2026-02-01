@@ -1,10 +1,11 @@
 ---
 
-title: JavaScript Style Guide
-description: For consistency, use the Standard JS/TS validation tools.
+title: JavaScript/TypeScript Style Guide
+description: For consistency, use automated validation tools (prettier & ESlint).
 keywords:
   - xpack
   - javascript
+  - typescript
   - style
   - guide
   
@@ -12,7 +13,7 @@ date: 2017-10-09 02:47:00 +0300
 
 ---
 
-# JavaScript Style Guide
+# JavaScript -> TypeScript Style Guide
 
 :::info
 
@@ -29,16 +30,18 @@ the conclusion is that the specific style is of lesser importance;
 what matters more is its consistent application.
 
 To ensure consistency in the xPack JavaScript source files, the
-primary requirement is to pass the [Standard JS](https://standardjs.com)
-validation tools, which also have a TypeScript variant
-([ts-standard](https://www.npmjs.com/package/ts-standard)).
+primary requirements are:
+
+- use [prettier](https://prettier.io) for automated re-formatting
+- use [ESlint](https://eslint.org) as a validation tool, which also
+has a TypeScript variant
+([typescript-eslint](https://typescript-eslint.io/packages/typescript-eslint/))
 
 Following this, the main recommendations are:
 
-- Utilise the ECMAScript 6 specifications (ES 6).
-- If the module performs reasonably complex tasks, its public functions **must be asynchronous**.
-- Asynchronous functions should **use promises** (and definitely **avoid callbacks**).
-- **Reentrancy** should be carefully considered (avoid module-global variables).
+- utilise the ECMAScript 6 specifications (ES 6)
+- asynchronous functions should **use promises** (and definitely **avoid callbacks**)
+- **reentrancy** should be carefully considered (avoid module-global variables)
 
 ## The xPack Project preferences
 
@@ -53,8 +56,8 @@ Definitely **avoid using old-style code**.
 ### Use classes as much as possible
 
 Even if the new syntax is mostly syntactic sugar, and internally things
-behave as strangely as they did in the first JavaScript versions,
-still **use the new class syntax** at large; it is much cleaner and
+behave as they did in the first JavaScript versions,
+still **use the new class syntax** extensively; it is much cleaner and
 improves readability.
 
 ### Use promises instead of callbacks
@@ -83,7 +86,7 @@ make the module **export a class, and create instances of it**
 whenever needed; for sharing data between instances,
 **use static class members**.
 
-### Do not restrict export to a single function or class
+### Do not restrict exports to a single function or class
 
 Bad style:
 
@@ -91,7 +94,9 @@ Bad style:
 module.exports = function () {
 	return /[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g;
 };
-...
+```
+
+```js
 const func = require('name')
 ```
 
@@ -100,17 +105,21 @@ extensions, for example exporting a second function from the same module
 would mandate all modules that use the first function via `require()` to
 be updated to `require().func1`, which may cause many headaches to developers.
 
+Recommended style:
+
 ```js
-module.exports.func1 = function () {
-	return /[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g;
-};
-module.exports.func2 = function () { ... }
-...
-const { func1 } = require('name')
+export function func1 () {
+	return /[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g
+}
+export function func2 () { ... }
 ```
 
-The recommendation is to always return functions or preferably classes
-as properties of the `module.exports` object, and get them individually by name.
+```js
+import { func1, func2 } from 'name'
+```
+
+The recommendation is to always export functions or preferably classes
+and get them individually by name.
 
 ### Prefer static classes to group methods
 
@@ -119,26 +128,26 @@ functionality) either below a parent object, or, even better, in
 classes with static members.
 
 The main advantage of this scheme is that adding new exports will
-only change the interface incrementally, minimising the risk to
-break backward compatibility.
+only change the interface incrementally, minimising the risk of
+breaking backward compatibility.
 
 ### Use the spread operator
 
-Th spread operator expands an iterable into its member objects. It also works
+The spread operator expands an iterable into its member objects. It also works
 with arrays and objects
 
 - Create array copies
 
 ```js
-const arr1 = [1, 2 3]
+const arr1 = [1, 2, 3]
 const arr2 = [...arr1]
 ```
 
 - Concatenate arrays
 
 ```js
-const arr1 = [1, 2 3]
-const arr2 = [4, 5 6]
+const arr1 = [1, 2, 3]
+const arr2 = [4, 5, 6]
 const arr3 = [...arr1, ...arr2]
 ```
 
@@ -152,7 +161,8 @@ class Base {
       parent: null,
       ...args
     })
-  // ...
+    // ...
+  }
 }
 ```
 
@@ -170,7 +180,7 @@ iterable.forEach((value) => {
 
 Debug note: Visual Studio Code is able to step into the lambda function.
 
-For more complex loops, use `for ... of`.
+For more complex loops, use `for ... of` (not `in`!).
 
 ```js
 let iterable = [10, 20, 30]
@@ -266,9 +276,9 @@ Please note that `null` is also an object, and everything created with
 ### Use Map to guarantee the order of the values
 
 Although maps can be conveniently implemented with regular objects,
-the specs do not guarantee the insert order to be preserved.
+the specifications do not guarantee the insert order to be preserved.
 
-If the order is important, or if the object need to store other
+If the order is important, or if the object needs to store other
 properties too, use a `Map`.
 
 ### Make node exports/imports look like ES6 exports/imports
@@ -561,7 +571,7 @@ Use single quotes for strings except to avoid escaping
 ```js
 const ok = 'String contains "double" quotes'
 const alsoOk = "String contains 'single' quotes or apostrophe"
-const paramOk = `Back quotes string with ${parameter}`
+const paramOk = `Back-quoted string with ${parameter}`
 ```
 
 ### White spaces
@@ -592,9 +602,9 @@ Use named functions.
 
 ### Exceptions
 
-For the native Node.js callback usage, never to ever ever throw anything. It's worse than useless. Just send the error message back as the first argument to the callback.
+For the native Node.js callback usage, throwing anything is worse than useless. Simply send the error message back as the first argument to the callback.
 
-But for the modern ES 6 promise usage, exceptions are fine.
+However, for the modern ES 6 promise usage, exceptions are acceptable.
 
 ## From [Node.js modules](https://nodejs.org/dist/latest-v6.x/docs/api/modules.html)
 
@@ -610,11 +620,11 @@ Modules are cached after the first time they are loaded. This means (among other
 
 From this point of view, modules behave like [singletons](https://en.wikipedia.org/wiki/Singleton_pattern); they can also be compared to static classes in C++.
 
-Leaving status at the module level can be either a blessing or a curse, depending on the environment used to run the module. In server environments, using module-global variables is like using static variables in a multi-threaded environment, if not handled correctly it may have unexpected results.
+Leaving state at the module level can be either a blessing or a curse, depending on the environment used to run the module. In server environments, using module-global variables is like using static variables in a multi-threaded environment; if not handled correctly, it may have unexpected results.
 
 ### Exports
 
-To make some functions and objects visible outside the module, you can add them as properties to the special `modules.exports` object:
+To make some functions and objects visible outside the module, add them as properties to the special `module.exports` object:
 
 ```js
 const PI = Math.PI
@@ -622,7 +632,7 @@ module.exports.area = (r) => PI * r * r
 module.exports.circumference = (r) => 2 * PI * r
 ```
 
-Although you can rewrite the `module.export` to be a single function (such as a constructor), still prefer to add them as properties to the object and refer to them explicitly in the `require()` line:
+Although you can rewrite the `module.exports` to be a single function (such as a constructor), it is still preferable to add them as properties to the object and refer to them explicitly in the `require()` line:
 
 ```js
 const square = require('./square.js').square
@@ -646,24 +656,24 @@ When a file is run directly from Node.js, `require.main` is set to its module. T
 require.main === module
 ```
 
-### The module wrapper
+### The module wrapper (deprecated by ES6)
 
 Before a module's code is executed, Node.js will wrap it with a function wrapper that looks like the following:
 
 ```js
 module = ... // an object for the current module
-module.export = {} // an empty object
-exports = module.export // a reference to the exports; avoid using it
+module.exports = {} // an empty object
+exports = module.exports // a reference to the exports; avoid using it
 __filename = '/x/y/z/abc.js'
 __dirname = '/x/y/z'
 (function (exports, require, module, __filename, __dirname) {
-  // Your module code actually lives in here
+  // The module code actually lives in here
 });
 ```
 
-In each module, the `module` variable is a reference to the object representing the current module. `module` isn't actually a global but rather local to each module.
+In each module, the `module` variable is a reference to the object representing the current module. `module` is not actually a global but rather local to each module.
 
-The `module.exports` object is created by the Module system. Sometimes this is not acceptable; many want their module to be an object of their own. To do this, assign the desired export object to `module.exports`.
+The `module.exports` object is created by the Module system. Sometimes this is not acceptable; many developers want their module to be an object of their own. To do this, assign the desired export object to `module.exports`.
 
 For convenience, `module.exports` is also accessible via the `exports` module-global. Note that assigning a value to `exports` will simply rebind the local exports variable, which is probably not what you want to do; if the relationship between `exports` and `module.exports` seems like magic to you, ignore `exports` and only use `module.exports`.
 
@@ -726,14 +736,13 @@ var chars = [...str];
 console.log(chars);
 ```
 
+## Reformatting and Validation Tools
+
+- [prettier](https://prettier.io)
+- [ESLint](https://eslint.org)
+- [typescript-eslint](https://typescript-eslint.io/packages/typescript-eslint)
 
 ## Links to other style guides
-
-Preferred:
-
-- [JavaScript "Standard" Style](https://standardjs.com)
-
-Other links:
 
 - [10 Best JavaScript Style Guides](https://noeticforce.com/best-javascript-style-guide-for-maintainable-code)
 - [airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
@@ -744,11 +753,6 @@ Other links:
 - [RisingStack/node-style-guide](https://github.com/RisingStack/node-style-guide)
 - [kettanaito/naming-cheatsheet](https://github.com/kettanaito/naming-cheatsheet)
 
-## Linting Tools
-
-Preferred (used automatically by Standard):
-
-- [ESLint](https://eslint.org/), but indirectly via the 'Standard JS' tools.
 
 Other links:
 
