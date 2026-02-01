@@ -27,9 +27,9 @@ projects will be migrated to TypeScript.
 
 After many years of working with style guides for various languages,
 the conclusion is that the specific style is of lesser importance;
-what matters more is its consistent application.
+what matters more is its **consistent application**.
 
-To ensure consistency in the xPack JavaScript source files, the
+To ensure consistency in the xPack JavaScript/TypeScript source files, the
 primary requirements are:
 
 - use [prettier](https://prettier.io) for automated re-formatting
@@ -252,9 +252,19 @@ Array.isArray([1, 2, 3]);  // true
 
 ```js
 isString (x) {
-  return Object.prototype.toString.call(x) === '[object String]'
+  return typeof value === 'string'
 }
 ```
+
+:::note
+
+The previous recommandation was to use 
+`Object.prototype.toString.call(x) === '[object String]'`, needed to 
+distinguish between primitive strings ('hello') and `String` objects 
+(new String('hello')), but `String` objects are rarely used in modern 
+JavaScript and are generally considered an anti-pattern. 
+
+:::
 
 ### Check if object
 
@@ -281,38 +291,7 @@ the specifications do not guarantee the insert order to be preserved.
 If the order is important, or if the object needs to store other
 properties too, use a `Map`.
 
-### Make node exports/imports look like ES6 exports/imports
-
-Assuming classes are preferred, the EC6 syntax for export/import would look like:
-
-```js
-export class WscriptAvoider { ... }
-...
-import { WscriptAvoider } from 'wscript-avoider.js'
-```
-
-So, to stay close to this syntax, the recommendation is to preserve the
-original `module.exports` object, and add properties to it, preferably
-classes, even if they have only static members.
-
-To import them, the syntax uses the explicit class name:
-
-```js
-const WscriptAvoider = require('wscript-avoider').WscriptAvoider
-WscriptAvoider.quitIfWscript(appName)
-```
-
-Cases like `import { WscriptAvoider as Xyz } from 'wscript-avoider.js'` would
-be naturally represented as:
-
-```js
-const Xyz = require('wscript-avoider').WscriptAvoider
-Xyz.quitIfWscript(appName)
-```
-
-In case the class is not static, instantiate it as usual.
-
-### Call exactly the class method
+### Call the class method via the prototype
 
 If a method of a class is overridden, calling it from the base class
 actually calls the derived method (run-time polymorphism).
@@ -331,20 +310,27 @@ class Base {
 }
 ```
 
-### Pack function parameters as objects
+### Destructured parameters
 
 For functions with more than 1 parameter, pack them in an object:
 
-```js
+```ts
 class Base {
   /**
-   * @param {Object} params The generic parameters object.
+   * @params name The object name.
+   * @params type The object type
+   * @returns Nothing
    */
-  f1 (params) {
-    assert(params, 'There must be params.')
-
+  f1 ({
+    name,
+    type
+  }: {
+    name: string
+    type: string
+  }): void {
     assert(params.name)
     console.log(params.name)
+    // ...
   }
 
   f2 () {
@@ -368,19 +354,22 @@ references are cleared (set to undefined).
 
 Alternatively use `copyFrom(from)` and possibly `appendFrom(from)`.
 
-Use a `clear()` method to clear the object content (it might be
-useful during tests).
+Use a `clear()` method to clear the object content (it might also be
+useful during testing).
 
-### Use a separate location for private variables
+### Use the `#` prefix for private members.
 
-To reduce clutter, group the private variables below a `_private` object.
+According to recent standard updates, names starting with `#` are private.
 
-No need to end the name of the variables with `_`.
+### Use the `_` prefix for private members.
+
+Similarly, although this is not part of any standard, use names starting 
+with `_` for the protected members.
 
 ### Use a separate location for cached variables
 
 If the object uses local cached objects, group them below a `_cache` object.
-Initialise it to an empty object in the constructor an in the `clear()` method.
+Initialise it to an empty object in the constructor and in the `clear()` method.
 
 No need to end the name of the variables with `_`.
 
@@ -460,8 +449,14 @@ console.log(add(1, 1))     // 2
 console.log(add(1))        // 2
 ```
 
-JavaScript has two different internal-only methods for functions: `[[Call]]` and `[[Construct]]`. When a function is called without new, the `[[Call]]` method is executed, which executes the body of the function as it appears in the code. When a function is called with new, that’s when the `[[Construct]]` method
-is called. The `[[Construct]]` method is responsible for creating a new object, called the instance, and then executing the function body with this set to the instance. Functions that have a `[[Construct]]` method are called constructors.
+JavaScript has two different internal-only methods for functions: 
+`[[Call]]` and `[[Construct]]`. When a function is called without new, 
+the `[[Call]]` method is executed, which executes the body of the function 
+as it appears in the code. When a function is called with new, that’s when 
+the `[[Construct]]` method is called. The `[[Construct]]` method is 
+responsible for creating a new object, called the instance, and then 
+executing the function body with this set to the instance. Functions 
+that have a `[[Construct]]` method are called constructors.
 
 ```js
 const Person = function (name) {
@@ -608,77 +603,6 @@ However, for the modern ES 6 promise usage, exceptions are acceptable.
 
 ## From [Node.js modules](https://nodejs.org/dist/latest-v6.x/docs/api/modules.html)
 
-### Modules
-
-Modules are a way of preventing multiple JavaScript units to pollute the global namespace.
-
-Objects defined at root level in a module are not global, but belong to the module; the usual name for this is _module-global_.
-
-### Caching
-
-Modules are cached after the first time they are loaded. This means (among other things) that every call to require('foo') will get exactly the same object returned, if it would resolve to the same file. Multiple calls to `require('foo')` will not cause the module code to be executed multiple times.
-
-From this point of view, modules behave like [singletons](https://en.wikipedia.org/wiki/Singleton_pattern); they can also be compared to static classes in C++.
-
-Leaving state at the module level can be either a blessing or a curse, depending on the environment used to run the module. In server environments, using module-global variables is like using static variables in a multi-threaded environment; if not handled correctly, it may have unexpected results.
-
-### Exports
-
-To make some functions and objects visible outside the module, add them as properties to the special `module.exports` object:
-
-```js
-const PI = Math.PI
-module.exports.area = (r) => PI * r * r
-module.exports.circumference = (r) => 2 * PI * r
-```
-
-Although you can rewrite the `module.exports` to be a single function (such as a constructor), it is still preferable to add them as properties to the object and refer to them explicitly in the `require()` line:
-
-```js
-const square = require('./square.js').square
-const mySquare = square(2)
-console.log(`The area of my square is ${mySquare.area()}`)
-
-module.exports.area = (width) => {
-  return {
-    area: () => width * width
-  }
-}
-```
-
-If you want to export a complete object in one assignment instead of building it one property at a time, assign it to `module.exports`.
-
-### Accessing the main module
-
-When a file is run directly from Node.js, `require.main` is set to its module. That means that you can determine whether a file has been run directly by testing
-
-```js
-require.main === module
-```
-
-### The module wrapper (deprecated by ES6)
-
-Before a module's code is executed, Node.js will wrap it with a function wrapper that looks like the following:
-
-```js
-module = ... // an object for the current module
-module.exports = {} // an empty object
-exports = module.exports // a reference to the exports; avoid using it
-__filename = '/x/y/z/abc.js'
-__dirname = '/x/y/z'
-(function (exports, require, module, __filename, __dirname) {
-  // The module code actually lives in here
-});
-```
-
-In each module, the `module` variable is a reference to the object representing the current module. `module` is not actually a global but rather local to each module.
-
-The `module.exports` object is created by the Module system. Sometimes this is not acceptable; many developers want their module to be an object of their own. To do this, assign the desired export object to `module.exports`.
-
-For convenience, `module.exports` is also accessible via the `exports` module-global. Note that assigning a value to `exports` will simply rebind the local exports variable, which is probably not what you want to do; if the relationship between `exports` and `module.exports` seems like magic to you, ignore `exports` and only use `module.exports`.
-
-Note that assignment to `module.exports` must be done immediately. It cannot be done in any callbacks.
-
 ### Global objects
 
 These are really objects, available in all modules. (see Node.js [Globals](https://nodejs.org/api/globals.html))
@@ -693,7 +617,7 @@ These are really objects, available in all modules. (see Node.js [Globals](https
 
 ## The Spread syntax
 
-According to [JavaScript ES6— The Spread Syntax (…)](https://codeburst.io/javascript-es6-the-spread-syntax-f5c35525f754):
+According to [JavaScript ES6 — The Spread Syntax (…)](https://codeburst.io/javascript-es6-the-spread-syntax-f5c35525f754):
 
 - The spread syntax is simply three dots: `...`
 - It allows an iterable to expand in places where 0+ arguments are expected.
