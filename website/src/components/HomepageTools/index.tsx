@@ -20,7 +20,7 @@ import Link from '@docusaurus/Link';
 const coreTools = [
   {
     gitHubBaseUrl: 'xpack/xpm-js',
-    webBaseUrl: 'xpm',
+    webUrl: 'https://xpack.github.io/xpm/',
     npmScope: '',
     npmName: 'xpm',
     permalinkName: 'xpm',
@@ -31,7 +31,7 @@ const coreTools = [
   },
   {
     gitHubBaseUrl: 'xpack/xcdl-cli-ts',
-    webBaseUrl: 'xcdl',
+    webUrl: 'https://xpack.github.io/xcdl/',
     npmScope: '',
     npmName: 'xcdl',
     permalinkName: 'xcdl',
@@ -45,7 +45,7 @@ const coreTools = [
 const npmModules = [
   {
     gitHubBaseUrl: 'xpack/logger-ts',
-    webBaseUrl: 'logger-ts',
+    webUrl: 'https://xpack.github.io/logger-ts/',
     npmScope: 'xpack',
     npmName: 'logger',
     permalinkName: '@xpack/logger',
@@ -53,7 +53,7 @@ const npmModules = [
   },
   {
     gitHubBaseUrl: 'xpack/mock-console-ts',
-    webBaseUrl: 'mock-console-ts',
+    webUrl: 'https://xpack.github.io/mock-console-ts/',
     npmScope: 'xpack',
     npmName: 'mock-console',
     permalinkName: '@xpack/mock-console',
@@ -61,7 +61,7 @@ const npmModules = [
   },
   {
     gitHubBaseUrl: 'xpack/update-checker-ts',
-    webBaseUrl: 'update-checker-ts',
+    webUrl: 'https://xpack.github.io/update-checker-ts/',
     npmScope: 'xpack',
     npmName: 'update-checker',
     permalinkName: '@xpack/update-checker',
@@ -69,7 +69,7 @@ const npmModules = [
   },
   {
     gitHubBaseUrl: 'xpack/xpm-lib-ts',
-    webBaseUrl: 'xpm-lib-ts',
+    webUrl: 'https://xpack.github.io/xpm-lib-ts/',
     npmScope: 'xpack',
     npmName: 'xpm-lib',
     permalinkName: '@xpack/xpm-lib',
@@ -77,15 +77,39 @@ const npmModules = [
   },
 ]
 
+const documentationTools = [
+  {
+    gitHubBaseUrl: 'xpack/doxygen2docusaurus-cli-ts',
+    webUrl: 'https://xpack.github.io/doxygen2docusaurus/',
+    npmScope: 'xpack',
+    npmName: 'doxygen2docusaurus',
+    permalinkName: 'doxygen2docusaurus',
+    descriptiveName: 'Doxygen to Docusaurus converter',
+    isWindows: true,
+    isMacOS: true,
+    isLinux: true,
+  },
+  {
+    gitHubBaseUrl: 'xpack/tsdoc2docusaurus-cli-ts',
+    webUrl: 'https://github.io/xpack/tsdoc2docusaurus-cli-ts/', // no web yet
+    npmScope: 'xpack',
+    npmName: 'tsdoc2docusaurus-cli',
+    permalinkName: 'tsdoc2docusaurus',
+    descriptiveName: 'TSDoc to Docusaurus converter',
+    isWindows: true,
+    isMacOS: true,
+    isLinux: true,
+  },
+]
 
-function NpmModule({ gitHubBaseUrl, webBaseUrl, npmScope, npmName, permalinkName, descriptiveName, isWindows, isMacOS, isLinux }) {
+function NpmModule({ gitHubBaseUrl, webUrl, npmScope, npmName, permalinkName, descriptiveName, isWindows, isMacOS, isLinux }) {
   const badgeName=(npmScope ? `%40${npmScope}%2F${npmName}` : npmName);
   const npmScopedName=(npmScope ? `@${npmScope}/${npmName}` : npmName);
   return (
     <>
       <div className="padding-vert--sm">
         <div>
-          <b><Link to={'https://xpack.github.io/' + webBaseUrl + '/'}><span className="sub-web-home-link">{permalinkName}</span></Link></b> - <b>{descriptiveName}</b>
+          <b><Link to={webUrl}><span className="sub-web-home-link">{permalinkName}</span></Link></b> - <b>{descriptiveName}</b>
           <span className="margin-left-platforms">
             {isWindows ? (<span className="platform-windows"></span>) : (<></>)}
             {isMacOS ? (<span className="platform-apple"></span>) : (<></>)}
@@ -117,6 +141,13 @@ function ToolsLeft() {
       <div className="text--center padding-horiz--md padding-vert--md">
         <Heading as="h2">npm Modules</Heading>
         {npmModules.map((props, idx) => (
+          <NpmModule {...props} />
+        ))}
+      </div>
+      <hr className="hero__hr2 hero__hr2_margin" />
+      <div className="text--center padding-horiz--md padding-vert--md">
+        <Heading as="h2">Documentation Tools</Heading>
+        {documentationTools.map((props, idx) => (
           <NpmModule {...props} />
         ))}
       </div>
