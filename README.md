@@ -1,5 +1,6 @@
 
 [![license](https://img.shields.io/github/license/xpack/xpack.github.io)](https://github.com/xpack/xpack.github.io/blob/website/LICENSE)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fxpack.github.io%2Fxpack.github.io%2F)](https://xpack.github.io/)
 
 # The xPack Project website source
 
