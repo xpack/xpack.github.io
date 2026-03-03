@@ -39,7 +39,7 @@ import VersionManager from './_version-manager.mdx';
 
 ## Overview
 
-All xPack core tools are [Node.js](https://nodejs.org) CLI application
+All xPack core tools are [Node.js](https://nodejs.org) CLI applications
 available from the
 [npmjs.com](https://www.npmjs.com) public repository. They can be installed
 via `npm`, which runs on top of **Node.js**.
@@ -60,7 +60,7 @@ If this is your first time using **npm**, you'll need to install the
 [Node.js](https://nodejs.org) ECMAScript (JavaScript) runtime.
 The installation process is
 straightforward and does not clutter system locations.
-There are two versions of Node.js: **LTS** (**Long Term Service**) and
+There are two versions of Node.js: **LTS** (**Long Term Support**) and
 **Current**. Generally, it is safer to use the **LTS** version,
 especially on Windows.
 
@@ -204,7 +204,7 @@ While not mandatory for using the xPack tools alone, it is recommended
 to install the [Git for Windows](https://git-scm.com/download/win) package too.
 
 This also installs a `bash` shell.
-The xPack Core Tools can run either in either the Windows shells or in the Git `bash` shell.
+The xPack Core Tools can run in either the Windows shells or in the Git `bash` shell.
 
 <Heading as="h2">Visual C++ Redistributable Files</Heading>
 
@@ -276,7 +276,7 @@ For further information, please refer to the Microsoft documentation, such as th
 For macOS, it is
 **strongly recommended** to **use a version manager** (see below).
 
-<UseNvm />
+<UseNvm os="macos"/>
 
 <Heading as="h2">Command Line Tools</Heading>
 
@@ -400,12 +400,12 @@ default -> 20 (-> v20.18.0)
 For GNU/Linux, it is
 **strongly recommended** to **use a version manager** (see below).
 
-<UseNvm />
+<UseNvm os="linux"/>
 
 :::info
 
 Arm platforms, like the Raspberry Pi,
-are supported, currently in both 32/64-bit variants.
+are supported, currently only in 64-bit mode.
 
 :::
 

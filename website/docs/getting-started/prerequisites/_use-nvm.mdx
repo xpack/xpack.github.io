@@ -1,4 +1,5 @@
 import Heading from '@theme/Heading';
+import CodeBlock from '@theme/CodeBlock';
 
 {/* ------------------------------------------------------------------------ */}
 
@@ -36,20 +37,37 @@ should review the content of the file before executing it.
 
 If you trust the script, you can use the following shortcut:
 
-```sh
-curl https://raw.githubusercontent.com/xpack/assets/master/scripts/install-nvm-node-npm-xpm.sh | bash
+{props.os === 'macos' ? (
+<CodeBlock language="sh">
+{`curl --fail --silent --show-error --location https://raw.githubusercontent.com/xpack/assets/master/scripts/install-nvm-node-npm-xpm.sh | \${SHELL}
 
-export NVM_DIR="${HOME}/.nvm"
-source "${NVM_DIR}/nvm.sh"
-```
+export NVM_DIR="\${HOME}/.nvm"
+source "\${NVM_DIR}/nvm.sh"`}
+</CodeBlock>
+) : (
+<CodeBlock language="sh">
+{`wget --quiet --output-document=- https://raw.githubusercontent.com/xpack/assets/master/scripts/install-nvm-node-npm-xpm.sh | \${SHELL}
+
+export NVM_DIR="\${HOME}/.nvm"
+source "\${NVM_DIR}/nvm.sh"`}
+</CodeBlock>
+)}
 
 Otherwise download and check the script:
 
-```sh
-mkdir -pv "${HOME}/Downloads/"
-curl --output "${HOME}/Downloads/install-nvm-node-npm-xpm.sh" https://raw.githubusercontent.com/xpack/assets/master/scripts/install-nvm-node-npm-xpm.sh
-cat "${HOME}/Downloads/install-nvm-node-npm-xpm.sh"
-```
+{props.os === 'macos' ? (
+<CodeBlock language="sh">
+{`mkdir -pv "\${HOME}/Downloads/"
+curl --output "\${HOME}/Downloads/install-nvm-node-npm-xpm.sh" https://raw.githubusercontent.com/xpack/assets/master/scripts/install-nvm-node-npm-xpm.sh
+cat "\${HOME}/Downloads/install-nvm-node-npm-xpm.sh"`}
+</CodeBlock>
+) : (
+<CodeBlock language="sh">
+{`mkdir -pv "\${HOME}/Downloads/"
+wget --quiet --output-document="\${HOME}/Downloads/install-nvm-node-npm-xpm.sh" https://raw.githubusercontent.com/xpack/assets/master/scripts/install-nvm-node-npm-xpm.sh
+cat "\${HOME}/Downloads/install-nvm-node-npm-xpm.sh"`}
+</CodeBlock>
+)}
 
 When confident, run it:
 
@@ -66,7 +84,8 @@ This script will install `nvm` (the Node Version Manager), `node`,
 
 To automatically activate `nvm`, the script adds several lines
 to the shell initialization script. Therefore, it is necessary
-to restart the shell to apply these changes.
+to restart the shell to apply these changes or to manually
+export `NVM_DIR` and source the script.
 
 :::
 
