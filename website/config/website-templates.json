@@ -1,0 +1,20 @@
+{
+  "customAboutTitle": "About the xPack Project",
+  "customGettingStartedTitle": "Getting started with the xPack Project",
+  "metadataKeywords": "xpack, project, manage, build, test, dependencies, xpm, npm, reproducibility",
+  "tagline": "Tools to manage, configure and build complex, package based, multi-target projects, in a reproducible way",
+  "title": "The xPack Reproducible Build Framework",
+  "hasCustomAbout": true,
+  "hasCustomDeveloper": true,
+  "hasCustomGettingStarted": true,
+  "hasCustomHomepageFeatures": true,
+  "hasCustomMaintainer": true,
+  "hasCustomSidebar": true,
+  "hasCustomUser": true,
+  "hasHomepageTools": true,
+  "skipFaq": true,
+  "skipInstallCommand": true,
+  "skipInstallGuide": true,
+  "skipReleases": true,
+  "usePluralGuides": true
+}

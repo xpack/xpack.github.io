@@ -9,7 +9,7 @@ The Docusaurus source code for the xPack Project website.
 ## Project source
 
 The source code is available on
-[GitHub](https://github.com/xpack/xpack.github.io/).
+GitHub as [xpack/xpack.github.io](https://github.com/xpack/xpack.github.io/).
 
 ## License
 

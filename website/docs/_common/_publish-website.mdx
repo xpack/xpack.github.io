@@ -12,22 +12,24 @@ The website deployment is performed automatically when pushing to the
 - Open https://xpack.github.io/docs/maintainer/#publish-the-website in a separate window
 - **Stop** the local web server
 - Switch to the `webpreview` branch
-- **Merge** the `webpreview` branch into the `webpreview` branch
+- **Rebase** the `webpreview` branch onto the `webpreview` branch
 - **Push** the `webpreview` branch to GitHub
   :::info
   At this point, an automated GitHub Action will generate and publish 
   the [preview website](https://xpack.github.io/web-preview/).
   :::
 - Switch to the `website` branch
-- **Merge** the `webpreview` branch into the `website` branch
+- run the `npm install` command, to ensure `package-lock.json` is up to date
+- **Rebase** the `webpreview` branch onto the `website` branch
 - **Push** the `website` branch to GitHub
   :::info
   At this point, an automated forwarding GitHub Action will trigger 
   a GitHub Action in the separate project to generate and publish 
-  the [website]https://xpack.github.io/.
+  the [website](https://xpack.github.io/).
   :::
 - Check out the `webpreview` branch
-- **Wait** for the publication to complete
+- **Wait** for the publication to complete 
+- check [GitHub Pages](https://github.com/xpack/xpack.github.io/actions/workflows/publish-github-pages.yml) workflow
 - **Refresh** the web page
 - The new release blog post is available
 at https://xpack.github.io/blog/
