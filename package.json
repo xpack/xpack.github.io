@@ -2,7 +2,37 @@
   "name": "xpack.github.io",
   "version": "0.0.0",
   "description": "The website for the xPack project",
-  "main": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xpack/xpack.github.io.git"
+  },
+  "keywords": [
+    "www",
+    "website",
+    "xpack"
+  ],
+  "author": {
+    "name": "Liviu Ionescu",
+    "email": "ilg@livius.net",
+    "url": "https://github.com/ilg-ul"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xpack/xpack.github.io/issues"
+  },
+  "homepage": "https://xpack.github.io/",
+  "homepagePreview": "https://xpack.github.io/web-preview/",
+  "dependencies": {},
+  "$dependenciesUrls": {
+    "del-cli": "https://www.npmjs.com/package/del-cli",
+    "json": "https://www.npmjs.com/package/json",
+    "liquidjs": "https://www.npmjs.com/package/liquidjs"
+  },
+  "devDependencies": {
+    "del-cli": "^7.0.0",
+    "json": "^11.0.0",
+    "liquidjs": "^10.27.0"
+  },
   "scripts": {
     "generate-top-commons": "bash node_modules/@xpack/npm-packages-helper/maintenance-scripts/generate-top-commons.sh --xpack",
     "npm-install": "npm install",
@@ -10,40 +40,18 @@
     "npm-link": "npm link",
     "npm-outdated": "npm outdated",
     "npm-update": "npm update",
-    "deep-clean": "del-cli node_modules package-lock.json"
+    "deep-clean": "del-cli --force node_modules package-lock.json",
+    "npm-audit": "npm audit fix --force",
+    "dumpconf": "env | sort | uniq",
+    "show-versions": "echo $(which node) $(node --version) && echo $(which npm) $(npm --version)"
   },
-  "author": {
-    "name": "Liviu Ionescu",
-    "email": "ilg@livius.net",
-    "url": "https://github.com/ilg-ul"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/xpack/xpack.github.io.git"
-  },
-  "bugs": {
-    "url": "https://github.com/xpack/xpack.github.io/issues"
-  },
-  "homepage": "https://xpack.github.io/",
-  "homepagePreview": "https://xpack.github.io/web-preview/",
-  "keywords": [
-    "www"
-  ],
-  "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {
-    "del-cli": "^6.0.0",
-    "json": "^11.0.0",
-    "liquidjs": "^10.19.1"
-  },
-  "bundleDependencies": [],
-  "topConfig": {
+  "_topConfig": {
     "descriptiveName": "xPack Project",
-    "isOrganizationWeb": "true",
+    "isOrganisationWeb": "true",
     "hasTriggerPublishPreview": "true",
     "hasEmptyMaster": "true"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=20.0"
   }
 }

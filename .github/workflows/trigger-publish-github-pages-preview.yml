@@ -5,16 +5,21 @@
 # This file is part of the xPack project (http://xpack.github.io).
 # Copyright (c) 2021-2026 Liviu Ionescu. All rights reserved.
 #
-# Permission to use, copy, modify, and/or distribute this software
-# for any purpose is hereby granted, under the terms of the MIT license.
+# Permission to use, copy, modify, and/or distribute this software for any
+# purpose is hereby granted, under the terms of the MIT license.
 #
-# If a copy of the license was not distributed with this file, it can
-# be obtained from https://opensource.org/licenses/mit.
+# If a copy of the license was not distributed with this file, it can be
+# obtained from https://opensource.org/licenses/mit.
 #
 # -----------------------------------------------------------------------------
 
 # Simple workflow to trigger the deployment of GitHub Pages in another project
-name: Trigger Remote GitHub Pages
+
+# -----------------------------------------------------------------------------
+
+# https://xpack.github.io/
+# https://github.com/xpack/xpack.github.io/actions/workflows/trigger-publish-github-pages-preview.yml
+name: Trigger Remote GitHub Pages Preview
 
 on:
   # Runs on pushes, if all conditions are met:
@@ -44,9 +49,9 @@ permissions:
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
+# Allow one concurrent deployment.
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: true
 
 jobs:
